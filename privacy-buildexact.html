@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — BuildExact</title>
+    <meta name="description" content="Privacy Policy for BuildExact — Measurement & Calculation Tool by Grounded Studio.">
+    <link rel="canonical" href="https://grounded-studio.app/privacy-buildexact.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: #06060a;
+            color: #f1f5f9;
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+        }
+        :root {
+            --bx: #2563eb;
+            --muted: #64748b;
+            --border: rgba(255,255,255,0.07);
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+            background: rgba(6,6,10,0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .nav-logo img { width: 28px; height: 28px; border-radius: 8px; }
+        .nav-logo span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--bx);
+        }
+        .nav-back {
+            font-size: 13px;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color .2s;
+        }
+        .nav-back:hover { color: #f1f5f9; }
+
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(37,99,235,0.12);
+            color: var(--bx);
+            border: 1px solid rgba(37,99,235,0.25);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        h1 span { color: var(--bx); }
+
+        .meta {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--bx);
+            margin: 40px 0 12px;
+        }
+
+        p { color: #cbd5e1; margin-bottom: 14px; }
+        p:last-child { margin-bottom: 0; }
+
+        ul {
+            color: #cbd5e1;
+            padding-left: 20px;
+            margin-bottom: 14px;
+        }
+        ul li { margin-bottom: 6px; }
+
+        .card {
+            background: rgba(37,99,235,0.06);
+            border: 1px solid rgba(37,99,235,0.15);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .card p { margin-bottom: 8px; }
+        .card p:last-child { margin-bottom: 0; }
+
+        .highlight {
+            background: rgba(34,197,94,0.06);
+            border: 1px solid rgba(34,197,94,0.2);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 24px 0;
+            color: #86efac;
+            font-weight: 500;
+        }
+
+        a { color: var(--bx); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .lang-toggle {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        .lang-btn.active {
+            background: rgba(37,99,235,0.12);
+            border-color: rgba(37,99,235,0.3);
+            color: var(--bx);
+        }
+
+        .content-en, .content-nl { display: none; }
+        .content-en.visible, .content-nl.visible { display: block; }
+
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: var(--muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="nav-logo" href="https://grounded-studio.app">
+        <img src="assets/icon-bx.png" alt="BuildExact"
+             onerror="this.outerHTML='<div style=\'width:28px;height:28px;background:rgba(37,99,235,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px\'>🏗️</div>'">
+        <span>BuildExact</span>
+    </a>
+    <a class="nav-back" href="https://grounded-studio.app">← Grounded Studio</a>
+</nav>
+
+<main>
+    <div class="badge">Legal</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p class="meta">BuildExact — Measurement & Calculation Tool &nbsp;·&nbsp; Last updated: May 7, 2026 &nbsp;·&nbsp; by Grounded Studio</p>
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('nl')">Nederlands</button>
+    </div>
+
+    <!-- ── ENGLISH ── -->
+    <div class="content-en visible">
+
+        <div class="highlight">
+            ✓ BuildExact works fully offline. All your data stays on your device. We do not collect, store, or share any personal information.
+        </div>
+
+        <h2>1. Introduction</h2>
+        <p>BuildExact is developed by Grounded Studio. This privacy policy explains how the app handles your data. We are committed to protecting your privacy — and in this case, that's straightforward: we don't collect any.</p>
+
+        <h2>2. Data storage</h2>
+        <p>All data you enter in BuildExact — projects, measurements, calculations, cost estimates, and photos — is stored exclusively on your device using local storage. This data never leaves your device unless you explicitly choose to share or export it.</p>
+
+        <div class="card">
+            <p>📱 <strong>Projects & calculations</strong> — stored locally on your device only</p>
+            <p>📷 <strong>Photos</strong> — stored locally on your device only</p>
+            <p>📄 <strong>PDF exports</strong> — generated locally, shared only when you tap "Share"</p>
+        </div>
+
+        <h2>3. No data collection</h2>
+        <p>We do not collect:</p>
+        <ul>
+            <li>Personal information (name, email, address)</li>
+            <li>Location data</li>
+            <li>Device identifiers</li>
+            <li>Usage analytics or crash reports</li>
+            <li>Project data, measurements, or calculations</li>
+            <li>Photos</li>
+        </ul>
+        <p>There are no accounts, no login, and no cloud sync in BuildExact.</p>
+
+        <h2>4. PDF export & sharing</h2>
+        <p>BuildExact can generate PDF files of your calculations and estimates. These PDFs are created locally on your device. Sharing a PDF (via email, WhatsApp, etc.) is entirely your choice and is handled by your device's standard sharing functions. We do not receive or process any shared content.</p>
+
+        <h2>5. In-app purchases</h2>
+        <p>BuildExact offers optional Pro features available through Google Play Billing. All payment processing is handled exclusively by Google. We do not receive, store, or have access to your payment information.</p>
+        <p>For more information on how Google handles payment data, see <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+
+        <h2>6. Camera & photo library</h2>
+        <p>BuildExact may request access to your camera or photo library to add photos to your projects. This permission is only used when you explicitly choose to add a photo. Photos are stored locally on your device and are not uploaded anywhere.</p>
+
+        <h2>7. Children</h2>
+        <p>BuildExact is not directed at children under 13. We do not knowingly collect data from children — and as stated above, we don't collect data from anyone.</p>
+
+        <h2>8. Changes to this policy</h2>
+        <p>We may update this policy if new features are added that change how data is handled. The "last updated" date at the top of this page will reflect any changes.</p>
+
+        <h2>9. Contact</h2>
+        <p>Questions about this privacy policy? Contact us at: <a href="mailto:rsijbers1982@gmail.com">rsijbers1982@gmail.com</a></p>
+
+    </div>
+
+    <!-- ── NEDERLANDS ── -->
+    <div class="content-nl">
+
+        <div class="highlight">
+            ✓ BuildExact werkt volledig offline. Al je gegevens blijven op je apparaat. Wij verzamelen, bewaren of delen geen persoonlijke informatie.
+        </div>
+
+        <h2>1. Inleiding</h2>
+        <p>BuildExact is ontwikkeld door Grounded Studio. Dit privacybeleid legt uit hoe de app omgaat met je gegevens. We hechten veel waarde aan je privacy — en in dit geval is dat eenvoudig: we verzamelen niets.</p>
+
+        <h2>2. Gegevensopslag</h2>
+        <p>Alle gegevens die je invoert in BuildExact — projecten, metingen, berekeningen, kostenramingen en foto's — worden uitsluitend lokaal op je apparaat opgeslagen. Deze gegevens verlaten je apparaat nooit, tenzij jij er expliciet voor kiest om ze te delen of te exporteren.</p>
+
+        <div class="card">
+            <p>📱 <strong>Projecten & berekeningen</strong> — alleen lokaal opgeslagen op je apparaat</p>
+            <p>📷 <strong>Foto's</strong> — alleen lokaal opgeslagen op je apparaat</p>
+            <p>📄 <strong>PDF exports</strong> — lokaal gegenereerd, gedeeld alleen wanneer jij op "Delen" tikt</p>
+        </div>
+
+        <h2>3. Geen gegevensverzameling</h2>
+        <p>Wij verzamelen niet:</p>
+        <ul>
+            <li>Persoonlijke informatie (naam, e-mail, adres)</li>
+            <li>Locatiegegevens</li>
+            <li>Apparaat-ID's</li>
+            <li>Gebruiksanalyses of crashrapporten</li>
+            <li>Projectgegevens, metingen of berekeningen</li>
+            <li>Foto's</li>
+        </ul>
+        <p>Er zijn geen accounts, geen login en geen cloudsynchronisatie in BuildExact.</p>
+
+        <h2>4. PDF export & delen</h2>
+        <p>BuildExact kan PDF-bestanden van je berekeningen en ramingen genereren. Deze PDF's worden lokaal op je apparaat aangemaakt. Het delen van een PDF (via e-mail, WhatsApp, etc.) is volledig jouw keuze en wordt afgehandeld via de standaard deelfuncties van je apparaat. Wij ontvangen of verwerken geen gedeelde inhoud.</p>
+
+        <h2>5. In-app aankopen</h2>
+        <p>BuildExact biedt optionele Pro-functies via Google Play Billing. Alle betalingsverwerking wordt uitsluitend door Google afgehandeld. Wij ontvangen, bewaren of hebben geen toegang tot je betaalgegevens.</p>
+        <p>Zie het <a href="https://policies.google.com/privacy" target="_blank">privacybeleid van Google</a> voor meer informatie.</p>
+
+        <h2>6. Camera & fotobibliotheek</h2>
+        <p>BuildExact kan toegang vragen tot je camera of fotobibliotheek om foto's aan je projecten toe te voegen. Deze toestemming wordt alleen gebruikt wanneer jij expliciet een foto wilt toevoegen. Foto's worden lokaal opgeslagen en worden nergens naartoe geüpload.</p>
+
+        <h2>7. Kinderen</h2>
+        <p>BuildExact is niet gericht op kinderen onder de 13 jaar. We verzamelen niet bewust gegevens van kinderen — en zoals hierboven vermeld verzamelen we van niemand gegevens.</p>
+
+        <h2>8. Wijzigingen</h2>
+        <p>We kunnen dit beleid bijwerken als er nieuwe functies worden toegevoegd die de gegevensverwerking wijzigen. De datum bovenaan deze pagina geeft de laatste wijziging aan.</p>
+
+        <h2>9. Contact</h2>
+        <p>Vragen over dit privacybeleid? Neem contact op via: <a href="mailto:rsijbers1982@gmail.com">rsijbers1982@gmail.com</a></p>
+
+    </div>
+</main>
+
+<footer>
+    © 2026 Grounded Studio &nbsp;·&nbsp; <a href="https://grounded-studio.app">grounded-studio.app</a>
+</footer>
+
+<script>
+    function setLang(lang) {
+        document.querySelectorAll('.content-en, .content-nl').forEach(el => el.classList.remove('visible'));
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelector('.content-' + lang).classList.add('visible');
+        event.target.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

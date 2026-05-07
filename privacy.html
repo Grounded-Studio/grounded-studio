@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — FreshGarant</title>
+    <meta name="description" content="Privacy Policy for FreshGarant — Food Expiry Tracker by Grounded Studio.">
+    <link rel="canonical" href="https://grounded-studio.app/privacy.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: #06060a;
+            color: #f1f5f9;
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+        }
+        :root {
+            --vg: #22c55e;
+            --muted: #64748b;
+            --border: rgba(255,255,255,0.07);
+        }
+
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+            background: rgba(6,6,10,0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .nav-logo img { width: 28px; height: 28px; border-radius: 8px; }
+        .nav-logo span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--vg);
+        }
+        .nav-back {
+            font-size: 13px;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color .2s;
+        }
+        .nav-back:hover { color: #f1f5f9; }
+
+        /* CONTENT */
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(34,197,94,0.12);
+            color: var(--vg);
+            border: 1px solid rgba(34,197,94,0.25);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        h1 span { color: var(--vg); }
+
+        .meta {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--vg);
+            margin: 40px 0 12px;
+        }
+
+        p { color: #cbd5e1; margin-bottom: 14px; }
+        p:last-child { margin-bottom: 0; }
+
+        ul {
+            color: #cbd5e1;
+            padding-left: 20px;
+            margin-bottom: 14px;
+        }
+        ul li { margin-bottom: 6px; }
+
+        .card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .card p { margin-bottom: 8px; }
+        .card p:last-child { margin-bottom: 0; }
+
+        a { color: var(--vg); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .lang-toggle {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        .lang-btn.active {
+            background: rgba(34,197,94,0.12);
+            border-color: rgba(34,197,94,0.3);
+            color: var(--vg);
+        }
+
+        .content-en, .content-nl { display: none; }
+        .content-en.visible, .content-nl.visible { display: block; }
+
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: var(--muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="nav-logo" href="https://grounded-studio.app">
+        <img src="assets/icon-vg.png" alt="FreshGarant"
+             onerror="this.outerHTML='<div style=\'width:28px;height:28px;background:rgba(34,197,94,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px\'>🌿</div>'">
+        <span>FreshGarant</span>
+    </a>
+    <a class="nav-back" href="https://grounded-studio.app">← Grounded Studio</a>
+</nav>
+
+<main>
+    <div class="badge">Legal</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p class="meta">FreshGarant — Food Expiry Tracker &nbsp;·&nbsp; Last updated: May 7, 2026 &nbsp;·&nbsp; by Grounded Studio</p>
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('nl')">Nederlands</button>
+    </div>
+
+    <!-- ── ENGLISH ── -->
+    <div class="content-en visible">
+
+        <h2>1. Introduction</h2>
+        <p>FreshGarant ("the app") is developed by Grounded Studio. This privacy policy explains what data we collect, why we collect it, and how it is used. We are committed to protecting your privacy.</p>
+
+        <h2>2. Data we collect</h2>
+        <p>The app works entirely offline by default. No data is collected unless you explicitly use the optional Cloud Backup feature.</p>
+
+        <h2>3. Cloud Backup (optional)</h2>
+        <p>If you choose to use the Cloud Backup feature, the following data is stored on Google Firebase servers (EU region, europe-west1):</p>
+        <div class="card">
+            <p>📧 <strong>Email address</strong> — used to create and authenticate your backup account</p>
+            <p>🥛 <strong>Product data</strong> — product names, expiry dates, quantities, storage locations, brands, notes, and prices you have entered in the app</p>
+        </div>
+        <p>This data is stored securely under your account and is not accessible to other users. It is not used for advertising, analytics, or any purpose other than providing the backup and restore functionality.</p>
+        <p>Your data is never sold or shared with third parties.</p>
+
+        <h2>4. Data not collected</h2>
+        <p>We do not collect:</p>
+        <ul>
+            <li>Location data</li>
+            <li>Device identifiers</li>
+            <li>Usage analytics or crash reports</li>
+            <li>Payment information (purchases are handled by Google Play)</li>
+            <li>Photos (product photos are stored locally on your device only)</li>
+        </ul>
+
+        <h2>5. Third-party services</h2>
+        <p>The Cloud Backup feature uses <strong>Google Firebase</strong> (Firebase Authentication and Cloud Firestore), a service provided by Google LLC. Firebase stores data on servers in the EU (europe-west1). For more information, see <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+        <p>In-app purchases are processed by <strong>Google Play Billing</strong>. We do not receive or store your payment details.</p>
+
+        <h2>6. Your rights & data deletion</h2>
+        <p>You can delete your cloud account and all associated backup data at any time directly from within the app:</p>
+        <p><strong>Settings → Cloud Backup → Delete account & data</strong></p>
+        <p>This permanently removes your email address and all product data from our Firebase servers. Your local data on the device is not affected.</p>
+
+        <h2>7. Data retention</h2>
+        <p>Cloud backup data is retained until you delete your account. If you uninstall the app without deleting your account, your data remains stored until you sign in again and delete it.</p>
+
+        <h2>8. Children</h2>
+        <p>FreshGarant is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+        <h2>9. Changes to this policy</h2>
+        <p>We may update this policy occasionally. The "last updated" date at the top of this page will reflect any changes. Continued use of the app after changes constitutes acceptance.</p>
+
+        <h2>10. Contact</h2>
+        <p>Questions about this privacy policy? Contact us at: <a href="mailto:rsijbers1982@gmail.com">rsijbers1982@gmail.com</a></p>
+
+    </div>
+
+    <!-- ── NEDERLANDS ── -->
+    <div class="content-nl">
+
+        <h2>1. Inleiding</h2>
+        <p>FreshGarant / VersGarant ("de app") is ontwikkeld door Grounded Studio. Dit privacybeleid legt uit welke gegevens we verzamelen, waarom, en hoe deze worden gebruikt. We hechten veel waarde aan je privacy.</p>
+
+        <h2>2. Gegevens die we verzamelen</h2>
+        <p>De app werkt standaard volledig offline. Er worden geen gegevens verzameld tenzij je expliciet gebruikmaakt van de optionele Cloud Back-up functie.</p>
+
+        <h2>3. Cloud Back-up (optioneel)</h2>
+        <p>Als je de Cloud Back-up functie gebruikt, worden de volgende gegevens opgeslagen op Google Firebase servers (EU-regio, europe-west1):</p>
+        <div class="card">
+            <p>📧 <strong>E-mailadres</strong> — gebruikt om je back-up account aan te maken en te authenticeren</p>
+            <p>🥛 <strong>Productgegevens</strong> — productnamen, houdbaarheidsdatums, hoeveelheden, opslaglocaties, merken, notities en prijzen die je in de app hebt ingevoerd</p>
+        </div>
+        <p>Deze gegevens worden veilig opgeslagen onder jouw account en zijn niet toegankelijk voor andere gebruikers. Ze worden niet gebruikt voor reclame, analyse of enig ander doel dan de back-up en herstel functionaliteit.</p>
+        <p>Je gegevens worden nooit verkocht aan of gedeeld met derden.</p>
+
+        <h2>4. Gegevens die we niet verzamelen</h2>
+        <p>We verzamelen niet:</p>
+        <ul>
+            <li>Locatiegegevens</li>
+            <li>Apparaat-ID's</li>
+            <li>Gebruiksanalyses of crashrapporten</li>
+            <li>Betaalgegevens (aankopen worden afgehandeld door Google Play)</li>
+            <li>Foto's (productfoto's worden alleen lokaal op je apparaat opgeslagen)</li>
+        </ul>
+
+        <h2>5. Diensten van derden</h2>
+        <p>De Cloud Back-up functie maakt gebruik van <strong>Google Firebase</strong> (Firebase Authentication en Cloud Firestore), een dienst van Google LLC. Firebase slaat gegevens op op servers in de EU (europe-west1). Zie ook het <a href="https://policies.google.com/privacy" target="_blank">privacybeleid van Google</a>.</p>
+        <p>In-app aankopen worden verwerkt via <strong>Google Play Billing</strong>. Wij ontvangen of bewaren je betaalgegevens niet.</p>
+
+        <h2>6. Je rechten & gegevens verwijderen</h2>
+        <p>Je kunt je cloud account en alle bijbehorende back-upgegevens op elk moment verwijderen vanuit de app:</p>
+        <p><strong>Instellingen → Cloud Back-up → Account & data verwijderen</strong></p>
+        <p>Dit verwijdert je e-mailadres en alle productgegevens permanent van onze Firebase servers. Je lokale gegevens op het apparaat worden niet verwijderd.</p>
+
+        <h2>7. Bewaartermijn</h2>
+        <p>Cloud back-up gegevens worden bewaard totdat je je account verwijdert. Als je de app verwijdert zonder je account te verwijderen, blijven je gegevens opgeslagen totdat je opnieuw inlogt en ze verwijdert.</p>
+
+        <h2>8. Kinderen</h2>
+        <p>FreshGarant is niet gericht op kinderen onder de 13 jaar. We verzamelen niet bewust gegevens van kinderen.</p>
+
+        <h2>9. Wijzigingen</h2>
+        <p>We kunnen dit beleid af en toe bijwerken. De datum bovenaan deze pagina geeft de laatste wijziging aan. Voortgezet gebruik van de app na wijzigingen betekent acceptatie.</p>
+
+        <h2>10. Contact</h2>
+        <p>Vragen over dit privacybeleid? Neem contact op via: <a href="mailto:rsijbers1982@gmail.com">rsijbers1982@gmail.com</a></p>
+
+    </div>
+</main>
+
+<footer>
+    © 2026 Grounded Studio &nbsp;·&nbsp; <a href="https://grounded-studio.app">grounded-studio.app</a>
+</footer>
+
+<script>
+    function setLang(lang) {
+        document.querySelectorAll('.content-en, .content-nl').forEach(el => el.classList.remove('visible'));
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelector('.content-' + lang).classList.add('visible');
+        event.target.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
