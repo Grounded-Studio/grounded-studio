@@ -750,9 +750,122 @@
             /* Screenshot size */
             .app-screenshot { width: 240px; max-width: 240px; }
         }
+
+        /* ─── SCROLL PROGRESS BAR ──────────────────────── */
+        #progress {
+            position: fixed; top: 0; left: 0;
+            height: 3px; width: 0%;
+            background: linear-gradient(90deg, var(--vg), var(--gs), var(--bx));
+            z-index: 9999; border-radius: 0 2px 2px 0;
+            transition: width .08s linear; pointer-events: none;
+        }
+
+        /* ─── ENHANCED SCROLL ANIMATIONS (blur) ─────────── */
+        .a-fade  { opacity:0; transform:translateY(36px);  filter:blur(5px); transition:opacity .75s ease,transform .75s ease,filter .75s ease; }
+        .a-left  { opacity:0; transform:translateX(-36px); filter:blur(4px); transition:opacity .65s ease,transform .65s ease,filter .65s ease; }
+        .a-right { opacity:0; transform:translateX(36px);  filter:blur(4px); transition:opacity .65s ease,transform .65s ease,filter .65s ease; }
+        .a-scale { opacity:0; transform:scale(.88);        filter:blur(6px); transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),filter .9s ease; }
+        .in      { opacity:1 !important; transform:none !important; filter:none !important; }
+        @media (prefers-reduced-motion:reduce) {
+            .a-fade,.a-left,.a-right,.a-scale { filter:none; transition:opacity .4s ease; }
+        }
+
+        /* ─── ANIMATED HERO GRADIENT ─────────────────────── */
+        .hero h1 {
+            background: linear-gradient(135deg,#fff 0%,#c7d2fe 25%,var(--gs) 50%,#fff 75%,#8899bb 100%);
+            background-size: 250% 250%;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            animation: fadeUp .7s ease .2s both, heroGrad 9s ease-in-out 1s infinite;
+        }
+        @keyframes heroGrad {
+            0%,100% { background-position: 0% 50%; }
+            50%      { background-position: 100% 50%; }
+        }
+
+        /* ─── STUDIO MARK GLOW PULSE ─────────────────────── */
+        @keyframes studioGlow {
+            0%,100% { box-shadow: 0 0 80px var(--gs-glow); }
+            50%      { box-shadow: 0 0 150px var(--gs-glow), 0 0 280px rgba(129,140,248,.12); }
+        }
+        .studio-mark { animation: studioGlow 4s ease-in-out infinite; }
+
+        /* ─── SECTION SEPARATOR GLOW DOT ────────────────── */
+        .section-separator::before {
+            content: '';
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--gs);
+            box-shadow: 0 0 16px 4px var(--gs-glow), 0 0 40px var(--gs-glow);
+            animation: blink 3.5s ease-in-out infinite;
+        }
+
+        /* ─── FEATURE ICON HOVER ─────────────────────────── */
+        .feat-ico { transition: transform .35s cubic-bezier(.16,1,.3,1); }
+        .feat:hover .feat-ico { transform: scale(1.18) rotate(-6deg); }
+
+        /* ─── MARQUEE ────────────────────────────────────── */
+        .marquee-wrap {
+            overflow: hidden;
+            border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+            padding: 18px 0; background: rgba(255,255,255,.012);
+            -webkit-mask-image: linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%);
+            mask-image: linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%);
+        }
+        .marquee-track {
+            display: flex; align-items: center; gap: 44px;
+            width: max-content;
+            animation: marquee 32s linear infinite;
+            will-change: transform;
+        }
+        .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+        @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+        .marquee-item {
+            white-space: nowrap; font-size: .75rem; font-weight: 700;
+            letter-spacing: .06em; text-transform: uppercase;
+        }
+        .marquee-item.vg { color: var(--vg); opacity: .6; }
+        .marquee-item.bx { color: var(--bx); opacity: .6; }
+        .marquee-sep { color: rgba(255,255,255,.15); font-size: .45rem; }
+
+        /* ─── MEDIUM BREAKPOINT (700px) ─────────────────── */
+        @media (max-width:700px) {
+            .hero { padding: 100px 20px 80px; }
+            .app-screenshot { width: 240px; max-width: 240px; }
+            /* Softer 3D tilt on mobile */
+            .vg-tilt {
+                transform: perspective(900px) rotateY(-6deg) rotateX(2deg);
+                animation: floatVGMob 7s ease-in-out infinite;
+            }
+            .bx-tilt {
+                transform: perspective(900px) rotateY(6deg) rotateX(2deg);
+                animation: floatBXMob 7s ease-in-out infinite;
+                animation-delay: -3.5s;
+            }
+        }
+        @keyframes floatVGMob {
+            0%,100% { transform: perspective(900px) rotateY(-6deg) rotateX(2deg) translateY(0); }
+            50%     { transform: perspective(900px) rotateY(-6deg) rotateX(2deg) translateY(-10px); }
+        }
+        @keyframes floatBXMob {
+            0%,100% { transform: perspective(900px) rotateY(6deg) rotateX(2deg) translateY(0); }
+            50%     { transform: perspective(900px) rotateY(6deg) rotateX(2deg) translateY(-10px); }
+        }
+
+        /* About grid: 2-col on medium, 1-col on small */
+        @media (max-width:860px) and (min-width:581px) { .about-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width:580px) { .about-grid { grid-template-columns: 1fr; } }
+
+        /* Nav logo subtle glow when stuck */
+        nav.stuck .nav-mark { box-shadow: 0 0 30px var(--gs-glow); }
+
+        /* App icon badge: subtle glassmorphism on hover */
+        .app-icon-badge { transition: transform .3s cubic-bezier(.16,1,.3,1); }
+        .app-icon-badge:hover { transform: translateY(-3px); }
     </style>
 </head>
 <body>
+<div id="progress"></div>
 
 <!-- ── NAVIGATION ─────────────────────────────────────── -->
 <nav id="nav">
@@ -861,6 +974,29 @@
         <span data-i18n="scroll">Scroll</span>
     </div>
 </section>
+
+<!-- ── MARQUEE ────────────────────────────────────────── -->
+<div class="marquee-wrap">
+    <div class="marquee-track">
+        <span class="marquee-item vg">📱 Barcode Scanner</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item vg">🔔 Smart Notifications</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item vg">🛒 Shopping List</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item vg">📊 Waste Reports</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item bx">📐 Material Calculations</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item bx">💰 Cost Estimation</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item bx">📋 Project Management</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item bx">📤 PDF Export</span><span class="marquee-sep">◆</span>
+        <!-- duplicate for seamless loop -->
+        <span class="marquee-item vg">📱 Barcode Scanner</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item vg">🔔 Smart Notifications</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item vg">🛒 Shopping List</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item vg">📊 Waste Reports</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item bx">📐 Material Calculations</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item bx">💰 Cost Estimation</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item bx">📋 Project Management</span><span class="marquee-sep">◆</span>
+        <span class="marquee-item bx">📤 PDF Export</span><span class="marquee-sep">◆</span>
+    </div>
+</div>
 
 <!-- ── FRESHGARANT ─────────────────────────────────────── -->
 <section class="app-section vg-section" id="freshgarant">
@@ -1245,9 +1381,14 @@ document.querySelectorAll('.lang-btn').forEach(b =>
 );
 if (lang === 'nl') applyLang('nl', false);
 
-/* ── Sticky nav ────────────────────────────────────── */
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 60), { passive: true });
+/* ── Scroll progress bar ───────────────────────────── */
+const prog = document.getElementById('progress');
+const nav  = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+    const pct = scrollY / (document.body.scrollHeight - innerHeight) * 100;
+    prog.style.width = pct + '%';
+    nav.classList.toggle('stuck', scrollY > 60);
+}, { passive: true });
 
 /* ── Mobile menu ───────────────────────────────────── */
 const hamburger    = document.getElementById('hamburger');
@@ -1324,24 +1465,26 @@ const obs = new IntersectionObserver(entries =>
 document.querySelectorAll('.a-fade,.a-left,.a-right,.a-scale').forEach(el => obs.observe(el));
 
 /* ── Mouse-tracked 3D parallax on screenshots ──────── */
-document.querySelectorAll('.app-section').forEach(section => {
-    const tilt = section.querySelector('.tilt-wrap');
-    const isVG = tilt && tilt.classList.contains('vg-tilt');
-    if (!tilt) return;
-    const baseY = isVG ? -12 : 12;
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.app-section').forEach(section => {
+        const tilt = section.querySelector('.tilt-wrap');
+        const isVG = tilt && tilt.classList.contains('vg-tilt');
+        if (!tilt) return;
+        const baseY = isVG ? -12 : 12;
 
-    section.addEventListener('mousemove', e => {
-        const r = section.getBoundingClientRect();
-        const x = ((e.clientX - r.left) / r.width  - .5) * 6;
-        const y = ((e.clientY - r.top)  / r.height - .5) * -4;
-        tilt.style.transform = `perspective(1100px) rotateY(${baseY + x}deg) rotateX(${4 + y}deg)`;
-        tilt.style.animationPlayState = 'paused';
+        section.addEventListener('mousemove', e => {
+            const r = section.getBoundingClientRect();
+            const x = ((e.clientX - r.left) / r.width  - .5) * 6;
+            const y = ((e.clientY - r.top)  / r.height - .5) * -4;
+            tilt.style.transform = `perspective(1100px) rotateY(${baseY + x}deg) rotateX(${4 + y}deg)`;
+            tilt.style.animationPlayState = 'paused';
+        });
+        section.addEventListener('mouseleave', () => {
+            tilt.style.transform = '';
+            tilt.style.animationPlayState = 'running';
+        });
     });
-    section.addEventListener('mouseleave', () => {
-        tilt.style.transform = '';
-        tilt.style.animationPlayState = 'running';
-    });
-});
+}
 </script>
 </body>
 </html>
