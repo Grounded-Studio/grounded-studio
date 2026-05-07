@@ -828,10 +828,13 @@
             width: 1px; height: 44px;
             background: var(--border); flex-shrink: 0;
         }
+        .stat-play { display: flex; align-items: center; justify-content: center; }
+        .stat-play-svg { width: 32px; height: 32px; }
         @media (max-width: 480px) {
             .stat-item { padding: 0 20px; }
             .stat-num { font-size: 1.4rem; }
             .stat-label { font-size: .6rem; }
+            .stat-play-svg { width: 26px; height: 26px; }
         }
 
         /* ─── MEDIUM BREAKPOINT (700px) ─────────────────── */
@@ -990,8 +993,15 @@
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item">
-        <span class="stat-num">🇳🇱</span>
-        <span class="stat-label" data-i18n="stats.origin">Made in Netherlands</span>
+        <span class="stat-num stat-play">
+            <svg viewBox="0 0 24 24" fill="none" class="stat-play-svg">
+                <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
+                <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
+                <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
+                <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
+            </svg>
+        </span>
+        <span class="stat-label" data-i18n="stats.origin">Google Play</span>
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item">
@@ -1290,7 +1300,7 @@ const T = {
         'foot.rights':  '© 2026 — All rights reserved',
         'foot.copy':    'Made with ❤️ in the Netherlands',
         'stats.apps':   'Apps on Android',
-        'stats.origin': 'Made in Netherlands',
+        'stats.origin': 'Google Play',
         'stats.free':   'to download',
     },
     nl: {
@@ -1341,7 +1351,7 @@ const T = {
         'foot.rights':  '© 2026 — Alle rechten voorbehouden',
         'foot.copy':    'Made with ❤️ in Nederland',
         'stats.apps':   'Apps op Android',
-        'stats.origin': 'Gemaakt in Nederland',
+        'stats.origin': 'Google Play',
         'stats.free':   'te downloaden',
     }
 };
