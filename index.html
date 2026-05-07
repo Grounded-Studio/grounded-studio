@@ -197,6 +197,29 @@
         /* ─── PLAY STORE BUTTON ──────────────────────────── */
         .play-btn { display:inline-flex;align-items:center;gap:16px;padding:17px 30px;border-radius:18px;margin-top:44px;text-decoration:none;color:#fff;font-weight:600;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);transition:all .3s ease; }
         .play-btn:hover { background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,.4); }
+
+        /* Coming Soon badge */
+        .coming-soon-wrap { display:inline-flex; flex-direction:column; gap:12px; margin-top:44px; }
+        .coming-soon {
+            display:inline-flex; align-items:center; gap:16px;
+            padding:17px 30px; border-radius:18px;
+            color:#94a3b8; font-weight:600;
+            background:rgba(255,255,255,.03);
+            border:1px solid rgba(255,255,255,.07);
+            position:relative; overflow:hidden;
+            cursor:default;
+        }
+        /* shimmer sweep */
+        .coming-soon::after {
+            content:'';
+            position:absolute; inset:0;
+            background:linear-gradient(105deg, transparent 40%, rgba(255,255,255,.06) 50%, transparent 60%);
+            animation:shimmer 2.8s ease-in-out infinite;
+        }
+        @keyframes shimmer { 0%{transform:translateX(-100%)} 100%{transform:translateX(200%)} }
+        .cs-icon { font-size:22px; opacity:.5; }
+        .cs-text small { display:block; font-size:.7rem; font-weight:400; opacity:.55; }
+        .cs-text span  { display:block; font-size:1rem; font-weight:700; }
         .play-svg { width:28px;height:28px; }
         .play-text small { display:block;font-size:.7rem;font-weight:400;opacity:.6; }
         .play-text span  { display:block;font-size:1rem;font-weight:700; }
@@ -468,18 +491,15 @@
                     </li>
                 </ul>
 
-                <a href="#" class="play-btn a-fade" style="transition-delay:.42s">
-                    <svg class="play-svg" viewBox="0 0 24 24" fill="none">
-                        <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
-                        <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
-                        <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
-                        <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
-                    </svg>
-                    <div class="play-text">
-                        <small data-i18n="play.small">Download on</small>
-                        <span data-i18n="play.big">Google Play</span>
+                <div class="coming-soon-wrap a-fade" style="transition-delay:.42s">
+                    <div class="coming-soon">
+                        <span class="cs-icon">⏳</span>
+                        <div class="cs-text">
+                            <small data-i18n="cs.small">Available on</small>
+                            <span data-i18n="cs.big">Coming Soon</span>
+                        </div>
                     </div>
-                </a>
+                </div>
             </div>
 
             <!-- 3D Screenshot -->
@@ -554,7 +574,7 @@
                     </li>
                 </ul>
 
-                <a href="#" class="play-btn a-fade" style="transition-delay:.42s">
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="play-btn a-fade" style="transition-delay:.42s">
                     <svg class="play-svg" viewBox="0 0 24 24" fill="none">
                         <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
                         <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
@@ -669,6 +689,8 @@ const T = {
         'vg.f4.p':      'See how much you save and track your progress in reducing food waste at home.',
         'play.small':   'Download on',
         'play.big':     'Google Play',
+        'cs.small':     'Google Play',
+        'cs.big':       'Coming Soon',
         'bx.by':        'by Grounded Studio',
         'bx.tag.text':  'App 02',
         'bx.h2':        'Build with<br><span style="color:var(--bx)">precision</span>',
@@ -715,6 +737,8 @@ const T = {
         'vg.f4.p':      'Zie hoeveel je bespaart en volg je voortgang in het verminderen van voedselverspilling thuis.',
         'play.small':   'Download op',
         'play.big':     'Google Play',
+        'cs.small':     'Google Play',
+        'cs.big':       'Binnenkort beschikbaar',
         'bx.by':        'door Grounded Studio',
         'bx.tag.text':  'App 02',
         'bx.h2':        'Bouw met<br><span style="color:var(--bx)">precisie</span>',
