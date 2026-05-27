@@ -3,23 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grounded Studio — Apps that actually work</title>
-    <meta name="description" content="Grounded Studio builds intuitive apps for daily life. Discover FreshGarant and BuildExact on Google Play.">
+    <title>Grounded Studio — FreshGarant & BuildExact Android Apps</title>
+    <meta name="description" content="Grounded Studio maakt slimme Android-apps: FreshGarant voor houdbaarheidsdatum bijhouden en voedselverspilling, en BuildExact voor bouwcalculaties en materiaalberekeningen.">
+    <meta name="keywords" content="houdbaarheidsdatum app, voedselverspilling bijhouden, barcode scanner vervaldatum, food expiry tracker android, bouwcalculatie app, materiaalberekening android, kostenraming bouw, construction calculator, FreshGarant, VersGarant, BuildExact, BouwExact, Grounded Studio">
+    <meta name="author" content="Grounded Studio">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://grounded-studio.app">
 
-    <!-- Open Graph (WhatsApp, Facebook, LinkedIn previews) -->
+    <!-- Open Graph -->
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="https://grounded-studio.app">
-    <meta property="og:title"       content="Grounded Studio — Apps that actually work">
-    <meta property="og:description" content="We build intuitive, smart apps for daily life. Discover FreshGarant and BuildExact on Google Play.">
+    <meta property="og:title"       content="Grounded Studio — FreshGarant & BuildExact Android Apps">
+    <meta property="og:description" content="Slimme Android-apps voor dagelijks gebruik. FreshGarant: houdbaarheidsdatum bijhouden. BuildExact: bouwcalculaties en materiaalberekeningen.">
     <meta property="og:image"       content="https://grounded-studio.app/assets/og-image.png">
+    <meta property="og:locale"      content="nl_NL">
+    <meta property="og:locale:alternate" content="en_US">
 
     <!-- Twitter/X card -->
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:url"         content="https://grounded-studio.app">
-    <meta name="twitter:title"       content="Grounded Studio — Apps that actually work">
-    <meta name="twitter:description" content="We build intuitive, smart apps for daily life. Discover FreshGarant and BuildExact on Google Play.">
+    <meta name="twitter:title"       content="Grounded Studio — FreshGarant & BuildExact Android Apps">
+    <meta name="twitter:description" content="Slimme Android-apps voor dagelijks gebruik. FreshGarant & BuildExact op Google Play.">
     <meta name="twitter:image"       content="https://grounded-studio.app/assets/og-image.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://grounded-studio.app/#organization",
+                "name": "Grounded Studio",
+                "url": "https://grounded-studio.app",
+                "logo": "https://grounded-studio.app/assets/logo-gs.png",
+                "description": "Independent Android app studio based in the Netherlands, building purposeful apps for daily life.",
+                "foundingLocation": "Netherlands",
+                "sameAs": ["https://play.google.com/store/apps/developer?id=Grounded+Studio"]
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "FreshGarant",
+                "alternateName": "VersGarant",
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "Android",
+                "description": "Houdbaarheidsdatum bijhouden app. Scan barcodes, ontvang slimme meldingen en voorkom voedselverspilling thuis. Food expiry tracker voor Android.",
+                "keywords": "houdbaarheidsdatum app, voedselverspilling, barcode scanner vervaldatum, food expiry tracker android, VersGarant",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+                "author": { "@id": "https://grounded-studio.app/#organization" },
+                "url": "https://grounded-studio.app/#freshgarant"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "BuildExact",
+                "alternateName": "BouwExact",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Android",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "EUR"
+                },
+                "description": "Bouwcalculatie app voor materiaalberekeningen, kostenramingen en projectbeheer. Construction calculator voor bouwers en klussenmakers.",
+                "keywords": "bouwcalculatie app, materiaalberekening android, kostenraming bouw, construction calculator, BouwExact",
+                "downloadUrl": "https://play.google.com/store/apps/details?id=com.metenweten.bouw",
+                "author": { "@id": "https://grounded-studio.app/#organization" },
+                "url": "https://grounded-studio.app/#buildexact"
+            }
+        ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
