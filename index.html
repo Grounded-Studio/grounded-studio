@@ -84,11 +84,10 @@
         .nav-logo  { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; flex-shrink:0; }
         .nav-mark  {
             width:38px; height:38px; border-radius:11px;
-            background:linear-gradient(135deg,var(--gs),var(--gs2));
-            display:flex; align-items:center; justify-content:center;
-            font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:18px;
+            overflow:hidden; flex-shrink:0;
             box-shadow:0 0 20px var(--gs-glow);
         }
+        .nav-mark img { width:100%; height:100%; object-fit:cover; display:block; }
         .nav-name  { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.95rem; }
         .nav-right { display:flex; align-items:center; gap:20px; }
         .nav-links { display:flex; align-items:center; gap:28px; list-style:none; }
@@ -652,7 +651,8 @@
         /* ─── ABOUT SECTION ──────────────────────────────── */
         .about-section { padding:130px 0; text-align:center; position:relative; }
         .about-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(129,140,248,.05) 0%,transparent 70%); }
-        .studio-mark { width:88px;height:88px;border-radius:26px;margin:0 auto 36px;background:linear-gradient(135deg,var(--gs),var(--gs2));display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:42px;box-shadow:0 0 80px var(--gs-glow); }
+        .studio-mark { width:88px;height:88px;border-radius:26px;margin:0 auto 36px;overflow:hidden;box-shadow:0 0 80px var(--gs-glow); }
+        .studio-mark img { width:100%;height:100%;object-fit:cover;display:block; }
         .about-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:72px; }
         @media (max-width:860px) { .about-grid { grid-template-columns:1fr; } }
 
@@ -707,7 +707,8 @@
         }
         .foot-inner { display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px; }
         .foot-brand { display:flex;align-items:center;gap:14px; }
-        .foot-mark { width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--gs),var(--gs2));display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:22px;box-shadow:0 0 24px var(--gs-glow); }
+        .foot-mark { width:44px;height:44px;border-radius:14px;overflow:hidden;box-shadow:0 0 24px var(--gs-glow); }
+        .foot-mark img { width:100%;height:100%;object-fit:cover;display:block; }
         .foot-brand h3 { font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:700; }
         .foot-brand p  { font-size:.78rem;color:var(--muted);margin-top:2px; }
         .foot-apps { display:flex;gap:10px;flex-wrap:wrap; }
@@ -881,7 +882,7 @@
     <div class="c">
         <div class="nav-inner">
             <a href="#" class="nav-logo">
-                <div class="nav-mark">G</div>
+                <div class="nav-mark"><img src="assets/logo-gs.png" alt="Grounded Studio"></div>
                 <span class="nav-name">Grounded Studio</span>
             </a>
             <div class="nav-right">
@@ -1035,8 +1036,7 @@
                     Never waste<br><span style="color:var(--vg)">food again</span>
                 </h2>
                 <p class="s-desc a-fade" style="transition-delay:.18s" data-i18n="vg.desc">
-                    FreshGarant automatically tracks when your products expire. Scan barcodes,
-                    receive smart notifications, and save money by preventing food waste.
+                    FreshGarant tracks your food expiry dates so nothing goes to waste. Scan barcodes, get timely alerts, and see exactly what you're saving. Upgrade to Pro for receipt scanning, freezer tracking, and more.
                 </p>
 
                 <ul class="features">
@@ -1064,22 +1064,38 @@
                     <li class="feat a-left" style="transition-delay:.32s">
                         <div class="feat-ico vg">📊</div>
                         <div class="feat-body">
-                            <h4 data-i18n="vg.f4.h">Waste Report</h4>
-                            <p data-i18n="vg.f4.p">See how much you save and track your progress in reducing food waste at home.</p>
+                            <h4 data-i18n="vg.f4.h">Waste Statistics</h4>
+                            <p data-i18n="vg.f4.p">See exactly how much money you save and track your progress in reducing food waste at home.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.40s">
+                        <div class="feat-ico vg">🧾</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="vg.f5.h">Receipt Scanner <span style="font-size:.7em;opacity:.7">Pro</span></h4>
+                            <p data-i18n="vg.f5.p">Scan your grocery receipt to add all products at once — expiry dates filled in automatically.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.48s">
+                        <div class="feat-ico vg">❄️</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="vg.f6.h">Freezer Mode <span style="font-size:.7em;opacity:.7">Pro</span></h4>
+                            <p data-i18n="vg.f6.p">Track frozen products with freeze date, suggested expiry, and days-frozen counter per category.</p>
                         </div>
                     </li>
                 </ul>
 
-                <div class="coming-soon-wrap a-fade" style="transition-delay:.42s">
-                    <div class="coming-soon">
-                        <div class="cs-pulse-dot"></div>
-                        <span class="cs-icon">⏳</span>
-                        <div class="cs-text">
-                            <small data-i18n="cs.small">Available on</small>
-                            <span data-i18n="cs.big">Coming Soon</span>
-                        </div>
+                <a href="https://play.google.com/store/apps/details?id=app.rork.versgarant" target="_blank" rel="noopener" class="play-btn a-fade" style="transition-delay:.56s">
+                    <svg class="play-svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
+                        <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
+                        <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
+                        <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
+                    </svg>
+                    <div class="play-text">
+                        <small data-i18n="play.small">Download on</small>
+                        <span data-i18n="play.big">Google Play</span>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- 3D Screenshot -->
@@ -1191,7 +1207,7 @@
 <!-- ── ABOUT / STUDIO ─────────────────────────────────── -->
 <section class="about-section" id="studio">
     <div class="c">
-        <div class="studio-mark a-scale">G</div>
+        <div class="studio-mark a-scale"><img src="assets/logo-gs.png" alt="Grounded Studio"></div>
         <div class="s-tag gs a-fade" style="justify-content:center">
             <span>●</span>&nbsp;<span data-i18n="about.tag">About us</span>
         </div>
@@ -1227,7 +1243,7 @@
     <div class="c">
         <div class="foot-inner">
             <div class="foot-brand">
-                <div class="foot-mark">G</div>
+                <div class="foot-mark"><img src="assets/logo-gs.png" alt="Grounded Studio"></div>
                 <div>
                     <h3>Grounded Studio</h3>
                     <p data-i18n="foot.rights">© 2026 — All rights reserved</p>
@@ -1263,15 +1279,19 @@ const T = {
         'vg.by':        'by Grounded Studio',
         'vg.tag.text':  'App 01',
         'vg.h2':        'Never waste<br><span style="color:var(--vg)">food again</span>',
-        'vg.desc':      'FreshGarant automatically tracks when your products expire. Scan barcodes, receive smart notifications, and save money by preventing food waste.',
+        'vg.desc':      "FreshGarant tracks your food expiry dates so nothing goes to waste. Scan barcodes, get timely alerts, and see exactly what you're saving. Upgrade to Pro for receipt scanning, freezer tracking, and more.",
         'vg.f1.h':      'Barcode Scanner',
         'vg.f1.p':      'Scan products directly with your camera to automatically look up product data and expiry dates.',
         'vg.f2.h':      'Smart Notifications',
         'vg.f2.p':      'Receive timely push notifications before products expire, so you can still use them in time.',
         'vg.f3.h':      'Shopping List',
         'vg.f3.p':      "Automatically generate a shopping list based on what you're almost out of or need to restock.",
-        'vg.f4.h':      'Waste Report',
-        'vg.f4.p':      'See how much you save and track your progress in reducing food waste at home.',
+        'vg.f4.h':      'Waste Statistics',
+        'vg.f4.p':      'See exactly how much money you save and track your progress in reducing food waste at home.',
+        'vg.f5.h':      'Receipt Scanner',
+        'vg.f5.p':      'Scan your grocery receipt to add all products at once — expiry dates filled in automatically.',
+        'vg.f6.h':      'Freezer Mode',
+        'vg.f6.p':      'Track frozen products with freeze date, suggested expiry, and days-frozen counter per category.',
         'play.small':   'Download on',
         'play.big':     'Google Play',
         'cs.small':     'Google Play',
@@ -1314,15 +1334,19 @@ const T = {
         'vg.by':        'door Grounded Studio',
         'vg.tag.text':  'App 01',
         'vg.h2':        'Nooit meer<br><span style="color:var(--vg)">verspilling</span>',
-        'vg.desc':      'VersGarant houdt automatisch bij wanneer je producten verlopen. Scan barcodes, ontvang slimme meldingen en bespaar geld door voedselverspilling te voorkomen.',
+        'vg.desc':      'VersGarant houdt je houdbaarheidsdatums bij zodat er niets verspild wordt. Scan barcodes, ontvang tijdige meldingen en zie precies wat je bespaart. Upgrade naar Pro voor kassabonscanner, vriezermodus en meer.',
         'vg.f1.h':      'Barcode Scanner',
         'vg.f1.p':      'Scan producten direct met de camera voor automatisch opzoeken van productgegevens en houdbaarheidsdatum.',
         'vg.f2.h':      'Slimme Meldingen',
         'vg.f2.p':      'Ontvang tijdige pushnotificaties voordat producten verlopen, zodat je ze nog kunt gebruiken.',
         'vg.f3.h':      'Boodschappenlijst',
         'vg.f3.p':      'Genereer automatisch een boodschappenlijst op basis van wat je bijna op hebt of nodig hebt.',
-        'vg.f4.h':      'Verspillingsrapport',
-        'vg.f4.p':      'Zie hoeveel je bespaart en volg je voortgang in het verminderen van voedselverspilling thuis.',
+        'vg.f4.h':      'Verspillingsstatistieken',
+        'vg.f4.p':      'Zie precies hoeveel geld je bespaart en volg je voortgang in het verminderen van voedselverspilling.',
+        'vg.f5.h':      'Kassabonscanner',
+        'vg.f5.p':      'Scan je kassabon om alle producten in één keer toe te voegen — houdbaarheidsdatums automatisch ingevuld.',
+        'vg.f6.h':      'Vriezermodus',
+        'vg.f6.p':      'Volg ingevroren producten met invriesdatum, geadviseerde houdbaarheid en dagenteller per categorie.',
         'play.small':   'Download op',
         'play.big':     'Google Play',
         'cs.small':     'Google Play',
