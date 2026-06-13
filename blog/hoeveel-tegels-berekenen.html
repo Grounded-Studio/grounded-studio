@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoeveel tegels heb ik nodig? Zo bereken je het correct | BuildExact</title>
+    <meta name="description" content="Hoeveel tegels heb je nodig voor jouw vloer of muur? Leer hoe je de berekening maakt inclusief snijverlies. Voorkom te weinig of te veel bestellen.">
+    <meta name="keywords" content="hoeveel tegels nodig, tegels berekenen, tegels leggen berekening, snijverlies tegels, m2 tegels berekenen, tegelberekening, bouwcalculatie app">
+    <meta name="author" content="Grounded Studio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://grounded-studio.app/blog/hoeveel-tegels-berekenen.html">
+    <meta property="og:title" content="Hoeveel tegels heb ik nodig? Zo bereken je het correct">
+    <meta property="og:description" content="Leer hoe je exact berekent hoeveel tegels je nodig hebt, inclusief snijverlies en voegen. Voorkom tekort of overschot.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded-studio.app/blog/hoeveel-tegels-berekenen.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Hoeveel tegels heb ik nodig? Zo bereken je het correct",
+        "description": "Leer hoe je exact berekent hoeveel tegels je nodig hebt voor vloer of muur, inclusief snijverlies.",
+        "author": { "@type": "Organization", "name": "Grounded Studio", "url": "https://grounded-studio.app" },
+        "publisher": { "@type": "Organization", "name": "Grounded Studio" },
+        "datePublished": "2026-06-13",
+        "inLanguage": "nl"
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { background: #06060a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; line-height: 1.6; }
+        :root { --bx:#2563eb; --bx-glow:rgba(37,99,235,0.3); --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(6,6,10,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; }
+        .nav-back:hover { color:var(--bx); }
+
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; align-items:center; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; transition:color .2s; }
+        .breadcrumb a:hover { color:var(--bx); }
+        .article-cat { display:inline-flex; align-items:center; gap:8px; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; align-items:center; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; letter-spacing:-.02em; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:28px; margin:32px 0; }
+        .formula-box .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px; }
+        .formula-box .formula { font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; margin-bottom:10px; }
+        .formula-box .formula-example { font-size:.9rem; color:var(--muted); }
+
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+
+        .table-wrap { overflow-x:auto; margin:28px 0; }
+        table { width:100%; border-collapse:collapse; font-size:.9rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; transition:all .3s; }
+        .app-cta a:hover { background:rgba(37,99,235,.25); transform:translateY(-2px); }
+        .app-cta a svg { width:22px; height:22px; }
+
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; transition:all .3s; }
+        .related-card:hover { background:rgba(37,99,235,.05); border-color:rgba(37,99,235,.3); }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--bx); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        .foot-copy { font-size:.75rem; color:#334155; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="c-wide">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio"></div>
+                <span class="nav-name">Grounded Studio</span>
+            </a>
+            <a href="buildexact.html" class="nav-back">← Blog</a>
+        </div>
+    </div>
+</nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> /
+                <a href="../buildexact.html">BuildExact</a> /
+                <a href="buildexact.html">Blog</a> /
+                <span>Hoeveel tegels berekenen</span>
+            </div>
+            <div class="article-cat">🏗️ Berekeningen</div>
+            <h1>Hoeveel tegels heb ik nodig? Zo bereken je het correct</h1>
+            <div class="article-meta">
+                <span>📅 13 juni 2026</span>
+                <span>⏱ 5 min lezen</span>
+                <span>✍️ Grounded Studio</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+
+            <p>Te weinig tegels bestellen is een nachtmerrie — halverwege je klus moet je bijbestellen en hopen dat de partij nog beschikbaar is. Te veel bestellen is ook zonde. Met de juiste berekening <strong>voorkom je beide problemen</strong>. In dit artikel leer je stap voor stap hoe je het exact uitrekent.</p>
+
+            <h2>Stap 1: Meet de oppervlakte op</h2>
+            <p>Begin met het opmeten van de ruimte die je wilt betegelen. Reken altijd per rechthoek of deel. Bij een L-vormige ruimte splits je deze op in twee rechthoeken.</p>
+
+            <div class="formula-box">
+                <div class="formula-label">Basisformule</div>
+                <div class="formula">Oppervlakte (m²) = Lengte (m) × Breedte (m)</div>
+                <div class="formula-example">Voorbeeld: een badkamer van 2,5 m × 3,0 m = 7,5 m²</div>
+            </div>
+
+            <p>Meet ook eventuele uitsparingen (zoals een bad of toilet) en trek die af van de totale oppervlakte.</p>
+
+            <h2>Stap 2: Bereken het snijverlies</h2>
+            <p>Je moet altijd rekening houden met <strong>snijverlies</strong> — tegels die je moet doorzagen om randen en hoeken te vullen. Hoe je legt, bepaalt hoeveel verlies je hebt:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Legpatroon</th><th>Snijverlies</th><th>Toelichting</th></tr>
+                    <tr><td>Recht (horizontaal)</td><td>+10%</td><td>Minste snijwerk, ideaal voor beginners</td></tr>
+                    <tr><td>Halfsteensverband</td><td>+10%</td><td>Elke rij half verspringen</td></tr>
+                    <tr><td>Diagonaal (45°)</td><td>+15%</td><td>Meer snijverlies aan de randen</td></tr>
+                    <tr><td>Visgraat</td><td>+15-20%</td><td>Complex patroon, meer uitval</td></tr>
+                    <tr><td>Onregelmatige ruimte</td><td>+20%</td><td>Veel hoeken, nissen of pilaren</td></tr>
+                </table>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label">Berekening met snijverlies</div>
+                <div class="formula">Tegels nodig = Oppervlakte × (1 + snijverlies %)</div>
+                <div class="formula-example">Voorbeeld: 7,5 m² × 1,10 (10% verlies) = 8,25 m² aan tegels</div>
+            </div>
+
+            <h2>Stap 3: Omrekenen naar aantal tegels</h2>
+            <p>Nu je weet hoeveel m² je nodig hebt, reken je dat om naar het aantal tegels. Op de verpakking staat altijd hoeveel m² er per doos inzit.</p>
+
+            <div class="formula-box">
+                <div class="formula-label">Aantal dozen</div>
+                <div class="formula">Dozen = Benodigde m² ÷ m² per doos</div>
+                <div class="formula-example">Voorbeeld: 8,25 m² ÷ 1,5 m² per doos = 5,5 → afronden naar 6 dozen</div>
+            </div>
+
+            <div class="tip-card">
+                <h3>💡 Altijd naar boven afronden</h3>
+                <p>Rond het aantal dozen altijd naar boven af. Bestel ook altijd <strong>1 doos extra</strong> als reserve voor toekomstige reparaties. Tegels uit dezelfde partij zijn later vaak niet meer te koop.</p>
+            </div>
+
+            <h2>Praktisch voorbeeld: complete badkamer</h2>
+            <p>Stel je betegelt een badkamer van <strong>2,5 m × 3,0 m</strong> met een recht patroon. De tegels zijn <strong>30×60 cm</strong> en komen in dozen van <strong>1,62 m²</strong>.</p>
+            <ol>
+                <li>Oppervlakte: 2,5 × 3,0 = <strong>7,5 m²</strong></li>
+                <li>Snijverlies (10%): 7,5 × 1,10 = <strong>8,25 m²</strong></li>
+                <li>Aantal dozen: 8,25 ÷ 1,62 = 5,09 → <strong>6 dozen</strong></li>
+                <li>Plus 1 reservedoos = <strong>7 dozen bestellen</strong></li>
+            </ol>
+
+            <div class="app-cta">
+                <h3>📐 Automatisch berekenen met BuildExact</h3>
+                <p>Voer de afmetingen in en BuildExact berekent direct hoeveel tegels, dozen en kosten je nodig hebt — inclusief snijverlies. Sla op als project en exporteer als PDF voor je klant.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    Gratis downloaden
+                </a>
+            </div>
+
+            <h2>Veelgemaakte fouten bij tegels bestellen</h2>
+            <ul>
+                <li><strong>Geen snijverlies meenemen</strong> — de meest gemaakte fout. Altijd verlies optellen.</li>
+                <li><strong>Voegen vergeten</strong> — voegen nemen ruimte in. Bij brede voegen (>3mm) kan dit de hoeveelheid tegels iets verlagen.</li>
+                <li><strong>Verschillende partijen</strong> — tegels van dezelfde naam maar andere partij kunnen in kleur afwijken. Koop alles tegelijk.</li>
+                <li><strong>Geen reservetegels</strong> — altijd 1 extra doos bewaren voor reparaties later.</li>
+            </ul>
+
+            <h2>Conclusie</h2>
+            <p>De berekening is eenvoudig als je het stap voor stap aanpakt: oppervlakte meten, snijverlies optellen en omrekenen naar dozen. <strong>Rond altijd naar boven af</strong> en bewaar een reservedoos.</p>
+            <p>Wil je dit nog sneller doen? Met <strong>BuildExact</strong> voer je de afmetingen in en krijg je direct het exacte aantal tegels, kosten en een PDF-overzicht voor je klant.</p>
+
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Meer artikelen</h2>
+        <a href="buildexact.html" class="related-card">
+            <div class="cat">🏗️ BuildExact Blog</div>
+            <div class="title">Bekijk alle artikelen over bouwcalculaties →</div>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <div class="c-wide">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo">
+                <div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio"></div>
+                <span class="foot-name">Grounded Studio</span>
+            </a>
+            <span class="foot-copy">© 2026 — All rights reserved</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
