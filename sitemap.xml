@@ -50,4 +50,34 @@
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/best-before-vs-use-by.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-to-organise-your-fridge.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/smarter-grocery-shopping.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-much-paint-do-i-need.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-much-laminate-do-i-need.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/renovation-cost-estimate.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>

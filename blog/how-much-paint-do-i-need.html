@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Much Paint Do I Need? Coverage Calculation per m² | BuildExact</title>
+    <meta name="description" content="Calculate exactly how much paint you need per m². Learn how coverage, number of coats and surface type affect the amount — and avoid buying too much or too little.">
+    <meta name="keywords" content="how much paint do I need, paint coverage per m2, calculate paint, liters of paint wall, paint estimation, BuildExact app">
+    <meta name="author" content="Grounded Studio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://grounded-studio.app/blog/how-much-paint-do-i-need.html">
+    <meta property="og:title" content="How Much Paint Do I Need? Coverage Calculation per m²">
+    <meta property="og:description" content="Calculate exactly how much paint you need. Coverage, coats and surface type explained step by step.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded-studio.app/blog/how-much-paint-do-i-need.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Much Paint Do I Need? Coverage Calculation per m²",
+        "description": "Calculate exactly how much paint you need per m². Coverage, coats and surface type explained.",
+        "author": { "@type": "Organization", "name": "Grounded Studio", "url": "https://grounded-studio.app" },
+        "publisher": { "@type": "Organization", "name": "Grounded Studio" },
+        "datePublished": "2026-06-14",
+        "inLanguage": "en"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/" },
+            { "@type": "ListItem", "position": 2, "name": "BuildExact", "item": "https://grounded-studio.app/buildexact.html" },
+            { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://grounded-studio.app/blog/buildexact.html" },
+            { "@type": "ListItem", "position": 4, "name": "How Much Paint Do I Need?" }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { background: #06060a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; line-height: 1.6; }
+        :root { --bx:#2563eb; --bx-glow:rgba(37,99,235,0.3); --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(6,6,10,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; }
+        .nav-back:hover { color:var(--bx); }
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; align-items:center; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; transition:color .2s; }
+        .breadcrumb a:hover { color:var(--bx); }
+        .article-cat { display:inline-flex; align-items:center; gap:8px; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; align-items:center; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; letter-spacing:-.02em; margin:48px 0 16px; color:#fff; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:28px; margin:32px 0; }
+        .formula-box .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px; }
+        .formula-box .formula { font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; margin-bottom:10px; }
+        .formula-box .formula-example { font-size:.9rem; color:var(--muted); }
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+        .table-wrap { overflow-x:auto; margin:28px 0; }
+        table { width:100%; border-collapse:collapse; font-size:.9rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; transition:all .3s; }
+        .app-cta a:hover { background:rgba(37,99,235,.25); transform:translateY(-2px); }
+        .app-cta a svg { width:22px; height:22px; }
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+        @media(max-width:560px){.related-cards{grid-template-columns:1fr;}}
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; transition:all .3s; }
+        .related-card:hover { background:rgba(37,99,235,.05); border-color:rgba(37,99,235,.3); }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--bx); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        .foot-copy { font-size:.75rem; color:#334155; }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="c-wide">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio"></div>
+                <span class="nav-name">Grounded Studio</span>
+            </a>
+            <a href="buildexact.html" class="nav-back">← Blog</a>
+        </div>
+    </div>
+</nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> /
+                <a href="../buildexact.html">BuildExact</a> /
+                <a href="buildexact.html">Blog</a> /
+                <span>How much paint do I need?</span>
+            </div>
+            <div class="article-cat">🏗️ Calculations</div>
+            <h1>How Much Paint Do I Need? Coverage Calculation per m²</h1>
+            <div class="article-meta">
+                <span>📅 June 14, 2026</span>
+                <span>⏱ 4 min read</span>
+                <span>✍️ Grounded Studio</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+
+            <p>Buying too little paint means an extra trip to the shop mid-job — and the risk that the new tin is a slightly different shade. Too much is money wasted. A quick calculation before you start means you buy exactly the right amount.</p>
+
+            <h2>Step 1: Calculate the paintable surface area</h2>
+            <p>Measure the walls you want to paint. For each wall: height × width. Add them together for the total area.</p>
+
+            <div class="formula-box">
+                <div class="formula-label">Wall area</div>
+                <div class="formula">Area (m²) = Height (m) × Width (m)</div>
+                <div class="formula-example">Example: a room 2.6 m high with 4 walls of 4 m × 3 m = (4×2.6) + (4×2.6) + (3×2.6) + (3×2.6) = 36.4 m²</div>
+            </div>
+
+            <p>Then subtract doors and windows — they don't need painting.</p>
+
+            <div class="formula-box">
+                <div class="formula-label">Subtract openings</div>
+                <div class="formula">Paintable area = Total area − doors − windows</div>
+                <div class="formula-example">Standard door: ±1.8 m² · Standard window: ±1.2 m²<br>Example: 36.4 − 1.8 − 1.2 = 33.4 m²</div>
+            </div>
+
+            <h2>Step 2: Check the coverage on the tin</h2>
+            <p>Every tin of paint states its coverage (spreading rate) in m² per litre. Typical values:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Paint type</th><th>Coverage per litre</th></tr>
+                    <tr><td>Standard wall paint</td><td>10–12 m²</td></tr>
+                    <tr><td>Matt emulsion</td><td>8–10 m²</td></tr>
+                    <tr><td>Primer / undercoat</td><td>6–10 m²</td></tr>
+                    <tr><td>Gloss / satin</td><td>12–16 m²</td></tr>
+                    <tr><td>Masonry paint (exterior)</td><td>4–8 m²</td></tr>
+                </table>
+            </div>
+
+            <h2>Step 3: Factor in the number of coats</h2>
+            <p>Most jobs require at least 2 coats for even coverage — especially when going from a dark colour to a lighter one, or painting a new wall. For a full colour change, 2–3 coats is normal.</p>
+
+            <div class="formula-box">
+                <div class="formula-label">Total litres needed</div>
+                <div class="formula">Litres = (Area ÷ Coverage per litre) × Number of coats</div>
+                <div class="formula-example">Example: (33.4 ÷ 10) × 2 coats = 6.68 litres → buy 2× 4L tins (8L)</div>
+            </div>
+
+            <h2>Step 4: Adjust for surface type</h2>
+            <p>Not all surfaces absorb paint the same way. Porous, rough or unpainted surfaces need more paint than smooth, previously painted walls.</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Surface</th><th>Adjustment</th></tr>
+                    <tr><td>Smooth, previously painted</td><td>No adjustment needed</td></tr>
+                    <tr><td>New plaster or drywall</td><td>Add 20–25% extra</td></tr>
+                    <tr><td>Rough or textured surface</td><td>Add 15–20% extra</td></tr>
+                    <tr><td>Bare wood</td><td>Add primer coat first</td></tr>
+                    <tr><td>Dark colour to light</td><td>Add 1 extra coat</td></tr>
+                </table>
+            </div>
+
+            <div class="tip-card">
+                <h3>💡 Always round up — and keep the leftovers</h3>
+                <p>Round up to the nearest available tin size. Keep any leftover paint sealed and labelled — you'll thank yourself when you need to touch up a scuff or mark down the line. Paint from the same batch matches perfectly.</p>
+            </div>
+
+            <h2>Full example</h2>
+            <p>Painting a living room: 4 walls, room is 5 m × 4 m × 2.7 m high. One door, two windows. Standard matt emulsion (10 m²/L). 2 coats.</p>
+            <ol>
+                <li>Wall area: (5×2.7)×2 + (4×2.7)×2 = 27 + 21.6 = <strong>48.6 m²</strong></li>
+                <li>Minus openings: 48.6 − 1.8 − (2×1.2) = <strong>44.4 m²</strong></li>
+                <li>Litres: (44.4 ÷ 10) × 2 = <strong>8.88 L</strong></li>
+                <li>Buy: <strong>3× 4L tins (12L)</strong> — enough for 2 full coats plus some spare</li>
+            </ol>
+
+            <div class="app-cta">
+                <h3>🎨 Calculate paint automatically with BuildExact</h3>
+                <p>Enter your room dimensions, select the paint type and number of coats — BuildExact calculates exactly how many litres you need. Save it as a project or export as PDF.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    Download free
+                </a>
+            </div>
+
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>More articles</h2>
+        <div class="related-cards">
+            <a href="how-to-calculate-tiles.html" class="related-card">
+                <div class="cat">🏗️ Calculations</div>
+                <div class="title">How Many Tiles Do I Need? →</div>
+            </a>
+            <a href="how-much-laminate-do-i-need.html" class="related-card">
+                <div class="cat">🏗️ Calculations</div>
+                <div class="title">How Much Laminate Do I Need? →</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="c-wide">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo">
+                <div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio"></div>
+                <span class="foot-name">Grounded Studio</span>
+            </a>
+            <span class="foot-copy">© 2026 — All rights reserved</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
