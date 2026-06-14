@@ -28,6 +28,16 @@
         .nav-links a { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; }
         .nav-links a:hover,.nav-links a.active { color:var(--vg); }
         @media (max-width:600px) { .nav-links { display:none; } }
+        .hamburger { display:none; flex-direction:column; justify-content:center; align-items:center; width:40px; height:40px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:9px; cursor:pointer; gap:5px; flex-shrink:0; }
+        .hamburger span { display:block; width:18px; height:2px; background:#94a3b8; border-radius:2px; transition:transform .3s,opacity .3s; }
+        .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); background:#fff; }
+        .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+        .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); background:#fff; }
+        @media (max-width:600px) { .hamburger { display:flex; } }
+        .mob-menu { display:none; position:fixed; top:65px; left:0; right:0; background:rgba(8,8,14,.97); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); z-index:199; padding:16px 28px 24px; flex-direction:column; gap:4px; }
+        .mob-menu.open { display:flex; }
+        .mob-menu a { color:#94a3b8; text-decoration:none; font-size:1rem; font-weight:600; padding:13px 16px; border-radius:10px; border:1px solid transparent; transition:all .2s; }
+        .mob-menu a:hover,.mob-menu a.active { color:#fff; background:rgba(255,255,255,.06); border-color:var(--border); }
 
         .blog-header { padding:140px 0 80px; text-align:center; position:relative; }
         .blog-header::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(34,197,94,.08),transparent 70%); pointer-events:none; }
@@ -88,9 +98,17 @@
                 <li><a href="buildexact.html">BuildExact Blog</a></li>
                 <li><a href="../index.html#studio">Studio</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
         </div>
     </div>
 </nav>
+<div class="mob-menu" id="mobMenu">
+    <a href="../freshgarant.html">🌿 FreshGarant</a>
+    <a href="../buildexact.html">🏗️ BuildExact</a>
+    <a href="freshgarant.html" class="active">📝 FreshGarant Blog</a>
+    <a href="buildexact.html">📝 BuildExact Blog</a>
+    <a href="../index.html#studio">✨ Studio</a>
+</div>
 
 <div class="blog-header">
     <div class="c">
@@ -178,6 +196,11 @@
         </div>
     </div>
 </footer>
+<script>
+const hb=document.getElementById('hamburger'),mm=document.getElementById('mobMenu');
+hb.addEventListener('click',()=>{hb.classList.toggle('open');mm.classList.toggle('open');});
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hb.classList.remove('open');mm.classList.remove('open');}));
+</script>
 <script src="/assets/cookie-banner.js"></script>
 </body>
 </html>
