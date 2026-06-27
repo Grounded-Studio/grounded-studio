@@ -80,4 +80,28 @@
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/ai-recipes-from-leftovers.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-06-27</lastmod>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/foods-you-can-freeze.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-06-27</lastmod>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-much-wallpaper-do-i-need.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-06-27</lastmod>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-much-insulation-do-i-need.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+        <lastmod>2026-06-27</lastmod>
+    </url>
 </urlset>
