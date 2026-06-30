@@ -10,6 +10,7 @@
     <link rel="canonical" href="https://grounded-studio.app/blog/freshgarant.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -88,7 +89,7 @@
     <div class="c">
         <div class="nav-inner">
             <a href="../index.html" class="nav-logo">
-                <div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio"></div>
+                <div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34" decoding="async"></div>
                 <span class="nav-name">Grounded Studio</span>
             </a>
             <ul class="nav-links">
@@ -213,7 +214,7 @@
     <div class="c">
         <div class="foot-inner">
             <a href="../index.html" class="foot-logo">
-                <div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio"></div>
+                <div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32" loading="lazy" decoding="async"></div>
                 <span class="foot-name">Grounded Studio</span>
             </a>
             <span class="foot-copy">© 2026 — All rights reserved</span>
@@ -225,6 +226,6 @@ const hb=document.getElementById('hamburger'),mm=document.getElementById('mobMen
 hb.addEventListener('click',()=>{hb.classList.toggle('open');mm.classList.toggle('open');});
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hb.classList.remove('open');mm.classList.remove('open');}));
 </script>
-<script src="/assets/cookie-banner.js"></script>
+<script src="/assets/cookie-banner.js" defer></script>
 </body>
 </html>

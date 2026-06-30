@@ -2,106 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://grounded-studio.app/</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>1.0</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/freshgarant.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.9</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/buildexact.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.9</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/privacy.html</loc>
+        <lastmod>2026-06-27</lastmod>
         <priority>0.5</priority>
         <changefreq>yearly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/privacy-buildexact.html</loc>
+        <lastmod>2026-06-27</lastmod>
         <priority>0.5</priority>
         <changefreq>yearly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/delete-account.html</loc>
+        <lastmod>2026-06-27</lastmod>
         <priority>0.3</priority>
         <changefreq>yearly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/freshgarant.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/buildexact.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.8</priority>
         <changefreq>weekly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/reduce-food-waste.html</loc>
-        <priority>0.7</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://grounded-studio.app/blog/buildexact.html</loc>
-        <priority>0.8</priority>
-        <changefreq>weekly</changefreq>
-    </url>
-    <url>
-        <loc>https://grounded-studio.app/blog/how-to-calculate-tiles.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/best-before-vs-use-by.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/how-to-organise-your-fridge.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/smarter-grocery-shopping.html</loc>
-        <priority>0.7</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://grounded-studio.app/blog/how-much-paint-do-i-need.html</loc>
-        <priority>0.7</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://grounded-studio.app/blog/how-much-laminate-do-i-need.html</loc>
-        <priority>0.7</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://grounded-studio.app/blog/renovation-cost-estimate.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/ai-recipes-from-leftovers.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
-        <lastmod>2026-06-27</lastmod>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/foods-you-can-freeze.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
-        <lastmod>2026-06-27</lastmod>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-to-calculate-tiles.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-much-paint-do-i-need.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-much-laminate-do-i-need.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/renovation-cost-estimate.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/how-much-wallpaper-do-i-need.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
-        <lastmod>2026-06-27</lastmod>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/how-much-insulation-do-i-need.html</loc>
+        <lastmod>2026-06-30</lastmod>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
-        <lastmod>2026-06-27</lastmod>
     </url>
 </urlset>
