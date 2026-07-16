@@ -244,16 +244,25 @@
         .pro-badge { display:inline-block; font-size:.6rem; font-weight:800; letter-spacing:.08em; padding:2px 7px; border-radius:6px; background:linear-gradient(135deg,#fbbf24,#f59e0b); color:#1f2937; vertical-align:middle; margin-left:6px; box-shadow:0 0 12px rgba(251,191,36,.35); }
 
         /* SHOWCASE GALLERY */
-        .showcase-section { padding:100px 0; border-top:1px solid var(--border); }
-        .showcase-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:56px; }
-        @media (max-width:900px) { .showcase-grid { grid-template-columns:repeat(2,1fr); gap:24px; } }
-        @media (max-width:560px) { .showcase-grid { grid-template-columns:1fr; gap:32px; } }
-        .showcase-item { display:flex; flex-direction:column; align-items:center; text-align:center; }
+        .showcase-section { padding:100px 0; border-top:1px solid var(--border); overflow:hidden; }
+        .showcase-wrap { position:relative; margin-top:56px; }
+        .showcase-grid { display:flex; gap:32px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; padding:14px 28px 24px; margin:0 -28px; scrollbar-width:none; -ms-overflow-style:none; }
+        .showcase-grid::-webkit-scrollbar { display:none; }
+        .showcase-item { display:flex; flex-direction:column; align-items:center; text-align:center; flex:0 0 260px; scroll-snap-align:center; }
         .showcase-frame { position:relative; width:100%; max-width:260px; padding:14px; border-radius:32px; background:linear-gradient(180deg,rgba(34,197,94,.08),rgba(16,185,129,.04)); border:1px solid var(--border); box-shadow:0 20px 50px rgba(0,0,0,.35); transition:transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s; }
         .showcase-frame:hover { transform:translateY(-6px); box-shadow:0 28px 60px rgba(34,197,94,.22); }
         .showcase-frame img { display:block; width:100%; height:auto; border-radius:22px; }
         .showcase-item h3 { margin-top:24px; font-size:1rem; font-weight:700; color:#f1f5f9; }
         .showcase-item p { margin-top:6px; font-size:.85rem; color:var(--muted); line-height:1.6; max-width:280px; }
+        .showcase-nav { position:absolute; top:38%; transform:translateY(-50%); z-index:5; width:48px; height:48px; border-radius:50%; background:rgba(34,197,94,.18); border:1px solid rgba(34,197,94,.45); color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:700; transition:all .25s; backdrop-filter:blur(8px); box-shadow:0 8px 24px rgba(0,0,0,.35); }
+        .showcase-nav:hover { background:rgba(34,197,94,.32); transform:translateY(-50%) scale(1.08); }
+        .showcase-nav:disabled { opacity:.3; cursor:not-allowed; }
+        .showcase-nav.prev { left:-8px; }
+        .showcase-nav.next { right:-8px; }
+        .showcase-dots { display:flex; justify-content:center; gap:8px; margin-top:20px; }
+        .showcase-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,.15); border:none; cursor:pointer; padding:0; transition:all .25s; }
+        .showcase-dot.active { background:var(--vg); width:24px; border-radius:4px; }
+        @media (max-width:700px) { .showcase-nav { display:none; } }
 
         /* PRO SECTION */
         .pro-section { padding:100px 0; border-top:1px solid var(--border); position:relative; overflow:hidden; }
@@ -524,7 +533,10 @@
             <h2 class="section-title">See FreshGarant<br>in action</h2>
             <p class="section-sub">From scanning your fridge with AI to hands-free cooking — the full experience on your phone.</p>
         </div>
-        <div class="showcase-grid">
+        <div class="showcase-wrap">
+        <button class="showcase-nav prev" id="showcasePrev" aria-label="Previous screenshot">◀</button>
+        <button class="showcase-nav next" id="showcaseNext" aria-label="Next screenshot">▶</button>
+        <div class="showcase-grid" id="showcaseGrid">
             <div class="showcase-item a-fade" style="transition-delay:.05s">
                 <div class="showcase-frame"><img src="assets/screen-vg.png" alt="Home screen with product overview and expiry countdown" loading="lazy" decoding="async"></div>
                 <h3>Live overview</h3>
@@ -565,6 +577,8 @@
                 <h3>Everything in one hub</h3>
                 <p>Statistics, calendar, stores, family sharing and settings — all one tap away.</p>
             </div>
+        </div>
+        <div class="showcase-dots" id="showcaseDots"></div>
         </div>
     </div>
 </section>
@@ -801,6 +815,23 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu();
 
 const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }), { threshold: 0.1 });
 document.querySelectorAll('.a-fade,.a-scale').forEach(el => obs.observe(el));
+
+(function(){
+    const grid=document.getElementById('showcaseGrid'), prev=document.getElementById('showcasePrev'), next=document.getElementById('showcaseNext'), dotsWrap=document.getElementById('showcaseDots');
+    if(!grid) return;
+    const items=grid.querySelectorAll('.showcase-item');
+    items.forEach((_,i)=>{ const d=document.createElement('button'); d.className='showcase-dot'; d.setAttribute('aria-label','Go to screenshot '+(i+1)); d.addEventListener('click',()=>scrollTo(i)); dotsWrap.appendChild(d); });
+    const dots=dotsWrap.querySelectorAll('.showcase-dot');
+    function step(){ return items[0].getBoundingClientRect().width + 32; }
+    function currentIndex(){ return Math.round(grid.scrollLeft/step()); }
+    function scrollTo(i){ grid.scrollTo({left:i*step(),behavior:'smooth'}); }
+    function updateUI(){ const i=currentIndex(); dots.forEach((d,idx)=>d.classList.toggle('active',idx===i)); prev.disabled=i<=0; next.disabled=i>=items.length-1; }
+    prev.addEventListener('click',()=>scrollTo(Math.max(0,currentIndex()-1)));
+    next.addEventListener('click',()=>scrollTo(Math.min(items.length-1,currentIndex()+1)));
+    grid.addEventListener('scroll',()=>{ clearTimeout(grid._t); grid._t=setTimeout(updateUI,60); },{passive:true});
+    window.addEventListener('resize',updateUI);
+    updateUI();
+})();
 </script>
 <script src="/assets/cookie-banner.js" defer></script>
 </body>
