@@ -123,6 +123,13 @@
         .nav-links a.active { color:var(--bx); }
         .nav-cta { background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); padding:9px 22px; border-radius:10px; font-size:.875rem; font-weight:600; text-decoration:none; transition:background .2s; white-space:nowrap; }
         .nav-cta:hover { background:rgba(37,99,235,.25); }
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+        .mobile-lang-toggle { display:flex; gap:8px; margin-top:4px; }
+        .mobile-lang-toggle .lang-btn { flex:1; text-align:center; padding:12px; border-radius:10px; border:1px solid var(--border); font-size:.85rem; min-height:48px; }
+        .mobile-lang-toggle .lang-btn.active { background:rgba(37,99,235,.2); border-color:rgba(37,99,235,.4); color:var(--bx); }
         .hamburger { display:none; flex-direction:column; justify-content:center; align-items:center; width:44px; height:44px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; cursor:pointer; gap:5px; flex-shrink:0; z-index:210; transition:background .2s; }
         .hamburger span { display:block; width:20px; height:2px; background:#94a3b8; border-radius:2px; transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .3s; }
         .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); background:#fff; }
@@ -319,13 +326,17 @@
             </a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="freshgarant.html">FreshGarant</a></li>
-                    <li><a href="buildexact.html" class="active">BuildExact</a></li>
-                    <li><a href="blog/freshgarant.html">FreshGarant Blog</a></li>
-                    <li><a href="blog/buildexact.html">BuildExact Blog</a></li>
-                    <li><a href="index.html#studio">Studio</a></li>
+                    <li><a href="freshgarant.html" data-i18n="nav.freshgarant">FreshGarant</a></li>
+                    <li><a href="buildexact.html" class="active" data-i18n="nav.buildexact">BuildExact</a></li>
+                    <li><a href="blog/freshgarant.html" data-i18n="nav.fgblog">FreshGarant Blog</a></li>
+                    <li><a href="blog/buildexact.html" data-i18n="nav.bxblog">BuildExact Blog</a></li>
+                    <li><a href="index.html#studio" data-i18n="nav.studio">Studio</a></li>
                 </ul>
-                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="nav-cta">Download</a>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn"        data-lang="nl">NL</button>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.download">Download</a>
                 <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
@@ -337,14 +348,18 @@
 <div class="mobile-overlay" id="mobileOverlay"></div>
 <div class="mobile-menu" id="mobileMenu">
     <ul class="mobile-menu-links">
-        <li><a href="freshgarant.html" class="mobile-nav-link">🌿 FreshGarant</a></li>
-        <li><a href="buildexact.html" class="mobile-nav-link">🏗️ BuildExact</a></li>
-        <li><a href="blog/freshgarant.html" class="mobile-nav-link">📝 FreshGarant Blog</a></li>
-        <li><a href="blog/buildexact.html" class="mobile-nav-link">📝 BuildExact Blog</a></li>
-        <li><a href="index.html#studio" class="mobile-nav-link">✨ Studio</a></li>
+        <li><a href="freshgarant.html" class="mobile-nav-link">🌿 <span data-i18n="nav.freshgarant">FreshGarant</span></a></li>
+        <li><a href="buildexact.html" class="mobile-nav-link">🏗️ <span data-i18n="nav.buildexact">BuildExact</span></a></li>
+        <li><a href="blog/freshgarant.html" class="mobile-nav-link">📝 <span data-i18n="nav.fgblog">FreshGarant Blog</span></a></li>
+        <li><a href="blog/buildexact.html" class="mobile-nav-link">📝 <span data-i18n="nav.bxblog">BuildExact Blog</span></a></li>
+        <li><a href="index.html#studio" class="mobile-nav-link">✨ <span data-i18n="nav.studio">Studio</span></a></li>
     </ul>
     <div class="mobile-menu-divider"></div>
-    <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" class="mobile-cta-m mobile-nav-link">Download on Google Play</a>
+    <div class="mobile-lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" class="mobile-cta-m mobile-nav-link" data-i18n="nav.dlplay">Download on Google Play</a>
 </div>
 
 <!-- HERO -->
@@ -355,10 +370,10 @@
     <div class="hero-content">
         <div class="hero-badge">
             <div class="badge-dot"></div>
-            by Grounded Studio
+            <span data-i18n="hero.badge">by Grounded Studio</span>
         </div>
-        <h1>Build with<br>precision</h1>
-        <p class="hero-sub">BuildExact is the complete toolkit for builders and contractors. Calculate materials, manage clients, generate branded quote PDFs, and share styled result cards — all on your phone.</p>
+        <h1 data-i18n-html="hero.h1">Build with<br>precision</h1>
+        <p class="hero-sub" data-i18n="hero.sub">BuildExact is the complete toolkit for builders and contractors. Calculate materials, manage clients, generate branded quote PDFs, and share styled result cards — all on your phone.</p>
         <div class="hero-actions">
             <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="btn-primary">
                 <svg viewBox="0 0 24 24" fill="none" class="play-svg">
@@ -368,11 +383,11 @@
                     <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
                 </svg>
                 <div class="btn-text">
-                    <small>Download on</small>
-                    <span>Google Play</span>
+                    <small data-i18n="play.small">Download on</small>
+                    <span data-i18n="play.big">Google Play</span>
                 </div>
             </a>
-            <a href="index.html" class="btn-ghost">← Back to Studio</a>
+            <a href="index.html" class="btn-ghost" data-i18n="hero.back">← Back to Studio</a>
         </div>
     </div>
 </section>
@@ -399,50 +414,50 @@
 <section class="features-section">
     <div class="c">
         <div class="a-fade">
-            <div class="section-label"><span>●</span> Features</div>
-            <h2 class="section-title">Everything a builder<br>needs on one screen</h2>
-            <p class="section-sub">Stop guessing. Calculate exactly what you need before the job starts.</p>
+            <div class="section-label"><span>●</span> <span data-i18n="feat.label">Features</span></div>
+            <h2 class="section-title" data-i18n-html="feat.title">Everything a builder<br>needs on one screen</h2>
+            <p class="section-sub" data-i18n="feat.sub">Stop guessing. Calculate exactly what you need before the job starts.</p>
         </div>
         <div class="features-grid">
             <div class="feat-card a-fade" style="transition-delay:.05s">
                 <div class="feat-ico">📐</div>
-                <h3>Material Calculations</h3>
-                <p>Calculate exactly how much material you need — area, volume, paint, tiles, concrete and more. Cut and waste included.</p>
+                <h3 data-i18n="feat.calc.title">Material Calculations</h3>
+                <p data-i18n="feat.calc.desc">Calculate exactly how much material you need — area, volume, paint, tiles, concrete and more. Cut and waste included.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:.1s">
                 <div class="feat-ico">👥</div>
-                <h3>Client Manager</h3>
-                <p>Save clients with contact details, import from your phone contacts, and call, email or route in one tap.</p>
+                <h3 data-i18n="feat.clients.title">Client Manager</h3>
+                <p data-i18n="feat.clients.desc">Save clients with contact details, import from your phone contacts, and call, email or route in one tap.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:.15s">
                 <div class="feat-ico">📄</div>
-                <h3>Branded Quote PDFs</h3>
-                <p>Turn any project into a professional quote with your logo, VAT, discount, signature and payment terms.</p>
+                <h3 data-i18n="feat.pdf.title">Branded Quote PDFs</h3>
+                <p data-i18n="feat.pdf.desc">Turn any project into a professional quote with your logo, VAT, discount, signature and payment terms.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:.2s">
                 <div class="feat-ico">✍️</div>
-                <h3>Business Profile & Signature</h3>
-                <p>Save your logo, KvK, IBAN and hand-drawn signature once — they appear automatically on every quote PDF.</p>
+                <h3 data-i18n="feat.biz.title">Business Profile & Signature</h3>
+                <p data-i18n="feat.biz.desc">Save your logo, KvK, IBAN and hand-drawn signature once — they appear automatically on every quote PDF.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:.25s">
                 <div class="feat-ico">📊</div>
-                <h3>Quote Status Tracking</h3>
-                <p>Track quotes per client (Draft / Sent / Accepted / Rejected) with a full revenue overview per client.</p>
+                <h3 data-i18n="feat.status.title">Quote Status Tracking</h3>
+                <p data-i18n="feat.status.desc">Track quotes per client (Draft / Sent / Accepted / Rejected) with a full revenue overview per client.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:.3s">
                 <div class="feat-ico">📱</div>
-                <h3>Share Results as Image</h3>
-                <p>Styled result cards you can share to WhatsApp, Instagram or Stories in one tap — perfect for social proof.</p>
+                <h3 data-i18n="feat.share.title">Share Results as Image</h3>
+                <p data-i18n="feat.share.desc">Styled result cards you can share to WhatsApp, Instagram or Stories in one tap — perfect for social proof.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:.35s">
                 <div class="feat-ico">📋</div>
-                <h3>Project Management</h3>
-                <p>Multiple projects, link clients, save measurements per job. Everything grouped in one clear overview.</p>
+                <h3 data-i18n="feat.projects.title">Project Management</h3>
+                <p data-i18n="feat.projects.desc">Multiple projects, link clients, save measurements per job. Everything grouped in one clear overview.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:.4s">
                 <div class="feat-ico">📤</div>
-                <h3>Offline & On-Site</h3>
-                <p>Works entirely offline. Calculate, quote and share right on the construction site — no internet needed.</p>
+                <h3 data-i18n="feat.offline.title">Offline & On-Site</h3>
+                <p data-i18n="feat.offline.desc">Works entirely offline. Calculate, quote and share right on the construction site — no internet needed.</p>
             </div>
         </div>
     </div>
@@ -452,9 +467,9 @@
 <section class="showcase-section">
     <div class="c">
         <div class="a-fade">
-            <div class="section-label"><span>●</span> Screenshots</div>
-            <h2 class="section-title">See it in action</h2>
-            <p class="section-sub">A quick tour of the app — from calculating a wall in seconds to sending a branded quote to your client.</p>
+            <div class="section-label"><span>●</span> <span data-i18n="show.label">Screenshots</span></div>
+            <h2 class="section-title" data-i18n="show.title">See it in action</h2>
+            <p class="section-sub" data-i18n="show.sub">A quick tour of the app — from calculating a wall in seconds to sending a branded quote to your client.</p>
         </div>
         <div class="showcase-wrap">
         <button class="showcase-nav prev" id="showcasePrev" aria-label="Previous screenshot">◀</button>
@@ -462,43 +477,43 @@
         <div class="showcase-grid" id="showcaseGrid">
             <div class="showcase-item a-fade" style="transition-delay:.05s">
                 <div class="showcase-frame"><img src="assets/screen-bx-calc.png" alt="Instant calculators grid" loading="lazy" decoding="async"></div>
-                <h3>Instant calculators</h3>
-                <p>Area, volume, paint, tiles, walls — pick and get the answer straight away.</p>
+                <h3 data-i18n="show.calc.title">Instant calculators</h3>
+                <p data-i18n="show.calc.desc">Area, volume, paint, tiles, walls — pick and get the answer straight away.</p>
             </div>
             <div class="showcase-item a-fade" style="transition-delay:.1s">
                 <div class="showcase-frame"><img src="assets/screen-bx-card.png" alt="Filled calculator with result" loading="lazy" decoding="async"></div>
-                <h3>Precise results</h3>
-                <p>Add dimensions, waste and rounding — the total updates as you type.</p>
+                <h3 data-i18n="show.results.title">Precise results</h3>
+                <p data-i18n="show.results.desc">Add dimensions, waste and rounding — the total updates as you type.</p>
             </div>
             <div class="showcase-item a-fade" style="transition-delay:.15s">
                 <div class="showcase-frame"><img src="assets/screen-bx-3.png" alt="Styled share card with 10000 m² hero" loading="lazy" decoding="async"></div>
-                <h3>Shareable result cards</h3>
-                <p>Send your numbers to WhatsApp, Instagram or Stories as a branded image.</p>
+                <h3 data-i18n="show.share.title">Shareable result cards</h3>
+                <p data-i18n="show.share.desc">Send your numbers to WhatsApp, Instagram or Stories as a branded image.</p>
             </div>
             <div class="showcase-item a-fade" style="transition-delay:.2s">
                 <div class="showcase-frame"><img src="assets/screen-bx-clients.png" alt="Add new client form" loading="lazy" decoding="async"></div>
-                <h3>Client manager</h3>
-                <p>Save clients, import from phone contacts, call or route in one tap.</p>
+                <h3 data-i18n="show.clients.title">Client manager</h3>
+                <p data-i18n="show.clients.desc">Save clients, import from phone contacts, call or route in one tap.</p>
             </div>
             <div class="showcase-item a-fade" style="transition-delay:.25s">
                 <div class="showcase-frame"><img src="assets/screen-bx-business.png" alt="Business profile with logo and signature" loading="lazy" decoding="async"></div>
-                <h3>Logo &amp; signature</h3>
-                <p>Set up your business profile once — logo and signature go on every quote.</p>
+                <h3 data-i18n-html="show.logo.title">Logo &amp; signature</h3>
+                <p data-i18n="show.logo.desc">Set up your business profile once — logo and signature go on every quote.</p>
             </div>
             <div class="showcase-item a-fade" style="transition-delay:.3s">
                 <div class="showcase-frame"><img src="assets/screen-bx-2.png" alt="Quote builder screen" loading="lazy" decoding="async"></div>
-                <h3>Quote builder</h3>
-                <p>Pick a client, edit lines, add labor and VAT — generate a branded PDF.</p>
+                <h3 data-i18n="show.quote.title">Quote builder</h3>
+                <p data-i18n="show.quote.desc">Pick a client, edit lines, add labor and VAT — generate a branded PDF.</p>
             </div>
             <div class="showcase-item a-fade" style="transition-delay:.35s">
                 <div class="showcase-frame"><img src="assets/screen-bx-project.png" alt="Project with 3 measurement cards" loading="lazy" decoding="async"></div>
-                <h3>Projects in one place</h3>
-                <p>Multiple measurements per job with a clean material list overview.</p>
+                <h3 data-i18n="show.projects.title">Projects in one place</h3>
+                <p data-i18n="show.projects.desc">Multiple measurements per job with a clean material list overview.</p>
             </div>
             <div class="showcase-item a-fade" style="transition-delay:.4s">
                 <div class="showcase-frame"><img src="assets/screen-bx.png" alt="BuildExact home screen with clients and business tiles" loading="lazy" decoding="async"></div>
-                <h3>Everything on one screen</h3>
-                <p>Start a project, quick calculate, or jump straight into clients and business.</p>
+                <h3 data-i18n="show.home.title">Everything on one screen</h3>
+                <p data-i18n="show.home.desc">Start a project, quick calculate, or jump straight into clients and business.</p>
             </div>
         </div>
         <div class="showcase-dots" id="showcaseDots"></div>
@@ -510,9 +525,9 @@
 <section class="cta-section">
     <div class="c">
         <div class="a-fade">
-            <div class="section-label" style="justify-content:center;margin-bottom:24px"><span>●</span> Download</div>
-            <h2 class="section-title" style="margin-bottom:12px">Available now<br>on Google Play</h2>
-            <p style="color:var(--muted);margin-bottom:36px;font-size:.95rem">Free to download. Start calculating in minutes.</p>
+            <div class="section-label" style="justify-content:center;margin-bottom:24px"><span>●</span> <span data-i18n="cta.label">Download</span></div>
+            <h2 class="section-title" style="margin-bottom:12px" data-i18n-html="cta.title">Available now<br>on Google Play</h2>
+            <p style="color:var(--muted);margin-bottom:36px;font-size:.95rem" data-i18n="cta.sub">Free to download. Start calculating in minutes.</p>
             <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="play-btn">
                 <svg viewBox="0 0 24 24" fill="none">
                     <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
@@ -521,8 +536,8 @@
                     <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
                 </svg>
                 <div class="play-btn-text">
-                    <small>Download on</small>
-                    <span>Google Play</span>
+                    <small data-i18n="play.small">Download on</small>
+                    <span data-i18n="play.big">Google Play</span>
                 </div>
             </a>
         </div>
@@ -533,65 +548,65 @@
 <section class="faq-section">
     <div class="c">
         <div class="a-fade">
-            <div class="section-label"><span>●</span> FAQ</div>
-            <h2 class="section-title" style="margin-top:16px;margin-bottom:0">Frequently Asked<br>Questions</h2>
+            <div class="section-label"><span>●</span> <span data-i18n="faq.label">FAQ</span></div>
+            <h2 class="section-title" style="margin-top:16px;margin-bottom:0" data-i18n-html="faq.title">Frequently Asked<br>Questions</h2>
         </div>
         <div class="faq-grid">
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    Is BuildExact free?
+                    <span data-i18n="faq.free.q">Is BuildExact free?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">Yes, the core app is completely free. A one-time PRO upgrade unlocks unlimited projects, client management, quote PDFs, business profile with logo &amp; signature, materials library and more.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.free.a">Yes, the core app is completely free. A one-time PRO upgrade unlocks unlimited projects, client management, quote PDFs, business profile with logo &amp; signature, materials library and more.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    What can I calculate with BuildExact?
+                    <span data-i18n="faq.calc.q">What can I calculate with BuildExact?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">Area (m² / ft²), volume (m³ / ft³), paint, tiles, wall area with openings, concrete, gravel, linear meters and more. Everything a builder or DIY user needs.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.calc.a">Area (m² / ft²), volume (m³ / ft³), paint, tiles, wall area with openings, concrete, gravel, linear meters and more. Everything a builder or DIY user needs.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    Can I create professional quotes?
+                    <span data-i18n="faq.quotes.q">Can I create professional quotes?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">Yes. With PRO you can turn any project into a branded quote PDF with your logo, VAT, discount, signature and payment terms. Preview in-app before sending. Quotes get automatic numbering (OFF-2026-0001, 0002, …).</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.quotes.a">Yes. With PRO you can turn any project into a branded quote PDF with your logo, VAT, discount, signature and payment terms. Preview in-app before sending. Quotes get automatic numbering (OFF-2026-0001, 0002, …).</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    Can I manage clients in the app?
+                    <span data-i18n="faq.clients.q">Can I manage clients in the app?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">Yes. Save clients with contact and billing details, import them straight from your phone contacts, and call, email, WhatsApp or route to them in one tap. Track quote status per client with a full revenue overview.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.clients.a">Yes. Save clients with contact and billing details, import them straight from your phone contacts, and call, email, WhatsApp or route to them in one tap. Track quote status per client with a full revenue overview.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    Can I add my own logo and signature?
+                    <span data-i18n="faq.logo.q">Can I add my own logo and signature?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">Absolutely. Set up your business profile once with logo, business name, VAT, KvK/Chamber of Commerce, IBAN and a hand-drawn signature. They appear automatically on every quote PDF.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.logo.a">Absolutely. Set up your business profile once with logo, business name, VAT, KvK/Chamber of Commerce, IBAN and a hand-drawn signature. They appear automatically on every quote PDF.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    Does BuildExact work without internet?
+                    <span data-i18n="faq.offline.q">Does BuildExact work without internet?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">Fully offline. All calculations, quotes and PDFs happen on your device — no internet connection needed. Use it on the job site without any worries.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.offline.a">Fully offline. All calculations, quotes and PDFs happen on your device — no internet connection needed. Use it on the job site without any worries.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    Can I share results on WhatsApp or Instagram?
+                    <span data-i18n="faq.share.q">Can I share results on WhatsApp or Instagram?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">Yes. Every calculation can be shared as a styled image card with your result highlighted — perfect for WhatsApp, Instagram or Stories. Material lists share as a full list card, single calculations as a hero result.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.share.a">Yes. Every calculation can be shared as a styled image card with your result highlighted — perfect for WhatsApp, Instagram or Stories. Material lists share as a full list card, single calculations as a hero result.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    Is PRO a subscription?
+                    <span data-i18n="faq.pro.q">Is PRO a subscription?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">No. PRO is a single one-time purchase — no monthly fees, no surprises. Unlock everything once and use it forever.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.pro.a">No. PRO is a single one-time purchase — no monthly fees, no surprises. Unlock everything once and use it forever.</div></div>
             </div>
         </div>
     </div>
@@ -601,82 +616,82 @@
 <section class="pro-section">
     <div class="c">
         <div class="a-fade">
-            <div class="section-label"><span>●</span> Plans</div>
-            <h2 class="section-title" style="margin-top:16px;margin-bottom:0">Free vs PRO</h2>
-            <p class="section-sub" style="margin-bottom:0;margin-top:16px">Start for free. Upgrade when you need more power.</p>
+            <div class="section-label"><span>●</span> <span data-i18n="pro.label">Plans</span></div>
+            <h2 class="section-title" style="margin-top:16px;margin-bottom:0" data-i18n="pro.title">Free vs PRO</h2>
+            <p class="section-sub" style="margin-bottom:0;margin-top:16px" data-i18n="pro.sub">Start for free. Upgrade when you need more power.</p>
         </div>
         <div class="a-fade" style="margin-top:40px;overflow-x:auto">
         <table class="pro-table">
             <thead>
                 <tr>
-                    <th>Feature</th>
-                    <th class="col-free">Free</th>
-                    <th class="col-pro">PRO</th>
+                    <th data-i18n="pro.th.feature">Feature</th>
+                    <th class="col-free" data-i18n="pro.th.free">Free</th>
+                    <th class="col-pro" data-i18n="pro.th.pro">PRO</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="col-feature">Material calculations (area, volume, paint, tiles…)</td>
+                    <td class="col-feature" data-i18n="pro.r1">Material calculations (area, volume, paint, tiles…)</td>
                     <td class="col-free"><span class="check">✓</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Works offline &amp; on-site</td>
+                    <td class="col-feature" data-i18n="pro.r2">Works offline &amp; on-site</td>
                     <td class="col-free"><span class="check">✓</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Share results as styled image (WhatsApp, Insta)</td>
+                    <td class="col-feature" data-i18n="pro.r3">Share results as styled image (WhatsApp, Insta)</td>
                     <td class="col-free"><span class="check">✓</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Save &amp; manage projects</td>
-                    <td class="col-free">Up to 2</td>
-                    <td class="col-pro">Unlimited</td>
+                    <td class="col-feature" data-i18n="pro.r4">Save &amp; manage projects</td>
+                    <td class="col-free" data-i18n="pro.r4.free">Up to 2</td>
+                    <td class="col-pro" data-i18n="pro.r4.pro">Unlimited</td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Client management with contact import</td>
+                    <td class="col-feature" data-i18n="pro.r5">Client management with contact import</td>
                     <td class="col-free"><span class="cross">✗</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Business profile with logo &amp; signature</td>
+                    <td class="col-feature" data-i18n="pro.r6">Business profile with logo &amp; signature</td>
                     <td class="col-free"><span class="cross">✗</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Branded quote PDF generator with preview</td>
+                    <td class="col-feature" data-i18n="pro.r7">Branded quote PDF generator with preview</td>
                     <td class="col-free"><span class="cross">✗</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Quote status tracking (Draft / Sent / Accepted)</td>
+                    <td class="col-feature" data-i18n="pro.r8">Quote status tracking (Draft / Sent / Accepted)</td>
                     <td class="col-free"><span class="cross">✗</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">PDF measurement report per project</td>
+                    <td class="col-feature" data-i18n="pro.r9">PDF measurement report per project</td>
                     <td class="col-free"><span class="cross">✗</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Materials library with saved prices</td>
+                    <td class="col-feature" data-i18n="pro.r10">Materials library with saved prices</td>
                     <td class="col-free"><span class="cross">✗</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Templates per trade &amp; home-screen shortcuts</td>
+                    <td class="col-feature" data-i18n="pro.r11">Templates per trade &amp; home-screen shortcuts</td>
                     <td class="col-free"><span class="cross">✗</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Calculation history &amp; favorites</td>
+                    <td class="col-feature" data-i18n="pro.r12">Calculation history &amp; favorites</td>
                     <td class="col-free"><span class="cross">✗</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
                 <tr>
-                    <td class="col-feature">Priority support</td>
+                    <td class="col-feature" data-i18n="pro.r13">Priority support</td>
                     <td class="col-free"><span class="cross">✗</span></td>
                     <td class="col-pro"><span class="check">✓</span></td>
                 </tr>
@@ -684,7 +699,7 @@
         </table>
         </div>
         <div class="a-fade">
-            <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="pro-cta">Get BuildExact on Google Play →</a>
+            <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="pro-cta" data-i18n="pro.cta">Get BuildExact on Google Play →</a>
         </div>
     </div>
 </section>
@@ -693,34 +708,34 @@
 <section class="reviews-section">
     <div class="c">
         <div class="a-fade">
-            <div class="section-label"><span>●</span> Reviews</div>
-            <h2 class="section-title" style="margin-top:16px;margin-bottom:0">What users say</h2>
+            <div class="section-label"><span>●</span> <span data-i18n="rev.label">Reviews</span></div>
+            <h2 class="section-title" style="margin-top:16px;margin-bottom:0" data-i18n="rev.title">What users say</h2>
         </div>
         <div class="reviews-grid">
             <div class="review-card a-fade">
                 <div style="display:flex;gap:3px;margin-bottom:14px">
                     <span style="color:#f59e0b;font-size:1rem">★★★★★</span>
                 </div>
-                <p style="font-size:.95rem;line-height:1.75;color:#cbd5e1;margin-bottom:16px">"I use this on every job. No more calculating on paper or guessing amounts. The tile calculator alone saves me so much time."</p>
+                <p style="font-size:.95rem;line-height:1.75;color:#cbd5e1;margin-bottom:16px" data-i18n="rev.r1.text">"I use this on every job. No more calculating on paper or guessing amounts. The tile calculator alone saves me so much time."</p>
                 <div style="font-size:.8rem;color:var(--muted)">— Pieter D. &nbsp;·&nbsp; Google Play</div>
             </div>
             <div class="review-card a-fade" style="transition-delay:.05s">
                 <div style="display:flex;gap:3px;margin-bottom:14px">
                     <span style="color:#f59e0b;font-size:1rem">★★★★★</span>
                 </div>
-                <p style="font-size:.95rem;line-height:1.75;color:#cbd5e1;margin-bottom:16px">"Finally an app that understands what builders actually need. The cost estimate feature is brilliant for quoting customers."</p>
+                <p style="font-size:.95rem;line-height:1.75;color:#cbd5e1;margin-bottom:16px" data-i18n="rev.r2.text">"Finally an app that understands what builders actually need. The cost estimate feature is brilliant for quoting customers."</p>
                 <div style="font-size:.8rem;color:var(--muted)">— Thomas B. &nbsp;·&nbsp; Google Play</div>
             </div>
             <div class="review-card a-fade" style="transition-delay:.1s">
                 <div style="display:flex;gap:3px;margin-bottom:14px">
                     <span style="color:#f59e0b;font-size:1rem">★★★★☆</span>
                 </div>
-                <p style="font-size:.95rem;line-height:1.75;color:#cbd5e1;margin-bottom:16px">"Great app for DIY projects. I renovated my bathroom and had exact amounts for tiles and grout. Saved money on leftovers."</p>
+                <p style="font-size:.95rem;line-height:1.75;color:#cbd5e1;margin-bottom:16px" data-i18n="rev.r3.text">"Great app for DIY projects. I renovated my bathroom and had exact amounts for tiles and grout. Saved money on leftovers."</p>
                 <div style="font-size:.8rem;color:var(--muted)">— Nina R. &nbsp;·&nbsp; Google Play</div>
             </div>
         </div>
         <div class="reviews-cta a-fade" style="transition-delay:.15s">
-            <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">Leave a review on Google Play →</a>
+            <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" data-i18n="rev.cta">Leave a review on Google Play →</a>
         </div>
     </div>
 </section>
@@ -729,9 +744,9 @@
 <div class="about-mini">
     <div class="c">
         <div class="a-fade">
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700">Made by Grounded Studio</h3>
-            <p>An independent app studio building purposeful Android apps for daily life — with attention to detail and real value.</p>
-            <a href="index.html" class="back-btn">← All our apps</a>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700" data-i18n="about.title">Made by Grounded Studio</h3>
+            <p data-i18n="about.desc">An independent app studio building purposeful Android apps for daily life — with attention to detail and real value.</p>
+            <a href="index.html" class="back-btn" data-i18n="about.back">← All our apps</a>
         </div>
     </div>
 </div>
@@ -743,7 +758,7 @@
                 <div class="foot-mark"><img src="assets/logo-gs.png" alt="Grounded Studio" width="32" height="32" loading="lazy" decoding="async"></div>
                 <span class="foot-name">Grounded Studio</span>
             </a>
-            <span class="foot-copy">© 2026 — All rights reserved</span>
+            <span class="foot-copy" data-i18n="foot.rights">© 2026 — All rights reserved</span>
         </div>
     </div>
 </footer>
@@ -802,5 +817,252 @@ if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
 }
 </script>
 <script src="/assets/cookie-banner.js" defer></script>
+<script>
+const T = {
+    en: {
+        'nav.freshgarant': 'FreshGarant',
+        'nav.buildexact':  'BuildExact',
+        'nav.fgblog':      'FreshGarant Blog',
+        'nav.bxblog':      'BuildExact Blog',
+        'nav.studio':      'Studio',
+        'nav.download':    'Download',
+        'nav.dlplay':      'Download on Google Play',
+        'hero.badge':      'by Grounded Studio',
+        'hero.h1':         'Build with<br>precision',
+        'hero.sub':        'BuildExact is the complete toolkit for builders and contractors. Calculate materials, manage clients, generate branded quote PDFs, and share styled result cards — all on your phone.',
+        'hero.back':       '← Back to Studio',
+        'play.small':      'Download on',
+        'play.big':        'Google Play',
+        'feat.label':      'Features',
+        'feat.title':      'Everything a builder<br>needs on one screen',
+        'feat.sub':        'Stop guessing. Calculate exactly what you need before the job starts.',
+        'feat.calc.title':     'Material Calculations',
+        'feat.calc.desc':      'Calculate exactly how much material you need — area, volume, paint, tiles, concrete and more. Cut and waste included.',
+        'feat.clients.title':  'Client Manager',
+        'feat.clients.desc':   'Save clients with contact details, import from your phone contacts, and call, email or route in one tap.',
+        'feat.pdf.title':      'Branded Quote PDFs',
+        'feat.pdf.desc':       'Turn any project into a professional quote with your logo, VAT, discount, signature and payment terms.',
+        'feat.biz.title':      'Business Profile & Signature',
+        'feat.biz.desc':       'Save your logo, KvK, IBAN and hand-drawn signature once — they appear automatically on every quote PDF.',
+        'feat.status.title':   'Quote Status Tracking',
+        'feat.status.desc':    'Track quotes per client (Draft / Sent / Accepted / Rejected) with a full revenue overview per client.',
+        'feat.share.title':    'Share Results as Image',
+        'feat.share.desc':     'Styled result cards you can share to WhatsApp, Instagram or Stories in one tap — perfect for social proof.',
+        'feat.projects.title': 'Project Management',
+        'feat.projects.desc':  'Multiple projects, link clients, save measurements per job. Everything grouped in one clear overview.',
+        'feat.offline.title':  'Offline & On-Site',
+        'feat.offline.desc':   'Works entirely offline. Calculate, quote and share right on the construction site — no internet needed.',
+        'show.label':          'Screenshots',
+        'show.title':          'See it in action',
+        'show.sub':            'A quick tour of the app — from calculating a wall in seconds to sending a branded quote to your client.',
+        'show.calc.title':     'Instant calculators',
+        'show.calc.desc':      'Area, volume, paint, tiles, walls — pick and get the answer straight away.',
+        'show.results.title':  'Precise results',
+        'show.results.desc':   'Add dimensions, waste and rounding — the total updates as you type.',
+        'show.share.title':    'Shareable result cards',
+        'show.share.desc':     'Send your numbers to WhatsApp, Instagram or Stories as a branded image.',
+        'show.clients.title':  'Client manager',
+        'show.clients.desc':   'Save clients, import from phone contacts, call or route in one tap.',
+        'show.logo.title':     'Logo &amp; signature',
+        'show.logo.desc':      'Set up your business profile once — logo and signature go on every quote.',
+        'show.quote.title':    'Quote builder',
+        'show.quote.desc':     'Pick a client, edit lines, add labor and VAT — generate a branded PDF.',
+        'show.projects.title': 'Projects in one place',
+        'show.projects.desc':  'Multiple measurements per job with a clean material list overview.',
+        'show.home.title':     'Everything on one screen',
+        'show.home.desc':      'Start a project, quick calculate, or jump straight into clients and business.',
+        'cta.label':           'Download',
+        'cta.title':           'Available now<br>on Google Play',
+        'cta.sub':             'Free to download. Start calculating in minutes.',
+        'faq.label':           'FAQ',
+        'faq.title':           'Frequently Asked<br>Questions',
+        'faq.free.q':          'Is BuildExact free?',
+        'faq.free.a':          'Yes, the core app is completely free. A one-time PRO upgrade unlocks unlimited projects, client management, quote PDFs, business profile with logo & signature, materials library and more.',
+        'faq.calc.q':          'What can I calculate with BuildExact?',
+        'faq.calc.a':          'Area (m² / ft²), volume (m³ / ft³), paint, tiles, wall area with openings, concrete, gravel, linear meters and more. Everything a builder or DIY user needs.',
+        'faq.quotes.q':        'Can I create professional quotes?',
+        'faq.quotes.a':        'Yes. With PRO you can turn any project into a branded quote PDF with your logo, VAT, discount, signature and payment terms. Preview in-app before sending. Quotes get automatic numbering (OFF-2026-0001, 0002, …).',
+        'faq.clients.q':       'Can I manage clients in the app?',
+        'faq.clients.a':       'Yes. Save clients with contact and billing details, import them straight from your phone contacts, and call, email, WhatsApp or route to them in one tap. Track quote status per client with a full revenue overview.',
+        'faq.logo.q':          'Can I add my own logo and signature?',
+        'faq.logo.a':          'Absolutely. Set up your business profile once with logo, business name, VAT, KvK/Chamber of Commerce, IBAN and a hand-drawn signature. They appear automatically on every quote PDF.',
+        'faq.offline.q':       'Does BuildExact work without internet?',
+        'faq.offline.a':       'Fully offline. All calculations, quotes and PDFs happen on your device — no internet connection needed. Use it on the job site without any worries.',
+        'faq.share.q':         'Can I share results on WhatsApp or Instagram?',
+        'faq.share.a':         'Yes. Every calculation can be shared as a styled image card with your result highlighted — perfect for WhatsApp, Instagram or Stories. Material lists share as a full list card, single calculations as a hero result.',
+        'faq.pro.q':           'Is PRO a subscription?',
+        'faq.pro.a':           'No. PRO is a single one-time purchase — no monthly fees, no surprises. Unlock everything once and use it forever.',
+        'pro.label':           'Plans',
+        'pro.title':           'Free vs PRO',
+        'pro.sub':             'Start for free. Upgrade when you need more power.',
+        'pro.th.feature':      'Feature',
+        'pro.th.free':         'Free',
+        'pro.th.pro':          'PRO',
+        'pro.r1':              'Material calculations (area, volume, paint, tiles…)',
+        'pro.r2':              'Works offline & on-site',
+        'pro.r3':              'Share results as styled image (WhatsApp, Insta)',
+        'pro.r4':              'Save & manage projects',
+        'pro.r4.free':         'Up to 2',
+        'pro.r4.pro':          'Unlimited',
+        'pro.r5':              'Client management with contact import',
+        'pro.r6':              'Business profile with logo & signature',
+        'pro.r7':              'Branded quote PDF generator with preview',
+        'pro.r8':              'Quote status tracking (Draft / Sent / Accepted)',
+        'pro.r9':              'PDF measurement report per project',
+        'pro.r10':             'Materials library with saved prices',
+        'pro.r11':             'Templates per trade & home-screen shortcuts',
+        'pro.r12':             'Calculation history & favorites',
+        'pro.r13':             'Priority support',
+        'pro.cta':             'Get BuildExact on Google Play →',
+        'rev.label':           'Reviews',
+        'rev.title':           'What users say',
+        'rev.r1.text':         '"I use this on every job. No more calculating on paper or guessing amounts. The tile calculator alone saves me so much time."',
+        'rev.r2.text':         '"Finally an app that understands what builders actually need. The cost estimate feature is brilliant for quoting customers."',
+        'rev.r3.text':         '"Great app for DIY projects. I renovated my bathroom and had exact amounts for tiles and grout. Saved money on leftovers."',
+        'rev.cta':             'Leave a review on Google Play →',
+        'about.title':         'Made by Grounded Studio',
+        'about.desc':          'An independent app studio building purposeful Android apps for daily life — with attention to detail and real value.',
+        'about.back':          '← All our apps',
+        'foot.rights':         '© 2026 — All rights reserved',
+    },
+    nl: {
+        'nav.freshgarant': 'VersGarant',
+        'nav.buildexact':  'BouwExact',
+        'nav.fgblog':      'VersGarant Blog',
+        'nav.bxblog':      'BouwExact Blog',
+        'nav.studio':      'Studio',
+        'nav.download':    'Download',
+        'nav.dlplay':      'Download in Google Play',
+        'hero.badge':      'door Grounded Studio',
+        'hero.h1':         'Bouw met<br>precisie',
+        'hero.sub':        'BouwExact is de complete toolkit voor bouwers en aannemers. Bereken materialen, beheer klanten, maak offerte-PDF\'s met je eigen huisstijl en deel resultaten als stijlvolle kaarten — allemaal vanaf je telefoon.',
+        'hero.back':       '← Terug naar Studio',
+        'play.small':      'Download in',
+        'play.big':        'Google Play',
+        'feat.label':      'Functies',
+        'feat.title':      'Alles wat een bouwer<br>nodig heeft op één scherm',
+        'feat.sub':        'Stop met gokken. Bereken precies wat je nodig hebt voordat de klus begint.',
+        'feat.calc.title':     'Materiaalberekeningen',
+        'feat.calc.desc':      'Bereken precies hoeveel materiaal je nodig hebt — oppervlakte, volume, verf, tegels, beton en meer. Inclusief snit en restpercentage.',
+        'feat.clients.title':  'Klantenbeheer',
+        'feat.clients.desc':   'Sla klanten op met contactgegevens, importeer ze vanuit je telefoon en bel, mail of navigeer met één tik.',
+        'feat.pdf.title':      'Offerte-PDF\'s met huisstijl',
+        'feat.pdf.desc':       'Zet elk project om in een professionele offerte met je logo, btw, korting, handtekening en betalingsvoorwaarden.',
+        'feat.biz.title':      'Bedrijfsprofiel & handtekening',
+        'feat.biz.desc':       'Sla je logo, KvK, IBAN en handgeschreven handtekening één keer op — ze verschijnen automatisch op elke offerte.',
+        'feat.status.title':   'Offertestatus bijhouden',
+        'feat.status.desc':    'Volg offertes per klant (Concept / Verstuurd / Geaccepteerd / Afgewezen) met een volledig omzetoverzicht per klant.',
+        'feat.share.title':    'Resultaten delen als afbeelding',
+        'feat.share.desc':     'Stijlvolle resultaatkaarten die je met één tik deelt via WhatsApp, Instagram of Stories — perfect als social proof.',
+        'feat.projects.title': 'Projectbeheer',
+        'feat.projects.desc':  'Meerdere projecten, koppel klanten, sla metingen op per klus. Alles overzichtelijk gebundeld op één plek.',
+        'feat.offline.title':  'Offline & op de bouw',
+        'feat.offline.desc':   'Werkt volledig offline. Reken, offreer en deel gewoon op de bouwplaats — geen internet nodig.',
+        'show.label':          'Screenshots',
+        'show.title':          'Zie \'m in actie',
+        'show.sub':            'Een korte rondleiding door de app — van een muur berekenen in seconden tot een offerte met huisstijl versturen naar je klant.',
+        'show.calc.title':     'Directe rekenmachines',
+        'show.calc.desc':      'Oppervlakte, volume, verf, tegels, muren — kies en krijg meteen het antwoord.',
+        'show.results.title':  'Precieze resultaten',
+        'show.results.desc':   'Vul afmetingen, verlies en afronding in — het totaal past zich live aan terwijl je typt.',
+        'show.share.title':    'Deelbare resultaatkaarten',
+        'show.share.desc':     'Stuur je cijfers naar WhatsApp, Instagram of Stories als kaart met huisstijl.',
+        'show.clients.title':  'Klantenbeheer',
+        'show.clients.desc':   'Sla klanten op, importeer ze uit je contacten, bel of navigeer met één tik.',
+        'show.logo.title':     'Logo &amp; handtekening',
+        'show.logo.desc':      'Stel je bedrijfsprofiel één keer in — logo en handtekening komen op elke offerte.',
+        'show.quote.title':    'Offerte generator',
+        'show.quote.desc':     'Kies een klant, pas regels aan, voeg arbeid en btw toe — en genereer een PDF met huisstijl.',
+        'show.projects.title': 'Projecten op één plek',
+        'show.projects.desc':  'Meerdere metingen per klus met een overzichtelijke materiaallijst.',
+        'show.home.title':     'Alles op één scherm',
+        'show.home.desc':      'Start een project, snel rekenen, of spring direct naar klanten en bedrijf.',
+        'cta.label':           'Download',
+        'cta.title':           'Nu beschikbaar<br>in Google Play',
+        'cta.sub':             'Gratis te downloaden. Binnen enkele minuten reken je al.',
+        'faq.label':           'FAQ',
+        'faq.title':           'Veelgestelde<br>vragen',
+        'faq.free.q':          'Is BouwExact gratis?',
+        'faq.free.a':          'Ja, de basis-app is helemaal gratis. Met een eenmalige PRO-upgrade krijg je onbeperkte projecten, klantenbeheer, offerte-PDF\'s, bedrijfsprofiel met logo & handtekening, materialenbibliotheek en meer.',
+        'faq.calc.q':          'Wat kan ik berekenen met BouwExact?',
+        'faq.calc.a':          'Oppervlakte (m² / ft²), volume (m³ / ft³), verf, tegels, muurvlak met openingen, beton, grind, strekkende meters en meer. Alles wat een bouwer of doe-het-zelver nodig heeft.',
+        'faq.quotes.q':        'Kan ik professionele offertes maken?',
+        'faq.quotes.a':        'Ja. Met PRO zet je elk project om in een offerte-PDF met huisstijl — inclusief je logo, btw, korting, handtekening en betalingsvoorwaarden. In-app preview voordat je verstuurt. Offertes krijgen automatisch een nummer (OFF-2026-0001, 0002, …).',
+        'faq.clients.q':       'Kan ik klanten beheren in de app?',
+        'faq.clients.a':       'Ja. Sla klanten op met contact- en factuurgegevens, importeer ze direct uit je telefooncontacten en bel, mail, WhatsApp of navigeer met één tik. Volg de offertestatus per klant met een volledig omzetoverzicht.',
+        'faq.logo.q':          'Kan ik mijn eigen logo en handtekening toevoegen?',
+        'faq.logo.a':          'Zeker. Stel je bedrijfsprofiel één keer in met logo, bedrijfsnaam, btw, KvK, IBAN en een handgeschreven handtekening. Ze verschijnen automatisch op elke offerte-PDF.',
+        'faq.offline.q':       'Werkt BouwExact zonder internet?',
+        'faq.offline.a':       'Volledig offline. Alle berekeningen, offertes en PDF\'s gebeuren op je toestel — geen internet nodig. Gebruik \'m gewoon op de bouwplaats zonder zorgen.',
+        'faq.share.q':         'Kan ik resultaten delen via WhatsApp of Instagram?',
+        'faq.share.a':         'Ja. Elke berekening deel je als stijlvolle beeldkaart met je resultaat uitgelicht — perfect voor WhatsApp, Instagram of Stories. Materialenlijsten worden gedeeld als volledige lijst, losse berekeningen als hero-resultaat.',
+        'faq.pro.q':           'Is PRO een abonnement?',
+        'faq.pro.a':           'Nee. PRO is een eenmalige aankoop — geen maandelijkse kosten, geen verrassingen. Eén keer ontgrendelen en voor altijd gebruiken.',
+        'pro.label':           'Abonnementen',
+        'pro.title':           'Gratis vs PRO',
+        'pro.sub':             'Begin gratis. Upgrade wanneer je meer power nodig hebt.',
+        'pro.th.feature':      'Functie',
+        'pro.th.free':         'Gratis',
+        'pro.th.pro':          'PRO',
+        'pro.r1':              'Materiaalberekeningen (oppervlakte, volume, verf, tegels…)',
+        'pro.r2':              'Werkt offline & op locatie',
+        'pro.r3':              'Resultaten delen als stijlvolle afbeelding (WhatsApp, Insta)',
+        'pro.r4':              'Projecten opslaan & beheren',
+        'pro.r4.free':         'Tot 2',
+        'pro.r4.pro':          'Onbeperkt',
+        'pro.r5':              'Klantenbeheer met contactimport',
+        'pro.r6':              'Bedrijfsprofiel met logo & handtekening',
+        'pro.r7':              'Offerte-PDF generator met huisstijl en preview',
+        'pro.r8':              'Offertestatus bijhouden (Concept / Verstuurd / Geaccepteerd)',
+        'pro.r9':              'PDF-meetrapport per project',
+        'pro.r10':             'Materialenbibliotheek met opgeslagen prijzen',
+        'pro.r11':             'Sjablonen per vakgebied & snelkoppelingen op startscherm',
+        'pro.r12':             'Berekeningsgeschiedenis & favorieten',
+        'pro.r13':             'Voorrangs-support',
+        'pro.cta':             'Download BouwExact in Google Play →',
+        'rev.label':           'Reviews',
+        'rev.title':           'Wat gebruikers zeggen',
+        'rev.r1.text':         '"Ik gebruik deze bij elke klus. Geen gereken meer op papier of gokken met hoeveelheden. Alleen de tegelrekenmachine bespaart me al enorm veel tijd."',
+        'rev.r2.text':         '"Eindelijk een app die begrijpt wat bouwers echt nodig hebben. De kostenraming is briljant voor het offreren van klanten."',
+        'rev.r3.text':         '"Prima app voor doe-het-zelf klussen. Ik heb mijn badkamer verbouwd en had exact de juiste aantallen tegels en voegmiddel. Bespaarde geld op restanten."',
+        'rev.cta':             'Laat een review achter in Google Play →',
+        'about.title':         'Gemaakt door Grounded Studio',
+        'about.desc':          'Een onafhankelijke app studio die doelgerichte Android-apps bouwt voor het dagelijks leven — met aandacht voor detail en echte waarde.',
+        'about.back':          '← Al onze apps',
+        'foot.rights':         '© 2026 — Alle rechten voorbehouden',
+    }
+};
+
+const savedLang   = localStorage.getItem('gs-lang');
+const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+const browserIsNL = browserLang.startsWith('nl');
+let lang = savedLang || (browserIsNL ? 'nl' : 'en');
+
+function applyLang(l, animate) {
+    const dict = T[l];
+    const run = () => {
+        document.documentElement.lang = l;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            if (dict[el.dataset.i18n]) el.textContent = dict[el.dataset.i18n];
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+            if (dict[el.dataset.i18nHtml]) el.innerHTML = dict[el.dataset.i18nHtml];
+        });
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    };
+    if (animate) {
+        document.body.style.transition = 'opacity .2s';
+        document.body.style.opacity = '0';
+        setTimeout(() => { run(); document.body.style.opacity = '1'; setTimeout(() => document.body.style.transition = '', 250); }, 200);
+    } else { run(); }
+    lang = l;
+    localStorage.setItem('gs-lang', l);
+}
+
+document.querySelectorAll('.lang-btn').forEach(b =>
+    b.addEventListener('click', () => { if (b.dataset.lang !== lang) applyLang(b.dataset.lang, true); })
+);
+if (lang === 'nl') applyLang('nl', false);
+</script>
 </body>
 </html>
