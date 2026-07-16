@@ -38,9 +38,21 @@
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/freshgarant.html</loc>
-        <lastmod>2026-06-30</lastmod>
+        <lastmod>2026-07-16</lastmod>
         <priority>0.8</priority>
         <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/ai-photo-fridge-scanner.html</loc>
+        <lastmod>2026-07-16</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/hands-free-cook-mode-recipe-reader.html</loc>
+        <lastmod>2026-07-16</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/blog/buildexact.html</loc>
