@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/assets/logo-gs.png" type="image/png">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#22c55e">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreshGarant — AI Fridge Scanner, Receipt Scanner & Food Expiry Tracker | Grounded Studio</title>
     <meta name="description" content="Snap a photo of your fridge and let AI add every product. Scan grocery receipts, get AI recipes, cook hands-free and never waste food again. Free Android app by Grounded Studio.">
@@ -37,7 +41,87 @@
         ],
         "downloadUrl": "https://play.google.com/store/apps/details?id=app.rork.versgarant",
         "author": { "@type": "Organization", "name": "Grounded Studio", "url": "https://grounded-studio.app" },
-        "inLanguage": ["nl", "en"]
+        "inLanguage": ["nl", "en"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "3",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is FreshGarant free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, the core app is completely free — barcode scanning, receipt scanning, expiry tracking, smart notifications, shopping list, meal planner and waste statistics. PRO unlocks AI Photo Fridge, AI recipes, Cook Mode, family sharing and cloud backup, and comes with a 7-day free trial." }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the AI Photo Fridge work?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Open your fridge, snap a photo, and Gemini Vision recognises every product it sees — with a suggested category, storage location and expiry date. Review the list, tap Add all and everything lands in your inventory in seconds. PRO feature." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I scan grocery receipts?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tap Scan receipt, photograph your grocery bill, and FreshGarant reads every product line and adds them in bulk. Works with common Dutch supermarket receipts (AH, Jumbo, Lidl, Aldi, Plus, DEKA and more). Included in the free plan." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Cook Mode?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A fullscreen kitchen-friendly recipe reader: extra-large text, screen stays on while you cook, and a built-in timer for each step. No more scrolling with dirty fingers or the screen turning off mid-recipe. PRO feature." }
+            },
+            {
+                "@type": "Question",
+                "name": "What do I get with FreshGarant PRO?",
+                "acceptedAnswer": { "@type": "Answer", "text": "PRO unlocks the AI Photo Fridge scanner, AI-generated recipes (Gemini), Cook Mode with timers, real-time family sharing for up to 6 members, automatic cloud backup via Firebase, unlimited recipe history and priority support. Try it 7 days free." }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the AI recipe feature work?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Tap AI Recipe and FreshGarant asks Google's Gemini AI to design a recipe around the ingredients in your fridge — prioritizing what expires soonest. You get a complete recipe with ingredients, prep time, servings and step-by-step instructions in seconds." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I plan meals per day?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. The built-in meal planner lets you assign recipes to days of the week. It also auto-generates a shopping list based on ingredients you're missing for the week's plan." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I share my inventory with my family?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes — with PRO. Create a family group and invite up to 6 members. Everyone sees the same inventory in real time, so nobody buys milk that's already in the fridge." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is FreshGarant available on iPhone / iOS?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Currently FreshGarant is only available on Android. An iOS version is something we're considering for the future." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I add a product?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Tap the + button and either scan the barcode on the packaging, take a photo of the expiry label (OCR will read the date for you), or enter the product name and expiry date manually. Pick a storage location — fridge, freezer, pantry, fruit bowl or custom — and you're done." }
+            },
+            {
+                "@type": "Question",
+                "name": "Will I get a notification before something expires?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can configure how many days in advance you want to be notified — for example 1 day, 3 days or a week before the expiry date. Notifications use exact alarms so they fire on time, even on battery-optimizing phones." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does it work without internet?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The core app works fully offline — adding products, scanning barcodes, notifications, shopping list and statistics all run locally. Internet is only needed for PRO features like AI recipes, cloud backup and family sync." }
+            },
+            {
+                "@type": "Question",
+                "name": "What languages does FreshGarant support?",
+                "acceptedAnswer": { "@type": "Answer", "text": "FreshGarant is fully translated in Dutch and English. The app automatically follows your phone's language setting, so no manual configuration needed." }
+            }
+        ]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">

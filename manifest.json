@@ -1,0 +1,17 @@
+{
+    "name": "Grounded Studio",
+    "short_name": "Grounded",
+    "description": "Independent Android app studio building purposeful apps for daily life. Makers of FreshGarant and BuildExact.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#06060a",
+    "theme_color": "#22c55e",
+    "lang": "en",
+    "icons": [
+        { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+        { "src": "/assets/logo-gs.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+        { "src": "/assets/logo-gs.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+    ]
+}
