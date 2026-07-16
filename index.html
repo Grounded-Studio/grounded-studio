@@ -1006,13 +1006,13 @@
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-modal="true">
     <ul class="mobile-menu-links">
         <li>
-            <a href="#freshgarant" class="mobile-nav-link">
+            <a href="freshgarant.html" class="mobile-nav-link">
                 <img src="assets/icon-vg.png" alt="" onerror="this.outerHTML='🌿'">
                 <span data-i18n="nav.vg">FreshGarant</span>
             </a>
         </li>
         <li>
-            <a href="#buildexact" class="mobile-nav-link">
+            <a href="buildexact.html" class="mobile-nav-link">
                 <img src="assets/icon-bx.png" alt="" onerror="this.outerHTML='🏗️'">
                 <span data-i18n="nav.bx">BuildExact</span>
             </a>
@@ -1051,11 +1051,11 @@
             From food tracking to building calculations — made with passion and precision.
         </p>
         <div class="hero-pills">
-            <a href="#freshgarant" class="pill vg">
+            <a href="freshgarant.html" class="pill vg">
                 <img src="assets/icon-vg.png" class="pill-img" alt="FreshGarant" onerror="this.outerHTML='<div class=\'pill-emoji\'>🌿</div>'">
                 <span data-i18n="nav.vg">FreshGarant</span>
             </a>
-            <a href="#buildexact" class="pill bx">
+            <a href="buildexact.html" class="pill bx">
                 <img src="assets/icon-bx.png" class="pill-img" alt="BuildExact" onerror="this.outerHTML='<div class=\'pill-emoji\'>🏗️</div>'">
                 <span data-i18n="nav.bx">BuildExact</span>
             </a>
@@ -1332,11 +1332,11 @@
                 </div>
             </div>
             <div class="foot-apps">
-                <a href="#freshgarant" class="foot-app vg">
+                <a href="freshgarant.html" class="foot-app vg">
                     <img src="assets/icon-vg.png" class="foot-app-icon" alt="" onerror="this.outerHTML='🌿'">
                     <span data-i18n="nav.vg">FreshGarant</span>
                 </a>
-                <a href="#buildexact" class="foot-app bx">
+                <a href="buildexact.html" class="foot-app bx">
                     <img src="assets/icon-bx.png" class="foot-app-icon" alt="" onerror="this.outerHTML='🏗️'">
                     <span data-i18n="nav.bx">BuildExact</span>
                 </a>
@@ -1476,17 +1476,6 @@ function applyLang(l, animate) {
         });
         document.querySelectorAll('[data-i18n-html]').forEach(el => {
             if (dict[el.dataset.i18nHtml]) el.innerHTML = dict[el.dataset.i18nHtml];
-        });
-        // swap section IDs and hrefs
-        const vg = document.getElementById('freshgarant') || document.getElementById('versgarant');
-        const bx = document.getElementById('buildexact')  || document.getElementById('bouwexact');
-        if (vg) vg.id = l === 'nl' ? 'versgarant' : 'freshgarant';
-        if (bx) bx.id = l === 'nl' ? 'bouwexact'  : 'buildexact';
-        document.querySelectorAll('a[href*="garant"],a[href*="garant"]').forEach(a => {
-            if (a.href.includes('garant')) a.href = a.href.replace(/#.*/, l === 'nl' ? '#versgarant' : '#freshgarant');
-        });
-        document.querySelectorAll('a[href*="exact"]').forEach(a => {
-            a.href = a.href.replace(/#.*/, l === 'nl' ? '#bouwexact' : '#buildexact');
         });
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
     };
