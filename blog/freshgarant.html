@@ -42,6 +42,17 @@
         .nav-links { display:flex; align-items:center; gap:24px; list-style:none; }
         .nav-links a { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; }
         .nav-links a:hover,.nav-links a.active { color:var(--vg); }
+        .nav-dropdown { position:relative; }
+        .nav-dropdown-toggle { display:inline-flex; align-items:center; gap:5px; color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; cursor:pointer; background:none; border:none; padding:0; font-family:inherit; transition:color .2s; }
+        .nav-dropdown-toggle:hover { color:#fff; }
+        .nav-dropdown-toggle .arrow { font-size:.7rem; transition:transform .25s; opacity:.7; }
+        .nav-dropdown:hover .nav-dropdown-toggle .arrow,
+        .nav-dropdown.open .nav-dropdown-toggle .arrow { transform:rotate(180deg); }
+        .nav-dropdown-menu { position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%) translateY(-4px); background:rgba(10,10,18,.97); backdrop-filter:blur(24px); border:1px solid var(--border); border-radius:12px; padding:6px; min-width:210px; display:flex; flex-direction:column; gap:2px; opacity:0; visibility:hidden; transition:opacity .2s ease, visibility .2s, transform .2s ease; box-shadow:0 12px 32px rgba(0,0,0,.4); z-index:250; }
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown.open .nav-dropdown-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+        .nav-dropdown-menu a { padding:10px 14px; border-radius:8px; color:#94a3b8; text-decoration:none; font-size:.85rem; font-weight:500; white-space:nowrap; transition:background .15s, color .15s; display:flex; align-items:center; gap:10px; }
+        .nav-dropdown-menu a:hover,.nav-dropdown-menu a.active { color:var(--vg); background:rgba(34,197,94,.08); }
         @media (max-width:600px) { .nav-links { display:none; } }
         .hamburger { display:none; flex-direction:column; justify-content:center; align-items:center; width:40px; height:40px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:9px; cursor:pointer; gap:5px; flex-shrink:0; }
         .hamburger span { display:block; width:18px; height:2px; background:#94a3b8; border-radius:2px; transition:transform .3s,opacity .3s; }
@@ -109,8 +120,13 @@
             <ul class="nav-links">
                 <li><a href="../freshgarant.html">FreshGarant</a></li>
                 <li><a href="../buildexact.html">BuildExact</a></li>
-                <li><a href="freshgarant.html" class="active">FreshGarant Blog</a></li>
-                <li><a href="buildexact.html">BuildExact Blog</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Blog<span class="arrow">▾</span></button>
+                    <div class="nav-dropdown-menu">
+                        <a href="freshgarant.html" class="active">🌿 FreshGarant Blog</a>
+                        <a href="buildexact.html">🏗️ BuildExact Blog</a>
+                    </div>
+                </li>
                 <li><a href="../index.html#studio">Studio</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -263,6 +279,8 @@
 const hb=document.getElementById('hamburger'),mm=document.getElementById('mobMenu');
 hb.addEventListener('click',()=>{hb.classList.toggle('open');mm.classList.toggle('open');});
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hb.classList.remove('open');mm.classList.remove('open');}));
+document.querySelectorAll('.nav-dropdown-toggle').forEach(t=>{t.addEventListener('click',e=>{e.preventDefault();const dd=t.closest('.nav-dropdown');const o=dd.classList.toggle('open');t.setAttribute('aria-expanded',o);});});
+document.addEventListener('click',e=>{if(!e.target.closest('.nav-dropdown')){document.querySelectorAll('.nav-dropdown.open').forEach(dd=>{dd.classList.remove('open');dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded','false');});}});
 </script>
 <script src="/assets/cookie-banner.js" defer></script>
 </body>
