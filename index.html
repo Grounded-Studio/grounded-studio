@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grounded Studio — FreshGarant & BuildExact Android Apps</title>
     <meta name="description" content="Grounded Studio builds smart Android apps: FreshGarant for tracking food expiry dates and reducing waste, and BuildExact for material calculations and cost estimates.">
-    <meta name="keywords" content="houdbaarheidsdatum app, voedselverspilling bijhouden, barcode scanner vervaldatum, food expiry tracker android, bouwcalculatie app, materiaalberekening android, kostenraming bouw, construction calculator, FreshGarant, VersGarant, BuildExact, BouwExact, Grounded Studio">
+    <meta name="keywords" content="houdbaarheidsdatum app, voedselverspilling bijhouden, barcode scanner vervaldatum, food expiry tracker android, bouwcalculatie app, materiaalberekening android, kostenraming bouw, construction calculator, FreshGarant, FreshGarant, BuildExact, BuildExact, Grounded Studio">
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://grounded-studio.app">
@@ -58,11 +58,11 @@
             {
                 "@type": "SoftwareApplication",
                 "name": "FreshGarant",
-                "alternateName": "VersGarant",
+                "alternateName": "FreshGarant",
                 "applicationCategory": "LifestyleApplication",
                 "operatingSystem": "Android",
                 "description": "AI-powered food expiry tracker. Snap a photo of your fridge and let Gemini AI add every product, scan grocery receipts, get AI recipes, and never waste food again.",
-                "keywords": "AI fridge scanner, photo fridge AI, receipt scanner, food expiry tracker, AI recipes Gemini, cook mode, meal planner, houdbaarheidsdatum app, voedselverspilling, VersGarant",
+                "keywords": "AI fridge scanner, photo fridge AI, receipt scanner, food expiry tracker, AI recipes Gemini, cook mode, meal planner, houdbaarheidsdatum app, voedselverspilling, FreshGarant",
                 "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
                 "downloadUrl": "https://play.google.com/store/apps/details?id=app.rork.versgarant",
                 "author": { "@id": "https://grounded-studio.app/#organization" },
@@ -78,7 +78,7 @@
             {
                 "@type": "SoftwareApplication",
                 "name": "BuildExact",
-                "alternateName": "BouwExact",
+                "alternateName": "BuildExact",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Android",
                 "offers": {
@@ -87,7 +87,7 @@
                     "priceCurrency": "EUR"
                 },
                 "description": "Smart construction calculator. Calculate materials, manage clients, generate branded quote PDFs with logo and signature, and share styled result cards.",
-                "keywords": "construction calculator, quote generator, client manager, bouwcalculatie app, offerte app, materiaalberekening, contractor tools, BouwExact",
+                "keywords": "construction calculator, quote generator, client manager, bouwcalculatie app, offerte app, materiaalberekening, contractor tools, BuildExact",
                 "downloadUrl": "https://play.google.com/store/apps/details?id=com.metenweten.bouw",
                 "author": { "@id": "https://grounded-studio.app/#organization" },
                 "url": "https://grounded-studio.app/buildexact.html",
@@ -622,7 +622,7 @@
             transition:transform .6s cubic-bezier(.16,1,.3,1);
         }
 
-        /* VersGarant: lean slightly left (screen faces viewer + right) */
+        /* FreshGarant: lean slightly left (screen faces viewer + right) */
         .vg-tilt {
             transform: perspective(1100px) rotateY(-12deg) rotateX(4deg);
             animation: floatVG 7s ease-in-out infinite;
@@ -1405,8 +1405,8 @@ const T = {
         'stats.free':   'to download',
     },
     nl: {
-        'nav.vg':       'VersGarant',
-        'nav.bx':       'BouwExact',
+        'nav.vg':       'FreshGarant',
+        'nav.bx':       'BuildExact',
         'nav.studio':   'Studio',
         'nav.cta':      'Onze Apps',
         'hero.h1':      'Apps die<br>écht werken',
@@ -1415,7 +1415,7 @@ const T = {
         'vg.by':        'door Grounded Studio',
         'vg.tag.text':  'App 01',
         'vg.h2':        'Nooit meer<br><span style="color:var(--vg)">verspilling</span>',
-        'vg.desc':      'VersGarant houdt je houdbaarheidsdatums bij zodat er niets verspild wordt. Scan barcodes, ontvang tijdige meldingen en zie precies wat je bespaart. Upgrade naar Pro voor AI-recepten, gezinsdelen, cloud back-up en meer.',
+        'vg.desc':      'FreshGarant houdt je houdbaarheidsdatums bij zodat er niets verspild wordt. Scan barcodes, ontvang tijdige meldingen en zie precies wat je bespaart. Upgrade naar Pro voor AI-recepten, gezinsdelen, cloud back-up en meer.',
         'vg.f1.h':      'Barcode Scanner',
         'vg.f1.p':      'Scan producten direct met de camera voor automatisch opzoeken van productgegevens en houdbaarheidsdatum.',
         'vg.f2.h':      'Slimme Meldingen',
@@ -1435,7 +1435,7 @@ const T = {
         'bx.by':        'door Grounded Studio',
         'bx.tag.text':  'App 02',
         'bx.h2':        'Bouw met<br><span style="color:var(--bx)">precisie</span>',
-        'bx.desc':      'BouwExact is de slimme rekentool voor bouwers en klussenmakers. Bereken exacte materiaalbehoeften, maak kostenramingen en houd je projecten overzichtelijk.',
+        'bx.desc':      'BuildExact is de slimme rekentool voor bouwers en klussenmakers. Bereken exacte materiaalbehoeften, maak kostenramingen en houd je projecten overzichtelijk.',
         'bx.f1.h':      'Materiaalberekeningen',
         'bx.f1.p':      'Bereken precies hoeveel materiaal je nodig hebt voor elke klus — inclusief snit- en restpercentage.',
         'bx.f2.h':      'Kostenraming',
