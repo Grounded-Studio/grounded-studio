@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/assets/logo-gs.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshGarant — AI-Powered Food Expiry Tracker | Grounded Studio</title>
-    <meta name="description" content="FreshGarant tracks food expiry dates with smart notifications, AI-generated recipes from Gemini, family sharing and cloud backup. Free Android app by Grounded Studio.">
-    <meta name="keywords" content="FreshGarant, VersGarant, houdbaarheidsdatum app, voedselverspilling, barcode scanner vervaldatum, food expiry tracker android, food waste app, AI recipes, Gemini recipes, family food sharing, koelkast app">
+    <title>FreshGarant — AI Fridge Scanner, Receipt Scanner & Food Expiry Tracker | Grounded Studio</title>
+    <meta name="description" content="Snap a photo of your fridge and let AI add every product. Scan grocery receipts, get AI recipes, cook hands-free and never waste food again. Free Android app by Grounded Studio.">
+    <meta name="keywords" content="FreshGarant, VersGarant, AI fridge scanner, photo fridge AI, receipt scanner grocery, food expiry tracker, houdbaarheidsdatum app, voedselverspilling, AI recipes Gemini, cook mode, meal planner, koelkast scan AI, foto koelkast app, bonnetje scannen">
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://grounded-studio.app/freshgarant.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://grounded-studio.app/freshgarant.html">
-    <meta property="og:title" content="FreshGarant — AI-Powered Food Expiry Tracker">
-    <meta property="og:description" content="Never waste food again. Smart notifications, AI-generated recipes, family sharing and cloud backup. Free on Android.">
+    <meta property="og:title" content="FreshGarant — AI Fridge Scanner, Receipt Scanner & Food Expiry Tracker">
+    <meta property="og:description" content="Snap your fridge. AI adds every product. Scan receipts, cook hands-free, get AI recipes — and never waste food again. Free on Android.">
     <meta property="og:image" content="https://grounded-studio.app/assets/screen-vg.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://grounded-studio.app/freshgarant.html">
-    <meta name="twitter:title" content="FreshGarant — AI-Powered Food Expiry Tracker">
-    <meta name="twitter:description" content="Never waste food again. Smart notifications, AI-generated recipes, family sharing and cloud backup. Free on Android.">
+    <meta name="twitter:title" content="FreshGarant — AI Fridge Scanner, Receipt Scanner & Food Expiry Tracker">
+    <meta name="twitter:description" content="Snap your fridge. AI adds every product. Scan receipts, cook hands-free, get AI recipes — and never waste food again. Free on Android.">
     <meta name="twitter:image" content="https://grounded-studio.app/assets/screen-vg.png">
     <script type="application/ld+json">
     {
@@ -28,9 +28,9 @@
         "alternateName": "VersGarant",
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Android",
-        "description": "FreshGarant tracks food expiry dates with smart notifications, AI-generated recipes powered by Gemini, family sharing and cloud backup. Reduce food waste at home.",
-        "keywords": "houdbaarheidsdatum app, voedselverspilling, food expiry tracker, barcode scanner, AI recipes, Gemini, family sharing",
-        "featureList": "Barcode scanner, Smart expiry notifications, AI recipes powered by Gemini, Family sharing, Cloud backup, Shopping list, Waste statistics, Home screen widget, Storage locations, Multi-language (NL/EN)",
+        "description": "FreshGarant is the all-in-one food waste app. Snap a photo of your fridge and let AI add every product. Scan grocery receipts, generate AI recipes with Gemini, cook hands-free and plan meals.",
+        "keywords": "AI fridge scanner, photo fridge AI, receipt scanner, food expiry tracker, AI recipes Gemini, cook mode, meal planner, houdbaarheidsdatum app, voedselverspilling, family sharing",
+        "featureList": "AI Photo Fridge scanner, Receipt scanner, Barcode scanner, Smart expiry notifications, AI recipes powered by Gemini, Cook Mode with timers, Meal planner, What can I cook, Expiry calendar, Family sharing, Cloud backup, Shopping list, Waste statistics with badges, Year Wrap, Home screen widget, Storage locations, Share result cards, Multi-language (NL/EN)",
         "offers": [
             { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "Free" },
             { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "PRO 7-day free trial", "description": "AI recipes, cloud backup, family sharing" }
@@ -158,6 +158,18 @@
 
         /* PRO BADGE on feature cards */
         .pro-badge { display:inline-block; font-size:.6rem; font-weight:800; letter-spacing:.08em; padding:2px 7px; border-radius:6px; background:linear-gradient(135deg,#fbbf24,#f59e0b); color:#1f2937; vertical-align:middle; margin-left:6px; box-shadow:0 0 12px rgba(251,191,36,.35); }
+
+        /* SHOWCASE GALLERY */
+        .showcase-section { padding:100px 0; border-top:1px solid var(--border); }
+        .showcase-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:56px; }
+        @media (max-width:900px) { .showcase-grid { grid-template-columns:repeat(2,1fr); gap:24px; } }
+        @media (max-width:560px) { .showcase-grid { grid-template-columns:1fr; gap:32px; } }
+        .showcase-item { display:flex; flex-direction:column; align-items:center; text-align:center; }
+        .showcase-frame { position:relative; width:100%; max-width:260px; padding:14px; border-radius:32px; background:linear-gradient(180deg,rgba(34,197,94,.08),rgba(16,185,129,.04)); border:1px solid var(--border); box-shadow:0 20px 50px rgba(0,0,0,.35); transition:transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s; }
+        .showcase-frame:hover { transform:translateY(-6px); box-shadow:0 28px 60px rgba(34,197,94,.22); }
+        .showcase-frame img { display:block; width:100%; height:auto; border-radius:22px; }
+        .showcase-item h3 { margin-top:24px; font-size:1rem; font-weight:700; color:#f1f5f9; }
+        .showcase-item p { margin-top:6px; font-size:.85rem; color:var(--muted); line-height:1.6; max-width:280px; }
 
         /* PRO SECTION */
         .pro-section { padding:100px 0; border-top:1px solid var(--border); position:relative; overflow:hidden; }
@@ -288,7 +300,7 @@
             by Grounded Studio
         </div>
         <h1>Never waste<br>food again</h1>
-        <p class="hero-sub">FreshGarant tracks when your products expire, sends smart reminders, and lets Gemini AI turn your soon-to-expire ingredients into delicious recipes. Save money, save food.</p>
+        <p class="hero-sub">Snap a photo of your fridge and let AI add every product for you. Scan grocery receipts, cook hands-free with recipes made from expiring ingredients, and stop throwing money away.</p>
         <div class="hero-actions">
             <a href="https://play.google.com/store/apps/details?id=app.rork.versgarant" target="_blank" rel="noopener" class="btn-primary">
                 <svg viewBox="0 0 24 24" fill="none" class="play-svg" style="width:22px;height:22px"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
@@ -305,13 +317,13 @@
         <div class="screen-wrap a-scale">
             <div class="screen-glow"></div>
             <div class="phone-item side left">
-                <img src="assets/screen-vg.png" class="app-screenshot" alt="FreshGarant home screen" width="240" height="500" loading="lazy" decoding="async">
+                <img src="assets/screen-vg-ai.png" class="app-screenshot" alt="FreshGarant AI-generated recipe from expiring ingredients" width="240" height="500" loading="lazy" decoding="async">
             </div>
             <div class="phone-item center">
-                <img src="assets/screen-vg-2.png" class="app-screenshot" alt="FreshGarant add product screen" width="240" height="500" loading="lazy" decoding="async">
+                <img src="assets/screen-vg.png" class="app-screenshot" alt="FreshGarant home screen with product overview" width="240" height="500" loading="lazy" decoding="async">
             </div>
             <div class="phone-item side right">
-                <img src="assets/screen-vg-3.png" class="app-screenshot" alt="FreshGarant recipes screen" width="240" height="500" loading="lazy" decoding="async">
+                <img src="assets/screen-vg-3.png" class="app-screenshot" alt="FreshGarant recipes screen with What can I cook" width="240" height="500" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -327,54 +339,147 @@
         </div>
         <div class="features-grid">
             <div class="feat-card a-fade" style="transition-delay:.05s">
-                <div class="feat-ico">📱</div>
-                <h3>Barcode Scanner</h3>
-                <p>Scan products directly with your camera to automatically look up product data and expiry dates.</p>
+                <div class="feat-ico">📸</div>
+                <h3>AI Photo Fridge <span class="pro-badge">PRO</span></h3>
+                <p>Snap a photo of your fridge and Gemini Vision recognises every product with category, location and suggested expiry.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:.1s">
-                <div class="feat-ico">🔔</div>
-                <h3>Smart Notifications</h3>
-                <p>Receive timely push notifications before products expire, so you can still use them in time.</p>
+                <div class="feat-ico">🧾</div>
+                <h3>Receipt Scanner</h3>
+                <p>Photograph your grocery receipt to add every product in bulk — no more one-by-one typing after shopping.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:.15s">
+                <div class="feat-ico">📱</div>
+                <h3>Barcode Scanner</h3>
+                <p>Scan products with your camera to look up product data and expiry dates automatically.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.2s">
                 <div class="feat-ico">✨</div>
                 <h3>AI Recipes <span class="pro-badge">PRO</span></h3>
                 <p>Gemini AI turns your soon-to-expire ingredients into personalized recipes. Less waste, more flavor.</p>
             </div>
-            <div class="feat-card a-fade" style="transition-delay:.2s">
+            <div class="feat-card a-fade" style="transition-delay:.25s">
+                <div class="feat-ico">🔍</div>
+                <h3>What Can I Cook?</h3>
+                <p>Instantly see which recipes you can make right now with what's already in your fridge — sorted by match.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.3s">
+                <div class="feat-ico">🍳</div>
+                <h3>Cook Mode <span class="pro-badge">PRO</span></h3>
+                <p>Fullscreen kitchen-friendly recipe reader with big text, screen-always-on and a built-in timer per step.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.35s">
+                <div class="feat-ico">🗓️</div>
+                <h3>Meal Planner</h3>
+                <p>Plan meals per day of the week and auto-generate a shopping list for everything you're missing.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.4s">
+                <div class="feat-ico">🔔</div>
+                <h3>Smart Notifications</h3>
+                <p>Timely push notifications before products expire so you still have time to use them.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.45s">
+                <div class="feat-ico">📅</div>
+                <h3>Expiry Calendar</h3>
+                <p>Month view of every product's expiry date. See at a glance what's coming up.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.5s">
+                <div class="feat-ico">🎉</div>
+                <h3>Year Wrap</h3>
+                <p>Spotify-style year-in-review of your food waste stats, badges and money saved. Share your streak.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.55s">
                 <div class="feat-ico">👨‍👩‍👧</div>
                 <h3>Family Sharing <span class="pro-badge">PRO</span></h3>
-                <p>Share your inventory with family members. Everyone sees what's in the fridge in real time.</p>
+                <p>Share your inventory with family. Everyone sees what's in the fridge in real time.</p>
             </div>
-            <div class="feat-card a-fade" style="transition-delay:.25s">
+            <div class="feat-card a-fade" style="transition-delay:.6s">
                 <div class="feat-ico">☁️</div>
                 <h3>Cloud Backup <span class="pro-badge">PRO</span></h3>
                 <p>Your products safely backed up to Firebase. Switch phones without losing a thing.</p>
             </div>
-            <div class="feat-card a-fade" style="transition-delay:.3s">
+            <div class="feat-card a-fade" style="transition-delay:.65s">
+                <div class="feat-ico">📊</div>
+                <h3>Stats &amp; Badges</h3>
+                <p>Track freshness score, no-waste streak and unlock badges (Sprout, Growing, On fire, Diamond).</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.7s">
                 <div class="feat-ico">🛒</div>
                 <h3>Shopping List</h3>
-                <p>Automatically generate a shopping list based on what you're almost out of or need to restock.</p>
+                <p>Automatically generated from what you're almost out of or planning to cook this week.</p>
             </div>
-            <div class="feat-card a-fade" style="transition-delay:.35s">
-                <div class="feat-ico">📊</div>
-                <h3>Waste Statistics</h3>
-                <p>Monthly overview of how much you save and track your progress in reducing food waste.</p>
-            </div>
-            <div class="feat-card a-fade" style="transition-delay:.4s">
+            <div class="feat-card a-fade" style="transition-delay:.75s">
                 <div class="feat-ico">🏠</div>
                 <h3>Home Widget</h3>
                 <p>See what's expiring at a glance — no need to open the app. Right on your home screen.</p>
             </div>
-            <div class="feat-card a-fade" style="transition-delay:.45s">
+            <div class="feat-card a-fade" style="transition-delay:.8s">
                 <div class="feat-ico">📦</div>
                 <h3>Storage Locations</h3>
                 <p>Organize by fridge, freezer, pantry, fruit bowl or custom — know exactly where everything is.</p>
             </div>
-            <div class="feat-card a-fade" style="transition-delay:.5s">
+            <div class="feat-card a-fade" style="transition-delay:.85s">
+                <div class="feat-ico">📤</div>
+                <h3>Share Result Cards</h3>
+                <p>Share your freshness stats and streaks as styled image cards to WhatsApp, Instagram or Stories.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.9s">
                 <div class="feat-ico">🌍</div>
                 <h3>NL + EN</h3>
                 <p>Fully translated in Dutch and English. The app follows your phone's language automatically.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase-section">
+    <div class="c">
+        <div class="a-fade">
+            <div class="section-label"><span>●</span> Screenshots</div>
+            <h2 class="section-title">See FreshGarant<br>in action</h2>
+            <p class="section-sub">From scanning your fridge with AI to hands-free cooking — the full experience on your phone.</p>
+        </div>
+        <div class="showcase-grid">
+            <div class="showcase-item a-fade" style="transition-delay:.05s">
+                <div class="showcase-frame"><img src="assets/screen-vg.png" alt="Home screen with product overview and expiry countdown" loading="lazy" decoding="async"></div>
+                <h3>Live overview</h3>
+                <p>See total, expiring soon and expired at a glance. Every product with a days-left countdown.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.1s">
+                <div class="showcase-frame"><img src="assets/screen-vg-2.png" alt="Product detail with freshness bar and nutrition" loading="lazy" decoding="async"></div>
+                <h3>Full product detail</h3>
+                <p>Freshness bar, location, quantity, calories &amp; nutrition — all in one screen.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.15s">
+                <div class="showcase-frame"><img src="assets/screen-vg-receipt.png" alt="Scan receipt screen" loading="lazy" decoding="async"></div>
+                <h3>Receipt scanner</h3>
+                <p>Snap your grocery receipt to add every product in bulk. No more one-by-one typing.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.2s">
+                <div class="showcase-frame"><img src="assets/screen-vg-3.png" alt="Recipes screen with What can I cook and AI Recipe options" loading="lazy" decoding="async"></div>
+                <h3>Recipes hub</h3>
+                <p>"What can I cook?" from what you already have, plus AI-generated Gemini recipes.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.25s">
+                <div class="showcase-frame"><img src="assets/screen-vg-cook.png" alt="What can I cook results screen with matching recipes" loading="lazy" decoding="async"></div>
+                <h3>What can I cook?</h3>
+                <p>Instantly see matching recipes ranked by how many ingredients you already have.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.3s">
+                <div class="showcase-frame"><img src="assets/screen-vg-ai.png" alt="AI-generated recipe with expiring ingredients highlighted" loading="lazy" decoding="async"></div>
+                <h3>AI recipes with Gemini</h3>
+                <p>Recipes generated around your soon-to-expire products, with those ingredients tagged.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.35s">
+                <div class="showcase-frame"><img src="assets/screen-vg-stats.png" alt="Statistics with freshness score, streak, badges and monthly overview" loading="lazy" decoding="async"></div>
+                <h3>Stats &amp; badges</h3>
+                <p>Freshness score, no-waste streak and unlockable badges to keep you motivated.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.4s">
+                <div class="showcase-frame"><img src="assets/screen-vg-more.png" alt="More menu with Statistics, Recipes, Calendar, Stores, Family and Settings" loading="lazy" decoding="async"></div>
+                <h3>Everything in one hub</h3>
+                <p>Statistics, calendar, stores, family sharing and settings — all one tap away.</p>
             </div>
         </div>
     </div>
@@ -387,10 +492,12 @@
             <div class="pro-content">
                 <div class="section-label" style="color:#fbbf24"><span>●</span> FreshGarant PRO</div>
                 <h2 class="section-title" style="margin-top:8px">Unlock everything<br>with PRO</h2>
-                <p class="section-sub" style="margin-bottom:32px">Get AI-powered recipes, family sharing, cloud backup and more. Start with a free 7-day trial — no commitment.</p>
+                <p class="section-sub" style="margin-bottom:32px">Get the AI Photo Fridge, AI recipes, hands-free Cook Mode, family sharing, cloud backup and more. Start with a free 7-day trial — no commitment.</p>
                 <ul class="pro-list">
-                    <li><span class="pro-check">✓</span> AI recipes from your expiring ingredients</li>
-                    <li><span class="pro-check">✓</span> Share inventory with up to 6 family members</li>
+                    <li><span class="pro-check">✓</span> AI Photo Fridge — scan your fridge in one photo</li>
+                    <li><span class="pro-check">✓</span> AI recipes from your expiring ingredients (Gemini)</li>
+                    <li><span class="pro-check">✓</span> Cook Mode — big text, screen-on, timers per step</li>
+                    <li><span class="pro-check">✓</span> Family sharing with up to 6 members</li>
                     <li><span class="pro-check">✓</span> Automatic cloud backup via Firebase</li>
                     <li><span class="pro-check">✓</span> Unlimited recipes and product history</li>
                     <li><span class="pro-check">✓</span> Priority support</li>
@@ -441,21 +548,49 @@
                     Is FreshGarant free?
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">Yes, the core app is completely free — barcode scanning, expiry tracking, smart notifications, shopping list and waste statistics. PRO unlocks AI recipes, family sharing and cloud backup, and comes with a 7-day free trial.</div></div>
+                <div class="faq-a"><div class="faq-a-inner">Yes, the core app is completely free — barcode scanning, receipt scanning, expiry tracking, smart notifications, shopping list, meal planner and waste statistics. PRO unlocks AI Photo Fridge, AI recipes, Cook Mode, family sharing and cloud backup, and comes with a 7-day free trial.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    How does the AI Photo Fridge work?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">Open your fridge, snap a photo, and Gemini Vision recognises every product it sees — with a suggested category, storage location and expiry date. Review the list, tap "Add all" and everything lands in your inventory in seconds. Perfect after a big grocery run or when moving houses. PRO feature.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Can I scan grocery receipts?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">Yes. Tap "Scan receipt", photograph your grocery bill, and FreshGarant reads every product line and adds them in bulk. Works with common Dutch supermarket receipts (AH, Jumbo, Lidl, Aldi, Plus, DEKA and more). Included in the free plan.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    What is Cook Mode?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">A fullscreen kitchen-friendly recipe reader: extra-large text, screen stays on while you cook, and a built-in timer for each step. No more scrolling with dirty fingers or the screen turning off mid-recipe. PRO feature.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
                     What do I get with FreshGarant PRO?
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">PRO unlocks AI-generated recipes from your soon-to-expire ingredients (powered by Gemini), real-time family sharing for up to 6 members, automatic cloud backup via Firebase, and priority support. Try it 7 days free.</div></div>
+                <div class="faq-a"><div class="faq-a-inner">PRO unlocks the AI Photo Fridge scanner, AI-generated recipes (Gemini), Cook Mode with timers, real-time family sharing for up to 6 members, automatic cloud backup via Firebase, unlimited recipe history and priority support. Try it 7 days free.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
                     How does the AI recipe feature work?
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner">Tap the recipe button and FreshGarant asks Google's Gemini AI to design a recipe around the ingredients in your fridge — prioritizing what expires soonest. You get a complete recipe with ingredients, steps and serving size in seconds.</div></div>
+                <div class="faq-a"><div class="faq-a-inner">Tap "AI Recipe" and FreshGarant asks Google's Gemini AI to design a recipe around the ingredients in your fridge — prioritizing what expires soonest. You get a complete recipe with ingredients, prep time, servings and step-by-step instructions in seconds. Expiring ingredients are highlighted in orange.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    Can I plan meals per day?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner">Yes. The built-in meal planner lets you assign recipes to days of the week. It also auto-generates a shopping list based on ingredients you're missing for the week's plan.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
