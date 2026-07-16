@@ -156,6 +156,18 @@
         .feat-card h3 { font-size:.95rem; font-weight:700; margin-bottom:6px; }
         .feat-card p { font-size:.85rem; color:var(--muted); line-height:1.65; }
 
+        /* SHOWCASE GALLERY */
+        .showcase-section { padding:100px 0; border-top:1px solid var(--border); }
+        .showcase-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:56px; }
+        @media (max-width:900px) { .showcase-grid { grid-template-columns:repeat(2,1fr); gap:24px; } }
+        @media (max-width:560px) { .showcase-grid { grid-template-columns:1fr; gap:32px; } }
+        .showcase-item { display:flex; flex-direction:column; align-items:center; text-align:center; }
+        .showcase-frame { position:relative; width:100%; max-width:260px; padding:14px; border-radius:32px; background:linear-gradient(180deg,rgba(37,99,235,.08),rgba(129,140,248,.04)); border:1px solid var(--border); box-shadow:0 20px 50px rgba(0,0,0,.35); transition:transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s; }
+        .showcase-frame:hover { transform:translateY(-6px); box-shadow:0 28px 60px rgba(37,99,235,.22); }
+        .showcase-frame img { display:block; width:100%; height:auto; border-radius:22px; }
+        .showcase-item h3 { margin-top:24px; font-size:1rem; font-weight:700; color:#f1f5f9; }
+        .showcase-item p { margin-top:6px; font-size:.85rem; color:var(--muted); line-height:1.6; max-width:280px; }
+
         /* CTA DOWNLOAD */
         .cta-section { padding:80px 0 120px; text-align:center; }
         .play-btn { display:inline-flex; align-items:center; gap:16px; padding:18px 36px; border-radius:18px; text-decoration:none; color:#fff; font-weight:600; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); transition:all .3s; position:relative; overflow:hidden; }
@@ -303,13 +315,13 @@
         <div class="screen-wrap a-scale">
             <div class="screen-glow"></div>
             <div class="phone-item side left">
-                <img src="assets/screen-bx-3.png" class="app-screenshot" alt="BuildExact project overview" width="240" height="500" loading="lazy" decoding="async">
+                <img src="assets/screen-bx-3.png" class="app-screenshot" alt="BuildExact styled share card with hero result" width="240" height="500" loading="lazy" decoding="async">
             </div>
             <div class="phone-item center">
-                <img src="assets/screen-bx-2.png" class="app-screenshot" alt="BuildExact add measurement" width="240" height="500" loading="lazy" decoding="async">
+                <img src="assets/screen-bx.png" class="app-screenshot" alt="BuildExact home screen with clients and business tiles" width="240" height="500" loading="lazy" decoding="async">
             </div>
             <div class="phone-item side right">
-                <img src="assets/screen-bx.png" class="app-screenshot" alt="BuildExact home screen" width="240" height="500" loading="lazy" decoding="async">
+                <img src="assets/screen-bx-2.png" class="app-screenshot" alt="BuildExact quote builder screen" width="240" height="500" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -363,6 +375,59 @@
                 <div class="feat-ico">📤</div>
                 <h3>Offline & On-Site</h3>
                 <p>Works entirely offline. Calculate, quote and share right on the construction site — no internet needed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase-section">
+    <div class="c">
+        <div class="a-fade">
+            <div class="section-label"><span>●</span> Screenshots</div>
+            <h2 class="section-title">See it in action</h2>
+            <p class="section-sub">A quick tour of the app — from calculating a wall in seconds to sending a branded quote to your client.</p>
+        </div>
+        <div class="showcase-grid">
+            <div class="showcase-item a-fade" style="transition-delay:.05s">
+                <div class="showcase-frame"><img src="assets/screen-bx-calc.png" alt="Instant calculators grid" loading="lazy" decoding="async"></div>
+                <h3>Instant calculators</h3>
+                <p>Area, volume, paint, tiles, walls — pick and get the answer straight away.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.1s">
+                <div class="showcase-frame"><img src="assets/screen-bx-card.png" alt="Filled calculator with result" loading="lazy" decoding="async"></div>
+                <h3>Precise results</h3>
+                <p>Add dimensions, waste and rounding — the total updates as you type.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.15s">
+                <div class="showcase-frame"><img src="assets/screen-bx-3.png" alt="Styled share card with 10000 m² hero" loading="lazy" decoding="async"></div>
+                <h3>Shareable result cards</h3>
+                <p>Send your numbers to WhatsApp, Instagram or Stories as a branded image.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.2s">
+                <div class="showcase-frame"><img src="assets/screen-bx-clients.png" alt="Add new client form" loading="lazy" decoding="async"></div>
+                <h3>Client manager</h3>
+                <p>Save clients, import from phone contacts, call or route in one tap.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.25s">
+                <div class="showcase-frame"><img src="assets/screen-bx-business.png" alt="Business profile with logo and signature" loading="lazy" decoding="async"></div>
+                <h3>Logo &amp; signature</h3>
+                <p>Set up your business profile once — logo and signature go on every quote.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.3s">
+                <div class="showcase-frame"><img src="assets/screen-bx-2.png" alt="Quote builder screen" loading="lazy" decoding="async"></div>
+                <h3>Quote builder</h3>
+                <p>Pick a client, edit lines, add labor and VAT — generate a branded PDF.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.35s">
+                <div class="showcase-frame"><img src="assets/screen-bx-project.png" alt="Project with 3 measurement cards" loading="lazy" decoding="async"></div>
+                <h3>Projects in one place</h3>
+                <p>Multiple measurements per job with a clean material list overview.</p>
+            </div>
+            <div class="showcase-item a-fade" style="transition-delay:.4s">
+                <div class="showcase-frame"><img src="assets/screen-bx.png" alt="BuildExact home screen with clients and business tiles" loading="lazy" decoding="async"></div>
+                <h3>Everything on one screen</h3>
+                <p>Start a project, quick calculate, or jump straight into clients and business.</p>
             </div>
         </div>
     </div>
