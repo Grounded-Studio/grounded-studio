@@ -14,6 +14,9 @@
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://grounded-studio.app/buildexact.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/buildexact.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/buildexact.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/buildexact.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://grounded-studio.app/buildexact.html">
     <meta property="og:title" content="BuildExact — Construction Calculator, Client Manager & Quote PDFs">
@@ -299,6 +302,20 @@
         .reviews-cta { margin-top:36px; }
         .reviews-cta a { display:inline-flex; align-items:center; gap:8px; color:var(--bx); text-decoration:none; font-weight:600; font-size:.9rem; padding:10px 22px; border-radius:10px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); transition:all .2s; }
         .reviews-cta a:hover { background:rgba(37,99,235,.16); transform:translateY(-2px); }
+
+        /* BLOG CROSSLINK */
+        .blog-crosslink { padding:100px 0; border-top:1px solid var(--border); }
+        .blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:44px; }
+        @media(max-width:800px){.blog-grid{grid-template-columns:1fr;}}
+        .blog-card-link { display:flex; flex-direction:column; padding:24px; border-radius:18px; background:rgba(255,255,255,.03); border:1px solid var(--border); text-decoration:none; color:inherit; transition:all .3s cubic-bezier(.16,1,.3,1); position:relative; }
+        .blog-card-link:hover { background:rgba(37,99,235,.05); border-color:rgba(37,99,235,.3); transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.3); }
+        .blog-card-link .cat { font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--bx); margin-bottom:12px; }
+        .blog-card-link h3 { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; line-height:1.35; margin-bottom:10px; color:#f1f5f9; }
+        .blog-card-link p { font-size:.85rem; color:var(--muted); line-height:1.6; margin-bottom:16px; flex:1; }
+        .blog-card-link .read { font-size:.78rem; font-weight:600; color:var(--bx); display:flex; align-items:center; gap:6px; }
+        .blog-crosslink-cta { text-align:center; margin-top:36px; }
+        .blog-crosslink-cta a { display:inline-flex; align-items:center; gap:8px; color:var(--bx); text-decoration:none; font-size:.9rem; font-weight:600; border:1px solid rgba(37,99,235,.3); padding:10px 22px; border-radius:10px; background:rgba(37,99,235,.08); transition:all .2s; }
+        .blog-crosslink-cta a:hover { background:rgba(37,99,235,.16); transform:translateY(-2px); }
 
         /* ABOUT MINI */
         .about-mini { padding:80px 0; border-top:1px solid var(--border); text-align:center; }
@@ -756,6 +773,39 @@
     </div>
 </section>
 
+<!-- BLOG CROSSLINK -->
+<section class="blog-crosslink">
+    <div class="c">
+        <div class="a-fade">
+            <div class="section-label"><span>●</span> <span data-i18n="blog.label">From our blog</span></div>
+            <h2 class="section-title" style="margin-top:16px;margin-bottom:0" data-i18n-html="blog.title">Guides for builders<br>and contractors</h2>
+        </div>
+        <div class="blog-grid">
+            <a href="blog/how-to-write-construction-quote.html" class="blog-card-link a-fade">
+                <div class="cat">📝 <span data-i18n="blog.p1.cat">Quotes</span></div>
+                <h3 data-i18n="blog.p1.title">How to Write a Construction Quote That Wins Jobs</h3>
+                <p data-i18n="blog.p1.desc">Structure, pricing psychology and legal must-haves for a quote your clients actually sign.</p>
+                <span class="read" data-i18n="blog.read">Read article →</span>
+            </a>
+            <a href="blog/how-to-calculate-tiles.html" class="blog-card-link a-fade" style="transition-delay:.05s">
+                <div class="cat">🔨 <span data-i18n="blog.p2.cat">Materials</span></div>
+                <h3 data-i18n="blog.p2.title">How Many Tiles Do I Need? The Complete Guide</h3>
+                <p data-i18n="blog.p2.desc">Calculate exactly how many tiles including cut waste. Avoid ordering too little.</p>
+                <span class="read" data-i18n="blog.read">Read article →</span>
+            </a>
+            <a href="blog/renovation-cost-estimate.html" class="blog-card-link a-fade" style="transition-delay:.1s">
+                <div class="cat">💰 <span data-i18n="blog.p3.cat">Cost estimates</span></div>
+                <h3 data-i18n="blog.p3.title">How to Estimate Renovation Costs Accurately</h3>
+                <p data-i18n="blog.p3.desc">Break down materials, labor and buffer so your estimate matches the actual bill.</p>
+                <span class="read" data-i18n="blog.read">Read article →</span>
+            </a>
+        </div>
+        <div class="blog-crosslink-cta a-fade" style="transition-delay:.15s">
+            <a href="blog/buildexact.html" data-i18n="blog.all">All BuildExact articles →</a>
+        </div>
+    </div>
+</section>
+
 <!-- ABOUT MINI -->
 <div class="about-mini">
     <div class="c">
@@ -939,6 +989,19 @@ const T = {
         'rev.r2.text':         '"Finally an app that understands what builders actually need. The cost estimate feature is brilliant for quoting customers."',
         'rev.r3.text':         '"Great app for DIY projects. I renovated my bathroom and had exact amounts for tiles and grout. Saved money on leftovers."',
         'rev.cta':             'Leave a review on Google Play →',
+        'blog.label':          'From our blog',
+        'blog.title':          'Guides for builders<br>and contractors',
+        'blog.p1.cat':         'Quotes',
+        'blog.p1.title':       'How to Write a Construction Quote That Wins Jobs',
+        'blog.p1.desc':        'Structure, pricing psychology and legal must-haves for a quote your clients actually sign.',
+        'blog.p2.cat':         'Materials',
+        'blog.p2.title':       'How Many Tiles Do I Need? The Complete Guide',
+        'blog.p2.desc':        'Calculate exactly how many tiles including cut waste. Avoid ordering too little.',
+        'blog.p3.cat':         'Cost estimates',
+        'blog.p3.title':       'How to Estimate Renovation Costs Accurately',
+        'blog.p3.desc':        'Break down materials, labor and buffer so your estimate matches the actual bill.',
+        'blog.read':           'Read article →',
+        'blog.all':            'All BuildExact articles →',
         'about.title':         'Made by Grounded Studio',
         'about.desc':          'An independent app studio building purposeful Android apps for daily life — with attention to detail and real value.',
         'about.back':          '← All our apps',
@@ -1048,6 +1111,19 @@ const T = {
         'rev.r2.text':         '"Eindelijk een app die begrijpt wat bouwers echt nodig hebben. De kostenraming is briljant voor het offreren van klanten."',
         'rev.r3.text':         '"Prima app voor doe-het-zelf klussen. Ik heb mijn badkamer verbouwd en had exact de juiste aantallen tegels en voegmiddel. Bespaarde geld op restanten."',
         'rev.cta':             'Laat een review achter in Google Play →',
+        'blog.label':          'Uit onze blog',
+        'blog.title':          'Guides voor bouwers<br>en aannemers',
+        'blog.p1.cat':         'Offertes',
+        'blog.p1.title':       'Zo Schrijf Je een Offerte die Klussen Wint',
+        'blog.p1.desc':        'Structuur, prijspsychologie en juridische must-haves voor een offerte die je klanten écht tekenen.',
+        'blog.p2.cat':         'Materialen',
+        'blog.p2.title':       'Hoeveel Tegels Heb Ik Nodig? De Complete Gids',
+        'blog.p2.desc':        'Bereken exact hoeveel tegels inclusief snijverlies. Voorkom dat je te weinig bestelt.',
+        'blog.p3.cat':         'Kostenraming',
+        'blog.p3.title':       'Zo Maak Je een Nauwkeurige Renovatie Kostenraming',
+        'blog.p3.desc':        'Materialen, arbeid en buffer opgesplitst zodat je raming klopt met de eindfactuur.',
+        'blog.read':           'Lees artikel →',
+        'blog.all':            'Alle BuildExact artikelen →',
         'about.title':         'Gemaakt door Grounded Studio',
         'about.desc':          'Een onafhankelijke app studio die doelgerichte Android-apps bouwt voor het dagelijks leven — met aandacht voor detail en echte waarde.',
         'about.back':          '← Al onze apps',
