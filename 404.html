@@ -15,6 +15,9 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
     <style>
+        /* A11y — keyboard focus */
+        *:focus-visible { outline:2px solid #818cf8; outline-offset:2px; border-radius:4px; }
+        a:focus-visible,button:focus-visible { outline:2px solid #818cf8; outline-offset:3px; }
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { background: #06060a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; }
         :root { --gs:#818cf8; --border:rgba(255,255,255,0.07); --muted:#64748b; }

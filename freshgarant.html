@@ -132,6 +132,9 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* A11y — keyboard focus */
+        *:focus-visible { outline:2px solid #818cf8; outline-offset:2px; border-radius:4px; }
+        a:focus-visible,button:focus-visible { outline:2px solid #818cf8; outline-offset:3px; }
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body { background: #15141a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; line-height: 1.6; }
@@ -875,7 +878,7 @@
                 <div class="foot-mark"><img src="assets/logo-gs.png" alt="Grounded Studio" width="32" height="32" loading="lazy" decoding="async"></div>
                 <span class="foot-name">Grounded Studio</span>
             </a>
-            <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap"><a href="about.html" style="color:#64748b;text-decoration:none;font-size:.78rem" data-i18n="nav.about">About</a><a href="privacy.html" style="color:#64748b;text-decoration:none;font-size:.78rem" data-i18n="foot.privacy">Privacy</a><span class="foot-copy" data-i18n="foot.rights">© 2026 — All rights reserved</span></div>
+            <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap"><a href="about.html" style="color:#64748b;text-decoration:none;font-size:.78rem" data-i18n="nav.about">About</a><a href="freshgarant-changelog.html" style="color:#64748b;text-decoration:none;font-size:.78rem" data-i18n="nav.changelog">Changelog</a><a href="privacy.html" style="color:#64748b;text-decoration:none;font-size:.78rem" data-i18n="foot.privacy">Privacy</a><span class="foot-copy" data-i18n="foot.rights">© 2026 — All rights reserved</span></div>
         </div>
     </div>
 </footer>
@@ -927,6 +930,7 @@ const T = {
         'nav.fg_blog':     'FreshGarant Blog',
         'nav.bx_blog':     'BuildExact Blog',
         'nav.about':      'About',
+        'nav.changelog':  'Changelog',
         'foot.privacy':   'Privacy',
         'nav.studio':      'Studio',
         'nav.download':    'Download',
@@ -1068,6 +1072,7 @@ const T = {
         'nav.fg_blog':     'FreshGarant Blog',
         'nav.bx_blog':     'BuildExact Blog',
         'nav.about':      'Over ons',
+        'nav.changelog':  'Wijzigingen',
         'foot.privacy':   'Privacy',
         'nav.studio':      'Studio',
         'nav.download':    'Download',
