@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+    <title>BuildExact Blog</title>
+    <link>https://grounded-studio.app/blog/buildexact.html</link>
+    <atom:link href="https://grounded-studio.app/feed-buildexact.xml" rel="self" type="application/rss+xml"/>
+    <description>Practical articles on material calculations, construction quotes, client management and PDF signatures. Helpful guides for builders, contractors and DIY users.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 18 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <image>
+        <url>https://grounded-studio.app/assets/screen-bx.png</url>
+        <title>BuildExact Blog</title>
+        <link>https://grounded-studio.app/blog/buildexact.html</link>
+    </image>
+
+    <item>
+        <title>Digital Signatures on Construction Quotes: Legal, Fast, Professional</title>
+        <link>https://grounded-studio.app/blog/digital-signatures-construction-quotes.html</link>
+        <guid>https://grounded-studio.app/blog/digital-signatures-construction-quotes.html</guid>
+        <description>How digital signatures work on construction quotes, why they're legally binding in NL/EU, and the fastest way to get a client's signature.</description>
+        <pubDate>Wed, 15 Jul 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Contractor tools</category>
+    </item>
+
+    <item>
+        <title>Client Management for Contractors: The Complete Guide</title>
+        <link>https://grounded-studio.app/blog/client-management-for-contractors.html</link>
+        <guid>https://grounded-studio.app/blog/client-management-for-contractors.html</guid>
+        <description>Track contact details, quote status, and revenue per client without spreadsheets. What every contractor should keep organised — and how.</description>
+        <pubDate>Mon, 13 Jul 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Contractor tools</category>
+    </item>
+
+    <item>
+        <title>How to Write a Construction Quote That Wins Jobs</title>
+        <link>https://grounded-studio.app/blog/how-to-write-construction-quote.html</link>
+        <guid>https://grounded-studio.app/blog/how-to-write-construction-quote.html</guid>
+        <description>Structure, pricing psychology and legal must-haves for a quote your clients actually sign.</description>
+        <pubDate>Mon, 06 Jul 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Quotes</category>
+    </item>
+
+    <item>
+        <title>How Much Insulation Do I Need? Room-by-Room Calculation</title>
+        <link>https://grounded-studio.app/blog/how-much-insulation-do-i-need.html</link>
+        <guid>https://grounded-studio.app/blog/how-much-insulation-do-i-need.html</guid>
+        <description>Calculate insulation for walls, floors and roofs with the right R-values. Avoid over-ordering or leaving gaps.</description>
+        <pubDate>Sat, 27 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Materials</category>
+    </item>
+
+    <item>
+        <title>How Much Wallpaper Do I Need? The Complete Guide</title>
+        <link>https://grounded-studio.app/blog/how-much-wallpaper-do-i-need.html</link>
+        <guid>https://grounded-studio.app/blog/how-much-wallpaper-do-i-need.html</guid>
+        <description>Roll counts, pattern repeats and waste allowances explained. Get your wallpaper order right the first time.</description>
+        <pubDate>Wed, 24 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Materials</category>
+    </item>
+
+    <item>
+        <title>Renovation Cost Estimate: A Realistic Framework</title>
+        <link>https://grounded-studio.app/blog/renovation-cost-estimate.html</link>
+        <guid>https://grounded-studio.app/blog/renovation-cost-estimate.html</guid>
+        <description>Break down materials, labor and contingency so your estimate matches the actual bill. With day-rate table.</description>
+        <pubDate>Sun, 21 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Cost estimates</category>
+    </item>
+
+    <item>
+        <title>How Much Laminate Flooring Do I Need? Full Calculation Guide</title>
+        <link>https://grounded-studio.app/blog/how-much-laminate-do-i-need.html</link>
+        <guid>https://grounded-studio.app/blog/how-much-laminate-do-i-need.html</guid>
+        <description>Calculate laminate for any room shape including cut waste, expansion gaps and pattern layout.</description>
+        <pubDate>Fri, 19 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Materials</category>
+    </item>
+
+    <item>
+        <title>How Much Paint Do I Need? Room Calculator Guide</title>
+        <link>https://grounded-studio.app/blog/how-much-paint-do-i-need.html</link>
+        <guid>https://grounded-studio.app/blog/how-much-paint-do-i-need.html</guid>
+        <description>Calculate paint coverage per m² with formulas and a reference table. Never buy too little or waste money on excess.</description>
+        <pubDate>Wed, 17 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Materials</category>
+    </item>
+
+    <item>
+        <title>How Many Tiles Do I Need? The Complete Calculation Guide</title>
+        <link>https://grounded-studio.app/blog/how-to-calculate-tiles.html</link>
+        <guid>https://grounded-studio.app/blog/how-to-calculate-tiles.html</guid>
+        <description>Calculate exactly how many tiles you need, including cut waste. Avoid ordering too little or wasting money on excess.</description>
+        <pubDate>Sun, 14 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Materials</category>
+    </item>
+
+</channel>
+</rss>

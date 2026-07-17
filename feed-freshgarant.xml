@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+    <title>FreshGarant Blog</title>
+    <link>https://grounded-studio.app/blog/freshgarant.html</link>
+    <atom:link href="https://grounded-studio.app/feed-freshgarant.xml" rel="self" type="application/rss+xml"/>
+    <description>Practical articles on reducing food waste, understanding expiry dates, storing food smarter, and using AI to cook better. Blog by FreshGarant from Grounded Studio.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 18 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <image>
+        <url>https://grounded-studio.app/assets/screen-vg.png</url>
+        <title>FreshGarant Blog</title>
+        <link>https://grounded-studio.app/blog/freshgarant.html</link>
+    </image>
+
+    <item>
+        <title>Hands-Free Cook Mode: A Recipe Reader That Actually Works in the Kitchen</title>
+        <link>https://grounded-studio.app/blog/hands-free-cook-mode-recipe-reader.html</link>
+        <guid>https://grounded-studio.app/blog/hands-free-cook-mode-recipe-reader.html</guid>
+        <description>Big text, screen stays on, timers per step. How Cook Mode turns your phone into a kitchen-friendly recipe assistant without dirty fingers on the screen.</description>
+        <pubDate>Wed, 15 Jul 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Cooking</category>
+    </item>
+
+    <item>
+        <title>AI Photo Fridge: Snap and Add Every Product in Seconds</title>
+        <link>https://grounded-studio.app/blog/ai-photo-fridge-scanner.html</link>
+        <guid>https://grounded-studio.app/blog/ai-photo-fridge-scanner.html</guid>
+        <description>Point your camera at the fridge and Gemini Vision recognises every product with suggested category, storage location and expiry date. How it works and when to use it.</description>
+        <pubDate>Mon, 13 Jul 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>AI features</category>
+    </item>
+
+    <item>
+        <title>AI Recipes from Fridge Leftovers: Waste Less, Cook Smarter</title>
+        <link>https://grounded-studio.app/blog/ai-recipes-from-leftovers.html</link>
+        <guid>https://grounded-studio.app/blog/ai-recipes-from-leftovers.html</guid>
+        <description>Let Gemini AI design a recipe around the ingredients in your fridge — prioritizing what expires soonest. Save time, save money, save food.</description>
+        <pubDate>Mon, 06 Jul 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>AI features</category>
+    </item>
+
+    <item>
+        <title>15 Foods You Can Freeze (And How Long They Actually Last)</title>
+        <link>https://grounded-studio.app/blog/foods-you-can-freeze.html</link>
+        <guid>https://grounded-studio.app/blog/foods-you-can-freeze.html</guid>
+        <description>Bread, cheese, eggs, herbs — most people don't know how many foods can go in the freezer. The complete guide with prep tips and storage times.</description>
+        <pubDate>Sat, 27 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Storage tips</category>
+    </item>
+
+    <item>
+        <title>Smarter Grocery Shopping That Cuts Waste and Saves Money</title>
+        <link>https://grounded-studio.app/blog/smarter-grocery-shopping.html</link>
+        <guid>https://grounded-studio.app/blog/smarter-grocery-shopping.html</guid>
+        <description>The 5-step routine that stops you from buying food you already have — and forgetting what's in the back of the fridge.</description>
+        <pubDate>Wed, 24 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Shopping</category>
+    </item>
+
+    <item>
+        <title>How to Organise Your Fridge for Freshness (Zone by Zone)</title>
+        <link>https://grounded-studio.app/blog/how-to-organise-your-fridge.html</link>
+        <guid>https://grounded-studio.app/blog/how-to-organise-your-fridge.html</guid>
+        <description>Different shelves have different temperatures. Learn which zone is for what — and why your milk keeps going off before its date.</description>
+        <pubDate>Sun, 21 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Storage tips</category>
+    </item>
+
+    <item>
+        <title>Best Before vs Use By: What's the Difference and When to Actually Throw Things Out</title>
+        <link>https://grounded-studio.app/blog/best-before-vs-use-by.html</link>
+        <guid>https://grounded-studio.app/blog/best-before-vs-use-by.html</guid>
+        <description>Most people throw away food that's still perfectly fine. Learn the real difference between best before and use by dates.</description>
+        <pubDate>Sun, 14 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Food safety</category>
+    </item>
+
+    <item>
+        <title>How to Reduce Food Waste at Home: 7 Tips That Actually Work</title>
+        <link>https://grounded-studio.app/blog/reduce-food-waste.html</link>
+        <guid>https://grounded-studio.app/blog/reduce-food-waste.html</guid>
+        <description>The average household throws away €150 of food per year. These 7 habits will dramatically cut waste — and save you money.</description>
+        <pubDate>Sat, 07 Jun 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Food waste</category>
+    </item>
+
+</channel>
+</rss>

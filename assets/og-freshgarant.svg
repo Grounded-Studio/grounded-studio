@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15141a"/>
+      <stop offset="100%" stop-color="#0d1a12"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="25%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="85%" cy="80%" r="35%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#bbf7d0"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <g transform="translate(80, 80)">
+    <rect width="72" height="72" rx="18" fill="#22c55e"/>
+    <text x="36" y="50" font-family="'Space Grotesk','Arial Black',Arial,sans-serif" font-size="36" font-weight="800" text-anchor="middle" fill="#06060a">🌿</text>
+  </g>
+  <text x="170" y="128" font-family="'Space Grotesk','Arial Black',Arial,sans-serif" font-size="28" font-weight="700" fill="#22c55e">FreshGarant</text>
+  <text x="80" y="290" font-family="'Space Grotesk','Arial Black',Arial,sans-serif" font-size="82" font-weight="800" fill="url(#title)" letter-spacing="-2.5">AI-powered food</text>
+  <text x="80" y="380" font-family="'Space Grotesk','Arial Black',Arial,sans-serif" font-size="82" font-weight="800" fill="url(#title)" letter-spacing="-2.5">expiry tracker.</text>
+  <text x="80" y="460" font-family="'Inter',system-ui,sans-serif" font-size="24" font-weight="500" fill="#94a3b8">Snap your fridge · AI recipes · Cook Mode · Family sharing</text>
+  <g transform="translate(80, 545)">
+    <rect width="220" height="42" rx="10" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="20" y="27" font-family="'Inter',system-ui,sans-serif" font-size="14" font-weight="700" fill="#22c55e">▶</text>
+    <text x="40" y="27" font-family="'Inter',system-ui,sans-serif" font-size="15" font-weight="700" fill="#22c55e">Free on Google Play</text>
+  </g>
+  <text x="1120" y="596" font-family="'Inter',system-ui,sans-serif" font-size="16" font-weight="500" text-anchor="end" fill="#475569">grounded-studio.app · Grounded Studio</text>
+</svg>
