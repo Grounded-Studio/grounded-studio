@@ -19,6 +19,12 @@
         <changefreq>monthly</changefreq>
     </url>
     <url>
+        <loc>https://grounded-studio.app/about.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
         <loc>https://grounded-studio.app/privacy.html</loc>
         <lastmod>2026-06-27</lastmod>
         <priority>0.5</priority>

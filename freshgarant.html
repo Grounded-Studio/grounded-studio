@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="REPLACE_WITH_SEARCH_CONSOLE_CODE">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
@@ -825,7 +826,7 @@
                 <div class="foot-mark"><img src="assets/logo-gs.png" alt="Grounded Studio" width="32" height="32" loading="lazy" decoding="async"></div>
                 <span class="foot-name">Grounded Studio</span>
             </a>
-            <span class="foot-copy" data-i18n="foot.rights">© 2026 — All rights reserved</span>
+            <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap"><a href="about.html" style="color:#64748b;text-decoration:none;font-size:.78rem" data-i18n="nav.about">About</a><a href="privacy.html" style="color:#64748b;text-decoration:none;font-size:.78rem" data-i18n="foot.privacy">Privacy</a><span class="foot-copy" data-i18n="foot.rights">© 2026 — All rights reserved</span></div>
         </div>
     </div>
 </footer>
@@ -876,6 +877,8 @@ const T = {
         'nav.blog':        'Blog',
         'nav.fg_blog':     'FreshGarant Blog',
         'nav.bx_blog':     'BuildExact Blog',
+        'nav.about':      'About',
+        'foot.privacy':   'Privacy',
         'nav.studio':      'Studio',
         'nav.download':    'Download',
         'nav.download_play': 'Download on Google Play',
@@ -1002,6 +1005,8 @@ const T = {
         'nav.blog':        'Blog',
         'nav.fg_blog':     'FreshGarant Blog',
         'nav.bx_blog':     'BuildExact Blog',
+        'nav.about':      'Over ons',
+        'foot.privacy':   'Privacy',
         'nav.studio':      'Studio',
         'nav.download':    'Download',
         'nav.download_play': 'Download op Google Play',
@@ -1173,5 +1178,6 @@ document.addEventListener('click', e => {
 });
 </script>
 <script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_CLOUDFLARE_TOKEN"}'></script>
 </body>
 </html>
