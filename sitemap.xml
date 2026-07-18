@@ -186,4 +186,22 @@
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/meal-planning-for-the-week.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/bathroom-renovation-cost.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/contractor-hourly-rates-netherlands.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
