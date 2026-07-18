@@ -103,6 +103,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         /* A11y — keyboard focus */
+                /* View Transitions — smooth page navigation */
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root),::view-transition-new(root) { animation-duration: 260ms; animation-timing-function: cubic-bezier(.16,1,.3,1); }
+        @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
         *:focus-visible { outline:2px solid #818cf8; outline-offset:2px; border-radius:4px; }
         a:focus-visible,button:focus-visible { outline:2px solid #818cf8; outline-offset:3px; }
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -191,6 +195,13 @@
         .play-svg { width:26px; height:26px; }
         .btn-text small { display:block; font-size:.65rem; opacity:.6; }
         .btn-text span { display:block; font-size:.95rem; font-weight:700; }
+
+        /* TRUST STRIP */
+        .trust-strip { padding:24px 0 0; }
+        .trust-inner { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; max-width:900px; margin:0 auto; padding:0 28px; }
+        .trust-badge { display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:100px; background:rgba(255,255,255,.03); border:1px solid var(--border); color:#94a3b8; font-size:.78rem; font-weight:600; transition:all .2s; }
+        .trust-badge:hover { background:rgba(37,99,235,.06); border-color:rgba(37,99,235,.25); color:#cbd5e1; transform:translateY(-1px); }
+        .trust-badge .ico { font-size:.9rem; }
 
         /* SCREENSHOT */
         .screen-section { padding:80px 0 120px; position:relative; }
@@ -299,9 +310,17 @@
 
         /* REVIEWS */
         .reviews-section { padding:100px 0; border-top:1px solid var(--border); }
-        .reviews-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:40px; }
-        @media(max-width:700px){.reviews-grid{grid-template-columns:1fr;}}
-        .review-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:18px; padding:24px; }
+        .reviews-carousel { position:relative; margin-top:40px; max-width:640px; margin-left:auto; margin-right:auto; }
+        .reviews-track { position:relative; min-height:220px; }
+        .review-card { position:absolute; inset:0; background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:20px; padding:36px 40px; opacity:0; transform:translateX(20px); transition:opacity .5s ease, transform .5s ease; pointer-events:none; }
+        .review-card.active { opacity:1; transform:translateX(0); pointer-events:auto; }
+        .review-card .stars { color:#f59e0b; font-size:1.05rem; margin-bottom:16px; letter-spacing:2px; }
+        .review-card .quote { font-size:1.05rem; line-height:1.75; color:#e2e8f0; margin-bottom:20px; font-style:italic; }
+        .review-card .author { font-size:.82rem; color:var(--muted); }
+        .review-dots { display:flex; justify-content:center; gap:10px; margin-top:24px; }
+        .review-dot { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.15); border:none; cursor:pointer; padding:0; transition:all .3s; }
+        .review-dot.active { background:var(--bx); width:28px; border-radius:5px; }
+        @media(max-width:600px){ .review-card { padding:28px 24px; } .review-card .quote { font-size:.98rem; } }
         .reviews-cta { margin-top:36px; }
         .reviews-cta a { display:inline-flex; align-items:center; gap:8px; color:var(--bx); text-decoration:none; font-weight:600; font-size:.9rem; padding:10px 22px; border-radius:10px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); transition:all .2s; }
         .reviews-cta a:hover { background:rgba(37,99,235,.16); transform:translateY(-2px); }
@@ -427,6 +446,16 @@
         </div>
     </div>
 </section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+    <div class="trust-inner">
+        <div class="trust-badge"><span class="ico">🔒</span><span data-i18n="trust.cookies">No tracking cookies</span></div>
+        <div class="trust-badge"><span class="ico">🚫</span><span data-i18n="trust.ads">No ads</span></div>
+        <div class="trust-badge"><span class="ico">⚡</span><span data-i18n="trust.offline">Offline-first</span></div>
+        <div class="trust-badge"><span class="ico">🇳🇱</span><span data-i18n="trust.nl">Made in the Netherlands</span></div>
+    </div>
+</div>
 
 <!-- SCREENSHOT -->
 <div class="screen-section">
@@ -747,28 +776,25 @@
             <div class="section-label"><span>●</span> <span data-i18n="rev.label">Reviews</span></div>
             <h2 class="section-title" style="margin-top:16px;margin-bottom:0" data-i18n="rev.title">What users say</h2>
         </div>
-        <div class="reviews-grid">
-            <div class="review-card a-fade">
-                <div style="display:flex;gap:3px;margin-bottom:14px">
-                    <span style="color:#f59e0b;font-size:1rem">★★★★★</span>
+        <div class="reviews-carousel a-fade" id="reviewsCarousel">
+            <div class="reviews-track">
+                <div class="review-card active">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote" data-i18n="rev.r1.text">"I use this on every job. No more calculating on paper or guessing amounts. The tile calculator alone saves me so much time."</p>
+                    <div class="author">— Pieter D. · Google Play</div>
                 </div>
-                <p style="font-size:.95rem;line-height:1.75;color:#cbd5e1;margin-bottom:16px" data-i18n="rev.r1.text">"I use this on every job. No more calculating on paper or guessing amounts. The tile calculator alone saves me so much time."</p>
-                <div style="font-size:.8rem;color:var(--muted)">— Pieter D. &nbsp;·&nbsp; Google Play</div>
-            </div>
-            <div class="review-card a-fade" style="transition-delay:.05s">
-                <div style="display:flex;gap:3px;margin-bottom:14px">
-                    <span style="color:#f59e0b;font-size:1rem">★★★★★</span>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote" data-i18n="rev.r2.text">"Finally an app that understands what builders actually need. The cost estimate feature is brilliant for quoting customers."</p>
+                    <div class="author">— Thomas B. · Google Play</div>
                 </div>
-                <p style="font-size:.95rem;line-height:1.75;color:#cbd5e1;margin-bottom:16px" data-i18n="rev.r2.text">"Finally an app that understands what builders actually need. The cost estimate feature is brilliant for quoting customers."</p>
-                <div style="font-size:.8rem;color:var(--muted)">— Thomas B. &nbsp;·&nbsp; Google Play</div>
-            </div>
-            <div class="review-card a-fade" style="transition-delay:.1s">
-                <div style="display:flex;gap:3px;margin-bottom:14px">
-                    <span style="color:#f59e0b;font-size:1rem">★★★★☆</span>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="quote" data-i18n="rev.r3.text">"Great app for DIY projects. I renovated my bathroom and had exact amounts for tiles and grout. Saved money on leftovers."</p>
+                    <div class="author">— Nina R. · Google Play</div>
                 </div>
-                <p style="font-size:.95rem;line-height:1.75;color:#cbd5e1;margin-bottom:16px" data-i18n="rev.r3.text">"Great app for DIY projects. I renovated my bathroom and had exact amounts for tiles and grout. Saved money on leftovers."</p>
-                <div style="font-size:.8rem;color:var(--muted)">— Nina R. &nbsp;·&nbsp; Google Play</div>
             </div>
+            <div class="review-dots" id="reviewDots"></div>
         </div>
         <div class="reviews-cta a-fade" style="transition-delay:.15s">
             <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" data-i18n="rev.cta">Leave a review on Google Play →</a>
@@ -877,6 +903,23 @@ document.querySelectorAll('.a-fade,.a-scale').forEach(el => obs.observe(el));
     updateUI();
 })();
 
+(function(){
+    const wrap=document.getElementById('reviewsCarousel'), dotsWrap=document.getElementById('reviewDots');
+    if(!wrap) return;
+    const cards=wrap.querySelectorAll('.review-card');
+    let idx=0, timer=null;
+    cards.forEach((_,i)=>{ const d=document.createElement('button'); d.className='review-dot'+(i===0?' active':''); d.setAttribute('aria-label','Review '+(i+1)); d.addEventListener('click',()=>{go(i); reset();}); dotsWrap.appendChild(d); });
+    const dots=dotsWrap.querySelectorAll('.review-dot');
+    function go(i){ idx=i; cards.forEach((c,j)=>c.classList.toggle('active',j===idx)); dots.forEach((d,j)=>d.classList.toggle('active',j===idx)); }
+    function next(){ go((idx+1)%cards.length); }
+    function start(){ timer=setInterval(next,5500); }
+    function stop(){ clearInterval(timer); }
+    function reset(){ stop(); start(); }
+    start();
+    wrap.addEventListener('mouseenter',stop);
+    wrap.addEventListener('mouseleave',start);
+})();
+
 if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     const tilt = document.querySelector('.tilt-wrap');
     const section = document.querySelector('.screen-section');
@@ -907,6 +950,10 @@ const T = {
         'nav.studio':      'Studio',
         'nav.download':    'Download',
         'nav.dlplay':      'Download on Google Play',
+        'trust.cookies':   'No tracking cookies',
+        'trust.ads':       'No ads',
+        'trust.offline':   'Offline-first',
+        'trust.nl':        'Made in the Netherlands',
         'hero.badge':      'by Grounded Studio',
         'hero.h1':         'Build with<br>precision',
         'hero.sub':        'BuildExact is the complete toolkit for builders and contractors. Calculate materials, manage clients, generate branded quote PDFs, and share styled result cards — all on your phone.',
@@ -1030,6 +1077,10 @@ const T = {
         'nav.studio':      'Studio',
         'nav.download':    'Download',
         'nav.dlplay':      'Download in Google Play',
+        'trust.cookies':   'Geen tracking cookies',
+        'trust.ads':       'Geen advertenties',
+        'trust.offline':   'Werkt offline',
+        'trust.nl':        'Gemaakt in Nederland',
         'hero.badge':      'door Grounded Studio',
         'hero.h1':         'Bouw met<br>precisie',
         'hero.sub':        'BuildExact is de complete toolkit voor bouwers en aannemers. Bereken materialen, beheer klanten, maak offerte-PDF\'s met je eigen huisstijl en deel resultaten als stijlvolle kaarten — allemaal vanaf je telefoon.',
