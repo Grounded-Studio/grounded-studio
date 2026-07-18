@@ -60,7 +60,11 @@
         .nav-dropdown.open .nav-dropdown-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
         .nav-dropdown-menu a { padding:10px 14px; border-radius:8px; color:#94a3b8; text-decoration:none; font-size:.85rem; font-weight:500; white-space:nowrap; transition:background .15s, color .15s; display:flex; align-items:center; gap:10px; }
         .nav-dropdown-menu a:hover,.nav-dropdown-menu a.active { color:var(--bx); background:rgba(37,99,235,.08); }
-        @media (max-width:600px) { .nav-links { display:none; } }
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; margin-left:16px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+        @media (max-width:600px) { .nav-links,.lang-toggle { display:none; } }
         .hamburger { display:none; flex-direction:column; justify-content:center; align-items:center; width:40px; height:40px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:9px; cursor:pointer; gap:5px; flex-shrink:0; }
         .hamburger span { display:block; width:18px; height:2px; background:#94a3b8; border-radius:2px; transition:transform .3s,opacity .3s; }
         .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); background:#fff; }
@@ -135,6 +139,10 @@
                 </li>
                 <li><a href="../index.html#studio">Studio</a></li>
             </ul>
+            <div class="lang-toggle">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn"        data-lang="nl">NL</button>
+            </div>
             <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
         </div>
     </div>
@@ -348,6 +356,10 @@ hb.addEventListener('click',()=>{hb.classList.toggle('open');mm.classList.toggle
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hb.classList.remove('open');mm.classList.remove('open');}));
 document.querySelectorAll('.nav-dropdown-toggle').forEach(t=>{t.addEventListener('click',e=>{e.preventDefault();const dd=t.closest('.nav-dropdown');const o=dd.classList.toggle('open');t.setAttribute('aria-expanded',o);});});
 document.addEventListener('click',e=>{if(!e.target.closest('.nav-dropdown')){document.querySelectorAll('.nav-dropdown.open').forEach(dd=>{dd.classList.remove('open');dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded','false');});}});
+const savedLang=localStorage.getItem('gs-lang');
+const browserIsNL=(navigator.language||'').toLowerCase().startsWith('nl');
+let lang=savedLang||(browserIsNL?'nl':'en');
+document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.addEventListener('click',()=>{if(b.dataset.lang!==lang){lang=b.dataset.lang;localStorage.setItem('gs-lang',lang);document.querySelectorAll('.lang-btn').forEach(x=>x.classList.toggle('active',x.dataset.lang===lang));}});});
 </script>
 <script src="/assets/cookie-banner.js" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
