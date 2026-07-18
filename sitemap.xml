@@ -168,4 +168,22 @@
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-long-does-food-last-in-the-fridge.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-to-measure-a-room-accurately.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/vat-on-construction-quotes-netherlands.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
