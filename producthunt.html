@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#22c55e">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshGarant on Product Hunt — Welcome, hunters 👋 | Grounded Studio</title>
+    <meta name="description" content="Hey Product Hunt! FreshGarant is an AI-powered food expiry tracker. Snap your fridge, scan receipts, get AI recipes from expiring ingredients. Free on Android.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://grounded-studio.app/producthunt.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grounded-studio.app/producthunt.html">
+    <meta property="og:title" content="FreshGarant on Product Hunt — Welcome, hunters 👋">
+    <meta property="og:description" content="AI-powered food expiry tracker. Snap your fridge, scan receipts, get AI recipes. Free on Android.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/og-freshgarant.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://grounded-studio.app/assets/og-freshgarant.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+        html { scroll-behavior:smooth; }
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root),::view-transition-new(root) { animation-duration: 260ms; animation-timing-function: cubic-bezier(.16,1,.3,1); }
+        @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+        *:focus-visible { outline:2px solid #818cf8; outline-offset:2px; border-radius:4px; }
+        body { background:#15141a; color:#f1f5f9; font-family:'Inter',system-ui,sans-serif; overflow-x:hidden; line-height:1.6; }
+        body::after { content:''; position:fixed; inset:0; z-index:9999; pointer-events:none; opacity:.025; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)'/%3E%3C/svg%3E"); background-size:200px 200px; }
+        :root { --vg:#22c55e; --vg-glow:rgba(34,197,94,0.35); --gs:#818cf8; --border:rgba(255,255,255,0.07); --muted:#64748b; --ph:#DA552F; }
+
+        /* PH BANNER */
+        .ph-banner { background:linear-gradient(90deg,rgba(218,85,47,.15),rgba(218,85,47,.08)); border-bottom:1px solid rgba(218,85,47,.3); padding:12px 20px; text-align:center; font-size:.85rem; font-weight:600; color:#f1f5f9; }
+        .ph-banner strong { color:var(--ph); }
+        .ph-banner .heart { display:inline-block; animation:beat 1.5s ease-in-out infinite; }
+        @keyframes beat { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
+
+        nav { padding:20px 0; }
+        .c { max-width:1000px; margin:0 auto; padding:0 28px; }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:36px; height:36px; border-radius:10px; overflow:hidden; box-shadow:0 0 16px rgba(129,140,248,.3); }
+        .nav-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.85rem; font-weight:500; padding:8px 16px; border-radius:10px; border:1px solid var(--border); transition:all .2s; }
+        .nav-back:hover { color:#fff; background:rgba(255,255,255,.05); }
+
+        /* HERO */
+        .hero { padding:60px 0 60px; text-align:center; position:relative; overflow:hidden; }
+        .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 50% at 50% 20%,rgba(34,197,94,.12),transparent 70%); pointer-events:none; }
+        .hero-icon { width:96px; height:96px; border-radius:24px; overflow:hidden; margin:0 auto 28px; box-shadow:0 20px 50px rgba(34,197,94,.25),0 0 0 1px rgba(255,255,255,.08); position:relative; z-index:1; }
+        .hero-icon img { width:100%; height:100%; object-fit:cover; display:block; }
+        .wave { display:inline-block; animation:wave 2.5s ease-in-out infinite; transform-origin:70% 70%; font-size:1.5rem; margin-right:6px; }
+        @keyframes wave { 0%,100%{transform:rotate(0)} 10%,30%{transform:rotate(14deg)} 20%{transform:rotate(-8deg)} 40%,60%{transform:rotate(0)} }
+        .hero-greet { display:inline-flex; align-items:center; gap:8px; padding:8px 18px; border-radius:100px; background:rgba(218,85,47,.12); border:1px solid rgba(218,85,47,.35); color:var(--ph); font-size:.75rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; margin-bottom:24px; position:relative; z-index:1; }
+        .hero h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(2.4rem,6vw,3.6rem); font-weight:800; letter-spacing:-.035em; line-height:1.05; margin-bottom:20px; padding-bottom:.1em; background:linear-gradient(135deg,#fff 0%,#bbf7d0 50%,var(--vg) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; position:relative; z-index:1; }
+        .hero-sub { font-size:1.1rem; color:#cbd5e1; max-width:600px; margin:0 auto 40px; line-height:1.7; position:relative; z-index:1; }
+        .hero-cta { display:inline-flex; flex-wrap:wrap; gap:14px; justify-content:center; position:relative; z-index:1; }
+        .btn-primary { display:inline-flex; align-items:center; gap:12px; padding:16px 28px; border-radius:14px; background:rgba(34,197,94,.15); border:1px solid rgba(34,197,94,.45); color:#fff; font-weight:700; font-size:.95rem; text-decoration:none; transition:all .3s; }
+        .btn-primary:hover { background:rgba(34,197,94,.25); transform:translateY(-2px); box-shadow:0 12px 32px var(--vg-glow); }
+        .btn-primary small { display:block; font-size:.65rem; opacity:.7; font-weight:500; }
+        .btn-primary span { display:block; font-size:.95rem; font-weight:700; }
+        .btn-primary svg { width:26px; height:26px; }
+        .btn-ghost { display:inline-flex; align-items:center; gap:10px; padding:16px 26px; border-radius:14px; background:rgba(255,255,255,.05); border:1px solid var(--border); color:#94a3b8; font-weight:600; font-size:.9rem; text-decoration:none; transition:all .3s; }
+        .btn-ghost:hover { color:#fff; background:rgba(255,255,255,.09); transform:translateY(-2px); }
+
+        /* VIDEO */
+        .video-section { padding:40px 0 60px; }
+        .video-frame { position:relative; padding-top:56.25%; border-radius:20px; overflow:hidden; background:rgba(255,255,255,.03); border:1px solid var(--border); box-shadow:0 24px 60px rgba(0,0,0,.4); }
+        .video-frame iframe,.video-frame video { position:absolute; inset:0; width:100%; height:100%; border:0; }
+        .video-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(180deg,rgba(34,197,94,.06),rgba(129,140,248,.04)); text-align:center; padding:20px; }
+        .video-placeholder .play-ico { width:72px; height:72px; border-radius:50%; background:rgba(34,197,94,.2); border:1px solid rgba(34,197,94,.4); display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
+        .video-placeholder .play-ico::before { content:''; border-style:solid; border-width:14px 0 14px 22px; border-color:transparent transparent transparent var(--vg); margin-left:6px; }
+        .video-placeholder p { font-size:.9rem; color:var(--muted); }
+
+        /* WHY */
+        .why { padding:60px 0; border-top:1px solid var(--border); }
+        .section-label { display:inline-flex; align-items:center; gap:8px; font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--vg); margin-bottom:16px; }
+        .section-label::before { content:'●'; }
+        .section-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.4rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:16px; }
+        .section-sub { font-size:1rem; color:var(--muted); max-width:560px; line-height:1.7; margin-bottom:44px; }
+        .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+        @media(max-width:760px){.why-grid{grid-template-columns:1fr;}}
+        .why-card { padding:28px; border-radius:18px; background:rgba(255,255,255,.03); border:1px solid var(--border); transition:all .3s; }
+        .why-card:hover { background:rgba(34,197,94,.05); border-color:rgba(34,197,94,.25); transform:translateY(-3px); }
+        .why-card .ico { font-size:1.8rem; margin-bottom:14px; }
+        .why-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:8px; color:#f1f5f9; }
+        .why-card p { font-size:.9rem; color:var(--muted); line-height:1.65; }
+
+        /* MAKER */
+        .maker { padding:60px 0; border-top:1px solid var(--border); }
+        .maker-card { padding:36px; border-radius:20px; background:rgba(255,255,255,.03); border:1px solid var(--border); }
+        .maker-head { display:flex; align-items:center; gap:16px; margin-bottom:20px; }
+        .maker-avatar { width:52px; height:52px; border-radius:50%; background:rgba(129,140,248,.15); border:1px solid rgba(129,140,248,.3); display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; }
+        .maker-name { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:800; color:#f1f5f9; }
+        .maker-role { font-size:.82rem; color:var(--muted); }
+        .maker p { font-size:.98rem; color:#cbd5e1; line-height:1.75; margin-bottom:16px; }
+        .maker p:last-of-type { margin-bottom:0; }
+
+        /* FEEDBACK */
+        .feedback { padding:60px 0 100px; border-top:1px solid var(--border); text-align:center; }
+        .feedback h2 { font-family:'Space Grotesk',sans-serif; font-size:1.6rem; font-weight:800; margin-bottom:12px; }
+        .feedback p { color:var(--muted); max-width:520px; margin:0 auto 28px; line-height:1.7; }
+        .feedback-btns { display:inline-flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+        .fb-btn { display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:12px; text-decoration:none; font-weight:600; font-size:.9rem; transition:all .25s; }
+        .fb-btn.ph { background:rgba(218,85,47,.15); border:1px solid rgba(218,85,47,.4); color:var(--ph); }
+        .fb-btn.ph:hover { background:rgba(218,85,47,.25); transform:translateY(-2px); }
+        .fb-btn.mail { background:rgba(129,140,248,.12); border:1px solid rgba(129,140,248,.35); color:var(--gs); }
+        .fb-btn.mail:hover { background:rgba(129,140,248,.22); transform:translateY(-2px); }
+
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+        .foot-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+    </style>
+</head>
+<body>
+
+<div class="ph-banner">
+    <span class="heart">🧡</span> Welcome from <strong>Product Hunt</strong> — thanks for stopping by
+</div>
+
+<nav>
+    <div class="c">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-mark"><img src="assets/logo-gs.png" alt="Grounded Studio" width="36" height="36"></div>
+                <span class="nav-name">Grounded Studio</span>
+            </a>
+            <a href="freshgarant.html" class="nav-back">Full site →</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="c">
+        <div class="hero-icon"><img src="assets/icon-vg.png" alt="FreshGarant app icon" width="96" height="96"></div>
+        <div class="hero-greet"><span class="wave">👋</span> Hey Product Hunt</div>
+        <h1>Never waste food again.<br>Powered by AI.</h1>
+        <p class="hero-sub">Point your phone at your fridge and Gemini Vision recognises every product with expiry dates. Scan receipts for bulk-add. Get AI recipes from what's expiring. Cook hands-free with Cook Mode.</p>
+        <div class="hero-cta">
+            <a href="https://play.google.com/store/apps/details?id=app.rork.versgarant" target="_blank" rel="noopener" class="btn-primary">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                <div><small>Download on</small><span>Google Play</span></div>
+            </a>
+            <a href="freshgarant.html" class="btn-ghost">See full features →</a>
+        </div>
+    </div>
+</section>
+
+<section class="video-section">
+    <div class="c">
+        <div class="video-frame">
+            <!-- Replace the placeholder below with your video embed. For a self-hosted MP4:
+                 <video src="/assets/freshgarant-demo.mp4" controls poster="/assets/screen-vg.png"></video>
+                 For YouTube:
+                 <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+                <div class="play-ico"></div>
+                <p>60-second demo video coming here</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why">
+    <div class="c">
+        <div class="section-label">Why FreshGarant is different</div>
+        <h2 class="section-title">Built for people who<br>hate typing groceries.</h2>
+        <p class="section-sub">Every food tracking app I tried wanted me to manually type every product. I gave up after 2 weeks. FreshGarant does the boring part for you.</p>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="ico">📸</div>
+                <h3>AI Photo Fridge</h3>
+                <p>Snap your fridge, Gemini Vision recognises every product with categories, storage locations and estimated expiry — in one photo.</p>
+            </div>
+            <div class="why-card">
+                <div class="ico">🧾</div>
+                <h3>Receipt scanner</h3>
+                <p>Snap your grocery receipt after shopping and bulk-add every line. Works with AH, Jumbo, Lidl and most European supermarkets.</p>
+            </div>
+            <div class="why-card">
+                <div class="ico">🍳</div>
+                <h3>AI recipes from what's expiring</h3>
+                <p>Gemini suggests full recipes prioritising ingredients about to expire. Cook Mode reads them out with timers per step.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="maker">
+    <div class="c">
+        <div class="maker-card">
+            <div class="maker-head">
+                <div class="maker-avatar">👋</div>
+                <div>
+                    <div class="maker-name">A note from the maker</div>
+                    <div class="maker-role">Ruud · indie dev at Grounded Studio</div>
+                </div>
+            </div>
+            <p>Hey! FreshGarant started because I kept throwing away half my fridge every month. €150+ per year in food, gone. The existing apps all wanted me to manually type every product I bought — I gave up after 2 weeks.</p>
+            <p>So I built the app I actually wanted: snap the fridge, snap the receipt, done. AI does the boring part. When something is about to expire, AI suggests a recipe using it.</p>
+            <p>The core app is <strong>free forever</strong>. PRO (AI Photo Fridge, AI recipes, Cook Mode, family sharing, cloud backup) is a one-time purchase with a 7-day free trial. No ads, no subscriptions, no dark patterns.</p>
+            <p>I'd love your feedback — what's missing? What would make you switch from whatever you're using now?</p>
+        </div>
+    </div>
+</section>
+
+<section class="feedback">
+    <div class="c">
+        <h2>Comment on Product Hunt · or email me directly</h2>
+        <p>Every message gets a personal reply. If you find a bug, tell me. If you have a feature idea, tell me. If you want iOS, tell me (it's on the list).</p>
+        <div class="feedback-btns">
+            <a href="https://www.producthunt.com/products/freshgarant" target="_blank" rel="noopener" class="fb-btn ph">
+                💬 Comment on Product Hunt
+            </a>
+            <a href="mailto:contact@grounded-studio.app" class="fb-btn mail">
+                ✉ contact@grounded-studio.app
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="index.html" class="foot-logo">
+                <div class="foot-mark"><img src="assets/logo-gs.png" alt="Grounded Studio" width="32" height="32" loading="lazy" decoding="async"></div>
+                <span class="foot-name">Grounded Studio</span>
+            </a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a>
+                <a href="buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="blog/freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
+                <a href="about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a>
+                <a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
+            </div>
+            <span class="foot-copy" style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<script src="/assets/cookie-banner.js" defer></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>
