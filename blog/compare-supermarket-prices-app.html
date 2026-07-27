@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#22c55e">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Compared Supermarket Prices Automatically for 60 Days — Here's What I Found | FreshGarant</title>
+    <meta name="description" content="Scan your groceries after every shop, and FreshGarant tracks the price at each supermarket. After 60 days the data got surprising — and slightly annoying.">
+    <meta name="keywords" content="compare supermarket prices, price comparison app, Albert Heijn vs Jumbo prices, price tracker groceries, barcode price history, FreshGarant PRO">
+    <meta name="author" content="Grounded Studio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
+    <meta property="og:title" content="I Compared Supermarket Prices Automatically for 60 Days — Here's What I Found">
+    <meta property="og:description" content="After 60 days of automatic barcode price tracking across Albert Heijn, Jumbo, Lidl and Aldi — the data got surprising.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
+    <meta name="twitter:title" content="I Compared Supermarket Prices Automatically for 60 Days">
+    <meta name="twitter:description" content="After 60 days of automatic price tracking across supermarkets — surprising findings.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-vg.png">
+    <meta name="twitter:image" content="https://grounded-studio.app/assets/screen-vg.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "I Compared Supermarket Prices Automatically for 60 Days — Here's What I Found",
+        "description": "60 days of automatic barcode price tracking across four Dutch supermarkets — the honest findings.",
+        "author": { "@type": "Organization", "name": "Grounded Studio", "url": "https://grounded-studio.app", "logo": "https://grounded-studio.app/assets/logo-gs.png" },
+        "publisher": { "@type": "Organization", "name": "Grounded Studio", "logo": { "@type": "ImageObject", "url": "https://grounded-studio.app/assets/logo-gs.png" } },
+        "datePublished": "2026-07-27",
+        "dateModified": "2026-07-27",
+        "inLanguage": "en"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/" },
+            { "@type": "ListItem", "position": 2, "name": "FreshGarant", "item": "https://grounded-studio.app/freshgarant.html" },
+            { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://grounded-studio.app/blog/freshgarant.html" },
+            { "@type": "ListItem", "position": 4, "name": "60 Days of Automatic Price Comparison" }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root),::view-transition-new(root) { animation-duration: 260ms; animation-timing-function: cubic-bezier(.16,1,.3,1); }
+        @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+        *:focus-visible { outline:2px solid #818cf8; outline-offset:2px; border-radius:4px; }
+        a:focus-visible,button:focus-visible { outline:2px solid #818cf8; outline-offset:3px; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { background: #15141a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; line-height: 1.6; }
+        :root { --vg:#22c55e; --vg-glow:rgba(34,197,94,0.3); --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(21,20,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; display:flex; align-items:center; gap:6px; }
+        .nav-back:hover { color:var(--vg); }
+
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; align-items:center; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; transition:color .2s; }
+        .breadcrumb a:hover { color:var(--vg); }
+        .article-cat { display:inline-flex; align-items:center; gap:8px; padding:5px 14px; border-radius:100px; border:1px solid rgba(249,115,22,.35); background:rgba(249,115,22,.08); color:#f97316; font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; align-items:center; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-meta span { display:flex; align-items:center; gap:6px; }
+
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; letter-spacing:-.02em; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+
+        .price-table { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:16px; overflow:hidden; margin:24px 0; }
+        .price-table table { width:100%; border-collapse:collapse; font-size:.9rem; }
+        .price-table th { background:rgba(255,255,255,.04); text-align:left; padding:14px 16px; color:#f1f5f9; font-weight:700; font-size:.8rem; letter-spacing:.03em; }
+        .price-table td { padding:12px 16px; border-top:1px solid var(--border); color:#cbd5e1; }
+        .price-table td.win { color:var(--vg); font-weight:700; }
+        .price-table td.lose { color:#ef4444; }
+
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--vg); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+
+        .app-cta { background:rgba(34,197,94,.06); border:1px solid rgba(34,197,94,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta .app-cta-icon { font-size:36px; margin-bottom:12px; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(34,197,94,.15); border:1px solid rgba(34,197,94,.4); color:var(--vg); text-decoration:none; font-weight:700; font-size:.9rem; transition:all .3s; }
+        .app-cta a:hover { background:rgba(34,197,94,.25); transform:translateY(-2px); }
+        .app-cta a svg { width:22px; height:22px; }
+
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media (max-width:700px) { .related-cards { grid-template-columns:1fr; } }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; transition:all .3s; }
+        .related-card:hover { background:rgba(34,197,94,.05); border-color:rgba(34,197,94,.3); }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--vg); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        .foot-copy { font-size:.75rem; color:#334155; }
+        #read-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; border-radius:0 2px 2px 0; transition:width .08s linear; pointer-events:none; background:linear-gradient(90deg,#22c55e,#818cf8); }
+        #sticky-title { position:fixed; top:0; left:0; right:0; z-index:190; background:rgba(6,6,10,.92); backdrop-filter:blur(24px); border-bottom:1px solid var(--border); padding:14px 0; transform:translateY(-100%); transition:transform .3s cubic-bezier(.16,1,.3,1); }
+        #sticky-title.visible { transform:translateY(0); }
+        #sticky-title .st-inner { max-width:1000px; margin:0 auto; padding:0 28px; display:flex; align-items:center; gap:16px; }
+        #sticky-title .st-text { font-family:'Space Grotesk',sans-serif; font-size:.9rem; font-weight:700; color:#f1f5f9; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        #sticky-title .st-back { color:#94a3b8; text-decoration:none; font-size:.8rem; font-weight:600; padding:6px 12px; border-radius:8px; border:1px solid var(--border); background:rgba(255,255,255,.03); white-space:nowrap; flex-shrink:0; transition:all .2s; }
+        #sticky-title .st-back:hover { background:rgba(255,255,255,.08); color:#fff; }
+        #scroll-top { position:fixed; bottom:28px; right:28px; width:44px; height:44px; border-radius:12px; background:rgba(129,140,248,.15); border:1px solid rgba(129,140,248,.35); color:#818cf8; font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center; opacity:0; transform:translateY(8px); transition:opacity .3s,transform .3s; z-index:500; }
+        #scroll-top.visible { opacity:1; transform:translateY(0); }
+        #scroll-top:hover { background:rgba(129,140,248,.28); }
+        .share-section { padding:32px 0 0; }
+        .share-label { font-size:.8rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#475569; margin-bottom:14px; }
+        .share-btns { display:flex; gap:10px; flex-wrap:wrap; }
+        .share-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; font-size:.85rem; font-weight:600; text-decoration:none; cursor:pointer; border:1px solid; transition:all .2s; font-family:inherit; }
+        .share-btn.wa { background:rgba(37,211,102,.1); border-color:rgba(37,211,102,.3); color:#25d366; }
+        .share-btn.wa:hover { background:rgba(37,211,102,.2); }
+        .share-btn.copy { background:rgba(255,255,255,.05); border-color:rgba(255,255,255,.1); color:#94a3b8; }
+        .share-btn.copy:hover { background:rgba(255,255,255,.1); color:#fff; }
+    </style>
+</head>
+<body>
+<div id="read-progress"></div>
+<div id="sticky-title"><div class="st-inner"><span class="st-text">60 Days of Automatic Price Comparison</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="st-back">↑ Top</a></div></div>
+
+<nav>
+    <div class="c-wide">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34" decoding="async"></div>
+                <span class="nav-name">Grounded Studio</span>
+            </a>
+            <a href="freshgarant.html" class="nav-back">← Blog</a>
+        </div>
+    </div>
+</nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> /
+                <a href="../freshgarant.html">FreshGarant</a> /
+                <a href="freshgarant.html">Blog</a> /
+                <span>Compare supermarket prices</span>
+            </div>
+            <div class="article-cat">🔍 Price tracking</div>
+            <h1>I Compared Supermarket Prices Automatically for 60 Days — Here's What I Found</h1>
+            <div class="article-meta">
+                <span>📅 July 27, 2026</span>
+                <span>⏱ 6 min read</span>
+                <span>✍️ Grounded Studio</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+
+            <p>Two months ago, I switched on FreshGarant's new price-tracking feature. The premise is simple: every time you scan a product's barcode after shopping, the app remembers the price and the store. Over time you get a price history per product, per supermarket — and the app quietly flags when a product is unusually cheap or expensive.</p>
+
+            <p>I did it for 60 days across Albert Heijn, Jumbo, Lidl and Aldi. The results were surprising, occasionally frustrating, and useful enough that I now shop differently than I did in May.</p>
+
+            <h2>The setup (roughly 3 seconds per product)</h2>
+            <p>You don't have to do anything special. You scan a barcode like you normally would in FreshGarant, tap "add price" once, type the number from your receipt, and pick the store. That's it. After a few weeks of this, the app has enough data to start showing you patterns.</p>
+
+            <p>My data set after 60 days: <strong>216 unique products</strong>, tracked across <strong>4 supermarkets</strong>, over <strong>11 shopping trips</strong>. Not exhaustive. But enough to see the shape.</p>
+
+            <h2>Finding 1: The "cheap" supermarket wins less often than you think</h2>
+            <p>Everyone assumes Lidl and Aldi win on everything. They don't. Of the 60 products where I had prices from all four stores, here's how the "cheapest" prize was distributed:</p>
+
+            <div class="price-table">
+                <table>
+                    <thead><tr><th>Store</th><th>Cheapest on X products</th><th>% of total</th></tr></thead>
+                    <tbody>
+                        <tr><td>Lidl</td><td class="win">24</td><td>40%</td></tr>
+                        <tr><td>Aldi</td><td>17</td><td>28%</td></tr>
+                        <tr><td>Jumbo</td><td>11</td><td>18%</td></tr>
+                        <tr><td>Albert Heijn</td><td>8</td><td>14%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Yes, discount supermarkets win most often — but Albert Heijn and Jumbo were cheapest on 32% of items when they had promos running. The takeaway isn't "always shop at Lidl." It's <strong>"the cheapest place depends on the product."</strong> Which is exactly why manually comparing across stores never works — the mental overhead is too high.</p>
+
+            <h2>Finding 2: Branded staples are where the price gaps live</h2>
+            <p>The biggest swings weren't on random items — they were on <strong>branded staples</strong> people buy every week. Some real examples from my tracking:</p>
+
+            <div class="price-table">
+                <table>
+                    <thead><tr><th>Product</th><th>Cheapest</th><th>Most expensive</th><th>Gap</th></tr></thead>
+                    <tbody>
+                        <tr><td>Coca-Cola 1.5L</td><td class="win">Lidl €1.79</td><td class="lose">AH €2.35</td><td>+31%</td></tr>
+                        <tr><td>Nutella 400g</td><td class="win">Jumbo €3.29</td><td class="lose">AH €4.19</td><td>+27%</td></tr>
+                        <tr><td>Heinz Tomato Ketchup</td><td class="win">Aldi €2.09</td><td class="lose">AH €2.99</td><td>+43%</td></tr>
+                        <tr><td>Pampers Baby Dry (waist)</td><td class="win">Jumbo €8.99</td><td class="lose">AH €12.49</td><td>+39%</td></tr>
+                        <tr><td>Ben &amp; Jerry's 465ml</td><td class="win">Jumbo €4.99</td><td class="lose">AH €6.79</td><td>+36%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>If you buy these five items every week, that's roughly <strong>€8–€12 per week of avoidable overspend</strong>. Or, put differently, €40–€60/month you could keep by shifting three items to a different supermarket.</p>
+
+            <h2>Finding 3: Store-brand staples are basically identical in price</h2>
+            <p>Interestingly, the home-brand basics — pasta, tinned tomatoes, rice, sugar, plain yoghurt — barely varied across stores. Usually within 5 cents of each other. So if your shop is mostly home-brands, chasing the "cheapest supermarket" isn't going to save you meaningful money. The wins are in <strong>branded items and fresh produce</strong>.</p>
+
+            <h2>Finding 4: "Deal alerts" caught things I would have missed</h2>
+            <p>The app has an automatic deal detector: when a product's current price is at least 15% below its rolling average, it flags it. This turned out to be more useful than I expected. Twice in the 60 days it pinged me about coffee being 30% cheaper than usual — I bought two bags each time and saved roughly €4 per bag. Small, but it stacks.</p>
+
+            <div class="tip-card">
+                <h3>Free tip: track just your top 10 products</h3>
+                <p>You don't need to track every item to benefit. Pick the 10 things you buy most often — usually staples like milk, bread, cheese, coffee, laundry detergent, and a handful of favourite branded items. Track those consistently for a month. That alone will show you where to shop for what, and it's where 80% of the savings live.</p>
+            </div>
+
+            <div class="app-cta">
+                <div class="app-cta-icon">📊</div>
+                <h3>Get price tracking with FreshGarant PRO</h3>
+                <p>Barcode price-tracking is a PRO feature (€2.99/month or €14.99/year). Given a typical user finds €30–€50/month in overspend within the first two months, it more than pays for itself. Or invite a friend and both get 30 days free — no card needed.</p>
+                <a href="https://play.google.com/store/apps/details?id=app.rork.versgarant" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    Try FreshGarant free
+                </a>
+            </div>
+
+            <h2>What I changed after 60 days</h2>
+            <p>I don't shop-hop every day. Nobody has time for that. But three small habits stuck:</p>
+            <ul>
+                <li><strong>Branded staples → Lidl or Jumbo once a month.</strong> I do one bigger monthly trip specifically for the branded items where the gap is biggest. €30–€40 saved reliably per trip.</li>
+                <li><strong>Fresh produce → whichever is closest.</strong> Fruit and veg prices are close enough between stores that convenience beats optimisation.</li>
+                <li><strong>Deal alerts → automatic.</strong> If FreshGarant pings me about coffee being unusually cheap, I stock up. If it doesn't, I don't think about it.</li>
+            </ul>
+
+            <h2>The honest limitations</h2>
+            <p>Price tracking isn't magic. You have to enter prices manually (the app can't read your receipt yet — that's a separate PRO feature). You'll miss data for products you only buy at one store. And the "cheapest" store changes when promotions rotate — so the data goes stale if you stop scanning. All of which is fine, as long as you know that going in.</p>
+
+            <p>The real value isn't in any single price comparison. It's in the <strong>pattern</strong> — knowing which handful of items are worth going out of your way for, and which aren't. That takes weeks of data. And that's exactly what the app is quietly doing while you shop like you already were.</p>
+
+            <div class="share-section">
+                <p class="share-label">Found this useful?</p>
+                <div class="share-btns">
+                    <a class="share-btn wa" id="share-wa" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.847L0 24l6.336-1.501A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.001-1.371l-.361-.214-3.762.891.952-3.657-.235-.375A9.808 9.808 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+                        Share on WhatsApp
+                    </a>
+                    <button class="share-btn copy" id="share-copy">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                        Copy link
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Related articles</h2>
+        <div class="related-cards">
+            <a href="save-400-euros-food-waste.html" class="related-card">
+                <div class="cat">💰 Save money</div>
+                <div class="title">How to Save €400 a Year on Food Waste →</div>
+            </a>
+            <a href="smarter-grocery-shopping.html" class="related-card">
+                <div class="cat">🛒 Shopping</div>
+                <div class="title">Smarter Grocery Shopping →</div>
+            </a>
+            <a href="meal-planning-for-the-week.html" class="related-card">
+                <div class="cat">📋 Planning</div>
+                <div class="title">Weekly Meal Planning →</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo">
+                <div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32" loading="lazy" decoding="async"></div>
+                <span class="foot-name">Grounded Studio</span>
+            </a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="../freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a>
+                <a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
+                <a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
+                <a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
+            </div>
+            <span class="foot-copy" style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<button id="scroll-top" title="Back to top" aria-label="Back to top">↑</button>
+<script>
+var rp=document.getElementById('read-progress'),st=document.getElementById('scroll-top'),stTitle=document.getElementById('sticky-title');
+window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';st.classList.toggle('visible',window.scrollY>400); if(stTitle)stTitle.classList.toggle('visible',window.scrollY>500);},{passive:true});
+st.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+document.getElementById('share-wa').href='https://wa.me/?text='+encodeURIComponent(document.title+' — '+location.href);
+document.getElementById('share-copy').addEventListener('click',function(){navigator.clipboard.writeText(location.href).then(function(){var b=document.getElementById('share-copy');b.textContent='✓ Copied!';setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy link';},2000);});});
+</script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

@@ -6,12 +6,62 @@
     <atom:link href="https://grounded-studio.app/feed-freshgarant.xml" rel="self" type="application/rss+xml"/>
     <description>Practical articles on reducing food waste, understanding expiry dates, storing food smarter, and using AI to cook better. Blog by FreshGarant from Grounded Studio.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 00:00:00 GMT</lastBuildDate>
     <image>
         <url>https://grounded-studio.app/assets/screen-vg.png</url>
         <title>FreshGarant Blog</title>
         <link>https://grounded-studio.app/blog/freshgarant.html</link>
     </image>
+
+    <item>
+        <title>How to Save €400 a Year on Food Waste (Without Changing Your Diet)</title>
+        <link>https://grounded-studio.app/blog/save-400-euros-food-waste.html</link>
+        <guid>https://grounded-studio.app/blog/save-400-euros-food-waste.html</guid>
+        <description>The average Dutch household throws away €400 of food every year. Here's exactly where that money goes — and 6 concrete habits to keep it in your wallet.</description>
+        <pubDate>Mon, 27 Jul 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Save money</category>
+    </item>
+
+    <item>
+        <title>Your Food Waste Wrapped: A Spotify-Style Year in Review for Your Fridge</title>
+        <link>https://grounded-studio.app/blog/year-in-review-food-tracker.html</link>
+        <guid>https://grounded-studio.app/blog/year-in-review-food-tracker.html</guid>
+        <description>At the end of the year, FreshGarant gives you a shareable 7-slide recap: money saved, kilos rescued, CO₂ avoided. Here's how it works and why it matters.</description>
+        <pubDate>Mon, 27 Jul 2026 10:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>New feature</category>
+    </item>
+
+    <item>
+        <title>I Compared Supermarket Prices Automatically for 60 Days — Here's What I Found</title>
+        <link>https://grounded-studio.app/blog/compare-supermarket-prices-app.html</link>
+        <guid>https://grounded-studio.app/blog/compare-supermarket-prices-app.html</guid>
+        <description>60 days of automatic barcode price tracking across Albert Heijn, Jumbo, Lidl and Aldi. The data got surprising — and slightly annoying.</description>
+        <pubDate>Mon, 27 Jul 2026 11:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Price tracking</category>
+    </item>
+
+    <item>
+        <title>Why You Get a Notification Before Your Food Expires (And How to Time It Right)</title>
+        <link>https://grounded-studio.app/blog/expiry-date-notifications-explained.html</link>
+        <guid>https://grounded-studio.app/blog/expiry-date-notifications-explained.html</guid>
+        <description>A single well-timed reminder prevents most food waste. Here's the logic behind FreshGarant's smart expiry notifications — and how to configure yours.</description>
+        <pubDate>Mon, 27 Jul 2026 12:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Notifications</category>
+    </item>
+
+    <item>
+        <title>Invite a Friend, Both Get 1 Month Free PRO — Up to 5 Months on the House</title>
+        <link>https://grounded-studio.app/blog/invite-friends-free-pro-months.html</link>
+        <guid>https://grounded-studio.app/blog/invite-friends-free-pro-months.html</guid>
+        <description>Send a 6-letter code, your friend types it in, both of you unlock 30 days of PRO. No card, no strings. Up to 5 successful invites = 5 free months.</description>
+        <pubDate>Mon, 27 Jul 2026 13:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Referral program</category>
+    </item>
 
     <item>
         <title>Meal Planning for the Week: A Simple Routine That Actually Sticks</title>

@@ -204,4 +204,34 @@
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/save-400-euros-food-waste.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/year-in-review-food-tracker.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/compare-supermarket-prices-app.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/expiry-date-notifications-explained.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/invite-friends-free-pro-months.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
