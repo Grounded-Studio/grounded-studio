@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
@@ -8,36 +8,36 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#22c55e">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Compared Supermarket Prices Automatically for 60 Days — Here's What I Found | FreshGarant</title>
-    <meta name="description" content="Scan your groceries after every shop, and FreshGarant tracks the price at each supermarket. After 60 days the data got surprising — and slightly annoying.">
-    <meta name="keywords" content="compare supermarket prices, price comparison app, Albert Heijn vs Jumbo prices, price tracker groceries, barcode price history, FreshGarant PRO">
+    <title>Waarom je een notificatie krijgt voordat je eten verloopt (en hoe je dit goed instelt) | FreshGarant</title>
+    <meta name="description" content="Eén goed getimede notificatie voorkomt 90% van huishoudelijke voedselverspilling. Hier lees je de logica achter de slimme vervaldatum-meldingen van FreshGarant.">
+    <meta name="keywords" content="vervaldatum notificaties, houdbaarheid meldingen, voedsel notificatie app, slimme meldingen, FreshGarant meldingen, wanneer eten verloopt">
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
-    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
-    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/supermarktprijzen-automatisch-vergelijken.html">
-    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
-    <meta property="og:title" content="I Compared Supermarket Prices Automatically for 60 Days — Here's What I Found">
-    <meta property="og:description" content="After 60 days of automatic barcode price tracking across Albert Heijn, Jumbo, Lidl and Aldi — the data got surprising.">
+    <link rel="canonical" href="https://grounded-studio.app/blog/vervaldatum-notificaties-eten.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/vervaldatum-notificaties-eten.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/expiry-date-notifications-explained.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/blog/expiry-date-notifications-explained.html">
+    <meta property="og:title" content="Waarom je een notificatie krijgt voordat je eten verloopt">
+    <meta property="og:description" content="Een goed getimede reminder voorkomt de meeste voedselverspilling. Hier is de logica.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
+    <meta property="og:url" content="https://grounded-studio.app/blog/vervaldatum-notificaties-eten.html">
+    <meta property="og:locale" content="nl_NL">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://grounded-studio.app/blog/compare-supermarket-prices-app.html">
-    <meta name="twitter:title" content="I Compared Supermarket Prices Automatically for 60 Days">
-    <meta name="twitter:description" content="After 60 days of automatic price tracking across supermarkets — surprising findings.">
+    <meta name="twitter:title" content="Waarom je een notificatie krijgt voordat je eten verloopt">
+    <meta name="twitter:description" content="Hoe je meldingen zo instelt dat je het eten ook echt gebruikt.">
     <meta property="og:image" content="https://grounded-studio.app/assets/screen-vg.png">
     <meta name="twitter:image" content="https://grounded-studio.app/assets/screen-vg.png">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "I Compared Supermarket Prices Automatically for 60 Days — Here's What I Found",
-        "description": "60 days of automatic barcode price tracking across four Dutch supermarkets — the honest findings.",
+        "headline": "Waarom je een notificatie krijgt voordat je eten verloopt (en hoe je dit goed instelt)",
+        "description": "De logica achter FreshGarant's slimme vervaldatum-notificaties en hoe je ze afstelt voor jouw huishouden.",
         "author": { "@type": "Organization", "name": "Grounded Studio", "url": "https://grounded-studio.app", "logo": "https://grounded-studio.app/assets/logo-gs.png" },
         "publisher": { "@type": "Organization", "name": "Grounded Studio", "logo": { "@type": "ImageObject", "url": "https://grounded-studio.app/assets/logo-gs.png" } },
-        "datePublished": "2026-07-27",
-        "dateModified": "2026-07-27",
-        "inLanguage": "en"
+        "datePublished": "2026-07-28",
+        "dateModified": "2026-07-28",
+        "inLanguage": "nl"
     }
     </script>
     <script type="application/ld+json">
@@ -48,7 +48,7 @@
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/" },
             { "@type": "ListItem", "position": 2, "name": "FreshGarant", "item": "https://grounded-studio.app/freshgarant.html" },
             { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://grounded-studio.app/blog/freshgarant.html" },
-            { "@type": "ListItem", "position": 4, "name": "60 Days of Automatic Price Comparison" }
+            { "@type": "ListItem", "position": 4, "name": "Vervaldatum notificaties" }
         ]
     }
     </script>
@@ -68,7 +68,6 @@
         :root { --vg:#22c55e; --vg-glow:rgba(34,197,94,0.3); --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
         .c { max-width:760px; margin:0 auto; padding:0 28px; }
         .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
-
         nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(21,20,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
         .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
         .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
@@ -77,16 +76,14 @@
         .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
         .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; display:flex; align-items:center; gap:6px; }
         .nav-back:hover { color:var(--vg); }
-
         .article-header { padding:140px 0 60px; }
         .breadcrumb { display:flex; align-items:center; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
         .breadcrumb a { color:#475569; text-decoration:none; transition:color .2s; }
         .breadcrumb a:hover { color:var(--vg); }
-        .article-cat { display:inline-flex; align-items:center; gap:8px; padding:5px 14px; border-radius:100px; border:1px solid rgba(249,115,22,.35); background:rgba(249,115,22,.08); color:#f97316; font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-cat { display:inline-flex; align-items:center; gap:8px; padding:5px 14px; border-radius:100px; border:1px solid rgba(34,197,94,.3); background:rgba(34,197,94,.08); color:var(--vg); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
         .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
         .article-meta { display:flex; align-items:center; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
         .article-meta span { display:flex; align-items:center; gap:6px; }
-
         .article-body { padding:48px 0 80px; }
         .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
         .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; letter-spacing:-.02em; margin:48px 0 16px; color:#fff; }
@@ -94,18 +91,14 @@
         .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
         .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
         .article-body strong { color:#fff; font-weight:700; }
-
-        .price-table { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:16px; overflow:hidden; margin:24px 0; }
-        .price-table table { width:100%; border-collapse:collapse; font-size:.9rem; }
-        .price-table th { background:rgba(255,255,255,.04); text-align:left; padding:14px 16px; color:#f1f5f9; font-weight:700; font-size:.8rem; letter-spacing:.03em; }
-        .price-table td { padding:12px 16px; border-top:1px solid var(--border); color:#cbd5e1; }
-        .price-table td.win { color:var(--vg); font-weight:700; }
-        .price-table td.lose { color:#ef4444; }
-
         .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--vg); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
         .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:800; margin-bottom:10px; color:#fff; }
         .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
-
+        .rec-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:24px 0; }
+        @media (max-width:600px) { .rec-grid { grid-template-columns:1fr; } }
+        .rec { background:rgba(34,197,94,.05); border:1px solid rgba(34,197,94,.2); border-radius:14px; padding:18px 20px; }
+        .rec .title { font-family:'Space Grotesk',sans-serif; font-weight:800; color:var(--vg); font-size:1rem; margin-bottom:6px; }
+        .rec .desc { font-size:.85rem; color:var(--muted); line-height:1.6; }
         .app-cta { background:rgba(34,197,94,.06); border:1px solid rgba(34,197,94,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
         .app-cta .app-cta-icon { font-size:36px; margin-bottom:12px; }
         .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
@@ -113,7 +106,6 @@
         .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(34,197,94,.15); border:1px solid rgba(34,197,94,.4); color:var(--vg); text-decoration:none; font-weight:700; font-size:.9rem; transition:all .3s; }
         .app-cta a:hover { background:rgba(34,197,94,.25); transform:translateY(-2px); }
         .app-cta a svg { width:22px; height:22px; }
-
         .related { padding:60px 0; border-top:1px solid var(--border); }
         .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
         .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
@@ -122,7 +114,6 @@
         .related-card:hover { background:rgba(34,197,94,.05); border-color:rgba(34,197,94,.3); }
         .related-card .cat { font-size:.68rem; font-weight:700; color:var(--vg); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
         .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
-
         footer { border-top:1px solid var(--border); padding:36px 0; }
         .foot-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
         .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
@@ -152,7 +143,7 @@
 </head>
 <body>
 <div id="read-progress"></div>
-<div id="sticky-title"><div class="st-inner"><span class="st-text">60 Days of Automatic Price Comparison</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="st-back">↑ Top</a></div></div>
+<div id="sticky-title"><div class="st-inner"><span class="st-text">Waarom je notificaties krijgt voordat je eten verloopt</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="st-back">↑ Top</a></div></div>
 
 <nav>
     <div class="c-wide">
@@ -173,13 +164,13 @@
                 <a href="../index.html">Home</a> /
                 <a href="../freshgarant.html">FreshGarant</a> /
                 <a href="freshgarant.html">Blog</a> /
-                <span>Compare supermarket prices</span>
+                <span>Vervaldatum notificaties</span>
             </div>
-            <div class="article-cat">🔍 Price tracking</div>
-            <h1>I Compared Supermarket Prices Automatically for 60 Days — Here's What I Found</h1>
+            <div class="article-cat">🔔 Meldingen</div>
+            <h1>Waarom je een notificatie krijgt voordat je eten verloopt (en hoe je dit goed instelt)</h1>
             <div class="article-meta">
-                <span>📅 July 27, 2026</span>
-                <span>⏱ 6 min read</span>
+                <span>📅 28 juli 2026</span>
+                <span>⏱ 5 min leestijd</span>
                 <span>✍️ Grounded Studio</span>
             </div>
         </div>
@@ -188,94 +179,98 @@
     <div class="article-body">
         <div class="c">
 
-            <p>Two months ago, I switched on FreshGarant's new price-tracking feature. The premise is simple: every time you scan a product's barcode after shopping, the app remembers the price and the store. Over time you get a price history per product, per supermarket — and the app quietly flags when a product is unusually cheap or expensive.</p>
+            <p>Bijna elk voedselverspilling-verhaal eindigt hetzelfde: "Ik was vergeten dat het er lag." De yoghurt achterop de plank. Het halfgeopende pakje chorizo. De zak spinazie achter de ketchup. Niemand gooit eten met opzet weg — het verloopt gewoon stilletjes terwijl je aandacht ergens anders is.</p>
 
-            <p>I did it for 60 days across Albert Heijn, Jumbo, Lidl and Aldi. The results were surprising, occasionally frustrating, and useful enough that I now shop differently than I did in May.</p>
+            <p>Notificaties lossen precies dit op, maar alleen als ze goed getimed zijn. Te vroeg en je negeert ze; te laat en het eten is al bedorven. Hieronder lees je hoe FreshGarant dit aanpakt — en hoe je de timing aanpast aan hoe jouw huishouden echt eet.</p>
 
-            <h2>The setup (roughly 3 seconds per product)</h2>
-            <p>You don't have to do anything special. You scan a barcode like you normally would in FreshGarant, tap "add price" once, type the number from your receipt, and pick the store. That's it. After a few weeks of this, the app has enough data to start showing you patterns.</p>
+            <h2>Waarom "één dag van tevoren" niet genoeg is</h2>
+            <p>De reflex is om vervaldatum-notificaties op één dag van tevoren te zetten. Klinkt logisch: "waarschuw me de dag ervoor". In de praktijk is dit de slechtst mogelijke instelling. Je krijgt de notificatie om 12 uur 's middags op donderdag, de yoghurt vervalt vrijdag, en donderdagavond heb je al iets gepland. Er is geen tijd om het eten <em>echt te gebruiken</em>.</p>
 
-            <p>My data set after 60 days: <strong>216 unique products</strong>, tracked across <strong>4 supermarkets</strong>, over <strong>11 shopping trips</strong>. Not exhaustive. But enough to see the shape.</p>
+            <p>Echt gebruik heeft plannings-ruimte nodig. Daarom staat FreshGarant's default op <strong>3 dagen voor verloop</strong> — genoeg tijd om het item in te passen in dat avondeten, morgen's lunch of vrijdagse restjes-avond. Niet zo ver vooruit dat het irrelevant voelt.</p>
 
-            <h2>Finding 1: The "cheap" supermarket wins less often than you think</h2>
-            <p>Everyone assumes Lidl and Aldi win on everything. They don't. Of the 60 products where I had prices from all four stores, here's how the "cheapest" prize was distributed:</p>
+            <h2>De aanbevolen standaardinstellingen</h2>
 
-            <div class="price-table">
-                <table>
-                    <thead><tr><th>Store</th><th>Cheapest on X products</th><th>% of total</th></tr></thead>
-                    <tbody>
-                        <tr><td>Lidl</td><td class="win">24</td><td>40%</td></tr>
-                        <tr><td>Aldi</td><td>17</td><td>28%</td></tr>
-                        <tr><td>Jumbo</td><td>11</td><td>18%</td></tr>
-                        <tr><td>Albert Heijn</td><td>8</td><td>14%</td></tr>
-                    </tbody>
-                </table>
+            <div class="rec-grid">
+                <div class="rec">
+                    <div class="title">Verse producten & zuivel</div>
+                    <div class="desc">3 dagen vooruit — genoeg tijd om een maaltijd eromheen te plannen, of om in te vriezen als je het niet redt.</div>
+                </div>
+                <div class="rec">
+                    <div class="title">Vlees & vis</div>
+                    <div class="desc">2 dagen vooruit — kortere runway, maar cruciaal om te vangen voor het bederft.</div>
+                </div>
+                <div class="rec">
+                    <div class="title">Brood & bakkerswaar</div>
+                    <div class="desc">2 dagen vooruit — genoeg tijd om plakken in te vriezen die je niet opmaakt.</div>
+                </div>
+                <div class="rec">
+                    <div class="title">Droge waren & conserven</div>
+                    <div class="desc">7 dagen vooruit — lange houdbaarheid betekent langere waarschuwing is prima, minder urgent.</div>
+                </div>
             </div>
 
-            <p>Yes, discount supermarkets win most often — but Albert Heijn and Jumbo were cheapest on 32% of items when they had promos running. The takeaway isn't "always shop at Lidl." It's <strong>"the cheapest place depends on the product."</strong> Which is exactly why manually comparing across stores never works — the mental overhead is too high.</p>
+            <h2>Ochtend-slot vs avond-slot</h2>
+            <p>Notificaties hangen ook af van <em>wanneer</em> op de dag ze afgaan. Twee vensters werken goed; de rest is ruis:</p>
 
-            <h2>Finding 2: Branded staples are where the price gaps live</h2>
-            <p>The biggest swings weren't on random items — they were on <strong>branded staples</strong> people buy every week. Some real examples from my tracking:</p>
+            <ul>
+                <li><strong>08:00-09:00 (ochtend-slot)</strong> — je plant lunch en avondeten, dus een vervaldatum-alert kan echt je dag vormen. Beste voor huishoudens waar iemand thuis kookt.</li>
+                <li><strong>17:00-18:00 (voor-avondmaaltijd-slot)</strong> — je beslist wat te maken. Een vervaldatum-ping op dit moment is eigenlijk een suggestie. Beste voor huishoudens waar avondmaaltijd-beslissingen op het laatste moment vallen.</li>
+            </ul>
 
-            <div class="price-table">
-                <table>
-                    <thead><tr><th>Product</th><th>Cheapest</th><th>Most expensive</th><th>Gap</th></tr></thead>
-                    <tbody>
-                        <tr><td>Coca-Cola 1.5L</td><td class="win">Lidl €1.79</td><td class="lose">AH €2.35</td><td>+31%</td></tr>
-                        <tr><td>Nutella 400g</td><td class="win">Jumbo €3.29</td><td class="lose">AH €4.19</td><td>+27%</td></tr>
-                        <tr><td>Heinz Tomato Ketchup</td><td class="win">Aldi €2.09</td><td class="lose">AH €2.99</td><td>+43%</td></tr>
-                        <tr><td>Pampers Baby Dry (waist)</td><td class="win">Jumbo €8.99</td><td class="lose">AH €12.49</td><td>+39%</td></tr>
-                        <tr><td>Ben &amp; Jerry's 465ml</td><td class="win">Jumbo €4.99</td><td class="lose">AH €6.79</td><td>+36%</td></tr>
-                    </tbody>
-                </table>
-            </div>
+            <p>Om 22:00 of tijdens de werkdag afvuren wordt meestal weggeklikt en vergeten. FreshGarant staat standaard op ochtend, maar je kunt het verschuiven in instellingen.</p>
 
-            <p>If you buy these five items every week, that's roughly <strong>€8–€12 per week of avoidable overspend</strong>. Or, put differently, €40–€60/month you could keep by shifting three items to a different supermarket.</p>
-
-            <h2>Finding 3: Store-brand staples are basically identical in price</h2>
-            <p>Interestingly, the home-brand basics — pasta, tinned tomatoes, rice, sugar, plain yoghurt — barely varied across stores. Usually within 5 cents of each other. So if your shop is mostly home-brands, chasing the "cheapest supermarket" isn't going to save you meaningful money. The wins are in <strong>branded items and fresh produce</strong>.</p>
-
-            <h2>Finding 4: "Deal alerts" caught things I would have missed</h2>
-            <p>The app has an automatic deal detector: when a product's current price is at least 15% below its rolling average, it flags it. This turned out to be more useful than I expected. Twice in the 60 days it pinged me about coffee being 30% cheaper than usual — I bought two bags each time and saved roughly €4 per bag. Small, but it stacks.</p>
+            <h2>De "één notificatie per dag" regel</h2>
+            <p>Als vijf items in de komende drie dagen verlopen, wil je niet vijf aparte notificaties. Zo krijg je apps gedempt. FreshGarant bundelt ze in één dagelijkse samenvatting: <em>"3 items verlopen deze week — spinazie (di), yoghurt (wo), pesto (do)"</em>. Eén tap opent de lijst, één blik vertelt je wat je in je planning moet stoppen. Meer niet.</p>
 
             <div class="tip-card">
-                <h3>Free tip: track just your top 10 products</h3>
-                <p>You don't need to track every item to benefit. Pick the 10 things you buy most often — usually staples like milk, bread, cheese, coffee, laundry detergent, and a handful of favourite branded items. Track those consistently for a month. That alone will show you where to shop for what, and it's where 80% of the savings live.</p>
+                <h3>Gratis tip: houd een "eet snel op" plank in je koelkast</h3>
+                <p>Los van de app: markeer de linker-voorhoek van je koelkast als je "eet snel op" zone. Als je een product met korte houdbaarheid toevoegt, zet het daar. Als je beslist wat te koken, check die plank eerst. Deze ene fysieke gewoonte doet wat notificaties doen — het maakt verlopende items <em>zichtbaar</em> — en kost nul configuratie.</p>
             </div>
 
+            <h2>Het permissie-probleem (en waarom we later vragen)</h2>
+            <p>Sinds Android 13 moeten apps toestemming vragen voor notificaties. De meeste apps vragen dit op scherm 2 van de onboarding — precies wanneer gebruikers geen idee hebben of ze notificaties willen, dus weigeren ze standaard.</p>
+
+            <p>FreshGarant vraagt <strong>nadat je je eerste product hebt toegevoegd</strong>. Op dat moment is de waarde duidelijk: "je vertelde me net dat je melk vrijdag verloopt — wil je een reminder woensdag?" Acceptatie is ongeveer 4x hoger dan de vraag-bij-launch aanpak, en gebruikers zijn gelukkiger want ze begrijpen waar ze ja tegen zeggen.</p>
+
+            <h2>Zo verander je je instellingen</h2>
+            <ol>
+                <li>Open FreshGarant → tap het ⚙️ instellingen-icoon.</li>
+                <li>Kies <strong>Notificaties</strong>.</li>
+                <li>Pas <strong>Waarschuwingsvenster</strong> aan (1-7 dagen).</li>
+                <li>Kies je <strong>voorkeurstijd</strong> (ochtend of avond).</li>
+                <li>Optioneel: zet <strong>stille weekenden</strong> aan als je geen alerts op zaterdag/zondag wilt.</li>
+            </ol>
+
+            <p>Alle instellingen zijn lokaal — niks verlaat je apparaat. De app berekent aankomende verlopen op je telefoon en plant notificaties via Android's eigen reminder-systeem.</p>
+
             <div class="app-cta">
-                <div class="app-cta-icon">📊</div>
-                <h3>Get price tracking with FreshGarant PRO</h3>
-                <p>Barcode price-tracking is a PRO feature (€2.99/month or €14.99/year). Given a typical user finds €30–€50/month in overspend within the first two months, it more than pays for itself. Or invite a friend and both get 30 days free — no card needed.</p>
+                <div class="app-cta-icon">🔔</div>
+                <h3>Vergeet nooit meer een product</h3>
+                <p>Installeer FreshGarant, voeg één item toe, en je ziet de notificatie-flow werken in ongeveer 30 seconden. Gratis op Google Play — geen account nodig om te proberen.</p>
                 <a href="https://play.google.com/store/apps/details?id=app.rork.versgarant" target="_blank" rel="noopener">
                     <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
-                    Try FreshGarant free
+                    Gratis downloaden
                 </a>
             </div>
 
-            <h2>What I changed after 60 days</h2>
-            <p>I don't shop-hop every day. Nobody has time for that. But three small habits stuck:</p>
-            <ul>
-                <li><strong>Branded staples → Lidl or Jumbo once a month.</strong> I do one bigger monthly trip specifically for the branded items where the gap is biggest. €30–€40 saved reliably per trip.</li>
-                <li><strong>Fresh produce → whichever is closest.</strong> Fruit and veg prices are close enough between stores that convenience beats optimisation.</li>
-                <li><strong>Deal alerts → automatic.</strong> If FreshGarant pings me about coffee being unusually cheap, I stock up. If it doesn't, I don't think about it.</li>
-            </ul>
+            <h2>De ene instelling waar de meeste mensen fout in gaan</h2>
+            <p>Mensen zetten vaak het waarschuwingsvenster op 7 dagen voor alles, denkend "meer waarschuwing = veiliger". Het tegenovergestelde. Op 7 dagen voelt de reminder voorbarig — je klikt hem weg, en tegen de tijd dat de vervaldatum echt komt, ben je vergeten dat de reminder ooit afging.</p>
 
-            <h2>The honest limitations</h2>
-            <p>Price tracking isn't magic. You have to enter prices manually (the app can't read your receipt yet — that's a separate PRO feature). You'll miss data for products you only buy at one store. And the "cheapest" store changes when promotions rotate — so the data goes stale if you stop scanning. All of which is fine, as long as you know that going in.</p>
+            <p>Het sweet spot voor de meeste gebruikers is <strong>3 dagen voor perishables, 2 dagen voor vlees/vis, 7 dagen alleen voor droge waren</strong>. Dit matcht hoe je echt maaltijden plant — een paar dagen vooruit, niet een week — en voorkomt dat notificaties achtergrondruis worden.</p>
 
-            <p>The real value isn't in any single price comparison. It's in the <strong>pattern</strong> — knowing which handful of items are worth going out of your way for, and which aren't. That takes weeks of data. And that's exactly what the app is quietly doing while you shop like you already were.</p>
+            <h2>Notificaties zijn niet het doel</h2>
+            <p>Een eerlijk ding om te zeggen over een app waarvan de hoofdfunctie reminders zijn: het doel is niet om er veel te sturen. Het is om er <em>één</em> op het juiste moment te sturen. Al het andere — de barcode-scanner, de AI foto-tool, de prijs-tracker — voedt dat ene moment. Als het werkt, eet je de yoghurt op ipv weg te gooien. Dat is de hele loop.</p>
 
             <div class="share-section">
-                <p class="share-label">Found this useful?</p>
+                <p class="share-label">Deel dit artikel</p>
                 <div class="share-btns">
                     <a class="share-btn wa" id="share-wa" target="_blank" rel="noopener">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.847L0 24l6.336-1.501A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.001-1.371l-.361-.214-3.762.891.952-3.657-.235-.375A9.808 9.808 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-                        Share on WhatsApp
+                        Deel op WhatsApp
                     </a>
                     <button class="share-btn copy" id="share-copy">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-                        Copy link
+                        Kopieer link
                     </button>
                 </div>
             </div>
@@ -286,19 +281,19 @@
 
 <div class="related">
     <div class="c">
-        <h2>Related articles</h2>
+        <h2>Gerelateerde artikelen</h2>
         <div class="related-cards">
-            <a href="save-400-euros-food-waste.html" class="related-card">
-                <div class="cat">💰 Save money</div>
-                <div class="title">How to Save €400 a Year on Food Waste →</div>
+            <a href="best-before-vs-use-by.html" class="related-card">
+                <div class="cat">🌿 Gids</div>
+                <div class="title">THT vs TGT →</div>
             </a>
-            <a href="smarter-grocery-shopping.html" class="related-card">
-                <div class="cat">🛒 Shopping</div>
-                <div class="title">Smarter Grocery Shopping →</div>
+            <a href="how-long-does-food-last-in-the-fridge.html" class="related-card">
+                <div class="cat">🌿 Opslag</div>
+                <div class="title">Hoe lang blijft eten goed →</div>
             </a>
-            <a href="meal-planning-for-the-week.html" class="related-card">
-                <div class="cat">📋 Planning</div>
-                <div class="title">Weekly Meal Planning →</div>
+            <a href="bespaar-400-euro-voedselverspilling.html" class="related-card">
+                <div class="cat">💰 Geld besparen</div>
+                <div class="title">Bespaar €400 per jaar →</div>
             </a>
         </div>
     </div>
@@ -323,13 +318,13 @@
     </div>
 </footer>
 
-<button id="scroll-top" title="Back to top" aria-label="Back to top">↑</button>
+<button id="scroll-top" title="Terug naar boven" aria-label="Terug naar boven">↑</button>
 <script>
 var rp=document.getElementById('read-progress'),st=document.getElementById('scroll-top'),stTitle=document.getElementById('sticky-title');
 window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';st.classList.toggle('visible',window.scrollY>400); if(stTitle)stTitle.classList.toggle('visible',window.scrollY>500);},{passive:true});
 st.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
 document.getElementById('share-wa').href='https://wa.me/?text='+encodeURIComponent(document.title+' — '+location.href);
-document.getElementById('share-copy').addEventListener('click',function(){navigator.clipboard.writeText(location.href).then(function(){var b=document.getElementById('share-copy');b.textContent='✓ Copied!';setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy link';},2000);});});
+document.getElementById('share-copy').addEventListener('click',function(){navigator.clipboard.writeText(location.href).then(function(){var b=document.getElementById('share-copy');b.textContent='✓ Gekopieerd!';setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Kopieer link';},2000);});});
 </script>
 <script src="/assets/cookie-banner.js" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
