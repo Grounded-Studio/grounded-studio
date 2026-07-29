@@ -313,6 +313,7 @@ const browserIsNL=(navigator.language||'').toLowerCase().startsWith('nl');
 let lang=savedLang||(browserIsNL?'nl':'en');
 document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.addEventListener('click',()=>{if(b.dataset.lang!==lang){lang=b.dataset.lang;localStorage.setItem('gs-lang',lang);document.querySelectorAll('.lang-btn').forEach(x=>x.classList.toggle('active',x.dataset.lang===lang));}});});
 </script>
+<script src="/assets/tracking.js" defer></script>
 <script src="/assets/cookie-banner.js" defer></script>
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
 </body>
