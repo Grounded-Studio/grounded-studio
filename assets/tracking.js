@@ -1,7 +1,7 @@
 /*
  * Grounded Studio — website tracking
  *
- * Adds Meta Pixel (BuildExact dataset) with:
+ * Adds Meta Pixel (BuildExact dataset) + Google Analytics 4 with:
  *   - GDPR-friendly consent gate (reads localStorage.cookie-consent set by
  *     assets/cookie-banner.js — '1' = accepted, '0' = declined, null = pending)
  *   - PageView on every load once consent is granted
@@ -18,6 +18,7 @@
     'use strict';
 
     var PIXEL_ID = '1032186512845129';
+    var GA4_ID = 'G-DBG67CDKSP';
     var PLAY_HOST = 'play.google.com';
 
     // ---------- UTM handling (safe without consent — no PII) ---------------
@@ -105,15 +106,24 @@
     }
 
     function onPlayLinkClick() {
-        // Only fire pixel events after consent — but the click still happens.
+        // Only fire tracking events after consent — but the click still happens.
         if (!hasConsent()) return;
-        if (typeof window.fbq !== 'function') return;
-        try {
-            window.fbq('track', 'Lead', {
-                content_name: 'Play Store install click',
-                content_category: 'app_install',
-            });
-        } catch (e) { /* ignore */ }
+        if (typeof window.fbq === 'function') {
+            try {
+                window.fbq('track', 'Lead', {
+                    content_name: 'Play Store install click',
+                    content_category: 'app_install',
+                });
+            } catch (e) { /* ignore */ }
+        }
+        if (typeof window.gtag === 'function') {
+            try {
+                window.gtag('event', 'play_store_click', {
+                    event_category: 'app_install',
+                    event_label: 'Play Store install click',
+                });
+            } catch (e) { /* ignore */ }
+        }
     }
 
     // ---------- Consent ----------------------------------------------------
@@ -161,16 +171,36 @@
         }
     }
 
+    function loadGA4() {
+        if (window._gsGA4Loaded) return;
+        window._gsGA4Loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', GA4_ID, { anonymize_ip: true });
+    }
+
+    function unloadGA4() {
+        // Prevent further GA4 events from being sent.
+        window['ga-disable-' + GA4_ID] = true;
+    }
+
     // Public API for cookie-banner.js (or manual test in console) to notify
     // us when consent state changes without a full reload.
     window.gsTracking = {
         grantConsent: function () {
             try { localStorage.setItem('cookie-consent', '1'); } catch (e) {}
             loadPixel();
+            loadGA4();
         },
         revokeConsent: function () {
             try { localStorage.setItem('cookie-consent', '0'); } catch (e) {}
             unloadPixel();
+            unloadGA4();
         },
         // For debugging: check what referrer will be attached to Play links.
         currentReferrer: function () {
@@ -182,7 +212,10 @@
 
     function boot() {
         decoratePlayLinks();
-        if (hasConsent()) loadPixel();
+        if (hasConsent()) {
+            loadPixel();
+            loadGA4();
+        }
     }
 
     if (document.readyState === 'loading') {
