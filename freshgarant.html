@@ -8,9 +8,9 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#22c55e">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshGarant — AI Fridge Scanner, Receipt Scanner & Food Expiry Tracker | Grounded Studio</title>
-    <meta name="description" content="Snap a photo of your fridge and let AI add every product. Scan grocery receipts, get AI recipes, cook hands-free and never waste food again. Free Android app by Grounded Studio.">
-    <meta name="keywords" content="FreshGarant, FreshGarant, AI fridge scanner, photo fridge AI, receipt scanner grocery, food expiry tracker, houdbaarheidsdatum app, voedselverspilling, AI recipes Gemini, cook mode, meal planner, koelkast scan AI, foto koelkast app, bonnetje scannen">
+    <title>FreshGarant — AI Fridge Scanner, AI Meal Planner, Referral & Food Expiry Tracker | Grounded Studio</title>
+    <meta name="description" content="Snap your fridge, let AI plan your week, invite friends for free PRO and track how much money you saved. Price-drop alerts, monthly savings hero and global currency support. Free Android app by Grounded Studio.">
+    <meta name="keywords" content="FreshGarant, AI fridge scanner, photo fridge AI, AI meal planner, weekly menu AI, referral, invite friends PRO, price drop alerts, currency detection, monthly savings, receipt scanner grocery, food expiry tracker, houdbaarheidsdatum app, voedselverspilling, AI recipes Gemini, cook mode, koelkast scan AI, foto koelkast app, bonnetje scannen">
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://grounded-studio.app/freshgarant.html">
@@ -19,13 +19,13 @@
     <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/freshgarant.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://grounded-studio.app/freshgarant.html">
-    <meta property="og:title" content="FreshGarant — AI Fridge Scanner, Receipt Scanner & Food Expiry Tracker">
-    <meta property="og:description" content="Snap your fridge. AI adds every product. Scan receipts, cook hands-free, get AI recipes — and never waste food again. Free on Android.">
+    <meta property="og:title" content="FreshGarant — AI Fridge Scanner, AI Meal Planner, Referral & Food Expiry Tracker">
+    <meta property="og:description" content="Snap your fridge, let AI plan a full week of dinners, invite friends for free PRO and see how much money you saved this month. Price-drop alerts included. Free on Android.">
     <meta property="og:image" content="https://grounded-studio.app/assets/screen-vg.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://grounded-studio.app/freshgarant.html">
-    <meta name="twitter:title" content="FreshGarant — AI Fridge Scanner, Receipt Scanner & Food Expiry Tracker">
-    <meta name="twitter:description" content="Snap your fridge. AI adds every product. Scan receipts, cook hands-free, get AI recipes — and never waste food again. Free on Android.">
+    <meta name="twitter:title" content="FreshGarant — AI Fridge Scanner, AI Meal Planner, Referral & Food Expiry Tracker">
+    <meta name="twitter:description" content="Snap your fridge, let AI plan a full week of dinners, invite friends for free PRO and see how much money you saved this month. Price-drop alerts included. Free on Android.">
     <meta name="twitter:image" content="https://grounded-studio.app/assets/screen-vg.png">
     <script type="application/ld+json">
     {
@@ -35,9 +35,9 @@
         "alternateName": "FreshGarant",
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Android",
-        "description": "FreshGarant is the all-in-one food waste app. Snap a photo of your fridge and let AI add every product. Scan grocery receipts, generate AI recipes with Gemini, cook hands-free and plan meals.",
-        "keywords": "AI fridge scanner, photo fridge AI, receipt scanner, food expiry tracker, AI recipes Gemini, cook mode, meal planner, houdbaarheidsdatum app, voedselverspilling, family sharing",
-        "featureList": "AI Photo Fridge scanner, Receipt scanner, Barcode scanner, Smart expiry notifications, AI recipes powered by Gemini, Cook Mode with timers, Meal planner, What can I cook, Expiry calendar, Family sharing, Cloud backup, Shopping list, Waste statistics with badges, Year Wrap, Home screen widget, Storage locations, Share result cards, Multi-language (NL/EN)",
+        "description": "FreshGarant is the all-in-one food waste app. Snap a photo of your fridge and let AI add every product. Get a full weekly AI meal plan around your expiring items, invite friends for free PRO months, receive price-drop alerts and track how much money you saved this month.",
+        "keywords": "AI fridge scanner, photo fridge AI, AI weekly meal planner, referral program, invite friends PRO, price drop alerts, monthly savings tracker, receipt scanner, food expiry tracker, AI recipes Gemini, cook mode, meal planner, global currency, houdbaarheidsdatum app, voedselverspilling, family sharing",
+        "featureList": "AI Photo Fridge scanner, AI Weekly Meal Plan, Invite friends referral program, Price-drop push alerts, Monthly savings tracker, Deal alerts banner, Global currency support, Receipt scanner, Barcode scanner, Smart expiry notifications, AI recipes powered by Gemini, Cook Mode with timers, Meal planner, What can I cook, Expiry calendar, Family sharing, Cloud backup, Shopping list, Waste statistics with badges, Year Wrap, Home screen widget, Storage locations, Share result cards, Multi-language (NL/EN)",
         "offers": [
             { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "Free" },
             { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "PRO 7-day free trial", "description": "AI recipes, cloud backup, family sharing" }
@@ -148,6 +148,26 @@
                 "@type": "Question",
                 "name": "What languages does FreshGarant support?",
                 "acceptedAnswer": { "@type": "Answer", "text": "FreshGarant is fully translated in Dutch and English. The app automatically follows your phone's language setting, so no manual configuration needed." }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the referral program work?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Every user gets a unique invite code. Share it with a friend — when they install FreshGarant and enter your code, you both get 1 month of PRO for free (no payment needed). You can earn up to 5 successful invites, giving you up to 5 free months of PRO. Fully secured server-side via Firestore." }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the AI Weekly Meal Plan?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A PRO feature that generates a complete 7-day dinner menu with a single tap using Gemini AI. It prioritises products you already have in stock — anything expiring soon is used within the first 4 days. Missing ingredients are automatically added to your shopping list. Rate-limited to 5 plans per day for PRO users." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do price-drop alerts work?",
+                "acceptedAnswer": { "@type": "Answer", "text": "FreshGarant tracks the prices you enter or scan. When a product you have in stock drops 8% or more below its 30-day average price, you get a push notification and see a banner on the home screen showing the current best deals, with a per-store detail sheet." }
+            },
+            {
+                "@type": "Question",
+                "name": "How much money can I save with FreshGarant?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The Home screen shows a real euro amount you saved this month based on prices you enter for products used before they expired. The average Dutch household wastes around €400 of food per year — FreshGarant is designed to give most of that back." }
             }
         ]
     }
@@ -540,6 +560,31 @@
             <p class="section-sub" data-i18n="feat.sub">Smart tools that work in the background — so you don't have to think about it.</p>
         </div>
         <div class="features-grid">
+            <div class="feat-card a-fade" style="transition-delay:.02s">
+                <div class="feat-ico">🎁</div>
+                <h3 data-i18n="feat.referral.title">Invite friends → 1 month PRO free</h3>
+                <p data-i18n="feat.referral.desc">Share your unique invite code. When a friend joins, you both get 1 month of PRO free — up to 5 successful invites = 5 free months. No payment needed.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.03s">
+                <div class="feat-ico">🍽</div>
+                <h3><span data-i18n="feat.meal_plan_ai.title">AI Weekly Meal Plan</span> <span class="pro-badge">PRO</span></h3>
+                <p data-i18n="feat.meal_plan_ai.desc">One tap generates a full 7-day dinner menu using Gemini AI. Products you have in stock come first — expiring items are used within the first 4 days. Auto-fills your shopping list for what's missing.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.04s">
+                <div class="feat-ico">🔥</div>
+                <h3 data-i18n="feat.price_drop.title">Price-drop alerts</h3>
+                <p data-i18n="feat.price_drop.desc">Push notification when a product you have in stock drops 8%+ below its 30-day average. Home screen banner shows today's best deals with a per-store detail sheet.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.045s">
+                <div class="feat-ico">💰</div>
+                <h3 data-i18n="feat.savings.title">Monthly savings on Home</h3>
+                <p data-i18n="feat.savings.desc">A prominent green card at the top of Home shows how much money you saved this month by eating food before it expired — including your no-waste streak.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:.048s">
+                <div class="feat-ico">🌍</div>
+                <h3 data-i18n="feat.global.title">Now works globally</h3>
+                <p data-i18n="feat.global.desc">Auto-detects your device country and formats €/£/$/¥/₹/kr/CHF correctly everywhere. Locale-aware store list — NL chains at home, GPS-based nearby stores worldwide.</p>
+            </div>
             <div class="feat-card a-fade" style="transition-delay:.05s">
                 <div class="feat-ico">📸</div>
                 <h3><span data-i18n="feat.ai_fridge.title">AI Photo Fridge</span> <span class="pro-badge">PRO</span></h3>
@@ -699,14 +744,17 @@
             <div class="pro-content">
                 <div class="section-label" style="color:#fbbf24"><span>●</span> <span data-i18n="pro.label">FreshGarant PRO</span></div>
                 <h2 class="section-title" style="margin-top:8px" data-i18n-html="pro.title">Unlock everything<br>with PRO</h2>
-                <p class="section-sub" style="margin-bottom:32px" data-i18n="pro.sub">Get the AI Photo Fridge, AI recipes, hands-free Cook Mode, family sharing, cloud backup and more. Start with a free 7-day trial — no commitment.</p>
+                <p class="section-sub" style="margin-bottom:32px" data-i18n="pro.sub">Get the AI Photo Fridge, AI Weekly Meal Plan, AI recipes, hands-free Cook Mode, family sharing, cloud backup and more. Or earn up to 5 free months by inviting friends — no payment needed.</p>
                 <ul class="pro-list">
                     <li><span class="pro-check">✓</span> <span data-i18n="pro.item1">AI Photo Fridge — scan your fridge in one photo</span></li>
+                    <li><span class="pro-check">✓</span> <span data-i18n="pro.item_meal_plan">AI Weekly Meal Plan — full 7-day menu from what you already have</span></li>
                     <li><span class="pro-check">✓</span> <span data-i18n="pro.item2">AI recipes from your expiring ingredients (Gemini)</span></li>
+                    <li><span class="pro-check">✓</span> <span data-i18n="pro.item_limits">Higher AI limits — 15 recipes, 5 weekly plans and 20 fridge scans per day</span></li>
                     <li><span class="pro-check">✓</span> <span data-i18n="pro.item3">Cook Mode — big text, screen-on, timers per step</span></li>
                     <li><span class="pro-check">✓</span> <span data-i18n="pro.item4">Family sharing with up to 6 members</span></li>
                     <li><span class="pro-check">✓</span> <span data-i18n="pro.item5">Automatic cloud backup via Firebase</span></li>
                     <li><span class="pro-check">✓</span> <span data-i18n="pro.item6">Unlimited recipes and product history</span></li>
+                    <li><span class="pro-check">✓</span> <span data-i18n="pro.item_referral">Or earn up to 5 free months by inviting friends</span></li>
                     <li><span class="pro-check">✓</span> <span data-i18n="pro.item7">Priority support</span></li>
                 </ul>
                 <a href="https://play.google.com/store/apps/details?id=app.rork.versgarant" target="_blank" rel="noopener" class="btn-pro" data-i18n="pro.cta">
@@ -840,6 +888,34 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.lang.a">FreshGarant is fully translated in Dutch and English. The app automatically follows your phone's language setting, so no manual configuration needed.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span data-i18n="faq.referral.q">How does the referral program work?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.referral.a">Every user gets a unique invite code. Share it with a friend — when they install FreshGarant and enter your code, you both get 1 month of PRO for free (no payment needed). You can earn up to 5 successful invites, giving you up to 5 free months of PRO. Fully secured server-side via Firestore.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span data-i18n="faq.meal_plan_ai.q">What is the AI Weekly Meal Plan?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.meal_plan_ai.a">A PRO feature that generates a complete 7-day dinner menu with a single tap using Gemini AI. It prioritises products you already have in stock — anything expiring soon is used within the first 4 days. Missing ingredients are automatically added to your shopping list. Rate-limited to 5 plans per day for PRO users.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span data-i18n="faq.price_drop.q">How do price-drop alerts work?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.price_drop.a">FreshGarant tracks the prices you enter or scan. When a product you have in stock drops 8% or more below its 30-day average price, you get a push notification and see a banner on the home screen with the current best deals, plus a per-store detail sheet.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span data-i18n="faq.savings.q">How much money can I save with FreshGarant?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.savings.a">The Home screen shows a real euro amount you saved this month based on prices you enter for products used before they expired. The average Dutch household wastes around €400 of food per year — FreshGarant is designed to give most of that back.</div></div>
             </div>
         </div>
     </div>
@@ -1031,6 +1107,16 @@ const T = {
         'feat.label':      'Features',
         'feat.title':      'Everything you need to<br>stop wasting food',
         'feat.sub':        "Smart tools that work in the background — so you don't have to think about it.",
+        'feat.referral.title':     'Invite friends → 1 month PRO free',
+        'feat.referral.desc':      'Share your unique invite code. When a friend joins, you both get 1 month of PRO free — up to 5 successful invites = 5 free months. No payment needed.',
+        'feat.meal_plan_ai.title': 'AI Weekly Meal Plan',
+        'feat.meal_plan_ai.desc':  "One tap generates a full 7-day dinner menu using Gemini AI. Products you have in stock come first — expiring items are used within the first 4 days. Auto-fills your shopping list for what's missing.",
+        'feat.price_drop.title':   'Price-drop alerts',
+        'feat.price_drop.desc':    "Push notification when a product you have in stock drops 8%+ below its 30-day average. Home screen banner shows today's best deals with a per-store detail sheet.",
+        'feat.savings.title':      'Monthly savings on Home',
+        'feat.savings.desc':       'A prominent green card at the top of Home shows how much money you saved this month by eating food before it expired — including your no-waste streak.',
+        'feat.global.title':       'Now works globally',
+        'feat.global.desc':        'Auto-detects your device country and formats €/£/$/¥/₹/kr/CHF correctly everywhere. Locale-aware store list — NL chains at home, GPS-based nearby stores worldwide.',
         'feat.ai_fridge.title':    'AI Photo Fridge',
         'feat.ai_fridge.desc':     'Snap a photo of your fridge and Gemini Vision recognises every product with category, location and suggested expiry.',
         'feat.receipt.title':      'Receipt Scanner',
@@ -1088,13 +1174,16 @@ const T = {
         'showcase.hub.desc':       'Statistics, calendar, stores, family sharing and settings — all one tap away.',
         'pro.label':      'FreshGarant PRO',
         'pro.title':      'Unlock everything<br>with PRO',
-        'pro.sub':        'Get the AI Photo Fridge, AI recipes, hands-free Cook Mode, family sharing, cloud backup and more. Start with a free 7-day trial — no commitment.',
+        'pro.sub':        'Get the AI Photo Fridge, AI Weekly Meal Plan, AI recipes, hands-free Cook Mode, family sharing, cloud backup and more. Or earn up to 5 free months by inviting friends — no payment needed.',
         'pro.item1':      'AI Photo Fridge — scan your fridge in one photo',
+        'pro.item_meal_plan': 'AI Weekly Meal Plan — full 7-day menu from what you already have',
         'pro.item2':      'AI recipes from your expiring ingredients (Gemini)',
+        'pro.item_limits':'Higher AI limits — 15 recipes, 5 weekly plans and 20 fridge scans per day',
         'pro.item3':      'Cook Mode — big text, screen-on, timers per step',
         'pro.item4':      'Family sharing with up to 6 members',
         'pro.item5':      'Automatic cloud backup via Firebase',
         'pro.item6':      'Unlimited recipes and product history',
+        'pro.item_referral': 'Or earn up to 5 free months by inviting friends',
         'pro.item7':      'Priority support',
         'pro.cta':        'Try PRO 7 days free →',
         'cta.label':      'Download',
@@ -1128,6 +1217,14 @@ const T = {
         'faq.offline.a':  'The core app works fully offline — adding products, scanning barcodes, notifications, shopping list and statistics all run locally. Internet is only needed for PRO features like AI recipes, cloud backup and family sync.',
         'faq.lang.q':     'What languages does FreshGarant support?',
         'faq.lang.a':     "FreshGarant is fully translated in Dutch and English. The app automatically follows your phone's language setting, so no manual configuration needed.",
+        'faq.referral.q': 'How does the referral program work?',
+        'faq.referral.a': 'Every user gets a unique invite code. Share it with a friend — when they install FreshGarant and enter your code, you both get 1 month of PRO for free (no payment needed). You can earn up to 5 successful invites, giving you up to 5 free months of PRO. Fully secured server-side via Firestore.',
+        'faq.meal_plan_ai.q': 'What is the AI Weekly Meal Plan?',
+        'faq.meal_plan_ai.a': 'A PRO feature that generates a complete 7-day dinner menu with a single tap using Gemini AI. It prioritises products you already have in stock — anything expiring soon is used within the first 4 days. Missing ingredients are automatically added to your shopping list. Rate-limited to 5 plans per day for PRO users.',
+        'faq.price_drop.q':'How do price-drop alerts work?',
+        'faq.price_drop.a':'FreshGarant tracks the prices you enter or scan. When a product you have in stock drops 8% or more below its 30-day average price, you get a push notification and see a banner on the home screen with the current best deals, plus a per-store detail sheet.',
+        'faq.savings.q':  'How much money can I save with FreshGarant?',
+        'faq.savings.a':  'The Home screen shows a real euro amount you saved this month based on prices you enter for products used before they expired. The average Dutch household wastes around €400 of food per year — FreshGarant is designed to give most of that back.',
         'reviews.label':  'Reviews',
         'reviews.title':  'What users say',
         'reviews.r1.text':'"Finally an app that actually helps me stop throwing food away. The notifications are a game changer."',
@@ -1177,6 +1274,16 @@ const T = {
         'feat.label':      'Functies',
         'feat.title':      'Alles wat je nodig hebt<br>om verspilling te stoppen',
         'feat.sub':        'Slimme tools die op de achtergrond werken — zodat jij er niet over hoeft na te denken.',
+        'feat.referral.title':     'Nodig vrienden uit → 1 maand PRO gratis',
+        'feat.referral.desc':      'Deel je unieke uitnodigingscode. Als een vriend meedoet, krijgen jullie allebei 1 maand PRO gratis — tot 5 geslaagde uitnodigingen = 5 gratis maanden. Geen betaling nodig.',
+        'feat.meal_plan_ai.title': 'AI Weekmenu',
+        'feat.meal_plan_ai.desc':  'Eén tik maakt een volledig 7-daags avondmenu met Gemini AI. Producten die je al hebt komen eerst — wat bijna verloopt wordt in de eerste 4 dagen gebruikt. Vult je boodschappenlijst automatisch aan.',
+        'feat.price_drop.title':   'Prijsdaling-meldingen',
+        'feat.price_drop.desc':    'Push-melding zodra een product in je voorraad 8%+ onder het 30-daags gemiddelde zakt. Home-banner toont de beste deals van vandaag met een detail per winkel.',
+        'feat.savings.title':      'Maandelijkse besparing op Home',
+        'feat.savings.desc':       'Een prominente groene kaart bovenaan Home laat zien hoeveel geld je deze maand hebt bespaard door eten op te maken voor het verliep — inclusief je geen-verspilling streak.',
+        'feat.global.title':       'Werkt nu wereldwijd',
+        'feat.global.desc':        'Detecteert automatisch je land en toont €/£/$/¥/₹/kr/CHF correct in de hele app. Locatie-slimme winkellijst — NL-ketens thuis, GPS-winkels in de buurt overal ter wereld.',
         'feat.ai_fridge.title':    'AI Foto Koelkast',
         'feat.ai_fridge.desc':     'Maak een foto van je koelkast en Gemini Vision herkent elk product met categorie, locatie en houdbaarheidsdatum.',
         'feat.receipt.title':      'Bonnetje Scannen',
@@ -1234,13 +1341,16 @@ const T = {
         'showcase.hub.desc':       'Statistieken, kalender, winkels, gezinsdelen en instellingen — allemaal één tik weg.',
         'pro.label':      'FreshGarant PRO',
         'pro.title':      'Alles ontgrendelen<br>met PRO',
-        'pro.sub':        'Krijg de AI Foto Koelkast, AI-recepten, handsfree Kookmodus, gezinsdelen, cloud back-up en meer. Start met een gratis proefperiode van 7 dagen — zonder verplichting.',
+        'pro.sub':        'Krijg de AI Foto Koelkast, AI Weekmenu, AI-recepten, handsfree Kookmodus, gezinsdelen, cloud back-up en meer. Of verdien tot 5 gratis maanden door vrienden uit te nodigen — geen betaling nodig.',
         'pro.item1':      'AI Foto Koelkast — scan je koelkast in één foto',
+        'pro.item_meal_plan': 'AI Weekmenu — volledig 7-daags menu op basis van wat je al hebt',
         'pro.item2':      'AI-recepten van je bijna verlopen ingrediënten (Gemini)',
+        'pro.item_limits':'Hogere AI-limieten — 15 recepten, 5 weekmenu\'s en 20 koelkastscans per dag',
         'pro.item3':      'Kookmodus — grote tekst, scherm-aan, timers per stap',
         'pro.item4':      'Gezinsdelen met maximaal 6 leden',
         'pro.item5':      'Automatische cloud back-up via Firebase',
         'pro.item6':      'Onbeperkte recepten en producthistorie',
+        'pro.item_referral': 'Of verdien tot 5 gratis maanden door vrienden uit te nodigen',
         'pro.item7':      'Priority support',
         'pro.cta':        'Probeer PRO 7 dagen gratis →',
         'cta.label':      'Download',
@@ -1274,6 +1384,14 @@ const T = {
         'faq.offline.a':  'De basis-app werkt volledig offline — producten toevoegen, barcodes scannen, meldingen, boodschappenlijst en statistieken werken allemaal lokaal. Internet is alleen nodig voor PRO functies zoals AI-recepten, cloud back-up en gezinssync.',
         'faq.lang.q':     'Welke talen ondersteunt FreshGarant?',
         'faq.lang.a':     'FreshGarant is volledig vertaald in Nederlands en Engels. De app volgt automatisch de taalinstelling van je telefoon, dus geen handmatige configuratie nodig.',
+        'faq.referral.q': 'Hoe werkt het uitnodigingsprogramma?',
+        'faq.referral.a': 'Elke gebruiker krijgt een unieke uitnodigingscode. Deel hem met een vriend — als die FreshGarant installeert en jouw code invult, krijgen jullie allebei 1 maand PRO gratis (geen betaling nodig). Je kunt tot 5 geslaagde uitnodigingen verdienen, oftewel tot 5 gratis maanden PRO. Volledig server-side beveiligd via Firestore.',
+        'faq.meal_plan_ai.q': 'Wat is het AI Weekmenu?',
+        'faq.meal_plan_ai.a': 'Een PRO-functie die met één tik een compleet 7-daags avondmenu maakt met Gemini AI. Producten die je al in voorraad hebt krijgen voorrang — wat bijna verloopt wordt in de eerste 4 dagen gebruikt. Ontbrekende ingrediënten gaan automatisch op de boodschappenlijst. Gelimiteerd tot 5 menu\'s per dag voor PRO-gebruikers.',
+        'faq.price_drop.q':'Hoe werken prijsdaling-meldingen?',
+        'faq.price_drop.a':'FreshGarant volgt de prijzen die je invoert of scant. Zodra een product in je voorraad 8% of meer onder z\'n 30-daags gemiddelde zakt, krijg je een push-melding en zie je op Home een banner met de beste deals van vandaag, plus een detail per winkel.',
+        'faq.savings.q':  'Hoeveel geld kan ik besparen met FreshGarant?',
+        'faq.savings.a':  'Op Home zie je een echt bedrag in euro\'s dat je deze maand hebt bespaard door producten op tijd op te maken. Het gemiddelde Nederlandse huishouden verspilt zo\'n €400 aan eten per jaar — FreshGarant is gebouwd om daar het grootste deel van terug te geven.',
         'reviews.label':  'Reviews',
         'reviews.title':  'Wat gebruikers zeggen',
         'reviews.r1.text':'"Eindelijk een app die me echt helpt om geen eten meer weg te gooien. De meldingen zijn een game changer."',
