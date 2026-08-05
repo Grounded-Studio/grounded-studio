@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#22c55e">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Guide to AI Meal Planning — Save $40/week on Groceries | FreshGarant</title>
+    <meta name="description" content="How AI meal planning works, why it beats manual planning and meal kits, and how to save $40/week on groceries. Complete guide with real examples.">
+    <meta name="keywords" content="AI meal planning, AI weekly meal plan, gemini meal planner, save on groceries, food waste app, smart meal planning, FreshGarant">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/blog/complete-guide-ai-meal-planning.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/complete-guide-ai-meal-planning.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/ai-weekmenu-maken-bespaar-boodschappen.html">
+    <meta property="og:title" content="Complete Guide to AI Meal Planning — Save $40/week on Groceries">
+    <meta property="og:description" content="How AI meal planning beats manual planning and meal kits. Complete guide with real examples.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-vg.png">
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Article", "headline": "Complete Guide to AI Meal Planning — Save $40/week on Groceries", "author": { "@type": "Organization", "name": "Grounded Studio" }, "publisher": { "@type": "Organization", "name": "Grounded Studio", "logo": { "@type": "ImageObject", "url": "https://grounded-studio.app/assets/logo-gs.png" } }, "datePublished": "2026-08-04", "inLanguage": "en" }
+    </script>
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/" }, { "@type": "ListItem", "position": 2, "name": "FreshGarant", "item": "https://grounded-studio.app/freshgarant.html" }, { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://grounded-studio.app/blog/freshgarant.html" }, { "@type": "ListItem", "position": 4, "name": "AI Meal Planning Guide" } ] }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #15141a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+        :root { --vg:#22c55e; --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(21,20,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(34,197,94,.3); background:rgba(34,197,94,.08); color:var(--vg); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+        .stat-box { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:32px 0; }
+        @media (max-width:600px) { .stat-box { grid-template-columns:1fr; } }
+        .stat { background:rgba(34,197,94,.05); border:1px solid rgba(34,197,94,.2); border-radius:14px; padding:20px; text-align:center; }
+        .stat .n { font-family:'Space Grotesk',sans-serif; font-size:1.8rem; font-weight:800; color:var(--vg); }
+        .stat .l { font-size:.78rem; color:var(--muted); margin-top:4px; }
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--vg); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+        .table-wrap { overflow-x:auto; margin:28px 0; }
+        table { width:100%; border-collapse:collapse; font-size:.9rem; }
+        th { background:rgba(34,197,94,.12); color:var(--vg); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(34,197,94,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        .app-cta { background:rgba(34,197,94,.06); border:1px solid rgba(34,197,94,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(34,197,94,.15); border:1px solid rgba(34,197,94,.4); color:var(--vg); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media (max-width:700px) { .related-cards { grid-template-columns:1fr; } }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--vg); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        #read-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#22c55e,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="read-progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><a href="freshgarant.html" class="nav-back">← Blog</a></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../freshgarant.html">FreshGarant</a> / <a href="freshgarant.html">Blog</a> / <span>AI Meal Planning Guide</span></div>
+            <div class="article-cat">🤖 AI &amp; Meal Planning</div>
+            <h1>Complete Guide to AI Meal Planning — Save $40/week on Groceries</h1>
+            <div class="article-meta"><span>📅 August 4, 2026</span><span>⏱ 8 min read</span><span>✍️ Grounded Studio</span></div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+            <p>"What's for dinner?" — that question costs the average household 4.5 hours per week thinking, shopping, and last-minute takeout. And that's not counting the money wasted on groceries that eventually end up in the bin.</p>
+
+            <p>AI meal planning changes this fundamentally. Instead of you thinking about meals, you let AI look at what's in your fridge, plan 7 dinners around expiring items first, and auto-fill your shopping list for what's missing. Complete weekly menu in 2 minutes.</p>
+
+            <div class="stat-box">
+                <div class="stat"><div class="n">$40</div><div class="l">Weekly savings</div></div>
+                <div class="stat"><div class="n">4h</div><div class="l">Time saved weekly</div></div>
+                <div class="stat"><div class="n">70%</div><div class="l">Less food waste</div></div>
+            </div>
+
+            <h2>How AI meal planning actually works</h2>
+            <p>Modern AI meal planners use LLMs (like Gemini) to solve a multi-variable optimization problem:</p>
+            <ol>
+                <li><strong>Inventory</strong> — what's in your fridge/pantry?</li>
+                <li><strong>Expiry</strong> — what needs to be used first?</li>
+                <li><strong>Preferences</strong> — vegetarian? gluten-free? kids-friendly?</li>
+                <li><strong>Variety</strong> — no chicken 4 nights in a row</li>
+                <li><strong>Time</strong> — busy weekdays vs relaxed weekends</li>
+                <li><strong>Missing ingredients</strong> — auto-fill the shopping list</li>
+            </ol>
+
+            <p>Doing this manually takes 45 minutes. AI does it in 2 seconds — and typically finds better combinations than humans do.</p>
+
+            <h2>Where the $40/week savings come from</h2>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Source</th><th>Weekly savings</th></tr>
+                    <tr><td>Less food waste (expired items used first)</td><td>$10</td></tr>
+                    <tr><td>Fewer impulse purchases (list-based shopping)</td><td>$15</td></tr>
+                    <tr><td>Less takeout ("no idea what to eat" gone)</td><td>$15</td></tr>
+                    <tr><td><strong>Total</strong></td><td><strong>$40</strong></td></tr>
+                </table>
+            </div>
+
+            <p>Over a year that's <strong>$2,080 in savings</strong>. Even after a premium meal-planning app subscription ($40/year), you net $2,040.</p>
+
+            <h2>How to use FreshGarant's AI Weekly Meal Plan</h2>
+
+            <p><strong>Step 1</strong> — Snap your fridge with the AI Fridge Scanner. AI identifies products and adds them with estimated expiry dates. Takes 30 seconds.</p>
+
+            <p><strong>Step 2</strong> — Open "AI Weekly Meal Plan" (PRO feature). Choose servings (2, 4, 6). Optionally set dietary preferences.</p>
+
+            <p><strong>Step 3</strong> — Tap "Generate this week's plan". Gemini AI analyzes your inventory and generates a full 7-day menu.</p>
+
+            <p><strong>Step 4</strong> — Review the menu day-by-day. Each dish shows prep time and whether it uses expiring items (orange "USES EXPIRING" label).</p>
+
+            <p><strong>Step 5</strong> — Missing ingredients are auto-added to your shopping list, grouped by product category for efficient shopping.</p>
+
+            <h2>AI meal planning vs alternatives</h2>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Method</th><th>Time/week</th><th>Food waste</th><th>Cost delta</th></tr>
+                    <tr><td>"See what happens"</td><td>4.5 hours</td><td>~$500/year</td><td>+$40/week</td></tr>
+                    <tr><td>Manual meal planning</td><td>1 hour</td><td>~$250/year</td><td>+$15/week</td></tr>
+                    <tr><td>Meal kits (HelloFresh etc.)</td><td>15 min</td><td>~$50/year</td><td>+$50/week</td></tr>
+                    <tr><td><strong>AI Meal Planning</strong></td><td><strong>2 min</strong></td><td><strong>~$80/year</strong></td><td><strong>−$40/week</strong></td></tr>
+                </table>
+            </div>
+
+            <h2>Common questions</h2>
+
+            <h3>Does AI actually understand food combinations?</h3>
+            <p>Yes, remarkably well. Gemini is trained on millions of recipes and understands flavor profiles, cuisine styles, dietary restrictions, and cooking techniques. It won't suggest pineapple with lasagna (unless you're into that).</p>
+
+            <h3>Can I regenerate if I don't like the menu?</h3>
+            <p>Yes. FreshGarant PRO allows 5 regenerations per day. You can also replace individual dishes without redoing the entire week.</p>
+
+            <h3>What about picky eaters and allergies?</h3>
+            <p>Set preferences once in Settings: vegetarian, vegan, gluten-free, dairy-free, no pork, no seafood, etc. AI respects them every time.</p>
+
+            <h3>Does it work without internet?</h3>
+            <p>The generation itself needs internet (Gemini runs in the cloud). But once generated, the menu is stored locally so you can reference it offline.</p>
+
+            <h2>Pro tips to get the most out of it</h2>
+
+            <ol>
+                <li><strong>Scan your fridge weekly</strong> — Sunday evening before grocery shopping is ideal. AI works best with accurate inventory.</li>
+                <li><strong>Set dietary preferences upfront</strong> — saves you regenerating multiple times.</li>
+                <li><strong>Regenerate if unhappy</strong> — you have 5 tries per day as PRO. Better than settling for a menu with 2 unappealing dishes.</li>
+                <li><strong>Combine with price alerts</strong> — the app notifies you when products go on sale. Meal plan + sale = maximum savings.</li>
+                <li><strong>Track your savings</strong> — the Home screen shows how much money you saved this month by eating expiring items first.</li>
+            </ol>
+
+            <div class="tip-card">
+                <h3>🎁 Get PRO free via referrals</h3>
+                <p>Invite friends with your unique code. Each successful invite = 1 month PRO free (for both of you). 5 invites = 5 free months. Better than paying for 5 months of subscription.</p>
+            </div>
+
+            <div class="app-cta">
+                <h3>🍽 Try AI Weekly Meal Plan free for 7 days</h3>
+                <p>Download FreshGarant, scan your fridge, let AI plan your entire week. Free 7-day trial, no subscription without your permission, no auto-renewal traps.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.groundedstudio.freshgarant" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    Free download
+                </a>
+            </div>
+
+            <h2>Summary</h2>
+            <p>AI meal planning solves the two biggest food-related pain points: time (4.5 hours → 2 minutes) and money ($40/week saved). It's not a gimmick — it's a real, measurable ROI. Anyone spending &gt;$300/month on groceries will see the app pay for itself in the first week.</p>
+            <p>What will you do with those 4 extra hours per week?</p>
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Related articles</h2>
+        <div class="related-cards">
+            <a href="ai-photo-fridge-scanner.html" class="related-card"><div class="cat">🤖 AI</div><div class="title">AI Photo Fridge Scanner →</div></a>
+            <a href="meal-planning-for-the-week.html" class="related-card"><div class="cat">🍽 Meal Planning</div><div class="title">Meal Planning for the Week →</div></a>
+            <a href="save-400-euros-food-waste.html" class="related-card"><div class="cat">💰 Savings</div><div class="title">Save $400/year on Food →</div></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center"><a href="../freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a><a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a><a href="freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a><a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a><a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a></div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+<script>var rp=document.getElementById('read-progress');window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});</script>
+<script src="/assets/tracking.js" defer></script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

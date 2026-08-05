@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#22c55e">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Measurement to Invoice in 5 Minutes — Complete Workflow for Contractors | BuildExact</title>
+    <meta name="description" content="Learn how to measure a bathroom floor, calculate tiles, generate a quote and send an invoice — all in one app. Complete workflow for contractors and independent tradespeople.">
+    <meta name="keywords" content="contractor app, quote generator app, invoice app contractor, tile calculator, construction workflow, mobile quote app, BuildExact, contractor mobile tools">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/blog/from-measurement-to-invoice-5-minutes.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/from-measurement-to-invoice-5-minutes.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/van-meting-tot-factuur-in-5-minuten.html">
+    <meta property="og:title" content="From Measurement to Invoice in 5 Minutes — Complete Workflow for Contractors">
+    <meta property="og:description" content="Complete walkthrough: measure a bathroom floor, calculate tiles, generate a quote and send invoice. All in one app.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx-2.png">
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Article", "headline": "From Measurement to Invoice in 5 Minutes — Complete Workflow for Contractors", "author": { "@type": "Organization", "name": "Grounded Studio" }, "publisher": { "@type": "Organization", "name": "Grounded Studio", "logo": { "@type": "ImageObject", "url": "https://grounded-studio.app/assets/logo-gs.png" } }, "datePublished": "2026-08-04", "inLanguage": "en" }
+    </script>
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/" }, { "@type": "ListItem", "position": 2, "name": "BuildExact", "item": "https://grounded-studio.app/buildexact.html" }, { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://grounded-studio.app/blog/buildexact.html" }, { "@type": "ListItem", "position": 4, "name": "From measurement to invoice" } ] }
+    </script>
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "HowTo", "name": "From measurement to invoice in 5 minutes", "totalTime": "PT5M", "step": [ { "@type": "HowToStep", "name": "Measure the floor", "text": "Enter length and width of the bathroom floor. Save under the client name." }, { "@type": "HowToStep", "name": "Calculate tiles with cutting waste", "text": "Enter tile size and cutting waste. App calculates exact count." }, { "@type": "HowToStep", "name": "Add materials from library", "text": "Select frequently-used materials — prices auto-fill." }, { "@type": "HowToStep", "name": "Add labor", "text": "Estimate hours and add as a separate line at your hourly rate." }, { "@type": "HowToStep", "name": "Generate quote PDF", "text": "App creates a branded PDF with your logo, VAT, signature and payment terms." }, { "@type": "HowToStep", "name": "Send and track", "text": "Share via WhatsApp or email, then set status to 'Sent' to track per client." }, { "@type": "HowToStep", "name": "Convert to invoice", "text": "Once accepted, tap 'Create invoice' — all lines carry over automatically." } ] }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0a0f1a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+        :root { --bx:#2563eb; --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+        .step-card { background:rgba(255,255,255,.02); border:1px solid var(--border); border-radius:16px; padding:28px 32px; margin:24px 0; position:relative; }
+        .step-card .step-num { position:absolute; top:-14px; left:24px; background:var(--bx); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:.85rem; padding:5px 14px; border-radius:100px; }
+        .step-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:800; margin:8px 0 12px; color:#fff; }
+        .step-card p { font-size:.98rem; color:#cbd5e1; line-height:1.75; margin-bottom:12px; }
+        .step-card .time { display:inline-block; font-size:.75rem; font-weight:700; color:var(--gs); letter-spacing:.05em; text-transform:uppercase; margin-bottom:8px; }
+        .table-wrap { overflow-x:auto; margin:28px 0; }
+        table { width:100%; border-collapse:collapse; font-size:.9rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media (max-width:700px) { .related-cards { grid-template-columns:1fr; } }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--bx); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        #read-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#2563eb,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="read-progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><a href="buildexact.html" class="nav-back">← Blog</a></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="buildexact.html">Blog</a> / <span>Measurement to invoice in 5 min</span></div>
+            <div class="article-cat">🏗️ Contractor Workflow</div>
+            <h1>From Measurement to Invoice in 5 Minutes — Complete Workflow for Contractors</h1>
+            <div class="article-meta"><span>📅 August 4, 2026</span><span>⏱ 7 min read</span><span>✍️ Grounded Studio</span></div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+            <p>You're at the client's house, measuring a bathroom floor, and you promise: "I'll send a quote tonight." Then you spend 90 minutes wrestling with Excel, typing something quickly in Word, using a calculator to figure out materials — and the next day you can't remember what you actually entered. Sound familiar?</p>
+
+            <p>In this walkthrough you'll see the <strong>complete workflow from measurement to sent invoice</strong> using one concrete example: a 4 m² bathroom floor. All in one app, all digital, all saved per client. Total time: <strong>under 5 minutes</strong>.</p>
+
+            <h2>The job: 4 m² bathroom floor</h2>
+            <p>You're at Mrs. Smith's house in Manchester. She wants to replace the bathroom floor — 2.0 × 2.0 m, so 4 m². Grey 30×60 cm tiles, and the job needs to be done next week. You pull out your phone, open BuildExact, and get started.</p>
+
+            <div class="tip-card">
+                <h3>💡 Why mobile working pays off</h3>
+                <p>Research from UK trade associations shows: contractors who send quotes within 24 hours after the site visit win the job 2× more often. Working on-site eliminates that 24-hour gap entirely.</p>
+            </div>
+
+            <h2>Step 1: Enter the measurement</h2>
+            <div class="step-card">
+                <div class="step-num">Step 1</div>
+                <div class="time">⏱ 30 seconds</div>
+                <h3>Tap "New project" → "Area"</h3>
+                <p>Enter length (2.0 m) and width (2.0 m). App calculates 4 m² instantly. Save under client name "Mrs. Smith — Manchester".</p>
+                <p>No more separate notepad. No risk of forgetting measurements. Everything in the app, linked to the right client.</p>
+            </div>
+
+            <h2>Step 2: Calculate tiles with cutting waste</h2>
+            <div class="step-card">
+                <div class="step-num">Step 2</div>
+                <div class="time">⏱ 40 seconds</div>
+                <h3>Choose "Tiles" calculator</h3>
+                <p>Enter: area 4 m², tile size 30×60 cm, cutting waste 10%. App calculates: <strong>22 tiles + 10% margin = 25 tiles</strong>.</p>
+                <p>Cutting waste is one of the most forgotten factors in DIY calculations. 10% is standard for straight walls; increase to 15% for diagonal patterns or lots of obstacles.</p>
+            </div>
+
+            <h2>Step 3: Add materials from your library</h2>
+            <div class="step-card">
+                <div class="step-num">Step 3</div>
+                <div class="time">⏱ 45 seconds</div>
+                <h3>Tap "Add material"</h3>
+                <p>From your saved materials library, pick the items you use often — prices auto-fill:</p>
+                <div class="table-wrap">
+                    <table>
+                        <tr><th>Material</th><th>Qty</th><th>Unit price</th><th>Total</th></tr>
+                        <tr><td>Grey tiles 30×60</td><td>25</td><td>£8.50</td><td>£212.50</td></tr>
+                        <tr><td>Tile adhesive (25 kg)</td><td>2</td><td>£18.00</td><td>£36.00</td></tr>
+                        <tr><td>Grout grey</td><td>1</td><td>£12.50</td><td>£12.50</td></tr>
+                        <tr><td>Spacers 3mm</td><td>1</td><td>£6.00</td><td>£6.00</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <h2>Step 4: Add labor</h2>
+            <div class="step-card">
+                <div class="step-num">Step 4</div>
+                <div class="time">⏱ 20 seconds</div>
+                <h3>Tap "Add labor"</h3>
+                <p>For a 4 m² bathroom floor, budget ~6 hours (remove old floor, prep, tile, grout). At £55/hour that's <strong>£330</strong>.</p>
+                <p>Always put labor as a separate line, not hidden in the m² price. Clients see exactly what they're paying for — and if they push back on price, you can adjust hours without touching material costs.</p>
+            </div>
+
+            <h2>Step 5: Generate the quote PDF</h2>
+            <div class="step-card">
+                <div class="step-num">Step 5</div>
+                <div class="time">⏱ 30 seconds</div>
+                <h3>Tap "Create quote"</h3>
+                <p>The app bundles all lines into a professional PDF:</p>
+                <ul>
+                    <li><strong>Your logo and business details</strong> at the top</li>
+                    <li><strong>Client details</strong> for Mrs. Smith</li>
+                    <li><strong>Quote number</strong> auto-incremented (2026-058)</li>
+                    <li><strong>All lines</strong> with description, quantity and price</li>
+                    <li><strong>Subtotal, VAT, total</strong></li>
+                    <li><strong>Your signature</strong> (set once, added always)</li>
+                    <li><strong>Payment terms</strong> and bank details</li>
+                </ul>
+                <div class="table-wrap">
+                    <table>
+                        <tr><th>Summary</th><th>Amount</th></tr>
+                        <tr><td>Materials</td><td>£267.00</td></tr>
+                        <tr><td>Labor</td><td>£330.00</td></tr>
+                        <tr><td><strong>Subtotal ex VAT</strong></td><td><strong>£597.00</strong></td></tr>
+                        <tr><td>VAT 20%</td><td>£119.40</td></tr>
+                        <tr><td><strong>Total incl VAT</strong></td><td><strong>£716.40</strong></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <h2>Step 6: Send and follow up</h2>
+            <div class="step-card">
+                <div class="step-num">Step 6</div>
+                <div class="time">⏱ 30 seconds</div>
+                <h3>Tap "Share" → WhatsApp or email</h3>
+                <p>The PDF goes straight to Mrs. Smith — before you've even left your van. Then set the quote status to <strong>"Sent"</strong>. From your client overview you'll see exactly which quotes are still open.</p>
+                <p>No reply after 3 days? Send a quick follow-up. Data shows: quotes with 1 follow-up have a 68% acceptance rate, without follow-up just 42%.</p>
+            </div>
+
+            <h2>Step 7: Convert quote to invoice</h2>
+            <div class="step-card">
+                <div class="step-num">Step 7</div>
+                <div class="time">⏱ 45 seconds</div>
+                <h3>Client says "Go ahead"? Tap "Create invoice"</h3>
+                <p>All quote lines carry over 1-to-1. Just fill in an invoice number (auto-generated), invoice date, and payment term (14 or 30 days). Tap "Generate PDF" and send.</p>
+                <p>For your admin: all invoices are saved per client with status <em>Draft / Sent / Paid / Overdue</em>. At the end of the quarter, export everything for your accountant in one go.</p>
+            </div>
+
+            <div class="app-cta">
+                <h3>🏗️ Try it yourself — free</h3>
+                <p>BuildExact includes 20+ calculators (tiles, paint, laminate, insulation, concrete, plasterboard), client management, quotes and invoices. Fully offline, no account needed, no subscription. Pro features one-time £14.99.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    Free download
+                </a>
+            </div>
+
+            <h2>Bonus: what you no longer have to do</h2>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Old workflow</th><th>With BuildExact</th></tr>
+                    <tr><td>Scribble measurement on paper</td><td>Save directly per client</td></tr>
+                    <tr><td>Open Excel at home, calculate m²</td><td>Auto with cutting waste</td></tr>
+                    <tr><td>Look up material prices</td><td>From library, always current</td></tr>
+                    <tr><td>Copy Word template, adjust</td><td>PDF in 30 sec</td></tr>
+                    <tr><td>Scan and paste signature</td><td>Auto-added</td></tr>
+                    <tr><td>Separate folders per client</td><td>Everything linked per client</td></tr>
+                    <tr><td>Build invoice from scratch</td><td>Carry over from quote</td></tr>
+                    <tr><td><strong>Total: 90+ minutes</strong></td><td><strong>Total: under 5 minutes</strong></td></tr>
+                </table>
+            </div>
+
+            <h2>Summary</h2>
+            <p>Measuring a bathroom floor, calculating materials, creating a quote, sending it and later converting to an invoice: <strong>all in under 5 minutes</strong>, all linked per client, all digital. The old "just do it at home in Excel" workflow is finished.</p>
+            <p>Contractors who adopt this workflow send quotes 3× faster and win jobs 2× more often — purely because they're at the client before the competition. Try it on your next job.</p>
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Related articles</h2>
+        <div class="related-cards">
+            <a href="how-to-write-construction-quote.html" class="related-card"><div class="cat">📄 Quotes</div><div class="title">How to Write a Winning Construction Quote →</div></a>
+            <a href="how-to-calculate-tiles.html" class="related-card"><div class="cat">🧮 Calculator</div><div class="title">How to Calculate Tiles →</div></a>
+            <a href="client-management-for-contractors.html" class="related-card"><div class="cat">🏗️ Contractor</div><div class="title">Client Management for Contractors →</div></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center"><a href="../freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a><a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a><a href="buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a><a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a><a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a></div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+<script>var rp=document.getElementById('read-progress');window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});</script>
+<script src="/assets/tracking.js" defer></script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>
