@@ -79,6 +79,14 @@
         .mobile-menu-links a:hover { color:#fff; background:rgba(255,255,255,.06); border-color:var(--border); }
         .mobile-menu-divider { height:1px; background:var(--border); margin:12px 0; }
         .mobile-cta { display:flex; align-items:center; justify-content:center; margin-top:16px; padding:16px; border-radius:12px; background:rgba(129,140,248,.15); border:1px solid rgba(129,140,248,.35); color:var(--fl); font-weight:700; font-size:.95rem; text-decoration:none; min-height:52px; transition:background .2s; }
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+        .mobile-lang-toggle { display:flex; gap:8px; margin-top:4px; }
+        .mobile-lang-toggle .lang-btn { flex:1; text-align:center; padding:12px; border-radius:10px; border:1px solid var(--border); font-size:.85rem; min-height:48px; }
+        .mobile-lang-toggle .lang-btn.active { background:rgba(129,140,248,.2); border-color:rgba(129,140,248,.4); color:var(--fl); }
+        @media (max-width:700px) { .lang-toggle { display:none; } }
 
         /* HERO */
         .hero { min-height:60vh; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:160px 28px 80px; text-align:center; }
@@ -152,12 +160,16 @@
             </a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="games.html" class="active">Games</a></li>
-                    <li><a href="freshgarant.html">FreshGarant</a></li>
-                    <li><a href="buildexact.html">BuildExact</a></li>
-                    <li><a href="index.html#studio">Studio</a></li>
+                    <li><a href="games.html" class="active" data-i18n="nav.games">Games</a></li>
+                    <li><a href="freshgarant.html" data-i18n="nav.vg">FreshGarant</a></li>
+                    <li><a href="buildexact.html" data-i18n="nav.bx">BuildExact</a></li>
+                    <li><a href="index.html#studio" data-i18n="nav.studio">Studio</a></li>
                 </ul>
-                <a href="games/flow.html" class="nav-cta">Play Flow</a>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn"        data-lang="nl">NL</button>
+                </div>
+                <a href="games/flow.html" class="nav-cta" data-i18n="nav.cta_flow">Play Flow</a>
                 <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
@@ -169,13 +181,17 @@
 <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-modal="true">
     <ul class="mobile-menu-links">
-        <li><a href="games.html">🎮 <span>Games</span></a></li>
-        <li><a href="freshgarant.html">🌿 <span>FreshGarant</span></a></li>
-        <li><a href="buildexact.html">🏗️ <span>BuildExact</span></a></li>
-        <li><a href="index.html#studio">✨ <span>Studio</span></a></li>
+        <li><a href="games.html">🎮 <span data-i18n="nav.games">Games</span></a></li>
+        <li><a href="freshgarant.html">🌿 <span data-i18n="nav.vg">FreshGarant</span></a></li>
+        <li><a href="buildexact.html">🏗️ <span data-i18n="nav.bx">BuildExact</span></a></li>
+        <li><a href="index.html#studio">✨ <span data-i18n="nav.studio">Studio</span></a></li>
     </ul>
     <div class="mobile-menu-divider"></div>
-    <a href="games/flow.html" class="mobile-cta">Play Flow</a>
+    <div class="mobile-lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="games/flow.html" class="mobile-cta" data-i18n="nav.cta_flow">Play Flow</a>
 </div>
 
 <!-- HERO -->
@@ -184,9 +200,9 @@
     <div class="orb orb2"></div>
     <div class="hero-grid"></div>
     <div class="hero-content">
-        <div class="hero-badge"><div class="badge-dot"></div>Grounded Studio · Games</div>
-        <h1>Games we make</h1>
-        <p class="hero-sub">Minimalist, offline, focused. Small experiences designed to respect your time — the same principles behind our apps, brought to play.</p>
+        <div class="hero-badge"><div class="badge-dot"></div><span data-i18n="hero.badge">Grounded Studio · Games</span></div>
+        <h1 data-i18n="hero.h1">Games we make</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Minimalist, offline, focused. Small experiences designed to respect your time — the same principles behind our apps, brought to play.</p>
     </div>
 </section>
 
@@ -196,31 +212,31 @@
         <div class="games-grid">
             <a href="games/flow.html" class="game-card a-fade">
                 <div class="game-cover">
-                    <span class="game-cover-tag cs-tag">🚀 Coming soon on Google Play</span>
+                    <span class="game-cover-tag cs-tag" data-i18n="flow.cover_tag">🚀 Coming soon on Google Play</span>
                     <span class="game-cover-title">FLOW</span>
                 </div>
                 <div class="game-body">
-                    <h2>Flow</h2>
-                    <p>Connect the circuit, tile the grid. A minimalist logic puzzle with 73 handcrafted levels — offline. Launching soon on Google Play.</p>
+                    <h2 data-i18n="flow.title">Flow</h2>
+                    <p data-i18n="flow.desc">Connect the circuit, tile the grid. A minimalist logic puzzle with 73 handcrafted levels — offline. Launching soon on Google Play.</p>
                     <div class="game-meta">
-                        <span>73 levels</span>
-                        <span>Offline</span>
-                        <span>Android</span>
+                        <span data-i18n="flow.meta1">73 levels</span>
+                        <span data-i18n="flow.meta2">Offline</span>
+                        <span data-i18n="flow.meta3">Android</span>
                     </div>
-                    <span class="game-cta">Discover Flow</span>
+                    <span class="game-cta" data-i18n="flow.cta">Discover Flow</span>
                 </div>
             </a>
 
             <div class="game-card soon a-fade">
                 <div class="game-cover">
-                    <span class="game-cover-tag">Coming soon</span>
+                    <span class="game-cover-tag" data-i18n="next.cover_tag">Coming soon</span>
                     <span class="game-cover-title">???</span>
                 </div>
                 <div class="game-body">
-                    <h2>Next up</h2>
-                    <p>A new game is in the works. Same design principles: calm, focused, offline.</p>
+                    <h2 data-i18n="next.title">Next up</h2>
+                    <p data-i18n="next.desc">A new game is in the works. Same design principles: calm, focused, offline.</p>
                     <div class="game-meta">
-                        <span>In development</span>
+                        <span data-i18n="next.meta">In development</span>
                     </div>
                 </div>
             </div>
@@ -232,10 +248,10 @@
 <div class="about-mini">
     <div class="c">
         <div class="a-fade">
-            <div class="section-label" style="justify-content:center"><span>●</span> Grounded Studio</div>
-            <h2 class="section-title">More than games</h2>
-            <p>Grounded Studio also builds purposeful Android apps — FreshGarant for tracking food expiry dates, and BuildExact for construction calculations. Same studio, same quality bar.</p>
-            <a href="index.html" class="back-btn">← Back to studio</a>
+            <div class="section-label" style="justify-content:center"><span>●</span> <span data-i18n="about.label">Grounded Studio</span></div>
+            <h2 class="section-title" data-i18n="about.title">More than games</h2>
+            <p data-i18n="about.desc">Grounded Studio also builds purposeful Android apps — FreshGarant for tracking food expiry dates, and BuildExact for construction calculations. Same studio, same quality bar.</p>
+            <a href="index.html" class="back-btn" data-i18n="about.back">← Back to studio</a>
         </div>
     </div>
 </div>
@@ -286,6 +302,78 @@
     hamburger.addEventListener('click', () => toggleMenu(!mobileMenu.classList.contains('open')));
     overlay.addEventListener('click', () => toggleMenu(false));
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+    /* i18n */
+    const T = {
+        en: {
+            'nav.games':       'Games',
+            'nav.vg':          'FreshGarant',
+            'nav.bx':          'BuildExact',
+            'nav.studio':      'Studio',
+            'nav.cta_flow':    'Play Flow',
+            'hero.badge':      'Grounded Studio · Games',
+            'hero.h1':         'Games we make',
+            'hero.sub':        'Minimalist, offline, focused. Small experiences designed to respect your time — the same principles behind our apps, brought to play.',
+            'flow.cover_tag':  '🚀 Coming soon on Google Play',
+            'flow.title':      'Flow',
+            'flow.desc':       'Connect the circuit, tile the grid. A minimalist logic puzzle with 73 handcrafted levels — offline. Launching soon on Google Play.',
+            'flow.meta1':      '73 levels',
+            'flow.meta2':      'Offline',
+            'flow.meta3':      'Android',
+            'flow.cta':        'Discover Flow',
+            'next.cover_tag':  'Coming soon',
+            'next.title':      'Next up',
+            'next.desc':       'A new game is in the works. Same design principles: calm, focused, offline.',
+            'next.meta':       'In development',
+            'about.label':     'Grounded Studio',
+            'about.title':     'More than games',
+            'about.desc':      'Grounded Studio also builds purposeful Android apps — FreshGarant for tracking food expiry dates, and BuildExact for construction calculations. Same studio, same quality bar.',
+            'about.back':      '← Back to studio',
+        },
+        nl: {
+            'nav.games':       'Games',
+            'nav.vg':          'FreshGarant',
+            'nav.bx':          'BuildExact',
+            'nav.studio':      'Studio',
+            'nav.cta_flow':    'Speel Flow',
+            'hero.badge':      'Grounded Studio · Games',
+            'hero.h1':         'Games die we maken',
+            'hero.sub':        'Minimalistisch, offline, focused. Kleine ervaringen die je tijd respecteren — dezelfde principes als onze apps, maar dan om te spelen.',
+            'flow.cover_tag':  '🚀 Binnenkort in Google Play',
+            'flow.title':      'Flow',
+            'flow.desc':       'Verbind het circuit, vul het bord. Een minimalistische logica-puzzel met 73 handgemaakte levels — offline. Binnenkort in Google Play.',
+            'flow.meta1':      '73 levels',
+            'flow.meta2':      'Offline',
+            'flow.meta3':      'Android',
+            'flow.cta':        'Bekijk Flow',
+            'next.cover_tag':  'Binnenkort',
+            'next.title':      'Volgende',
+            'next.desc':       'Er is een nieuwe game onderweg. Dezelfde principes: rustig, gefocust, offline.',
+            'next.meta':       'In ontwikkeling',
+            'about.label':     'Grounded Studio',
+            'about.title':     'Meer dan games',
+            'about.desc':      'Grounded Studio bouwt ook zinvolle Android apps — FreshGarant voor het bijhouden van houdbaarheidsdata, en BuildExact voor bouwcalculaties. Zelfde studio, zelfde kwaliteit.',
+            'about.back':      '← Terug naar studio',
+        }
+    };
+
+    const savedLang    = localStorage.getItem('gs-lang');
+    const browserLang  = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    const browserIsNL  = browserLang.startsWith('nl');
+    let lang = savedLang || (browserIsNL ? 'nl' : 'en');
+
+    function applyLang(l) {
+        const dict = T[l];
+        document.documentElement.lang = l;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            if (dict[el.dataset.i18n]) el.textContent = dict[el.dataset.i18n];
+        });
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+        lang = l;
+        localStorage.setItem('gs-lang', l);
+    }
+    applyLang(lang);
+    document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
 </script>
 </body>
 </html>
