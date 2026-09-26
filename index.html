@@ -8,9 +8,9 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#22c55e">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grounded Studio — FreshGarant & BuildExact Android Apps</title>
-    <meta name="description" content="Grounded Studio builds smart Android apps: FreshGarant for tracking food expiry dates and reducing waste, and BuildExact for material calculations and cost estimates.">
-    <meta name="keywords" content="houdbaarheidsdatum app, voedselverspilling bijhouden, barcode scanner vervaldatum, food expiry tracker android, bouwcalculatie app, materiaalberekening android, kostenraming bouw, construction calculator, FreshGarant, FreshGarant, BuildExact, BuildExact, Grounded Studio">
+    <title>Grounded Studio — Android Apps & Games (BuildExact, FreshGarant, Flow)</title>
+    <meta name="description" content="Grounded Studio builds intuitive Android apps and focused games: BuildExact for construction calculations, FreshGarant for tracking food expiry dates, and Flow — a minimalist logic puzzle.">
+    <meta name="keywords" content="bouwcalculatie app, materiaalberekening android, kostenraming bouw, construction calculator, houdbaarheidsdatum app, voedselverspilling bijhouden, barcode scanner vervaldatum, food expiry tracker android, Flow puzzle game, connect the dots game, logic puzzle android, BuildExact, FreshGarant, Flow, Grounded Studio">
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
     <meta name="msvalidate.01" content="9833547A4167194E9891E1E7D448F605" />
@@ -22,8 +22,8 @@
     <!-- Open Graph -->
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="https://grounded-studio.app">
-    <meta property="og:title"       content="Grounded Studio — FreshGarant & BuildExact Android Apps">
-    <meta property="og:description" content="Smart Android apps for daily life. FreshGarant: track food expiry dates and reduce waste. BuildExact: material calculations and cost estimates.">
+    <meta property="og:title"       content="Grounded Studio — Android Apps & Games">
+    <meta property="og:description" content="Intuitive apps and focused games for Android. BuildExact for construction calculations, FreshGarant for food expiry tracking, Flow — a minimalist logic puzzle.">
     <meta property="og:image"       content="https://grounded-studio.app/assets/og-studio.svg">
     <meta property="og:locale"      content="nl_NL">
     <meta property="og:locale:alternate" content="en_US">
@@ -31,8 +31,8 @@
     <!-- Twitter/X card -->
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:url"         content="https://grounded-studio.app">
-    <meta name="twitter:title"       content="Grounded Studio — FreshGarant & BuildExact Android Apps">
-    <meta name="twitter:description" content="Smart Android apps for daily life. FreshGarant & BuildExact on Google Play.">
+    <meta name="twitter:title"       content="Grounded Studio — Android Apps & Games">
+    <meta name="twitter:description" content="Intuitive apps and focused games for Android. BuildExact, FreshGarant and Flow — on Google Play.">
     <meta name="twitter:image"       content="https://grounded-studio.app/assets/og-studio.svg">
 
     <!-- JSON-LD Structured Data -->
@@ -46,7 +46,7 @@
                 "name": "Grounded Studio",
                 "url": "https://grounded-studio.app",
                 "logo": "https://grounded-studio.app/assets/logo-gs.png",
-                "description": "Independent Android app studio based in the Netherlands, building purposeful apps for daily life.",
+                "description": "Independent Android studio based in the Netherlands, building purposeful apps and focused games for daily life.",
                 "foundingLocation": "Netherlands",
                 "sameAs": [
                     "https://play.google.com/store/apps/developer?id=Grounded+Studio",
@@ -70,7 +70,7 @@
                 "@id": "https://grounded-studio.app/#website",
                 "url": "https://grounded-studio.app",
                 "name": "Grounded Studio",
-                "description": "Independent Android app studio. Makers of FreshGarant and BuildExact.",
+                "description": "Independent Android studio. Makers of BuildExact, FreshGarant and Flow.",
                 "publisher": { "@id": "https://grounded-studio.app/#organization" },
                 "inLanguage": "en"
             },
@@ -176,6 +176,9 @@
             --bx:       #2563eb;
             --bx2:      #1d4ed8;
             --bx-glow:  rgba(37,99,235,0.35);
+            --fl:       #a78bfa;
+            --fl2:      #7c3aed;
+            --fl-glow:  rgba(167,139,250,0.35);
             --gs:       #818cf8;
             --gs2:      #6366f1;
             --gs-glow:  rgba(129,140,248,0.3);
@@ -443,8 +446,18 @@
         }
         .hero-sub { font-size:clamp(1rem,2.5vw,1.2rem); color:#64748b; max-width:560px; margin:0 auto 52px; line-height:1.75; animation:fadeUp .7s ease .35s both; }
 
+        /* Hero pill groups (Apps left, Games right) */
+        .hero-pills-wrap { display:flex; align-items:center; justify-content:center; gap:36px; flex-wrap:wrap; animation:fadeUp .7s ease .5s both; }
+        .pill-group { display:flex; flex-direction:column; align-items:center; gap:12px; }
+        .pill-group-label { font-size:.68rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#475569; }
+        .pill-divider { width:1px; align-self:stretch; background:linear-gradient(180deg, transparent 0%, rgba(255,255,255,.14) 40%, rgba(255,255,255,.14) 60%, transparent 100%); margin-top:22px; }
+        @media (max-width:600px) {
+            .hero-pills-wrap { gap:20px; }
+            .pill-divider { width:60%; height:1px; background:linear-gradient(90deg, transparent 0%, rgba(255,255,255,.14) 50%, transparent 100%); margin-top:0; align-self:auto; }
+        }
+
         /* Hero pills with shimmer */
-        .hero-pills { display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; animation:fadeUp .7s ease .5s both; }
+        .hero-pills { display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; }
         .pill {
             display:flex; align-items:center; gap:12px;
             padding:12px 24px; border-radius:16px;
@@ -470,6 +483,9 @@
         .pill.vg:hover { background:rgba(34,197,94,.18);border-color:rgba(34,197,94,.5);transform:translateY(-3px);box-shadow:0 12px 32px var(--vg-glow); }
         .pill.bx { background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.25);color:var(--bx); }
         .pill.bx:hover { background:rgba(37,99,235,.18);border-color:rgba(37,99,235,.5);transform:translateY(-3px);box-shadow:0 12px 32px var(--bx-glow); }
+        .pill.fl { background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.28);color:var(--fl); }
+        .pill.fl:hover { background:rgba(167,139,250,.18);border-color:rgba(167,139,250,.5);transform:translateY(-3px);box-shadow:0 12px 32px var(--fl-glow); }
+        .pill.fl::after { animation-delay: 2.4s; }
 
         /* Scroll indicator — smoother */
         .scroll-hint { position:absolute; bottom:36px; left:0; right:0; display:flex; flex-direction:column; align-items:center; gap:10px; color:#334155; font-size:.72rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; animation:fadeUp 1s ease 1.2s both; }
@@ -492,8 +508,9 @@
             .app-grid,.app-grid.flip { grid-template-columns:1fr;direction:ltr;gap:60px; }
             .phone-wrap { order:-1; }
         }
-        .vg-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 65% 60% at 85% 50%,rgba(34,197,94,.07) 0%,transparent 70%); }
-        .bx-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 65% 60% at 15% 50%,rgba(37,99,235,.07) 0%,transparent 70%); }
+        .vg-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 65% 60% at 15% 50%,rgba(34,197,94,.07) 0%,transparent 70%); }
+        .bx-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 65% 60% at 85% 50%,rgba(37,99,235,.07) 0%,transparent 70%); }
+        .fl-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 65% 60% at 85% 50%,rgba(167,139,250,.08) 0%,transparent 70%); }
 
         /* Horizontal line separator between app sections */
         .section-separator {
@@ -509,6 +526,7 @@
         .s-tag-emoji { font-size:14px; }
         .s-tag.vg { color:var(--vg); }
         .s-tag.bx { color:var(--bx); }
+        .s-tag.fl { color:var(--fl); }
         .s-tag.gs { color:var(--gs); }
         .s-title { font-family:'Space Grotesk',sans-serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.035em;line-height:1.05;margin-bottom:20px; }
 
@@ -520,6 +538,10 @@
         .s-title span[style*="color:var(--bx)"],
         .s-title [style*="color:var(--bx)"] {
             text-shadow: 0 0 40px rgba(37,99,235,.5), 0 0 80px rgba(37,99,235,.25);
+        }
+        .s-title span[style*="color:var(--fl)"],
+        .s-title [style*="color:var(--fl)"] {
+            text-shadow: 0 0 40px rgba(167,139,250,.55), 0 0 80px rgba(167,139,250,.28);
         }
         .s-title span[style*="color:var(--gs)"],
         .s-title [style*="color:var(--gs)"] {
@@ -570,9 +592,20 @@
         }
         .bx-section .feat:hover::before { opacity: 1; }
 
+        /* FL section (Games) — purple left-border glow */
+        .fl-section .feat::before { background: linear-gradient(180deg, var(--fl), rgba(167,139,250,.3)); box-shadow: 0 0 12px rgba(167,139,250,.6); }
+        .fl-section .feat:hover {
+            background: rgba(167,139,250,.06);
+            border-color: rgba(167,139,250,.28);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(167,139,250,.14);
+        }
+        .fl-section .feat:hover::before { opacity: 1; }
+
         .feat-ico { width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0; }
         .feat-ico.vg { background:rgba(34,197,94,.12); }
         .feat-ico.bx { background:rgba(37,99,235,.12); }
+        .feat-ico.fl { background:rgba(167,139,250,.14); }
         .feat-body h4 { font-size:.93rem;font-weight:700;margin-bottom:4px; }
         .feat-body p  { font-size:.85rem;color:var(--muted);line-height:1.6; }
 
@@ -700,6 +733,69 @@
             0%,100% { transform:perspective(1100px) rotateY(12deg) rotateX(4deg) translateY(0); }
             50%      { transform:perspective(1100px) rotateY(12deg) rotateX(4deg) translateY(-16px); }
         }
+
+        /* Flow: lean like FreshGarant */
+        .fl-tilt {
+            transform: perspective(1100px) rotateY(-10deg) rotateX(4deg);
+            animation: floatFL 7s ease-in-out infinite;
+            animation-delay: -1.5s;
+        }
+        .fl-tilt:hover {
+            transform: perspective(1100px) rotateY(-4deg) rotateX(2deg) translateY(-14px) !important;
+            animation-play-state: paused;
+        }
+        @keyframes floatFL {
+            0%,100% { transform:perspective(1100px) rotateY(-10deg) rotateX(4deg) translateY(0); }
+            50%      { transform:perspective(1100px) rotateY(-10deg) rotateX(4deg) translateY(-16px); }
+        }
+
+        /* Flow: game cover art (no screenshot needed) */
+        .fl-cover {
+            width: 280px;
+            max-width: 100%;
+            aspect-ratio: 9/16;
+            border-radius: 40px;
+            display: flex; align-items: center; justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 30% 25%, rgba(167,139,250,.55), transparent 60%),
+                radial-gradient(ellipse at 75% 75%, rgba(236,72,153,.35), transparent 55%),
+                linear-gradient(160deg, #0a0f1c 0%, #1a1440 55%, #2e1065 100%);
+            box-shadow:
+                28px 36px 90px rgba(0,0,0,.7),
+                -6px -6px 30px rgba(0,0,0,.3),
+                0 0 0 1px rgba(255,255,255,.08),
+                0 0 80px rgba(167,139,250,.18);
+        }
+        .fl-cover::before {
+            content:''; position:absolute; inset:0;
+            background-image:
+                radial-gradient(rgba(255,255,255,.6) 1.2px, transparent 1.5px),
+                radial-gradient(rgba(199,210,254,.4) 1px, transparent 1.5px);
+            background-size: 90px 90px, 140px 140px;
+            background-position: 20px 40px, 60px 90px;
+            opacity: .5;
+            mask-image: radial-gradient(ellipse at center, black 50%, transparent 100%);
+        }
+        .fl-cover-title {
+            position: relative; z-index: 1;
+            font-family:'Space Grotesk',sans-serif;
+            font-size: 3.2rem; font-weight: 800;
+            letter-spacing: .12em;
+            color: rgba(255,255,255,.98);
+            text-shadow: 0 0 30px rgba(167,139,250,.6), 0 0 60px rgba(167,139,250,.3);
+        }
+        .fl-cover-sub {
+            position: relative; z-index: 1;
+            margin-top: 14px;
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: rgba(199,210,254,.75);
+        }
+        @media(max-width:700px) { .fl-cover { width: 240px; border-radius: 32px; } .fl-cover-title { font-size: 2.6rem; } }
 
         /* The screenshot image itself */
         .app-screenshot {
@@ -1019,17 +1115,19 @@
             </a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li>
-                        <a href="freshgarant.html">
-                            <img src="assets/icon-vg.png" class="nav-icon" alt="" onerror="this.style.display='none'">
-                            <span data-i18n="nav.vg">FreshGarant</span>
-                        </a>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.apps">Apps</span><span class="arrow">▾</span></button>
+                        <div class="nav-dropdown-menu">
+                            <a href="buildexact.html">🏗️ <span data-i18n="nav.bx">BuildExact</span></a>
+                            <a href="freshgarant.html">🌿 <span data-i18n="nav.vg">FreshGarant</span></a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="buildexact.html">
-                            <img src="assets/icon-bx.png" class="nav-icon" alt="" onerror="this.style.display='none'">
-                            <span data-i18n="nav.bx">BuildExact</span>
-                        </a>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.games">Games</span><span class="arrow">▾</span></button>
+                        <div class="nav-dropdown-menu">
+                            <a href="games/flow.html">🧩 <span data-i18n="nav.games_flow">Flow</span></a>
+                            <a href="games.html">🎮 <span data-i18n="nav.games_all">All games</span></a>
+                        </div>
                     </li>
                     <li class="nav-dropdown">
                         <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.blog">Blog</span><span class="arrow">▾</span></button>
@@ -1044,7 +1142,7 @@
                     <button class="lang-btn active" data-lang="en">EN</button>
                     <button class="lang-btn"        data-lang="nl">NL</button>
                 </div>
-                <a href="#freshgarant" class="nav-cta" data-i18n="nav.cta">Our Apps</a>
+                <a href="#buildexact" class="nav-cta" data-i18n="nav.cta">Our Apps</a>
                 <!-- Hamburger (mobile only) -->
                 <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
                     <span></span>
@@ -1063,15 +1161,27 @@
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-modal="true">
     <ul class="mobile-menu-links">
         <li>
+            <a href="buildexact.html" class="mobile-nav-link">
+                <img src="assets/icon-bx.png" alt="" onerror="this.outerHTML='🏗️'">
+                <span data-i18n="nav.bx">BuildExact</span>
+            </a>
+        </li>
+        <li>
             <a href="freshgarant.html" class="mobile-nav-link">
                 <img src="assets/icon-vg.png" alt="" onerror="this.outerHTML='🌿'">
                 <span data-i18n="nav.vg">FreshGarant</span>
             </a>
         </li>
         <li>
-            <a href="buildexact.html" class="mobile-nav-link">
-                <img src="assets/icon-bx.png" alt="" onerror="this.outerHTML='🏗️'">
-                <span data-i18n="nav.bx">BuildExact</span>
+            <a href="games.html" class="mobile-nav-link">
+                <span style="font-size:20px">🎮</span>
+                <span data-i18n="nav.games">Games</span>
+            </a>
+        </li>
+        <li>
+            <a href="games/flow.html" class="mobile-nav-link">
+                <span style="font-size:20px">🧩</span>
+                <span data-i18n="nav.games_flow">Flow</span>
             </a>
         </li>
         <li>
@@ -1098,7 +1208,7 @@
         <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn"        data-lang="nl">NL</button>
     </div>
-    <a href="#freshgarant" class="mobile-cta mobile-nav-link" data-i18n="nav.cta">Our Apps</a>
+    <a href="#buildexact" class="mobile-cta mobile-nav-link" data-i18n="nav.cta">Our Apps</a>
 </div>
 
 <!-- ── HERO ──────────────────────────────────────────────── -->
@@ -1114,20 +1224,34 @@
             <div class="badge-dot"></div>
             Grounded Studio
         </div>
-        <h1 data-i18n-html="hero.h1">Apps that<br>actually work</h1>
+        <h1 data-i18n-html="hero.h1">Apps and games<br>that just work</h1>
         <p class="hero-sub" data-i18n="hero.sub">
-            We build intuitive, smart apps that make your daily life easier.
-            From food tracking to building calculations — made with passion and precision.
+            We build intuitive apps and focused games — from construction calculations and food tracking to logic puzzles. Made with passion and precision.
         </p>
-        <div class="hero-pills">
-            <a href="freshgarant.html" class="pill vg">
-                <img src="assets/icon-vg.png" class="pill-img" alt="FreshGarant" onerror="this.outerHTML='<div class=\'pill-emoji\'>🌿</div>'">
-                <span data-i18n="nav.vg">FreshGarant</span>
-            </a>
-            <a href="buildexact.html" class="pill bx">
-                <img src="assets/icon-bx.png" class="pill-img" alt="BuildExact" onerror="this.outerHTML='<div class=\'pill-emoji\'>🏗️</div>'">
-                <span data-i18n="nav.bx">BuildExact</span>
-            </a>
+        <div class="hero-pills-wrap">
+            <div class="pill-group">
+                <span class="pill-group-label" data-i18n="nav.apps">Apps</span>
+                <div class="hero-pills">
+                    <a href="buildexact.html" class="pill bx">
+                        <img src="assets/icon-bx.png" class="pill-img" alt="BuildExact" onerror="this.outerHTML='<div class=\'pill-emoji\'>🏗️</div>'">
+                        <span data-i18n="nav.bx">BuildExact</span>
+                    </a>
+                    <a href="freshgarant.html" class="pill vg">
+                        <img src="assets/icon-vg.png" class="pill-img" alt="FreshGarant" onerror="this.outerHTML='<div class=\'pill-emoji\'>🌿</div>'">
+                        <span data-i18n="nav.vg">FreshGarant</span>
+                    </a>
+                </div>
+            </div>
+            <div class="pill-divider" aria-hidden="true"></div>
+            <div class="pill-group">
+                <span class="pill-group-label" data-i18n="nav.games">Games</span>
+                <div class="hero-pills">
+                    <a href="#games" class="pill fl">
+                        <div class="pill-emoji" style="background:rgba(167,139,250,.15)">🧩</div>
+                        <span data-i18n="nav.games_flow">Flow</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="scroll-hint">
@@ -1140,8 +1264,8 @@
 <!-- ── STATS ROW ──────────────────────────────────────── -->
 <div class="stats-row a-fade">
     <div class="stat-item">
-        <span class="stat-num" style="background:linear-gradient(135deg,var(--vg),var(--gs));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">2</span>
-        <span class="stat-label" data-i18n="stats.apps">Apps on Android</span>
+        <span class="stat-num" style="background:linear-gradient(135deg,var(--vg),var(--fl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">3</span>
+        <span class="stat-label" data-i18n="stats.apps">Apps &amp; Games</span>
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item">
@@ -1162,10 +1286,101 @@
     </div>
 </div>
 
+<!-- ── BUILDEXACT ─────────────────────────────────────── -->
+<section class="app-section bx-section" id="buildexact">
+    <div class="c">
+        <div class="app-grid">
+
+            <!-- Text -->
+            <div>
+                <div class="app-icon-badge a-fade">
+                    <div class="app-icon-ring bx-ring">
+                        <img src="assets/icon-bx.png" class="app-icon-img" alt="BuildExact icon" onerror="this.outerHTML='<div class=\'app-icon-emoji\' style=\'background:rgba(37,99,235,.12)\'>🏗️</div>'">
+                    </div>
+                    <div class="app-icon-info">
+                        <h3 data-i18n="nav.bx">BuildExact</h3>
+                        <span data-i18n="bx.by">by Grounded Studio</span>
+                    </div>
+                </div>
+
+                <div class="s-tag bx a-fade" style="transition-delay:.06s">
+                    <span>●</span>&nbsp;<span data-i18n="bx.tag.text">App 01</span>
+                </div>
+                <h2 class="s-title a-fade" style="transition-delay:.12s" data-i18n-html="bx.h2">
+                    Build with<br><span style="color:var(--bx)">precision</span>
+                </h2>
+                <p class="s-desc a-fade" style="transition-delay:.18s" data-i18n="bx.desc">
+                    BuildExact is the smart calculation tool for builders and handymen. Calculate exact
+                    material needs, create cost estimates, and keep your projects organized.
+                </p>
+
+                <ul class="features">
+                    <li class="feat a-left" style="transition-delay:.08s">
+                        <div class="feat-ico bx">📐</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="bx.f1.h">Material Calculations</h4>
+                            <p data-i18n="bx.f1.p">Calculate exactly how much material you need for every job — including cut and waste percentages.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.16s">
+                        <div class="feat-ico bx">💰</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="bx.f2.h">Cost Estimation</h4>
+                            <p data-i18n="bx.f2.p">Create detailed cost estimates to manage your budget properly before the job starts.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.24s">
+                        <div class="feat-ico bx">📋</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="bx.f3.h">Project Management</h4>
+                            <p data-i18n="bx.f3.p">Manage multiple projects at once and keep track of progress, costs, and materials.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.32s">
+                        <div class="feat-ico bx">📤</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="bx.f4.h">PDF Export</h4>
+                            <p data-i18n="bx.f4.p">Easily share your calculations and estimates as a clean PDF with clients or colleagues.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="play-btn a-fade" style="transition-delay:.42s">
+                    <svg class="play-svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
+                        <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
+                        <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
+                        <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
+                    </svg>
+                    <div class="play-text">
+                        <small data-i18n="play.small">Download on</small>
+                        <span data-i18n="play.big">Google Play</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 3D Screenshot -->
+            <div class="phone-wrap a-scale">
+                <div class="screen-glow" style="background:var(--bx)"></div>
+                <div class="tilt-wrap bx-tilt">
+                    <img src="assets/screen-bx.png"
+                         class="app-screenshot"
+                         alt="BuildExact app screenshot"
+                         onerror="this.style.display='none'">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Section separator -->
+<div class="section-separator"></div>
+
 <!-- ── FRESHGARANT ─────────────────────────────────────── -->
 <section class="app-section vg-section" id="freshgarant">
     <div class="c">
-        <div class="app-grid">
+        <div class="app-grid flip">
 
             <!-- Text -->
             <div>
@@ -1181,7 +1396,7 @@
                 </div>
 
                 <div class="s-tag vg a-fade" style="transition-delay:.06s">
-                    <span>●</span>&nbsp;<span data-i18n="vg.tag.text">App 01</span>
+                    <span>●</span>&nbsp;<span data-i18n="vg.tag.text">App 02</span>
                 </div>
                 <h2 class="s-title a-fade" style="transition-delay:.12s" data-i18n-html="vg.h2">
                     Never waste<br><span style="color:var(--vg)">food again</span>
@@ -1191,42 +1406,42 @@
                 </p>
 
                 <ul class="features">
-                    <li class="feat a-left" style="transition-delay:.08s">
+                    <li class="feat a-right" style="transition-delay:.08s">
                         <div class="feat-ico vg">📱</div>
                         <div class="feat-body">
                             <h4 data-i18n="vg.f1.h">Barcode Scanner</h4>
                             <p data-i18n="vg.f1.p">Scan products directly with your camera to automatically look up product data and expiry dates.</p>
                         </div>
                     </li>
-                    <li class="feat a-left" style="transition-delay:.16s">
+                    <li class="feat a-right" style="transition-delay:.16s">
                         <div class="feat-ico vg">🔔</div>
                         <div class="feat-body">
                             <h4 data-i18n="vg.f2.h">Smart Notifications</h4>
                             <p data-i18n="vg.f2.p">Receive timely push notifications before products expire, so you can still use them in time.</p>
                         </div>
                     </li>
-                    <li class="feat a-left" style="transition-delay:.24s">
+                    <li class="feat a-right" style="transition-delay:.24s">
                         <div class="feat-ico vg">🛒</div>
                         <div class="feat-body">
                             <h4 data-i18n="vg.f3.h">Shopping List</h4>
                             <p data-i18n="vg.f3.p">Automatically generate a shopping list based on what you're almost out of or need to restock.</p>
                         </div>
                     </li>
-                    <li class="feat a-left" style="transition-delay:.32s">
+                    <li class="feat a-right" style="transition-delay:.32s">
                         <div class="feat-ico vg">📊</div>
                         <div class="feat-body">
                             <h4 data-i18n="vg.f4.h">Waste Statistics</h4>
                             <p data-i18n="vg.f4.p">See exactly how much money you save and track your progress in reducing food waste at home.</p>
                         </div>
                     </li>
-                    <li class="feat a-left" style="transition-delay:.40s">
+                    <li class="feat a-right" style="transition-delay:.40s">
                         <div class="feat-ico vg">✨</div>
                         <div class="feat-body">
                             <h4 data-i18n="vg.f5.h">AI Recipes <span style="font-size:.7em;opacity:.7">Pro</span></h4>
                             <p data-i18n="vg.f5.p">Gemini AI turns your soon-to-expire ingredients into personalized recipes. Less waste, more flavor.</p>
                         </div>
                     </li>
-                    <li class="feat a-left" style="transition-delay:.48s">
+                    <li class="feat a-right" style="transition-delay:.48s">
                         <div class="feat-ico vg">👨‍👩‍👧</div>
                         <div class="feat-body">
                             <h4 data-i18n="vg.f6.h">Family Sharing <span style="font-size:.7em;opacity:.7">Pro</span></h4>
@@ -1267,87 +1482,93 @@
 <!-- Section separator -->
 <div class="section-separator"></div>
 
-<!-- ── BUILDEXACT ─────────────────────────────────────── -->
-<section class="app-section bx-section" id="buildexact">
+<!-- ── GAMES (FLOW) ────────────────────────────────────── -->
+<section class="app-section fl-section" id="games">
     <div class="c">
-        <div class="app-grid flip">
+        <div class="app-grid">
 
             <!-- Text -->
             <div>
                 <div class="app-icon-badge a-fade">
-                    <div class="app-icon-ring bx-ring">
-                        <img src="assets/icon-bx.png" class="app-icon-img" alt="BuildExact icon" onerror="this.outerHTML='<div class=\'app-icon-emoji\' style=\'background:rgba(37,99,235,.12)\'>🏗️</div>'">
+                    <div class="app-icon-ring" style="border-color:rgba(167,139,250,.3);box-shadow:0 0 24px rgba(167,139,250,.25)">
+                        <div class="app-icon-emoji" style="background:rgba(167,139,250,.14)">🧩</div>
                     </div>
                     <div class="app-icon-info">
-                        <h3 data-i18n="nav.bx">BuildExact</h3>
-                        <span data-i18n="bx.by">by Grounded Studio</span>
+                        <h3 data-i18n="nav.games_flow">Flow</h3>
+                        <span data-i18n="fl.by">Game by Grounded Studio</span>
                     </div>
                 </div>
 
-                <div class="s-tag bx a-fade" style="transition-delay:.06s">
-                    <span>●</span>&nbsp;<span data-i18n="bx.tag.text">App 02</span>
+                <div class="s-tag fl a-fade" style="transition-delay:.06s">
+                    <span>●</span>&nbsp;<span data-i18n="fl.tag.text">🚀 Coming soon on Google Play</span>
                 </div>
-                <h2 class="s-title a-fade" style="transition-delay:.12s" data-i18n-html="bx.h2">
-                    Build with<br><span style="color:var(--bx)">precision</span>
+                <h2 class="s-title a-fade" style="transition-delay:.12s" data-i18n-html="fl.h2">
+                    Connect the circuit<br><span style="color:var(--fl)">tile the grid</span>
                 </h2>
-                <p class="s-desc a-fade" style="transition-delay:.18s" data-i18n="bx.desc">
-                    BuildExact is the smart calculation tool for builders and handymen. Calculate exact
-                    material needs, create cost estimates, and keep your projects organized.
+                <p class="s-desc a-fade" style="transition-delay:.18s" data-i18n="fl.desc">
+                    Flow is a minimalist logic puzzle: draw one path per colour, cover every cell, restore the circuit. 73 handcrafted levels — fully offline, free on Android.
                 </p>
 
                 <ul class="features">
-                    <li class="feat a-right" style="transition-delay:.08s">
-                        <div class="feat-ico bx">📐</div>
+                    <li class="feat a-left" style="transition-delay:.08s">
+                        <div class="feat-ico fl">🔗</div>
                         <div class="feat-body">
-                            <h4 data-i18n="bx.f1.h">Material Calculations</h4>
-                            <p data-i18n="bx.f1.p">Calculate exactly how much material you need for every job — including cut and waste percentages.</p>
+                            <h4 data-i18n="fl.f1.h">Connect the dots</h4>
+                            <p data-i18n="fl.f1.p">Trace a continuous line between each pair of coloured dots without crossing others.</p>
                         </div>
                     </li>
-                    <li class="feat a-right" style="transition-delay:.16s">
-                        <div class="feat-ico bx">💰</div>
+                    <li class="feat a-left" style="transition-delay:.16s">
+                        <div class="feat-ico fl">🟪</div>
                         <div class="feat-body">
-                            <h4 data-i18n="bx.f2.h">Cost Estimation</h4>
-                            <p data-i18n="bx.f2.p">Create detailed cost estimates to manage your budget properly before the job starts.</p>
+                            <h4 data-i18n="fl.f2.h">Tile every cell</h4>
+                            <p data-i18n="fl.f2.p">A level is only <em>restored</em> when the whole grid is filled — every square counts.</p>
                         </div>
                     </li>
-                    <li class="feat a-right" style="transition-delay:.24s">
-                        <div class="feat-ico bx">📋</div>
+                    <li class="feat a-left" style="transition-delay:.24s">
+                        <div class="feat-ico fl">⭐</div>
                         <div class="feat-body">
-                            <h4 data-i18n="bx.f3.h">Project Management</h4>
-                            <p data-i18n="bx.f3.p">Manage multiple projects at once and keep track of progress, costs, and materials.</p>
+                            <h4 data-i18n="fl.f3.h">Perfect solutions</h4>
+                            <p data-i18n="fl.f3.p">Solve in the intended move count to earn a Perfect badge. Chase the all-perfect run.</p>
                         </div>
                     </li>
-                    <li class="feat a-right" style="transition-delay:.32s">
-                        <div class="feat-ico bx">📤</div>
+                    <li class="feat a-left" style="transition-delay:.32s">
+                        <div class="feat-ico fl">📈</div>
                         <div class="feat-body">
-                            <h4 data-i18n="bx.f4.h">PDF Export</h4>
-                            <p data-i18n="bx.f4.p">Easily share your calculations and estimates as a clean PDF with clients or colleagues.</p>
+                            <h4 data-i18n="fl.f4.h">73 handcrafted levels</h4>
+                            <p data-i18n="fl.f4.p">From gentle warm-ups to dense grids that test how you plan. Difficulty ramps as you play.</p>
                         </div>
                     </li>
                 </ul>
 
-                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="play-btn a-fade" style="transition-delay:.42s">
-                    <svg class="play-svg" viewBox="0 0 24 24" fill="none">
-                        <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
-                        <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
-                        <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
-                        <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
-                    </svg>
-                    <div class="play-text">
-                        <small data-i18n="play.small">Download on</small>
-                        <span data-i18n="play.big">Google Play</span>
-                    </div>
-                </a>
+                <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:44px">
+                    <a href="games/flow.html" class="play-btn a-fade" style="transition-delay:.42s;margin-top:0">
+                        <svg class="play-svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
+                            <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
+                            <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
+                            <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
+                        </svg>
+                        <div class="play-text">
+                            <small data-i18n="fl.cta.small">Discover</small>
+                            <span data-i18n="fl.cta.big">Flow game page</span>
+                        </div>
+                    </a>
+                    <a href="games.html" class="a-fade" style="transition-delay:.5s;color:var(--fl);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(167,139,250,.35);background:rgba(167,139,250,.08);transition:all .25s" onmouseover="this.style.background='rgba(167,139,250,.16)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(167,139,250,.08)';this.style.transform='translateY(0)'">
+                        <span data-i18n="fl.cta.all">All games</span> →
+                    </a>
+                </div>
             </div>
 
-            <!-- 3D Screenshot -->
+            <!-- Game cover art (no screenshot needed) -->
             <div class="phone-wrap a-scale">
-                <div class="screen-glow" style="background:var(--bx)"></div>
-                <div class="tilt-wrap bx-tilt">
-                    <img src="assets/screen-bx.png"
-                         class="app-screenshot"
-                         alt="BuildExact app screenshot"
-                         onerror="this.style.display='none'">
+                <div class="screen-glow" style="background:var(--fl)"></div>
+                <div class="tilt-wrap fl-tilt">
+                    <div class="fl-cover">
+                        <div style="text-align:center">
+                            <div class="fl-cover-title">FLOW</div>
+                            <div class="fl-cover-sub" data-i18n="fl.cover.sub">connect · tile · restore</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1366,24 +1587,24 @@
             We are<br><span style="color:var(--gs)">Grounded Studio</span>
         </h2>
         <p class="s-desc a-fade" style="text-align:center;margin:0 auto;transition-delay:.16s" data-i18n="about.desc">
-            An independent app studio that believes good software makes daily life better.
-            We build apps with attention to detail, ease of use, and real value.
+            An independent studio that believes good software makes daily life better.
+            We build apps and games with attention to detail, ease of use, and real value.
         </p>
         <div class="about-grid">
             <div class="about-card a-fade" style="transition-delay:.1s">
                 <div class="about-ico">🎯</div>
                 <h3 data-i18n="about.c1.h">Purpose-driven</h3>
-                <p data-i18n="about.c1.p">Every app solves a real problem. We don't build for fun — we build because it makes your life easier.</p>
+                <p data-i18n="about.c1.p">Every product solves a real problem or gives you a moment of focus. Nothing we ship is filler.</p>
             </div>
             <div class="about-card a-fade" style="transition-delay:.2s">
                 <div class="about-ico">✨</div>
                 <h3 data-i18n="about.c2.h">Quality</h3>
-                <p data-i18n="about.c2.p">From design to code — we pay attention to every detail. Our apps are fast, beautiful, and intuitive.</p>
+                <p data-i18n="about.c2.p">From design to code — we pay attention to every detail. Everything we ship is fast, beautiful, and intuitive.</p>
             </div>
             <div class="about-card a-fade" style="transition-delay:.3s">
                 <div class="about-ico">🚀</div>
                 <h3 data-i18n="about.c3.h">Innovation</h3>
-                <p data-i18n="about.c3.p">We embrace new technologies and AI to build the best possible apps for our users.</p>
+                <p data-i18n="about.c3.p">We embrace new technologies and AI to build the best possible apps and games for our users.</p>
             </div>
         </div>
     </div>
@@ -1422,8 +1643,12 @@
 /* ── Translations ──────────────────────────────────── */
 const T = {
     en: {
+        'nav.apps':     'Apps',
         'nav.vg':       'FreshGarant',
         'nav.bx':       'BuildExact',
+        'nav.games':    'Games',
+        'nav.games_flow':'Flow',
+        'nav.games_all':'All games',
         'nav.blog':     'Blog',
         'nav.vg_blog':  'FreshGarant Blog',
         'nav.bx_blog':  'BuildExact Blog',
@@ -1431,11 +1656,11 @@ const T = {
         'nav.studio':   'Studio',
         'foot.privacy': 'Privacy',
         'nav.cta':      'Our Apps',
-        'hero.h1':      'Apps that<br>actually work',
-        'hero.sub':     'We build intuitive, smart apps that make your daily life easier. From food tracking to building calculations — made with passion and precision.',
+        'hero.h1':      'Apps and games<br>that just work',
+        'hero.sub':     'We build intuitive apps and focused games — from construction calculations and food tracking to logic puzzles. Made with passion and precision.',
         'scroll':       'Scroll',
         'vg.by':        'by Grounded Studio',
-        'vg.tag.text':  'App 01',
+        'vg.tag.text':  'App 02',
         'vg.h2':        'Never waste<br><span style="color:var(--vg)">food again</span>',
         'vg.desc':      "FreshGarant tracks your food expiry dates so nothing goes to waste. Scan barcodes, get timely alerts, and see exactly what you're saving. Upgrade to Pro for AI-generated recipes, family sharing, cloud backup, and more.",
         'vg.f1.h':      'Barcode Scanner',
@@ -1455,7 +1680,7 @@ const T = {
         'cs.small':     'Google Play',
         'cs.big':       'Coming Soon',
         'bx.by':        'by Grounded Studio',
-        'bx.tag.text':  'App 02',
+        'bx.tag.text':  'App 01',
         'bx.h2':        'Build with<br><span style="color:var(--bx)">precision</span>',
         'bx.desc':      'BuildExact is the smart calculation tool for builders and handymen. Calculate exact material needs, create cost estimates, and keep your projects organized.',
         'bx.f1.h':      'Material Calculations',
@@ -1466,24 +1691,44 @@ const T = {
         'bx.f3.p':      'Manage multiple projects at once and keep track of progress, costs, and materials.',
         'bx.f4.h':      'PDF Export',
         'bx.f4.p':      'Easily share your calculations and estimates as a clean PDF with clients or colleagues.',
+        'fl.by':        'Game by Grounded Studio',
+        'fl.tag.text':  '🚀 Coming soon on Google Play',
+        'fl.h2':        'Connect the circuit<br><span style="color:var(--fl)">tile the grid</span>',
+        'fl.desc':      'Flow is a minimalist logic puzzle: draw one path per colour, cover every cell, restore the circuit. 73 handcrafted levels — fully offline. Launching soon on Google Play.',
+        'fl.f1.h':      'Connect the dots',
+        'fl.f1.p':      'Trace a continuous line between each pair of coloured dots without crossing others.',
+        'fl.f2.h':      'Tile every cell',
+        'fl.f2.p':      'A level is only <em>restored</em> when the whole grid is filled — every square counts.',
+        'fl.f3.h':      'Perfect solutions',
+        'fl.f3.p':      'Solve in the intended move count to earn a Perfect badge. Chase the all-perfect run.',
+        'fl.f4.h':      '73 handcrafted levels',
+        'fl.f4.p':      'From gentle warm-ups to dense grids that test how you plan. Difficulty ramps as you play.',
+        'fl.cta.small': 'Discover',
+        'fl.cta.big':   'Flow game page',
+        'fl.cta.all':   'All games',
+        'fl.cover.sub': 'connect · tile · restore',
         'about.tag':    'About us',
         'about.h2':     'We are<br><span style="color:var(--gs)">Grounded Studio</span>',
-        'about.desc':   'An independent app studio that believes good software makes daily life better. We build apps with attention to detail, ease of use, and real value.',
+        'about.desc':   'An independent studio that believes good software makes daily life better. We build apps and games with attention to detail, ease of use, and real value.',
         'about.c1.h':   'Purpose-driven',
-        'about.c1.p':   "Every app solves a real problem. We don't build for fun — we build because it makes your life easier.",
+        'about.c1.p':   "Every product solves a real problem or gives you a moment of focus. Nothing we ship is filler.",
         'about.c2.h':   'Quality',
-        'about.c2.p':   'From design to code — we pay attention to every detail. Our apps are fast, beautiful, and intuitive.',
+        'about.c2.p':   'From design to code — we pay attention to every detail. Everything we ship is fast, beautiful, and intuitive.',
         'about.c3.h':   'Innovation',
-        'about.c3.p':   'We embrace new technologies and AI to build the best possible apps for our users.',
+        'about.c3.p':   'We embrace new technologies and AI to build the best possible apps and games for our users.',
         'foot.rights':  '© 2026 — All rights reserved',
         'foot.copy':    'Made with ❤️ in the Netherlands',
-        'stats.apps':   'Apps on Android',
+        'stats.apps':   'Apps & Games',
         'stats.origin': 'Google Play',
         'stats.free':   'to download',
     },
     nl: {
+        'nav.apps':     'Apps',
         'nav.vg':       'FreshGarant',
         'nav.bx':       'BuildExact',
+        'nav.games':    'Games',
+        'nav.games_flow':'Flow',
+        'nav.games_all':'Alle games',
         'nav.blog':     'Blog',
         'nav.vg_blog':  'FreshGarant Blog',
         'nav.bx_blog':  'BuildExact Blog',
@@ -1491,11 +1736,11 @@ const T = {
         'nav.studio':   'Studio',
         'foot.privacy': 'Privacy',
         'nav.cta':      'Onze Apps',
-        'hero.h1':      'Apps die<br>écht werken',
-        'hero.sub':     'Wij bouwen intuïtieve, slimme apps die je dagelijks leven eenvoudiger maken. Van voedseltracking tot bouwcalculaties — gemaakt met passie en precisie.',
+        'hero.h1':      'Apps en games<br>die werken',
+        'hero.sub':     'Wij bouwen intuïtieve apps en focused games die je dagelijks leven eenvoudiger — of even leuker — maken. Van bouwcalculaties en voedseltracking tot logica-puzzels.',
         'scroll':       'Scroll',
         'vg.by':        'door Grounded Studio',
-        'vg.tag.text':  'App 01',
+        'vg.tag.text':  'App 02',
         'vg.h2':        'Nooit meer<br><span style="color:var(--vg)">verspilling</span>',
         'vg.desc':      'FreshGarant houdt je houdbaarheidsdatums bij zodat er niets verspild wordt. Scan barcodes, ontvang tijdige meldingen en zie precies wat je bespaart. Upgrade naar Pro voor AI-recepten, gezinsdelen, cloud back-up en meer.',
         'vg.f1.h':      'Barcode Scanner',
@@ -1515,7 +1760,7 @@ const T = {
         'cs.small':     'Google Play',
         'cs.big':       'Binnenkort beschikbaar',
         'bx.by':        'door Grounded Studio',
-        'bx.tag.text':  'App 02',
+        'bx.tag.text':  'App 01',
         'bx.h2':        'Bouw met<br><span style="color:var(--bx)">precisie</span>',
         'bx.desc':      'BuildExact is de slimme rekentool voor bouwers en klussenmakers. Bereken exacte materiaalbehoeften, maak kostenramingen en houd je projecten overzichtelijk.',
         'bx.f1.h':      'Materiaalberekeningen',
@@ -1526,18 +1771,34 @@ const T = {
         'bx.f3.p':      'Beheer meerdere projecten tegelijk en houd de voortgang, kosten en materialen bij.',
         'bx.f4.h':      'PDF Exporteren',
         'bx.f4.p':      "Deel je berekeningen en ramingen eenvoudig als overzichtelijke PDF met klanten of collega's.",
+        'fl.by':        'Game van Grounded Studio',
+        'fl.tag.text':  '🚀 Binnenkort in Google Play',
+        'fl.h2':        'Verbind het circuit<br><span style="color:var(--fl)">vul het bord</span>',
+        'fl.desc':      'Flow is een minimalistische logica-puzzel: teken één pad per kleur, bedek elke cel, herstel het circuit. 73 handgemaakte levels — volledig offline. Binnenkort in Google Play.',
+        'fl.f1.h':      'Verbind de punten',
+        'fl.f1.p':      'Trek een doorlopende lijn tussen elk paar gekleurde punten zonder andere lijnen te kruisen.',
+        'fl.f2.h':      'Vul elke cel',
+        'fl.f2.p':      'Een level is pas <em>hersteld</em> als het hele bord gevuld is — elk vakje telt.',
+        'fl.f3.h':      'Perfecte oplossingen',
+        'fl.f3.p':      'Los op in het bedoelde aantal zetten en verdien een Perfect-badge. Jaag op de all-perfect run.',
+        'fl.f4.h':      '73 handgemaakte levels',
+        'fl.f4.p':      'Van rustige opwarmers tot dichte grids die je planning testen. De moeilijkheid loopt op terwijl je speelt.',
+        'fl.cta.small': 'Ontdek',
+        'fl.cta.big':   'Flow game pagina',
+        'fl.cta.all':   'Alle games',
+        'fl.cover.sub': 'verbind · vul · herstel',
         'about.tag':    'Over ons',
         'about.h2':     'Wij zijn<br><span style="color:var(--gs)">Grounded Studio</span>',
-        'about.desc':   'Een onafhankelijke app studio die gelooft dat goede software het dagelijks leven beter maakt. We bouwen apps met aandacht voor detail, gebruiksgemak en echte waarde.',
+        'about.desc':   'Een onafhankelijke studio die gelooft dat goede software het dagelijks leven beter maakt. We bouwen apps en games met aandacht voor detail, gebruiksgemak en echte waarde.',
         'about.c1.h':   'Doelgericht',
-        'about.c1.p':   "Elke app lost een echt probleem op. We bouwen niet voor de lol — we bouwen omdat het je leven makkelijker maakt.",
+        'about.c1.p':   "Elk product lost een echt probleem op of geeft je een moment van focus. Niks wat we uitbrengen is opvulling.",
         'about.c2.h':   'Kwaliteit',
-        'about.c2.p':   'Van design tot code — wij letten op elk detail. Onze apps zijn snel, mooi en intuïtief te gebruiken.',
+        'about.c2.p':   'Van design tot code — wij letten op elk detail. Alles wat we uitbrengen is snel, mooi en intuïtief.',
         'about.c3.h':   'Innovatie',
-        'about.c3.p':   'We omarmen nieuwe technologieën en AI om de best mogelijke apps te bouwen voor onze gebruikers.',
+        'about.c3.p':   'We omarmen nieuwe technologieën en AI om de best mogelijke apps en games te bouwen voor onze gebruikers.',
         'foot.rights':  '© 2026 — Alle rechten voorbehouden',
         'foot.copy':    'Made with ❤️ in Nederland',
-        'stats.apps':   'Apps op Android',
+        'stats.apps':   'Apps & Games',
         'stats.origin': 'Google Play',
         'stats.free':   'te downloaden',
     }

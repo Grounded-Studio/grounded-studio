@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#818cf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow — Coming Soon on Google Play | Grounded Studio</title>
+    <meta name="description" content="Flow is a minimalist logic puzzle by Grounded Studio: connect coloured dots, tile the grid, restore the circuit. 73 handcrafted levels, offline. Coming soon on Google Play.">
+    <meta name="keywords" content="Flow puzzle, connect the dots game, logic puzzle android, tile puzzle, minimalist puzzle game, circuit puzzle, brain game, Grounded Studio, coming soon Google Play">
+    <meta name="author" content="Grounded Studio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://grounded-studio.app/games/flow.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grounded-studio.app/games/flow.html">
+    <meta property="og:title" content="Flow — Coming Soon on Google Play">
+    <meta property="og:description" content="A minimalist logic puzzle by Grounded Studio. Connect the dots, fill the grid, restore the circuit. 73 handcrafted levels — coming soon on Google Play.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/og-studio.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flow — Coming Soon on Google Play">
+    <meta name="twitter:description" content="A minimalist logic puzzle by Grounded Studio. Coming soon on Google Play.">
+    <meta name="twitter:image" content="https://grounded-studio.app/assets/og-studio.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Flow",
+        "applicationCategory": "GameApplication",
+        "genre": "Puzzle",
+        "operatingSystem": "Android",
+        "description": "Minimalist logic puzzle: connect the coloured dots, tile every cell of the grid, restore the circuit. 73 handcrafted levels, fully offline.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "downloadUrl": "https://play.google.com/store/apps/details?id=TODO_PACKAGE_ID",
+        "author": { "@type": "Organization", "name": "Grounded Studio", "url": "https://grounded-studio.app" }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root),::view-transition-new(root) { animation-duration: 260ms; animation-timing-function: cubic-bezier(.16,1,.3,1); }
+        @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+        *:focus-visible { outline:2px solid #818cf8; outline-offset:2px; border-radius:4px; }
+        a:focus-visible,button:focus-visible { outline:2px solid #818cf8; outline-offset:3px; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { background:#06060a; color:#f1f5f9; font-family:'Inter',system-ui,sans-serif; overflow-x:hidden; line-height:1.6; }
+        body::after { content:''; position:fixed; inset:0; z-index:9999; pointer-events:none; opacity:.025; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)'/%3E%3C/svg%3E"); background-size:200px 200px; }
+        :root {
+            --fl:#818cf8;
+            --fl2:#6366f1;
+            --fl-glow:rgba(129,140,248,0.35);
+            --gs:#818cf8;
+            --gs2:#6366f1;
+            --gs-glow:rgba(129,140,248,0.3);
+            --border:rgba(255,255,255,0.07);
+            --muted:#64748b;
+        }
+
+        #progress { position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--fl),var(--fl2)); z-index:9999; border-radius:0 2px 2px 0; transition:width .08s linear; pointer-events:none; }
+
+        /* NAV */
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; transition:background .4s,border-color .4s; }
+        nav.stuck { background:rgba(6,6,10,.92); backdrop-filter:blur(24px); border-bottom:1px solid var(--border); }
+        .c { max-width:1160px; margin:0 auto; padding:0 28px; }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; flex-shrink:0; }
+        .nav-mark { width:38px; height:38px; border-radius:11px; overflow:hidden; flex-shrink:0; box-shadow:0 0 20px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.95rem; }
+        .nav-right { display:flex; align-items:center; gap:20px; }
+        .nav-links { display:flex; align-items:center; gap:28px; list-style:none; }
+        .nav-links a { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; }
+        .nav-links a:hover { color:#fff; }
+        .nav-links a.active { color:var(--fl); }
+        .nav-cta { background:rgba(129,140,248,.15); border:1px solid rgba(129,140,248,.4); color:var(--fl); padding:9px 22px; border-radius:10px; font-size:.875rem; font-weight:600; text-decoration:none; transition:background .2s; white-space:nowrap; }
+        .nav-cta:hover { background:rgba(129,140,248,.25); }
+        .hamburger { display:none; flex-direction:column; justify-content:center; align-items:center; width:44px; height:44px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; cursor:pointer; gap:5px; flex-shrink:0; z-index:210; transition:background .2s; }
+        .hamburger span { display:block; width:20px; height:2px; background:#94a3b8; border-radius:2px; transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .3s; }
+        .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); background:#fff; }
+        .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+        .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); background:#fff; }
+        @media (max-width:700px) { .nav-links,.nav-cta { display:none; } .hamburger { display:flex; } }
+
+        /* MOBILE MENU */
+        .mobile-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:299; opacity:0; transition:opacity .3s; backdrop-filter:blur(4px); }
+        .mobile-overlay.open { display:block; }
+        .mobile-overlay.visible { opacity:1; }
+        .mobile-menu { position:fixed; top:0; right:0; bottom:0; width:min(320px,85vw); z-index:300; background:rgba(6,6,10,.97); border-left:1px solid var(--border); padding:80px 28px 40px; display:flex; flex-direction:column; gap:8px; transform:translateX(100%); transition:transform .35s cubic-bezier(.16,1,.3,1); backdrop-filter:blur(24px); overflow-y:auto; }
+        .mobile-menu.open { transform:translateX(0); }
+        .mobile-menu-links { list-style:none; display:flex; flex-direction:column; gap:4px; }
+        .mobile-menu-links a { display:flex; align-items:center; gap:12px; color:#94a3b8; text-decoration:none; font-size:1.05rem; font-weight:600; padding:14px 16px; border-radius:12px; border:1px solid transparent; transition:all .2s; min-height:52px; }
+        .mobile-menu-links a:hover { color:#fff; background:rgba(255,255,255,.06); border-color:var(--border); }
+        .mobile-menu-divider { height:1px; background:var(--border); margin:12px 0; }
+        .mobile-cta { display:flex; align-items:center; justify-content:center; margin-top:16px; padding:16px; border-radius:12px; background:rgba(129,140,248,.15); border:1px solid rgba(129,140,248,.35); color:var(--fl); font-weight:700; font-size:.95rem; text-decoration:none; min-height:52px; transition:background .2s; }
+
+        /* HERO */
+        .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:140px 28px 100px; text-align:center; }
+        .orb { position:absolute; border-radius:50%; filter:blur(90px); opacity:.14; pointer-events:none; animation:drift 10s ease-in-out infinite; }
+        .orb1 { width:600px; height:600px; background:var(--fl); top:-200px; left:-150px; animation-delay:0s; }
+        .orb2 { width:400px; height:400px; background:var(--fl2); bottom:-100px; right:-100px; animation-delay:-5s; }
+        @keyframes drift { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(30px,-40px) scale(1.05)} }
+        .hero-grid { position:absolute; inset:0; z-index:0; background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:56px 56px; mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%); }
+        .hero-content { position:relative; z-index:1; max-width:780px; }
+        .hero-badge { display:inline-flex; align-items:center; gap:9px; padding:7px 18px; border-radius:100px; border:1px solid rgba(129,140,248,.4); background:rgba(129,140,248,.1); color:var(--fl); font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:28px; animation:fadeUp .6s ease .1s both; }
+        .cs-hero-banner {
+            display:inline-flex; align-items:center; gap:11px;
+            padding:10px 22px; border-radius:100px;
+            border:1px solid rgba(251,188,4,.45);
+            background:linear-gradient(90deg,rgba(251,188,4,.14),rgba(234,67,53,.12));
+            color:#fde68a;
+            font-size:.8rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+            margin-bottom:16px;
+            animation:fadeUp .55s ease both;
+            box-shadow:0 8px 30px rgba(251,188,4,.12);
+        }
+        .cs-dot { width:9px; height:9px; border-radius:50%; background:#fbbc04; box-shadow:0 0 0 4px rgba(251,188,4,.25); animation:blink 1.5s ease-in-out infinite; flex-shrink:0; }
+        .btn-disabled {
+            cursor:not-allowed !important;
+            opacity:.78;
+            filter:grayscale(.15);
+        }
+        .btn-disabled:hover { transform:none !important; background:rgba(255,255,255,.06) !important; border-color:rgba(255,255,255,.12) !important; box-shadow:none !important; }
+        .btn-disabled::after { display:none !important; }
+        .badge-dot { width:7px; height:7px; border-radius:50%; background:var(--fl); animation:blink 2s ease-in-out infinite; }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+        .hero h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(3rem,8vw,5.5rem); font-weight:800; letter-spacing:-.04em; line-height:1.05; margin-bottom:24px; padding-bottom:.1em; background:linear-gradient(135deg,#fff 0%,#c7d2fe 40%,var(--fl) 70%,#fff 100%); background-size:200% 200%; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:fadeUp .7s ease .2s both, heroGrad 9s ease-in-out 1s infinite; }
+        @keyframes heroGrad { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+        @keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:none} }
+        .hero-sub { font-size:clamp(1rem,2.5vw,1.15rem); color:#94a3b8; max-width:560px; margin:0 auto 48px; line-height:1.75; animation:fadeUp .7s ease .35s both; }
+        .hero-actions { display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; animation:fadeUp .7s ease .5s both; }
+        .btn-primary { display:inline-flex; align-items:center; gap:12px; padding:14px 30px; border-radius:14px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); color:#fff; font-weight:700; font-size:.95rem; text-decoration:none; transition:all .3s; position:relative; overflow:hidden; }
+        .btn-primary::after { content:''; position:absolute; top:0; left:-100%; bottom:0; width:60%; background:linear-gradient(105deg,transparent,rgba(255,255,255,.1),transparent); transform:skewX(-20deg); transition:left .5s ease; }
+        .btn-primary:hover { background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.22); transform:translateY(-2px); box-shadow:0 12px 36px rgba(0,0,0,.4); }
+        .btn-primary:hover::after { left:140%; }
+        .btn-ghost { display:inline-flex; align-items:center; gap:10px; padding:14px 30px; border-radius:14px; background:rgba(255,255,255,.05); border:1px solid var(--border); color:#94a3b8; font-weight:600; font-size:.95rem; text-decoration:none; transition:all .3s; }
+        .btn-ghost:hover { background:rgba(255,255,255,.09); color:#fff; transform:translateY(-2px); }
+        .play-svg { width:26px; height:26px; }
+        .btn-text small { display:block; font-size:.65rem; opacity:.6; }
+        .btn-text span { display:block; font-size:.95rem; font-weight:700; }
+
+        /* TRUST STRIP */
+        .trust-strip { padding:24px 0 0; }
+        .trust-inner { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; max-width:900px; margin:0 auto; padding:0 28px; }
+        .trust-badge { display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:100px; background:rgba(255,255,255,.03); border:1px solid var(--border); color:#94a3b8; font-size:.78rem; font-weight:600; transition:all .2s; }
+        .trust-badge:hover { background:rgba(129,140,248,.06); border-color:rgba(129,140,248,.25); color:#cbd5e1; transform:translateY(-1px); }
+        .trust-badge .ico { font-size:.9rem; }
+
+        /* SCREENSHOT SECTION */
+        .screen-section { padding:80px 0 120px; position:relative; }
+        .screen-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(129,140,248,.07) 0%,transparent 70%); }
+        .screen-wrap { display:flex; justify-content:center; align-items:flex-end; gap:24px; position:relative; }
+        .screen-glow { position:absolute; width:500px; height:400px; border-radius:50%; filter:blur(100px); opacity:.18; background:var(--fl); pointer-events:none; top:50%; left:50%; transform:translate(-50%,-50%); }
+        .phone-placeholder { position:relative; z-index:1; width:240px; aspect-ratio:9/19.5; border-radius:40px; background:linear-gradient(145deg,rgba(129,140,248,.08),rgba(99,102,241,.04)); border:1px dashed rgba(129,140,248,.35); display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:.78rem; font-weight:600; text-align:center; padding:24px; box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05),0 0 60px rgba(129,140,248,.1); animation:floatC 7s ease-in-out infinite; }
+        @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+        @media (max-width:580px) { .phone-placeholder { width:220px; border-radius:32px; } }
+
+        /* FEATURES */
+        .features-section { padding:100px 0; }
+        .section-label { display:inline-flex; align-items:center; gap:9px; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--fl); margin-bottom:16px; }
+        .section-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; letter-spacing:-.035em; line-height:1.1; margin-bottom:16px; }
+        .section-sub { font-size:1rem; color:var(--muted); max-width:540px; line-height:1.75; margin-bottom:56px; }
+        .features-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+        @media (max-width:640px) { .features-grid { grid-template-columns:1fr; } }
+        .feat-card { padding:28px; border-radius:20px; background:rgba(255,255,255,.03); border:1px solid var(--border); transition:all .3s cubic-bezier(.16,1,.3,1); position:relative; overflow:hidden; }
+        .feat-card::before { content:''; position:absolute; left:0; top:14px; bottom:14px; width:3px; border-radius:0 3px 3px 0; background:linear-gradient(180deg,var(--fl),rgba(129,140,248,.3)); box-shadow:0 0 12px rgba(129,140,248,.6); opacity:0; transition:opacity .3s; }
+        .feat-card:hover { background:rgba(129,140,248,.05); border-color:rgba(129,140,248,.22); transform:translateY(-4px); box-shadow:0 12px 32px rgba(129,140,248,.1); }
+        .feat-card:hover::before { opacity:1; }
+        .feat-ico { width:48px; height:48px; border-radius:13px; background:rgba(129,140,248,.12); display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:16px; transition:transform .3s cubic-bezier(.16,1,.3,1); }
+        .feat-card:hover .feat-ico { transform:scale(1.15) rotate(-5deg); }
+        .feat-card h3 { font-size:.95rem; font-weight:700; margin-bottom:6px; }
+        .feat-card p { font-size:.85rem; color:var(--muted); line-height:1.65; }
+
+        /* STATS */
+        .stats-section { padding:60px 0; border-top:1px solid var(--border); }
+        .stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; text-align:center; }
+        .stat-num { font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; letter-spacing:-.03em; display:block; background:linear-gradient(135deg,#fff,var(--fl)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        .stat-label { font-size:.78rem; color:var(--muted); font-weight:600; letter-spacing:.05em; text-transform:uppercase; margin-top:6px; display:block; }
+        @media (max-width:600px) { .stats-row { grid-template-columns:1fr; gap:32px; } }
+
+        /* CTA DOWNLOAD */
+        .cta-section { padding:80px 0 120px; text-align:center; border-top:1px solid var(--border); }
+        .play-btn { display:inline-flex; align-items:center; gap:16px; padding:18px 36px; border-radius:18px; text-decoration:none; color:#fff; font-weight:600; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); transition:all .3s; position:relative; overflow:hidden; }
+        .play-btn::after { content:''; position:absolute; top:0; left:-100%; bottom:0; width:60%; background:linear-gradient(105deg,transparent,rgba(255,255,255,.1),transparent); transform:skewX(-20deg); transition:left .5s ease; }
+        .play-btn:hover { background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.22); transform:translateY(-2px); box-shadow:0 12px 36px rgba(0,0,0,.4); }
+        .play-btn:hover::after { left:140%; }
+        .play-btn svg { width:32px; height:32px; }
+        .play-btn-text small { display:block; font-size:.7rem; opacity:.6; }
+        .play-btn-text span { display:block; font-size:1.05rem; font-weight:700; }
+
+        /* ABOUT MINI */
+        .about-mini { padding:80px 0; border-top:1px solid var(--border); text-align:center; }
+        .about-mini p { color:var(--muted); font-size:.95rem; max-width:520px; margin:12px auto 28px; line-height:1.75; }
+        .back-btn { display:inline-flex; align-items:center; gap:8px; color:var(--gs); text-decoration:none; font-weight:600; font-size:.9rem; padding:10px 22px; border-radius:10px; border:1px solid rgba(129,140,248,.3); background:rgba(129,140,248,.08); transition:all .2s; }
+        .back-btn:hover { background:rgba(129,140,248,.16); transform:translateY(-2px); }
+
+        /* FOOTER */
+        footer { border-top:1px solid var(--border); padding:40px 0; }
+        .foot-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+        .foot-logo { display:flex; align-items:center; gap:12px; text-decoration:none; color:#fff; }
+        .foot-mark { width:36px; height:36px; border-radius:10px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .foot-mark img { width:100%; height:100%; object-fit:cover; display:block; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .foot-copy { font-size:.78rem; color:#334155; }
+        .foot-links { display:flex; gap:22px; flex-wrap:wrap; align-items:center; justify-content:center; }
+        .foot-links a { color:#64748b; text-decoration:none; font-size:.8rem; }
+
+        /* SCROLL ANIMS */
+        .a-fade { opacity:0; transform:translateY(36px); filter:blur(5px); transition:opacity .75s ease,transform .75s ease,filter .75s ease; }
+        .a-scale { opacity:0; transform:scale(.9); filter:blur(5px); transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),filter .9s ease; }
+        .in { opacity:1 !important; transform:none !important; filter:none !important; }
+
+        @media (max-width:480px) { .hero { padding:110px 20px 80px; } }
+    </style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav id="nav">
+    <div class="c">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="38" height="38" decoding="async"></div>
+                <span class="nav-name">Grounded Studio</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="../games.html" class="active">Games</a></li>
+                    <li><a href="../freshgarant.html">FreshGarant</a></li>
+                    <li><a href="../buildexact.html">BuildExact</a></li>
+                    <li><a href="../index.html#studio">Studio</a></li>
+                </ul>
+                <a href="#download" class="nav-cta">Coming soon</a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-modal="true">
+    <ul class="mobile-menu-links">
+        <li><a href="../games.html">🎮 <span>Games</span></a></li>
+        <li><a href="../freshgarant.html">🌿 <span>FreshGarant</span></a></li>
+        <li><a href="../buildexact.html">🏗️ <span>BuildExact</span></a></li>
+        <li><a href="../index.html#studio">✨ <span>Studio</span></a></li>
+    </ul>
+    <div class="mobile-menu-divider"></div>
+    <a href="#download" class="mobile-cta">Coming soon on Google Play</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+        <div class="cs-hero-banner">
+            <span class="cs-dot"></span>
+            <span class="cs-text">Coming soon on Google Play</span>
+        </div>
+        <div class="hero-badge">
+            <div class="badge-dot"></div>
+            Game 01 — By Grounded Studio
+        </div>
+        <h1>Flow</h1>
+        <p class="hero-sub">Connect the circuit. Tile the grid. A minimalist logic puzzle with 73 handcrafted levels — fully offline. Launching soon on Google Play.</p>
+        <div class="hero-actions">
+            <span class="btn-primary btn-disabled" aria-disabled="true">
+                <svg class="play-svg" viewBox="0 0 24 24" fill="none">
+                    <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
+                    <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
+                    <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
+                    <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
+                </svg>
+                <div class="btn-text">
+                    <small>Coming soon on</small>
+                    <span>Google Play</span>
+                </div>
+            </span>
+            <a href="#features" class="btn-ghost">How it plays</a>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+    <div class="trust-inner">
+        <div class="trust-badge"><span class="ico">🚀</span><span>Launching soon</span></div>
+        <div class="trust-badge"><span class="ico">🧩</span><span>73 handcrafted levels</span></div>
+        <div class="trust-badge"><span class="ico">📴</span><span>Fully offline</span></div>
+        <div class="trust-badge"><span class="ico">🌗</span><span>Minimalist dark UI</span></div>
+    </div>
+</div>
+
+<!-- SCREENSHOT -->
+<div class="screen-section">
+    <div class="c">
+        <div class="screen-wrap">
+            <div class="screen-glow"></div>
+            <div class="phone-placeholder a-scale">
+                [TODO] add screen-flow.png<br>to /assets/
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+    <div class="c">
+        <div style="max-width:640px; margin-bottom:24px" class="a-fade">
+            <div class="section-label"><span>●</span> How it plays</div>
+            <h2 class="section-title">One rule.<br>Endless focus.</h2>
+            <p class="section-sub">Draw a single path per color, connecting every matching dot. Cover every cell on the grid. No timers. No noise. Just you and the circuit.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feat-card a-fade">
+                <div class="feat-ico">🔗</div>
+                <h3>Connect the dots</h3>
+                <p>Each colour has a start and end point. Trace a continuous line between them without crossing other flows.</p>
+            </div>
+            <div class="feat-card a-fade">
+                <div class="feat-ico">🟪</div>
+                <h3>Tile every cell</h3>
+                <p>A level is only <em>restored</em> when the whole grid is filled. Every square counts.</p>
+            </div>
+            <div class="feat-card a-fade">
+                <div class="feat-ico">⭐</div>
+                <h3>Perfect solutions</h3>
+                <p>Solve a level in the intended move count to earn a <strong>Perfect</strong> badge. Track your progress toward all-perfect.</p>
+            </div>
+            <div class="feat-card a-fade">
+                <div class="feat-ico">📈</div>
+                <h3>73 levels of mastery</h3>
+                <p>From gentle 4×4 warm-ups to dense grids that test how you plan. Difficulty ramps as you play.</p>
+            </div>
+            <div class="feat-card a-fade">
+                <div class="feat-ico">🎯</div>
+                <h3>Level select &amp; profile</h3>
+                <p>Set your name, pick any unlocked level, replay for a better score. Everything stored locally on your device.</p>
+            </div>
+            <div class="feat-card a-fade">
+                <div class="feat-ico">🌙</div>
+                <h3>Calm by design</h3>
+                <p>Deep-space background, glowing dots, subtle particles. Built to relax your brain, not overload it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+    <div class="c">
+        <div class="stats-row a-fade">
+            <div>
+                <span class="stat-num">73</span>
+                <span class="stat-label">Handcrafted levels</span>
+            </div>
+            <div>
+                <span class="stat-num">0</span>
+                <span class="stat-label">Ads during gameplay</span>
+            </div>
+            <div>
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Offline &amp; free</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA DOWNLOAD -->
+<section class="cta-section" id="download">
+    <div class="c">
+        <div class="a-fade">
+            <div class="section-label" style="justify-content:center"><span>●</span> Coming soon</div>
+            <h2 class="section-title" style="margin-bottom:12px">Launching soon<br>on Google Play</h2>
+            <p class="section-sub" style="margin:0 auto 40px">We're putting the final touches on Flow. Free download, Android 8.0+, no account required — same principles as our apps.</p>
+            <span class="play-btn btn-disabled" aria-disabled="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
+                    <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
+                    <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
+                    <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
+                </svg>
+                <div class="play-btn-text">
+                    <small>Coming soon on</small>
+                    <span>Google Play</span>
+                </div>
+            </span>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT MINI -->
+<div class="about-mini">
+    <div class="c">
+        <div class="a-fade">
+            <div class="section-label" style="justify-content:center"><span>●</span> By Grounded Studio</div>
+            <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.2rem)">Games that respect your time</h2>
+            <p>Flow is the first game from Grounded Studio — the Netherlands-based studio behind FreshGarant and BuildExact. We build focused, offline-first experiences with no dark patterns.</p>
+            <a href="../games.html" class="back-btn">← All games</a>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo">
+                <div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32" loading="lazy" decoding="async"></div>
+                <span class="foot-name">Grounded Studio</span>
+            </a>
+            <div class="foot-links">
+                <a href="../games.html">Games</a>
+                <a href="../freshgarant.html">FreshGarant</a>
+                <a href="../buildexact.html">BuildExact</a>
+                <a href="../about.html">About</a>
+                <a href="mailto:contact@grounded-studio.app">Contact</a>
+                <a href="../privacy.html">Privacy</a>
+            </div>
+            <span class="foot-copy">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Scroll progress
+    const progress = document.getElementById('progress');
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        const h = document.documentElement;
+        const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+        progress.style.width = scrolled + '%';
+        if (h.scrollTop > 20) nav.classList.add('stuck'); else nav.classList.remove('stuck');
+    }, { passive: true });
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.a-fade, .a-scale').forEach(el => io.observe(el));
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('mobileOverlay');
+    function toggleMenu(open) {
+        hamburger.classList.toggle('open', open);
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        mobileMenu.classList.toggle('open', open);
+        overlay.classList.toggle('open', open);
+        requestAnimationFrame(() => overlay.classList.toggle('visible', open));
+        document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileMenu.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+</script>
+</body>
+</html>
