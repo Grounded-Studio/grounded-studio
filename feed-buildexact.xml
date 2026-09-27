@@ -6,12 +6,42 @@
     <atom:link href="https://grounded-studio.app/feed-buildexact.xml" rel="self" type="application/rss+xml"/>
     <description>Practical articles on material calculations, construction quotes, client management and PDF signatures. Helpful guides for builders, contractors and DIY users.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 00:00:00 GMT</lastBuildDate>
     <image>
         <url>https://grounded-studio.app/assets/screen-bx.png</url>
         <title>BuildExact Blog</title>
         <link>https://grounded-studio.app/blog/buildexact.html</link>
     </image>
+
+    <item>
+        <title>Recurring Invoices for Maintenance Contracts: A Practical Guide for Small Contractors</title>
+        <link>https://grounded-studio.app/blog/recurring-invoices-maintenance-contracts.html</link>
+        <guid>https://grounded-studio.app/blog/recurring-invoices-maintenance-contracts.html</guid>
+        <description>Plumber, gardener or cleaner with regulars? Set up every regular client as a recurring template — cadence, description, dashboard reminders. Written for the Dutch context.</description>
+        <pubDate>Sun, 27 Sep 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Invoicing</category>
+    </item>
+
+    <item>
+        <title>Sending Quotes and Invoices via WhatsApp — What's Allowed and How to Keep It Professional</title>
+        <link>https://grounded-studio.app/blog/send-quotes-invoices-whatsapp.html</link>
+        <guid>https://grounded-studio.app/blog/send-quotes-invoices-whatsapp.html</guid>
+        <description>Legally fine, practically fast. How to send a quote via WhatsApp, what belongs in the message, and why blue ticks aren't acceptance. Dutch context.</description>
+        <pubDate>Sun, 27 Sep 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Communication</category>
+    </item>
+
+    <item>
+        <title>How Much Concrete Do I Need? Calculating m³ for Slabs, Foundations and Driveways</title>
+        <link>https://grounded-studio.app/blog/how-much-concrete-do-i-need.html</link>
+        <guid>https://grounded-studio.app/blog/how-much-concrete-do-i-need.html</guid>
+        <description>Worked examples for slab, strip foundation and sloped driveway. Why you always add 5–10% margin and when ready-mix beats bag mix.</description>
+        <pubDate>Sun, 27 Sep 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Materials</category>
+    </item>
 
     <item>
         <title>How Much Does a Bathroom Renovation Cost in 2026?</title>

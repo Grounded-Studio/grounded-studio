@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#22c55e">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recurring Invoices for Maintenance Contracts — Practical Guide | BuildExact</title>
+    <meta name="description" content="Plumber, gardener or cleaner with regulars? Here's how to set up a maintenance contract with recurring invoices — cadence, description, and reminders that actually work.">
+    <meta name="keywords" content="recurring invoices, maintenance contract invoicing, monthly invoice template, subscription invoice tradesperson, contractor recurring billing, BuildExact">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/blog/recurring-invoices-maintenance-contracts.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/onderhoudscontract-terugkerende-facturen-opzetten.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/recurring-invoices-maintenance-contracts.html">
+    <meta property="og:title" content="Recurring Invoices for Maintenance Contracts — Practical Guide">
+    <meta property="og:description" content="Turn every regular client into a template that invoices itself — for plumbers, gardeners and cleaners.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx-2.png">
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Article", "headline": "Recurring Invoices for Maintenance Contracts: A Practical Guide for Small Contractors", "author": { "@type": "Organization", "name": "Grounded Studio" }, "publisher": { "@type": "Organization", "name": "Grounded Studio", "logo": { "@type": "ImageObject", "url": "https://grounded-studio.app/assets/logo-gs.png" } }, "datePublished": "2026-09-27", "inLanguage": "en" }
+    </script>
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/" }, { "@type": "ListItem", "position": 2, "name": "BuildExact", "item": "https://grounded-studio.app/buildexact.html" }, { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://grounded-studio.app/blog/buildexact.html" }, { "@type": "ListItem", "position": 4, "name": "Recurring Invoices for Maintenance Contracts" } ] }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0a0f1a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+        :root { --bx:#2563eb; --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:28px; margin:32px 0; }
+        .formula-box .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px; }
+        .formula-box .formula { font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; margin-bottom:10px; }
+        .formula-box .formula-example { font-size:.9rem; color:var(--muted); }
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+        .table-wrap { overflow-x:auto; margin:28px 0; }
+        table { width:100%; border-collapse:collapse; font-size:.9rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media (max-width:700px) { .related-cards { grid-template-columns:1fr; } }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--bx); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        #read-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#2563eb,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="read-progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><a href="buildexact.html" class="nav-back">← Blog</a></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="buildexact.html">Blog</a> / <span>Recurring Invoices for Maintenance Contracts</span></div>
+            <div class="article-cat">📄 Invoicing &amp; Clients</div>
+            <h1>Recurring Invoices for Maintenance Contracts: A Practical Guide for Small Contractors</h1>
+            <div class="article-meta"><span>📅 27 September 2026</span><span>⏱ 7 min read</span><span>✍️ Grounded Studio</span></div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+            <p>You have regular clients. Monthly garden maintenance for Mrs. Van der Berg. Quarterly window cleaning for the dental practice around the corner. Annual boiler check for ten families in your neighbourhood. Stable revenue — except that every single time you have to retype the invoice, or worse, you forget to send it.</p>
+
+            <p>In this guide: <strong>how to turn every regular client into a recurring template</strong>, which cadence fits which job, what to actually put in the description, and why a dashboard reminder makes more difference than you think.</p>
+
+            <h2>Why a template beats duplicating</h2>
+
+            <p>Most sole traders I speak to do it like this: they grab last month's invoice, change the date, send it. Works — until you forget. Or until you have twenty clients and every first-of-the-month you're stuck for an hour just duplicating invoices.</p>
+
+            <p>A recurring template is nothing more than an invoice you set up once, linked to: the client, the amount, the description, and <strong>how often</strong> you want to send it. Weekly, monthly, quarterly or yearly. The app remembers the next due date and puts it on your dashboard as soon as it's time.</p>
+
+            <h2>Which cadence fits which work</h2>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Type of work</th><th>Cadence</th><th>Why</th></tr>
+                    <tr><td>Cleaning (residential or office)</td><td>Weekly</td><td>Fixed day, short cycle, client expects rhythm</td></tr>
+                    <tr><td>Garden maintenance (mowing, pruning)</td><td>Monthly (Mar–Oct)</td><td>Seasonal, client wants monthly overview</td></tr>
+                    <tr><td>Alarm / monitoring subscription</td><td>Monthly</td><td>Fixed fee, continuous service</td></tr>
+                    <tr><td>Window cleaning (retail/commercial)</td><td>Quarterly</td><td>Rhythm fits commercial client, cleaner paperwork</td></tr>
+                    <tr><td>Boiler service / heating check</td><td>Yearly</td><td>Legally required once a year, matches insurance</td></tr>
+                    <tr><td>Roof inspection / gutter cleaning</td><td>Yearly</td><td>Seasonal moment (autumn), easy to plan</td></tr>
+                </table>
+            </div>
+
+            <div class="tip-card">
+                <h3>💡 Not sure? Start monthly</h3>
+                <p>If you don't have a rhythm with a client yet, monthly is almost always the safest choice. Your client keeps overview, you see quickly whether they pay. You can always adjust the cadence later.</p>
+            </div>
+
+            <h2>What actually belongs in the description</h2>
+
+            <p>A good description prevents disputes. "Maintenance" is too vague. "Garden maintenance September 2026 — mowing, hedge trimming, leaf removal" is clear. For a recurring template, a description with a <strong>time reference that moves with it</strong> works best:</p>
+
+            <ul>
+                <li>Put the month or quarter in the description so the client can match their own bookkeeping</li>
+                <li>Name the concrete tasks — especially for residential clients who want to see the detail</li>
+                <li>Reference the maintenance agreement if you have one (contract number or start date)</li>
+                <li>For variable work: keep the baseline fixed, add extra lines when it's incidental</li>
+            </ul>
+
+            <p>Example for a gardener: "Monthly garden maintenance – September 2026. Mowing, edging, weeding front garden. Per contract dated March 2026." Next month you change the month, the rest stays.</p>
+
+            <h2>Worked example: what maintenance actually brings in</h2>
+
+            <p>Suppose you're a sole trader doing garden maintenance. You have 15 regular clients, each taking service 8 months a year (March through October).</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Calculation</th><th>Result</th></tr>
+                    <tr><td>Price per visit (excl. VAT)</td><td>€85.00</td></tr>
+                    <tr><td>Visits per client per year</td><td>8</td></tr>
+                    <tr><td>Revenue per client per year</td><td>€680.00</td></tr>
+                    <tr><td>Regular clients</td><td>15</td></tr>
+                    <tr><td><strong>Annual recurring revenue</strong></td><td><strong>€10,200.00</strong></td></tr>
+                </table>
+            </div>
+
+            <p>That's 15 clients × 8 invoices = 120 invoices per year. If each invoice takes 5 minutes to type manually, that's 10 hours a year on typing alone. With recurring templates it drops to roughly 1 hour — the rest is one-tap send.</p>
+
+            <h2>How to do this in BuildExact</h2>
+
+            <ol>
+                <li><strong>Create the client first</strong> under Clients. Add name, address and mobile number — you'll need that mobile number in a moment for WhatsApp sending.</li>
+                <li><strong>Create a new invoice</strong> for that client the usual way (lines, price, VAT rate).</li>
+                <li><strong>Save it as a recurring template</strong> using the "Save as recurring template" button and pick a cadence (weekly, monthly, quarterly or yearly).</li>
+                <li><strong>Set the first due date</strong> — usually the first of the following month, or the end of your current service period.</li>
+                <li><strong>Wait for the dashboard reminder</strong>. When it's time, you'll see it at the top of your dashboard. Tap it, check the description, send via WhatsApp or email as PDF.</li>
+            </ol>
+
+            <p>The client then receives a tidy WhatsApp message with the PDF invoice attached — your Dutch mobile number is automatically converted to the international 316 format WhatsApp expects, so you don't have to think about it.</p>
+
+            <div class="tip-card">
+                <h3>⚠️ Adjust the next due date before you go on holiday</h3>
+                <p>Going away for two weeks? Push the next invoice date manually a few weeks back. Otherwise a reminder is quietly stacking up while you're at the beach. The template follows whatever date you set.</p>
+            </div>
+
+            <h2>What if a client asks for extra work mid-month</h2>
+
+            <p>Situation you'll hit often: alongside the fixed monthly garden visit, the client also had a tree removed this month. What do you do? Two options:</p>
+
+            <ul>
+                <li><strong>Separate invoice</strong> for the extra work, template stays as-is. Cleaner for your bookkeeping, more paperwork for the client.</li>
+                <li><strong>Add an extra line</strong> to the recurring invoice for this month. Faster, one payment. You don't change the template — next month it's back to standard.</li>
+            </ul>
+
+            <p>The second option is usually more convenient for sole traders. Important: if you edit the template itself, the change sticks. If you edit only the invoice generated from the template, it applies only to that instance.</p>
+
+            <div class="app-cta">
+                <h3>📄 Recurring invoices &amp; WhatsApp in BuildExact</h3>
+                <p>New in version 2.0.2: save invoices as recurring templates (weekly through yearly) and send them straight from WhatsApp with a pre-filled message. The dashboard reminder does the rest.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    Download free
+                </a>
+            </div>
+
+            <h2>Summary</h2>
+            <p>Duplicating the same invoice every month is wasted time. Set up your regular clients once as recurring templates, pick the cadence that fits the work (weekly to yearly), keep the description specific with a time reference, and let the dashboard remind you. With fifteen regular clients you'll save roughly nine hours a year — and you'll never forget one again.</p>
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Related articles</h2>
+        <div class="related-cards">
+            <a href="from-measurement-to-invoice-5-minutes.html" class="related-card"><div class="cat">🏗️ Workflow</div><div class="title">From measurement to invoice in 5 min →</div></a>
+            <a href="client-management-for-contractors.html" class="related-card"><div class="cat">👥 Clients</div><div class="title">Client management for contractors →</div></a>
+            <a href="how-to-write-construction-quote.html" class="related-card"><div class="cat">📝 Quotes</div><div class="title">How to write a construction quote →</div></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center"><a href="../freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a><a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a><a href="buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a><a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a><a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a></div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+<script>var rp=document.getElementById('read-progress');window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});</script>
+<script src="/assets/tracking.js" defer></script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

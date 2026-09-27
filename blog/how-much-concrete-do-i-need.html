@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#22c55e">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Much Concrete Do I Need? m³ Calculations for Slabs, Foundations &amp; Driveways | BuildExact</title>
+    <meta name="description" content="Order concrete without waste or shortage. Complete guide: slab, strip foundation and sloped driveway. Includes worked examples, margin percentages, and ready-mix vs bag-mix comparison.">
+    <meta name="keywords" content="how much concrete, calculate m3 concrete, concrete slab calculation, strip foundation concrete, driveway concrete m3, ready-mix vs bag mix, BuildExact">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/blog/how-much-concrete-do-i-need.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/hoeveel-m3-beton-berekenen.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/how-much-concrete-do-i-need.html">
+    <meta property="og:title" content="How Much Concrete Do I Need? Calculating m³ for Slabs, Foundations and Driveways">
+    <meta property="og:description" content="Calculate concrete for slab, foundation and driveway — including margin and the ready-mix vs bag-mix trade-off.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx-2.png">
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Article", "headline": "How Much Concrete Do I Need? Calculating m³ for Slabs, Foundations and Driveways", "author": { "@type": "Organization", "name": "Grounded Studio" }, "publisher": { "@type": "Organization", "name": "Grounded Studio", "logo": { "@type": "ImageObject", "url": "https://grounded-studio.app/assets/logo-gs.png" } }, "datePublished": "2026-09-27", "inLanguage": "en" }
+    </script>
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/" }, { "@type": "ListItem", "position": 2, "name": "BuildExact", "item": "https://grounded-studio.app/buildexact.html" }, { "@type": "ListItem", "position": 3, "name": "Blog", "item": "https://grounded-studio.app/blog/buildexact.html" }, { "@type": "ListItem", "position": 4, "name": "How Much Concrete" } ] }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0a0f1a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+        :root { --bx:#2563eb; --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:28px; margin:32px 0; }
+        .formula-box .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px; }
+        .formula-box .formula { font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; margin-bottom:10px; }
+        .formula-box .formula-example { font-size:.9rem; color:var(--muted); }
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+        .table-wrap { overflow-x:auto; margin:28px 0; }
+        table { width:100%; border-collapse:collapse; font-size:.9rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media (max-width:700px) { .related-cards { grid-template-columns:1fr; } }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--bx); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        #read-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#2563eb,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="read-progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><a href="buildexact.html" class="nav-back">← Blog</a></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="buildexact.html">Blog</a> / <span>How Much Concrete Do I Need</span></div>
+            <div class="article-cat">🧮 Calculators &amp; Rules of Thumb</div>
+            <h1>How Much Concrete Do I Need? Calculating m³ for Slabs, Foundations and Driveways</h1>
+            <div class="article-meta"><span>📅 27 September 2026</span><span>⏱ 7 min read</span><span>✍️ Grounded Studio</span></div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+            <p>Concrete is one of the most annoying materials to order. Too little and the mixer truck has to come back for half a cubic metre — call-out fee, delayed pour, cold joint in the slab. Too much and you're stuck with a half-cured mass you need to dump somewhere within an hour and a half.</p>
+
+            <p>In this guide: <strong>how to calculate m³ of concrete for a slab, strip foundation and driveway</strong>, why you always order 5–10% extra, and when ready-mix from a truck beats mixing bags yourself. Written for the Dutch context (Nederlandse leverancier, standard delivery increments of 0.5 m³), but the maths is universal.</p>
+
+            <h2>The basic formula</h2>
+
+            <div class="formula-box">
+                <div class="formula-label">Volume calculation</div>
+                <div class="formula">Volume (m³) = Length (m) × Width (m) × Thickness (m)</div>
+                <div class="formula-example">Example: 6 m × 4 m × 0.12 m = 2.88 m³ (garage slab, 12 cm thick)</div>
+            </div>
+
+            <p>Important: <strong>keep thickness in metres, not centimetres</strong>. A 12 cm thickness is 0.12 m — forget the conversion and you'll come out with 288 m³, which is a hint you should start over.</p>
+
+            <h2>Example 1: garage slab 6 × 4 m</h2>
+
+            <p>Standard garage, 6 by 4 metres, reinforced concrete slab 12 cm thick with a mesh.</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Calculation</th><th>Result</th></tr>
+                    <tr><td>Length × Width × Thickness</td><td>6.0 × 4.0 × 0.12</td></tr>
+                    <tr><td>Net volume</td><td>2.88 m³</td></tr>
+                    <tr><td>Margin 10% (uneven subgrade, spillage)</td><td>+0.29 m³</td></tr>
+                    <tr><td><strong>Order</strong></td><td><strong>3.20 m³</strong></td></tr>
+                </table>
+            </div>
+
+            <p>Ready-mix trucks in NL deliver in increments of 0.5 m³ (sometimes 0.25 m³). So you'd order 3.25 m³ — the supplier rounds up.</p>
+
+            <h2>Example 2: strip foundation</h2>
+
+            <p>Strip foundation under a 5 × 4 m extension, with a trench 30 cm wide and 80 cm deep, running along the full perimeter.</p>
+
+            <div class="formula-box">
+                <div class="formula-label">Foundation formula</div>
+                <div class="formula">Volume = Perimeter × Width × Depth</div>
+                <div class="formula-example">Perimeter of 5×4 rectangle = 2×(5+4) = 18 m</div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Calculation</th><th>Result</th></tr>
+                    <tr><td>Perimeter</td><td>18.0 m</td></tr>
+                    <tr><td>Trench width × depth</td><td>0.30 × 0.80</td></tr>
+                    <tr><td>Net volume</td><td>4.32 m³</td></tr>
+                    <tr><td>Margin 8% (soil slumps into trench, rough edges)</td><td>+0.35 m³</td></tr>
+                    <tr><td><strong>Order</strong></td><td><strong>4.70 m³</strong></td></tr>
+                </table>
+            </div>
+
+            <p>Note: if there's a strip foundation under an internal load-bearing wall, that extra run counts too. Measure the total length of <em>all</em> trenches, not just the external perimeter.</p>
+
+            <h2>Example 3: sloped driveway</h2>
+
+            <p>Driveway 8 m long × 3 m wide, with a small height difference for drainage towards the street. Standard driveway thickness: 15 cm, but the slope means the thickness varies between the top and bottom of the run.</p>
+
+            <div class="formula-box">
+                <div class="formula-label">Formula with slope</div>
+                <div class="formula">Volume = L × W × Average thickness</div>
+                <div class="formula-example">Average thickness = (Thickness at top + Thickness at bottom) / 2</div>
+            </div>
+
+            <p>Say the driveway is 15 cm at the garage end and 12 cm at the street (3 cm slope over 8 metres). Average thickness = (0.15 + 0.12) / 2 = 0.135 m.</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Calculation</th><th>Result</th></tr>
+                    <tr><td>L × W × average thickness</td><td>8.0 × 3.0 × 0.135</td></tr>
+                    <tr><td>Net volume</td><td>3.24 m³</td></tr>
+                    <tr><td>Margin 8%</td><td>+0.26 m³</td></tr>
+                    <tr><td><strong>Order</strong></td><td><strong>3.50 m³</strong></td></tr>
+                </table>
+            </div>
+
+            <div class="tip-card">
+                <h3>💡 Don't forget to measure the formwork</h3>
+                <p>Using formwork? The <em>inside</em> dimensions matter, not the outside. A box of 8×3 m with a 22 mm plank on all sides has a net area of 7.96 × 2.96 m. Small difference, but at 15 cm thickness that's already nearly 20 litres of concrete.</p>
+            </div>
+
+            <h2>Why always order 5–10% extra</h2>
+
+            <p>Every experienced concrete worker adds a margin. The reason: theory versus site reality.</p>
+
+            <ul>
+                <li><strong>Uneven subgrade</strong> — especially with slabs, concrete settles into dips</li>
+                <li><strong>Losses during pour</strong> — some stays in the truck, some falls beside the formwork</li>
+                <li><strong>Shrinkage during curing</strong> — concrete loses volume as it dries, ~1–2%</li>
+                <li><strong>Measurement errors</strong> — a trench often turns out 5 cm deeper on site than on paper</li>
+                <li><strong>Extra callout</strong> — a second truck run (call-out fee + minimum order) is around €200. For that money you order 1 m³ extra you'll rarely need to dispose of</li>
+            </ul>
+
+            <p>Rules of thumb: <strong>slab 10%</strong>, <strong>foundation 8%</strong>, <strong>driveway 8%</strong>. With very uneven ground or rough excavation, 12–15% is wiser.</p>
+
+            <h2>Ready-mix truck versus bag mix</h2>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th>Aspect</th><th>Ready-mix (truck)</th><th>Bag mix (self)</th></tr>
+                    <tr><td>Economic from</td><td>~1.5 m³</td><td>Up to ~0.5 m³</td></tr>
+                    <tr><td>Price per m³</td><td>€130 – €180</td><td>€180 – €240 (bags)</td></tr>
+                    <tr><td>Time</td><td>Truck unloads in ~15 min</td><td>Hours of mixing &amp; hauling</td></tr>
+                    <tr><td>Quality</td><td>Consistent, certified</td><td>Varies per batch</td></tr>
+                    <tr><td>Delivery</td><td>Fixed slot</td><td>Straight from the merchant</td></tr>
+                    <tr><td>Leftover</td><td>Must go fast</td><td>Close the bag for later</td></tr>
+                </table>
+            </div>
+
+            <p>Rule of thumb: <strong>below 1 m³ you mix yourself</strong> (or get a small mini-mix delivered). <strong>Above 1.5 m³ you order ready-mix</strong>. Between 1 and 1.5 m³ it's a judgement call: do you have help, is the site accessible to a truck, and are you in a hurry?</p>
+
+            <div class="tip-card">
+                <h3>⚠️ Ready-mix = one shot</h3>
+                <p>Truck arrives, you have roughly ninety minutes before it starts to set. Make sure formwork, reinforcement, level subgrade, screed rail and helpers are ready <em>before</em> the truck pulls up. Otherwise you're stuck with a half-filled box and hardening concrete — not a fun morning.</p>
+            </div>
+
+            <h2>How to do this in BuildExact</h2>
+
+            <ol>
+                <li><strong>Open the concrete calculator</strong> under Calculators.</li>
+                <li><strong>Pick the type</strong>: slab, strip foundation or driveway. Enter length, width and thickness.</li>
+                <li><strong>Add margin</strong> (default 10% for slabs, 8% for foundations) — the app returns the exact order volume.</li>
+                <li><strong>Link it to a project</strong> so the volume feeds into your material list.</li>
+                <li><strong>Set cost price and sale price</strong> per m³ in your price book — margin stays private, the sale price shows on the quote.</li>
+            </ol>
+
+            <div class="app-cta">
+                <h3>🧮 Concrete, foundations &amp; everything else in BuildExact</h3>
+                <p>Calculate slabs, strip foundations, driveways and settlements in seconds. Add margin, link to project, export as branded PDF quote — all in one app.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    Download free
+                </a>
+            </div>
+
+            <h2>Summary</h2>
+            <p>Volume = Length × Width × Thickness. Add an 8–10% margin for unevenness, losses and measurement errors. Below 1 m³ mix yourself; above 1.5 m³ order ready-mix. Measure <em>all</em> trenches (including under internal walls), use inside dimensions on formwork, and have everything ready before the truck arrives — concrete doesn't wait.</p>
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Related articles</h2>
+        <div class="related-cards">
+            <a href="how-to-calculate-tiles.html" class="related-card"><div class="cat">🧮 Calculator</div><div class="title">How to calculate tiles →</div></a>
+            <a href="how-much-insulation-do-i-need.html" class="related-card"><div class="cat">🧱 Insulation</div><div class="title">How much insulation do I need? →</div></a>
+            <a href="how-to-measure-a-room-accurately.html" class="related-card"><div class="cat">📏 Measuring</div><div class="title">Measure a room accurately →</div></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center"><a href="../freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a><a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a><a href="buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a><a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a><a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a></div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+<script>var rp=document.getElementById('read-progress');window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});</script>
+<script src="/assets/tracking.js" defer></script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

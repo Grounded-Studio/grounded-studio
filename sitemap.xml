@@ -318,4 +318,40 @@
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/onderhoudscontract-terugkerende-facturen-opzetten.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/recurring-invoices-maintenance-contracts.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/offerte-versturen-via-whatsapp.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/send-quotes-invoices-whatsapp.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/hoeveel-m3-beton-berekenen.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/how-much-concrete-do-i-need.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
