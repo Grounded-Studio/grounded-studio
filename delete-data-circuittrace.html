@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#818cf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete your data – Circuit Trace</title>
+  <meta name="description" content="How to delete your Circuit Trace game data and request removal of advertising data.">
+  <link rel="canonical" href="https://grounded-studio.app/delete-data-circuittrace.html">
+  <style>
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root),::view-transition-new(root) { animation-duration: 260ms; animation-timing-function: cubic-bezier(.16,1,.3,1); }
+    @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+    *:focus-visible { outline:2px solid #818cf8; outline-offset:2px; border-radius:4px; }
+    a:focus-visible,button:focus-visible { outline:2px solid #818cf8; outline-offset:3px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #06060a;
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 620px;
+      width: 100%;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #6366f1, #818cf8);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+    .studio {
+      font-size: 13px;
+      color: #64748b;
+      margin-left: auto;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #f1f5f9;
+    }
+    p {
+      color: #cbd5e1;
+      margin-bottom: 16px;
+    }
+    .steps, .data-info {
+      background: rgba(129,140,248,0.06);
+      border: 1px solid rgba(129,140,248,0.2);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .steps h2, .data-info h2 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #818cf8;
+    }
+    .steps ol, .data-info ul {
+      padding-left: 20px;
+    }
+    .steps li, .data-info li {
+      color: #cbd5e1;
+      line-height: 1.7;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin: 28px 0;
+    }
+    .email-btn {
+      display: inline-block;
+      margin-top: 8px;
+      background: linear-gradient(135deg, #6366f1, #818cf8);
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    strong { color: #f1f5f9; }
+    .footer {
+      margin-top: 32px;
+      font-size: 13px;
+      color: #64748b;
+      text-align: center;
+    }
+    .footer a { color: #818cf8; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    .note {
+      font-size: 13px;
+      color: #94a3b8;
+      background: rgba(255,255,255,0.02);
+      padding: 12px 16px;
+      border-radius: 10px;
+      border-left: 3px solid #818cf8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <div class="logo-icon">⚡</div>
+      <span class="logo-text">Circuit Trace</span>
+      <span class="studio">by Grounded Studio</span>
+    </div>
+
+    <h1>Delete your data</h1>
+    <p>Circuit Trace does not use accounts or servers. All game data (progress, stats, settings) is stored <strong>locally on your device</strong>. Follow the steps below to delete it.</p>
+
+    <div class="steps">
+      <h2>How to delete your local game data</h2>
+      <ol>
+        <li>Open your Android device <strong>Settings</strong></li>
+        <li>Tap <strong>Apps</strong> → find <strong>Circuit Trace</strong></li>
+        <li>Tap <strong>Storage &amp; cache</strong> → <strong>Clear storage</strong>
+          (or simply <strong>Uninstall</strong> the app to remove everything)</li>
+      </ol>
+    </div>
+
+    <div class="data-info">
+      <h2>What is deleted</h2>
+      <ul>
+        <li>Level progress and best-move records</li>
+        <li>Daily Challenge history and Time Trial best scores</li>
+        <li>Sound preference, color theme, player name</li>
+        <li>Cached AdMob settings and consent choices</li>
+      </ul>
+    </div>
+
+    <div class="data-info">
+      <h2>What is kept</h2>
+      <ul>
+        <li><strong>Google Play purchase history</strong> (Remove Ads €2.99) — managed by Google Play, not by us. Restore or refund via <a href="https://play.google.com/store/account" target="_blank" style="color:#818cf8">play.google.com/store/account</a></li>
+        <li><strong>Nothing is retained on our servers</strong> — because we don't run any</li>
+      </ul>
+    </div>
+
+    <hr class="divider">
+
+    <h2 style="font-size:18px;color:#818cf8;margin-bottom:12px;">Advertising data (Google AdMob)</h2>
+    <p>Circuit Trace uses Google AdMob to show ads. Ad-related data (Advertising ID, IP-derived location, general usage signals) is processed by <strong>Google</strong>, not by Grounded Studio. To request deletion:</p>
+    <ol style="padding-left: 20px; color: #cbd5e1;">
+      <li style="margin-bottom:6px;">Reset your Android <strong>Advertising ID</strong>: device Settings → Google → Ads → <em>Delete advertising ID</em></li>
+      <li style="margin-bottom:6px;">Manage or delete Google ad data at <a href="https://myadcenter.google.com" target="_blank" style="color:#818cf8">myadcenter.google.com</a></li>
+    </ol>
+
+    <hr class="divider">
+
+    <p>Prefer email? Send us a request and we'll confirm within <strong>7 days</strong>:</p>
+    <a class="email-btn" href="mailto:rsijbers1982@gmail.com?subject=Data%20deletion%20request%20–%20Circuit%20Trace">
+      Request deletion via email
+    </a>
+
+    <hr class="divider">
+
+    <p class="note">Retention: because Circuit Trace stores no data on any server operated by Grounded Studio, there is no retention period on our side. Local device data is deleted immediately when you clear storage or uninstall.</p>
+  </div>
+
+  <div class="footer">
+    © 2026 Grounded Studio · <a href="https://grounded-studio.app/privacy-circuittrace.html">Privacy Policy</a> · <a href="https://grounded-studio.app">grounded-studio.app</a>
+  </div>
+<script src="/assets/tracking.js" defer></script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>
