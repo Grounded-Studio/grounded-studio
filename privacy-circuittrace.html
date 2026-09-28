@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#818cf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Circuit Trace</title>
+    <meta name="description" content="Privacy Policy for Circuit Trace — a minimalist puzzle game by Grounded Studio.">
+    <link rel="canonical" href="https://grounded-studio.app/privacy-circuittrace.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/privacy-circuittrace.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/privacy-circuittrace.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/privacy-circuittrace.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root),::view-transition-new(root) { animation-duration: 260ms; animation-timing-function: cubic-bezier(.16,1,.3,1); }
+        @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+        *:focus-visible { outline:2px solid #818cf8; outline-offset:2px; border-radius:4px; }
+        a:focus-visible,button:focus-visible { outline:2px solid #818cf8; outline-offset:3px; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: #06060a;
+            color: #f1f5f9;
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+        }
+        :root {
+            --vg: #818cf8;
+            --muted: #64748b;
+            --border: rgba(255,255,255,0.07);
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+            background: rgba(6,6,10,0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .nav-logo img { width: 28px; height: 28px; border-radius: 8px; }
+        .nav-logo span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--vg);
+        }
+        .nav-back {
+            font-size: 13px;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color .2s;
+        }
+        .nav-back:hover { color: #f1f5f9; }
+
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(129,140,248,0.12);
+            color: var(--vg);
+            border: 1px solid rgba(129,140,248,0.25);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        h1 span { color: var(--vg); }
+
+        .meta {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .highlight {
+            background: rgba(129,140,248,0.08);
+            border: 1px solid rgba(129,140,248,0.25);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+            color: #e2e8f0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--vg);
+            margin: 40px 0 12px;
+        }
+
+        p { color: #cbd5e1; margin-bottom: 14px; }
+        p:last-child { margin-bottom: 0; }
+
+        ul {
+            color: #cbd5e1;
+            padding-left: 20px;
+            margin-bottom: 14px;
+        }
+        ul li { margin-bottom: 6px; }
+
+        .card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .card p { margin-bottom: 8px; }
+        .card p:last-child { margin-bottom: 0; }
+
+        a { color: var(--vg); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .lang-toggle {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        .lang-btn.active {
+            background: rgba(129,140,248,0.12);
+            border-color: rgba(129,140,248,0.3);
+            color: var(--vg);
+        }
+
+        .content-en, .content-nl { display: none; }
+        .content-en.visible, .content-nl.visible { display: block; }
+
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: var(--muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="nav-logo" href="https://grounded-studio.app">
+        <img src="assets/icon-ct.png" alt="Circuit Trace" width="28" height="28" decoding="async"
+             onerror="this.outerHTML='<div style=\'width:28px;height:28px;background:rgba(129,140,248,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px\'>⚡</div>'">
+        <span>Circuit Trace</span>
+    </a>
+    <a class="nav-back" href="https://grounded-studio.app">← Grounded Studio</a>
+</nav>
+
+<main>
+    <div class="badge">Legal</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p class="meta">Circuit Trace — Minimalist Puzzle Game &nbsp;·&nbsp; Last updated: September 28, 2026 &nbsp;·&nbsp; by Grounded Studio</p>
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('nl')">Nederlands</button>
+    </div>
+
+    <!-- ── ENGLISH ── -->
+    <div class="content-en visible">
+
+        <div class="highlight">
+            ✓ Your game progress stays on your device. We do not collect, sell, or share personal data. The only data that leaves your device is what Google AdMob needs to show ads — and you can remove ads permanently for €2.99.
+        </div>
+
+        <h2>1. Introduction</h2>
+        <p>Circuit Trace ("the app", "the game") is developed by Grounded Studio. This privacy policy explains how the app handles your data. The game itself works offline. The only external service is Google AdMob, which is used to show ads (and is disabled entirely after you purchase Remove Ads).</p>
+
+        <h2>2. Data stored on your device</h2>
+        <p>The game saves the following data locally on your device so your progress persists between sessions:</p>
+        <div class="card">
+            <p>🎮 <strong>Progress</strong> — completed levels, best moves, tier ratings, unlocked sectors</p>
+            <p>🏆 <strong>Stats</strong> — total solves, daily challenge history, Time Trial best scores</p>
+            <p>⚙️ <strong>Settings</strong> — sound preference, selected color theme, chosen player name</p>
+            <p>🛒 <strong>Purchase state</strong> — whether you have bought Remove Ads (verified via Google Play)</p>
+        </div>
+        <p>This data stays on your device. It is not transmitted to us. Uninstalling the app removes it.</p>
+
+        <h2>3. Advertising (Google AdMob)</h2>
+        <p>Circuit Trace uses <strong>Google AdMob</strong> to display three ad formats to free users:</p>
+        <ul>
+            <li><strong>Interstitial ads</strong> — occasional full-screen ads between levels</li>
+            <li><strong>Rewarded video ads</strong> — optional, only shown when you tap a "watch ad for extra hint / reset" button</li>
+            <li><strong>App-open ads</strong> — occasional ad when you return to the game</li>
+        </ul>
+        <p>AdMob is a service provided by Google LLC. To serve ads, AdMob may collect data including your device's <strong>Advertising ID (AAID)</strong>, IP address, coarse location (derived from IP), device model and OS version, and general app usage signals. This data is processed by Google in accordance with <a href="https://policies.google.com/technologies/ads" target="_blank">Google's Advertising Policy</a> and <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+        <p>Where required by law (EU/EEA/UK), the app shows a consent form (Google's User Messaging Platform, UMP) before requesting any advertising data, in compliance with GDPR and the IAB Transparency & Consent Framework. You can withdraw consent at any time from the in-game Settings → Privacy options.</p>
+        <p>You can also reset or opt out of your Advertising ID from your Android device settings: <em>Settings → Google → Ads</em>.</p>
+
+        <h2>4. In-app purchases (Google Play Billing)</h2>
+        <p>Circuit Trace offers one optional in-app purchase: <strong>Remove Ads (€2.99)</strong>. Purchases are processed by <strong>Google Play Billing</strong>. We never see or store your payment details. Google Play only informs the app whether you own the "remove_ads" entitlement. After purchase, all interstitial and app-open ads are permanently disabled. Rewarded video ads remain available since they are player-initiated.</p>
+
+        <h2>5. What we (Grounded Studio) don't collect</h2>
+        <ul>
+            <li>No name or email — the "player name" is a local display label only</li>
+            <li>No account or login system</li>
+            <li>No first-party analytics or crash reporting</li>
+            <li>No access to contacts, photos, files, camera, microphone, or precise location</li>
+            <li>No selling or sharing of personal data with third parties beyond AdMob's own ad-serving pipeline</li>
+        </ul>
+
+        <h2>6. Permissions</h2>
+        <p>The app requests network permission (INTERNET, ACCESS_NETWORK_STATE), which is required by AdMob to fetch ads and by Google Play Billing to verify purchases. No other runtime permissions are requested.</p>
+
+        <h2>7. Children</h2>
+        <p>Circuit Trace is suitable for all ages, but because it uses Google AdMob it is not classified as a "made for kids" app. Users under 13 (or the applicable age in their jurisdiction) should use the app under parental supervision. If you are a parent and believe your child has interacted with ads inappropriately, contact us.</p>
+
+        <h2>8. Your rights (GDPR / CCPA)</h2>
+        <p>If you are in the EU/EEA/UK or California, you have the right to access, correct, delete, or restrict processing of personal data related to you. Since we (Grounded Studio) do not directly collect or hold any personal data, most requests should be directed to Google. To withdraw consent for personalised ads within the app, use <strong>Settings → Privacy options</strong>.</p>
+
+        <h2>9. Changes to this policy</h2>
+        <p>If a future update changes how data is handled, this policy will be updated and the "last updated" date at the top of this page will reflect it. Continued use of the app after changes constitutes acceptance.</p>
+
+        <h2>10. Contact</h2>
+        <p>Questions about this privacy policy? Contact us at: <a href="mailto:rsijbers1982@gmail.com">rsijbers1982@gmail.com</a></p>
+
+    </div>
+
+    <!-- ── NEDERLANDS ── -->
+    <div class="content-nl">
+
+        <div class="highlight">
+            ✓ Je spelvoortgang blijft op je apparaat. We verzamelen, verkopen of delen geen persoonlijke gegevens. Het enige dat je apparaat verlaat is wat Google AdMob nodig heeft voor advertenties — en die kun je permanent verwijderen voor €2,99.
+        </div>
+
+        <h2>1. Inleiding</h2>
+        <p>Circuit Trace ("de app", "het spel") is ontwikkeld door Grounded Studio. Dit privacybeleid legt uit hoe de app omgaat met je gegevens. Het spel zelf werkt offline. De enige externe dienst is Google AdMob, dat wordt gebruikt om advertenties te tonen (en volledig wordt uitgeschakeld nadat je Remove Ads koopt).</p>
+
+        <h2>2. Gegevens die lokaal op je apparaat worden opgeslagen</h2>
+        <p>Het spel bewaart de volgende gegevens lokaal, zodat je voortgang tussen sessies behouden blijft:</p>
+        <div class="card">
+            <p>🎮 <strong>Voortgang</strong> — voltooide levels, beste aantal zetten, tier ratings, ontgrendelde sectoren</p>
+            <p>🏆 <strong>Statistieken</strong> — totaal opgeloste puzzels, dagelijkse challenge geschiedenis, Time Trial records</p>
+            <p>⚙️ <strong>Instellingen</strong> — geluid, gekozen kleurthema, gekozen spelernaam</p>
+            <p>🛒 <strong>Aankoopstatus</strong> — of je Remove Ads hebt gekocht (geverifieerd via Google Play)</p>
+        </div>
+        <p>Deze gegevens blijven op je apparaat en worden niet naar ons verstuurd. Bij het verwijderen van de app worden ze gewist.</p>
+
+        <h2>3. Advertenties (Google AdMob)</h2>
+        <p>Circuit Trace gebruikt <strong>Google AdMob</strong> om drie soorten advertenties te tonen aan gratis gebruikers:</p>
+        <ul>
+            <li><strong>Interstitial ads</strong> — af en toe een schermvullende advertentie tussen levels</li>
+            <li><strong>Rewarded video ads</strong> — optioneel, alleen wanneer je zelf op "bekijk filmpje voor extra hint / reset" tikt</li>
+            <li><strong>App-open ads</strong> — af en toe een advertentie wanneer je terugkeert naar het spel</li>
+        </ul>
+        <p>AdMob is een dienst van Google LLC. Voor het tonen van advertenties kan AdMob gegevens verzamelen zoals je <strong>Advertising ID (AAID)</strong>, IP-adres, grove locatie (afgeleid uit IP), apparaatmodel en OS-versie, en algemene gebruikssignalen. Deze gegevens worden verwerkt volgens het <a href="https://policies.google.com/technologies/ads" target="_blank">advertentiebeleid van Google</a> en het <a href="https://policies.google.com/privacy" target="_blank">privacybeleid van Google</a>.</p>
+        <p>Waar de wet dit voorschrijft (EU/EER/VK), toont de app een toestemmingsscherm (Google's User Messaging Platform, UMP) voordat er advertentiegegevens worden opgevraagd, conform de AVG en het IAB Transparency & Consent Framework. Je kunt je toestemming op elk moment intrekken via <em>Instellingen → Privacy opties</em> in de app.</p>
+        <p>Je kunt je Advertising ID ook resetten of uitschakelen via de instellingen van je Android-apparaat: <em>Instellingen → Google → Advertenties</em>.</p>
+
+        <h2>4. In-app aankopen (Google Play Billing)</h2>
+        <p>Circuit Trace biedt één optionele in-app aankoop: <strong>Remove Ads (€2,99)</strong>. Aankopen worden verwerkt via <strong>Google Play Billing</strong>. Wij zien of bewaren geen betaalgegevens. Google Play deelt met de app alleen of je het "remove_ads" recht bezit. Na aankoop worden alle interstitial en app-open advertenties permanent uitgeschakeld. Rewarded video ads blijven beschikbaar, want die worden door de speler zelf gestart.</p>
+
+        <h2>5. Wat wij (Grounded Studio) niet verzamelen</h2>
+        <ul>
+            <li>Geen naam of e-mailadres — de "spelernaam" is alleen een lokaal weergave-label</li>
+            <li>Geen account of loginsysteem</li>
+            <li>Geen eigen analyse of crashrapportage</li>
+            <li>Geen toegang tot contacten, foto's, bestanden, camera, microfoon of exacte locatie</li>
+            <li>Geen verkoop of verspreiding van persoonlijke gegevens aan derden buiten AdMob's eigen advertentiepijplijn</li>
+        </ul>
+
+        <h2>6. Machtigingen</h2>
+        <p>De app vraagt netwerkmachtigingen (INTERNET, ACCESS_NETWORK_STATE), die nodig zijn voor AdMob om advertenties op te halen en voor Google Play Billing om aankopen te verifiëren. Andere runtime-machtigingen worden niet gevraagd.</p>
+
+        <h2>7. Kinderen</h2>
+        <p>Circuit Trace is geschikt voor alle leeftijden, maar omdat het Google AdMob gebruikt is de app niet geclassificeerd als "gemaakt voor kinderen". Gebruikers onder de 13 (of de geldende leeftijd in hun rechtsgebied) horen de app onder toezicht van een ouder te gebruiken. Ben je ouder en denk je dat je kind ongepast met advertenties in aanraking is gekomen? Neem contact op.</p>
+
+        <h2>8. Je rechten (AVG / CCPA)</h2>
+        <p>Als je in de EU/EER/VK of Californië woont heb je het recht op inzage, correctie, verwijdering of beperking van persoonlijke gegevens die over jou verwerkt worden. Omdat wij (Grounded Studio) zelf geen persoonlijke gegevens verzamelen of bewaren, moeten de meeste verzoeken bij Google worden ingediend. Om je toestemming voor gepersonaliseerde advertenties in de app in te trekken, gebruik <strong>Instellingen → Privacy opties</strong>.</p>
+
+        <h2>9. Wijzigingen</h2>
+        <p>Als een toekomstige update de manier waarop gegevens worden verwerkt verandert, wordt dit beleid bijgewerkt en toont de datum bovenaan de wijziging. Voortgezet gebruik van de app na wijzigingen betekent acceptatie.</p>
+
+        <h2>10. Contact</h2>
+        <p>Vragen over dit privacybeleid? Neem contact op via: <a href="mailto:rsijbers1982@gmail.com">rsijbers1982@gmail.com</a></p>
+
+    </div>
+</main>
+
+<footer>
+    © 2026 Grounded Studio &nbsp;·&nbsp; <a href="https://grounded-studio.app">grounded-studio.app</a>
+</footer>
+
+<script>
+    function setLang(lang) {
+        document.querySelectorAll('.content-en, .content-nl').forEach(el => el.classList.remove('visible'));
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelector('.content-' + lang).classList.add('visible');
+        event.target.classList.add('active');
+    }
+</script>
+<script src="/assets/tracking.js" defer></script>
+<script src="/assets/cookie-banner.js" defer></script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>
