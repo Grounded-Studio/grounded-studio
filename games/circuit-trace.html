@@ -8,26 +8,26 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#818cf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flow — Coming Soon on Google Play | Grounded Studio</title>
-    <meta name="description" content="Flow is a minimalist logic puzzle by Grounded Studio: connect coloured dots, tile the grid, restore the circuit. 73 handcrafted levels, offline. Coming soon on Google Play.">
-    <meta name="keywords" content="Flow puzzle, connect the dots game, logic puzzle android, tile puzzle, minimalist puzzle game, circuit puzzle, brain game, Grounded Studio, coming soon Google Play">
+    <title>Circuit Trace — Coming Soon on Google Play | Grounded Studio</title>
+    <meta name="description" content="Circuit Trace is a minimalist logic puzzle by Grounded Studio: connect coloured dots, tile the grid, restore the circuit. 73 handcrafted levels, offline. Coming soon on Google Play.">
+    <meta name="keywords" content="Circuit Trace puzzle, connect the dots game, logic puzzle android, tile puzzle, minimalist puzzle game, circuit puzzle, brain game, Grounded Studio, coming soon Google Play">
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://grounded-studio.app/games/flow.html">
+    <link rel="canonical" href="https://grounded-studio.app/games/circuit-trace.html">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://grounded-studio.app/games/flow.html">
-    <meta property="og:title" content="Flow — Coming Soon on Google Play">
+    <meta property="og:url" content="https://grounded-studio.app/games/circuit-trace.html">
+    <meta property="og:title" content="Circuit Trace — Coming Soon on Google Play">
     <meta property="og:description" content="A minimalist logic puzzle by Grounded Studio. Connect the dots, fill the grid, restore the circuit. 73 handcrafted levels — coming soon on Google Play.">
     <meta property="og:image" content="https://grounded-studio.app/assets/og-studio.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Flow — Coming Soon on Google Play">
+    <meta name="twitter:title" content="Circuit Trace — Coming Soon on Google Play">
     <meta name="twitter:description" content="A minimalist logic puzzle by Grounded Studio. Coming soon on Google Play.">
     <meta name="twitter:image" content="https://grounded-studio.app/assets/og-studio.svg">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "VideoGame",
-        "name": "Flow",
+        "name": "Circuit Trace",
         "applicationCategory": "GameApplication",
         "genre": "Puzzle",
         "operatingSystem": "Android",
@@ -114,6 +114,8 @@
         @keyframes drift { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(30px,-40px) scale(1.05)} }
         .hero-grid { position:absolute; inset:0; z-index:0; background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:56px 56px; mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%); }
         .hero-content { position:relative; z-index:1; max-width:780px; }
+        .hero-icon { display:inline-flex; margin-bottom:20px; animation:fadeUp .55s ease .05s both; }
+        .hero-icon img { width:88px; height:88px; border-radius:22px; box-shadow:0 12px 40px rgba(129,140,248,.35), 0 0 0 1px rgba(255,255,255,.08); }
         .hero-badge { display:inline-flex; align-items:center; gap:9px; padding:7px 18px; border-radius:100px; border:1px solid rgba(129,140,248,.4); background:rgba(129,140,248,.1); color:var(--fl); font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:28px; animation:fadeUp .6s ease .1s both; }
         .cs-hero-banner {
             display:inline-flex; align-items:center; gap:11px;
@@ -161,11 +163,27 @@
         /* SCREENSHOT SECTION */
         .screen-section { padding:80px 0 120px; position:relative; }
         .screen-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(129,140,248,.07) 0%,transparent 70%); }
-        .screen-wrap { display:flex; justify-content:center; align-items:flex-end; gap:24px; position:relative; }
-        .screen-glow { position:absolute; width:500px; height:400px; border-radius:50%; filter:blur(100px); opacity:.18; background:var(--fl); pointer-events:none; top:50%; left:50%; transform:translate(-50%,-50%); }
-        .phone-placeholder { position:relative; z-index:1; width:240px; aspect-ratio:9/19.5; border-radius:40px; background:linear-gradient(145deg,rgba(129,140,248,.08),rgba(99,102,241,.04)); border:1px dashed rgba(129,140,248,.35); display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:.78rem; font-weight:600; text-align:center; padding:24px; box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05),0 0 60px rgba(129,140,248,.1); animation:floatC 7s ease-in-out infinite; }
-        @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
-        @media (max-width:580px) { .phone-placeholder { width:220px; border-radius:32px; } }
+        .screen-wrap { display:flex; justify-content:center; align-items:center; gap:32px; position:relative; perspective:1400px; }
+        .screen-glow { position:absolute; width:640px; height:480px; border-radius:50%; filter:blur(110px); opacity:.22; background:var(--fl); pointer-events:none; top:50%; left:50%; transform:translate(-50%,-50%); z-index:0; }
+        .phone { position:relative; z-index:1; width:240px; aspect-ratio:9/19.5; border-radius:36px; overflow:hidden; box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08),0 0 60px rgba(129,140,248,.15); transition:transform .5s cubic-bezier(.16,1,.3,1); }
+        .phone img { width:100%; height:100%; object-fit:cover; display:block; }
+        .phone.center { transform:perspective(1200px) rotateY(0deg) translateY(-10px); z-index:2; }
+        .phone.left   { transform:perspective(1200px) rotateY(14deg)  translateX(20px) translateY(20px) scale(.9); opacity:.9; }
+        .phone.right  { transform:perspective(1200px) rotateY(-14deg) translateX(-20px) translateY(20px) scale(.9); opacity:.9; }
+        .phone.center { animation:floatC 7s ease-in-out infinite; }
+        .phone.left   { animation:floatL 7s ease-in-out -3s infinite; }
+        .phone.right  { animation:floatR 7s ease-in-out -5s infinite; }
+        @keyframes floatC { 0%,100%{transform:perspective(1200px) rotateY(0deg) translateY(-10px)} 50%{transform:perspective(1200px) rotateY(0deg) translateY(-26px)} }
+        @keyframes floatL { 0%,100%{transform:perspective(1200px) rotateY(14deg) translateX(20px) translateY(20px) scale(.9)} 50%{transform:perspective(1200px) rotateY(14deg) translateX(20px) translateY(6px) scale(.9)} }
+        @keyframes floatR { 0%,100%{transform:perspective(1200px) rotateY(-14deg) translateX(-20px) translateY(20px) scale(.9)} 50%{transform:perspective(1200px) rotateY(-14deg) translateX(-20px) translateY(6px) scale(.9)} }
+        @media (max-width:820px) {
+            .screen-wrap { gap:14px; }
+            .phone { width:200px; }
+        }
+        @media (max-width:640px) {
+            .phone.left, .phone.right { display:none; }
+            .phone.center { width:260px; }
+        }
 
         /* FEATURES */
         .features-section { padding:100px 0; }
@@ -281,11 +299,14 @@
             <span class="cs-dot"></span>
             <span class="cs-text" data-i18n="hero.cs">Coming soon on Google Play</span>
         </div>
+        <div class="hero-icon">
+            <img src="../assets/icon-ct.png" alt="Circuit Trace icon" width="88" height="88" onerror="this.style.display='none'">
+        </div>
         <div class="hero-badge">
             <div class="badge-dot"></div>
             <span data-i18n="hero.badge">Game 01 — By Grounded Studio</span>
         </div>
-        <h1 data-i18n="hero.h1">Flow</h1>
+        <h1 data-i18n="hero.h1">Circuit Trace</h1>
         <p class="hero-sub" data-i18n="hero.sub">Connect the circuit. Tile the grid. A minimalist logic puzzle with 73 handcrafted levels — fully offline. Launching soon on Google Play.</p>
         <div class="hero-actions">
             <span class="btn-primary btn-disabled" aria-disabled="true">
@@ -320,8 +341,14 @@
     <div class="c">
         <div class="screen-wrap">
             <div class="screen-glow"></div>
-            <div class="phone-placeholder a-scale">
-                [TODO] add screen-flow.png<br>to /assets/
+            <div class="phone left a-scale">
+                <img src="../assets/screen-ct-2.png" alt="Circuit Trace level select" width="240" height="520" loading="lazy">
+            </div>
+            <div class="phone center a-scale">
+                <img src="../assets/screen-ct.png" alt="Circuit Trace main menu" width="240" height="520" loading="lazy">
+            </div>
+            <div class="phone right a-scale">
+                <img src="../assets/screen-ct-3.png" alt="Circuit Trace gameplay" width="240" height="520" loading="lazy">
             </div>
         </div>
     </div>
@@ -396,7 +423,7 @@
         <div class="a-fade">
             <div class="section-label" style="justify-content:center"><span>●</span> <span data-i18n="cta.label">Coming soon</span></div>
             <h2 class="section-title" style="margin-bottom:12px" data-i18n-html="cta.title">Launching soon<br>on Google Play</h2>
-            <p class="section-sub" style="margin:0 auto 40px" data-i18n="cta.sub">We're putting the final touches on Flow. Free download, Android 8.0+, no account required — same principles as our apps.</p>
+            <p class="section-sub" style="margin:0 auto 40px" data-i18n="cta.sub">We're putting the final touches on Circuit Trace. Free download, Android 8.0+, no account required — same principles as our apps.</p>
             <span class="play-btn btn-disabled" aria-disabled="true">
                 <svg viewBox="0 0 24 24" fill="none">
                     <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
@@ -419,7 +446,7 @@
         <div class="a-fade">
             <div class="section-label" style="justify-content:center"><span>●</span> <span data-i18n="about.label">By Grounded Studio</span></div>
             <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.2rem)" data-i18n="about.title">Games that respect your time</h2>
-            <p data-i18n="about.desc">Flow is the first game from Grounded Studio — the Netherlands-based studio behind FreshGarant and BuildExact. We build focused, offline-first experiences with no dark patterns.</p>
+            <p data-i18n="about.desc">Circuit Trace is the first game from Grounded Studio — the Netherlands-based studio behind FreshGarant and BuildExact. We build focused, offline-first experiences with no dark patterns.</p>
             <a href="../games.html" class="back-btn" data-i18n="about.back">← All games</a>
         </div>
     </div>
@@ -490,7 +517,7 @@
             'nav.cs_full':     'Coming soon on Google Play',
             'hero.cs':         'Coming soon on Google Play',
             'hero.badge':      'Game 01 — By Grounded Studio',
-            'hero.h1':         'Flow',
+            'hero.h1':         'Circuit Trace',
             'hero.sub':        'Connect the circuit. Tile the grid. A minimalist logic puzzle with 73 handcrafted levels — fully offline. Launching soon on Google Play.',
             'btn.cs_small':    'Coming soon on',
             'btn.how':         'How it plays',
@@ -518,10 +545,10 @@
             'stats.3':         'Offline &amp; free',
             'cta.label':       'Coming soon',
             'cta.title':       'Launching soon<br>on Google Play',
-            'cta.sub':         "We're putting the final touches on Flow. Free download, Android 8.0+, no account required — same principles as our apps.",
+            'cta.sub':         "We're putting the final touches on Circuit Trace. Free download, Android 8.0+, no account required — same principles as our apps.",
             'about.label':     'By Grounded Studio',
             'about.title':     'Games that respect your time',
-            'about.desc':      'Flow is the first game from Grounded Studio — the Netherlands-based studio behind FreshGarant and BuildExact. We build focused, offline-first experiences with no dark patterns.',
+            'about.desc':      'Circuit Trace is the first game from Grounded Studio — the Netherlands-based studio behind FreshGarant and BuildExact. We build focused, offline-first experiences with no dark patterns.',
             'about.back':      '← All games',
         },
         nl: {
@@ -533,7 +560,7 @@
             'nav.cs_full':     'Binnenkort in Google Play',
             'hero.cs':         'Binnenkort in Google Play',
             'hero.badge':      'Game 01 — Door Grounded Studio',
-            'hero.h1':         'Flow',
+            'hero.h1':         'Circuit Trace',
             'hero.sub':        'Verbind het circuit. Vul het bord. Een minimalistische logica-puzzel met 73 handgemaakte levels — volledig offline. Binnenkort in Google Play.',
             'btn.cs_small':    'Binnenkort in',
             'btn.how':         'Hoe het werkt',
@@ -561,10 +588,10 @@
             'stats.3':         'Offline &amp; gratis',
             'cta.label':       'Binnenkort',
             'cta.title':       'Binnenkort<br>in Google Play',
-            'cta.sub':         'We zetten de laatste puntjes op de i van Flow. Gratis download, Android 8.0+, geen account nodig — dezelfde principes als onze apps.',
+            'cta.sub':         'We zetten de laatste puntjes op de i van Circuit Trace. Gratis download, Android 8.0+, geen account nodig — dezelfde principes als onze apps.',
             'about.label':     'Door Grounded Studio',
             'about.title':     'Games die je tijd respecteren',
-            'about.desc':      'Flow is de eerste game van Grounded Studio — de Nederlandse studio achter FreshGarant en BuildExact. We bouwen focused, offline-first ervaringen zonder dark patterns.',
+            'about.desc':      'Circuit Trace is de eerste game van Grounded Studio — de Nederlandse studio achter FreshGarant en BuildExact. We bouwen focused, offline-first ervaringen zonder dark patterns.',
             'about.back':      '← Alle games',
         }
     };

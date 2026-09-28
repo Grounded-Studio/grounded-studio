@@ -9,8 +9,8 @@
     <meta name="theme-color" content="#818cf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games — Grounded Studio</title>
-    <meta name="description" content="Games by Grounded Studio. Minimalist, offline, focused. Puzzle and casual titles for Android — starting with Flow.">
-    <meta name="keywords" content="Grounded Studio games, indie android games, minimalist puzzle games, Flow game, offline games android">
+    <meta name="description" content="Games by Grounded Studio. Minimalist, offline, focused. Puzzle and casual titles for Android — starting with Circuit Trace.">
+    <meta name="keywords" content="Grounded Studio games, indie android games, minimalist puzzle games, Circuit Trace game, offline games android">
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://grounded-studio.app/games.html">
@@ -109,6 +109,7 @@
         .game-cover { aspect-ratio:16/10; background:linear-gradient(135deg,#0a0f1c 0%,#1a1440 60%,#4c1d95 100%); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
         .game-cover::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 30% 30%, rgba(129,140,248,.35), transparent 60%), radial-gradient(ellipse at 70% 70%, rgba(236,72,153,.22), transparent 55%); }
         .game-cover-title { position:relative; z-index:1; font-family:'Space Grotesk',sans-serif; font-size:3rem; font-weight:800; letter-spacing:.08em; color:rgba(255,255,255,.95); text-shadow:0 0 30px rgba(129,140,248,.5); }
+        .game-cover-icon { position:relative; z-index:1; width:96px; height:96px; border-radius:22px; box-shadow:0 12px 40px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.08); }
         .game-cover-tag { position:absolute; top:14px; left:14px; z-index:1; font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#c7d2fe; background:rgba(0,0,0,.35); padding:5px 10px; border-radius:100px; backdrop-filter:blur(6px); }
         .game-cover-tag.cs-tag { color:#fde68a; background:linear-gradient(90deg,rgba(251,188,4,.28),rgba(234,67,53,.22)); border:1px solid rgba(251,188,4,.5); }
         .game-body { padding:24px 26px 28px; }
@@ -169,7 +170,7 @@
                     <button class="lang-btn active" data-lang="en">EN</button>
                     <button class="lang-btn"        data-lang="nl">NL</button>
                 </div>
-                <a href="games/flow.html" class="nav-cta" data-i18n="nav.cta_flow">Play Flow</a>
+                <a href="games/circuit-trace.html" class="nav-cta" data-i18n="nav.cta_ct">Play Circuit Trace</a>
                 <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
@@ -191,7 +192,7 @@
         <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn"        data-lang="nl">NL</button>
     </div>
-    <a href="games/flow.html" class="mobile-cta" data-i18n="nav.cta_flow">Play Flow</a>
+    <a href="games/circuit-trace.html" class="mobile-cta" data-i18n="nav.cta_ct">Play Circuit Trace</a>
 </div>
 
 <!-- HERO -->
@@ -210,20 +211,20 @@
 <section class="games-section">
     <div class="c">
         <div class="games-grid">
-            <a href="games/flow.html" class="game-card a-fade">
+            <a href="games/circuit-trace.html" class="game-card a-fade">
                 <div class="game-cover">
-                    <span class="game-cover-tag cs-tag" data-i18n="flow.cover_tag">🚀 Coming soon on Google Play</span>
-                    <span class="game-cover-title">FLOW</span>
+                    <span class="game-cover-tag cs-tag" data-i18n="ct.cover_tag">🚀 Coming soon on Google Play</span>
+                    <img class="game-cover-icon" src="assets/icon-ct.png" alt="Circuit Trace icon" width="96" height="96" onerror="this.style.display='none'">
                 </div>
                 <div class="game-body">
-                    <h2 data-i18n="flow.title">Flow</h2>
-                    <p data-i18n="flow.desc">Connect the circuit, tile the grid. A minimalist logic puzzle with 73 handcrafted levels — offline. Launching soon on Google Play.</p>
+                    <h2 data-i18n="ct.title">Circuit Trace</h2>
+                    <p data-i18n="ct.desc">Connect the circuit, tile the grid. A minimalist logic puzzle with 73 handcrafted levels — offline. Launching soon on Google Play.</p>
                     <div class="game-meta">
-                        <span data-i18n="flow.meta1">73 levels</span>
-                        <span data-i18n="flow.meta2">Offline</span>
-                        <span data-i18n="flow.meta3">Android</span>
+                        <span data-i18n="ct.meta1">73 levels</span>
+                        <span data-i18n="ct.meta2">Offline</span>
+                        <span data-i18n="ct.meta3">Android</span>
                     </div>
-                    <span class="game-cta" data-i18n="flow.cta">Discover Flow</span>
+                    <span class="game-cta" data-i18n="ct.cta">Discover Circuit Trace</span>
                 </div>
             </a>
 
@@ -310,17 +311,17 @@
             'nav.vg':          'FreshGarant',
             'nav.bx':          'BuildExact',
             'nav.studio':      'Studio',
-            'nav.cta_flow':    'Play Flow',
+            'nav.cta_ct':      'Play Circuit Trace',
             'hero.badge':      'Grounded Studio · Games',
             'hero.h1':         'Games we make',
             'hero.sub':        'Minimalist, offline, focused. Small experiences designed to respect your time — the same principles behind our apps, brought to play.',
-            'flow.cover_tag':  '🚀 Coming soon on Google Play',
-            'flow.title':      'Flow',
-            'flow.desc':       'Connect the circuit, tile the grid. A minimalist logic puzzle with 73 handcrafted levels — offline. Launching soon on Google Play.',
-            'flow.meta1':      '73 levels',
-            'flow.meta2':      'Offline',
-            'flow.meta3':      'Android',
-            'flow.cta':        'Discover Flow',
+            'ct.cover_tag':    '🚀 Coming soon on Google Play',
+            'ct.title':        'Circuit Trace',
+            'ct.desc':         'Connect the circuit, tile the grid. A minimalist logic puzzle with 73 handcrafted levels — offline. Launching soon on Google Play.',
+            'ct.meta1':        '73 levels',
+            'ct.meta2':        'Offline',
+            'ct.meta3':        'Android',
+            'ct.cta':          'Discover Circuit Trace',
             'next.cover_tag':  'Coming soon',
             'next.title':      'Next up',
             'next.desc':       'A new game is in the works. Same design principles: calm, focused, offline.',
@@ -335,17 +336,17 @@
             'nav.vg':          'FreshGarant',
             'nav.bx':          'BuildExact',
             'nav.studio':      'Studio',
-            'nav.cta_flow':    'Speel Flow',
+            'nav.cta_ct':      'Speel Circuit Trace',
             'hero.badge':      'Grounded Studio · Games',
             'hero.h1':         'Games die we maken',
             'hero.sub':        'Minimalistisch, offline, focused. Kleine ervaringen die je tijd respecteren — dezelfde principes als onze apps, maar dan om te spelen.',
-            'flow.cover_tag':  '🚀 Binnenkort in Google Play',
-            'flow.title':      'Flow',
-            'flow.desc':       'Verbind het circuit, vul het bord. Een minimalistische logica-puzzel met 73 handgemaakte levels — offline. Binnenkort in Google Play.',
-            'flow.meta1':      '73 levels',
-            'flow.meta2':      'Offline',
-            'flow.meta3':      'Android',
-            'flow.cta':        'Bekijk Flow',
+            'ct.cover_tag':    '🚀 Binnenkort in Google Play',
+            'ct.title':        'Circuit Trace',
+            'ct.desc':         'Verbind het circuit, vul het bord. Een minimalistische logica-puzzel met 73 handgemaakte levels — offline. Binnenkort in Google Play.',
+            'ct.meta1':        '73 levels',
+            'ct.meta2':        'Offline',
+            'ct.meta3':        'Android',
+            'ct.cta':          'Bekijk Circuit Trace',
             'next.cover_tag':  'Binnenkort',
             'next.title':      'Volgende',
             'next.desc':       'Er is een nieuwe game onderweg. Dezelfde principes: rustig, gefocust, offline.',
