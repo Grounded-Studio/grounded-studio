@@ -1107,6 +1107,43 @@
         /* App icon badge: subtle glassmorphism on hover */
         .app-icon-badge { transition: transform .3s cubic-bezier(.16,1,.3,1); }
         .app-icon-badge:hover { transform: translateY(-3px); }
+
+        /* ─── CIRCUIT TRACE BETA POPUP ────────────────────────── */
+        .ct-popup { position:fixed; inset:0; z-index:10000; display:none; align-items:center; justify-content:center; padding:20px; }
+        .ct-popup.open { display:flex; }
+        .ct-popup-backdrop { position:absolute; inset:0; background:rgba(4,4,10,.72); backdrop-filter:blur(10px); opacity:0; transition:opacity .35s ease; }
+        .ct-popup.visible .ct-popup-backdrop { opacity:1; }
+        .ct-popup-card {
+            position:relative; z-index:1;
+            width:100%; max-width:440px;
+            background:linear-gradient(160deg, rgba(30,20,64,.98) 0%, rgba(15,15,26,.98) 100%);
+            border:1px solid rgba(167,139,250,.35);
+            border-radius:24px;
+            padding:36px 32px 28px;
+            text-align:center;
+            box-shadow:0 30px 80px rgba(0,0,0,.6), 0 0 60px rgba(167,139,250,.15);
+            transform:translateY(20px) scale(.96);
+            opacity:0;
+            transition:opacity .4s cubic-bezier(.16,1,.3,1), transform .4s cubic-bezier(.16,1,.3,1);
+        }
+        .ct-popup.visible .ct-popup-card { opacity:1; transform:translateY(0) scale(1); }
+        .ct-popup-close { position:absolute; top:14px; right:14px; width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); color:#94a3b8; font-size:.9rem; cursor:pointer; transition:all .2s; display:flex; align-items:center; justify-content:center; }
+        .ct-popup-close:hover { color:#fff; background:rgba(255,255,255,.12); }
+        .ct-popup-icon { display:inline-flex; margin-bottom:16px; }
+        .ct-popup-icon img { width:72px; height:72px; border-radius:18px; box-shadow:0 12px 32px rgba(167,139,250,.35), 0 0 0 1px rgba(255,255,255,.08); }
+        .ct-popup-badge { display:inline-flex; padding:5px 14px; border-radius:100px; background:linear-gradient(90deg, rgba(251,188,4,.18), rgba(234,67,53,.14)); border:1px solid rgba(251,188,4,.4); color:#fde68a; font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin-bottom:16px; }
+        .ct-popup-title { font-family:'Space Grotesk',sans-serif; font-size:1.35rem; font-weight:800; letter-spacing:-.02em; line-height:1.25; color:#fff; margin-bottom:12px; }
+        .ct-popup-desc { font-size:.92rem; color:#c7d2fe; line-height:1.65; margin-bottom:22px; }
+        .ct-popup-cta { display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:15px 24px; border-radius:14px; background:linear-gradient(135deg, #7c3aed, #a78bfa); color:#fff; font-weight:700; font-size:.95rem; text-decoration:none; box-shadow:0 10px 30px rgba(167,139,250,.35); transition:transform .25s ease, box-shadow .25s ease; }
+        .ct-popup-cta:hover { transform:translateY(-2px); box-shadow:0 14px 36px rgba(167,139,250,.5); }
+        .ct-popup-hint { margin-top:14px; font-size:.75rem; color:#64748b; line-height:1.55; }
+        .ct-popup-later { margin-top:14px; background:none; border:none; color:#64748b; font-size:.82rem; font-weight:600; cursor:pointer; font-family:inherit; padding:6px 12px; border-radius:8px; transition:color .2s, background .2s; }
+        .ct-popup-later:hover { color:#94a3b8; background:rgba(255,255,255,.04); }
+        @media (max-width:480px) {
+            .ct-popup-card { padding:28px 22px 22px; border-radius:20px; }
+            .ct-popup-title { font-size:1.2rem; }
+            .ct-popup-desc { font-size:.88rem; }
+        }
     </style>
 </head>
 <body>
@@ -1216,6 +1253,23 @@
         <button class="lang-btn"        data-lang="nl">NL</button>
     </div>
     <a href="#buildexact" class="mobile-cta mobile-nav-link" data-i18n="nav.cta">Our Apps</a>
+</div>
+
+<!-- ── CIRCUIT TRACE BETA POPUP ─────────────────────────── -->
+<div class="ct-popup" id="ctPopup" role="dialog" aria-modal="true" aria-labelledby="ctPopupTitle" aria-hidden="true">
+    <div class="ct-popup-backdrop"></div>
+    <div class="ct-popup-card">
+        <button class="ct-popup-close" id="ctPopupClose" aria-label="Close">✕</button>
+        <div class="ct-popup-icon">
+            <img src="assets/icon-ct.png" alt="Circuit Trace icon" width="72" height="72" onerror="this.style.display='none'">
+        </div>
+        <div class="ct-popup-badge" data-i18n="ctp.badge">🚀 Closed beta</div>
+        <h3 class="ct-popup-title" id="ctPopupTitle" data-i18n="ctp.title">Word betatester van Circuit Trace</h3>
+        <p class="ct-popup-desc" data-i18n="ctp.desc">Een minimalistische logica-puzzel met 73 handgemaakte levels. Speel als een van de eersten en help de puntjes op de i te zetten voor de launch.</p>
+        <a href="#" class="ct-popup-cta" id="ctPopupCta" data-i18n="ctp.cta">📧 Email me om mee te doen</a>
+        <p class="ct-popup-hint" data-i18n="ctp.hint">Je mailclient opent met een klaargezet bericht. Google-account email is nodig voor Play Store closed testing.</p>
+        <button class="ct-popup-later" id="ctPopupLater" data-i18n="ctp.later">Nee, dank je</button>
+    </div>
 </div>
 
 <!-- ── HERO ──────────────────────────────────────────────── -->
@@ -1726,6 +1780,12 @@ const T = {
         'stats.apps':   'Apps & Games',
         'stats.origin': 'Google Play',
         'stats.free':   'to download',
+        'ctp.badge':    '🚀 Closed beta',
+        'ctp.title':    'Join the Circuit Trace beta',
+        'ctp.desc':     'A minimalist logic puzzle with 73 handcrafted levels. Play it before anyone else and help us polish it for launch.',
+        'ctp.cta':      '📧 Email me to join',
+        'ctp.hint':     'Your mail app opens with a pre-filled message. A Google account email is required for Play Store closed testing.',
+        'ctp.later':    'No thanks',
     },
     nl: {
         'nav.apps':     'Apps',
@@ -1806,6 +1866,12 @@ const T = {
         'stats.apps':   'Apps & Games',
         'stats.origin': 'Google Play',
         'stats.free':   'te downloaden',
+        'ctp.badge':    '🚀 Closed beta',
+        'ctp.title':    'Word betatester van Circuit Trace',
+        'ctp.desc':     'Een minimalistische logica-puzzel met 73 handgemaakte levels. Speel als een van de eersten en help de puntjes op de i te zetten voor de launch.',
+        'ctp.cta':      '📧 Email me om mee te doen',
+        'ctp.hint':     'Je mailclient opent met een klaargezet bericht. Google-account email is nodig voor Play Store closed testing.',
+        'ctp.later':    'Nee, dank je',
     }
 };
 
@@ -1867,6 +1933,45 @@ window.addEventListener('scroll', () => {
     prog.style.width = pct + '%';
     nav.classList.toggle('stuck', scrollY > 60);
 }, { passive: true });
+
+/* ── Circuit Trace beta popup ──────────────────────── */
+(function() {
+    const popup = document.getElementById('ctPopup');
+    if (!popup) return;
+    if (localStorage.getItem('ct-beta-popup-seen') === '1') return;
+
+    const close = document.getElementById('ctPopupClose');
+    const later = document.getElementById('ctPopupLater');
+    const cta   = document.getElementById('ctPopupCta');
+
+    function mailto() {
+        const subject = 'Betatest Circuit Trace — meedoen';
+        const body =
+            'Hoi Grounded Studio,\n\n' +
+            'Ik wil graag meedoen aan de closed beta van Circuit Trace.\n\n' +
+            'Mijn Google-account email (nodig voor Play Store closed testing): \n\n' +
+            'Bedankt!';
+        return 'mailto:contact@grounded-studio.app?subject=' +
+            encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
+    cta.href = mailto();
+
+    function dismiss() {
+        popup.classList.remove('visible');
+        setTimeout(() => { popup.classList.remove('open'); popup.setAttribute('aria-hidden', 'true'); }, 380);
+        localStorage.setItem('ct-beta-popup-seen', '1');
+    }
+    close.addEventListener('click', dismiss);
+    later.addEventListener('click', dismiss);
+    cta.addEventListener('click', () => { localStorage.setItem('ct-beta-popup-seen', '1'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && popup.classList.contains('open')) dismiss(); });
+
+    setTimeout(() => {
+        popup.classList.add('open');
+        popup.setAttribute('aria-hidden', 'false');
+        requestAnimationFrame(() => popup.classList.add('visible'));
+    }, 8000);
+})();
 
 /* ── Mobile menu ───────────────────────────────────── */
 const hamburger    = document.getElementById('hamburger');
