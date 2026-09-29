@@ -146,18 +146,26 @@
             },
             {
                 "@type": "Question",
-                "name": "Which apps and games does Grounded Studio make?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Grounded Studio currently ships two Android apps and one game: BuildExact (a construction calculator for material calculations, client management and quote PDFs), FreshGarant (an AI-powered food expiry tracker that reduces waste), and Circuit Trace (a minimalist logic puzzle game with 90 handcrafted levels, coming soon on Google Play)."
-                }
-            },
-            {
-                "@type": "Question",
                 "name": "What is BuildExact?",
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "BuildExact is an Android app for Dutch and Belgian tradespeople. It calculates material needs (tiles, laminate, paint, wallpaper, insulation, concrete, gravel), manages clients, generates branded quote PDFs with logo and digital signature, and converts quotes into invoices in one tap. Free to download with an optional PRO tier at €5.99/month for unlimited projects, client management and recurring invoice templates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is BuildExact for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BuildExact is built for Dutch and Belgian sole traders and small contractors — tilers, painters, plumbers, gardeners, floor layers and general builders. It covers everything from measuring a room and calculating materials with cutting waste to generating branded quotes, managing clients, and sending invoices via WhatsApp with the 06 number automatically converted to 316 format."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does BuildExact PRO unlock?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BuildExact PRO costs €5.99 per month and unlocks unlimited projects, full client management, branded quote and invoice PDFs with your logo and digital signature, a materials price book with separate cost and sale price (margin stays private), one-tap quote-to-invoice conversion, and recurring invoice templates for maintenance contracts (weekly, monthly, quarterly or yearly)."
                 }
             },
             {
@@ -170,6 +178,22 @@
             },
             {
                 "@type": "Question",
+                "name": "How does the FreshGarant AI fridge scan work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Open FreshGarant, tap Scan Fridge, and take a photo of your fridge with the door open. Gemini AI identifies each visible product and adds it to your inventory with an estimated expiry date. You can review and adjust before saving. Works with individually packaged items, produce, and receipts photographed the same way."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does FreshGarant PRO unlock?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FreshGarant PRO unlocks AI-generated recipes tailored to your soon-to-expire ingredients (powered by Gemini), family sharing for up to 6 members so everyone sees the same fridge in real time, cloud backup across devices, and hands-free cook mode — a recipe reader that scrolls itself while your hands are covered in flour."
+                }
+            },
+            {
+                "@type": "Question",
                 "name": "What is Circuit Trace?",
                 "acceptedAnswer": {
                     "@type": "Answer",
@@ -178,10 +202,18 @@
             },
             {
                 "@type": "Question",
-                "name": "Where is Grounded Studio based?",
+                "name": "When does Circuit Trace launch?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Grounded Studio is based in the Netherlands. All apps are made in the Netherlands and follow Dutch business conventions (KvK, BTW/VAT rules) where relevant — for example BuildExact supports 9%/21% Dutch VAT rates and can generate invoices with KvK and IBAN details."
+                    "text": "Circuit Trace is currently in closed beta on Google Play, with a public launch planned soon. The exact date depends on beta feedback. Follow Grounded Studio for announcements, or join the closed beta to get access before public launch."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I join the Circuit Trace beta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Send an email to contact@grounded-studio.app with the subject 'Circuit Trace beta' and include the Google account email you use on your Android phone (this is what Play Store closed testing requires). You'll be added to the tester list and get an install link within a few days."
                 }
             },
             {
@@ -1187,6 +1219,18 @@
         .faq-header h2 { font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; letter-spacing:-.035em; line-height:1.1; margin-bottom:16px; }
         .faq-header p { font-size:1rem; color:var(--muted); line-height:1.75; }
         .faq-grid { max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:12px; position:relative; z-index:1; padding:0 20px; }
+        .faq-group-header { display:flex; align-items:center; gap:12px; margin:32px 0 4px; padding:0 4px; }
+        .faq-group-header:first-child { margin-top:0; }
+        .faq-group-header .faq-group-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+        .faq-group-header .faq-group-title { font-family:'Space Grotesk',sans-serif; font-size:.78rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+        .faq-group-header.gs .faq-group-dot { background:var(--gs); box-shadow:0 0 12px var(--gs-glow); }
+        .faq-group-header.gs .faq-group-title { color:var(--gs); }
+        .faq-group-header.bx .faq-group-dot { background:var(--bx); box-shadow:0 0 12px var(--bx-glow); }
+        .faq-group-header.bx .faq-group-title { color:var(--bx); }
+        .faq-group-header.vg .faq-group-dot { background:var(--vg); box-shadow:0 0 12px var(--vg-glow); }
+        .faq-group-header.vg .faq-group-title { color:var(--vg); }
+        .faq-group-header.fl .faq-group-dot { background:var(--fl); box-shadow:0 0 12px var(--fl-glow); }
+        .faq-group-header.fl .faq-group-title { color:var(--fl); }
         .faq-item { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:16px; overflow:hidden; transition:border-color .25s, background .25s; }
         .faq-item.open { border-color:rgba(129,140,248,.35); background:rgba(129,140,248,.04); }
         .faq-q { width:100%; background:none; border:none; color:#f1f5f9; font-family:'Inter',sans-serif; font-size:1rem; font-weight:600; text-align:left; padding:22px 24px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:16px; }
@@ -1768,29 +1812,14 @@
             <p data-i18n="faq.sub">Quick answers about Grounded Studio, our apps and Circuit Trace.</p>
         </div>
         <div class="faq-grid">
+
+            <div class="faq-group-header gs a-fade">
+                <span class="faq-group-dot"></span>
+                <span class="faq-group-title" data-i18n="faq.g.studio">About Grounded Studio</span>
+            </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q1">What is Grounded Studio?</span><span class="faq-icon">+</span></button>
                 <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a1">Grounded Studio is an independent Android app and game studio based in the Netherlands. We build purposeful, offline-first apps and focused games for daily life — bootstrapped, no VCs, no ads on gameplay, no dark patterns. Founded by a solo developer, the studio ships BuildExact, FreshGarant, and the upcoming puzzle game Circuit Trace.</div></div>
-            </div>
-            <div class="faq-item a-fade">
-                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q2">Which apps and games does Grounded Studio make?</span><span class="faq-icon">+</span></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a2">Grounded Studio currently ships two Android apps and one game: BuildExact (a construction calculator for material calculations, client management and quote PDFs), FreshGarant (an AI-powered food expiry tracker that reduces waste), and Circuit Trace (a minimalist logic puzzle game with 90 handcrafted levels, coming soon on Google Play).</div></div>
-            </div>
-            <div class="faq-item a-fade">
-                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q3">What is BuildExact?</span><span class="faq-icon">+</span></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a3">BuildExact is an Android app for Dutch and Belgian tradespeople. It calculates material needs (tiles, laminate, paint, wallpaper, insulation, concrete, gravel), manages clients, generates branded quote PDFs with logo and digital signature, and converts quotes into invoices in one tap. Free to download with an optional PRO tier at €5.99/month for unlimited projects, client management and recurring invoice templates.</div></div>
-            </div>
-            <div class="faq-item a-fade">
-                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q4">What is FreshGarant?</span><span class="faq-icon">+</span></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a4">FreshGarant is an Android app that helps you track food expiry dates and reduce food waste. Scan barcodes with your camera, snap photos of your fridge for AI-powered scanning (Gemini), get timely notifications before products expire, generate shopping lists automatically, and — with PRO — get AI-generated recipes based on soon-to-expire ingredients plus family sharing for up to 6 members.</div></div>
-            </div>
-            <div class="faq-item a-fade">
-                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q5">What is Circuit Trace?</span><span class="faq-icon">+</span></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a5">Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 90 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free.</div></div>
-            </div>
-            <div class="faq-item a-fade">
-                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q6">Where is Grounded Studio based?</span><span class="faq-icon">+</span></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a6">Grounded Studio is based in the Netherlands. All apps are made in the Netherlands and follow Dutch business conventions (KvK, BTW/VAT rules) where relevant — for example BuildExact supports 9%/21% Dutch VAT rates and can generate invoices with KvK and IBAN details.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q7">Are Grounded Studio apps free?</span><span class="faq-icon">+</span></button>
@@ -1800,6 +1829,58 @@
                 <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q8">How can I contact Grounded Studio?</span><span class="faq-icon">+</span></button>
                 <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a8">You can reach Grounded Studio by email at contact@grounded-studio.app for press, partnerships, support or beta-test requests. The studio replies in English and Dutch. You can also follow the individual apps on Facebook and Instagram (@freshgarant and @buildexact).</div></div>
             </div>
+
+            <div class="faq-group-header bx a-fade">
+                <span class="faq-group-dot"></span>
+                <span class="faq-group-title" data-i18n="faq.g.bx">BuildExact</span>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q3">What is BuildExact?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a3">BuildExact is an Android app for Dutch and Belgian tradespeople. It calculates material needs (tiles, laminate, paint, wallpaper, insulation, concrete, gravel), manages clients, generates branded quote PDFs with logo and digital signature, and converts quotes into invoices in one tap. Free to download with an optional PRO tier at €5.99/month for unlimited projects, client management and recurring invoice templates.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qbx1">Who is BuildExact for?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.abx1">BuildExact is built for Dutch and Belgian sole traders and small contractors — tilers, painters, plumbers, gardeners, floor layers and general builders. It covers everything from measuring a room and calculating materials with cutting waste to generating branded quotes, managing clients, and sending invoices via WhatsApp with the 06 number automatically converted to 316 format.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qbx2">What does BuildExact PRO unlock?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.abx2">PRO costs €5.99 per month and unlocks unlimited projects, full client management, branded quote and invoice PDFs with your logo and digital signature, a materials price book with separate cost and sale price (margin stays private), one-tap quote-to-invoice conversion, and recurring invoice templates for maintenance contracts (weekly, monthly, quarterly or yearly). No contract, cancel anytime.</div></div>
+            </div>
+
+            <div class="faq-group-header vg a-fade">
+                <span class="faq-group-dot"></span>
+                <span class="faq-group-title" data-i18n="faq.g.vg">FreshGarant</span>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q4">What is FreshGarant?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a4">FreshGarant is an Android app that helps you track food expiry dates and reduce food waste. Scan barcodes with your camera, snap photos of your fridge for AI-powered scanning (Gemini), get timely notifications before products expire, generate shopping lists automatically, and — with PRO — get AI-generated recipes based on soon-to-expire ingredients plus family sharing for up to 6 members.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qvg1">How does the AI fridge scan work?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.avg1">Open FreshGarant, tap Scan Fridge, and take a photo of your fridge with the door open. Gemini AI identifies each visible product and adds it to your inventory with an estimated expiry date. You can review and adjust before saving. Works with individually packaged items, produce, and receipts photographed the same way. Everything is processed via a secure API — the photo is not stored beyond the scan.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qvg2">What does FreshGarant PRO unlock?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.avg2">PRO unlocks AI-generated recipes tailored to your soon-to-expire ingredients (powered by Gemini), family sharing for up to 6 members so everyone sees the same fridge in real time, cloud backup across devices, and hands-free cook mode — a recipe reader that scrolls itself while your hands are covered in flour.</div></div>
+            </div>
+
+            <div class="faq-group-header fl a-fade">
+                <span class="faq-group-dot"></span>
+                <span class="faq-group-title" data-i18n="faq.g.ct">Circuit Trace</span>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q5">What is Circuit Trace?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a5">Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 90 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qct1">When does Circuit Trace launch?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.act1">Circuit Trace is currently in closed beta on Google Play, with a public launch planned soon. The exact date depends on beta feedback — the studio would rather ship it right than rush it. Follow Grounded Studio for announcements, or join the closed beta to get access before public launch.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qct2">How can I join the Circuit Trace beta?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.act2">Send an email to contact@grounded-studio.app with the subject "Circuit Trace beta" and include the Google account email you use on your Android phone (this is what Play Store closed testing requires). You'll be added to the tester list and get an install link within a few days. Playtest feedback is welcome but not required.</div></div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -1918,22 +1999,34 @@ const T = {
         'faq.tag':      'FAQ',
         'faq.h2':       'Frequently asked questions',
         'faq.sub':      'Quick answers about Grounded Studio, our apps and Circuit Trace.',
+        'faq.g.studio': 'About Grounded Studio',
+        'faq.g.bx':     'BuildExact',
+        'faq.g.vg':     'FreshGarant',
+        'faq.g.ct':     'Circuit Trace',
         'faq.q1':       'What is Grounded Studio?',
-        'faq.a1':       'Grounded Studio is an independent Android app and game studio based in the Netherlands. We build purposeful, offline-first apps and focused games for daily life — bootstrapped, no VCs, no ads on gameplay, no dark patterns. Founded by a solo developer, the studio ships BuildExact, FreshGarant, and the upcoming puzzle game Circuit Trace.',
-        'faq.q2':       'Which apps and games does Grounded Studio make?',
-        'faq.a2':       'Grounded Studio currently ships two Android apps and one game: BuildExact (a construction calculator for material calculations, client management and quote PDFs), FreshGarant (an AI-powered food expiry tracker that reduces waste), and Circuit Trace (a minimalist logic puzzle game with 90 handcrafted levels, coming soon on Google Play).',
-        'faq.q3':       'What is BuildExact?',
-        'faq.a3':       'BuildExact is an Android app for Dutch and Belgian tradespeople. It calculates material needs (tiles, laminate, paint, wallpaper, insulation, concrete, gravel), manages clients, generates branded quote PDFs with logo and digital signature, and converts quotes into invoices in one tap. Free to download with an optional PRO tier at €5.99/month for unlimited projects, client management and recurring invoice templates.',
-        'faq.q4':       'What is FreshGarant?',
-        'faq.a4':       'FreshGarant is an Android app that helps you track food expiry dates and reduce food waste. Scan barcodes with your camera, snap photos of your fridge for AI-powered scanning (Gemini), get timely notifications before products expire, generate shopping lists automatically, and — with PRO — get AI-generated recipes based on soon-to-expire ingredients plus family sharing for up to 6 members.',
-        'faq.q5':       'What is Circuit Trace?',
-        'faq.a5':       'Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 90 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free.',
-        'faq.q6':       'Where is Grounded Studio based?',
-        'faq.a6':       'Grounded Studio is based in the Netherlands. All apps are made in the Netherlands and follow Dutch business conventions (KvK, BTW/VAT rules) where relevant — for example BuildExact supports 9%/21% Dutch VAT rates and can generate invoices with KvK and IBAN details.',
+        'faq.a1':       'Grounded Studio is an independent Android app and game studio. We build purposeful, offline-first apps and focused games for daily life — bootstrapped, no VCs, no ads on gameplay, no dark patterns. Founded by a solo developer, the studio ships BuildExact, FreshGarant, and the upcoming puzzle game Circuit Trace.',
         'faq.q7':       'Are Grounded Studio apps free?',
         'faq.a7':       'Yes, the core apps are free to download on Google Play. FreshGarant has an optional PRO upgrade for AI features, family sharing and cloud backup. BuildExact has an optional PRO tier at €5.99 per month unlocking unlimited projects, client management, quote and invoice PDFs, and recurring invoice templates. Circuit Trace will be fully free with no ads on gameplay.',
         'faq.q8':       'How can I contact Grounded Studio?',
         'faq.a8':       'You can reach Grounded Studio by email at contact@grounded-studio.app for press, partnerships, support or beta-test requests. The studio replies in English and Dutch. You can also follow the individual apps on Facebook and Instagram (@freshgarant and @buildexact).',
+        'faq.q3':       'What is BuildExact?',
+        'faq.a3':       'BuildExact is an Android app for Dutch and Belgian tradespeople. It calculates material needs (tiles, laminate, paint, wallpaper, insulation, concrete, gravel), manages clients, generates branded quote PDFs with logo and digital signature, and converts quotes into invoices in one tap. Free to download with an optional PRO tier at €5.99/month for unlimited projects, client management and recurring invoice templates.',
+        'faq.qbx1':     'Who is BuildExact for?',
+        'faq.abx1':     'BuildExact is built for Dutch and Belgian sole traders and small contractors — tilers, painters, plumbers, gardeners, floor layers and general builders. It covers everything from measuring a room and calculating materials with cutting waste to generating branded quotes, managing clients, and sending invoices via WhatsApp with the 06 number automatically converted to 316 format.',
+        'faq.qbx2':     'What does BuildExact PRO unlock?',
+        'faq.abx2':     'PRO costs €5.99 per month and unlocks unlimited projects, full client management, branded quote and invoice PDFs with your logo and digital signature, a materials price book with separate cost and sale price (margin stays private), one-tap quote-to-invoice conversion, and recurring invoice templates for maintenance contracts (weekly, monthly, quarterly or yearly). No contract, cancel anytime.',
+        'faq.q4':       'What is FreshGarant?',
+        'faq.a4':       'FreshGarant is an Android app that helps you track food expiry dates and reduce food waste. Scan barcodes with your camera, snap photos of your fridge for AI-powered scanning (Gemini), get timely notifications before products expire, generate shopping lists automatically, and — with PRO — get AI-generated recipes based on soon-to-expire ingredients plus family sharing for up to 6 members.',
+        'faq.qvg1':     'How does the AI fridge scan work?',
+        'faq.avg1':     'Open FreshGarant, tap Scan Fridge, and take a photo of your fridge with the door open. Gemini AI identifies each visible product and adds it to your inventory with an estimated expiry date. You can review and adjust before saving. Works with individually packaged items, produce, and receipts photographed the same way.',
+        'faq.qvg2':     'What does FreshGarant PRO unlock?',
+        'faq.avg2':     'PRO unlocks AI-generated recipes tailored to your soon-to-expire ingredients (powered by Gemini), family sharing for up to 6 members so everyone sees the same fridge in real time, cloud backup across devices, and hands-free cook mode — a recipe reader that scrolls itself while your hands are covered in flour.',
+        'faq.q5':       'What is Circuit Trace?',
+        'faq.a5':       'Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 90 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free.',
+        'faq.qct1':     'When does Circuit Trace launch?',
+        'faq.act1':     'Circuit Trace is currently in closed beta on Google Play, with a public launch planned soon. The exact date depends on beta feedback — the studio would rather ship it right than rush it. Follow Grounded Studio for announcements, or join the closed beta to get access before public launch.',
+        'faq.qct2':     'How can I join the Circuit Trace beta?',
+        'faq.act2':     'Send an email to contact@grounded-studio.app with the subject "Circuit Trace beta" and include the Google account email you use on your Android phone (this is what Play Store closed testing requires). You\'ll be added to the tester list and get an install link within a few days. Playtest feedback is welcome but not required.',
         'ctp.badge':    '🚀 Closed beta',
         'ctp.title':    'Join the Circuit Trace beta',
         'ctp.desc':     'A minimalist logic puzzle with 90 handcrafted levels. Play it before anyone else and help us polish it for launch.',
@@ -2023,22 +2116,34 @@ const T = {
         'faq.tag':      'FAQ',
         'faq.h2':       'Veelgestelde vragen',
         'faq.sub':      'Korte antwoorden over Grounded Studio, onze apps en Circuit Trace.',
+        'faq.g.studio': 'Over Grounded Studio',
+        'faq.g.bx':     'BuildExact',
+        'faq.g.vg':     'FreshGarant',
+        'faq.g.ct':     'Circuit Trace',
         'faq.q1':       'Wat is Grounded Studio?',
-        'faq.a1':       'Grounded Studio is een onafhankelijke Android app- en gamestudio uit Nederland. We bouwen zinvolle, offline-first apps en focused games voor het dagelijks leven — bootstrapped, geen VCs, geen ads tijdens gameplay, geen dark patterns. Opgericht door één developer, brengt de studio BuildExact, FreshGarant en de aankomende puzzelgame Circuit Trace uit.',
-        'faq.q2':       'Welke apps en games maakt Grounded Studio?',
-        'faq.a2':       'Grounded Studio heeft nu twee Android apps en één game: BuildExact (een bouwcalculator voor materiaalberekeningen, klantbeheer en offerte-PDFs), FreshGarant (een AI-gedreven houdbaarheidsdatum tracker die voedselverspilling tegengaat), en Circuit Trace (een minimalistische logica-puzzelgame met 90 handgemaakte levels, binnenkort in Google Play).',
-        'faq.q3':       'Wat is BuildExact?',
-        'faq.a3':       'BuildExact is een Android app voor Nederlandse en Belgische vakmensen. Berekent materiaalbehoefte (tegels, laminaat, verf, behang, isolatie, beton, grind), beheert klanten, maakt offerte-PDFs met logo en digitale handtekening, en zet offertes met één tik om in een factuur. Gratis te downloaden met een optionele PRO-versie van €5,99/maand voor onbeperkte projecten, klantbeheer en terugkerende facturen.',
-        'faq.q4':       'Wat is FreshGarant?',
-        'faq.a4':       'FreshGarant is een Android app die je helpt houdbaarheidsdata bij te houden en voedselverspilling tegen te gaan. Scan barcodes met je camera, maak foto\'s van je koelkast voor AI-scan (Gemini), krijg tijdige meldingen voordat producten vervallen, laat automatisch een boodschappenlijst genereren, en — met PRO — krijg AI-recepten op basis van bijna-vervallen ingrediënten plus familie-delen voor maximaal 6 leden.',
-        'faq.q5':       'Wat is Circuit Trace?',
-        'faq.a5':       'Circuit Trace is een minimalistische logica-puzzelgame voor Android, binnenkort in Google Play. Verbind gekleurde punten door één pad per kleur te trekken, vul elke cel van het bord, herstel het circuit. 90 handgemaakte levels lopen op van rustige opwarmers tot dichte grids die je planning testen. Volledig offline, geen ads tijdens gameplay, gratis.',
-        'faq.q6':       'Waar is Grounded Studio gevestigd?',
-        'faq.a6':       'Grounded Studio is gevestigd in Nederland. Alle apps worden in Nederland gemaakt en volgen waar relevant de Nederlandse bedrijfsconventies (KvK, BTW-regels) — BuildExact ondersteunt bijvoorbeeld de 9% en 21% BTW-tarieven en kan facturen genereren met KvK- en IBAN-gegevens.',
+        'faq.a1':       'Grounded Studio is een onafhankelijke Android app- en gamestudio. We bouwen zinvolle, offline-first apps en focused games voor het dagelijks leven — bootstrapped, geen VCs, geen ads tijdens gameplay, geen dark patterns. Opgericht door één developer, brengt de studio BuildExact, FreshGarant en de aankomende puzzelgame Circuit Trace uit.',
         'faq.q7':       'Zijn de apps van Grounded Studio gratis?',
         'faq.a7':       'Ja, de kern-apps zijn gratis te downloaden in Google Play. FreshGarant heeft een optionele PRO-upgrade voor AI-features, familie-delen en cloud back-up. BuildExact heeft een optionele PRO-versie van €5,99 per maand die onbeperkte projecten, klantbeheer, offerte- en factuur-PDFs en terugkerende facturen ontgrendelt. Circuit Trace wordt volledig gratis zonder ads tijdens gameplay.',
         'faq.q8':       'Hoe kan ik Grounded Studio bereiken?',
         'faq.a8':       'Je kunt Grounded Studio bereiken via contact@grounded-studio.app voor pers, samenwerkingen, support of beta-test aanvragen. De studio antwoordt in het Nederlands en Engels. Je kunt de losse apps ook volgen op Facebook en Instagram (@freshgarant en @buildexact).',
+        'faq.q3':       'Wat is BuildExact?',
+        'faq.a3':       'BuildExact is een Android app voor Nederlandse en Belgische vakmensen. Berekent materiaalbehoefte (tegels, laminaat, verf, behang, isolatie, beton, grind), beheert klanten, maakt offerte-PDFs met logo en digitale handtekening, en zet offertes met één tik om in een factuur. Gratis te downloaden met een optionele PRO-versie van €5,99/maand voor onbeperkte projecten, klantbeheer en terugkerende facturen.',
+        'faq.qbx1':     'Voor wie is BuildExact?',
+        'faq.abx1':     'BuildExact is gemaakt voor Nederlandse en Belgische eenpitters en kleine aannemers — tegelzetters, schilders, loodgieters, tuinlieden, vloerleggers en algemene bouwers. Dekt alles van een ruimte opmeten en materiaal berekenen met snijverlies tot offertes maken, klanten beheren en facturen versturen via WhatsApp, waarbij het 06-nummer automatisch wordt omgezet naar 316-formaat.',
+        'faq.qbx2':     'Wat ontgrendelt BuildExact PRO?',
+        'faq.abx2':     'PRO kost €5,99 per maand en ontgrendelt onbeperkte projecten, volledig klantbeheer, offerte- en factuur-PDFs met je logo en digitale handtekening, een prijzenboek met aparte kostprijs en verkoopprijs (marge blijft privé), offerte-naar-factuur in één tik, en terugkerende sjablonen voor onderhoudscontracten (wekelijks, maandelijks, per kwartaal of jaarlijks). Geen contract, elk moment opzegbaar.',
+        'faq.q4':       'Wat is FreshGarant?',
+        'faq.a4':       'FreshGarant is een Android app die je helpt houdbaarheidsdata bij te houden en voedselverspilling tegen te gaan. Scan barcodes met je camera, maak foto\'s van je koelkast voor AI-scan (Gemini), krijg tijdige meldingen voordat producten vervallen, laat automatisch een boodschappenlijst genereren, en — met PRO — krijg AI-recepten op basis van bijna-vervallen ingrediënten plus familie-delen voor maximaal 6 leden.',
+        'faq.qvg1':     'Hoe werkt de AI koelkast-scan?',
+        'faq.avg1':     'Open FreshGarant, tik op Scan Koelkast en maak een foto van je koelkast met de deur open. Gemini AI herkent elk zichtbaar product en zet het met een geschatte houdbaarheidsdatum in je voorraad. Je kunt eerst controleren en aanpassen voor je opslaat. Werkt met verpakte producten, groente en fruit, en bonnetjes die je op dezelfde manier fotografeert.',
+        'faq.qvg2':     'Wat ontgrendelt FreshGarant PRO?',
+        'faq.avg2':     'PRO ontgrendelt AI-recepten afgestemd op je bijna-vervallen ingrediënten (via Gemini), familie-delen voor maximaal 6 leden zodat iedereen dezelfde koelkast in real time ziet, cloud back-up tussen apparaten, en handsfree kookmodus — een receptenlezer die zichzelf scrollt terwijl je handen onder het meel zitten.',
+        'faq.q5':       'Wat is Circuit Trace?',
+        'faq.a5':       'Circuit Trace is een minimalistische logica-puzzelgame voor Android, binnenkort in Google Play. Verbind gekleurde punten door één pad per kleur te trekken, vul elke cel van het bord, herstel het circuit. 90 handgemaakte levels lopen op van rustige opwarmers tot dichte grids die je planning testen. Volledig offline, geen ads tijdens gameplay, gratis.',
+        'faq.qct1':     'Wanneer komt Circuit Trace uit?',
+        'faq.act1':     'Circuit Trace zit nu in de closed beta op Google Play, een publieke launch staat binnenkort gepland. De exacte datum hangt af van de beta-feedback — beter goed uitgebracht dan gehaast. Volg Grounded Studio voor aankondigingen, of doe mee met de closed beta om al eerder toegang te krijgen.',
+        'faq.qct2':     'Hoe kan ik meedoen aan de Circuit Trace beta?',
+        'faq.act2':     'Stuur een mailtje naar contact@grounded-studio.app met als onderwerp "Circuit Trace beta" en zet daarin het Google-account e-mailadres dat je op je Android-telefoon gebruikt (dat heeft Play Store closed testing nodig). Je wordt binnen enkele dagen toegevoegd aan de testerslijst en krijgt een installatielink. Feedback tijdens het spelen is welkom, maar niet verplicht.',
         'ctp.badge':    '🚀 Closed beta',
         'ctp.title':    'Word betatester van Circuit Trace',
         'ctp.desc':     'Een minimalistische logica-puzzel met 90 handgemaakte levels. Speel als een van de eersten en help de puntjes op de i te zetten voor de launch.',
