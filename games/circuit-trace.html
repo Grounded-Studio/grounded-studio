@@ -496,13 +496,13 @@
             <div class="sym-card a-fade">
                 <div class="sym-visual">
                     <svg viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="60" y="30" width="60" height="40" rx="8" fill="rgba(129,140,248,.08)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
-                        <polygon points="80,42 105,50 80,58" fill="#facc15" stroke="#facc15" stroke-width="1.5" stroke-linejoin="round"/>
-                        <line x1="105" y1="42" x2="105" y2="58" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="90" cy="50" r="30" fill="rgba(217,231,254,.05)" stroke="rgba(217,231,254,.18)" stroke-width="1"/>
+                        <polygon points="75,32 115,50 75,68" fill="none" stroke="#e0e7ff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+                        <line x1="70" y1="42" x2="70" y2="58" stroke="#e0e7ff" stroke-width="3" stroke-linecap="round" opacity=".55"/>
                     </svg>
                 </div>
                 <h3 data-i18n="sym.s4.h">Diode · one-way</h3>
-                <p data-i18n="sym.s4.p">A yellow arrow. Paths passing through must step in the arrow's direction. Introduced in sector 5 (OVERLOAD).</p>
+                <p data-i18n="sym.s4.p">A chevron arrow. Paths passing through must step in the arrow's direction. Introduced in sector 5 (OVERLOAD).</p>
             </div>
 
             <!-- 5. Star -->
@@ -521,13 +521,20 @@
             <div class="sym-card a-fade">
                 <div class="sym-visual">
                     <svg viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="90" cy="50" r="28" fill="rgba(129,140,248,.12)"/>
-                        <circle cx="90" cy="50" r="20" fill="none" stroke="#818cf8" stroke-width="2.5" stroke-dasharray="4 3"/>
-                        <text x="90" y="57" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700" fill="#e0e7ff">2</text>
+                        <!-- Empty (must-visit) diamond -->
+                        <g transform="translate(60,50)">
+                            <polygon points="0,-22 22,0 0,22 -22,0" fill="none" stroke="#e0e7ff" stroke-width="2.6" stroke-linejoin="round"/>
+                            <circle cx="0" cy="0" r="3" fill="#e0e7ff"/>
+                        </g>
+                        <!-- Filled (visited) diamond -->
+                        <g transform="translate(120,50)">
+                            <polygon points="0,-22 22,0 0,22 -22,0" fill="#818cf8" opacity=".85"/>
+                            <polygon points="0,-22 22,0 0,22 -22,0" fill="none" stroke="#ffffff" stroke-width="1.5" opacity=".9" stroke-linejoin="round"/>
+                        </g>
                     </svg>
                 </div>
-                <h3 data-i18n="sym.s6.h">Checkpoint · in order</h3>
-                <p data-i18n="sym.s6.p">Numbered nodes must be visited in sequence by the same path. Introduced in sector 4 (CURRENT).</p>
+                <h3 data-i18n="sym.s6.h">Checkpoint · must visit</h3>
+                <p data-i18n="sym.s6.p">A diamond marker. A path must pass through it — outlined means "not yet", filled means "visited". Introduced in sector 4 (CURRENT).</p>
             </div>
         </div>
 
@@ -711,11 +718,11 @@
             'sym.s3.h':        'Fill every cell',
             'sym.s3.p':        'From sector 5 onward, the grid must be fully covered to complete a level. Every cell belongs to a path.',
             'sym.s4.h':        'Diode · one-way',
-            'sym.s4.p':        "A yellow arrow. Paths passing through must step in the arrow's direction. Introduced in sector 5 (OVERLOAD).",
+            'sym.s4.p':        "A chevron arrow. Paths passing through must step in the arrow's direction. Introduced in sector 5 (OVERLOAD).",
             'sym.s5.h':        'Star · collect',
             'sym.s5.p':        'Must be visited by a path — any colour will do. Introduced in sector 3 (CIRCUIT).',
-            'sym.s6.h':        'Checkpoint · in order',
-            'sym.s6.p':        'Numbered nodes must be visited in sequence by the same path. Introduced in sector 4 (CURRENT).',
+            'sym.s6.h':        'Checkpoint · must visit',
+            'sym.s6.p':        'A diamond marker. A path must pass through it — outlined means not yet, filled means visited. Introduced in sector 4 (CURRENT).',
             'tier.r.h':        'Restored',
             'tier.r.p':        'Every pair connected. Level complete.',
             'tier.o.h':        'Optimized',
@@ -775,11 +782,11 @@
             'sym.s3.h':        'Vul elke cel',
             'sym.s3.p':        'Vanaf sector 5 moet het hele bord bedekt zijn om een level af te ronden. Elke cel hoort bij een pad.',
             'sym.s4.h':        'Diode · eenrichting',
-            'sym.s4.p':        'Een gele pijl. Paden die er doorheen gaan, moeten in de richting van de pijl bewegen. Verschijnt vanaf sector 5 (OVERLOAD).',
+            'sym.s4.p':        'Een chevron-pijl. Paden die er doorheen gaan, moeten in de richting van de pijl bewegen. Verschijnt vanaf sector 5 (OVERLOAD).',
             'sym.s5.h':        'Ster · verzamel',
             'sym.s5.p':        'Moet bezocht worden door een pad — welke kleur maakt niet uit. Verschijnt vanaf sector 3 (CIRCUIT).',
-            'sym.s6.h':        'Checkpoint · op volgorde',
-            'sym.s6.p':        'Genummerde knooppunten moeten in volgorde door hetzelfde pad bezocht worden. Verschijnt vanaf sector 4 (CURRENT).',
+            'sym.s6.h':        'Checkpoint · bezoek verplicht',
+            'sym.s6.p':        'Een diamant marker. Een pad moet er doorheen gaan — omlijnd betekent nog niet bezocht, gevuld betekent bezocht. Verschijnt vanaf sector 4 (CURRENT).',
             'tier.r.h':        'Hersteld',
             'tier.r.p':        'Elk paar verbonden. Level compleet.',
             'tier.o.h':        'Geoptimaliseerd',
