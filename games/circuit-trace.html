@@ -546,6 +546,24 @@
                 <p data-i18n="sym.s5.p">Must be visited by a path — any colour will do. Introduced in sector 3 (CIRCUIT).</p>
             </div>
 
+            <!-- 6b. Bridge (sector 10) -->
+            <div class="sym-card a-fade">
+                <div class="sym-visual">
+                    <svg viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="60" y="30" width="60" height="40" rx="6" fill="rgba(140,180,220,.08)" stroke="rgba(140,180,220,.28)" stroke-width="1"/>
+                        <!-- Horizontal rail (blue path) -->
+                        <line x1="50" y1="50" x2="130" y2="50" stroke="#38bdf8" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+                        <!-- Vertical rail (pink path) — drawn on top to show crossing -->
+                        <line x1="90" y1="20" x2="90" y2="80" stroke="#f472b6" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+                        <!-- Tiny bridge indicator marks -->
+                        <line x1="72" y1="42" x2="72" y2="58" stroke="rgba(140,180,220,.7)" stroke-width="1"/>
+                        <line x1="108" y1="42" x2="108" y2="58" stroke="rgba(140,180,220,.7)" stroke-width="1"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="sym.s7.h">Bridge · cross without merging</h3>
+                <p data-i18n="sym.s7.p">Two paths cross the same cell — one horizontally, one vertically. Enter one axis, exit the same axis. Introduced in sector 10 (JUNCTION).</p>
+            </div>
+
             <!-- 6. Checkpoint -->
             <div class="sym-card a-fade">
                 <div class="sym-visual">
@@ -755,6 +773,8 @@
             'sym.s5.p':        'Must be visited by a path — any colour will do. Introduced in sector 3 (CIRCUIT).',
             'sym.s6.h':        'Checkpoint · must visit',
             'sym.s6.p':        'A diamond marker. A path must pass through it — outlined means not yet, filled means visited. Introduced in sector 4 (CURRENT).',
+            'sym.s7.h':        'Bridge · cross without merging',
+            'sym.s7.p':        'Two paths cross the same cell — one horizontally, one vertically. Enter one axis, exit the same axis. Introduced in sector 10 (JUNCTION).',
             'tier.r.h':        'Restored',
             'tier.r.p':        'Every pair connected. Level complete.',
             'tier.o.h':        'Optimized',
@@ -822,6 +842,8 @@
             'sym.s5.p':        'Moet bezocht worden door een pad — welke kleur maakt niet uit. Verschijnt vanaf sector 3 (CIRCUIT).',
             'sym.s6.h':        'Checkpoint · bezoek verplicht',
             'sym.s6.p':        'Een diamant marker. Een pad moet er doorheen gaan — omlijnd betekent nog niet bezocht, gevuld betekent bezocht. Verschijnt vanaf sector 4 (CURRENT).',
+            'sym.s7.h':        'Brug · kruisen zonder samenvoegen',
+            'sym.s7.p':        'Twee paden kruisen dezelfde cel — één horizontaal, één verticaal. Ga in via één as, verlaat via dezelfde as. Verschijnt vanaf sector 10 (JUNCTION).',
             'tier.r.h':        'Hersteld',
             'tier.r.p':        'Elk paar verbonden. Level compleet.',
             'tier.o.h':        'Geoptimaliseerd',
