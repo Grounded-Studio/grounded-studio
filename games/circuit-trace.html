@@ -546,22 +546,23 @@
                 <p data-i18n="sym.s5.p">Must be visited by a path — any colour will do. Introduced in sector 3 (CIRCUIT).</p>
             </div>
 
-            <!-- 6b. Bridge (sector 10) -->
+            <!-- 6b. Portal (sector 6) -->
             <div class="sym-card a-fade">
                 <div class="sym-visual">
                     <svg viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="60" y="30" width="60" height="40" rx="6" fill="rgba(140,180,220,.08)" stroke="rgba(140,180,220,.28)" stroke-width="1"/>
-                        <!-- Horizontal rail (blue path) -->
-                        <line x1="50" y1="50" x2="130" y2="50" stroke="#38bdf8" stroke-width="7" stroke-linecap="round" opacity=".9"/>
-                        <!-- Vertical rail (pink path) — drawn on top to show crossing -->
-                        <line x1="90" y1="20" x2="90" y2="80" stroke="#f472b6" stroke-width="7" stroke-linecap="round" opacity=".9"/>
-                        <!-- Tiny bridge indicator marks -->
-                        <line x1="72" y1="42" x2="72" y2="58" stroke="rgba(140,180,220,.7)" stroke-width="1"/>
-                        <line x1="108" y1="42" x2="108" y2="58" stroke="rgba(140,180,220,.7)" stroke-width="1"/>
+                        <!-- Portal A -->
+                        <circle cx="55" cy="50" r="20" fill="rgba(168,85,247,.15)" stroke="#a855f7" stroke-width="2.5"/>
+                        <circle cx="55" cy="50" r="10" fill="#a855f7" opacity=".85"/>
+                        <!-- Portal B -->
+                        <circle cx="125" cy="50" r="20" fill="rgba(34,211,238,.15)" stroke="#22d3ee" stroke-width="2.5"/>
+                        <circle cx="125" cy="50" r="10" fill="#22d3ee" opacity=".85"/>
+                        <!-- Dashed teleport arc -->
+                        <path d="M 60 38 Q 90 6 120 38" stroke="rgba(255,255,255,.55)" stroke-width="1.6" stroke-dasharray="4,3" fill="none"/>
+                        <path d="M 60 62 Q 90 94 120 62" stroke="rgba(255,255,255,.25)" stroke-width="1.2" stroke-dasharray="3,3" fill="none"/>
                     </svg>
                 </div>
-                <h3 data-i18n="sym.s7.h">Bridge · cross without merging</h3>
-                <p data-i18n="sym.s7.p">Two paths cross the same cell — one horizontally, one vertically. Enter one axis, exit the same axis. Introduced in sector 10 (JUNCTION).</p>
+                <h3 data-i18n="sym.s7.h">Portal · teleport across the board</h3>
+                <p data-i18n="sym.s7.p">Two cells linked by a wormhole — step in one, tap the twin to continue on the other side. Introduced in sector 6 (WARP).</p>
             </div>
 
             <!-- 6. Checkpoint -->
@@ -773,8 +774,8 @@
             'sym.s5.p':        'Must be visited by a path — any colour will do. Introduced in sector 3 (CIRCUIT).',
             'sym.s6.h':        'Checkpoint · must visit',
             'sym.s6.p':        'A diamond marker. A path must pass through it — outlined means not yet, filled means visited. Introduced in sector 4 (CURRENT).',
-            'sym.s7.h':        'Bridge · cross without merging',
-            'sym.s7.p':        'Two paths cross the same cell — one horizontally, one vertically. Enter one axis, exit the same axis. Introduced in sector 10 (JUNCTION).',
+            'sym.s7.h':        'Portal · teleport across the board',
+            'sym.s7.p':        'Two cells linked by a wormhole — step in one, tap the twin to continue on the other side. Introduced in sector 6 (WARP).',
             'tier.r.h':        'Restored',
             'tier.r.p':        'Every pair connected. Level complete.',
             'tier.o.h':        'Optimized',
@@ -842,8 +843,8 @@
             'sym.s5.p':        'Moet bezocht worden door een pad — welke kleur maakt niet uit. Verschijnt vanaf sector 3 (CIRCUIT).',
             'sym.s6.h':        'Checkpoint · bezoek verplicht',
             'sym.s6.p':        'Een diamant marker. Een pad moet er doorheen gaan — omlijnd betekent nog niet bezocht, gevuld betekent bezocht. Verschijnt vanaf sector 4 (CURRENT).',
-            'sym.s7.h':        'Brug · kruisen zonder samenvoegen',
-            'sym.s7.p':        'Twee paden kruisen dezelfde cel — één horizontaal, één verticaal. Ga in via één as, verlaat via dezelfde as. Verschijnt vanaf sector 10 (JUNCTION).',
+            'sym.s7.h':        'Portaal · teleporteer over het bord',
+            'sym.s7.p':        'Twee cellen verbonden door een wormgat — stap in de ene, tik de tweeling om aan de andere kant verder te gaan. Verschijnt vanaf sector 6 (WARP).',
             'tier.r.h':        'Hersteld',
             'tier.r.p':        'Elk paar verbonden. Level compleet.',
             'tier.o.h':        'Geoptimaliseerd',

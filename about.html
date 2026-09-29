@@ -217,8 +217,20 @@
             </a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="freshgarant.html"><img src="assets/icon-vg.png" class="nav-icon" alt="" onerror="this.style.display='none'"><span data-i18n="nav.vg">FreshGarant</span></a></li>
-                    <li><a href="buildexact.html"><img src="assets/icon-bx.png" class="nav-icon" alt="" onerror="this.style.display='none'"><span data-i18n="nav.bx">BuildExact</span></a></li>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.apps">Apps</span><span class="arrow">▾</span></button>
+                        <div class="nav-dropdown-menu">
+                            <a href="buildexact.html"><img src="assets/icon-bx.png" alt="" onerror="this.outerHTML='🏗️'"><span data-i18n="nav.bx">BuildExact</span></a>
+                            <a href="freshgarant.html"><img src="assets/icon-vg.png" alt="" onerror="this.outerHTML='🌿'"><span data-i18n="nav.vg">FreshGarant</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.games">Games</span><span class="arrow">▾</span></button>
+                        <div class="nav-dropdown-menu">
+                            <a href="games/circuit-trace.html"><img src="assets/icon-ct.png" alt="" onerror="this.outerHTML='🧩'"><span data-i18n="nav.games_ct">Circuit Trace</span></a>
+                            <a href="games.html"><span style="width:22px;text-align:center">🎮</span><span data-i18n="nav.games_all">All games</span></a>
+                        </div>
+                    </li>
                     <li class="nav-dropdown">
                         <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.blog">Blog</span><span class="arrow">▾</span></button>
                         <div class="nav-dropdown-menu">
