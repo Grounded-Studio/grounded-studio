@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alle BuildExact calculators — schutting, tegels, verf, beton en meer | Grounded Studio</title>
+    <meta name="description" content="Overzicht van alle BuildExact calculators voor de Nederlandse en Belgische vakman: schutting, tegels, laminaat, verf, behang, isolatie, beton en grind. Reken materiaal uit, bespaar snijverlies, bestel precies genoeg.">
+    <meta name="keywords" content="BuildExact calculators, bouwcalculator app, schutting berekenen, tegels berekenen, verf berekenen, beton berekenen, materiaal calculator android, vakman app, aannemer calculator">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/calculators.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/calculators.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/calculators.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/calculators.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grounded-studio.app/calculators.html">
+    <meta property="og:title" content="Alle BuildExact calculators — schutting, tegels, verf, beton en meer">
+    <meta property="og:description" content="Reken elk materiaal uit in seconden. Schutting, tegels, laminaat, verf, behang, isolatie, beton en grind — in één app.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alle BuildExact calculators">
+    <meta name="twitter:description" content="Reken schutting, tegels, verf, beton en meer uit in seconden.">
+    <meta name="twitter:image" content="https://grounded-studio.app/assets/screen-bx.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "url": "https://grounded-studio.app/calculators.html",
+        "name": "BuildExact calculators",
+        "description": "Overzicht van alle calculators in BuildExact voor Nederlandse en Belgische vakmensen.",
+        "isPartOf": { "@type": "WebSite", "url": "https://grounded-studio.app" },
+        "publisher": { "@type": "Organization", "name": "Grounded Studio", "url": "https://grounded-studio.app" }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { background:#0a0f1a; color:#f1f5f9; font-family:'Inter',system-ui,sans-serif; overflow-x:hidden; line-height:1.6; }
+        :root { --bx:#2563eb; --bx2:#1d4ed8; --bx-glow:rgba(37,99,235,.35); --gs:#818cf8; --gs-glow:rgba(129,140,248,.3); --border:rgba(255,255,255,.07); --muted:#94a3b8; }
+        .c { max-width:1160px; margin:0 auto; padding:0 28px; }
+
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .nav-back:hover { color:#fff; }
+
+        /* HEADER */
+        .page-header { padding:150px 0 60px; text-align:center; position:relative; overflow:hidden; }
+        .page-header::before { content:''; position:absolute; inset:0; z-index:0; background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(37,99,235,.1),transparent 70%); pointer-events:none; }
+        .page-header .c { position:relative; z-index:1; }
+        .page-tag { display:inline-flex; align-items:center; gap:9px; padding:6px 18px; border-radius:100px; border:1px solid rgba(37,99,235,.35); background:rgba(37,99,235,.08); color:var(--bx); font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:20px; }
+        .page-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,5vw,3.4rem); font-weight:800; letter-spacing:-.035em; line-height:1.1; margin-bottom:18px; max-width:720px; margin-left:auto; margin-right:auto; }
+        .page-header .lead { color:var(--muted); font-size:1.05rem; line-height:1.75; max-width:580px; margin:0 auto; }
+
+        /* GRID */
+        .calculators { padding:60px 0 120px; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:18px; }
+        .calc-card { display:flex; flex-direction:column; padding:28px; border-radius:20px; background:rgba(255,255,255,.03); border:1px solid var(--border); text-decoration:none; color:inherit; transition:all .3s cubic-bezier(.16,1,.3,1); position:relative; overflow:hidden; }
+        .calc-card:hover { background:rgba(37,99,235,.05); border-color:rgba(37,99,235,.3); transform:translateY(-4px); box-shadow:0 16px 48px rgba(0,0,0,.35), 0 0 40px rgba(37,99,235,.08); }
+        .calc-card.soon { opacity:.55; pointer-events:none; cursor:default; }
+        .calc-card .ico { width:52px; height:52px; border-radius:14px; background:rgba(37,99,235,.1); border:1px solid rgba(37,99,235,.2); display:flex; align-items:center; justify-content:center; font-size:26px; margin-bottom:18px; }
+        .calc-card .chip { position:absolute; top:16px; right:16px; font-size:.62rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:4px 10px; border-radius:100px; background:rgba(129,140,248,.14); color:var(--gs); border:1px solid rgba(129,140,248,.3); }
+        .calc-card.live .chip { background:rgba(37,99,235,.14); color:var(--bx); border-color:rgba(37,99,235,.3); }
+        .calc-card h2 { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+        .calc-card p { font-size:.86rem; color:var(--muted); line-height:1.6; margin-bottom:16px; flex:1; }
+        .calc-card .read { font-size:.78rem; font-weight:700; color:var(--bx); display:inline-flex; align-items:center; gap:6px; }
+        .calc-card .read::after { content:'→'; transition:transform .25s; }
+        .calc-card:hover .read::after { transform:translateX(4px); }
+
+        /* APP CTA */
+        .app-cta-section { padding:80px 0 120px; border-top:1px solid var(--border); text-align:center; }
+        .app-cta-section h2 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:800; margin-bottom:12px; }
+        .app-cta-section p { color:var(--muted); font-size:.95rem; margin-bottom:28px; max-width:520px; margin-left:auto; margin-right:auto; }
+        .play-btn { display:inline-flex; align-items:center; gap:14px; padding:16px 32px; border-radius:16px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); color:#fff; text-decoration:none; font-weight:600; transition:all .3s; }
+        .play-btn:hover { background:rgba(255,255,255,.09); transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,0,0,.4); }
+        .play-btn svg { width:28px; height:28px; }
+        .play-btn small { display:block; font-size:.68rem; opacity:.6; }
+        .play-btn span { display:block; font-size:.95rem; font-weight:700; }
+
+        /* FOOTER */
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+    </style>
+</head>
+<body>
+<nav><div class="c"><div class="nav-inner"><a href="index.html" class="nav-logo"><div class="nav-mark"><img src="assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><div style="display:flex;align-items:center;gap:18px"><a href="buildexact.html" class="nav-back">← BuildExact</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
+
+<header class="page-header">
+    <div class="c">
+        <div class="page-tag">🧮 <span data-i18n="page.tag">Alle BuildExact calculators</span></div>
+        <h1 data-i18n-html="page.h1">Reken elk materiaal uit<br>in seconden.</h1>
+        <p class="lead" data-i18n="page.lead">Van schutting tot beton — alle calculators uit BuildExact met uitleg, formules en rekenvoorbeelden. Gratis in de app, hier als naslagwerk.</p>
+    </div>
+</header>
+
+<section class="calculators">
+    <div class="c">
+        <div class="grid">
+
+            <a href="calculators/schutting.html" class="calc-card live">
+                <span class="chip" data-i18n="chip.live">Nieuw</span>
+                <div class="ico">🪵</div>
+                <h2 data-i18n="c.schutting.h">Schutting berekenen</h2>
+                <p data-i18n="c.schutting.p">Palen, schermen, pasvak, hoekpalen, afdekkappen en poorten. Rekent elke zijlijn en helling uit, met of zonder sponning.</p>
+                <span class="read" data-i18n="read">Open calculator</span>
+            </a>
+
+            <div class="calc-card soon">
+                <span class="chip" data-i18n="chip.app">In de app</span>
+                <div class="ico">🟫</div>
+                <h2 data-i18n="c.tegels.h">Tegels berekenen</h2>
+                <p data-i18n="c.tegels.p">Oppervlak, patroon en snijverlies — standaard, diagonaal of visgraat.</p>
+                <span class="read" data-i18n="read">Binnenkort</span>
+            </div>
+
+            <div class="calc-card soon">
+                <span class="chip" data-i18n="chip.app">In de app</span>
+                <div class="ico">🪜</div>
+                <h2 data-i18n="c.laminaat.h">Laminaat berekenen</h2>
+                <p data-i18n="c.laminaat.p">Pakken laminaat of PVC per m² inclusief snijverlies en uitzettingsvoeg.</p>
+                <span class="read" data-i18n="read">Binnenkort</span>
+            </div>
+
+            <div class="calc-card soon">
+                <span class="chip" data-i18n="chip.app">In de app</span>
+                <div class="ico">🎨</div>
+                <h2 data-i18n="c.verf.h">Verf berekenen</h2>
+                <p data-i18n="c.verf.p">Liters per m² op basis van dekkingsgraad, aantal lagen en ondergrond.</p>
+                <span class="read" data-i18n="read">Binnenkort</span>
+            </div>
+
+            <div class="calc-card soon">
+                <span class="chip" data-i18n="chip.app">In de app</span>
+                <div class="ico">📜</div>
+                <h2 data-i18n="c.behang.h">Behang berekenen</h2>
+                <p data-i18n="c.behang.p">Rollen met patroonvervolg (rapport) en strookhoogte per wand.</p>
+                <span class="read" data-i18n="read">Binnenkort</span>
+            </div>
+
+            <div class="calc-card soon">
+                <span class="chip" data-i18n="chip.app">In de app</span>
+                <div class="ico">🧱</div>
+                <h2 data-i18n="c.isolatie.h">Isolatie berekenen</h2>
+                <p data-i18n="c.isolatie.p">Pakken op basis van Rc-waarde, lambda en dikte voor dak, vloer of spouw.</p>
+                <span class="read" data-i18n="read">Binnenkort</span>
+            </div>
+
+            <div class="calc-card soon">
+                <span class="chip" data-i18n="chip.app">In de app</span>
+                <div class="ico">🏗️</div>
+                <h2 data-i18n="c.beton.h">Beton berekenen</h2>
+                <p data-i18n="c.beton.p">Kubieke meters voor vloer, strookfundering of oprit met helling.</p>
+                <span class="read" data-i18n="read">Binnenkort</span>
+            </div>
+
+            <div class="calc-card soon">
+                <span class="chip" data-i18n="chip.app">In de app</span>
+                <div class="ico">⛰️</div>
+                <h2 data-i18n="c.grind.h">Grind berekenen</h2>
+                <p data-i18n="c.grind.p">Zakken of losgestort — op basis van oppervlak, laagdikte en type steen.</p>
+                <span class="read" data-i18n="read">Binnenkort</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="app-cta-section">
+    <div class="c">
+        <h2 data-i18n="cta.h">Alles in één app</h2>
+        <p data-i18n="cta.p">Elke calculator hieronder zit in BuildExact. Reken uit, koppel aan project, zet om in offerte of factuur — zonder opnieuw te typen.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="play-btn">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+            <div><small data-i18n="cta.small">Gratis download op</small><span data-i18n="cta.big">Google Play</span></div>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="index.html" class="foot-logo"><div class="foot-mark"><img src="assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a>
+                <a href="games/circuit-trace.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Circuit Trace</a>
+                <a href="blog/buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
+                <a href="about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a>
+                <a href="privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
+            </div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+const T = {
+    nl: {
+        'page.tag':'Alle BuildExact calculators','page.h1':'Reken elk materiaal uit<br>in seconden.','page.lead':'Van schutting tot beton — alle calculators uit BuildExact met uitleg, formules en rekenvoorbeelden. Gratis in de app, hier als naslagwerk.',
+        'chip.live':'Nieuw','chip.app':'In de app','read':'Open calculator',
+        'c.schutting.h':'Schutting berekenen','c.schutting.p':'Palen, schermen, pasvak, hoekpalen, afdekkappen en poorten. Rekent elke zijlijn en helling uit, met of zonder sponning.',
+        'c.tegels.h':'Tegels berekenen','c.tegels.p':'Oppervlak, patroon en snijverlies — standaard, diagonaal of visgraat.',
+        'c.laminaat.h':'Laminaat berekenen','c.laminaat.p':'Pakken laminaat of PVC per m² inclusief snijverlies en uitzettingsvoeg.',
+        'c.verf.h':'Verf berekenen','c.verf.p':'Liters per m² op basis van dekkingsgraad, aantal lagen en ondergrond.',
+        'c.behang.h':'Behang berekenen','c.behang.p':'Rollen met patroonvervolg (rapport) en strookhoogte per wand.',
+        'c.isolatie.h':'Isolatie berekenen','c.isolatie.p':'Pakken op basis van Rc-waarde, lambda en dikte voor dak, vloer of spouw.',
+        'c.beton.h':'Beton berekenen','c.beton.p':'Kubieke meters voor vloer, strookfundering of oprit met helling.',
+        'c.grind.h':'Grind berekenen','c.grind.p':'Zakken of losgestort — op basis van oppervlak, laagdikte en type steen.',
+        'cta.h':'Alles in één app','cta.p':'Elke calculator hieronder zit in BuildExact. Reken uit, koppel aan project, zet om in offerte of factuur — zonder opnieuw te typen.','cta.small':'Gratis download op','cta.big':'Google Play',
+    },
+    en: {
+        'page.tag':'All BuildExact calculators','page.h1':'Calculate every material<br>in seconds.','page.lead':'From fencing to concrete — every BuildExact calculator with explanations, formulas and worked examples. Free in the app, documented here.',
+        'chip.live':'New','chip.app':'In the app','read':'Open calculator',
+        'c.schutting.h':'Fence calculator','c.schutting.p':'Posts, panels, cut panels, corner posts, caps and gates. Handles every side and slope, with or without a rebate.',
+        'c.tegels.h':'Tile calculator','c.tegels.p':'Area, pattern and cutting waste — straight, diagonal or herringbone.',
+        'c.laminaat.h':'Laminate calculator','c.laminaat.p':'Packs of laminate or LVT per m² including cutting waste and expansion gap.',
+        'c.verf.h':'Paint calculator','c.verf.p':'Litres per m² based on coverage, number of coats and substrate.',
+        'c.behang.h':'Wallpaper calculator','c.behang.p':'Rolls with pattern repeat and strip height per wall.',
+        'c.isolatie.h':'Insulation calculator','c.isolatie.p':'Packs based on Rc value, lambda and thickness for roof, floor or cavity.',
+        'c.beton.h':'Concrete calculator','c.beton.p':'Cubic metres for slab, strip foundation or sloped driveway.',
+        'c.grind.h':'Gravel calculator','c.grind.p':'Bags or loose — based on area, layer thickness and stone type.',
+        'cta.h':'Everything in one app','cta.p':'Every calculator here lives inside BuildExact. Calculate, link to a project, convert to a quote or invoice — without retyping.','cta.small':'Download free on','cta.big':'Google Play',
+    }
+};
+const savedLang = localStorage.getItem('gs-lang');
+const browserIsNL = (navigator.language || '').toLowerCase().startsWith('nl');
+let lang = savedLang || (browserIsNL ? 'nl' : 'en');
+function applyLang(l) {
+    const d = T[l]; document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    lang = l; localStorage.setItem('gs-lang', l);
+}
+applyLang(lang);
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+</script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>
