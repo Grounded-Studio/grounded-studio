@@ -158,7 +158,7 @@
         *:focus-visible { outline:2px solid #818cf8; outline-offset:2px; border-radius:4px; }
         a:focus-visible,button:focus-visible { outline:2px solid #818cf8; outline-offset:3px; }
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
         body { background: #0a0f1a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; line-height: 1.6; }
         body::after { content:''; position:fixed; inset:0; z-index:9999; pointer-events:none; opacity:.025; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)'/%3E%3C/svg%3E"); background-size:200px 200px; }
         :root { --bx:#2563eb; --bx2:#1d4ed8; --bx-glow:rgba(37,99,235,0.35); --gs:#818cf8; --gs2:#6366f1; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#64748b; }
