@@ -1,0 +1,41 @@
+# Grounded Studio
+
+> Independent Android studio from the Netherlands building practical tools and games. Three products: BuildExact (construction calculator and quoting app for contractors), FreshGarant (food expiry tracker that reduces household food waste), and Circuit Trace (minimalist puzzle game).
+
+Grounded Studio ships native Android apps focused on being fast, offline-capable and privacy-friendly. The website at grounded-studio.app serves as marketing site, documentation hub and blog. All calculator pages include real worked examples, formulas, and FAQ sections designed to answer common contractor questions directly.
+
+## Products
+
+- [BuildExact](https://grounded-studio.app/buildexact.html): Construction calculator and quote-to-invoice app for Dutch and Belgian contractors. 11 material calculators (fence, tiles, paint, plasterboard, insulation, roof, stairs, paving, timber, bricks, concrete), project management, PDF quotes with digital signature.
+- [FreshGarant](https://grounded-studio.app/freshgarant.html): Food expiry tracker with AI fridge-scan, meal planning, price comparison and shopping lists. Helps households save on groceries and reduce food waste.
+- [Circuit Trace](https://grounded-studio.app/games/circuit-trace.html): Minimalist Android puzzle game currently in beta. Trace circuits across hex grids with mechanics like warp portals and bridges.
+
+## Calculators (BuildExact)
+
+Each page explains the inputs, formula, a worked example with real numbers, FAQ, and screenshots of the app. All bilingual NL/EN.
+
+- [All calculators overview](https://grounded-studio.app/calculators.html)
+- [Fence calculator](https://grounded-studio.app/calculators/schutting.html): posts, panels, cut panel, gates, corners
+- [Tile calculator](https://grounded-studio.app/calculators/tegels.html): tiles, boxes, adhesive, grout, cutting waste by pattern
+- [Paint calculator](https://grounded-studio.app/calculators/verf.html): litres, coats, coverage, primer, tin sizes
+- [Plasterboard calculator](https://grounded-studio.app/calculators/gipsplaat.html): boards, screws, joint filler, tape, single or double layer
+- [Insulation calculator](https://grounded-studio.app/calculators/isolatie.html): R-value, packs, fasteners, multi-layer stacking
+- [Roof calculator](https://grounded-studio.app/calculators/dak.html): pitch angle, surface, tiles, battens for various roof types
+- [Stairs calculator](https://grounded-studio.app/calculators/trap.html): steps, riser, tread, stringers, Blondel comfort, Dutch building code
+- [Paving calculator](https://grounded-studio.app/calculators/bestrating.html): stones, sub-base, laying sand, edge restraint, pattern
+- [Timber calculator](https://grounded-studio.app/calculators/hout.html): volume, planks, beams, stain and varnish by exterior surface
+- [Brick calculator](https://grounded-studio.app/calculators/bakstenen.html): bricks, mortar, lintels, wall ties, auto-subtracted openings
+- [Concrete calculator](https://grounded-studio.app/calculators/beton.html): m³ ready-mix, rebar kg and bar count, optional formwork
+
+## Blog
+
+Long-form articles about construction cost, VAT rules, material estimation, food waste, meal planning and app features. Both NL and EN.
+
+- [BuildExact blog hub](https://grounded-studio.app/blog/buildexact.html)
+- [FreshGarant blog hub](https://grounded-studio.app/blog/freshgarant.html)
+
+## Reference
+
+- [About Grounded Studio](https://grounded-studio.app/about.html)
+- [Privacy policy](https://grounded-studio.app/privacy.html)
+- [Sitemap](https://grounded-studio.app/sitemap.xml)

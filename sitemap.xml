@@ -368,13 +368,73 @@
     </url>
     <url>
         <loc>https://grounded-studio.app/calculators.html</loc>
-        <lastmod>2026-11-27</lastmod>
+        <lastmod>2026-10-04</lastmod>
         <priority>0.9</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/calculators/schutting.html</loc>
-        <lastmod>2026-11-27</lastmod>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/tegels.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/verf.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/gipsplaat.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/isolatie.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/dak.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/trap.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/bestrating.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/hout.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/bakstenen.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/calculators/beton.html</loc>
+        <lastmod>2026-10-04</lastmod>
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
