@@ -8,8 +8,8 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#22c55e">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grounded Studio — Android Apps & Games (BuildExact, FreshGarant, Circuit Trace)</title>
-    <meta name="description" content="Grounded Studio builds intuitive Android apps and focused games: BuildExact for construction calculations, FreshGarant for tracking food expiry dates, and Circuit Trace — a minimalist logic puzzle.">
+    <title>Grounded Studio — Circuit Trace, BuildExact & FreshGarant (Android Apps & Games)</title>
+    <meta name="description" content="Grounded Studio makes focused games and intuitive Android apps: Circuit Trace — a minimalist logic puzzle, BuildExact for construction calculations, and FreshGarant for tracking food expiry dates.">
     <meta name="keywords" content="bouwcalculatie app, materiaalberekening android, kostenraming bouw, construction calculator, houdbaarheidsdatum app, voedselverspilling bijhouden, barcode scanner vervaldatum, food expiry tracker android, Circuit Trace puzzle game, connect the dots game, logic puzzle android, BuildExact, FreshGarant, Circuit Trace, Grounded Studio">
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
@@ -23,7 +23,7 @@
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="https://grounded-studio.app">
     <meta property="og:title"       content="Grounded Studio — Android Apps & Games">
-    <meta property="og:description" content="Intuitive apps and focused games for Android. BuildExact for construction calculations, FreshGarant for food expiry tracking, Circuit Trace — a minimalist logic puzzle.">
+    <meta property="og:description" content="Focused games and intuitive apps for Android. Circuit Trace — a minimalist logic puzzle, BuildExact for construction calculations, FreshGarant for food expiry tracking.">
     <meta property="og:image"       content="https://grounded-studio.app/assets/og-studio.svg">
     <meta property="og:locale"      content="nl_NL">
     <meta property="og:locale:alternate" content="en_US">
@@ -32,7 +32,7 @@
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:url"         content="https://grounded-studio.app">
     <meta name="twitter:title"       content="Grounded Studio — Android Apps & Games">
-    <meta name="twitter:description" content="Intuitive apps and focused games for Android. BuildExact, FreshGarant and Circuit Trace — on Google Play.">
+    <meta name="twitter:description" content="Focused games and intuitive apps for Android. Circuit Trace, BuildExact and FreshGarant — on Google Play.">
     <meta name="twitter:image"       content="https://grounded-studio.app/assets/og-studio.svg">
 
     <!-- JSON-LD Structured Data -->
@@ -70,7 +70,7 @@
                 "@id": "https://grounded-studio.app/#website",
                 "url": "https://grounded-studio.app",
                 "name": "Grounded Studio",
-                "description": "Independent Android studio. Makers of BuildExact, FreshGarant and Circuit Trace.",
+                "description": "Independent Android studio. Makers of Circuit Trace, BuildExact and FreshGarant.",
                 "publisher": { "@id": "https://grounded-studio.app/#organization" },
                 "inLanguage": "en"
             },
@@ -197,7 +197,7 @@
                 "name": "What is Circuit Trace?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 90 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free."
+                    "text": "Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 100 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free."
                 }
             },
             {
@@ -1318,7 +1318,7 @@
                     <button class="lang-btn active" data-lang="en">EN</button>
                     <button class="lang-btn"        data-lang="nl">NL</button>
                 </div>
-                <a href="#buildexact" class="nav-cta" data-i18n="nav.cta">Our Apps</a>
+                <a href="#games" class="nav-cta" data-i18n="nav.cta">Our Apps</a>
                 <!-- Hamburger (mobile only) -->
                 <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
                     <span></span>
@@ -1337,15 +1337,9 @@
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-modal="true">
     <ul class="mobile-menu-links">
         <li>
-            <a href="buildexact.html" class="mobile-nav-link">
-                <img src="assets/icon-bx.png" alt="" onerror="this.outerHTML='🏗️'">
-                <span data-i18n="nav.bx">BuildExact</span>
-            </a>
-        </li>
-        <li>
-            <a href="freshgarant.html" class="mobile-nav-link">
-                <img src="assets/icon-vg.png" alt="" onerror="this.outerHTML='🌿'">
-                <span data-i18n="nav.vg">FreshGarant</span>
+            <a href="games/circuit-trace.html" class="mobile-nav-link">
+                <img src="assets/icon-ct.png" alt="" width="24" height="24" style="border-radius:6px" onerror="this.outerHTML='🧩'">
+                <span data-i18n="nav.games_ct">Circuit Trace</span>
             </a>
         </li>
         <li>
@@ -1355,9 +1349,15 @@
             </a>
         </li>
         <li>
-            <a href="games/circuit-trace.html" class="mobile-nav-link">
-                <img src="assets/icon-ct.png" alt="" width="24" height="24" style="border-radius:6px" onerror="this.outerHTML='🧩'">
-                <span data-i18n="nav.games_ct">Circuit Trace</span>
+            <a href="buildexact.html" class="mobile-nav-link">
+                <img src="assets/icon-bx.png" alt="" onerror="this.outerHTML='🏗️'">
+                <span data-i18n="nav.bx">BuildExact</span>
+            </a>
+        </li>
+        <li>
+            <a href="freshgarant.html" class="mobile-nav-link">
+                <img src="assets/icon-vg.png" alt="" onerror="this.outerHTML='🌿'">
+                <span data-i18n="nav.vg">FreshGarant</span>
             </a>
         </li>
         <li>
@@ -1384,7 +1384,7 @@
         <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn"        data-lang="nl">NL</button>
     </div>
-    <a href="#buildexact" class="mobile-cta mobile-nav-link" data-i18n="nav.cta">Our Apps</a>
+    <a href="#games" class="mobile-cta mobile-nav-link" data-i18n="nav.cta">Our Apps</a>
 </div>
 
 <!-- ── CIRCUIT TRACE BETA POPUP ─────────────────────────── -->
@@ -1397,7 +1397,7 @@
         </div>
         <div class="ct-popup-badge" data-i18n="ctp.badge">🚀 Closed beta</div>
         <h3 class="ct-popup-title" id="ctPopupTitle" data-i18n="ctp.title">Word betatester van Circuit Trace</h3>
-        <p class="ct-popup-desc" data-i18n="ctp.desc">Een minimalistische logica-puzzel met 90 handgemaakte levels. Speel als een van de eersten en help de puntjes op de i te zetten voor de launch.</p>
+        <p class="ct-popup-desc" data-i18n="ctp.desc">Een minimalistische logica-puzzel met 100 handgemaakte levels. Speel als een van de eersten en help de puntjes op de i te zetten voor de launch.</p>
         <a href="#" class="ct-popup-cta" id="ctPopupCta" data-i18n="ctp.cta">📧 Email me om mee te doen</a>
         <p class="ct-popup-hint" data-i18n="ctp.hint">Je mailclient opent met een klaargezet bericht. Google-account email is nodig voor Play Store closed testing.</p>
         <button class="ct-popup-later" id="ctPopupLater" data-i18n="ctp.later">Nee, dank je</button>
@@ -1423,6 +1423,16 @@
         </p>
         <div class="hero-pills-wrap">
             <div class="pill-group">
+                <span class="pill-group-label" data-i18n="nav.games">Games</span>
+                <div class="hero-pills">
+                    <a href="#games" class="pill fl">
+                        <img src="assets/icon-ct.png" class="pill-img" alt="Circuit Trace" onerror="this.outerHTML='<div class=\'pill-emoji\' style=\'background:rgba(167,139,250,.15)\'>🧩</div>'">
+                        <span data-i18n="nav.games_ct">Circuit Trace</span>
+                    </a>
+                </div>
+            </div>
+            <div class="pill-divider" aria-hidden="true"></div>
+            <div class="pill-group">
                 <span class="pill-group-label" data-i18n="nav.apps">Apps</span>
                 <div class="hero-pills">
                     <a href="buildexact.html" class="pill bx">
@@ -1432,16 +1442,6 @@
                     <a href="freshgarant.html" class="pill vg">
                         <img src="assets/icon-vg.png" class="pill-img" alt="FreshGarant" onerror="this.outerHTML='<div class=\'pill-emoji\'>🌿</div>'">
                         <span data-i18n="nav.vg">FreshGarant</span>
-                    </a>
-                </div>
-            </div>
-            <div class="pill-divider" aria-hidden="true"></div>
-            <div class="pill-group">
-                <span class="pill-group-label" data-i18n="nav.games">Games</span>
-                <div class="hero-pills">
-                    <a href="#games" class="pill fl">
-                        <img src="assets/icon-ct.png" class="pill-img" alt="Circuit Trace" onerror="this.outerHTML='<div class=\'pill-emoji\' style=\'background:rgba(167,139,250,.15)\'>🧩</div>'">
-                        <span data-i18n="nav.games_ct">Circuit Trace</span>
                     </a>
                 </div>
             </div>
@@ -1478,6 +1478,101 @@
         <span class="stat-label" data-i18n="stats.free">to download</span>
     </div>
 </div>
+
+<!-- ── GAMES (CIRCUIT TRACE) ───────────────────────────── -->
+<section class="app-section fl-section" id="games">
+    <div class="c">
+        <div class="app-grid">
+
+            <!-- Text -->
+            <div>
+                <div class="app-icon-badge a-fade">
+                    <div class="app-icon-ring" style="border-color:rgba(167,139,250,.3);box-shadow:0 0 24px rgba(167,139,250,.25)">
+                        <img src="assets/icon-ct.png" class="app-icon-img" alt="Circuit Trace icon" onerror="this.outerHTML='<div class=\'app-icon-emoji\' style=\'background:rgba(167,139,250,.14)\'>🧩</div>'">
+                    </div>
+                    <div class="app-icon-info">
+                        <h3 data-i18n="nav.games_ct">Circuit Trace</h3>
+                        <span data-i18n="fl.by">Game by Grounded Studio</span>
+                    </div>
+                </div>
+
+                <div class="s-tag fl a-fade" style="transition-delay:.06s">
+                    <span>●</span>&nbsp;<span data-i18n="fl.tag.text">🚀 Coming soon on Google Play</span>
+                </div>
+                <h2 class="s-title a-fade" style="transition-delay:.12s" data-i18n-html="fl.h2">
+                    Connect the circuit<br><span style="color:var(--fl)">tile the grid</span>
+                </h2>
+                <p class="s-desc a-fade" style="transition-delay:.18s" data-i18n="fl.desc">
+                    Circuit Trace is a minimalist logic puzzle: draw one path per colour, cover every cell, restore the circuit. 100 handcrafted levels — fully offline. Launching soon on Google Play.
+                </p>
+
+                <ul class="features">
+                    <li class="feat a-left" style="transition-delay:.08s">
+                        <div class="feat-ico fl">🔗</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="fl.f1.h">Connect the dots</h4>
+                            <p data-i18n="fl.f1.p">Trace a continuous line between each pair of coloured dots without crossing others.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.16s">
+                        <div class="feat-ico fl">🟪</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="fl.f2.h">Tile every cell</h4>
+                            <p data-i18n="fl.f2.p">A level is only <em>restored</em> when the whole grid is filled — every square counts.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.24s">
+                        <div class="feat-ico fl">⭐</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="fl.f3.h">Perfect solutions</h4>
+                            <p data-i18n="fl.f3.p">Solve in the intended move count to earn a Perfect badge. Chase the all-perfect run.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.32s">
+                        <div class="feat-ico fl">📈</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="fl.f4.h">100 handcrafted levels</h4>
+                            <p data-i18n="fl.f4.p">From gentle warm-ups to dense grids that test how you plan. Difficulty ramps as you play.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:44px">
+                    <a href="games/circuit-trace.html" class="play-btn a-fade" style="transition-delay:.42s;margin-top:0">
+                        <svg class="play-svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
+                            <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
+                            <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
+                            <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
+                        </svg>
+                        <div class="play-text">
+                            <small data-i18n="fl.cta.small">Discover</small>
+                            <span data-i18n="fl.cta.big">Circuit Trace game page</span>
+                        </div>
+                    </a>
+                    <a href="games.html" class="a-fade" style="transition-delay:.5s;color:var(--fl);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(167,139,250,.35);background:rgba(167,139,250,.08);transition:all .25s" onmouseover="this.style.background='rgba(167,139,250,.16)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(167,139,250,.08)';this.style.transform='translateY(0)'">
+                        <span data-i18n="fl.cta.all">All games</span> →
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3D Screenshot -->
+            <div class="phone-wrap a-scale">
+                <div class="screen-glow" style="background:var(--fl)"></div>
+                <div class="tilt-wrap fl-tilt">
+                    <img src="assets/screen-ct.png"
+                         class="app-screenshot"
+                         alt="Circuit Trace app screenshot"
+                         onerror="this.style.display='none'">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Section separator -->
+<div class="section-separator"></div>
 
 <!-- ── BUILDEXACT ─────────────────────────────────────── -->
 <section class="app-section bx-section" id="buildexact">
@@ -1672,101 +1767,6 @@
     </div>
 </section>
 
-<!-- Section separator -->
-<div class="section-separator"></div>
-
-<!-- ── GAMES (CIRCUIT TRACE) ───────────────────────────── -->
-<section class="app-section fl-section" id="games">
-    <div class="c">
-        <div class="app-grid">
-
-            <!-- Text -->
-            <div>
-                <div class="app-icon-badge a-fade">
-                    <div class="app-icon-ring" style="border-color:rgba(167,139,250,.3);box-shadow:0 0 24px rgba(167,139,250,.25)">
-                        <img src="assets/icon-ct.png" class="app-icon-img" alt="Circuit Trace icon" onerror="this.outerHTML='<div class=\'app-icon-emoji\' style=\'background:rgba(167,139,250,.14)\'>🧩</div>'">
-                    </div>
-                    <div class="app-icon-info">
-                        <h3 data-i18n="nav.games_ct">Circuit Trace</h3>
-                        <span data-i18n="fl.by">Game by Grounded Studio</span>
-                    </div>
-                </div>
-
-                <div class="s-tag fl a-fade" style="transition-delay:.06s">
-                    <span>●</span>&nbsp;<span data-i18n="fl.tag.text">🚀 Coming soon on Google Play</span>
-                </div>
-                <h2 class="s-title a-fade" style="transition-delay:.12s" data-i18n-html="fl.h2">
-                    Connect the circuit<br><span style="color:var(--fl)">tile the grid</span>
-                </h2>
-                <p class="s-desc a-fade" style="transition-delay:.18s" data-i18n="fl.desc">
-                    Circuit Trace is a minimalist logic puzzle: draw one path per colour, cover every cell, restore the circuit. 90 handcrafted levels — fully offline. Launching soon on Google Play.
-                </p>
-
-                <ul class="features">
-                    <li class="feat a-left" style="transition-delay:.08s">
-                        <div class="feat-ico fl">🔗</div>
-                        <div class="feat-body">
-                            <h4 data-i18n="fl.f1.h">Connect the dots</h4>
-                            <p data-i18n="fl.f1.p">Trace a continuous line between each pair of coloured dots without crossing others.</p>
-                        </div>
-                    </li>
-                    <li class="feat a-left" style="transition-delay:.16s">
-                        <div class="feat-ico fl">🟪</div>
-                        <div class="feat-body">
-                            <h4 data-i18n="fl.f2.h">Tile every cell</h4>
-                            <p data-i18n="fl.f2.p">A level is only <em>restored</em> when the whole grid is filled — every square counts.</p>
-                        </div>
-                    </li>
-                    <li class="feat a-left" style="transition-delay:.24s">
-                        <div class="feat-ico fl">⭐</div>
-                        <div class="feat-body">
-                            <h4 data-i18n="fl.f3.h">Perfect solutions</h4>
-                            <p data-i18n="fl.f3.p">Solve in the intended move count to earn a Perfect badge. Chase the all-perfect run.</p>
-                        </div>
-                    </li>
-                    <li class="feat a-left" style="transition-delay:.32s">
-                        <div class="feat-ico fl">📈</div>
-                        <div class="feat-body">
-                            <h4 data-i18n="fl.f4.h">90 handcrafted levels</h4>
-                            <p data-i18n="fl.f4.p">From gentle warm-ups to dense grids that test how you plan. Difficulty ramps as you play.</p>
-                        </div>
-                    </li>
-                </ul>
-
-                <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:44px">
-                    <a href="games/circuit-trace.html" class="play-btn a-fade" style="transition-delay:.42s;margin-top:0">
-                        <svg class="play-svg" viewBox="0 0 24 24" fill="none">
-                            <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
-                            <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
-                            <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
-                            <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
-                        </svg>
-                        <div class="play-text">
-                            <small data-i18n="fl.cta.small">Discover</small>
-                            <span data-i18n="fl.cta.big">Circuit Trace game page</span>
-                        </div>
-                    </a>
-                    <a href="games.html" class="a-fade" style="transition-delay:.5s;color:var(--fl);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(167,139,250,.35);background:rgba(167,139,250,.08);transition:all .25s" onmouseover="this.style.background='rgba(167,139,250,.16)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(167,139,250,.08)';this.style.transform='translateY(0)'">
-                        <span data-i18n="fl.cta.all">All games</span> →
-                    </a>
-                </div>
-            </div>
-
-            <!-- 3D Screenshot -->
-            <div class="phone-wrap a-scale">
-                <div class="screen-glow" style="background:var(--fl)"></div>
-                <div class="tilt-wrap fl-tilt">
-                    <img src="assets/screen-ct.png"
-                         class="app-screenshot"
-                         alt="Circuit Trace app screenshot"
-                         onerror="this.style.display='none'">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
 <!-- ── ABOUT / STUDIO ─────────────────────────────────── -->
 <section class="about-section" id="studio">
     <div class="c">
@@ -1870,7 +1870,7 @@
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" aria-expanded="false"><span data-i18n="faq.q5">What is Circuit Trace?</span><span class="faq-icon">+</span></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a5">Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 90 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a5">Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 100 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qct1">When does Circuit Trace launch?</span><span class="faq-icon">+</span></button>
@@ -1969,14 +1969,14 @@ const T = {
         'fl.by':        'Game by Grounded Studio',
         'fl.tag.text':  '🚀 Coming soon on Google Play',
         'fl.h2':        'Connect the circuit<br><span style="color:var(--fl)">tile the grid</span>',
-        'fl.desc':      'Circuit Trace is a minimalist logic puzzle: draw one path per colour, cover every cell, restore the circuit. 90 handcrafted levels — fully offline. Launching soon on Google Play.',
+        'fl.desc':      'Circuit Trace is a minimalist logic puzzle: draw one path per colour, cover every cell, restore the circuit. 100 handcrafted levels — fully offline. Launching soon on Google Play.',
         'fl.f1.h':      'Connect the dots',
         'fl.f1.p':      'Trace a continuous line between each pair of coloured dots without crossing others.',
         'fl.f2.h':      'Tile every cell',
         'fl.f2.p':      'A level is only <em>restored</em> when the whole grid is filled — every square counts.',
         'fl.f3.h':      'Perfect solutions',
         'fl.f3.p':      'Solve in the intended move count to earn a Perfect badge. Chase the all-perfect run.',
-        'fl.f4.h':      '90 handcrafted levels',
+        'fl.f4.h':      '100 handcrafted levels',
         'fl.f4.p':      'From gentle warm-ups to dense grids that test how you plan. Difficulty ramps as you play.',
         'fl.cta.small': 'Discover',
         'fl.cta.big':   'Circuit Trace game page',
@@ -2022,14 +2022,14 @@ const T = {
         'faq.qvg2':     'What does FreshGarant PRO unlock?',
         'faq.avg2':     'PRO unlocks AI-generated recipes tailored to your soon-to-expire ingredients (powered by Gemini), family sharing for up to 6 members so everyone sees the same fridge in real time, cloud backup across devices, and hands-free cook mode — a recipe reader that scrolls itself while your hands are covered in flour.',
         'faq.q5':       'What is Circuit Trace?',
-        'faq.a5':       'Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 90 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free.',
+        'faq.a5':       'Circuit Trace is a minimalist logic puzzle game for Android, coming soon on Google Play. Connect coloured dots by drawing a single path per colour, tile every cell of the grid, and restore the circuit. 100 handcrafted levels ramp from gentle warm-ups to dense grids that test your planning. Fully offline, no ads on gameplay, free.',
         'faq.qct1':     'When does Circuit Trace launch?',
         'faq.act1':     'Circuit Trace is currently in closed beta on Google Play, with a public launch planned soon. The exact date depends on beta feedback — the studio would rather ship it right than rush it. Follow Grounded Studio for announcements, or join the closed beta to get access before public launch.',
         'faq.qct2':     'How can I join the Circuit Trace beta?',
         'faq.act2':     'Send an email to contact@grounded-studio.app with the subject "Circuit Trace beta" and include the Google account email you use on your Android phone (this is what Play Store closed testing requires). You\'ll be added to the tester list and get an install link within a few days. Playtest feedback is welcome but not required.',
         'ctp.badge':    '🚀 Closed beta',
         'ctp.title':    'Join the Circuit Trace beta',
-        'ctp.desc':     'A minimalist logic puzzle with 90 handcrafted levels. Play it before anyone else and help us polish it for launch.',
+        'ctp.desc':     'A minimalist logic puzzle with 100 handcrafted levels. Play it before anyone else and help us polish it for launch.',
         'ctp.cta':      '📧 Email me to join',
         'ctp.hint':     'Your mail app opens with a pre-filled message. A Google account email is required for Play Store closed testing.',
         'ctp.later':    'No thanks',
@@ -2086,14 +2086,14 @@ const T = {
         'fl.by':        'Game van Grounded Studio',
         'fl.tag.text':  '🚀 Binnenkort in Google Play',
         'fl.h2':        'Verbind het circuit<br><span style="color:var(--fl)">vul het bord</span>',
-        'fl.desc':      'Circuit Trace is een minimalistische logica-puzzel: teken één pad per kleur, bedek elke cel, herstel het circuit. 90 handgemaakte levels — volledig offline. Binnenkort in Google Play.',
+        'fl.desc':      'Circuit Trace is een minimalistische logica-puzzel: teken één pad per kleur, bedek elke cel, herstel het circuit. 100 handgemaakte levels — volledig offline. Binnenkort in Google Play.',
         'fl.f1.h':      'Verbind de punten',
         'fl.f1.p':      'Trek een doorlopende lijn tussen elk paar gekleurde punten zonder andere lijnen te kruisen.',
         'fl.f2.h':      'Vul elke cel',
         'fl.f2.p':      'Een level is pas <em>hersteld</em> als het hele bord gevuld is — elk vakje telt.',
         'fl.f3.h':      'Perfecte oplossingen',
         'fl.f3.p':      'Los op in het bedoelde aantal zetten en verdien een Perfect-badge. Jaag op de all-perfect run.',
-        'fl.f4.h':      '90 handgemaakte levels',
+        'fl.f4.h':      '100 handgemaakte levels',
         'fl.f4.p':      'Van rustige opwarmers tot dichte grids die je planning testen. De moeilijkheid loopt op terwijl je speelt.',
         'fl.cta.small': 'Ontdek',
         'fl.cta.big':   'Circuit Trace game pagina',
@@ -2139,14 +2139,14 @@ const T = {
         'faq.qvg2':     'Wat ontgrendelt FreshGarant PRO?',
         'faq.avg2':     'PRO ontgrendelt AI-recepten afgestemd op je bijna-vervallen ingrediënten (via Gemini), familie-delen voor maximaal 6 leden zodat iedereen dezelfde koelkast in real time ziet, cloud back-up tussen apparaten, en handsfree kookmodus — een receptenlezer die zichzelf scrollt terwijl je handen onder het meel zitten.',
         'faq.q5':       'Wat is Circuit Trace?',
-        'faq.a5':       'Circuit Trace is een minimalistische logica-puzzelgame voor Android, binnenkort in Google Play. Verbind gekleurde punten door één pad per kleur te trekken, vul elke cel van het bord, herstel het circuit. 90 handgemaakte levels lopen op van rustige opwarmers tot dichte grids die je planning testen. Volledig offline, geen ads tijdens gameplay, gratis.',
+        'faq.a5':       'Circuit Trace is een minimalistische logica-puzzelgame voor Android, binnenkort in Google Play. Verbind gekleurde punten door één pad per kleur te trekken, vul elke cel van het bord, herstel het circuit. 100 handgemaakte levels lopen op van rustige opwarmers tot dichte grids die je planning testen. Volledig offline, geen ads tijdens gameplay, gratis.',
         'faq.qct1':     'Wanneer komt Circuit Trace uit?',
         'faq.act1':     'Circuit Trace zit nu in de closed beta op Google Play, een publieke launch staat binnenkort gepland. De exacte datum hangt af van de beta-feedback — beter goed uitgebracht dan gehaast. Volg Grounded Studio voor aankondigingen, of doe mee met de closed beta om al eerder toegang te krijgen.',
         'faq.qct2':     'Hoe kan ik meedoen aan de Circuit Trace beta?',
         'faq.act2':     'Stuur een mailtje naar contact@grounded-studio.app met als onderwerp "Circuit Trace beta" en zet daarin het Google-account e-mailadres dat je op je Android-telefoon gebruikt (dat heeft Play Store closed testing nodig). Je wordt binnen enkele dagen toegevoegd aan de testerslijst en krijgt een installatielink. Feedback tijdens het spelen is welkom, maar niet verplicht.',
         'ctp.badge':    '🚀 Closed beta',
         'ctp.title':    'Word betatester van Circuit Trace',
-        'ctp.desc':     'Een minimalistische logica-puzzel met 90 handgemaakte levels. Speel als een van de eersten en help de puntjes op de i te zetten voor de launch.',
+        'ctp.desc':     'Een minimalistische logica-puzzel met 100 handgemaakte levels. Speel als een van de eersten en help de puntjes op de i te zetten voor de launch.',
         'ctp.cta':      '📧 Email me om mee te doen',
         'ctp.hint':     'Je mailclient opent met een klaargezet bericht. Google-account email is nodig voor Play Store closed testing.',
         'ctp.later':    'Nee, dank je',
