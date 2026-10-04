@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trap berekenen — treden, optrede, aantrede en trapbomen | BuildExact</title>
+    <meta name="description" content="Hoeveel treden, hoe steil, hoe lang de trapbomen? Reken rechte, L-vormige of U-vormige trap uit met totale hoogte, optrede en aantrede. Inclusief stootborden, leuning en balusters. Gratis in BuildExact.">
+    <meta name="keywords" content="trap berekenen, optrede aantrede, trap calculator app, trapbomen lengte, aantal treden berekenen, stootborden berekenen, Blondel formule, BuildExact">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/calculators/trap.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/calculators/trap.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/calculators/trap.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/calculators/trap.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded-studio.app/calculators/trap.html">
+    <meta property="og:title" content="Trap berekenen — treden, optrede, aantrede en trapbomen">
+    <meta property="og:description" content="Complete uitleg plus rekenvoorbeeld. Reken een trap in BuildExact in onder de minuut uit.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx.png">
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"HowTo",
+        "name":"Trap berekenen met BuildExact",
+        "description":"Reken aantal treden, werkelijke optrede, totale traplengte, hellingshoek, trapbomen en balusters uit op basis van totale hoogte, gewenste optrede, aantrede en trapbreedte.",
+        "totalTime":"PT2M",
+        "step":[
+            {"@type":"HowToStep","name":"Open Trap calculator","text":"Open BuildExact en kies de Trap calculator onder Materialen."},
+            {"@type":"HowToStep","name":"Kies vorm","text":"Selecteer Rechte trap, L-vorm of U-vorm. L en U hebben een tussenbordes."},
+            {"@type":"HowToStep","name":"Vul afmetingen in","text":"Totale hoogte in cm (vloer tot vloer), gewenste optrede en aantrede, en trapbreedte."},
+            {"@type":"HowToStep","name":"Constructie","text":"Aantal trapbomen (meestal 2) en zet stootborden aan als die mee moeten in de telling."},
+            {"@type":"HowToStep","name":"Lees het resultaat","text":"BuildExact toont treden, werkelijke optrede, traplengte, hellingshoek, stootborden, trapbomen, leuning en balusters."}
+        ],
+        "author":{"@type":"Organization","name":"Grounded Studio","url":"https://grounded-studio.app"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://grounded-studio.app/"},
+            {"@type":"ListItem","position":2,"name":"BuildExact","item":"https://grounded-studio.app/buildexact.html"},
+            {"@type":"ListItem","position":3,"name":"Calculators","item":"https://grounded-studio.app/calculators.html"},
+            {"@type":"ListItem","position":4,"name":"Trap"}
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background:#0a0f1a; color:#f1f5f9; font-family:'Inter',system-ui,sans-serif; line-height:1.6; }
+        :root { --bx:#2563eb; --bx2:#1d4ed8; --gs:#818cf8; --gs-glow:rgba(129,140,248,.3); --border:rgba(255,255,255,.07); --muted:#94a3b8; }
+        .c { max-width:820px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-right { display:flex; align-items:center; gap:16px; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .nav-back:hover { color:#fff; }
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+
+        .article-header { padding:140px 0 50px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:22px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .breadcrumb a:hover { color:#94a3b8; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.9rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:16px; }
+        .lead { color:#cbd5e1; font-size:1.1rem; line-height:1.7; max-width:680px; }
+
+        .article-body { padding:30px 0 60px; }
+        .screenshots { margin:0 auto 44px; max-width:760px; padding:0 20px; }
+        .screenshots-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
+        .screenshots-grid.three { grid-template-columns:repeat(3, 1fr); }
+        .screenshot { aspect-ratio:9/19.5; border-radius:28px; overflow:hidden; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 50px rgba(0,0,0,.4); transition:transform .3s ease; }
+        .screenshot:hover { transform:translateY(-4px); }
+        .screenshot img { width:100%; height:100%; object-fit:cover; display:block; }
+        @media (max-width:640px) { .screenshots-grid, .screenshots-grid.three { grid-template-columns:1fr; max-width:300px; margin:0 auto; } }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 14px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body p { font-size:1.03rem; color:#cbd5e1; line-height:1.8; margin-bottom:22px; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:22px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.78; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:26px; margin:28px 0; }
+        .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+        .formula { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:8px; }
+        .formula-ex { font-size:.9rem; color:var(--muted); }
+
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:22px 26px; margin:28px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:8px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.7; margin:0; }
+
+        .table-wrap { overflow-x:auto; margin:24px 0; border-radius:14px; border:1px solid var(--border); }
+        table { width:100%; border-collapse:collapse; font-size:.92rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        td.n { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; color:#fff; }
+
+        .steps { counter-reset:step; padding:0 !important; }
+        .steps li { list-style:none; position:relative; padding-left:48px; margin-bottom:18px; counter-increment:step; }
+        .steps li::before { content:counter(step); position:absolute; left:0; top:-2px; width:32px; height:32px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.35); color:var(--bx); font-weight:800; font-size:.9rem; display:flex; align-items:center; justify-content:center; }
+
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:30px; margin:44px 0 10px; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:18px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+
+        .faq-wrap { margin:28px 0; display:flex; flex-direction:column; gap:10px; }
+        .faq-item { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+        .faq-item.open { border-color:rgba(37,99,235,.35); background:rgba(37,99,235,.04); }
+        .faq-q { width:100%; background:none; border:none; color:#f1f5f9; font-family:inherit; font-size:.98rem; font-weight:600; text-align:left; padding:18px 22px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+        .faq-icon { width:24px; height:24px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.3); color:var(--bx); display:flex; align-items:center; justify-content:center; font-size:.9rem; font-weight:700; flex-shrink:0; transition:transform .3s; }
+        .faq-item.open .faq-icon { transform:rotate(45deg); }
+        .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+        .faq-item.open .faq-a { max-height:420px; }
+        .faq-a-inner { padding:0 22px 18px; font-size:.95rem; color:#cbd5e1; line-height:1.7; }
+
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+
+        #progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#2563eb,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><div class="nav-right"><a href="../calculators.html" class="nav-back">← Calculators</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="../calculators.html">Calculators</a> / <span data-i18n="bc.current">Trap</span></div>
+            <div class="article-cat" data-i18n="cat">🪜 Interieur en afbouw</div>
+            <h1 data-i18n="h1">Trap berekenen — treden, optrede, aantrede en trapbomen</h1>
+            <p class="lead" data-i18n="lead">Hoeveel treden passen in een hoogte van 12,54 meter, hoe lang worden je trapbomen en hoeveel balusters heeft de leuning? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt — inclusief de Blondel-formule voor een comfortabele trap.</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="screenshots">
+            <div class="screenshots-grid">
+                <div class="screenshot"><img src="../assets/calculator-nl/trap-nl-1.png" alt="Trap calculator — Vorm en afmetingen" data-img-prefix="trap" data-img-num="1" loading="lazy"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/trap-nl-2.png" alt="Trap calculator — Resultaat" data-img-prefix="trap" data-img-num="2" loading="lazy"></div>
+            </div>
+        </div>
+        <div class="c">
+
+            <h2 data-i18n="h2.inputs">Wat vraagt de calculator</h2>
+            <p data-i18n="p.inputs">De Trap calculator heeft vier blokken: Vorm van de trap, Afmetingen, Constructie en Leuning en balusters. Elk veld hieronder komt één-op-één overeen met de app.</p>
+
+            <h3 data-i18n="h3.shape">Vorm van de trap</h3>
+            <ul>
+                <li data-i18n-html="in.straight"><strong>Rechte trap</strong> — één rechte lijn van onder naar boven. Simpelste berekening, meeste ruimte nodig.</li>
+                <li data-i18n-html="in.l"><strong>L-vorm</strong> — trap met één tussenbordes dat 90 graden draait. Compacter dan rechte trap.</li>
+                <li data-i18n-html="in.u"><strong>U-vorm</strong> — trap met twee tussenbordes die samen 180 graden draaien. Minste vloeroppervlak, duurste constructie.</li>
+            </ul>
+
+            <h3 data-i18n="h3.dims">Afmetingen</h3>
+            <ul>
+                <li data-i18n-html="in.height"><strong>Totale hoogte (cm)</strong> — van bovenkant benedenvloer tot bovenkant bovenvloer (dus inclusief de dikte van de verdiepingsvloer). Dit is wat de trap moet overbruggen.</li>
+                <li data-i18n-html="in.riser"><strong>Optrede (cm)</strong> — de verticale hoogte van één trede. Comfort: 17 tot 19 cm. Steiler: 19 tot 22 cm (zoldertrap).</li>
+                <li data-i18n-html="in.going"><strong>Aantrede (cm)</strong> — de horizontale diepte van één trede (waar je voet op komt). Comfort: 24 tot 27 cm. Minimum: 22 cm.</li>
+                <li data-i18n-html="in.width"><strong>Trapbreedte (cm)</strong> — breedte van de trap. Minimum huisbinnentrap 70 cm, comfort 90 cm, publieke trap minimaal 110 cm.</li>
+            </ul>
+
+            <h3 data-i18n="h3.const">Constructie</h3>
+            <ul>
+                <li data-i18n-html="in.stringers"><strong>Aantal trapbomen</strong> — meestal 2 (één aan elke kant). Brede trap kan 3 krijgen met een middenboom voor extra steun.</li>
+                <li data-i18n-html="in.riserb"><strong>Stootborden meeberekenen</strong> — zet aan als je dichte stootborden (verticale panelen tussen treden) wil. Zet uit voor een open trap zonder stootborden.</li>
+            </ul>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.blondel.h">💡 Blondel-formule voor comfort</h3>
+                <p data-i18n="tip.blondel.p">Een trap voelt pas comfortabel aan als 2 × optrede + aantrede uitkomt tussen 60 en 64 cm. Voor 17 cm optrede betekent dat aantrede 26 tot 30 cm — precies waar comfortzone zit. Zoldertrappen vallen vaak buiten die range omdat ze steiler mogen volgens het Bouwbesluit, maar lopen minder prettig.</p>
+            </div>
+
+            <h2 data-i18n="h2.formula">De formule onder de motorkap</h2>
+            <p data-i18n="p.formula">Je gewenste optrede is een <em>richtwaarde</em> — de app rondt het aantal treden naar boven af en herberekent de werkelijke optrede. Zo kom je altijd exact op je totale hoogte uit, want je kunt geen halve trede bouwen.</p>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.tlabel">Aantal treden</div>
+                <div class="formula" data-i18n="f.tmain">Treden = ceil(Totale hoogte / Gewenste optrede)</div>
+                <div class="formula-ex" data-i18n="f.tex">Voorbeeld: ceil(1254 / 17) = ceil(73,76) = 74 treden</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.olabel">Werkelijke optrede</div>
+                <div class="formula" data-i18n="f.omain">Optrede werkelijk = Totale hoogte / Aantal treden</div>
+                <div class="formula-ex" data-i18n="f.oex">Voorbeeld: 1254 / 74 = 16,95 → 16,9 cm</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.slabel">Trapbomen (lengte) en helling</div>
+                <div class="formula" data-i18n="f.smain">Trapboom = √(Hoogte² + Traplengte²) · Hoek = arctan(Hoogte / Traplengte)</div>
+                <div class="formula-ex" data-i18n="f.sex">Voorbeeld: √(1254² + 1924²) = 2297 cm = 22,97 m · arctan(1254 / 1924) ≈ 33,1°</div>
+            </div>
+
+            <h2 data-i18n="h2.example">Rekenvoorbeeld — rechte trap 12,54 m hoog</h2>
+            <p data-i18n="p.example">Dit is de situatie uit de screenshot (buitengewoon hoog om het effect te laten zien): rechte trap van 12,54 m hoog, gewenste optrede 17 cm, aantrede 26 cm, trapbreedte 90 cm, 2 trapbomen, stootborden mee.</p>
+
+            <h3 data-i18n="h3.inex">Invoer</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.field">Veld</th><th data-i18n="t.value">Waarde</th></tr>
+                    <tr><td data-i18n="r.shape">Vorm</td><td class="n" data-i18n="r.straight">Rechte trap</td></tr>
+                    <tr><td data-i18n="r.height">Totale hoogte</td><td class="n">1254 cm</td></tr>
+                    <tr><td data-i18n="r.riser">Gewenste optrede</td><td class="n">17 cm</td></tr>
+                    <tr><td data-i18n="r.going">Aantrede</td><td class="n">26 cm</td></tr>
+                    <tr><td data-i18n="r.width">Trapbreedte</td><td class="n">90 cm</td></tr>
+                    <tr><td data-i18n="r.stringers">Aantal trapbomen</td><td class="n">2</td></tr>
+                    <tr><td data-i18n="r.riserb">Stootborden mee</td><td class="n" data-i18n="r.yes">Ja</td></tr>
+                </table>
+            </div>
+
+            <h3 data-i18n="h3.calc">Berekening stap voor stap</h3>
+            <ol>
+                <li data-i18n="c.1">Aantal treden: ceil(1254 ÷ 17) = ceil(73,76) = 74 treden</li>
+                <li data-i18n="c.2">Werkelijke optrede: 1254 ÷ 74 = 16,95 → 16,9 cm</li>
+                <li data-i18n="c.3">Totale traplengte: 74 treden × 26 cm aantrede = 1924 cm</li>
+                <li data-i18n="c.4">Hellingshoek: arctan(1254 ÷ 1924) = arctan(0,652) ≈ 33,1°</li>
+                <li data-i18n="c.5">Trapbomen: √(1254² + 1924²) = √5 274 292 ≈ 2297 cm = 22,97 m per boom</li>
+                <li data-i18n="c.6">Balusters (leuning): 2297 cm ÷ 12 cm hart-op-hart ≈ 193 balusters</li>
+            </ol>
+
+            <h3 data-i18n="h3.outex">Resultaat</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.item">Onderdeel</th><th data-i18n="t.amount">Waarde</th></tr>
+                    <tr><td data-i18n="o.steps">Treden</td><td class="n">74</td></tr>
+                    <tr><td data-i18n="o.riser">Werkelijke optrede</td><td class="n">16,9 cm</td></tr>
+                    <tr><td data-i18n="o.len">Totale traplengte</td><td class="n">1924 cm</td></tr>
+                    <tr><td data-i18n="o.ang">Hellingshoek</td><td class="n">33,1°</td></tr>
+                    <tr><td data-i18n="o.rb">Stootborden</td><td class="n">74</td></tr>
+                    <tr><td data-i18n="o.str">Trapbomen</td><td class="n">2 × 22,97 m</td></tr>
+                    <tr><td data-i18n="o.rail">Leuning</td><td class="n">22,97 m</td></tr>
+                    <tr><td data-i18n="o.bal">Balusters</td><td class="n">193</td></tr>
+                </table>
+            </div>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.height.h">⚠️ Vergeet de verdiepingsvloer niet</h3>
+                <p data-i18n="tip.height.p">Veel bouwers meten alleen de ruimte tussen de twee vloeren en vergeten de dikte van de verdiepingsvloer zelf. Een normaal betonnen vloer is 22 tot 30 cm dik, een houten vloer 20 cm met laminaat. Een trap van 254 cm hoog eindigt midden in je verdiepingsvloer als je de vloerdikte niet meerekent.</p>
+            </div>
+
+            <h2 data-i18n="h2.compare">Comfortzones in Nederland</h2>
+            <p data-i18n="p.compare">Het Bouwbesluit stelt minimumeisen; de praktijk kent comfortzones. Voor een nieuwbouwwoning (B categorie) gelden deze waarden:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.type">Type trap</th><th data-i18n="t.riserc">Optrede</th><th data-i18n="t.goingc">Aantrede</th><th data-i18n="t.anglec">Hoek</th></tr>
+                    <tr><td data-i18n="st.comf">Comfortabele binnentrap</td><td class="n">17 – 18 cm</td><td class="n">26 – 29 cm</td><td class="n">30 – 35°</td></tr>
+                    <tr><td data-i18n="st.std">Standaard binnentrap</td><td class="n">18 – 20 cm</td><td class="n">22 – 26 cm</td><td class="n">35 – 42°</td></tr>
+                    <tr><td data-i18n="st.attic">Zoldertrap</td><td class="n">20 – 22 cm</td><td class="n">18 – 22 cm</td><td class="n">42 – 50°</td></tr>
+                    <tr><td data-i18n="st.max">Max binnen Bouwbesluit</td><td class="n">22 cm</td><td class="n">22 cm</td><td class="n">45°</td></tr>
+                </table>
+            </div>
+
+            <p data-i18n="p.compare.note">Voor publieke trappen (kantoor, winkel) gelden strengere eisen: optrede max 18,8 cm en aantrede min 22,5 cm. Trappen in woningen boven de derde verdieping worden ook strenger behandeld in verband met vluchtroutes.</p>
+
+            <h2 data-i18n="h2.steps">Zo doe je dit in BuildExact</h2>
+            <ol class="steps">
+                <li data-i18n-html="s.1"><strong>Open de Trap calculator</strong> onder Materialen. Kies vorm (Rechte trap, L-vorm, U-vorm).</li>
+                <li data-i18n-html="s.2"><strong>Meet totale hoogte</strong> van benedenvloer tot bovenvloer (plus vloerdikte). Vul in in cm.</li>
+                <li data-i18n-html="s.3"><strong>Zet gewenste optrede en aantrede</strong> — 17 en 26 is comfortabel. De calculator rondt het aantal treden af en toont de werkelijke optrede.</li>
+                <li data-i18n-html="s.4"><strong>Trapbreedte en trapbomen</strong>: breedte min 70 cm, meestal 2 trapbomen. Zet stootborden aan voor een dichte trap.</li>
+                <li data-i18n-html="s.5"><strong>Leuning en balusters</strong> worden automatisch berekend. Bewaar als project of deel vanuit de resultaatkaart.</li>
+            </ol>
+
+            <h2 data-i18n="h2.faq">Veelgestelde vragen</h2>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.1">Waarom wordt mijn gewenste optrede afgerond?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.1">Omdat je geen halve trede kunt bouwen. Je totale hoogte moet precies kloppen, dus de app bepaalt eerst het aantal treden (naar boven afgerond) en herberekent dan de werkelijke optrede. Bij 1254 cm en gewenste 17 cm krijg je 74 treden van 16,9 cm elk — net iets lager dan gevraagd maar precies passend.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.2">Wat is de Blondel-formule?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.2">Een vuistregel uit de 17e eeuw voor comfortabel traplopen: 2 × optrede + aantrede moet uitkomen tussen 60 en 64 cm. Komt uit het idee dat je stap bij lopen en opstappen ongeveer gelijk aan je passlengte moet zijn. Voor 17 cm optrede: 2×17+26 = 60, net binnen comfort. Boven de 65 of onder de 60 loopt het ongemakkelijk.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.3">Hoe lang wordt mijn trapboom?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.3">De schuine zijde van een rechthoekige driehoek met totale hoogte en totale traplengte als rechte zijden. Stelling van Pythagoras: √(hoogte² + lengte²). Reken daar bij een echte constructie altijd 10 tot 20 cm extra bovenop voor afwerking aan onder- en bovenkant.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.4">Hoeveel balusters moet ik rekenen?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.4">Hart-op-hart max 12 cm volgens Bouwbesluit (anders kan een kinderhoofd ertussen). BuildExact rekent met 12 cm, dus deel je leuninglengte door 12. Voor een leuning van 22,97 m: 2297 ÷ 12 ≈ 192 balusters, plus 1 extra = 193. Wil je het strakker (10 cm hart-op-hart) voor een moderne look, pas de aantal zelf aan.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.5">Reken ik L-vorm en U-vorm anders?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.5">Qua treden en optrede: nee, de hoogte bepaalt dat. Qua traplengte wel — bij L-vorm en U-vorm komt er een tussenbordes van minimaal de trapbreedte in. BuildExact rekent dat tussenbordes mee in de totale lengte en trekt het af van het aantal treden dat aan weerszijden valt. Het eindresultaat is minder vloeroppervlak nodig, maar wel een iets duurdere constructie.</div></div>
+                </div>
+            </div>
+
+            <div class="app-cta">
+                <h3 data-i18n="cta.h">🪜 Reken je trap in BuildExact</h3>
+                <p data-i18n="cta.p">Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    <span data-i18n="cta.btn">Gratis downloaden</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="c-wide">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="../calculators.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Calculators</a>
+                <a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="../blog/buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
+                <a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a>
+                <a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
+                <a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
+            </div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item .faq-q').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open'));
+});
+var rp=document.getElementById('progress');
+window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});
+
+const T = {
+    nl: {
+        'bc.current':'Trap','cat':'🪜 Interieur en afbouw',
+        'h1':'Trap berekenen — treden, optrede, aantrede en trapbomen',
+        'lead':'Hoeveel treden passen in een hoogte van 12,54 meter, hoe lang worden je trapbomen en hoeveel balusters heeft de leuning? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt — inclusief de Blondel-formule voor een comfortabele trap.',
+        'h2.inputs':'Wat vraagt de calculator','p.inputs':'De Trap calculator heeft vier blokken: Vorm van de trap, Afmetingen, Constructie en Leuning en balusters. Elk veld hieronder komt één-op-één overeen met de app.',
+        'h3.shape':'Vorm van de trap',
+        'in.straight':'<strong>Rechte trap</strong> — één rechte lijn van onder naar boven. Simpelste berekening, meeste ruimte nodig.',
+        'in.l':'<strong>L-vorm</strong> — trap met één tussenbordes dat 90 graden draait. Compacter dan rechte trap.',
+        'in.u':'<strong>U-vorm</strong> — trap met twee tussenbordes die samen 180 graden draaien. Minste vloeroppervlak, duurste constructie.',
+        'h3.dims':'Afmetingen',
+        'in.height':'<strong>Totale hoogte (cm)</strong> — van bovenkant benedenvloer tot bovenkant bovenvloer (dus inclusief de dikte van de verdiepingsvloer). Dit is wat de trap moet overbruggen.',
+        'in.riser':'<strong>Optrede (cm)</strong> — de verticale hoogte van één trede. Comfort: 17 tot 19 cm. Steiler: 19 tot 22 cm (zoldertrap).',
+        'in.going':'<strong>Aantrede (cm)</strong> — de horizontale diepte van één trede (waar je voet op komt). Comfort: 24 tot 27 cm. Minimum: 22 cm.',
+        'in.width':'<strong>Trapbreedte (cm)</strong> — breedte van de trap. Minimum huisbinnentrap 70 cm, comfort 90 cm, publieke trap minimaal 110 cm.',
+        'h3.const':'Constructie',
+        'in.stringers':'<strong>Aantal trapbomen</strong> — meestal 2 (één aan elke kant). Brede trap kan 3 krijgen met een middenboom voor extra steun.',
+        'in.riserb':'<strong>Stootborden meeberekenen</strong> — zet aan als je dichte stootborden (verticale panelen tussen treden) wil. Zet uit voor een open trap zonder stootborden.',
+        'tip.blondel.h':'💡 Blondel-formule voor comfort','tip.blondel.p':'Een trap voelt pas comfortabel aan als 2 × optrede + aantrede uitkomt tussen 60 en 64 cm. Voor 17 cm optrede betekent dat aantrede 26 tot 30 cm — precies waar comfortzone zit. Zoldertrappen vallen vaak buiten die range omdat ze steiler mogen volgens het Bouwbesluit, maar lopen minder prettig.',
+        'h2.formula':'De formule onder de motorkap','p.formula':'Je gewenste optrede is een <em>richtwaarde</em> — de app rondt het aantal treden naar boven af en herberekent de werkelijke optrede. Zo kom je altijd exact op je totale hoogte uit, want je kunt geen halve trede bouwen.',
+        'f.tlabel':'Aantal treden','f.tmain':'Treden = ceil(Totale hoogte / Gewenste optrede)','f.tex':'Voorbeeld: ceil(1254 / 17) = ceil(73,76) = 74 treden',
+        'f.olabel':'Werkelijke optrede','f.omain':'Optrede werkelijk = Totale hoogte / Aantal treden','f.oex':'Voorbeeld: 1254 / 74 = 16,95 → 16,9 cm',
+        'f.slabel':'Trapbomen (lengte) en helling','f.smain':'Trapboom = √(Hoogte² + Traplengte²) · Hoek = arctan(Hoogte / Traplengte)','f.sex':'Voorbeeld: √(1254² + 1924²) = 2297 cm = 22,97 m · arctan(1254 / 1924) ≈ 33,1°',
+        'h2.example':'Rekenvoorbeeld — rechte trap 12,54 m hoog','p.example':'Dit is de situatie uit de screenshot (buitengewoon hoog om het effect te laten zien): rechte trap van 12,54 m hoog, gewenste optrede 17 cm, aantrede 26 cm, trapbreedte 90 cm, 2 trapbomen, stootborden mee.',
+        'h3.inex':'Invoer','t.field':'Veld','t.value':'Waarde',
+        'r.shape':'Vorm','r.straight':'Rechte trap','r.height':'Totale hoogte','r.riser':'Gewenste optrede','r.going':'Aantrede','r.width':'Trapbreedte','r.stringers':'Aantal trapbomen','r.riserb':'Stootborden mee','r.yes':'Ja',
+        'h3.calc':'Berekening stap voor stap',
+        'c.1':'Aantal treden: ceil(1254 ÷ 17) = ceil(73,76) = 74 treden',
+        'c.2':'Werkelijke optrede: 1254 ÷ 74 = 16,95 → 16,9 cm',
+        'c.3':'Totale traplengte: 74 treden × 26 cm aantrede = 1924 cm',
+        'c.4':'Hellingshoek: arctan(1254 ÷ 1924) = arctan(0,652) ≈ 33,1°',
+        'c.5':'Trapbomen: √(1254² + 1924²) = √5 274 292 ≈ 2297 cm = 22,97 m per boom',
+        'c.6':'Balusters (leuning): 2297 cm ÷ 12 cm hart-op-hart ≈ 193 balusters',
+        'h3.outex':'Resultaat','t.item':'Onderdeel','t.amount':'Waarde',
+        'o.steps':'Treden','o.riser':'Werkelijke optrede','o.len':'Totale traplengte','o.ang':'Hellingshoek','o.rb':'Stootborden','o.str':'Trapbomen','o.rail':'Leuning','o.bal':'Balusters',
+        'tip.height.h':'⚠️ Vergeet de verdiepingsvloer niet','tip.height.p':'Veel bouwers meten alleen de ruimte tussen de twee vloeren en vergeten de dikte van de verdiepingsvloer zelf. Een normaal betonnen vloer is 22 tot 30 cm dik, een houten vloer 20 cm met laminaat. Een trap van 254 cm hoog eindigt midden in je verdiepingsvloer als je de vloerdikte niet meerekent.',
+        'h2.compare':'Comfortzones in Nederland','p.compare':'Het Bouwbesluit stelt minimumeisen; de praktijk kent comfortzones. Voor een nieuwbouwwoning (B categorie) gelden deze waarden:',
+        't.type':'Type trap','t.riserc':'Optrede','t.goingc':'Aantrede','t.anglec':'Hoek',
+        'st.comf':'Comfortabele binnentrap','st.std':'Standaard binnentrap','st.attic':'Zoldertrap','st.max':'Max binnen Bouwbesluit',
+        'p.compare.note':'Voor publieke trappen (kantoor, winkel) gelden strengere eisen: optrede max 18,8 cm en aantrede min 22,5 cm. Trappen in woningen boven de derde verdieping worden ook strenger behandeld in verband met vluchtroutes.',
+        'h2.steps':'Zo doe je dit in BuildExact',
+        's.1':'<strong>Open de Trap calculator</strong> onder Materialen. Kies vorm (Rechte trap, L-vorm, U-vorm).',
+        's.2':'<strong>Meet totale hoogte</strong> van benedenvloer tot bovenvloer (plus vloerdikte). Vul in in cm.',
+        's.3':'<strong>Zet gewenste optrede en aantrede</strong> — 17 en 26 is comfortabel. De calculator rondt het aantal treden af en toont de werkelijke optrede.',
+        's.4':'<strong>Trapbreedte en trapbomen</strong>: breedte min 70 cm, meestal 2 trapbomen. Zet stootborden aan voor een dichte trap.',
+        's.5':'<strong>Leuning en balusters</strong> worden automatisch berekend. Bewaar als project of deel vanuit de resultaatkaart.',
+        'h2.faq':'Veelgestelde vragen',
+        'q.1':'Waarom wordt mijn gewenste optrede afgerond?','a.1':'Omdat je geen halve trede kunt bouwen. Je totale hoogte moet precies kloppen, dus de app bepaalt eerst het aantal treden (naar boven afgerond) en herberekent dan de werkelijke optrede. Bij 1254 cm en gewenste 17 cm krijg je 74 treden van 16,9 cm elk — net iets lager dan gevraagd maar precies passend.',
+        'q.2':'Wat is de Blondel-formule?','a.2':'Een vuistregel uit de 17e eeuw voor comfortabel traplopen: 2 × optrede + aantrede moet uitkomen tussen 60 en 64 cm. Komt uit het idee dat je stap bij lopen en opstappen ongeveer gelijk aan je passlengte moet zijn. Voor 17 cm optrede: 2×17+26 = 60, net binnen comfort. Boven de 65 of onder de 60 loopt het ongemakkelijk.',
+        'q.3':'Hoe lang wordt mijn trapboom?','a.3':'De schuine zijde van een rechthoekige driehoek met totale hoogte en totale traplengte als rechte zijden. Stelling van Pythagoras: √(hoogte² + lengte²). Reken daar bij een echte constructie altijd 10 tot 20 cm extra bovenop voor afwerking aan onder- en bovenkant.',
+        'q.4':'Hoeveel balusters moet ik rekenen?','a.4':'Hart-op-hart max 12 cm volgens Bouwbesluit (anders kan een kinderhoofd ertussen). BuildExact rekent met 12 cm, dus deel je leuninglengte door 12. Voor een leuning van 22,97 m: 2297 ÷ 12 ≈ 192 balusters, plus 1 extra = 193. Wil je het strakker (10 cm hart-op-hart) voor een moderne look, pas de aantal zelf aan.',
+        'q.5':'Reken ik L-vorm en U-vorm anders?','a.5':'Qua treden en optrede: nee, de hoogte bepaalt dat. Qua traplengte wel — bij L-vorm en U-vorm komt er een tussenbordes van minimaal de trapbreedte in. BuildExact rekent dat tussenbordes mee in de totale lengte en trekt het af van het aantal treden dat aan weerszijden valt. Het eindresultaat is minder vloeroppervlak nodig, maar wel een iets duurdere constructie.',
+        'cta.h':'🪜 Reken je trap in BuildExact','cta.p':'Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.','cta.btn':'Gratis downloaden',
+    },
+    en: {
+        'bc.current':'Stairs','cat':'🪜 Interior and finishing',
+        'h1':'Stairs calculator — steps, riser, going and stringers',
+        'lead':'How many steps fit in 12.54 metres of height, how long do the stringers need to be and how many balusters does the handrail take? This page explains every input and shows a real worked example with the exact BuildExact output — including the Blondel formula for a comfortable stair.',
+        'h2.inputs':'What the calculator asks','p.inputs':'The Stairs calculator has four blocks: Stair shape, Dimensions, Construction and Handrail and balusters. Every field below maps one-to-one to the app.',
+        'h3.shape':'Stair shape',
+        'in.straight':'<strong>Straight stair</strong> — one straight run from bottom to top. Simplest calculation, most floor space needed.',
+        'in.l':'<strong>L-shape</strong> — stair with one landing turning 90 degrees. More compact than a straight stair.',
+        'in.u':'<strong>U-shape</strong> — stair with two landings turning 180 degrees total. Least floor space, most expensive construction.',
+        'h3.dims':'Dimensions',
+        'in.height':'<strong>Total height (cm)</strong> — from top of lower floor to top of upper floor (so including the thickness of the upper floor itself). This is what the stair has to bridge.',
+        'in.riser':'<strong>Riser (cm)</strong> — the vertical height of one step. Comfort: 17 to 19 cm. Steeper: 19 to 22 cm (attic stair).',
+        'in.going':'<strong>Going (cm)</strong> — the horizontal depth of one step (where your foot lands). Comfort: 24 to 27 cm. Minimum: 22 cm.',
+        'in.width':'<strong>Stair width (cm)</strong> — width of the stair. Minimum domestic 70 cm, comfort 90 cm, public stair minimum 110 cm.',
+        'h3.const':'Construction',
+        'in.stringers':'<strong>Number of stringers</strong> — usually 2 (one each side). A wide stair can get 3 with a centre stringer for extra support.',
+        'in.riserb':'<strong>Include risers</strong> — turn on if you want closed risers (vertical panels between treads). Turn off for an open stair without risers.',
+        'tip.blondel.h':'💡 Blondel formula for comfort','tip.blondel.p':"A stair only feels comfortable when 2 × riser + going lands between 60 and 64 cm. For a 17 cm riser that means a going of 26 to 30 cm — right in the comfort zone. Attic stairs often fall outside that range because they're allowed to be steeper by the Dutch Bouwbesluit, but they're less pleasant to walk.",
+        'h2.formula':'The formula under the hood','p.formula':"Your desired riser is a <em>target</em> — the app rounds the number of steps up and recalculates the actual riser. That way the total height always matches exactly, because you can't build half a step.",
+        'f.tlabel':'Number of steps','f.tmain':'Steps = ceil(Total height / Desired riser)','f.tex':'Example: ceil(1254 / 17) = ceil(73.76) = 74 steps',
+        'f.olabel':'Actual riser','f.omain':'Riser actual = Total height / Number of steps','f.oex':'Example: 1254 / 74 = 16.95 → 16.9 cm',
+        'f.slabel':'Stringer length and pitch','f.smain':'Stringer = √(Height² + Length²) · Angle = arctan(Height / Length)','f.sex':'Example: √(1254² + 1924²) = 2297 cm = 22.97 m · arctan(1254 / 1924) ≈ 33.1°',
+        'h2.example':'Worked example — straight stair 12.54 m high','p.example':'This is the situation from the screenshot (exaggerated height to show the effect): straight stair 12.54 m high, desired riser 17 cm, going 26 cm, stair width 90 cm, 2 stringers, risers included.',
+        'h3.inex':'Input','t.field':'Field','t.value':'Value',
+        'r.shape':'Shape','r.straight':'Straight stair','r.height':'Total height','r.riser':'Desired riser','r.going':'Going','r.width':'Stair width','r.stringers':'Number of stringers','r.riserb':'Risers included','r.yes':'Yes',
+        'h3.calc':'Calculation step by step',
+        'c.1':'Number of steps: ceil(1254 ÷ 17) = ceil(73.76) = 74 steps',
+        'c.2':'Actual riser: 1254 ÷ 74 = 16.95 → 16.9 cm',
+        'c.3':'Total stair length: 74 steps × 26 cm going = 1924 cm',
+        'c.4':'Pitch angle: arctan(1254 ÷ 1924) = arctan(0.652) ≈ 33.1°',
+        'c.5':'Stringers: √(1254² + 1924²) = √5,274,292 ≈ 2297 cm = 22.97 m per stringer',
+        'c.6':'Balusters (handrail): 2297 cm ÷ 12 cm centres ≈ 193 balusters',
+        'h3.outex':'Result','t.item':'Item','t.amount':'Value',
+        'o.steps':'Steps','o.riser':'Actual riser','o.len':'Total stair length','o.ang':'Pitch angle','o.rb':'Risers','o.str':'Stringers','o.rail':'Handrail','o.bal':'Balusters',
+        'tip.height.h':"⚠️ Don't forget the upper floor",'tip.height.p':'Many builders only measure the clear height between floors and forget the thickness of the upper floor itself. A standard concrete floor is 22 to 30 cm thick, a timber floor 20 cm with laminate. A 254 cm high stair ends inside your upper floor if you forget the floor thickness.',
+        'h2.compare':'Dutch comfort zones','p.compare':'The Dutch Bouwbesluit sets minimum requirements; practice has comfort zones. For a new-build dwelling (category B) these values apply:',
+        't.type':'Stair type','t.riserc':'Riser','t.goingc':'Going','t.anglec':'Angle',
+        'st.comf':'Comfortable domestic stair','st.std':'Standard domestic stair','st.attic':'Attic stair','st.max':'Max under Bouwbesluit',
+        'p.compare.note':'For public stairs (office, retail) stricter requirements apply: riser max 18.8 cm and going min 22.5 cm. Stairs in dwellings above the third floor also fall under stricter rules for escape routes.',
+        'h2.steps':'How to do this in BuildExact',
+        's.1':'<strong>Open the Stairs calculator</strong> under Materials. Pick shape (Straight, L-shape, U-shape).',
+        's.2':'<strong>Measure total height</strong> from lower floor to upper floor (including floor thickness). Enter in cm.',
+        's.3':'<strong>Set desired riser and going</strong> — 17 and 26 is comfortable. The calculator rounds the number of steps and shows the actual riser.',
+        's.4':'<strong>Stair width and stringers</strong>: width min 70 cm, usually 2 stringers. Enable risers for a closed stair.',
+        's.5':'<strong>Handrail and balusters</strong> are calculated automatically. Save as a project or share from the result card.',
+        'h2.faq':'Frequently asked questions',
+        'q.1':'Why is my desired riser rounded?','a.1':"Because you can't build half a step. Your total height has to match exactly, so the app determines the number of steps (rounded up) first and then recalculates the actual riser. For 1254 cm with a 17 cm target you get 74 steps of 16.9 cm — slightly lower than requested but fitting exactly.",
+        'q.2':'What is the Blondel formula?','a.2':'A 17th century rule of thumb for comfortable stair climbing: 2 × riser + going should land between 60 and 64 cm. Comes from the idea that your stride on the flat and on the stair should match your natural step length. For a 17 cm riser: 2×17+26 = 60, right at the edge of comfort. Above 65 or below 60 feels awkward.',
+        'q.3':'How long does my stringer need to be?','a.3':'The hypotenuse of a right triangle with total height and total stair length as the straight sides. Pythagoras: √(height² + length²). Always add 10 to 20 cm extra on a real build for connection details at top and bottom.',
+        'q.4':'How many balusters should I count?','a.4':"Centres max 12 cm according to the Bouwbesluit (otherwise a child's head could fit through). BuildExact calculates at 12 cm, so divide your handrail length by 12. For a 22.97 m handrail: 2297 ÷ 12 ≈ 192 balusters, plus 1 extra = 193. Want tighter (10 cm centres) for a modern look? Override the count manually.",
+        'q.5':'Do I calculate L-shape and U-shape differently?','a.5':"Steps and riser: no, total height determines those. Stair length: yes — L- and U-shapes include at least one landing the size of the stair width. BuildExact rolls that landing into the total length and subtracts it from the steps on each side. End result: less floor space but slightly more expensive construction.",
+        'cta.h':'🪜 Calculate your stairs in BuildExact','cta.p':'Free in the app. Calculate, save as a project, convert to a branded PDF quote — all without retyping.','cta.btn':'Download free',
+    }
+};
+const savedLang = localStorage.getItem('gs-lang');
+const browserIsNL = (navigator.language || '').toLowerCase().startsWith('nl');
+let lang = savedLang || (browserIsNL ? 'nl' : 'en');
+function applyLang(l) {
+    const d = T[l]; document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
+    document.querySelectorAll('[data-img-prefix]').forEach(img => { img.src = `../assets/calculator-${l}/${img.dataset.imgPrefix}-${l}-${img.dataset.imgNum}.png`; });
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    lang = l; localStorage.setItem('gs-lang', l);
+}
+applyLang(lang);
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+</script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

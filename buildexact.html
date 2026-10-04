@@ -230,6 +230,10 @@
         .btn-primary:hover::after { left:140%; }
         .btn-ghost { display:inline-flex; align-items:center; gap:10px; padding:14px 30px; border-radius:14px; background:rgba(255,255,255,.05); border:1px solid var(--border); color:#94a3b8; font-weight:600; font-size:.95rem; text-decoration:none; transition:all .3s; }
         .btn-ghost:hover { background:rgba(255,255,255,.09); color:#fff; transform:translateY(-2px); }
+        .btn-ghost.btn-ghost-primary { background:rgba(37,99,235,.12); border-color:rgba(37,99,235,.4); color:var(--bx); }
+        .btn-ghost.btn-ghost-primary:hover { background:rgba(37,99,235,.22); color:#dbeafe; box-shadow:0 10px 30px rgba(37,99,235,.2); }
+        .btn-ghost.btn-ghost-sm { padding:10px 20px; font-size:.85rem; opacity:.75; }
+        .btn-ghost.btn-ghost-sm:hover { opacity:1; }
         .play-svg { width:26px; height:26px; }
         .btn-text small { display:block; font-size:.65rem; opacity:.6; }
         .btn-text span { display:block; font-size:.95rem; font-weight:700; }
@@ -238,6 +242,9 @@
         .trust-strip { padding:24px 0 0; }
         .trust-inner { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; max-width:900px; margin:0 auto; padding:0 28px; }
         .trust-badge { display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:100px; background:rgba(255,255,255,.03); border:1px solid var(--border); color:#94a3b8; font-size:.78rem; font-weight:600; transition:all .2s; }
+        a.trust-badge.trust-badge-cta { background:rgba(37,99,235,.12); border-color:rgba(37,99,235,.45); color:var(--bx); text-decoration:none; font-size:.82rem; padding:9px 18px; }
+        a.trust-badge.trust-badge-cta:hover { background:rgba(37,99,235,.22); transform:translateY(-1px); box-shadow:0 6px 20px rgba(37,99,235,.2); }
+        a.trust-badge.trust-badge-cta strong { color:#dbeafe; font-weight:800; }
         .trust-badge:hover { background:rgba(37,99,235,.06); border-color:rgba(37,99,235,.25); color:#cbd5e1; transform:translateY(-1px); }
         .trust-badge .ico { font-size:.9rem; }
 
@@ -384,6 +391,21 @@
         .blog-crosslink-cta a { display:inline-flex; align-items:center; gap:8px; color:var(--bx); text-decoration:none; font-size:.9rem; font-weight:600; border:1px solid rgba(37,99,235,.3); padding:10px 22px; border-radius:10px; background:rgba(37,99,235,.08); transition:all .2s; }
         .blog-crosslink-cta a:hover { background:rgba(37,99,235,.16); transform:translateY(-2px); }
 
+        /* CALCULATORS SECTION */
+        .calcs-section { padding:100px 0; border-top:1px solid var(--border); position:relative; }
+        .calcs-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 50% 40% at 50% 20%, rgba(37,99,235,.06) 0%, transparent 70%); }
+        .calcs-section .c { position:relative; z-index:1; }
+        .calcs-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:14px; margin-top:44px; }
+        .calc-chip { display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:14px; background:rgba(255,255,255,.03); border:1px solid var(--border); text-decoration:none; color:inherit; transition:all .25s cubic-bezier(.16,1,.3,1); }
+        .calc-chip:hover { background:rgba(37,99,235,.06); border-color:rgba(37,99,235,.3); transform:translateY(-2px); box-shadow:0 10px 24px rgba(37,99,235,.1); }
+        .calc-chip .ico { width:38px; height:38px; border-radius:10px; background:rgba(37,99,235,.1); border:1px solid rgba(37,99,235,.2); display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; transition:transform .25s; }
+        .calc-chip:hover .ico { transform:scale(1.08); }
+        .calc-chip .name { font-weight:700; font-size:.95rem; color:#f1f5f9; line-height:1.2; }
+        .calc-chip .sub { font-size:.72rem; color:var(--muted); margin-top:3px; }
+        .calcs-cta { text-align:center; margin-top:40px; }
+        .calcs-cta a { display:inline-flex; align-items:center; gap:10px; padding:14px 32px; border-radius:14px; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.95rem; transition:all .25s; }
+        .calcs-cta a:hover { background:rgba(37,99,235,.24); transform:translateY(-2px); box-shadow:0 12px 32px rgba(37,99,235,.18); }
+
         /* ABOUT MINI */
         .about-mini { padding:80px 0; border-top:1px solid var(--border); text-align:center; }
         .about-mini p { color:var(--muted); font-size:.95rem; max-width:480px; margin:12px auto 28px; line-height:1.75; }
@@ -424,6 +446,18 @@
                     <li><a href="freshgarant.html" data-i18n="nav.freshgarant">FreshGarant</a></li>
                     <li><a href="buildexact.html" class="active" data-i18n="nav.buildexact">BuildExact</a></li>
                     <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.calcs">🧮 Calculators</span><span class="arrow">▾</span></button>
+                        <div class="nav-dropdown-menu">
+                            <a href="calculators/schutting.html">🪵 <span data-i18n="calcs.sch">Schutting</span></a>
+                            <a href="calculators/tegels.html">🟫 <span data-i18n="calcs.teg">Tegels</span></a>
+                            <a href="calculators/verf.html">🎨 <span data-i18n="calcs.verf">Verf</span></a>
+                            <a href="calculators/beton.html">🏗️ <span data-i18n="calcs.bet">Beton</span></a>
+                            <a href="calculators/dak.html">🏠 <span data-i18n="calcs.dak">Dak</span></a>
+                            <a href="calculators/isolatie.html">🧊 <span data-i18n="calcs.iso">Isolatie</span></a>
+                            <a href="calculators.html" style="border-top:1px solid var(--border); margin-top:4px; padding-top:12px; color:var(--bx); font-weight:700" data-i18n="nav.calcsall">🧮 All 11 calculators →</a>
+                        </div>
+                    </li>
+                    <li class="nav-dropdown">
                         <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.blog">Blog</span><span class="arrow">▾</span></button>
                         <div class="nav-dropdown-menu">
                             <a href="blog/freshgarant.html">🌿 <span data-i18n="nav.fgblog">FreshGarant Blog</span></a>
@@ -450,6 +484,7 @@
     <ul class="mobile-menu-links">
         <li><a href="freshgarant.html" class="mobile-nav-link">🌿 <span data-i18n="nav.freshgarant">FreshGarant</span></a></li>
         <li><a href="buildexact.html" class="mobile-nav-link">🏗️ <span data-i18n="nav.buildexact">BuildExact</span></a></li>
+        <li><a href="calculators.html" class="mobile-nav-link">🧮 <span data-i18n="nav.calcs">Calculators</span></a></li>
         <li><a href="blog/freshgarant.html" class="mobile-nav-link">📝 <span data-i18n="nav.fgblog">FreshGarant Blog</span></a></li>
         <li><a href="blog/buildexact.html" class="mobile-nav-link">📝 <span data-i18n="nav.bxblog">BuildExact Blog</span></a></li>
         <li><a href="index.html#studio" class="mobile-nav-link">✨ <span data-i18n="nav.studio">Studio</span></a></li>
@@ -487,7 +522,8 @@
                     <span data-i18n="play.big">Google Play</span>
                 </div>
             </a>
-            <a href="index.html" class="btn-ghost" data-i18n="hero.back">← Back to Studio</a>
+            <a href="calculators.html" class="btn-ghost btn-ghost-primary" data-i18n="hero.calcs">🧮 All calculators</a>
+            <a href="index.html" class="btn-ghost btn-ghost-sm" data-i18n="hero.back">← Studio</a>
         </div>
     </div>
 </section>
@@ -495,6 +531,7 @@
 <!-- TRUST STRIP -->
 <div class="trust-strip">
     <div class="trust-inner">
+        <a href="calculators.html" class="trust-badge trust-badge-cta" data-i18n-html="trust.calcs">🧮 <strong>11 calculators</strong> uitgelegd →</a>
         <div class="trust-badge"><span class="ico">🔒</span><span data-i18n="trust.cookies">No tracking cookies</span></div>
         <div class="trust-badge"><span class="ico">🚫</span><span data-i18n="trust.ads">No ads</span></div>
         <div class="trust-badge"><span class="ico">⚡</span><span data-i18n="trust.offline">Offline-first</span></div>
@@ -586,6 +623,66 @@
                 <h3 data-i18n="feat.offline.title">Offline & On-Site</h3>
                 <p data-i18n="feat.offline.desc">Works entirely offline. Calculate, quote and share right on the construction site — no internet needed.</p>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- CALCULATORS -->
+<section class="calcs-section" id="calculators">
+    <div class="c">
+        <div class="a-fade" style="text-align:center">
+            <div class="section-label" style="justify-content:center"><span>●</span> <span data-i18n="calcs.label">11 calculators</span></div>
+            <h2 class="section-title" style="margin-top:16px;margin-bottom:12px" data-i18n-html="calcs.title">Elke calculator<br>stap voor stap uitgelegd</h2>
+            <p data-i18n="calcs.sub" style="color:var(--muted); max-width:580px; margin:0 auto; line-height:1.75">Van schutting tot beton — elke calculator met formules, rekenvoorbeeld en veelgestelde vragen. Perfect om in te lezen voor je downloadt.</p>
+        </div>
+        <div class="calcs-grid">
+            <a href="calculators/schutting.html" class="calc-chip a-fade">
+                <div class="ico">🪵</div>
+                <div><div class="name" data-i18n="calcs.sch">Schutting</div><div class="sub" data-i18n="calcs.sch.s">Palen, schermen, poorten</div></div>
+            </a>
+            <a href="calculators/tegels.html" class="calc-chip a-fade">
+                <div class="ico">🟫</div>
+                <div><div class="name" data-i18n="calcs.teg">Tegels</div><div class="sub" data-i18n="calcs.teg.s">Aantal, dozen, lijm</div></div>
+            </a>
+            <a href="calculators/verf.html" class="calc-chip a-fade">
+                <div class="ico">🎨</div>
+                <div><div class="name" data-i18n="calcs.verf">Verf</div><div class="sub" data-i18n="calcs.verf.s">Liters, lagen, blikken</div></div>
+            </a>
+            <a href="calculators/gipsplaat.html" class="calc-chip a-fade">
+                <div class="ico">🧱</div>
+                <div><div class="name" data-i18n="calcs.gip">Gipsplaat</div><div class="sub" data-i18n="calcs.gip.s">Platen, schroeven, voegwerk</div></div>
+            </a>
+            <a href="calculators/isolatie.html" class="calc-chip a-fade">
+                <div class="ico">🧊</div>
+                <div><div class="name" data-i18n="calcs.iso">Isolatie</div><div class="sub" data-i18n="calcs.iso.s">R-waarde, pakken</div></div>
+            </a>
+            <a href="calculators/dak.html" class="calc-chip a-fade">
+                <div class="ico">🏠</div>
+                <div><div class="name" data-i18n="calcs.dak">Dak</div><div class="sub" data-i18n="calcs.dak.s">Pannen, tengels, helling</div></div>
+            </a>
+            <a href="calculators/trap.html" class="calc-chip a-fade">
+                <div class="ico">🪜</div>
+                <div><div class="name" data-i18n="calcs.trap">Trap</div><div class="sub" data-i18n="calcs.trap.s">Treden, trapbomen</div></div>
+            </a>
+            <a href="calculators/bestrating.html" class="calc-chip a-fade">
+                <div class="ico">🧱</div>
+                <div><div class="name" data-i18n="calcs.bes">Bestrating</div><div class="sub" data-i18n="calcs.bes.s">Stenen, puinlaag, zand</div></div>
+            </a>
+            <a href="calculators/hout.html" class="calc-chip a-fade">
+                <div class="ico">🪵</div>
+                <div><div class="name" data-i18n="calcs.hout">Hout</div><div class="sub" data-i18n="calcs.hout.s">Volume, planken, beits</div></div>
+            </a>
+            <a href="calculators/bakstenen.html" class="calc-chip a-fade">
+                <div class="ico">🧱</div>
+                <div><div class="name" data-i18n="calcs.bak">Bakstenen</div><div class="sub" data-i18n="calcs.bak.s">Mortel, lateien, spouw</div></div>
+            </a>
+            <a href="calculators/beton.html" class="calc-chip a-fade">
+                <div class="ico">🏗️</div>
+                <div><div class="name" data-i18n="calcs.bet">Beton</div><div class="sub" data-i18n="calcs.bet.s">m³, wapening, bekisting</div></div>
+            </a>
+        </div>
+        <div class="calcs-cta a-fade" style="transition-delay:.15s">
+            <a href="calculators.html" data-i18n="calcs.all">🧮 Open alle calculators →</a>
         </div>
     </div>
 </section>
@@ -1012,6 +1109,10 @@ const T = {
     en: {
         'nav.freshgarant': 'FreshGarant',
         'nav.buildexact':  'BuildExact',
+        'nav.calcs':       '🧮 Calculators',
+        'nav.calcsall':    '🧮 All 11 calculators →',
+        'hero.calcs':      '🧮 All calculators',
+        'trust.calcs':     '🧮 <strong>11 calculators</strong> explained →',
         'nav.blog':        'Blog',
         'nav.fgblog':      'FreshGarant Blog',
         'nav.bxblog':      'BuildExact Blog',
@@ -1118,6 +1219,21 @@ const T = {
         'rev.r2.text':         '"Finally an app that understands what builders actually need. The cost estimate feature is brilliant for quoting customers."',
         'rev.r3.text':         '"Great app for DIY projects. I renovated my bathroom and had exact amounts for tiles and grout. Saved money on leftovers."',
         'rev.cta':             'Leave a review on Google Play →',
+        'calcs.label':         '11 calculators',
+        'calcs.title':         'Every calculator<br>explained step by step',
+        'calcs.sub':           'From fencing to concrete — each calculator with formulas, a worked example and frequently asked questions. Perfect to read before you download.',
+        'calcs.sch':           'Fence','calcs.sch.s':           'Posts, panels, gates',
+        'calcs.teg':           'Tiles','calcs.teg.s':           'Count, boxes, adhesive',
+        'calcs.verf':          'Paint','calcs.verf.s':          'Litres, coats, cans',
+        'calcs.gip':           'Drywall','calcs.gip.s':         'Boards, screws, joint work',
+        'calcs.iso':           'Insulation','calcs.iso.s':      'R-value, packs',
+        'calcs.dak':           'Roof','calcs.dak.s':            'Tiles, battens, pitch',
+        'calcs.trap':          'Stairs','calcs.trap.s':         'Steps, stringers',
+        'calcs.bes':           'Paving','calcs.bes.s':          'Bricks, sub-base, sand',
+        'calcs.hout':          'Wood','calcs.hout.s':           'Volume, boards, stain',
+        'calcs.bak':           'Bricks','calcs.bak.s':          'Mortar, lintels, cavity',
+        'calcs.bet':           'Concrete','calcs.bet.s':        'm³, rebar, formwork',
+        'calcs.all':           '🧮 Open all calculators →',
         'blog.label':          'From our blog',
         'blog.title':          'Guides for builders<br>and contractors',
         'blog.p1.cat':         'Quotes',
@@ -1139,6 +1255,10 @@ const T = {
     nl: {
         'nav.freshgarant': 'FreshGarant',
         'nav.buildexact':  'BuildExact',
+        'nav.calcs':       '🧮 Calculators',
+        'nav.calcsall':    '🧮 Alle 11 calculators →',
+        'hero.calcs':      '🧮 Alle calculators',
+        'trust.calcs':     '🧮 <strong>11 calculators</strong> uitgelegd →',
         'nav.blog':        'Blog',
         'nav.fgblog':      'FreshGarant Blog',
         'nav.bxblog':      'BuildExact Blog',
@@ -1245,6 +1365,21 @@ const T = {
         'rev.r2.text':         '"Eindelijk een app die begrijpt wat bouwers echt nodig hebben. De kostenraming is briljant voor het offreren van klanten."',
         'rev.r3.text':         '"Prima app voor doe-het-zelf klussen. Ik heb mijn badkamer verbouwd en had exact de juiste aantallen tegels en voegmiddel. Bespaarde geld op restanten."',
         'rev.cta':             'Laat een review achter in Google Play →',
+        'calcs.label':         '11 calculators',
+        'calcs.title':         'Elke calculator<br>stap voor stap uitgelegd',
+        'calcs.sub':           'Van schutting tot beton — elke calculator met formules, rekenvoorbeeld en veelgestelde vragen. Perfect om in te lezen voor je downloadt.',
+        'calcs.sch':           'Schutting','calcs.sch.s':       'Palen, schermen, poorten',
+        'calcs.teg':           'Tegels','calcs.teg.s':          'Aantal, dozen, lijm',
+        'calcs.verf':          'Verf','calcs.verf.s':           'Liters, lagen, blikken',
+        'calcs.gip':           'Gipsplaat','calcs.gip.s':       'Platen, schroeven, voegwerk',
+        'calcs.iso':           'Isolatie','calcs.iso.s':        'R-waarde, pakken',
+        'calcs.dak':           'Dak','calcs.dak.s':             'Pannen, tengels, helling',
+        'calcs.trap':          'Trap','calcs.trap.s':           'Treden, trapbomen',
+        'calcs.bes':           'Bestrating','calcs.bes.s':      'Stenen, puinlaag, zand',
+        'calcs.hout':          'Hout','calcs.hout.s':           'Volume, planken, beits',
+        'calcs.bak':           'Bakstenen','calcs.bak.s':       'Mortel, lateien, spouw',
+        'calcs.bet':           'Beton','calcs.bet.s':           'm³, wapening, bekisting',
+        'calcs.all':           '🧮 Open alle calculators →',
         'blog.label':          'Uit onze blog',
         'blog.title':          'Guides voor bouwers<br>en aannemers',
         'blog.p1.cat':         'Offertes',

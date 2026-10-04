@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beton berekenen — m³ mengbeton, wapening en bekisting | BuildExact</title>
+    <meta name="description" content="Hoeveel m³ beton, hoeveel kilo wapening en hoeveel meter bekisting heb je nodig voor je vloer, fundering of oprit? Reken ook mengwagen versus zelf mengen. Gratis in BuildExact.">
+    <meta name="keywords" content="beton berekenen, m3 beton, wapening berekenen, mengbeton calculator, bekisting omtrek, fundering beton, vloer beton, oprit beton, BuildExact">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/calculators/beton.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/calculators/beton.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/calculators/beton.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/calculators/beton.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded-studio.app/calculators/beton.html">
+    <meta property="og:title" content="Beton berekenen — m³ mengbeton, wapening en bekisting">
+    <meta property="og:description" content="Complete uitleg plus rekenvoorbeeld. Reken beton in BuildExact in onder de minuut uit.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx.png">
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"HowTo",
+        "name":"Beton berekenen met BuildExact",
+        "description":"Reken m3 beton, wapening in kg en aantal staven en meters bekisting uit op basis van soort klus, afmetingen en levering (mengwagen of zelf mengen).",
+        "totalTime":"PT2M",
+        "step":[
+            {"@type":"HowToStep","name":"Open Beton calculator","text":"Open BuildExact en kies de Beton calculator onder Materialen."},
+            {"@type":"HowToStep","name":"Kies soort klus","text":"Eigen opzet, Vloer, Fundering of Oprit. De presets vullen typische waarden voor wapening en marges in."},
+            {"@type":"HowToStep","name":"Vul afmetingen in","text":"Lengte en breedte in m, diepte of dikte in cm. Vul verlies percentage in (standaard 10)."},
+            {"@type":"HowToStep","name":"Levering en wapening","text":"Kies Mengwagen (kuub) of Zelf mengen. Zet staal in kg per m3 en staaflengte in m voor automatische berekening van wapening."},
+            {"@type":"HowToStep","name":"Bekisting (optioneel)","text":"Zet Bekisting rondom aan voor automatische berekening van strekkende meters."},
+            {"@type":"HowToStep","name":"Lees het resultaat","text":"BuildExact toont totaal m3 inclusief verlies, kg wapening en aantal staven, plus bekisting als die aan staat."}
+        ],
+        "author":{"@type":"Organization","name":"Grounded Studio","url":"https://grounded-studio.app"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://grounded-studio.app/"},
+            {"@type":"ListItem","position":2,"name":"BuildExact","item":"https://grounded-studio.app/buildexact.html"},
+            {"@type":"ListItem","position":3,"name":"Calculators","item":"https://grounded-studio.app/calculators.html"},
+            {"@type":"ListItem","position":4,"name":"Beton"}
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background:#0a0f1a; color:#f1f5f9; font-family:'Inter',system-ui,sans-serif; line-height:1.6; }
+        :root { --bx:#2563eb; --bx2:#1d4ed8; --gs:#818cf8; --gs-glow:rgba(129,140,248,.3); --border:rgba(255,255,255,.07); --muted:#94a3b8; }
+        .c { max-width:820px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-right { display:flex; align-items:center; gap:16px; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .nav-back:hover { color:#fff; }
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+
+        .article-header { padding:140px 0 50px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:22px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .breadcrumb a:hover { color:#94a3b8; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.9rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:16px; }
+        .lead { color:#cbd5e1; font-size:1.1rem; line-height:1.7; max-width:680px; }
+
+        .article-body { padding:30px 0 60px; }
+        .screenshots { margin:0 auto 44px; max-width:760px; padding:0 20px; }
+        .screenshots-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
+        .screenshots-grid.three { grid-template-columns:repeat(3, 1fr); }
+        .screenshot { aspect-ratio:9/19.5; border-radius:28px; overflow:hidden; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 50px rgba(0,0,0,.4); transition:transform .3s ease; }
+        .screenshot:hover { transform:translateY(-4px); }
+        .screenshot img { width:100%; height:100%; object-fit:cover; display:block; }
+        @media (max-width:640px) { .screenshots-grid, .screenshots-grid.three { grid-template-columns:1fr; max-width:300px; margin:0 auto; } }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 14px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body p { font-size:1.03rem; color:#cbd5e1; line-height:1.8; margin-bottom:22px; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:22px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.78; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:26px; margin:28px 0; }
+        .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+        .formula { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:8px; }
+        .formula-ex { font-size:.9rem; color:var(--muted); }
+
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:22px 26px; margin:28px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:8px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.7; margin:0; }
+
+        .table-wrap { overflow-x:auto; margin:24px 0; border-radius:14px; border:1px solid var(--border); }
+        table { width:100%; border-collapse:collapse; font-size:.92rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        td.n { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; color:#fff; }
+
+        .steps { counter-reset:step; padding:0 !important; }
+        .steps li { list-style:none; position:relative; padding-left:48px; margin-bottom:18px; counter-increment:step; }
+        .steps li::before { content:counter(step); position:absolute; left:0; top:-2px; width:32px; height:32px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.35); color:var(--bx); font-weight:800; font-size:.9rem; display:flex; align-items:center; justify-content:center; }
+
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:30px; margin:44px 0 10px; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:18px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+
+        .faq-wrap { margin:28px 0; display:flex; flex-direction:column; gap:10px; }
+        .faq-item { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+        .faq-item.open { border-color:rgba(37,99,235,.35); background:rgba(37,99,235,.04); }
+        .faq-q { width:100%; background:none; border:none; color:#f1f5f9; font-family:inherit; font-size:.98rem; font-weight:600; text-align:left; padding:18px 22px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+        .faq-icon { width:24px; height:24px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.3); color:var(--bx); display:flex; align-items:center; justify-content:center; font-size:.9rem; font-weight:700; flex-shrink:0; transition:transform .3s; }
+        .faq-item.open .faq-icon { transform:rotate(45deg); }
+        .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+        .faq-item.open .faq-a { max-height:460px; }
+        .faq-a-inner { padding:0 22px 18px; font-size:.95rem; color:#cbd5e1; line-height:1.7; }
+
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+
+        #progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#2563eb,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><div class="nav-right"><a href="../calculators.html" class="nav-back">← Calculators</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="../calculators.html">Calculators</a> / <span data-i18n="bc.current">Beton</span></div>
+            <div class="article-cat" data-i18n="cat">🏗️ Constructief</div>
+            <h1 data-i18n="h1">Beton berekenen — m³ mengbeton, wapening en bekisting</h1>
+            <p class="lead" data-i18n="lead">Hoeveel m³ mengbeton moet je bestellen voor een vloer, fundering of oprit, hoeveel kilo wapeningstaal zit erin, en hoeveel meter bekisting zet je rondom? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt.</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="screenshots">
+            <div class="screenshots-grid">
+                <div class="screenshot"><img src="../assets/calculator-nl/beton-nl-1.png" alt="Beton calculator — Afmetingen en wapening" data-img-prefix="beton" data-img-num="1" loading="lazy"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/beton-nl-2.png" alt="Beton calculator — Resultaat" data-img-prefix="beton" data-img-num="2" loading="lazy"></div>
+            </div>
+        </div>
+        <div class="c">
+
+            <h2 data-i18n="h2.inputs">Wat vraagt de calculator</h2>
+            <p data-i18n="p.inputs">De Beton calculator heeft vijf blokken: Soort klus, Afmetingen, Levering, Wapening (optioneel) en Bekisting. Elk veld hieronder komt één-op-één overeen met de app.</p>
+
+            <h3 data-i18n="h3.job">Soort klus</h3>
+            <ul>
+                <li data-i18n-html="in.own"><strong>Eigen opzet</strong> — je bepaalt alle waarden zelf. Handig voor niet-standaard klussen.</li>
+                <li data-i18n-html="in.floor"><strong>Vloer</strong> — preset voor een gewone woningvloer. Typische wapening 50 tot 80 kg per m³.</li>
+                <li data-i18n-html="in.found"><strong>Fundering</strong> — preset voor een strook- of plaatfundering. Zwaardere wapening 80 tot 120 kg per m³.</li>
+                <li data-i18n-html="in.drive"><strong>Oprit</strong> — preset voor een opritplaat. Lichtere wapening 50 tot 70 kg per m³.</li>
+            </ul>
+
+            <h3 data-i18n="h3.dims">Afmetingen</h3>
+            <ul>
+                <li data-i18n-html="in.len"><strong>Lengte (m)</strong> — langste zijde van het betonvlak.</li>
+                <li data-i18n-html="in.wid"><strong>Breedte (m)</strong> — kortste zijde.</li>
+                <li data-i18n-html="in.dep"><strong>Diepte (cm)</strong> — dikte van de betonplaat. Standaard woningvloer 10 cm, oprit 15 cm, fundering 25 tot 40 cm.</li>
+                <li data-i18n-html="in.loss"><strong>Verlies (%)</strong> — standaard 10%. Bij ongelijke ondergrond of veel inkepingen: 12 tot 15%. Beton kan je nooit teveel bijbestellen op het laatste moment — reken altijd ruim.</li>
+            </ul>
+
+            <h3 data-i18n="h3.delivery">Levering</h3>
+            <ul>
+                <li data-i18n-html="in.truck"><strong>Mengwagen (kuub)</strong> — bestelbeton per m³. Rendabel vanaf 1,5 m³. Snel verwerkt, constante kwaliteit.</li>
+                <li data-i18n-html="in.mix"><strong>Zelf mengen</strong> — zakken droog mengbeton zelf aanmaken. Rendabel tot 0,5 à 1 m³. Flexibel qua tijd, meer werk, wisselende kwaliteit per batch.</li>
+            </ul>
+
+            <h3 data-i18n="h3.rebar">Wapening (optioneel)</h3>
+            <ul>
+                <li data-i18n-html="in.steel"><strong>Staal (kg/m³)</strong> — hoeveel kilo wapeningstaal per m³ beton. Vuistregels: lichte vloer 40 tot 60, normale woningvloer 60 tot 80, oprit 50 tot 70, strookfundering 80 tot 100, plaatfundering 100 tot 150 kg/m³.</li>
+                <li data-i18n-html="in.barlen"><strong>Staaflengte (m)</strong> — lengte van één wapeningsstaaf. Standaard 12 m (vrachtwagenlengte). BuildExact rekent met Ø10 mm wapening (circa 0,617 kg/m) om het aantal staven uit te rekenen.</li>
+            </ul>
+
+            <h3 data-i18n="h3.form">Bekisting</h3>
+            <ul>
+                <li data-i18n-html="in.form"><strong>Bekisting rondom nodig</strong> — zet aan als je bekisting (planken, kistborden) rondom de betonplaat zet. BuildExact berekent dan de omtrek als strekkende meters: 2 × (lengte + breedte).</li>
+            </ul>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.margin.h">💡 Reken altijd ruim op beton</h3>
+                <p data-i18n="tip.margin.p">Een mengwagen die terug moet komen voor 0,5 m³ kost snel 150 tot 250 euro aan voorrijkosten plus minimum-afname. Een halve m³ extra bestellen kost 60 tot 80 euro. Reken dus altijd met minimaal 10% verlies. Bij een ongelijke ondergrond of een complexe vorm: 15%. Overschot kun je direct wegwerken naar een paadje of kleine fundering.</p>
+            </div>
+
+            <h2 data-i18n="h2.formula">De formule onder de motorkap</h2>
+            <p data-i18n="p.formula">Volume plus verlies, en daarop reken je wapening. Diepte in cm omrekenen naar meter is de meest gemaakte fout — altijd 0,10 m voor 10 cm, niet 10.</p>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.vlabel">Volume beton</div>
+                <div class="formula" data-i18n="f.vmain">V = L × B × D(m) × (1 + Verlies%)</div>
+                <div class="formula-ex" data-i18n="f.vex">Voorbeeld: 12 × 13 × 0,10 × 1,10 = 17,16 m³</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.rlabel">Wapening (kg)</div>
+                <div class="formula" data-i18n="f.rmain">Wapening kg = Volume × Staal (kg/m³)</div>
+                <div class="formula-ex" data-i18n="f.rex">Voorbeeld: 17,16 × 60 = 1029,6 kg</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.blabel">Aantal staven</div>
+                <div class="formula" data-i18n="f.bmain">Staven = Wapening kg / (Ø10 gewicht × Staaflengte)</div>
+                <div class="formula-ex" data-i18n="f.bex">Voorbeeld: 1029,6 / (0,617 × 12) = 1029,6 / 7,40 ≈ 140 staven</div>
+            </div>
+
+            <h2 data-i18n="h2.example">Rekenvoorbeeld — vloer 12 × 13 × 0,10 m</h2>
+            <p data-i18n="p.example">Dit is de situatie uit de screenshot: betonplaat van 12 × 13 m met 10 cm dikte, 10 procent verlies, mengbeton per kuub geleverd, 60 kg staal per m³ met staven van 12 m. Geen bekisting apart.</p>
+
+            <h3 data-i18n="h3.inex">Invoer</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.field">Veld</th><th data-i18n="t.value">Waarde</th></tr>
+                    <tr><td data-i18n="r.job">Soort klus</td><td class="n" data-i18n="r.own">Eigen opzet</td></tr>
+                    <tr><td data-i18n="r.len">Lengte</td><td class="n">12 m</td></tr>
+                    <tr><td data-i18n="r.wid">Breedte</td><td class="n">13 m</td></tr>
+                    <tr><td data-i18n="r.dep">Diepte</td><td class="n">10 cm</td></tr>
+                    <tr><td data-i18n="r.loss">Verlies</td><td class="n">10 %</td></tr>
+                    <tr><td data-i18n="r.deliv">Levering</td><td class="n" data-i18n="r.truck">Mengwagen (kuub)</td></tr>
+                    <tr><td data-i18n="r.steel">Staal</td><td class="n">60 kg/m³</td></tr>
+                    <tr><td data-i18n="r.barlen">Staaflengte</td><td class="n">12 m</td></tr>
+                </table>
+            </div>
+
+            <h3 data-i18n="h3.calc">Berekening stap voor stap</h3>
+            <ol>
+                <li data-i18n="c.1">Volume netto: 12 × 13 × 0,10 = 15,6 m³</li>
+                <li data-i18n="c.2">Met 10% verlies: 15,6 × 1,10 = 17,16 m³</li>
+                <li data-i18n="c.3">Wapening: 17,16 × 60 kg = 1029,6 kg</li>
+                <li data-i18n="c.4">Staven Ø10 mm, 12 m lang: 0,617 kg/m × 12 = 7,40 kg per staaf</li>
+                <li data-i18n="c.5">Aantal staven: 1029,6 ÷ 7,40 = 139,13 → 140 staven</li>
+            </ol>
+
+            <h3 data-i18n="h3.outex">Resultaat</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.item">Onderdeel</th><th data-i18n="t.amount">Waarde</th></tr>
+                    <tr><td data-i18n="o.vol">Bestel mengbeton</td><td class="n">17,16 m³</td></tr>
+                    <tr><td data-i18n="o.rebar">Wapening</td><td class="n" data-i18n="o.rebarval">1029,6 kg (140 staven)</td></tr>
+                </table>
+            </div>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.cm.h">⚠️ Diepte altijd omrekenen naar meter</h3>
+                <p data-i18n="tip.cm.p">De meestgemaakte fout: diepte in cm invullen alsof het meter is. 10 cm wordt 0,10 m, niet 10. Bij 10 m zou je 100× teveel beton bestellen (156 m³ in plaats van 15,6 m³) en krijg je een boze telefoon van de leverancier. BuildExact rekent cm automatisch om naar meter.</p>
+            </div>
+
+            <h2 data-i18n="h2.rebar">Wapening per type klus</h2>
+            <p data-i18n="p.rebar">Niet elke constructie vraagt dezelfde hoeveelheid staal. Vuistregels (NL):</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.job">Soort klus</th><th data-i18n="t.steel">Staal (kg/m³)</th><th data-i18n="t.note">Opmerking</th></tr>
+                    <tr><td data-i18n="jt.light">Lichte vloer (bergruimte)</td><td class="n">40 – 60</td><td data-i18n="jt.lightn">Weinig belasting, enkel netje</td></tr>
+                    <tr><td data-i18n="jt.floor">Woningvloer</td><td class="n">60 – 80</td><td data-i18n="jt.floorn">Standaard, dubbel netje</td></tr>
+                    <tr><td data-i18n="jt.drive">Oprit</td><td class="n">50 – 70</td><td data-i18n="jt.driven">Op gelijke zandbodem, meer bij klei</td></tr>
+                    <tr><td data-i18n="jt.strip">Strookfundering</td><td class="n">80 – 100</td><td data-i18n="jt.stripn">Draagfunctie, zwaardere trekstangen</td></tr>
+                    <tr><td data-i18n="jt.slab">Plaatfundering</td><td class="n">100 – 150</td><td data-i18n="jt.slabn">Verdeelt zwaarder gewicht, dubbel korf</td></tr>
+                </table>
+            </div>
+
+            <h2 data-i18n="h2.steps">Zo doe je dit in BuildExact</h2>
+            <ol class="steps">
+                <li data-i18n-html="s.1"><strong>Open de Beton calculator</strong> onder Materialen. Kies het soort klus (Vloer, Fundering, Oprit of Eigen opzet).</li>
+                <li data-i18n-html="s.2"><strong>Vul afmetingen in</strong>: lengte en breedte in m, diepte in cm. Verlies 10% standaard, hoger bij complexe vorm.</li>
+                <li data-i18n-html="s.3"><strong>Levering</strong>: Mengwagen bij 1,5 m³ en meer, Zelf mengen onder 1 m³. Zet staal in kg per m³ voor automatische wapening.</li>
+                <li data-i18n-html="s.4"><strong>Staaflengte</strong>: standaard 12 m. BuildExact rekent met Ø10 mm wapening (0,617 kg/m).</li>
+                <li data-i18n-html="s.5"><strong>Bekisting rondom aan</strong> als je kistborden rondom plaatst. De calculator rekent de omtrek 2 × (L + B) als strekkende meters.</li>
+            </ol>
+
+            <h2 data-i18n="h2.faq">Veelgestelde vragen</h2>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.1">Mengwagen of zelf mengen?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.1">Vuistregel: boven 1,5 m³ bestel je mengbeton per kuub. Snelheid (wagen lost in 15 minuten), constante kwaliteit, geen gedoe met zand en cement. Onder 1 m³ meng je zelf uit zakken (droog mengbeton of los zand plus cement). Tussen 1 en 1,5 m³ afhankelijk van beschikbaarheid, bereikbaarheid voor de wagen en hoe snel je het nodig hebt.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.2">Welke betonsoort moet ik bestellen?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.2">Standaard woningvloer: C25/30 (25 N/mm² sterkte na 28 dagen). Voor fundering of oprit: C25/30 ook. Zwaarder belast (industriële vloer, kelder onder grondwater): C30/37 of hoger. De C-waarde staat op je bestelbon. BuildExact rekent alleen volume en wapening — de C-waarde kies je bij de leverancier.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.3">Hoeveel staal in kg per m³ precies?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.3">Woningvloer op zandbodem 60 tot 80 kg/m³. Oprit onder een auto: 50 tot 70. Strookfundering onder een draagmuur 80 tot 100. Plaatfundering onder complete woning 100 tot 150. Bij twijfel of een afwijkende belasting: raadpleeg een constructeur. Te weinig wapening is geen DIY risico waar je mee wil experimenteren.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.4">Waarom 140 staven voor 1029,6 kg?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.4">BuildExact rekent met Ø10 mm wapening op standaard lengte 12 m. Een staaf Ø10 mm × 12 m weegt 0,617 kg/m × 12 = 7,40 kg. 1029,6 kg ÷ 7,40 = 139,13 → afgerond 140 staven. Voor dikkere wapening (Ø12, Ø16) verander je de aanname — Ø12 mm weegt 0,888 kg/m, Ø16 mm 1,58 kg/m.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.5">Wanneer heb ik bekisting rondom nodig?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.5">Als je beton stort tegen bestaande constructies niet of waar het niet wordt tegengehouden door grond. Bijvoorbeeld: een losse betonplaat op een terras, een zelfstandige fundering voor een carport, een traptrede. Niet nodig bij een vloer tussen bestaande fundering­muren of een cv-ketel-plaat ingegraven in de grond. BuildExact berekent 2 × (L + B) strekkende meters als je het aan zet.</div></div>
+                </div>
+            </div>
+
+            <div class="app-cta">
+                <h3 data-i18n="cta.h">🏗️ Reken je beton in BuildExact</h3>
+                <p data-i18n="cta.p">Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    <span data-i18n="cta.btn">Gratis downloaden</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="c-wide">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="../calculators.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Calculators</a>
+                <a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="../blog/buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
+                <a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a>
+                <a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
+                <a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
+            </div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item .faq-q').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open'));
+});
+var rp=document.getElementById('progress');
+window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});
+
+const T = {
+    nl: {
+        'bc.current':'Beton','cat':'🏗️ Constructief',
+        'h1':'Beton berekenen — m³ mengbeton, wapening en bekisting',
+        'lead':'Hoeveel m³ mengbeton moet je bestellen voor een vloer, fundering of oprit, hoeveel kilo wapeningstaal zit erin, en hoeveel meter bekisting zet je rondom? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt.',
+        'h2.inputs':'Wat vraagt de calculator','p.inputs':'De Beton calculator heeft vijf blokken: Soort klus, Afmetingen, Levering, Wapening (optioneel) en Bekisting. Elk veld hieronder komt één-op-één overeen met de app.',
+        'h3.job':'Soort klus',
+        'in.own':'<strong>Eigen opzet</strong> — je bepaalt alle waarden zelf. Handig voor niet-standaard klussen.',
+        'in.floor':'<strong>Vloer</strong> — preset voor een gewone woningvloer. Typische wapening 50 tot 80 kg per m³.',
+        'in.found':'<strong>Fundering</strong> — preset voor een strook- of plaatfundering. Zwaardere wapening 80 tot 120 kg per m³.',
+        'in.drive':'<strong>Oprit</strong> — preset voor een opritplaat. Lichtere wapening 50 tot 70 kg per m³.',
+        'h3.dims':'Afmetingen',
+        'in.len':'<strong>Lengte (m)</strong> — langste zijde van het betonvlak.',
+        'in.wid':'<strong>Breedte (m)</strong> — kortste zijde.',
+        'in.dep':'<strong>Diepte (cm)</strong> — dikte van de betonplaat. Standaard woningvloer 10 cm, oprit 15 cm, fundering 25 tot 40 cm.',
+        'in.loss':'<strong>Verlies (%)</strong> — standaard 10%. Bij ongelijke ondergrond of veel inkepingen: 12 tot 15%. Beton kan je nooit teveel bijbestellen op het laatste moment — reken altijd ruim.',
+        'h3.delivery':'Levering',
+        'in.truck':'<strong>Mengwagen (kuub)</strong> — bestelbeton per m³. Rendabel vanaf 1,5 m³. Snel verwerkt, constante kwaliteit.',
+        'in.mix':'<strong>Zelf mengen</strong> — zakken droog mengbeton zelf aanmaken. Rendabel tot 0,5 à 1 m³. Flexibel qua tijd, meer werk, wisselende kwaliteit per batch.',
+        'h3.rebar':'Wapening (optioneel)',
+        'in.steel':'<strong>Staal (kg/m³)</strong> — hoeveel kilo wapeningstaal per m³ beton. Vuistregels: lichte vloer 40 tot 60, normale woningvloer 60 tot 80, oprit 50 tot 70, strookfundering 80 tot 100, plaatfundering 100 tot 150 kg/m³.',
+        'in.barlen':'<strong>Staaflengte (m)</strong> — lengte van één wapeningsstaaf. Standaard 12 m (vrachtwagenlengte). BuildExact rekent met Ø10 mm wapening (circa 0,617 kg/m) om het aantal staven uit te rekenen.',
+        'h3.form':'Bekisting',
+        'in.form':'<strong>Bekisting rondom nodig</strong> — zet aan als je bekisting (planken, kistborden) rondom de betonplaat zet. BuildExact berekent dan de omtrek als strekkende meters: 2 × (lengte + breedte).',
+        'tip.margin.h':'💡 Reken altijd ruim op beton','tip.margin.p':'Een mengwagen die terug moet komen voor 0,5 m³ kost snel 150 tot 250 euro aan voorrijkosten plus minimum-afname. Een halve m³ extra bestellen kost 60 tot 80 euro. Reken dus altijd met minimaal 10% verlies. Bij een ongelijke ondergrond of een complexe vorm: 15%. Overschot kun je direct wegwerken naar een paadje of kleine fundering.',
+        'h2.formula':'De formule onder de motorkap','p.formula':'Volume plus verlies, en daarop reken je wapening. Diepte in cm omrekenen naar meter is de meest gemaakte fout — altijd 0,10 m voor 10 cm, niet 10.',
+        'f.vlabel':'Volume beton','f.vmain':'V = L × B × D(m) × (1 + Verlies%)','f.vex':'Voorbeeld: 12 × 13 × 0,10 × 1,10 = 17,16 m³',
+        'f.rlabel':'Wapening (kg)','f.rmain':'Wapening kg = Volume × Staal (kg/m³)','f.rex':'Voorbeeld: 17,16 × 60 = 1029,6 kg',
+        'f.blabel':'Aantal staven','f.bmain':'Staven = Wapening kg / (Ø10 gewicht × Staaflengte)','f.bex':'Voorbeeld: 1029,6 / (0,617 × 12) = 1029,6 / 7,40 ≈ 140 staven',
+        'h2.example':'Rekenvoorbeeld — vloer 12 × 13 × 0,10 m','p.example':'Dit is de situatie uit de screenshot: betonplaat van 12 × 13 m met 10 cm dikte, 10 procent verlies, mengbeton per kuub geleverd, 60 kg staal per m³ met staven van 12 m. Geen bekisting apart.',
+        'h3.inex':'Invoer','t.field':'Veld','t.value':'Waarde',
+        'r.job':'Soort klus','r.own':'Eigen opzet','r.len':'Lengte','r.wid':'Breedte','r.dep':'Diepte','r.loss':'Verlies','r.deliv':'Levering','r.truck':'Mengwagen (kuub)','r.steel':'Staal','r.barlen':'Staaflengte',
+        'h3.calc':'Berekening stap voor stap',
+        'c.1':'Volume netto: 12 × 13 × 0,10 = 15,6 m³',
+        'c.2':'Met 10% verlies: 15,6 × 1,10 = 17,16 m³',
+        'c.3':'Wapening: 17,16 × 60 kg = 1029,6 kg',
+        'c.4':'Staven Ø10 mm, 12 m lang: 0,617 kg/m × 12 = 7,40 kg per staaf',
+        'c.5':'Aantal staven: 1029,6 ÷ 7,40 = 139,13 → 140 staven',
+        'h3.outex':'Resultaat','t.item':'Onderdeel','t.amount':'Waarde',
+        'o.vol':'Bestel mengbeton','o.rebar':'Wapening','o.rebarval':'1029,6 kg (140 staven)',
+        'tip.cm.h':'⚠️ Diepte altijd omrekenen naar meter','tip.cm.p':'De meestgemaakte fout: diepte in cm invullen alsof het meter is. 10 cm wordt 0,10 m, niet 10. Bij 10 m zou je 100× teveel beton bestellen (156 m³ in plaats van 15,6 m³) en krijg je een boze telefoon van de leverancier. BuildExact rekent cm automatisch om naar meter.',
+        'h2.rebar':'Wapening per type klus','p.rebar':'Niet elke constructie vraagt dezelfde hoeveelheid staal. Vuistregels (NL):',
+        't.job':'Soort klus','t.steel':'Staal (kg/m³)','t.note':'Opmerking',
+        'jt.light':'Lichte vloer (bergruimte)','jt.lightn':'Weinig belasting, enkel netje',
+        'jt.floor':'Woningvloer','jt.floorn':'Standaard, dubbel netje',
+        'jt.drive':'Oprit','jt.driven':'Op gelijke zandbodem, meer bij klei',
+        'jt.strip':'Strookfundering','jt.stripn':'Draagfunctie, zwaardere trekstangen',
+        'jt.slab':'Plaatfundering','jt.slabn':'Verdeelt zwaarder gewicht, dubbel korf',
+        'h2.steps':'Zo doe je dit in BuildExact',
+        's.1':'<strong>Open de Beton calculator</strong> onder Materialen. Kies het soort klus (Vloer, Fundering, Oprit of Eigen opzet).',
+        's.2':'<strong>Vul afmetingen in</strong>: lengte en breedte in m, diepte in cm. Verlies 10% standaard, hoger bij complexe vorm.',
+        's.3':'<strong>Levering</strong>: Mengwagen bij 1,5 m³ en meer, Zelf mengen onder 1 m³. Zet staal in kg per m³ voor automatische wapening.',
+        's.4':'<strong>Staaflengte</strong>: standaard 12 m. BuildExact rekent met Ø10 mm wapening (0,617 kg/m).',
+        's.5':'<strong>Bekisting rondom aan</strong> als je kistborden rondom plaatst. De calculator rekent de omtrek 2 × (L + B) als strekkende meters.',
+        'h2.faq':'Veelgestelde vragen',
+        'q.1':'Mengwagen of zelf mengen?','a.1':'Vuistregel: boven 1,5 m³ bestel je mengbeton per kuub. Snelheid (wagen lost in 15 minuten), constante kwaliteit, geen gedoe met zand en cement. Onder 1 m³ meng je zelf uit zakken (droog mengbeton of los zand plus cement). Tussen 1 en 1,5 m³ afhankelijk van beschikbaarheid, bereikbaarheid voor de wagen en hoe snel je het nodig hebt.',
+        'q.2':'Welke betonsoort moet ik bestellen?','a.2':'Standaard woningvloer: C25/30 (25 N/mm² sterkte na 28 dagen). Voor fundering of oprit: C25/30 ook. Zwaarder belast (industriële vloer, kelder onder grondwater): C30/37 of hoger. De C-waarde staat op je bestelbon. BuildExact rekent alleen volume en wapening — de C-waarde kies je bij de leverancier.',
+        'q.3':'Hoeveel staal in kg per m³ precies?','a.3':'Woningvloer op zandbodem 60 tot 80 kg/m³. Oprit onder een auto: 50 tot 70. Strookfundering onder een draagmuur 80 tot 100. Plaatfundering onder complete woning 100 tot 150. Bij twijfel of een afwijkende belasting: raadpleeg een constructeur. Te weinig wapening is geen DIY risico waar je mee wil experimenteren.',
+        'q.4':'Waarom 140 staven voor 1029,6 kg?','a.4':'BuildExact rekent met Ø10 mm wapening op standaard lengte 12 m. Een staaf Ø10 mm × 12 m weegt 0,617 kg/m × 12 = 7,40 kg. 1029,6 kg ÷ 7,40 = 139,13 → afgerond 140 staven. Voor dikkere wapening (Ø12, Ø16) verander je de aanname — Ø12 mm weegt 0,888 kg/m, Ø16 mm 1,58 kg/m.',
+        'q.5':'Wanneer heb ik bekisting rondom nodig?','a.5':'Als je beton stort tegen bestaande constructies niet of waar het niet wordt tegengehouden door grond. Bijvoorbeeld: een losse betonplaat op een terras, een zelfstandige fundering voor een carport, een traptrede. Niet nodig bij een vloer tussen bestaande fundering­muren of een cv-ketel-plaat ingegraven in de grond. BuildExact berekent 2 × (L + B) strekkende meters als je het aan zet.',
+        'cta.h':'🏗️ Reken je beton in BuildExact','cta.p':'Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.','cta.btn':'Gratis downloaden',
+    },
+    en: {
+        'bc.current':'Concrete','cat':'🏗️ Structural',
+        'h1':'Concrete calculator — m³ ready-mix, rebar and formwork',
+        'lead':'How many m³ of ready-mix concrete do you order for a slab, foundation or driveway, how many kilos of rebar does it need, and how many metres of formwork around it? This page explains every input and shows a real worked example with the exact BuildExact output.',
+        'h2.inputs':'What the calculator asks','p.inputs':'The Concrete calculator has five blocks: Job type, Dimensions, Delivery, Rebar (optional) and Formwork. Every field below maps one-to-one to the app.',
+        'h3.job':'Job type',
+        'in.own':'<strong>Custom</strong> — you set every value yourself. Useful for non-standard jobs.',
+        'in.floor':'<strong>Floor slab</strong> — preset for a regular domestic floor. Typical rebar 50 to 80 kg per m³.',
+        'in.found':'<strong>Foundation</strong> — preset for strip or raft foundation. Heavier rebar 80 to 120 kg per m³.',
+        'in.drive':'<strong>Driveway</strong> — preset for a driveway slab. Lighter rebar 50 to 70 kg per m³.',
+        'h3.dims':'Dimensions',
+        'in.len':'<strong>Length (m)</strong> — longest side of the concrete area.',
+        'in.wid':'<strong>Width (m)</strong> — shortest side.',
+        'in.dep':'<strong>Depth (cm)</strong> — slab thickness. Standard floor 10 cm, driveway 15 cm, foundation 25 to 40 cm.',
+        'in.loss':'<strong>Waste (%)</strong> — standard 10%. Uneven subgrade or complex shape: 12 to 15%. You can never top-up concrete at the last minute — always order generously.',
+        'h3.delivery':'Delivery',
+        'in.truck':'<strong>Ready-mix truck (m³)</strong> — ordered by m³. Economic from 1.5 m³. Fast placement, consistent quality.',
+        'in.mix':'<strong>Self mix</strong> — bagged dry mix on site. Economic up to 0.5–1 m³. Time flexibility, more work, variable quality per batch.',
+        'h3.rebar':'Rebar (optional)',
+        'in.steel':'<strong>Steel (kg/m³)</strong> — kilos of rebar per m³ concrete. Rules of thumb: light floor 40 to 60, standard home floor 60 to 80, driveway 50 to 70, strip foundation 80 to 100, raft foundation 100 to 150 kg/m³.',
+        'in.barlen':'<strong>Bar length (m)</strong> — length of one rebar. Standard 12 m (truck length). BuildExact uses Ø10 mm rebar (around 0.617 kg/m) to calculate bar count.',
+        'h3.form':'Formwork',
+        'in.form':'<strong>Formwork around</strong> — turn on if you place boards around the slab. BuildExact then calculates the perimeter as linear metres: 2 × (length + width).',
+        'tip.margin.h':'💡 Always allow margin for concrete','tip.margin.p':'A truck coming back for 0.5 m³ quickly costs 150 to 250 euros in call-out plus minimum charge. Half a m³ extra on the first delivery is 60 to 80 euros. Always count at least 10% waste. Uneven subgrade or a complex shape: 15%. Excess you work into a path or small foundation on the spot.',
+        'h2.formula':'The formula under the hood','p.formula':'Volume plus waste, then rebar. Converting depth from cm to m is the most common mistake — always 0.10 m for 10 cm, not 10.',
+        'f.vlabel':'Concrete volume','f.vmain':'V = L × W × D(m) × (1 + Waste%)','f.vex':'Example: 12 × 13 × 0.10 × 1.10 = 17.16 m³',
+        'f.rlabel':'Rebar (kg)','f.rmain':'Rebar kg = Volume × Steel (kg/m³)','f.rex':'Example: 17.16 × 60 = 1029.6 kg',
+        'f.blabel':'Bar count','f.bmain':'Bars = Rebar kg / (Ø10 weight × Bar length)','f.bex':'Example: 1029.6 / (0.617 × 12) = 1029.6 / 7.40 ≈ 140 bars',
+        'h2.example':'Worked example — slab 12 × 13 × 0.10 m','p.example':'This is the situation from the screenshot: concrete slab 12 × 13 m with 10 cm thickness, 10 percent waste, ready-mix per m³, 60 kg steel per m³ with 12 m bars. No separate formwork.',
+        'h3.inex':'Input','t.field':'Field','t.value':'Value',
+        'r.job':'Job type','r.own':'Custom','r.len':'Length','r.wid':'Width','r.dep':'Depth','r.loss':'Waste','r.deliv':'Delivery','r.truck':'Ready-mix truck (m³)','r.steel':'Steel','r.barlen':'Bar length',
+        'h3.calc':'Calculation step by step',
+        'c.1':'Net volume: 12 × 13 × 0.10 = 15.6 m³',
+        'c.2':'With 10% waste: 15.6 × 1.10 = 17.16 m³',
+        'c.3':'Rebar: 17.16 × 60 kg = 1029.6 kg',
+        'c.4':'Bars Ø10 mm, 12 m long: 0.617 kg/m × 12 = 7.40 kg per bar',
+        'c.5':'Bar count: 1029.6 ÷ 7.40 = 139.13 → 140 bars',
+        'h3.outex':'Result','t.item':'Item','t.amount':'Value',
+        'o.vol':'Order ready-mix','o.rebar':'Rebar','o.rebarval':'1029.6 kg (140 bars)',
+        'tip.cm.h':'⚠️ Always convert depth to metres','tip.cm.p':'The most common mistake: filling in depth in cm as if it were metres. 10 cm = 0.10 m, not 10. At 10 m you would order 100× too much concrete (156 m³ instead of 15.6 m³) and get an angry call from the supplier. BuildExact converts cm to m automatically.',
+        'h2.rebar':'Rebar per job type','p.rebar':'Not every structure needs the same amount of steel. Rules of thumb (NL):',
+        't.job':'Job type','t.steel':'Steel (kg/m³)','t.note':'Note',
+        'jt.light':'Light floor (storage)','jt.lightn':'Low load, single mesh',
+        'jt.floor':'Domestic floor','jt.floorn':'Standard, double mesh',
+        'jt.drive':'Driveway','jt.driven':'On stable sand ground, more on clay',
+        'jt.strip':'Strip foundation','jt.stripn':'Load-bearing, heavier tie rods',
+        'jt.slab':'Raft foundation','jt.slabn':'Distributes heavier weight, double cage',
+        'h2.steps':'How to do this in BuildExact',
+        's.1':'<strong>Open the Concrete calculator</strong> under Materials. Pick a job type (Floor, Foundation, Driveway or Custom).',
+        's.2':'<strong>Fill in dimensions</strong>: length and width in m, depth in cm. Waste 10% standard, higher for complex shapes.',
+        's.3':'<strong>Delivery</strong>: Ready-mix from 1.5 m³, Self mix below 1 m³. Set steel in kg per m³ for automatic rebar.',
+        's.4':'<strong>Bar length</strong>: standard 12 m. BuildExact uses Ø10 mm rebar (0.617 kg/m).',
+        's.5':'<strong>Formwork around on</strong> if you place boards around the slab. The calculator computes the perimeter 2 × (L + W) as linear metres.',
+        'h2.faq':'Frequently asked questions',
+        'q.1':'Ready-mix truck or self-mix?','a.1':'Rule of thumb: above 1.5 m³ you order ready-mix per m³. Speed (truck unloads in 15 minutes), consistent quality, no fuss with sand and cement. Below 1 m³ you mix yourself from bags (dry mix or loose sand plus cement). Between 1 and 1.5 m³ depends on availability, truck access and how quickly you need it.',
+        'q.2':'Which concrete grade should I order?','a.2':'Standard domestic floor: C25/30 (25 N/mm² strength at 28 days). For foundation or driveway: also C25/30. Heavier load (industrial floor, cellar below water table): C30/37 or higher. The C-value is on your order confirmation. BuildExact only calculates volume and rebar — pick the C-value with your supplier.',
+        'q.3':'How much steel in kg per m³ exactly?','a.3':'Domestic floor on sand ground 60 to 80 kg/m³. Driveway under a car: 50 to 70. Strip foundation under a load-bearing wall 80 to 100. Raft foundation under a complete house 100 to 150. If in doubt or for unusual loads: consult a structural engineer. Under-reinforcement is not a DIY risk to experiment with.',
+        'q.4':'Why 140 bars for 1029.6 kg?','a.4':'BuildExact uses Ø10 mm rebar at the standard 12 m length. One Ø10 mm × 12 m bar weighs 0.617 kg/m × 12 = 7.40 kg. 1029.6 kg ÷ 7.40 = 139.13 → rounded 140 bars. For thicker rebar (Ø12, Ø16) adjust the assumption — Ø12 mm weighs 0.888 kg/m, Ø16 mm 1.58 kg/m.',
+        'q.5':'When do I need formwork around?','a.5':'When you pour concrete not against existing structures and the ground does not hold it. For example: a loose concrete slab on a patio, a standalone foundation for a carport, a step. Not needed for a floor between existing foundation walls or a boiler slab recessed into the ground. BuildExact calculates 2 × (L + W) linear metres when enabled.',
+        'cta.h':'🏗️ Calculate your concrete in BuildExact','cta.p':'Free in the app. Calculate, save as a project, convert to a branded PDF quote — all without retyping.','cta.btn':'Download free',
+    }
+};
+const savedLang = localStorage.getItem('gs-lang');
+const browserIsNL = (navigator.language || '').toLowerCase().startsWith('nl');
+let lang = savedLang || (browserIsNL ? 'nl' : 'en');
+function applyLang(l) {
+    const d = T[l]; document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
+    document.querySelectorAll('[data-img-prefix]').forEach(img => { img.src = `../assets/calculator-${l}/${img.dataset.imgPrefix}-${l}-${img.dataset.imgNum}.png`; });
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    lang = l; localStorage.setItem('gs-lang', l);
+}
+applyLang(lang);
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+</script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

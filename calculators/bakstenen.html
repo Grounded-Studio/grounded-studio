@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakstenen berekenen — aantal stenen, mortel, lateien en spouwankers | BuildExact</title>
+    <meta name="description" content="Hoeveel bakstenen, mortelzakken, lateien en spouwankers heb je nodig voor een gemetselde muur? Reken netto muuroppervlak uit inclusief deur- en raamopeningen. Gratis in BuildExact op Android.">
+    <meta name="keywords" content="bakstenen berekenen, stenen per m2 muur, mortel berekenen, lateien stenen muur, spouwankers berekenen, metselwerk calculator, BuildExact">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/calculators/bakstenen.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/calculators/bakstenen.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/calculators/bakstenen.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/calculators/bakstenen.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded-studio.app/calculators/bakstenen.html">
+    <meta property="og:title" content="Bakstenen berekenen — stenen, mortel, lateien en spouwankers">
+    <meta property="og:description" content="Complete uitleg plus rekenvoorbeeld. Reken metselwerk in BuildExact in onder de minuut uit.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx.png">
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"HowTo",
+        "name":"Bakstenen berekenen met BuildExact",
+        "description":"Reken aantal bakstenen, mortelzakken, lateien en spouwankers uit op basis van muurafmetingen, deur- en raamopeningen, stenen per m2 en spouwankers per m2.",
+        "totalTime":"PT2M",
+        "step":[
+            {"@type":"HowToStep","name":"Open Bakstenen calculator","text":"Open BuildExact en kies de Bakstenen calculator onder Materialen."},
+            {"@type":"HowToStep","name":"Vul muurafmetingen in","text":"Zet lengte en hoogte van de muur in m, stenen per m2 en snijverlies percentage."},
+            {"@type":"HowToStep","name":"Voeg openingen toe","text":"Voeg per deur of raam een opening toe met breedte en hoogte. BuildExact berekent automatisch een latei die 20 cm aan weerszijden over de opening steekt."},
+            {"@type":"HowToStep","name":"Mortel en spouwankers","text":"Vul mortel in kg per m2 en de zak-inhoud. Zet spouwmuur aan voor spouwankers per m2."},
+            {"@type":"HowToStep","name":"Lees het resultaat","text":"BuildExact toont aantal stenen, netto muuroppervlak, mortelzakken, lateien en spouwankers."}
+        ],
+        "author":{"@type":"Organization","name":"Grounded Studio","url":"https://grounded-studio.app"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://grounded-studio.app/"},
+            {"@type":"ListItem","position":2,"name":"BuildExact","item":"https://grounded-studio.app/buildexact.html"},
+            {"@type":"ListItem","position":3,"name":"Calculators","item":"https://grounded-studio.app/calculators.html"},
+            {"@type":"ListItem","position":4,"name":"Bakstenen"}
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background:#0a0f1a; color:#f1f5f9; font-family:'Inter',system-ui,sans-serif; line-height:1.6; }
+        :root { --bx:#2563eb; --bx2:#1d4ed8; --gs:#818cf8; --gs-glow:rgba(129,140,248,.3); --border:rgba(255,255,255,.07); --muted:#94a3b8; }
+        .c { max-width:820px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-right { display:flex; align-items:center; gap:16px; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .nav-back:hover { color:#fff; }
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+
+        .article-header { padding:140px 0 50px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:22px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .breadcrumb a:hover { color:#94a3b8; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.9rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:16px; }
+        .lead { color:#cbd5e1; font-size:1.1rem; line-height:1.7; max-width:680px; }
+
+        .article-body { padding:30px 0 60px; }
+        .screenshots { margin:0 auto 44px; max-width:760px; padding:0 20px; }
+        .screenshots-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
+        .screenshots-grid.three { grid-template-columns:repeat(3, 1fr); }
+        .screenshot { aspect-ratio:9/19.5; border-radius:28px; overflow:hidden; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 50px rgba(0,0,0,.4); transition:transform .3s ease; }
+        .screenshot:hover { transform:translateY(-4px); }
+        .screenshot img { width:100%; height:100%; object-fit:cover; display:block; }
+        @media (max-width:640px) { .screenshots-grid, .screenshots-grid.three { grid-template-columns:1fr; max-width:300px; margin:0 auto; } }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 14px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body p { font-size:1.03rem; color:#cbd5e1; line-height:1.8; margin-bottom:22px; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:22px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.78; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:26px; margin:28px 0; }
+        .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+        .formula { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:8px; }
+        .formula-ex { font-size:.9rem; color:var(--muted); }
+
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:22px 26px; margin:28px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:8px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.7; margin:0; }
+
+        .table-wrap { overflow-x:auto; margin:24px 0; border-radius:14px; border:1px solid var(--border); }
+        table { width:100%; border-collapse:collapse; font-size:.92rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        td.n { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; color:#fff; }
+
+        .steps { counter-reset:step; padding:0 !important; }
+        .steps li { list-style:none; position:relative; padding-left:48px; margin-bottom:18px; counter-increment:step; }
+        .steps li::before { content:counter(step); position:absolute; left:0; top:-2px; width:32px; height:32px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.35); color:var(--bx); font-weight:800; font-size:.9rem; display:flex; align-items:center; justify-content:center; }
+
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:30px; margin:44px 0 10px; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:18px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+
+        .faq-wrap { margin:28px 0; display:flex; flex-direction:column; gap:10px; }
+        .faq-item { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+        .faq-item.open { border-color:rgba(37,99,235,.35); background:rgba(37,99,235,.04); }
+        .faq-q { width:100%; background:none; border:none; color:#f1f5f9; font-family:inherit; font-size:.98rem; font-weight:600; text-align:left; padding:18px 22px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+        .faq-icon { width:24px; height:24px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.3); color:var(--bx); display:flex; align-items:center; justify-content:center; font-size:.9rem; font-weight:700; flex-shrink:0; transition:transform .3s; }
+        .faq-item.open .faq-icon { transform:rotate(45deg); }
+        .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+        .faq-item.open .faq-a { max-height:420px; }
+        .faq-a-inner { padding:0 22px 18px; font-size:.95rem; color:#cbd5e1; line-height:1.7; }
+
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+
+        #progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#2563eb,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><div class="nav-right"><a href="../calculators.html" class="nav-back">← Calculators</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="../calculators.html">Calculators</a> / <span data-i18n="bc.current">Bakstenen</span></div>
+            <div class="article-cat" data-i18n="cat">🧱 Metselwerk</div>
+            <h1 data-i18n="h1">Bakstenen berekenen — stenen, mortel, lateien en spouwankers</h1>
+            <p class="lead" data-i18n="lead">Hoeveel bakstenen, mortelzakken, lateien boven de deur en spouwankers heb je nodig voor een muur van 12 × 13 m met één deur? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt.</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="screenshots">
+            <div class="screenshots-grid">
+                <div class="screenshot"><img src="../assets/calculator-nl/baksteen-nl-1.png" alt="Bakstenen calculator — Muurafmetingen en openingen" data-img-prefix="baksteen" data-img-num="1" loading="lazy"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/baksteen-nl-2.png" alt="Bakstenen calculator — Resultaat" data-img-prefix="baksteen" data-img-num="2" loading="lazy"></div>
+            </div>
+        </div>
+        <div class="c">
+
+            <h2 data-i18n="h2.inputs">Wat vraagt de calculator</h2>
+            <p data-i18n="p.inputs">De Bakstenen calculator heeft vier blokken: Muurafmetingen, Openingen (deur of raam), Mortel en Spouw. Elk veld hieronder komt één-op-één overeen met de app.</p>
+
+            <h3 data-i18n="h3.wall">Muurafmetingen</h3>
+            <ul>
+                <li data-i18n-html="in.len"><strong>Lengte (m)</strong> — totale lengte van de muur. Bij meerdere wanden maak je per wand een berekening.</li>
+                <li data-i18n-html="in.hgt"><strong>Hoogte (m)</strong> — totale hoogte van de muur, van onderkant eerste laag tot bovenkant laatste laag.</li>
+                <li data-i18n-html="in.perm2"><strong>Stenen per m²</strong> — hangt af van steenformaat. Vuistregel: waalformaat 75 per m², dikformaat (standaard) 50 per m², Belgisch module 65 per m², kalkzandsteen (lijmen) 25 per m².</li>
+                <li data-i18n-html="in.waste"><strong>Snijverlies (%)</strong> — standaard 5%. Verhoog naar 7 tot 10% bij veel hoeken, hoeken in halfsteens of een onregelmatige vorm.</li>
+            </ul>
+
+            <h3 data-i18n="h3.open">Openingen (deur of raam)</h3>
+            <ul>
+                <li data-i18n-html="in.oadd"><strong>Opening toevoegen</strong> — voeg per deur of raam een blok toe met breedte en hoogte in meter. BuildExact trekt deze oppervlakken automatisch af van het netto muuroppervlak.</li>
+                <li data-i18n-html="in.lintel"><strong>Latei (automatisch berekend)</strong> — per opening berekent de app een latei die 20 cm aan weerszijden over de opening steekt. Een deur van 90 cm krijgt dus een latei van 1,30 m (0,90 + 2 × 0,20).</li>
+            </ul>
+
+            <h3 data-i18n="h3.mortar">Mortel</h3>
+            <ul>
+                <li data-i18n-html="in.morg"><strong>Mortel (kg/m²)</strong> — vuistregel: dikke voegen (10 mm) 35 kg per m², smalle voegen (5 mm) 20 kg per m², kalkzandsteen gelijmd 8 tot 12 kg per m².</li>
+                <li data-i18n-html="in.morbag"><strong>Zak inhoud (kg)</strong> — standaard 25 kg per zak voor droge mortelmix. Soms 20 kg of 40 kg per zak afhankelijk van leverancier.</li>
+            </ul>
+
+            <h3 data-i18n="h3.cavity">Spouw</h3>
+            <ul>
+                <li data-i18n-html="in.cavs"><strong>Spouwmuur toggle</strong> — zet aan voor een gevel met spouw (binnenblad plus buitenblad, isolatie ertussen). De calculator rekent dan het aantal spouwankers mee.</li>
+                <li data-i18n-html="in.anchor"><strong>Spouwankers per m²</strong> — standaard 5 per m². Hoger bij hoge wind-belasting (kust) of zware isolatie. Lager bij ingebouwde kozijnen.</li>
+            </ul>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.format.h">💡 Stenen per m² per formaat</h3>
+                <p data-i18n="tip.format.p">Waalformaat (210 × 50 × 100 mm) is de meest gebruikte Nederlandse baksteen: 75 stenen per m² wand. Dikformaat (210 × 65 × 100 mm) voelt stoerder, 50 per m². Belgisch module (190 × 50 × 90 mm) komt veel voor in Vlaanderen: 65 per m². Kalkzandsteen lijmblokken (298 × 198 × 100 mm): 25 per m² — veel sneller stapelen omdat ze groter zijn.</p>
+            </div>
+
+            <h2 data-i18n="h2.formula">De formule onder de motorkap</h2>
+            <p data-i18n="p.formula">Netto muuroppervlak eerst: bruto minus de openingen. Daarop reken je bakstenen, mortel en spouwankers. Lateien tellen apart per opening.</p>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.alabel">Netto muuroppervlak</div>
+                <div class="formula" data-i18n="f.amain">Netto = (L × H) − Σ(opening B × H)</div>
+                <div class="formula-ex" data-i18n="f.aex">Voorbeeld: (12 × 13) − (0,90 × 2,10) = 156 − 1,89 = 154,11 m²</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.slabel">Aantal stenen</div>
+                <div class="formula" data-i18n="f.smain">Stenen = Netto × (1 + Snijverlies%) × Stenen/m²</div>
+                <div class="formula-ex" data-i18n="f.sex">Voorbeeld: 154,11 × 1,05 × 50 = 8091 stenen</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.llabel">Latei per opening</div>
+                <div class="formula" data-i18n="f.lmain">Latei lengte = Opening breedte + 2 × 20 cm oplegging</div>
+                <div class="formula-ex" data-i18n="f.lex">Voorbeeld: 0,90 + 2 × 0,20 = 1,30 m latei boven een standaard deur</div>
+            </div>
+
+            <h2 data-i18n="h2.example">Rekenvoorbeeld — muur 12 × 13 m met deur</h2>
+            <p data-i18n="p.example">Dit is de situatie uit de screenshot: muur van 12 m lang en 13 m hoog, één deur van 0,90 × 2,10 m, dikformaat metselwerk (50 stenen/m²) met 5 procent snijverlies, spouwmuur met 5 ankers per m², mortel 35 kg per m² uit zakken van 25 kg.</p>
+
+            <h3 data-i18n="h3.inex">Invoer</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.field">Veld</th><th data-i18n="t.value">Waarde</th></tr>
+                    <tr><td data-i18n="r.len">Lengte muur</td><td class="n">12 m</td></tr>
+                    <tr><td data-i18n="r.hgt">Hoogte muur</td><td class="n">13 m</td></tr>
+                    <tr><td data-i18n="r.perm2">Stenen per m²</td><td class="n">50 (dikformaat)</td></tr>
+                    <tr><td data-i18n="r.waste">Snijverlies</td><td class="n">5 %</td></tr>
+                    <tr><td data-i18n="r.open">Opening 1</td><td class="n">0,90 × 2,10 m</td></tr>
+                    <tr><td data-i18n="r.mortar">Mortel</td><td class="n">35 kg/m²</td></tr>
+                    <tr><td data-i18n="r.bag">Zak mortel</td><td class="n">25 kg</td></tr>
+                    <tr><td data-i18n="r.anchor">Spouwankers per m²</td><td class="n">5</td></tr>
+                </table>
+            </div>
+
+            <h3 data-i18n="h3.calc">Berekening stap voor stap</h3>
+            <ol>
+                <li data-i18n="c.1">Bruto muur: 12 × 13 = 156 m²</li>
+                <li data-i18n="c.2">Opening 1 (deur): 0,90 × 2,10 = 1,89 m² eraf</li>
+                <li data-i18n="c.3">Netto muuroppervlak: 156 − 1,89 = 154,11 m²</li>
+                <li data-i18n="c.4">Bakstenen: 154,11 × 1,05 (5% snijverlies) × 50 stenen/m² = 8091 stuks</li>
+                <li data-i18n="c.5">Mortel: 154,11 × 35 kg = 5393,85 kg; ÷ 25 kg/zak = 215,75 → 216 zakken</li>
+                <li data-i18n="c.6">Latei deur: 0,90 + 2 × 0,20 = 1,30 m (1 latei)</li>
+                <li data-i18n="c.7">Spouwankers: 154,11 × 5 = 770,55 → 771 stuks</li>
+            </ol>
+
+            <h3 data-i18n="h3.outex">Resultaat</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.item">Onderdeel</th><th data-i18n="t.amount">Waarde</th></tr>
+                    <tr><td data-i18n="o.stones">Benodigd bakstenen</td><td class="n">8091</td></tr>
+                    <tr><td data-i18n="o.area">Netto muuroppervlak</td><td class="n">154,11 m²</td></tr>
+                    <tr><td data-i18n="o.mortar">Mortelzakken</td><td class="n">216</td></tr>
+                    <tr><td data-i18n="o.lintel">Lateien</td><td class="n" data-i18n="o.lintelval">1 (totaal 1,3 m)</td></tr>
+                    <tr><td data-i18n="o.anchor">Spouwankers</td><td class="n">771</td></tr>
+                </table>
+            </div>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.lintel.h">⚠️ Latei met 20 cm oplegging aan weerszijden</h3>
+                <p data-i18n="tip.lintel.p">De latei moet voldoende steun hebben aan weerszijden van de opening — standaard 20 cm per kant. BuildExact rekent dit automatisch. Bij extra brede openingen (vanaf 1,80 m) of een draagmuur vraagt een bouwkundige een berekening op maat. Voor een normale buitendeur van 90 cm is 1,30 m latei met prefab stalen H-balk voldoende.</p>
+            </div>
+
+            <h2 data-i18n="h2.formats">Stenen per m² per formaat</h2>
+            <p data-i18n="p.formats">Zelfde muur, verschillende steenformaten geven heel andere aantallen. Op onze netto 154,11 m²:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.format">Formaat</th><th data-i18n="t.size">Afmeting</th><th data-i18n="t.perm2">Per m²</th><th data-i18n="t.needed">Nodig (154 m²)</th></tr>
+                    <tr><td data-i18n="fm.waal">Waalformaat</td><td class="n">210 × 50 × 100 mm</td><td class="n">75</td><td class="n">12 136</td></tr>
+                    <tr><td data-i18n="fm.dik">Dikformaat</td><td class="n">210 × 65 × 100 mm</td><td class="n">50</td><td class="n">8 091</td></tr>
+                    <tr><td data-i18n="fm.vl">Vlaams module</td><td class="n">190 × 50 × 90 mm</td><td class="n">65</td><td class="n">10 519</td></tr>
+                    <tr><td data-i18n="fm.ks">Kalkzandsteen</td><td class="n">298 × 198 × 100 mm</td><td class="n">25</td><td class="n">4 045</td></tr>
+                </table>
+            </div>
+
+            <h2 data-i18n="h2.steps">Zo doe je dit in BuildExact</h2>
+            <ol class="steps">
+                <li data-i18n-html="s.1"><strong>Open de Bakstenen calculator</strong> onder Materialen. Vul lengte en hoogte van de muur in meter in.</li>
+                <li data-i18n-html="s.2"><strong>Stenen per m² en snijverlies</strong>: dikformaat 50, waalformaat 75. Snijverlies 5 voor rechte muur, 7 tot 10 voor hoeken en bijzondere vorm.</li>
+                <li data-i18n-html="s.3"><strong>Voeg openingen toe</strong> per deur of raam met breedte en hoogte in meter. De latei wordt automatisch berekend met 20 cm oplegging per zijde.</li>
+                <li data-i18n-html="s.4"><strong>Mortel</strong>: 35 kg per m² voor dikke voegen, 20 kg voor smalle. Zak-inhoud 25 kg standaard.</li>
+                <li data-i18n-html="s.5"><strong>Spouwmuur aan</strong> met 5 ankers per m² voor een normale gevel. Bewaar of deel vanuit de resultaatkaart.</li>
+            </ol>
+
+            <h2 data-i18n="h2.faq">Veelgestelde vragen</h2>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.1">Welke stenen per m² moet ik aanhouden?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.1">Hangt direct af van het formaat. Waalformaat (de meest gebruikte Nederlandse baksteen, 210 × 50 × 100 mm): 75 per m². Dikformaat (210 × 65 × 100 mm): 50 per m². Belgisch module (190 × 50 × 90 mm): 65 per m². Kalkzandsteen in groter formaat met lijm: 25 per m². Lees altijd de productbeschrijving van jouw baksteen om zeker te weten welk aantal per m² hoort bij jouw bestelling.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.2">Hoeveel mortel per m² klopt?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.2">Dikke voegen van 10 mm: 35 kg per m² (standaard metselwerk). Smalle voegen van 5 mm: 20 kg per m². Kalkzandsteen met lijm (geen mortel): 8 tot 12 kg lijmmortel per m². Lijmvoeg schelen je stevig op mortel maar vraagt wel strakkere stenen en meer vakmanschap bij de voorbereiding.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.3">Waarom 20 cm oplegging voor de latei?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.3">Een latei moet de last van het metselwerk boven de opening dragen en overbrengen naar het metselwerk ernaast. 20 cm per zijde is de minimumeis voor een standaard woning-opening tot 1,80 m breed. Bij bredere openingen (schuifpuien, grote raamkozijnen) of een draagmuur wordt dat 30 tot 50 cm per zijde en moet een bouwkundige de latei dimensioneren.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.4">Wat zijn spouwankers precies?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.4">Rvs ankers die het buitenblad en binnenblad van een spouwmuur aan elkaar verbinden over de isolatie heen. Zorgt dat de buitengevel niet gaat golven of losraken van het binnenwerk. Standaard 5 per m², hoger in windgevoelige gebieden (kust: 7 per m²) of bij zware isolatie (dikker dan 15 cm: 6 per m²).</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.5">Hoeveel snijverlies op metselwerk?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.5">Standaard 5% voor een rechte muur zonder bijzondere details. 7 tot 10% bij veel hoeken, hoekvertandingen, een niet-rechthoekige vorm of bij halfsteens-aansluitingen. Bij een traditioneel decoratief metselverband (bloksgewijs, kettingverband) kan het snijverlies oplopen tot 12%. Reken aan de bovenkant en houd één pallet reserve achter voor latere reparatie.</div></div>
+                </div>
+            </div>
+
+            <div class="app-cta">
+                <h3 data-i18n="cta.h">🧱 Reken je metselwerk in BuildExact</h3>
+                <p data-i18n="cta.p">Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    <span data-i18n="cta.btn">Gratis downloaden</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="c-wide">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="../calculators.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Calculators</a>
+                <a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="../blog/buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
+                <a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a>
+                <a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
+                <a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
+            </div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item .faq-q').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open'));
+});
+var rp=document.getElementById('progress');
+window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});
+
+const T = {
+    nl: {
+        'bc.current':'Bakstenen','cat':'🧱 Metselwerk',
+        'h1':'Bakstenen berekenen — stenen, mortel, lateien en spouwankers',
+        'lead':'Hoeveel bakstenen, mortelzakken, lateien boven de deur en spouwankers heb je nodig voor een muur van 12 × 13 m met één deur? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt.',
+        'h2.inputs':'Wat vraagt de calculator','p.inputs':'De Bakstenen calculator heeft vier blokken: Muurafmetingen, Openingen (deur of raam), Mortel en Spouw. Elk veld hieronder komt één-op-één overeen met de app.',
+        'h3.wall':'Muurafmetingen',
+        'in.len':'<strong>Lengte (m)</strong> — totale lengte van de muur. Bij meerdere wanden maak je per wand een berekening.',
+        'in.hgt':'<strong>Hoogte (m)</strong> — totale hoogte van de muur, van onderkant eerste laag tot bovenkant laatste laag.',
+        'in.perm2':'<strong>Stenen per m²</strong> — hangt af van steenformaat. Vuistregel: waalformaat 75 per m², dikformaat (standaard) 50 per m², Belgisch module 65 per m², kalkzandsteen (lijmen) 25 per m².',
+        'in.waste':'<strong>Snijverlies (%)</strong> — standaard 5%. Verhoog naar 7 tot 10% bij veel hoeken, hoeken in halfsteens of een onregelmatige vorm.',
+        'h3.open':'Openingen (deur of raam)',
+        'in.oadd':'<strong>Opening toevoegen</strong> — voeg per deur of raam een blok toe met breedte en hoogte in meter. BuildExact trekt deze oppervlakken automatisch af van het netto muuroppervlak.',
+        'in.lintel':'<strong>Latei (automatisch berekend)</strong> — per opening berekent de app een latei die 20 cm aan weerszijden over de opening steekt. Een deur van 90 cm krijgt dus een latei van 1,30 m (0,90 + 2 × 0,20).',
+        'h3.mortar':'Mortel',
+        'in.morg':'<strong>Mortel (kg/m²)</strong> — vuistregel: dikke voegen (10 mm) 35 kg per m², smalle voegen (5 mm) 20 kg per m², kalkzandsteen gelijmd 8 tot 12 kg per m².',
+        'in.morbag':'<strong>Zak inhoud (kg)</strong> — standaard 25 kg per zak voor droge mortelmix. Soms 20 kg of 40 kg per zak afhankelijk van leverancier.',
+        'h3.cavity':'Spouw',
+        'in.cavs':'<strong>Spouwmuur toggle</strong> — zet aan voor een gevel met spouw (binnenblad plus buitenblad, isolatie ertussen). De calculator rekent dan het aantal spouwankers mee.',
+        'in.anchor':'<strong>Spouwankers per m²</strong> — standaard 5 per m². Hoger bij hoge wind-belasting (kust) of zware isolatie. Lager bij ingebouwde kozijnen.',
+        'tip.format.h':'💡 Stenen per m² per formaat','tip.format.p':'Waalformaat (210 × 50 × 100 mm) is de meest gebruikte Nederlandse baksteen: 75 stenen per m² wand. Dikformaat (210 × 65 × 100 mm) voelt stoerder, 50 per m². Belgisch module (190 × 50 × 90 mm) komt veel voor in Vlaanderen: 65 per m². Kalkzandsteen lijmblokken (298 × 198 × 100 mm): 25 per m² — veel sneller stapelen omdat ze groter zijn.',
+        'h2.formula':'De formule onder de motorkap','p.formula':'Netto muuroppervlak eerst: bruto minus de openingen. Daarop reken je bakstenen, mortel en spouwankers. Lateien tellen apart per opening.',
+        'f.alabel':'Netto muuroppervlak','f.amain':'Netto = (L × H) − Σ(opening B × H)','f.aex':'Voorbeeld: (12 × 13) − (0,90 × 2,10) = 156 − 1,89 = 154,11 m²',
+        'f.slabel':'Aantal stenen','f.smain':'Stenen = Netto × (1 + Snijverlies%) × Stenen/m²','f.sex':'Voorbeeld: 154,11 × 1,05 × 50 = 8091 stenen',
+        'f.llabel':'Latei per opening','f.lmain':'Latei lengte = Opening breedte + 2 × 20 cm oplegging','f.lex':'Voorbeeld: 0,90 + 2 × 0,20 = 1,30 m latei boven een standaard deur',
+        'h2.example':'Rekenvoorbeeld — muur 12 × 13 m met deur','p.example':'Dit is de situatie uit de screenshot: muur van 12 m lang en 13 m hoog, één deur van 0,90 × 2,10 m, dikformaat metselwerk (50 stenen/m²) met 5 procent snijverlies, spouwmuur met 5 ankers per m², mortel 35 kg per m² uit zakken van 25 kg.',
+        'h3.inex':'Invoer','t.field':'Veld','t.value':'Waarde',
+        'r.len':'Lengte muur','r.hgt':'Hoogte muur','r.perm2':'Stenen per m²','r.waste':'Snijverlies','r.open':'Opening 1','r.mortar':'Mortel','r.bag':'Zak mortel','r.anchor':'Spouwankers per m²',
+        'h3.calc':'Berekening stap voor stap',
+        'c.1':'Bruto muur: 12 × 13 = 156 m²',
+        'c.2':'Opening 1 (deur): 0,90 × 2,10 = 1,89 m² eraf',
+        'c.3':'Netto muuroppervlak: 156 − 1,89 = 154,11 m²',
+        'c.4':'Bakstenen: 154,11 × 1,05 (5% snijverlies) × 50 stenen/m² = 8091 stuks',
+        'c.5':'Mortel: 154,11 × 35 kg = 5393,85 kg; ÷ 25 kg/zak = 215,75 → 216 zakken',
+        'c.6':'Latei deur: 0,90 + 2 × 0,20 = 1,30 m (1 latei)',
+        'c.7':'Spouwankers: 154,11 × 5 = 770,55 → 771 stuks',
+        'h3.outex':'Resultaat','t.item':'Onderdeel','t.amount':'Waarde',
+        'o.stones':'Benodigd bakstenen','o.area':'Netto muuroppervlak','o.mortar':'Mortelzakken','o.lintel':'Lateien','o.lintelval':'1 (totaal 1,3 m)','o.anchor':'Spouwankers',
+        'tip.lintel.h':'⚠️ Latei met 20 cm oplegging aan weerszijden','tip.lintel.p':'De latei moet voldoende steun hebben aan weerszijden van de opening — standaard 20 cm per kant. BuildExact rekent dit automatisch. Bij extra brede openingen (vanaf 1,80 m) of een draagmuur vraagt een bouwkundige een berekening op maat. Voor een normale buitendeur van 90 cm is 1,30 m latei met prefab stalen H-balk voldoende.',
+        'h2.formats':'Stenen per m² per formaat','p.formats':'Zelfde muur, verschillende steenformaten geven heel andere aantallen. Op onze netto 154,11 m²:',
+        't.format':'Formaat','t.size':'Afmeting','t.perm2':'Per m²','t.needed':'Nodig (154 m²)',
+        'fm.waal':'Waalformaat','fm.dik':'Dikformaat','fm.vl':'Vlaams module','fm.ks':'Kalkzandsteen',
+        'h2.steps':'Zo doe je dit in BuildExact',
+        's.1':'<strong>Open de Bakstenen calculator</strong> onder Materialen. Vul lengte en hoogte van de muur in meter in.',
+        's.2':'<strong>Stenen per m² en snijverlies</strong>: dikformaat 50, waalformaat 75. Snijverlies 5 voor rechte muur, 7 tot 10 voor hoeken en bijzondere vorm.',
+        's.3':'<strong>Voeg openingen toe</strong> per deur of raam met breedte en hoogte in meter. De latei wordt automatisch berekend met 20 cm oplegging per zijde.',
+        's.4':'<strong>Mortel</strong>: 35 kg per m² voor dikke voegen, 20 kg voor smalle. Zak-inhoud 25 kg standaard.',
+        's.5':'<strong>Spouwmuur aan</strong> met 5 ankers per m² voor een normale gevel. Bewaar of deel vanuit de resultaatkaart.',
+        'h2.faq':'Veelgestelde vragen',
+        'q.1':'Welke stenen per m² moet ik aanhouden?','a.1':'Hangt direct af van het formaat. Waalformaat (de meest gebruikte Nederlandse baksteen, 210 × 50 × 100 mm): 75 per m². Dikformaat (210 × 65 × 100 mm): 50 per m². Belgisch module (190 × 50 × 90 mm): 65 per m². Kalkzandsteen in groter formaat met lijm: 25 per m². Lees altijd de productbeschrijving van jouw baksteen om zeker te weten welk aantal per m² hoort bij jouw bestelling.',
+        'q.2':'Hoeveel mortel per m² klopt?','a.2':'Dikke voegen van 10 mm: 35 kg per m² (standaard metselwerk). Smalle voegen van 5 mm: 20 kg per m². Kalkzandsteen met lijm (geen mortel): 8 tot 12 kg lijmmortel per m². Lijmvoeg schelen je stevig op mortel maar vraagt wel strakkere stenen en meer vakmanschap bij de voorbereiding.',
+        'q.3':'Waarom 20 cm oplegging voor de latei?','a.3':'Een latei moet de last van het metselwerk boven de opening dragen en overbrengen naar het metselwerk ernaast. 20 cm per zijde is de minimumeis voor een standaard woning-opening tot 1,80 m breed. Bij bredere openingen (schuifpuien, grote raamkozijnen) of een draagmuur wordt dat 30 tot 50 cm per zijde en moet een bouwkundige de latei dimensioneren.',
+        'q.4':'Wat zijn spouwankers precies?','a.4':'Rvs ankers die het buitenblad en binnenblad van een spouwmuur aan elkaar verbinden over de isolatie heen. Zorgt dat de buitengevel niet gaat golven of losraken van het binnenwerk. Standaard 5 per m², hoger in windgevoelige gebieden (kust: 7 per m²) of bij zware isolatie (dikker dan 15 cm: 6 per m²).',
+        'q.5':'Hoeveel snijverlies op metselwerk?','a.5':'Standaard 5% voor een rechte muur zonder bijzondere details. 7 tot 10% bij veel hoeken, hoekvertandingen, een niet-rechthoekige vorm of bij halfsteens-aansluitingen. Bij een traditioneel decoratief metselverband (bloksgewijs, kettingverband) kan het snijverlies oplopen tot 12%. Reken aan de bovenkant en houd één pallet reserve achter voor latere reparatie.',
+        'cta.h':'🧱 Reken je metselwerk in BuildExact','cta.p':'Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.','cta.btn':'Gratis downloaden',
+    },
+    en: {
+        'bc.current':'Bricks','cat':'🧱 Masonry',
+        'h1':'Brick calculator — bricks, mortar, lintels and wall ties',
+        'lead':'How many bricks, bags of mortar, lintels above the door and cavity wall ties do you need for a 12 × 13 m wall with one door? This page explains every input and shows a real worked example with the exact BuildExact output.',
+        'h2.inputs':'What the calculator asks','p.inputs':'The Brick calculator has four blocks: Wall dimensions, Openings (door or window), Mortar and Cavity. Every field below maps one-to-one to the app.',
+        'h3.wall':'Wall dimensions',
+        'in.len':'<strong>Length (m)</strong> — total length of the wall. For multiple walls, run a calculation per wall.',
+        'in.hgt':'<strong>Height (m)</strong> — total wall height, from bottom of the first course to top of the last.',
+        'in.perm2':'<strong>Bricks per m²</strong> — depends on brick format. Rule of thumb: waalformaat 75/m², dikformaat (standard NL) 50/m², Belgian module 65/m², sand-lime block (glued) 25/m².',
+        'in.waste':'<strong>Cutting waste (%)</strong> — standard 5%. Raise to 7 to 10% for many corners, half-brick returns or irregular shapes.',
+        'h3.open':'Openings (door or window)',
+        'in.oadd':'<strong>Add opening</strong> — add one block per door or window with width and height in metres. BuildExact subtracts these areas from the net wall area.',
+        'in.lintel':'<strong>Lintel (automatic)</strong> — per opening the app calculates a lintel with 20 cm bearing on each side. A 90 cm door gets a 1.30 m lintel (0.90 + 2 × 0.20).',
+        'h3.mortar':'Mortar',
+        'in.morg':'<strong>Mortar (kg/m²)</strong> — rule of thumb: 10 mm joints 35 kg per m², 5 mm joints 20 kg per m², glued sand-lime 8 to 12 kg per m².',
+        'in.morbag':'<strong>Bag content (kg)</strong> — standard 25 kg per bag for dry mortar mix. Sometimes 20 kg or 40 kg depending on supplier.',
+        'h3.cavity':'Cavity',
+        'in.cavs':'<strong>Cavity wall toggle</strong> — turn on for a facade with cavity (inner leaf plus outer leaf with insulation between). The calculator then counts wall ties.',
+        'in.anchor':'<strong>Wall ties per m²</strong> — standard 5 per m². Higher for high wind exposure (coast) or heavy insulation. Lower with built-in frames.',
+        'tip.format.h':'💡 Bricks per m² by format','tip.format.p':'Waalformaat (210 × 50 × 100 mm) is the most common Dutch brick: 75/m² wall. Dikformaat (210 × 65 × 100 mm) looks sturdier, 50/m². Belgian module (190 × 50 × 90 mm) is common in Flanders: 65/m². Sand-lime glue blocks (298 × 198 × 100 mm): 25/m² — stack much faster because the blocks are bigger.',
+        'h2.formula':'The formula under the hood','p.formula':'Net wall area first: gross minus openings. From that you get bricks, mortar and wall ties. Lintels are counted per opening.',
+        'f.alabel':'Net wall area','f.amain':'Net = (L × H) − Σ(opening W × H)','f.aex':'Example: (12 × 13) − (0.90 × 2.10) = 156 − 1.89 = 154.11 m²',
+        'f.slabel':'Brick count','f.smain':'Bricks = Net × (1 + Cutting waste%) × Bricks/m²','f.sex':'Example: 154.11 × 1.05 × 50 = 8091 bricks',
+        'f.llabel':'Lintel per opening','f.lmain':'Lintel length = Opening width + 2 × 20 cm bearing','f.lex':'Example: 0.90 + 2 × 0.20 = 1.30 m lintel above a standard door',
+        'h2.example':'Worked example — wall 12 × 13 m with door','p.example':'This is the situation from the screenshot: wall 12 m long and 13 m high, one door 0.90 × 2.10 m, dikformaat masonry (50 bricks/m²) with 5 percent cutting waste, cavity wall with 5 ties per m², mortar 35 kg per m² from 25 kg bags.',
+        'h3.inex':'Input','t.field':'Field','t.value':'Value',
+        'r.len':'Wall length','r.hgt':'Wall height','r.perm2':'Bricks per m²','r.waste':'Cutting waste','r.open':'Opening 1','r.mortar':'Mortar','r.bag':'Bag content','r.anchor':'Wall ties per m²',
+        'h3.calc':'Calculation step by step',
+        'c.1':'Gross wall: 12 × 13 = 156 m²',
+        'c.2':'Opening 1 (door): 0.90 × 2.10 = 1.89 m² subtracted',
+        'c.3':'Net wall area: 156 − 1.89 = 154.11 m²',
+        'c.4':'Bricks: 154.11 × 1.05 (5% waste) × 50 bricks/m² = 8091 pieces',
+        'c.5':'Mortar: 154.11 × 35 kg = 5393.85 kg; ÷ 25 kg/bag = 215.75 → 216 bags',
+        'c.6':'Door lintel: 0.90 + 2 × 0.20 = 1.30 m (1 lintel)',
+        'c.7':'Wall ties: 154.11 × 5 = 770.55 → 771 pieces',
+        'h3.outex':'Result','t.item':'Item','t.amount':'Value',
+        'o.stones':'Bricks needed','o.area':'Net wall area','o.mortar':'Mortar bags','o.lintel':'Lintels','o.lintelval':'1 (total 1.3 m)','o.anchor':'Wall ties',
+        'tip.lintel.h':'⚠️ Lintel with 20 cm bearing each side','tip.lintel.p':'The lintel must have enough support each side of the opening — standard 20 cm per side. BuildExact calculates this automatically. For extra wide openings (from 1.80 m) or a load-bearing wall, a structural engineer should size the lintel. For a normal exterior door of 90 cm, a 1.30 m lintel with a prefab steel H-beam is enough.',
+        'h2.formats':'Bricks per m² by format','p.formats':'Same wall, different brick sizes give very different counts. On our net 154.11 m²:',
+        't.format':'Format','t.size':'Dimensions','t.perm2':'Per m²','t.needed':'Needed (154 m²)',
+        'fm.waal':'Waalformaat','fm.dik':'Dikformaat','fm.vl':'Flemish module','fm.ks':'Sand-lime block',
+        'h2.steps':'How to do this in BuildExact',
+        's.1':'<strong>Open the Brick calculator</strong> under Materials. Enter wall length and height in metres.',
+        's.2':'<strong>Bricks per m² and cutting waste</strong>: dikformaat 50, waalformaat 75. Waste 5 for straight walls, 7 to 10 for corners and odd shapes.',
+        's.3':'<strong>Add openings</strong> per door or window with width and height. The lintel is calculated automatically with 20 cm bearing per side.',
+        's.4':'<strong>Mortar</strong>: 35 kg per m² for thick joints, 20 kg for thin. Bag content 25 kg standard.',
+        's.5':'<strong>Cavity wall on</strong> with 5 ties per m² for a normal facade. Save or share from the result card.',
+        'h2.faq':'Frequently asked questions',
+        'q.1':'Which bricks-per-m² should I use?','a.1':'Depends on format. Waalformaat (the most common Dutch brick, 210 × 50 × 100 mm): 75/m². Dikformaat (210 × 65 × 100 mm): 50/m². Belgian module (190 × 50 × 90 mm): 65/m². Larger sand-lime blocks glued: 25/m². Always read the product spec to be sure which count fits your batch.',
+        'q.2':'How much mortar per m² is right?','a.2':'10 mm joints: 35 kg per m² (standard brickwork). 5 mm joints: 20 kg per m². Glued sand-lime (no mortar): 8 to 12 kg glue mortar per m². Glue joints save a lot of mortar but require tighter bricks and more skill in preparation.',
+        'q.3':'Why 20 cm bearing for the lintel?','a.3':'A lintel has to carry the masonry above the opening and transfer it into the surrounding brickwork. 20 cm per side is the minimum for a standard domestic opening up to 1.80 m wide. Wider openings (sliding doors, large window frames) or load-bearing walls need 30 to 50 cm per side and a structural engineer to size the lintel.',
+        'q.4':'What are wall ties exactly?','a.4':'Stainless steel ties connecting the outer leaf to the inner leaf of a cavity wall across the insulation. Prevents the facade from waving or coming loose. Standard 5 per m², higher in windy areas (coast: 7 per m²) or with heavy insulation (thicker than 15 cm: 6 per m²).',
+        'q.5':'How much cutting waste for brickwork?','a.5':'Standard 5% for a straight wall without unusual details. 7 to 10% for lots of corners, toothing, non-rectangular shapes or half-brick returns. For traditional decorative bonds (block bond, chain bond) waste can climb to 12%. Round up and keep one pallet in reserve for repairs.',
+        'cta.h':'🧱 Calculate your brickwork in BuildExact','cta.p':'Free in the app. Calculate, save as a project, convert to a branded PDF quote — all without retyping.','cta.btn':'Download free',
+    }
+};
+const savedLang = localStorage.getItem('gs-lang');
+const browserIsNL = (navigator.language || '').toLowerCase().startsWith('nl');
+let lang = savedLang || (browserIsNL ? 'nl' : 'en');
+function applyLang(l) {
+    const d = T[l]; document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
+    document.querySelectorAll('[data-img-prefix]').forEach(img => { img.src = `../assets/calculator-${l}/${img.dataset.imgPrefix}-${l}-${img.dataset.imgNum}.png`; });
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    lang = l; localStorage.setItem('gs-lang', l);
+}
+applyLang(lang);
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+</script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

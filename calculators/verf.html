@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verf berekenen — liters, lagen, dekking en blikgroottes | BuildExact</title>
+    <meta name="description" content="Hoeveel liter verf heb je nodig? Reken m², lagen, dekking en afval uit en krijg direct het aantal blikken van 1 L, 2,5 L, 5 L en 10 L. Gratis in BuildExact op Android.">
+    <meta name="keywords" content="verf berekenen, hoeveel liter verf, verf calculator app, muurverf berekenen, dekking m2 per liter, blikgrootte verf, grondverf berekenen, BuildExact">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/calculators/verf.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/calculators/verf.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/calculators/verf.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/calculators/verf.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded-studio.app/calculators/verf.html">
+    <meta property="og:title" content="Verf berekenen — liters, lagen, dekking en blikgroottes">
+    <meta property="og:description" content="Complete uitleg plus rekenvoorbeeld. Reken verf in BuildExact in onder de minuut uit.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx.png">
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"HowTo",
+        "name":"Verf berekenen met BuildExact",
+        "description":"Reken liters muurverf uit op basis van oppervlakte, aantal lagen, dekking per liter en afval. BuildExact vertaalt dit meteen in blikken van 1, 2,5, 5 en 10 L.",
+        "totalTime":"PT2M",
+        "step":[
+            {"@type":"HowToStep","name":"Open Verf calculator","text":"Open BuildExact en kies de Verf calculator onder Materialen."},
+            {"@type":"HowToStep","name":"Vul oppervlakte in","text":"Voer de totale te verven oppervlakte in m2 in. Trek ramen en deuren eraf als die niet mee moeten."},
+            {"@type":"HowToStep","name":"Lagen en dekking","text":"Zet het aantal lagen en de dekking in m2 per liter (zie je verfblik)."},
+            {"@type":"HowToStep","name":"Grondverf en afval","text":"Zet grondverf aan als het oppervlak nieuw of poreus is. Vul het afvalpercentage in op basis van kwast of spuiten."},
+            {"@type":"HowToStep","name":"Lees het resultaat","text":"BuildExact toont totaal in liters plus het aantal blikken per blikgrootte. Opslaan koppelt het aan je project."}
+        ],
+        "author":{"@type":"Organization","name":"Grounded Studio","url":"https://grounded-studio.app"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://grounded-studio.app/"},
+            {"@type":"ListItem","position":2,"name":"BuildExact","item":"https://grounded-studio.app/buildexact.html"},
+            {"@type":"ListItem","position":3,"name":"Calculators","item":"https://grounded-studio.app/calculators.html"},
+            {"@type":"ListItem","position":4,"name":"Verf"}
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background:#0a0f1a; color:#f1f5f9; font-family:'Inter',system-ui,sans-serif; line-height:1.6; }
+        :root { --bx:#2563eb; --bx2:#1d4ed8; --gs:#818cf8; --gs-glow:rgba(129,140,248,.3); --border:rgba(255,255,255,.07); --muted:#94a3b8; }
+        .c { max-width:820px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-right { display:flex; align-items:center; gap:16px; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .nav-back:hover { color:#fff; }
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+
+        .article-header { padding:140px 0 50px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:22px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .breadcrumb a:hover { color:#94a3b8; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.9rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:16px; }
+        .lead { color:#cbd5e1; font-size:1.1rem; line-height:1.7; max-width:680px; }
+
+        .article-body { padding:30px 0 60px; }
+        .screenshots { margin:0 auto 44px; max-width:760px; padding:0 20px; }
+        .screenshots-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
+        .screenshots-grid.three { grid-template-columns:repeat(3, 1fr); }
+        .screenshot { aspect-ratio:9/19.5; border-radius:28px; overflow:hidden; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 50px rgba(0,0,0,.4); transition:transform .3s ease; }
+        .screenshot:hover { transform:translateY(-4px); }
+        .screenshot img { width:100%; height:100%; object-fit:cover; display:block; }
+        @media (max-width:640px) { .screenshots-grid, .screenshots-grid.three { grid-template-columns:1fr; max-width:300px; margin:0 auto; } }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 14px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body p { font-size:1.03rem; color:#cbd5e1; line-height:1.8; margin-bottom:22px; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:22px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.78; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:26px; margin:28px 0; }
+        .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+        .formula { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:8px; }
+        .formula-ex { font-size:.9rem; color:var(--muted); }
+
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:22px 26px; margin:28px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:8px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.7; margin:0; }
+
+        .table-wrap { overflow-x:auto; margin:24px 0; border-radius:14px; border:1px solid var(--border); }
+        table { width:100%; border-collapse:collapse; font-size:.92rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        td.n { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; color:#fff; }
+
+        .steps { counter-reset:step; padding:0 !important; }
+        .steps li { list-style:none; position:relative; padding-left:48px; margin-bottom:18px; counter-increment:step; }
+        .steps li::before { content:counter(step); position:absolute; left:0; top:-2px; width:32px; height:32px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.35); color:var(--bx); font-weight:800; font-size:.9rem; display:flex; align-items:center; justify-content:center; }
+
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:30px; margin:44px 0 10px; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:18px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+
+        .faq-wrap { margin:28px 0; display:flex; flex-direction:column; gap:10px; }
+        .faq-item { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+        .faq-item.open { border-color:rgba(37,99,235,.35); background:rgba(37,99,235,.04); }
+        .faq-q { width:100%; background:none; border:none; color:#f1f5f9; font-family:inherit; font-size:.98rem; font-weight:600; text-align:left; padding:18px 22px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+        .faq-icon { width:24px; height:24px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.3); color:var(--bx); display:flex; align-items:center; justify-content:center; font-size:.9rem; font-weight:700; flex-shrink:0; transition:transform .3s; }
+        .faq-item.open .faq-icon { transform:rotate(45deg); }
+        .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+        .faq-item.open .faq-a { max-height:400px; }
+        .faq-a-inner { padding:0 22px 18px; font-size:.95rem; color:#cbd5e1; line-height:1.7; }
+
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+
+        #progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#2563eb,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><div class="nav-right"><a href="../calculators.html" class="nav-back">← Calculators</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="../calculators.html">Calculators</a> / <span data-i18n="bc.current">Verf</span></div>
+            <div class="article-cat" data-i18n="cat">🎨 Afwerking</div>
+            <h1 data-i18n="h1">Verf berekenen — liters, lagen, dekking en blikgroottes</h1>
+            <p class="lead" data-i18n="lead">Hoeveel liter muurverf heb je nodig voor 123 m² in twee lagen, met 5 procent afval? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt — inclusief hoeveel blikken van 1, 2,5, 5 en 10 liter je in het karretje legt.</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="screenshots">
+            <div class="screenshots-grid">
+                <div class="screenshot"><img src="../assets/calculator-nl/verf-nl-1.png" alt="Verf calculator — Afmetingen en lagen" data-img-prefix="verf" data-img-num="1" loading="lazy"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/verf-nl-2.png" alt="Verf calculator — Resultaat" data-img-prefix="verf" data-img-num="2" loading="lazy"></div>
+            </div>
+        </div>
+        <div class="c">
+
+            <h2 data-i18n="h2.inputs">Wat vraagt de calculator</h2>
+            <p data-i18n="p.inputs">De Verf calculator heeft vier blokken: Afmetingen, Grondverf, Opbreng-methode en de Uitkomst. Elk veld hieronder komt één-op-één overeen met de app.</p>
+
+            <h3 data-i18n="h3.area">Afmetingen</h3>
+            <ul>
+                <li data-i18n-html="in.area"><strong>Oppervlakte (m²)</strong> — de netto te verven oppervlakte. Trek grote ramen, deuren of niet-te-verven stroken eraf. Een kleine deur negeer je meestal in de m²-opgave (het valt in de afvalmarge).</li>
+                <li data-i18n-html="in.coats"><strong>Lagen</strong> — standaard 2 lagen. Donkere kleur over een lichte? Reken op 3. Lichte kleur over hetzelfde type? 1 kan.</li>
+                <li data-i18n-html="in.coverage"><strong>Dekking (m²/L)</strong> — staat op het verfblik. Vuistregel: latex muurverf 8–12, grondverf 10–14, lak 12–16, buitenmuurverf 6–10, betonverf 4–6.</li>
+            </ul>
+
+            <h3 data-i18n="h3.primer">Grondverf (optioneel)</h3>
+            <ul>
+                <li data-i18n-html="in.primer"><strong>Grondlaag meeberekenen</strong> — zet dit aan als het oppervlak nieuw, poreus of sterk zuigend is (nieuwe stuclaag, kalkverf, oud behanglijm). De calculator rekent dan een extra laag mee met een eigen dekking.</li>
+            </ul>
+
+            <h3 data-i18n="h3.method">Opbreng-methode</h3>
+            <ul>
+                <li data-i18n-html="in.brush"><strong>Kwast / roller</strong> — standaard afval 5–10%. Minder overspray, meer in de prullenbak via de bak van de roller.</li>
+                <li data-i18n-html="in.spray"><strong>Spuiten</strong> — hoger afval, meestal 15–25%. Overspray op plinten, plafond en vloer gaat verloren. Standaard binnen 20%.</li>
+                <li data-i18n-html="in.waste"><strong>Afval (%)</strong> — losse waarde die je zelf kunt bijsturen. 5% is gangbaar voor nette kwast- of rollerwerk op een gladde muur.</li>
+            </ul>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.cov.h">💡 Dekking per verftype</h3>
+                <p data-i18n="tip.cov.p">De dekking op het blik is theoretisch — op een glad oppervlak. In de praktijk haal je 10–20% minder. Reken op de ondergrens van wat de fabrikant aangeeft, dan heb je nooit tekort.</p>
+            </div>
+
+            <h2 data-i18n="h2.formula">De formule onder de motorkap</h2>
+            <p data-i18n="p.formula">Verf is simpele wiskunde: oppervlakte keer het aantal lagen, gedeeld door dekking, plus afvalmarge. BuildExact vertaalt dat totaal direct naar het aantal blikken per blikgrootte.</p>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.label">Basisformule</div>
+                <div class="formula" data-i18n="f.main">Liters = (Oppervlakte × Lagen × (1 + Afval%)) / Dekking</div>
+                <div class="formula-ex" data-i18n="f.ex">Voorbeeld: (123 × 2 × 1,05) / 10 ≈ 25,8 L</div>
+            </div>
+
+            <h2 data-i18n="h2.example">Rekenvoorbeeld — binnenmuur 123 m²</h2>
+            <p data-i18n="p.example">Dit is de situatie uit de screenshot: één grote binnenruimte, twee lagen muurverf, kwastwerk met 5% afval. Geen grondverf nodig.</p>
+
+            <h3 data-i18n="h3.inex">Invoer</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.field">Veld</th><th data-i18n="t.value">Waarde</th></tr>
+                    <tr><td data-i18n="r.area">Oppervlakte</td><td class="n">123 m²</td></tr>
+                    <tr><td data-i18n="r.coats">Lagen</td><td class="n">2</td></tr>
+                    <tr><td data-i18n="r.cov">Dekking</td><td class="n">10 m²/L</td></tr>
+                    <tr><td data-i18n="r.primer">Grondverf</td><td class="n" data-i18n="r.no">Nee</td></tr>
+                    <tr><td data-i18n="r.method">Opbreng-methode</td><td class="n" data-i18n="r.brush">Kwast / roller</td></tr>
+                    <tr><td data-i18n="r.waste">Afval</td><td class="n">5 %</td></tr>
+                </table>
+            </div>
+
+            <h3 data-i18n="h3.calc">Berekening stap voor stap</h3>
+            <ol>
+                <li data-i18n="c.1">123 m² × 2 lagen = 246 m² totaal te verven oppervlak</li>
+                <li data-i18n="c.2">246 ÷ 10 m²/L = 24,6 L netto</li>
+                <li data-i18n="c.3">24,6 × 1,05 (5% afval) = 25,83 L → afgerond 25,8 L</li>
+            </ol>
+
+            <h3 data-i18n="h3.outex">Resultaat</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.total">Geschat totaal</th><th class="n"><strong>25,8 L</strong></th></tr>
+                </table>
+            </div>
+
+            <p data-i18n="p.cans">BuildExact vertaalt dat totaal naar blikken per gangbare blikgrootte. Je zoekt de combinatie die het dichtst bij 25,8 L uitkomt zonder tekort — vaak kies je de grote blikken voor de hoofdlaag en één klein voor de bijwerk.</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.cansize">Blikgrootte</th><th data-i18n="t.cancount">Aantal</th><th data-i18n="t.cansum">Totaal</th></tr>
+                    <tr><td>1 L</td><td class="n">26</td><td class="n">26,0 L</td></tr>
+                    <tr><td>2,5 L</td><td class="n">11</td><td class="n">27,5 L</td></tr>
+                    <tr><td>5 L</td><td class="n">6</td><td class="n">30,0 L</td></tr>
+                    <tr><td>10 L</td><td class="n">3</td><td class="n">30,0 L</td></tr>
+                </table>
+            </div>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.mix.h">💡 Combineer blikgroottes</h3>
+                <p data-i18n="tip.mix.p">In de praktijk neem je zelden alleen 1 L. Voor 25,8 L is 2 × 10 L plus 2 × 2,5 L (= 25 L) plus één 1 L blik voor bijwerk vaak het goedkoopst. Blikken van 10 L zijn per liter het goedkoopst, 1 L blikken het duurst — maar handig als reserve.</p>
+            </div>
+
+            <h2 data-i18n="h2.spray">Verschil kwast/roller vs spuiten</h2>
+            <p data-i18n="p.spray">Spuiten gaat snel, maar je verliest verf aan overspray. Bij dezelfde 123 m² × 2 lagen × 10 m²/L kom je op:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.method">Methode</th><th data-i18n="t.waste">Afval</th><th data-i18n="t.needed">Nodig</th></tr>
+                    <tr><td data-i18n="t.m.brush">Kwast / roller</td><td class="n">5 %</td><td class="n">25,8 L</td></tr>
+                    <tr><td data-i18n="t.m.brush2">Kwast / roller (ruim)</td><td class="n">10 %</td><td class="n">27,1 L</td></tr>
+                    <tr><td data-i18n="t.m.spray">Spuiten (schoon)</td><td class="n">15 %</td><td class="n">28,3 L</td></tr>
+                    <tr><td data-i18n="t.m.spray2">Spuiten (standaard)</td><td class="n">20 %</td><td class="n">29,5 L</td></tr>
+                    <tr><td data-i18n="t.m.spray3">Spuiten (grof werk)</td><td class="n">25 %</td><td class="n">30,8 L</td></tr>
+                </table>
+            </div>
+
+            <h2 data-i18n="h2.steps">Zo doe je dit in BuildExact</h2>
+            <ol class="steps">
+                <li data-i18n-html="s.1"><strong>Open de Verf calculator</strong> onder Materialen. Je ziet meteen 'Afmetingen' bovenin.</li>
+                <li data-i18n-html="s.2"><strong>Vul oppervlakte, lagen en dekking in</strong>. De dekking lees je af van het blik — 10 m²/L is een nette standaard voor latex muurverf.</li>
+                <li data-i18n-html="s.3"><strong>Grondverf alleen bij nieuw of poreus oppervlak</strong>. Zet 'Grondlaag meeberekenen' aan en vul de aparte dekking in.</li>
+                <li data-i18n-html="s.4"><strong>Kies kwast/roller of spuiten</strong> en pas 'Afval %' aan — meestal 5 voor rollerwerk, 20 voor spuiten.</li>
+                <li data-i18n-html="s.5"><strong>Bewaar of deel</strong> het resultaat vanuit de uitkomstkaart — of koppel aan een project zodat de blikken op je offerte komen.</li>
+            </ol>
+
+            <h2 data-i18n="h2.faq">Veelgestelde vragen</h2>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.1">Hoe weet ik de dekking van mijn verf?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.1">Staat op het blik vermeld, meestal als 'opbrengst' of 'rendement' in m² per liter. Vuistregels: latex muurverf 8 tot 12 m²/L, grondverf 10 tot 14, lakverf op glad hout 12 tot 16, buitenmuurverf 6 tot 10. Reken altijd op de ondergrens om tekort te voorkomen.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.2">Moet ik altijd twee lagen rekenen?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.2">Standaard: ja, twee lagen. Verf je dezelfde kleur over een goed geverfd oppervlak? Eén laag kan. Donkere kleur over wit of fel over neutraal? Reken op drie lagen om streperigheid te voorkomen.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.3">Wanneer heb ik grondverf nodig?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.3">Bij nieuw stucwerk, gipsplaat, poreus hout, oud behanglijm of een sterk zuigende ondergrond. Grondverf voorkomt dat je bovenlaag ongelijk in de muur trekt. Op een glad eerder geverfd oppervlak kun je grondverf meestal overslaan.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.4">Waarom vraagt de calculator afval percentage?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.4">Een deel van je verf gaat niet op de muur: residu in de bak, uitgedroogde randen, kleine morsresten en bij spuiten overspray. 5 procent is normaal voor nette kwast of roller, 15 tot 25 procent voor spuiten. Zonder deze marge heb je structureel een halve emmer te weinig.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.5">Kan ik een deur of raam negeren?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.5">Voor één deur of één klein raam: ja, dat valt in de afvalmarge. Voor meerdere grote ramen of een hele glaswand: trek het eraf. Elk vierkante meter minder is bij 10 m²/L × 2 lagen gewoon 0,2 L minder nodig — bij 20 m² ramen scheelt dat 4 L.</div></div>
+                </div>
+            </div>
+
+            <div class="app-cta">
+                <h3 data-i18n="cta.h">🎨 Reken je verf in BuildExact</h3>
+                <p data-i18n="cta.p">Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    <span data-i18n="cta.btn">Gratis downloaden</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="c-wide">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="../calculators.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Calculators</a>
+                <a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="../blog/buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
+                <a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a>
+                <a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
+                <a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
+            </div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item .faq-q').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open'));
+});
+var rp=document.getElementById('progress');
+window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});
+
+const T = {
+    nl: {
+        'bc.current':'Verf','cat':'🎨 Afwerking',
+        'h1':'Verf berekenen — liters, lagen, dekking en blikgroottes',
+        'lead':'Hoeveel liter muurverf heb je nodig voor 123 m² in twee lagen, met 5 procent afval? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt — inclusief hoeveel blikken van 1, 2,5, 5 en 10 liter je in het karretje legt.',
+        'h2.inputs':'Wat vraagt de calculator','p.inputs':'De Verf calculator heeft vier blokken: Afmetingen, Grondverf, Opbreng-methode en de Uitkomst. Elk veld hieronder komt één-op-één overeen met de app.',
+        'h3.area':'Afmetingen',
+        'in.area':'<strong>Oppervlakte (m²)</strong> — de netto te verven oppervlakte. Trek grote ramen, deuren of niet-te-verven stroken eraf. Een kleine deur negeer je meestal in de m²-opgave (het valt in de afvalmarge).',
+        'in.coats':'<strong>Lagen</strong> — standaard 2 lagen. Donkere kleur over een lichte? Reken op 3. Lichte kleur over hetzelfde type? 1 kan.',
+        'in.coverage':'<strong>Dekking (m²/L)</strong> — staat op het verfblik. Vuistregel: latex muurverf 8–12, grondverf 10–14, lak 12–16, buitenmuurverf 6–10, betonverf 4–6.',
+        'h3.primer':'Grondverf (optioneel)',
+        'in.primer':'<strong>Grondlaag meeberekenen</strong> — zet dit aan als het oppervlak nieuw, poreus of sterk zuigend is (nieuwe stuclaag, kalkverf, oud behanglijm). De calculator rekent dan een extra laag mee met een eigen dekking.',
+        'h3.method':'Opbreng-methode',
+        'in.brush':'<strong>Kwast / roller</strong> — standaard afval 5–10%. Minder overspray, meer in de prullenbak via de bak van de roller.',
+        'in.spray':'<strong>Spuiten</strong> — hoger afval, meestal 15–25%. Overspray op plinten, plafond en vloer gaat verloren. Standaard binnen 20%.',
+        'in.waste':'<strong>Afval (%)</strong> — losse waarde die je zelf kunt bijsturen. 5% is gangbaar voor nette kwast- of rollerwerk op een gladde muur.',
+        'tip.cov.h':'💡 Dekking per verftype','tip.cov.p':'De dekking op het blik is theoretisch — op een glad oppervlak. In de praktijk haal je 10–20% minder. Reken op de ondergrens van wat de fabrikant aangeeft, dan heb je nooit tekort.',
+        'h2.formula':'De formule onder de motorkap','p.formula':'Verf is simpele wiskunde: oppervlakte keer het aantal lagen, gedeeld door dekking, plus afvalmarge. BuildExact vertaalt dat totaal direct naar het aantal blikken per blikgrootte.',
+        'f.label':'Basisformule','f.main':'Liters = (Oppervlakte × Lagen × (1 + Afval%)) / Dekking','f.ex':'Voorbeeld: (123 × 2 × 1,05) / 10 ≈ 25,8 L',
+        'h2.example':'Rekenvoorbeeld — binnenmuur 123 m²','p.example':'Dit is de situatie uit de screenshot: één grote binnenruimte, twee lagen muurverf, kwastwerk met 5% afval. Geen grondverf nodig.',
+        'h3.inex':'Invoer','t.field':'Veld','t.value':'Waarde',
+        'r.area':'Oppervlakte','r.coats':'Lagen','r.cov':'Dekking','r.primer':'Grondverf','r.no':'Nee','r.method':'Opbreng-methode','r.brush':'Kwast / roller','r.waste':'Afval',
+        'h3.calc':'Berekening stap voor stap',
+        'c.1':'123 m² × 2 lagen = 246 m² totaal te verven oppervlak',
+        'c.2':'246 ÷ 10 m²/L = 24,6 L netto',
+        'c.3':'24,6 × 1,05 (5% afval) = 25,83 L → afgerond 25,8 L',
+        'h3.outex':'Resultaat','t.total':'Geschat totaal',
+        'p.cans':'BuildExact vertaalt dat totaal naar blikken per gangbare blikgrootte. Je zoekt de combinatie die het dichtst bij 25,8 L uitkomt zonder tekort — vaak kies je de grote blikken voor de hoofdlaag en één klein voor de bijwerk.',
+        't.cansize':'Blikgrootte','t.cancount':'Aantal','t.cansum':'Totaal',
+        'tip.mix.h':'💡 Combineer blikgroottes','tip.mix.p':'In de praktijk neem je zelden alleen 1 L. Voor 25,8 L is 2 × 10 L plus 2 × 2,5 L (= 25 L) plus één 1 L blik voor bijwerk vaak het goedkoopst. Blikken van 10 L zijn per liter het goedkoopst, 1 L blikken het duurst — maar handig als reserve.',
+        'h2.spray':'Verschil kwast/roller en spuiten','p.spray':'Spuiten gaat snel, maar je verliest verf aan overspray. Bij dezelfde 123 m² × 2 lagen × 10 m²/L kom je op:',
+        't.method':'Methode','t.waste':'Afval','t.needed':'Nodig',
+        't.m.brush':'Kwast / roller','t.m.brush2':'Kwast / roller (ruim)','t.m.spray':'Spuiten (schoon)','t.m.spray2':'Spuiten (standaard)','t.m.spray3':'Spuiten (grof werk)',
+        'h2.steps':'Zo doe je dit in BuildExact',
+        's.1':"<strong>Open de Verf calculator</strong> onder Materialen. Je ziet meteen 'Afmetingen' bovenin.",
+        's.2':'<strong>Vul oppervlakte, lagen en dekking in</strong>. De dekking lees je af van het blik — 10 m²/L is een nette standaard voor latex muurverf.',
+        's.3':"<strong>Grondverf alleen bij nieuw of poreus oppervlak</strong>. Zet 'Grondlaag meeberekenen' aan en vul de aparte dekking in.",
+        's.4':"<strong>Kies kwast/roller of spuiten</strong> en pas 'Afval %' aan — meestal 5 voor rollerwerk, 20 voor spuiten.",
+        's.5':'<strong>Bewaar of deel</strong> het resultaat vanuit de uitkomstkaart — of koppel aan een project zodat de blikken op je offerte komen.',
+        'h2.faq':'Veelgestelde vragen',
+        'q.1':'Hoe weet ik de dekking van mijn verf?','a.1':"Staat op het blik vermeld, meestal als 'opbrengst' of 'rendement' in m² per liter. Vuistregels: latex muurverf 8 tot 12 m²/L, grondverf 10 tot 14, lakverf op glad hout 12 tot 16, buitenmuurverf 6 tot 10. Reken altijd op de ondergrens om tekort te voorkomen.",
+        'q.2':'Moet ik altijd twee lagen rekenen?','a.2':'Standaard: ja, twee lagen. Verf je dezelfde kleur over een goed geverfd oppervlak? Eén laag kan. Donkere kleur over wit of fel over neutraal? Reken op drie lagen om streperigheid te voorkomen.',
+        'q.3':'Wanneer heb ik grondverf nodig?','a.3':'Bij nieuw stucwerk, gipsplaat, poreus hout, oud behanglijm of een sterk zuigende ondergrond. Grondverf voorkomt dat je bovenlaag ongelijk in de muur trekt. Op een glad eerder geverfd oppervlak kun je grondverf meestal overslaan.',
+        'q.4':'Waarom vraagt de calculator afval percentage?','a.4':'Een deel van je verf gaat niet op de muur: residu in de bak, uitgedroogde randen, kleine morsresten en bij spuiten overspray. 5 procent is normaal voor nette kwast of roller, 15 tot 25 procent voor spuiten. Zonder deze marge heb je structureel een halve emmer te weinig.',
+        'q.5':'Kan ik een deur of raam negeren?','a.5':'Voor één deur of één klein raam: ja, dat valt in de afvalmarge. Voor meerdere grote ramen of een hele glaswand: trek het eraf. Elk vierkante meter minder is bij 10 m²/L × 2 lagen gewoon 0,2 L minder nodig — bij 20 m² ramen scheelt dat 4 L.',
+        'cta.h':'🎨 Reken je verf in BuildExact','cta.p':'Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.','cta.btn':'Gratis downloaden',
+    },
+    en: {
+        'bc.current':'Paint','cat':'🎨 Finishing',
+        'h1':'Paint calculator — litres, coats, coverage and can sizes',
+        'lead':'How many litres of paint do you need for 123 m² in two coats with 5 percent waste? This page explains every input and shows a real worked example with the exact BuildExact output — including how many 1, 2.5, 5 and 10 litre cans to drop in your basket.',
+        'h2.inputs':'What the calculator asks','p.inputs':'The Paint calculator has four blocks: Dimensions, Primer, Application method and the Result. Every field below maps one-to-one to the app.',
+        'h3.area':'Dimensions',
+        'in.area':'<strong>Area (m²)</strong> — the net paintable area. Subtract large windows, doors or non-paintable strips. A single small door you usually ignore (it falls into the waste margin).',
+        'in.coats':'<strong>Coats</strong> — default 2. Dark colour over a light one? Count 3. Light over the same type? 1 is enough.',
+        'in.coverage':'<strong>Coverage (m²/L)</strong> — printed on the tin. Rules of thumb: emulsion wall paint 8–12, primer 10–14, trim gloss 12–16, exterior wall paint 6–10, floor paint 4–6.',
+        'h3.primer':'Primer (optional)',
+        'in.primer':'<strong>Include primer coat</strong> — turn on if the surface is new, porous or absorbent (fresh plaster, chalk paint, old wallpaper adhesive). The calculator then counts an extra layer with its own coverage.',
+        'h3.method':'Application method',
+        'in.brush':'<strong>Brush / roller</strong> — standard waste 5–10%. Less overspray, more lost in roller trays.',
+        'in.spray':'<strong>Spray</strong> — higher waste, usually 15–25%. Overspray on skirting, ceiling and floor is gone. Standard around 20%.',
+        'in.waste':'<strong>Waste (%)</strong> — a value you can override. 5% is common for clean brush or roller work on a smooth wall.',
+        'tip.cov.h':'💡 Coverage per paint type','tip.cov.p':'The coverage on the tin is theoretical — on a smooth surface. In practice you get 10–20% less. Count on the low end of what the manufacturer states and you will never run short.',
+        'h2.formula':'The formula under the hood','p.formula':'Paint is simple maths: area times coats, divided by coverage, plus a waste margin. BuildExact converts the total straight into the number of cans per can size.',
+        'f.label':'Basic formula','f.main':'Litres = (Area × Coats × (1 + Waste%)) / Coverage','f.ex':'Example: (123 × 2 × 1.05) / 10 ≈ 25.8 L',
+        'h2.example':'Worked example — interior wall 123 m²','p.example':'This is the situation from the screenshot: one large interior space, two coats of wall paint, roller work with 5% waste. No primer needed.',
+        'h3.inex':'Input','t.field':'Field','t.value':'Value',
+        'r.area':'Area','r.coats':'Coats','r.cov':'Coverage','r.primer':'Primer','r.no':'No','r.method':'Application method','r.brush':'Brush / roller','r.waste':'Waste',
+        'h3.calc':'Calculation step by step',
+        'c.1':'123 m² × 2 coats = 246 m² total paintable surface',
+        'c.2':'246 ÷ 10 m²/L = 24.6 L net',
+        'c.3':'24.6 × 1.05 (5% waste) = 25.83 L → rounded 25.8 L',
+        'h3.outex':'Result','t.total':'Estimated total',
+        'p.cans':'BuildExact converts the total into cans per common can size. You pick the combination closest to 25.8 L without running short — typically large cans for the main coat plus a small one for touch-ups.',
+        't.cansize':'Can size','t.cancount':'Count','t.cansum':'Total',
+        'tip.mix.h':'💡 Mix can sizes','tip.mix.p':'In practice you rarely buy only 1 L cans. For 25.8 L, 2 × 10 L plus 2 × 2.5 L (= 25 L) plus one 1 L for touch-ups is often cheapest. 10 L cans are the cheapest per litre, 1 L cans the most expensive — but handy as backup.',
+        'h2.spray':'Brush/roller vs spray','p.spray':'Spraying is fast but you lose paint to overspray. For the same 123 m² × 2 coats × 10 m²/L you get:',
+        't.method':'Method','t.waste':'Waste','t.needed':'Needed',
+        't.m.brush':'Brush / roller','t.m.brush2':'Brush / roller (generous)','t.m.spray':'Spray (clean)','t.m.spray2':'Spray (standard)','t.m.spray3':'Spray (rough work)',
+        'h2.steps':'How to do this in BuildExact',
+        's.1':"<strong>Open the Paint calculator</strong> under Materials. 'Dimensions' is right at the top.",
+        's.2':'<strong>Fill in area, coats and coverage</strong>. You read coverage off the tin — 10 m²/L is a clean standard for emulsion wall paint.',
+        's.3':"<strong>Primer only for new or porous surfaces</strong>. Turn on 'Include primer coat' and fill in the separate coverage.",
+        's.4':"<strong>Pick brush/roller or spray</strong> and tune 'Waste %' — usually 5 for roller work, 20 for spraying.",
+        's.5':'<strong>Save or share</strong> the result from the output card — or link it to a project so the cans appear on your quote.',
+        'h2.faq':'Frequently asked questions',
+        'q.1':'How do I know the coverage of my paint?','a.1':"Printed on the tin, usually as 'yield' or 'spread rate' in m² per litre. Rules of thumb: emulsion wall paint 8 to 12 m²/L, primer 10 to 14, trim gloss on smooth wood 12 to 16, exterior wall paint 6 to 10. Always count on the lower end to avoid running short.",
+        'q.2':'Do I always need to count two coats?','a.2':'Default: yes, two coats. Painting the same colour over a well painted surface? One coat is enough. Dark colour over white or vivid over neutral? Count three coats to avoid streakiness.',
+        'q.3':'When do I need primer?','a.3':'For fresh plaster, drywall, porous wood, old wallpaper adhesive or a strongly absorbing substrate. Primer prevents your top coat from soaking in unevenly. On a smooth previously painted surface you can usually skip primer.',
+        'q.4':'Why does the calculator ask for a waste percentage?','a.4':'Part of your paint never reaches the wall: residue in the tray, dried-out edges, small spills, and when spraying, overspray. 5 percent is normal for clean brush or roller, 15 to 25 percent for spraying. Without this margin you are structurally half a bucket short.',
+        'q.5':'Can I ignore a door or window?','a.5':'For a single door or small window: yes, it falls into the waste margin. For multiple large windows or a whole glass wall: subtract them. Each square metre less at 10 m²/L × 2 coats is simply 0.2 L less — at 20 m² of windows that saves 4 L.',
+        'cta.h':'🎨 Calculate your paint in BuildExact','cta.p':'Free in the app. Calculate, save as a project, convert to a branded PDF quote — all without retyping.','cta.btn':'Download free',
+    }
+};
+const savedLang = localStorage.getItem('gs-lang');
+const browserIsNL = (navigator.language || '').toLowerCase().startsWith('nl');
+let lang = savedLang || (browserIsNL ? 'nl' : 'en');
+function applyLang(l) {
+    const d = T[l]; document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
+    document.querySelectorAll('[data-img-prefix]').forEach(img => { img.src = `../assets/calculator-${l}/${img.dataset.imgPrefix}-${l}-${img.dataset.imgNum}.png`; });
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    lang = l; localStorage.setItem('gs-lang', l);
+}
+applyLang(lang);
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+</script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

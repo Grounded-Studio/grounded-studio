@@ -8,7 +8,7 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#2563eb">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schutting berekenen — palen, schermen, poort & pasvak | BuildExact</title>
+    <title>Schutting berekenen — palen, schermen, poort en pasvak | BuildExact</title>
     <meta name="description" content="Hoeveel palen, schermen en afdekkappen heb je nodig? Reken je hele schutting uit — inclusief hoekpalen, poorten, pasvak en lange schermen — met de gratis BuildExact calculator op Android.">
     <meta name="keywords" content="schutting berekenen, hoeveel palen schutting, hoeveel schermen schutting, schutting calculator app, pasvak schutting, hoekpalen berekenen, poort in schutting, BuildExact">
     <meta name="author" content="Grounded Studio">
@@ -18,7 +18,7 @@
     <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/calculators/schutting.html">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://grounded-studio.app/calculators/schutting.html">
-    <meta property="og:title" content="Schutting berekenen — palen, schermen, poort & pasvak">
+    <meta property="og:title" content="Schutting berekenen — palen, schermen, poort en pasvak">
     <meta property="og:description" content="Complete uitleg + rekenvoorbeeld. Reken je schutting in BuildExact in onder de minuut uit.">
     <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx.png">
     <script type="application/ld+json">
@@ -80,6 +80,13 @@
         .lead { color:#cbd5e1; font-size:1.1rem; line-height:1.7; max-width:680px; }
 
         .article-body { padding:30px 0 60px; }
+        .screenshots { margin:0 auto 44px; max-width:760px; padding:0 20px; }
+        .screenshots-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
+        .screenshots-grid.three { grid-template-columns:repeat(3, 1fr); }
+        .screenshot { aspect-ratio:9/19.5; border-radius:28px; overflow:hidden; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 50px rgba(0,0,0,.4); transition:transform .3s ease; }
+        .screenshot:hover { transform:translateY(-4px); }
+        .screenshot img { width:100%; height:100%; object-fit:cover; display:block; }
+        @media (max-width:640px) { .screenshots-grid, .screenshots-grid.three { grid-template-columns:1fr; max-width:300px; margin:0 auto; } }
         .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 14px; color:#fff; }
         .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
         .article-body p { font-size:1.03rem; color:#cbd5e1; line-height:1.8; margin-bottom:22px; }
@@ -141,19 +148,26 @@
     <div class="article-header">
         <div class="c">
             <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="../calculators.html">Calculators</a> / <span data-i18n="bc.current">Schutting</span></div>
-            <div class="article-cat" data-i18n="cat">🪵 Buiten &amp; Tuin</div>
-            <h1 data-i18n="h1">Schutting berekenen — palen, schermen, poort &amp; pasvak</h1>
+            <div class="article-cat" data-i18n="cat">🪵 Buiten en Tuin</div>
+            <h1 data-i18n="h1">Schutting berekenen — palen, schermen, poort en pasvak</h1>
             <p class="lead" data-i18n="lead">Hoeveel palen, standaard schermen en afdekkappen heb je nodig voor een U-vormige schutting met een poort? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt.</p>
         </div>
     </div>
 
     <div class="article-body">
+        <div class="screenshots">
+            <div class="screenshots-grid three">
+                <div class="screenshot"><img src="../assets/calculator-nl/Schutting-nl-1.png" alt="Schutting calculator — Lengte en uiteinden" data-img-prefix="Schutting" data-img-num="1" loading="lazy"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/Schutting-nl-2.png" alt="Schutting calculator — Materialen en poorten" data-img-prefix="Schutting" data-img-num="2" loading="lazy"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/Schutting-nl-3.png" alt="Schutting calculator — Resultaat" data-img-prefix="Schutting" data-img-num="3" loading="lazy"></div>
+            </div>
+        </div>
         <div class="c">
 
             <h2 data-i18n="h2.inputs">Wat vraagt de calculator</h2>
-            <p data-i18n="p.inputs">De Schutting calculator heeft vier blokken: <strong>Lengte &amp; uiteinden</strong>, <strong>Materialen</strong>, <strong>Poorten</strong> en het <strong>Resultaat</strong>. Elk veld hieronder komt één-op-één overeen met de app.</p>
+            <p data-i18n="p.inputs">De Schutting calculator heeft vier blokken: Lengte en uiteinden, Materialen, Poorten en het Resultaat. Elk veld hieronder komt één-op-één overeen met de app.</p>
 
-            <h3 data-i18n="h3.length">Lengte &amp; uiteinden</h3>
+            <h3 data-i18n="h3.length">Lengte en uiteinden</h3>
             <ul>
                 <li data-i18n-html="in.sides"><strong>Totale lengte zijlijn 1, 2, 3…</strong> — meet de buitenkant van elke rechte zijde in cm. Een hoek start een nieuwe zijlijn.</li>
                 <li data-i18n-html="in.corners"><strong>Hoeken</strong> — elke hoek splitst de lijn: 0 hoeken = 1 rechte lijn, 2 hoeken = U-vorm = 3 lijnen.</li>
@@ -199,7 +213,7 @@
                     <tr><td data-i18n="r.s2">Totale lengte zijlijn 2</td><td class="n">1243 cm</td></tr>
                     <tr><td data-i18n="r.s3">Totale lengte achterlijn</td><td class="n">1654 cm</td></tr>
                     <tr><td data-i18n="r.corners">Hoeken</td><td class="n">2</td></tr>
-                    <tr><td data-i18n="r.startend">Begint &amp; eindigt met paal</td><td class="n" data-i18n="r.yes">Ja</td></tr>
+                    <tr><td data-i18n="r.startend">Begint en eindigt met paal</td><td class="n" data-i18n="r.yes">Ja</td></tr>
                     <tr><td data-i18n="r.postw">Paal breedte</td><td class="n">10 cm</td></tr>
                     <tr><td data-i18n="r.panelw">Scherm breedte</td><td class="n">180 cm</td></tr>
                     <tr><td data-i18n="r.longmax">Lange schermen max</td><td class="n">200 cm</td></tr>
@@ -228,13 +242,13 @@
             <p data-i18n-html="p.read">De bovenste chip <strong>18 palen · 19 schermen</strong> is de boodschappenbon voor de bouwmarkt. De details eronder laten precies zien waar elk stuk hout naartoe gaat: hoeveel standaard schermen, hoe lang het pasvak wordt, hoeveel afdekkappen, en waar restruimte van 14 cm overblijft die te klein is om nog in te vullen.</p>
 
             <div class="tip-card">
-                <h3 data-i18n="tip.cost.h">⚠️ Niet opgevuld &lt; 15 cm</h3>
+                <h3 data-i18n="tip.cost.h">⚠️ Niet opgevuld kleiner dan 15 cm</h3>
                 <p data-i18n="tip.cost.p">De 14 cm 'niet opgevuld' is te klein voor een stabiel scherm. Oplossingen: iets inkorten op de aangrenzende hoek, of de laatste twee schermen inkorten tot bijvoorbeeld 173 cm elk zodat het past. BuildExact signaleert dit automatisch rood zodat je het niet mist.</p>
             </div>
 
             <h2 data-i18n="h2.steps">Zo doe je dit in BuildExact</h2>
             <ol class="steps">
-                <li data-i18n-html="s.1"><strong>Open de Schutting calculator</strong> onder Materialen. Je ziet meteen 'Lengte &amp; uiteinden' bovenin.</li>
+                <li data-i18n-html="s.1"><strong>Open de Schutting calculator</strong> onder Materialen. Je ziet meteen 'Lengte en uiteinden' bovenin.</li>
                 <li data-i18n-html="s.2"><strong>Voeg elke zijlijn toe</strong> in cm en zet het aantal hoeken. Standaard start de app met zijlijn 1 — klik 'Zijlijn toevoegen' voor meer.</li>
                 <li data-i18n-html="s.3"><strong>Vul materialen in</strong>: paalbreedte, scherm­breedte en, als je restruimte wil opvangen, zet 'Lange schermen toestaan' aan met een max in cm.</li>
                 <li data-i18n-html="s.4"><strong>Voeg per poort een blok toe</strong> met doorgangsbreedte en balkdikte. Zet 'Dubbele poort' aan voor een dubbelzijdige doorgang.</li>
@@ -304,11 +318,11 @@ window.addEventListener('scroll',function(){var s=document.documentElement;rp.st
 
 const T = {
     nl: {
-        'bc.current':'Schutting','cat':'🪵 Buiten & Tuin',
-        'h1':'Schutting berekenen — palen, schermen, poort & pasvak',
+        'bc.current':'Schutting','cat':'🪵 Buiten en Tuin',
+        'h1':'Schutting berekenen — palen, schermen, poort en pasvak',
         'lead':'Hoeveel palen, standaard schermen en afdekkappen heb je nodig voor een U-vormige schutting met een poort? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt.',
-        'h2.inputs':'Wat vraagt de calculator','p.inputs':'De Schutting calculator heeft vier blokken: <strong>Lengte & uiteinden</strong>, <strong>Materialen</strong>, <strong>Poorten</strong> en het <strong>Resultaat</strong>. Elk veld hieronder komt één-op-één overeen met de app.',
-        'h3.length':'Lengte & uiteinden',
+        'h2.inputs':'Wat vraagt de calculator','p.inputs':'De Schutting calculator heeft vier blokken: Lengte en uiteinden, Materialen, Poorten en het Resultaat. Elk veld hieronder komt één-op-één overeen met de app.',
+        'h3.length':'Lengte en uiteinden',
         'in.sides':'<strong>Totale lengte zijlijn 1, 2, 3…</strong> — meet de buitenkant van elke rechte zijde in cm. Een hoek start een nieuwe zijlijn.',
         'in.corners':'<strong>Hoeken</strong> — elke hoek splitst de lijn: 0 hoeken = 1 rechte lijn, 2 hoeken = U-vorm = 3 lijnen.',
         'in.endposts':'<strong>Begint/eindigt met een paal</strong> — aan tegen een muur? Zet uit. Vrijstaand? Zet aan — anders mist je uiteindelijke paal.',
@@ -325,14 +339,14 @@ const T = {
         'f.label':'Per zijlijn','f.main':'Vakken = (lengte − startpaal − eindpaal) / (scherm + paalbreedte)','f.ex':'Voorbeeld zijlijn 1 (890 cm): (890 − 10 − 10) / (180 + 10) ≈ 4,58 → 4 standaard schermen + 1 pasvak',
         'h2.example':'Rekenvoorbeeld — U-vorm met poort','p.example':'Dit is de exacte situatie uit de screenshot hieronder: een U-vormige schutting met één poort, lange schermen aan.',
         'h3.inex':'Invoer','t.field':'Veld','t.value':'Waarde',
-        'r.s1':'Totale lengte zijlijn 1','r.s2':'Totale lengte zijlijn 2','r.s3':'Totale lengte achterlijn','r.corners':'Hoeken','r.startend':'Begint & eindigt met paal','r.yes':'Ja','r.postw':'Paal breedte','r.panelw':'Scherm breedte','r.longmax':'Lange schermen max','r.gate':'Poort 1 (enkelzijdig)',
+        'r.s1':'Totale lengte zijlijn 1','r.s2':'Totale lengte zijlijn 2','r.s3':'Totale lengte achterlijn','r.corners':'Hoeken','r.startend':'Begint en eindigt met paal','r.yes':'Ja','r.postw':'Paal breedte','r.panelw':'Scherm breedte','r.longmax':'Lange schermen max','r.gate':'Poort 1 (enkelzijdig)',
         'p.total':'Totale omtrek: <strong>890 + 1243 + 1654 = 3 787 cm</strong> (bijna 38 meter). Met één poort van 100 cm en twee 5 cm balken erom = 110 cm netto doorbreking.',
         'h3.outex':'Resultaat','t.item':'Onderdeel','t.amount':'Aantal',
         'o.posts':'Palen (10×10)','o.endposts':'Eindpalen zonder sponning (voor poort)','o.corner':'Hoekpalen','o.std':'Standaard schermen (180 cm)','o.pasvak':'Pasvak (ingekort van 180 cm)','o.caps':'Afdekkappen (op schermen)','o.gate':'Poort 1 (100 cm + 2×5 cm balk)','o.beam':'Bovenbalk poort 1','o.unused':'Niet opgevuld (te klein voor pasvak)',
         'p.read':"De bovenste chip <strong>18 palen · 19 schermen</strong> is de boodschappenbon voor de bouwmarkt. De details eronder laten precies zien waar elk stuk hout naartoe gaat: hoeveel standaard schermen, hoe lang het pasvak wordt, hoeveel afdekkappen, en waar restruimte van 14 cm overblijft die te klein is om nog in te vullen.",
-        'tip.cost.h':'⚠️ Niet opgevuld &lt; 15 cm','tip.cost.p':"De 14 cm 'niet opgevuld' is te klein voor een stabiel scherm. Oplossingen: iets inkorten op de aangrenzende hoek, of de laatste twee schermen inkorten tot bijvoorbeeld 173 cm elk zodat het past. BuildExact signaleert dit automatisch rood zodat je het niet mist.",
+        'tip.cost.h':'⚠️ Niet opgevuld kleiner dan 15 cm','tip.cost.p':"De 14 cm 'niet opgevuld' is te klein voor een stabiel scherm. Oplossingen: iets inkorten op de aangrenzende hoek, of de laatste twee schermen inkorten tot bijvoorbeeld 173 cm elk zodat het past. BuildExact signaleert dit automatisch rood zodat je het niet mist.",
         'h2.steps':'Zo doe je dit in BuildExact',
-        's.1':'<strong>Open de Schutting calculator</strong> onder Materialen. Je ziet meteen \'Lengte & uiteinden\' bovenin.',
+        's.1':'<strong>Open de Schutting calculator</strong> onder Materialen. Je ziet meteen \'Lengte en uiteinden\' bovenin.',
         's.2':"<strong>Voeg elke zijlijn toe</strong> in cm en zet het aantal hoeken. Standaard start de app met zijlijn 1 — klik 'Zijlijn toevoegen' voor meer.",
         's.3':"<strong>Vul materialen in</strong>: paalbreedte, scherm­breedte en, als je restruimte wil opvangen, zet 'Lange schermen toestaan' aan met een max in cm.",
         's.4':"<strong>Voeg per poort een blok toe</strong> met doorgangsbreedte en balkdikte. Zet 'Dubbele poort' aan voor een dubbelzijdige doorgang.",
@@ -346,11 +360,11 @@ const T = {
         'cta.h':'📐 Reken je schutting in BuildExact','cta.p':'Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.','cta.btn':'Gratis downloaden',
     },
     en: {
-        'bc.current':'Fence','cat':'🪵 Outdoor & garden',
-        'h1':'Fence calculator — posts, panels, gate & cut panel',
+        'bc.current':'Fence','cat':'🪵 Outdoor and garden',
+        'h1':'Fence calculator — posts, panels, gate and cut panel',
         'lead':'How many posts, standard panels and caps do you need for a U-shaped fence with a gate? This page explains every input and shows a real worked example with the exact output of BuildExact.',
-        'h2.inputs':"What the calculator asks",'p.inputs':'The Fence calculator has four blocks: <strong>Length & ends</strong>, <strong>Materials</strong>, <strong>Gates</strong> and the <strong>Result</strong>. Every field below maps one-to-one to the app.',
-        'h3.length':'Length & ends',
+        'h2.inputs':"What the calculator asks",'p.inputs':'The Fence calculator has four blocks: Length and ends, Materials, Gates and the Result. Every field below maps one-to-one to the app.',
+        'h3.length':'Length and ends',
         'in.sides':'<strong>Total length side 1, 2, 3…</strong> — measure the outside of each straight side in cm. A corner starts a new side.',
         'in.corners':'<strong>Corners</strong> — each corner splits the line: 0 corners = 1 straight line, 2 corners = U-shape = 3 lines.',
         'in.endposts':'<strong>Starts/ends with a post</strong> — leaning against a wall? Turn off. Freestanding? Turn on — otherwise your final post is missing.',
@@ -367,14 +381,14 @@ const T = {
         'f.label':'Per side','f.main':'Sections = (length − start post − end post) / (panel + post width)','f.ex':'Example side 1 (890 cm): (890 − 10 − 10) / (180 + 10) ≈ 4.58 → 4 standard panels + 1 cut panel',
         'h2.example':'Worked example — U-shape with a gate','p.example':'This is the exact situation from the screenshot below: a U-shaped fence with one gate, long panels enabled.',
         'h3.inex':'Input','t.field':'Field','t.value':'Value',
-        'r.s1':'Total length side 1','r.s2':'Total length side 2','r.s3':'Total length back side','r.corners':'Corners','r.startend':'Starts & ends with a post','r.yes':'Yes','r.postw':'Post width','r.panelw':'Panel width','r.longmax':'Long panels max','r.gate':'Gate 1 (single)',
+        'r.s1':'Total length side 1','r.s2':'Total length side 2','r.s3':'Total length back side','r.corners':'Corners','r.startend':'Starts and ends with a post','r.yes':'Yes','r.postw':'Post width','r.panelw':'Panel width','r.longmax':'Long panels max','r.gate':'Gate 1 (single)',
         'p.total':'Total perimeter: <strong>890 + 1243 + 1654 = 3,787 cm</strong> (nearly 38 metres). With one 100 cm gate and two 5 cm beams around it = 110 cm net opening.',
         'h3.outex':'Result','t.item':'Item','t.amount':'Count',
         'o.posts':'Posts (10×10)','o.endposts':'End posts without rebate (for gate)','o.corner':'Corner posts','o.std':'Standard panels (180 cm)','o.pasvak':'Cut panel (trimmed from 180 cm)','o.caps':'Caps (on panels)','o.gate':'Gate 1 (100 cm + 2×5 cm beam)','o.beam':'Top beam gate 1','o.unused':'Not filled (too small for cut panel)',
         'p.read':'The top chip <strong>18 posts · 19 panels</strong> is your shopping list for the builders\' merchant. The details below show exactly where each piece of wood goes: how many standard panels, how long the cut panel is, how many caps, and where a 14 cm remainder is too small to fill.',
-        'tip.cost.h':'⚠️ Not filled &lt; 15 cm','tip.cost.p':"The 14 cm 'not filled' is too small for a stable panel. Options: trim slightly at the adjacent corner, or shorten the last two panels to e.g. 173 cm each so it fits. BuildExact flags this in red automatically so you don't miss it.",
+        'tip.cost.h':'⚠️ Not filled smaller than 15 cm','tip.cost.p':"The 14 cm 'not filled' is too small for a stable panel. Options: trim slightly at the adjacent corner, or shorten the last two panels to e.g. 173 cm each so it fits. BuildExact flags this in red automatically so you don't miss it.",
         'h2.steps':'How to do this in BuildExact',
-        's.1':"<strong>Open the Fence calculator</strong> under Materials. 'Length & ends' is right at the top.",
+        's.1':"<strong>Open the Fence calculator</strong> under Materials. 'Length and ends' is right at the top.",
         's.2':"<strong>Add every side</strong> in cm and set the number of corners. The app starts with side 1 — tap 'Add side' for more.",
         's.3':"<strong>Fill in materials</strong>: post width, panel width, and if you want to catch the remainder, turn 'Allow long panels' on with a max in cm.",
         's.4':"<strong>Add a block per gate</strong> with passage width and beam thickness. Turn 'Double gate' on for a two-sided passage.",
@@ -395,6 +409,7 @@ function applyLang(l) {
     const d = T[l]; document.documentElement.lang = l;
     document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
     document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
+    document.querySelectorAll('[data-img-prefix]').forEach(img => { img.src = `../assets/calculator-${l}/${img.dataset.imgPrefix}-${l}-${img.dataset.imgNum}.png`; });
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
     lang = l; localStorage.setItem('gs-lang', l);
 }

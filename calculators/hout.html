@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hout berekenen — volume m³, planken, balken en beits of vernis | BuildExact</title>
+    <meta name="description" content="Reken volume in m³, aantal planken of balken, en liters beits of vernis uit. Werkt voor een stuk bouwhout, een vloer, een gevelbekleding of balkenlaag. Gratis in BuildExact op Android.">
+    <meta name="keywords" content="hout berekenen, volume hout m3, planken berekenen, balken berekenen, beits per m2, vernis dekking, bouwhout calculator, BuildExact">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/calculators/hout.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/calculators/hout.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/calculators/hout.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/calculators/hout.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded-studio.app/calculators/hout.html">
+    <meta property="og:title" content="Hout berekenen — volume, planken, balken en beits of vernis">
+    <meta property="og:description" content="Complete uitleg plus rekenvoorbeeld. Reken hout in BuildExact in onder de minuut uit.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx.png">
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"HowTo",
+        "name":"Hout berekenen met BuildExact",
+        "description":"Reken volume in m3, aantal planken of balken en liters beits of vernis uit op basis van afmetingen, dekking en aantal lagen.",
+        "totalTime":"PT2M",
+        "step":[
+            {"@type":"HowToStep","name":"Open Hout calculator","text":"Open BuildExact en kies de Hout calculator onder Materialen."},
+            {"@type":"HowToStep","name":"Kies soort berekening","text":"Volume (voor een blok hout), Planken (voor gevelbekleding of vloerbekleding) of Balken (voor een balkenlaag of frame)."},
+            {"@type":"HowToStep","name":"Vul afmetingen in","text":"Volume vraagt lengte, breedte en hoogte in m. Planken vraagt plank afmetingen en te bekleden oppervlakte. Balken vraagt balk doorsnede en aantal."},
+            {"@type":"HowToStep","name":"Afwerking (optioneel)","text":"Zet beits of vernis aan, vul dekking in m2 per L en aantal lagen in."},
+            {"@type":"HowToStep","name":"Lees het resultaat","text":"BuildExact toont volume in m3 of aantal stuks, plus liters beits of vernis als afwerking aan staat."}
+        ],
+        "author":{"@type":"Organization","name":"Grounded Studio","url":"https://grounded-studio.app"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://grounded-studio.app/"},
+            {"@type":"ListItem","position":2,"name":"BuildExact","item":"https://grounded-studio.app/buildexact.html"},
+            {"@type":"ListItem","position":3,"name":"Calculators","item":"https://grounded-studio.app/calculators.html"},
+            {"@type":"ListItem","position":4,"name":"Hout"}
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background:#0a0f1a; color:#f1f5f9; font-family:'Inter',system-ui,sans-serif; line-height:1.6; }
+        :root { --bx:#2563eb; --bx2:#1d4ed8; --gs:#818cf8; --gs-glow:rgba(129,140,248,.3); --border:rgba(255,255,255,.07); --muted:#94a3b8; }
+        .c { max-width:820px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-right { display:flex; align-items:center; gap:16px; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .nav-back:hover { color:#fff; }
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+
+        .article-header { padding:140px 0 50px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:22px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .breadcrumb a:hover { color:#94a3b8; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.9rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:16px; }
+        .lead { color:#cbd5e1; font-size:1.1rem; line-height:1.7; max-width:680px; }
+
+        .article-body { padding:30px 0 60px; }
+        .screenshots { margin:0 auto 44px; max-width:760px; padding:0 20px; }
+        .screenshots-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
+        .screenshots-grid.three { grid-template-columns:repeat(3, 1fr); }
+        .screenshot { aspect-ratio:9/19.5; border-radius:28px; overflow:hidden; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 50px rgba(0,0,0,.4); transition:transform .3s ease; }
+        .screenshot:hover { transform:translateY(-4px); }
+        .screenshot img { width:100%; height:100%; object-fit:cover; display:block; }
+        @media (max-width:640px) { .screenshots-grid, .screenshots-grid.three { grid-template-columns:1fr; max-width:300px; margin:0 auto; } }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 14px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body p { font-size:1.03rem; color:#cbd5e1; line-height:1.8; margin-bottom:22px; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:22px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.78; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:26px; margin:28px 0; }
+        .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+        .formula { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:8px; }
+        .formula-ex { font-size:.9rem; color:var(--muted); }
+
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:22px 26px; margin:28px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:8px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.7; margin:0; }
+
+        .table-wrap { overflow-x:auto; margin:24px 0; border-radius:14px; border:1px solid var(--border); }
+        table { width:100%; border-collapse:collapse; font-size:.92rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        td.n { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; color:#fff; }
+
+        .steps { counter-reset:step; padding:0 !important; }
+        .steps li { list-style:none; position:relative; padding-left:48px; margin-bottom:18px; counter-increment:step; }
+        .steps li::before { content:counter(step); position:absolute; left:0; top:-2px; width:32px; height:32px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.35); color:var(--bx); font-weight:800; font-size:.9rem; display:flex; align-items:center; justify-content:center; }
+
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:30px; margin:44px 0 10px; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:18px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+
+        .faq-wrap { margin:28px 0; display:flex; flex-direction:column; gap:10px; }
+        .faq-item { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+        .faq-item.open { border-color:rgba(37,99,235,.35); background:rgba(37,99,235,.04); }
+        .faq-q { width:100%; background:none; border:none; color:#f1f5f9; font-family:inherit; font-size:.98rem; font-weight:600; text-align:left; padding:18px 22px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+        .faq-icon { width:24px; height:24px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.3); color:var(--bx); display:flex; align-items:center; justify-content:center; font-size:.9rem; font-weight:700; flex-shrink:0; transition:transform .3s; }
+        .faq-item.open .faq-icon { transform:rotate(45deg); }
+        .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+        .faq-item.open .faq-a { max-height:420px; }
+        .faq-a-inner { padding:0 22px 18px; font-size:.95rem; color:#cbd5e1; line-height:1.7; }
+
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+
+        #progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#2563eb,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><div class="nav-right"><a href="../calculators.html" class="nav-back">← Calculators</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="../calculators.html">Calculators</a> / <span data-i18n="bc.current">Hout</span></div>
+            <div class="article-cat" data-i18n="cat">🪵 Hout en constructie</div>
+            <h1 data-i18n="h1">Hout berekenen — volume m³, planken, balken en beits of vernis</h1>
+            <p class="lead" data-i18n="lead">Hoeveel m³ hout zit er in een blok van 12 × 20 × 10 m, hoeveel planken heb je nodig voor je gevelbekleding, hoeveel balken voor je balkenlaag en hoeveel liter beits of vernis dekt het af? Deze pagina legt de drie reken-modes van BuildExact uit — met een echt rekenvoorbeeld.</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="screenshots">
+            <div class="screenshots-grid">
+                <div class="screenshot"><img src="../assets/calculator-nl/hout-nl-1.png" alt="Hout calculator — Volume en afmetingen" data-img-prefix="hout" data-img-num="1" loading="lazy"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/hout-nl-2.png" alt="Hout calculator — Resultaat" data-img-prefix="hout" data-img-num="2" loading="lazy"></div>
+            </div>
+        </div>
+        <div class="c">
+
+            <h2 data-i18n="h2.inputs">Wat vraagt de calculator</h2>
+            <p data-i18n="p.inputs">De Hout calculator heeft drie modes die je bovenaan kiest: Volume, Planken of Balken. Daarna krijg je een Afmetingen-blok dat per mode andere velden toont, en een optioneel Afwerking-blok voor beits of vernis.</p>
+
+            <h3 data-i18n="h3.mode">Soort berekening</h3>
+            <ul>
+                <li data-i18n-html="in.volume"><strong>Volume</strong> — voor een stuk hout waarvan je het volume in m³ wil weten. Simpelste berekening: lengte × breedte × hoogte. Werkt ook voor een houtvoorraad, een balk of een gevelbekleding als geheel.</li>
+                <li data-i18n-html="in.planks"><strong>Planken</strong> — reken aantal planken uit op basis van plankafmetingen en te bekleden oppervlakte. Handig voor gevelbekleding, vloer, lambrisering of beschoeiing.</li>
+                <li data-i18n-html="in.beams"><strong>Balken</strong> — reken totaal aantal balken en volume uit op basis van balk-doorsnede en lengte. Handig voor een balkenlaag, dakconstructie of houten frame.</li>
+            </ul>
+
+            <h3 data-i18n="h3.dims">Afmetingen</h3>
+            <p data-i18n="p.dims">De velden hangen af van de gekozen mode. Dit is wat je ziet per mode:</p>
+
+            <h4 data-i18n="h4.vol">Volume mode</h4>
+            <ul>
+                <li data-i18n-html="in.len"><strong>Lengte (m)</strong> — langste zijde.</li>
+                <li data-i18n-html="in.wid"><strong>Breedte (m)</strong> — middelste zijde.</li>
+                <li data-i18n-html="in.hgt"><strong>Hoogte (m)</strong> — kortste zijde (of dikte).</li>
+            </ul>
+
+            <h4 data-i18n="h4.pl">Planken mode</h4>
+            <ul>
+                <li data-i18n-html="in.pllen"><strong>Lengte plank (m)</strong>, <strong>breedte (cm)</strong>, <strong>dikte (mm)</strong> — afmetingen van één plank.</li>
+                <li data-i18n-html="in.plarea"><strong>Te bekleden oppervlakte (m²)</strong> — de totale wand- of vloeroppervlakte.</li>
+                <li data-i18n-html="in.plwaste"><strong>Snijverlies (%)</strong> — standaard 10%, meer bij een onregelmatige vorm.</li>
+            </ul>
+
+            <h4 data-i18n="h4.bm">Balken mode</h4>
+            <ul>
+                <li data-i18n-html="in.bmlen"><strong>Lengte balk (m)</strong>, <strong>breedte (mm)</strong>, <strong>hoogte (mm)</strong> — afmetingen van één balk.</li>
+                <li data-i18n-html="in.bmcnt"><strong>Aantal balken</strong> OF <strong>hart-op-hart afstand (cm)</strong> + totale lengte constructie — kies wat voor jouw project het makkelijkst invullen is.</li>
+            </ul>
+
+            <h3 data-i18n="h3.finish">Afwerking (optioneel)</h3>
+            <ul>
+                <li data-i18n-html="in.treatment"><strong>Beits of vernis meeberekenen</strong> — zet aan voor een onbehandelde houtsoort die je wil beschermen. De calculator rekent op basis van buitenoppervlak hoeveel liter je nodig hebt.</li>
+                <li data-i18n-html="in.coverage"><strong>Dekking (m²/L)</strong> — staat op het blik. Vuistregels: beits 8 tot 12, vernis 10 tot 14, hout-olie 15 tot 20, verf op hout 10 tot 12 m² per liter.</li>
+                <li data-i18n-html="in.coats"><strong>Aantal lagen</strong> — standaard 2. Voor doorlopende blootstelling (gevel, buitenterras): 3 lagen. Binnenshuis: 1 of 2.</li>
+            </ul>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.treat.h">💡 Welk afwerkingsmiddel?</h3>
+                <p data-i18n="tip.treat.p">Beits dringt in het hout en behoudt de nerf — goed voor rustieke gevelbekleding of een houten vlonder. Vernis vormt een filmlaag erop — glad resultaat voor meubels of binnenwerk. Hout-olie geeft natuurlijke bescherming die matcht met de houtsoort — vooral voor hardhout (teak, bangkirai). Alles vraagt onderhoud elke 2 tot 4 jaar bij buitentoepassing.</p>
+            </div>
+
+            <h2 data-i18n="h2.formula">De formule onder de motorkap</h2>
+            <p data-i18n="p.formula">In Volume mode is het simpel: L × B × H. Beits en vernis rekenen op buitenoppervlak van het volume — alle zes zijden samen.</p>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.vlabel">Volume</div>
+                <div class="formula" data-i18n="f.vmain">V = Lengte × Breedte × Hoogte</div>
+                <div class="formula-ex" data-i18n="f.vex">Voorbeeld: 12 × 20 × 10 = 2400 m³</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.alabel">Buitenoppervlak (voor beits/vernis)</div>
+                <div class="formula" data-i18n="f.amain">Oppervlak = 2 × (L×B + L×H + B×H)</div>
+                <div class="formula-ex" data-i18n="f.aex">Voorbeeld: 2 × (12×20 + 12×10 + 20×10) = 2 × 560 = 1120 m²</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.llabel">Liters beits/vernis</div>
+                <div class="formula" data-i18n="f.lmain">Liters = Oppervlak × Aantal lagen / Dekking</div>
+                <div class="formula-ex" data-i18n="f.lex">Voorbeeld: 1120 × 2 / 10 = 224 L</div>
+            </div>
+
+            <h2 data-i18n="h2.example">Rekenvoorbeeld — Volume mode met beits</h2>
+            <p data-i18n="p.example">Dit is de situatie uit de screenshot: Volume mode, L × B × H = 12 × 20 × 10 m, afwerking met beits op 10 m² per liter, 2 lagen. Dit is een grote testcase om de verhouding tussen volume en afwerking te laten zien.</p>
+
+            <h3 data-i18n="h3.inex">Invoer</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.field">Veld</th><th data-i18n="t.value">Waarde</th></tr>
+                    <tr><td data-i18n="r.mode">Soort berekening</td><td class="n" data-i18n="r.volume">Volume</td></tr>
+                    <tr><td data-i18n="r.len">Lengte</td><td class="n">12 m</td></tr>
+                    <tr><td data-i18n="r.wid">Breedte</td><td class="n">20 m</td></tr>
+                    <tr><td data-i18n="r.hgt">Hoogte</td><td class="n">10 m</td></tr>
+                    <tr><td data-i18n="r.treat">Afwerking</td><td class="n" data-i18n="r.treatv">Beits of vernis</td></tr>
+                    <tr><td data-i18n="r.cov">Dekking</td><td class="n">10 m²/L</td></tr>
+                    <tr><td data-i18n="r.coats">Aantal lagen</td><td class="n">2</td></tr>
+                </table>
+            </div>
+
+            <h3 data-i18n="h3.calc">Berekening stap voor stap</h3>
+            <ol>
+                <li data-i18n="c.1">Volume: 12 × 20 × 10 = 2400 m³</li>
+                <li data-i18n="c.2">Buitenoppervlak: 2 × (12×20 + 12×10 + 20×10) = 2 × 560 = 1120 m²</li>
+                <li data-i18n="c.3">Totaal te behandelen oppervlak: 1120 × 2 lagen = 2240 m²</li>
+                <li data-i18n="c.4">Liters beits: 2240 ÷ 10 m²/L = 224 L</li>
+            </ol>
+
+            <h3 data-i18n="h3.outex">Resultaat</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.item">Onderdeel</th><th data-i18n="t.amount">Waarde</th></tr>
+                    <tr><td data-i18n="o.vol">Volume</td><td class="n">2400 m³</td></tr>
+                    <tr><td data-i18n="o.beits">Beits of vernis</td><td class="n">224 L</td></tr>
+                </table>
+            </div>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.scale.h">💡 Schaal van je project</h3>
+                <p data-i18n="tip.scale.p">De screenshot gebruikt gigantische afmetingen (2400 m³ is een gebouw, niet een stuk hout) om het effect te laten zien. Realistisch: een houten balk van 4 × 0,20 × 0,10 m is 0,08 m³. Een gevelbekleding van 50 × 2,5 m dik 2 cm is 2,5 m³. Een houtvoorraad van 2 kuub voor renovatie is in de praktijk je bovengrens.</p>
+            </div>
+
+            <h2 data-i18n="h2.coverage">Dekking per afwerkingsmiddel</h2>
+            <p data-i18n="p.coverage">Afwerkingsmiddel beïnvloedt direct hoeveel liter je nodig hebt. Vuistregels:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.product">Afwerking</th><th data-i18n="t.cov">Dekking (m²/L)</th><th data-i18n="t.when">Wanneer kiezen</th></tr>
+                    <tr><td data-i18n="pr.beits">Beits (transparant)</td><td class="n">8 – 12</td><td data-i18n="pr.beitsw">Rustieke uitstraling, nerf blijft zichtbaar</td></tr>
+                    <tr><td data-i18n="pr.varnish">Vernis</td><td class="n">10 – 14</td><td data-i18n="pr.varnishw">Glad filmresultaat voor meubels of binnenwerk</td></tr>
+                    <tr><td data-i18n="pr.oil">Hout-olie</td><td class="n">15 – 20</td><td data-i18n="pr.oilw">Hardhout (teak, bangkirai), natuurlijke bescherming</td></tr>
+                    <tr><td data-i18n="pr.paint">Dekkende houtverf</td><td class="n">10 – 12</td><td data-i18n="pr.paintw">Als je nerf niet wil zien, mooi strak kleur-eindresultaat</td></tr>
+                </table>
+            </div>
+
+            <h2 data-i18n="h2.steps">Zo doe je dit in BuildExact</h2>
+            <ol class="steps">
+                <li data-i18n-html="s.1"><strong>Open de Hout calculator</strong> onder Materialen. Kies boven in Volume, Planken of Balken.</li>
+                <li data-i18n-html="s.2"><strong>Vul afmetingen in</strong> volgens de gekozen mode. Volume: L × B × H in m. Planken: plankafmetingen plus te bekleden oppervlak. Balken: balkdoorsnede plus aantal.</li>
+                <li data-i18n-html="s.3"><strong>Afwerking optioneel aan</strong> — vul dekking (lees het blik) en aantal lagen in. 2 lagen is standaard, 3 voor buiten.</li>
+                <li data-i18n-html="s.4"><strong>Resultaat lezen</strong>: volume in m³ of aantal stuks, en liters beits of vernis als afwerking aan staat.</li>
+                <li data-i18n-html="s.5"><strong>Bewaar als project</strong> of deel vanuit de resultaatkaart — koppel het aan een offerte-PDF voor klanten.</li>
+            </ol>
+
+            <h2 data-i18n="h2.faq">Veelgestelde vragen</h2>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.1">Welke mode moet ik kiezen?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.1">Volume: één compact stuk hout, een houtvoorraad, of één enkele balk. Planken: wand- of vloerbekleding waarbij je het aantal planken wil weten. Balken: constructie met meerdere balken op afstand (balkenlaag, dakconstructie, frame).</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.2">Hoe reken ik beits op onbekende houtsoort?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.2">Vuistregel: zacht hout (vuren, grenen) zuigt veel beits op, reken op 8 m²/L. Hard hout (eik, iroko) minder, reken op 12 m²/L. Nog beter: lees de dekking op het blik en pas aan voor jouw ondergrond. Een ruw oppervlak zuigt 15 tot 20% meer op dan glad gezaagd.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.3">Waarom rekent beits op buitenoppervlak en niet op volume?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.3">Omdat beits of vernis op het oppervlak gaat, niet in het hout. De zes buitenvlakken van een balk krijgen een laag; de binnenkant van het hout blijft onbehandeld. Dus 2×(L×B + L×H + B×H) is wat je afdekt — niet het volume. Een lange dunne plank heeft relatief veel oppervlak per m³ hout.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.4">Hoeveel planken voor mijn gevelbekleding?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.4">Switch naar Planken mode en vul plankafmetingen en gevelgevelgewicht in. Vuistregel: 18 cm brede plank op 50 m² gevel = 50 ÷ 0,18 ÷ planklengte stuks, plus 10% snijverlies voor de randen en vensterdoorbrekingen. Overlap of groeven tussen de planken moet je nog van de nuttige breedte aftrekken (bijvoorbeeld 1 cm per plank).</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.5">Hoeveel balken op hart-op-hart 60 cm?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.5">Switch naar Balken mode en vul balk-doorsnede plus hart-op-hart afstand in. Voor een 6 m lange constructie met hart-op-hart 60 cm: 6 ÷ 0,60 = 10, plus 1 extra = 11 balken. BuildExact rekent dit automatisch uit zodra je hart-op-hart en totale lengte invult.</div></div>
+                </div>
+            </div>
+
+            <div class="app-cta">
+                <h3 data-i18n="cta.h">🪵 Reken je hout in BuildExact</h3>
+                <p data-i18n="cta.p">Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    <span data-i18n="cta.btn">Gratis downloaden</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="c-wide">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="../calculators.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Calculators</a>
+                <a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="../blog/buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
+                <a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a>
+                <a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
+                <a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
+            </div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item .faq-q').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open'));
+});
+var rp=document.getElementById('progress');
+window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});
+
+const T = {
+    nl: {
+        'bc.current':'Hout','cat':'🪵 Hout en constructie',
+        'h1':'Hout berekenen — volume m³, planken, balken en beits of vernis',
+        'lead':'Hoeveel m³ hout zit er in een blok van 12 × 20 × 10 m, hoeveel planken heb je nodig voor je gevelbekleding, hoeveel balken voor je balkenlaag en hoeveel liter beits of vernis dekt het af? Deze pagina legt de drie reken-modes van BuildExact uit — met een echt rekenvoorbeeld.',
+        'h2.inputs':'Wat vraagt de calculator','p.inputs':'De Hout calculator heeft drie modes die je bovenaan kiest: Volume, Planken of Balken. Daarna krijg je een Afmetingen-blok dat per mode andere velden toont, en een optioneel Afwerking-blok voor beits of vernis.',
+        'h3.mode':'Soort berekening',
+        'in.volume':'<strong>Volume</strong> — voor een stuk hout waarvan je het volume in m³ wil weten. Simpelste berekening: lengte × breedte × hoogte. Werkt ook voor een houtvoorraad, een balk of een gevelbekleding als geheel.',
+        'in.planks':'<strong>Planken</strong> — reken aantal planken uit op basis van plankafmetingen en te bekleden oppervlakte. Handig voor gevelbekleding, vloer, lambrisering of beschoeiing.',
+        'in.beams':'<strong>Balken</strong> — reken totaal aantal balken en volume uit op basis van balk-doorsnede en lengte. Handig voor een balkenlaag, dakconstructie of houten frame.',
+        'h3.dims':'Afmetingen','p.dims':'De velden hangen af van de gekozen mode. Dit is wat je ziet per mode:',
+        'h4.vol':'Volume mode',
+        'in.len':'<strong>Lengte (m)</strong> — langste zijde.',
+        'in.wid':'<strong>Breedte (m)</strong> — middelste zijde.',
+        'in.hgt':'<strong>Hoogte (m)</strong> — kortste zijde (of dikte).',
+        'h4.pl':'Planken mode',
+        'in.pllen':'<strong>Lengte plank (m)</strong>, <strong>breedte (cm)</strong>, <strong>dikte (mm)</strong> — afmetingen van één plank.',
+        'in.plarea':'<strong>Te bekleden oppervlakte (m²)</strong> — de totale wand- of vloeroppervlakte.',
+        'in.plwaste':'<strong>Snijverlies (%)</strong> — standaard 10%, meer bij een onregelmatige vorm.',
+        'h4.bm':'Balken mode',
+        'in.bmlen':'<strong>Lengte balk (m)</strong>, <strong>breedte (mm)</strong>, <strong>hoogte (mm)</strong> — afmetingen van één balk.',
+        'in.bmcnt':'<strong>Aantal balken</strong> OF <strong>hart-op-hart afstand (cm)</strong> + totale lengte constructie — kies wat voor jouw project het makkelijkst invullen is.',
+        'h3.finish':'Afwerking (optioneel)',
+        'in.treatment':'<strong>Beits of vernis meeberekenen</strong> — zet aan voor een onbehandelde houtsoort die je wil beschermen. De calculator rekent op basis van buitenoppervlak hoeveel liter je nodig hebt.',
+        'in.coverage':'<strong>Dekking (m²/L)</strong> — staat op het blik. Vuistregels: beits 8 tot 12, vernis 10 tot 14, hout-olie 15 tot 20, verf op hout 10 tot 12 m² per liter.',
+        'in.coats':'<strong>Aantal lagen</strong> — standaard 2. Voor doorlopende blootstelling (gevel, buitenterras): 3 lagen. Binnenshuis: 1 of 2.',
+        'tip.treat.h':'💡 Welk afwerkingsmiddel?','tip.treat.p':'Beits dringt in het hout en behoudt de nerf — goed voor rustieke gevelbekleding of een houten vlonder. Vernis vormt een filmlaag erop — glad resultaat voor meubels of binnenwerk. Hout-olie geeft natuurlijke bescherming die matcht met de houtsoort — vooral voor hardhout (teak, bangkirai). Alles vraagt onderhoud elke 2 tot 4 jaar bij buitentoepassing.',
+        'h2.formula':'De formule onder de motorkap','p.formula':'In Volume mode is het simpel: L × B × H. Beits en vernis rekenen op buitenoppervlak van het volume — alle zes zijden samen.',
+        'f.vlabel':'Volume','f.vmain':'V = Lengte × Breedte × Hoogte','f.vex':'Voorbeeld: 12 × 20 × 10 = 2400 m³',
+        'f.alabel':'Buitenoppervlak (voor beits/vernis)','f.amain':'Oppervlak = 2 × (L×B + L×H + B×H)','f.aex':'Voorbeeld: 2 × (12×20 + 12×10 + 20×10) = 2 × 560 = 1120 m²',
+        'f.llabel':'Liters beits/vernis','f.lmain':'Liters = Oppervlak × Aantal lagen / Dekking','f.lex':'Voorbeeld: 1120 × 2 / 10 = 224 L',
+        'h2.example':'Rekenvoorbeeld — Volume mode met beits','p.example':'Dit is de situatie uit de screenshot: Volume mode, L × B × H = 12 × 20 × 10 m, afwerking met beits op 10 m² per liter, 2 lagen. Dit is een grote testcase om de verhouding tussen volume en afwerking te laten zien.',
+        'h3.inex':'Invoer','t.field':'Veld','t.value':'Waarde',
+        'r.mode':'Soort berekening','r.volume':'Volume','r.len':'Lengte','r.wid':'Breedte','r.hgt':'Hoogte','r.treat':'Afwerking','r.treatv':'Beits of vernis','r.cov':'Dekking','r.coats':'Aantal lagen',
+        'h3.calc':'Berekening stap voor stap',
+        'c.1':'Volume: 12 × 20 × 10 = 2400 m³',
+        'c.2':'Buitenoppervlak: 2 × (12×20 + 12×10 + 20×10) = 2 × 560 = 1120 m²',
+        'c.3':'Totaal te behandelen oppervlak: 1120 × 2 lagen = 2240 m²',
+        'c.4':'Liters beits: 2240 ÷ 10 m²/L = 224 L',
+        'h3.outex':'Resultaat','t.item':'Onderdeel','t.amount':'Waarde',
+        'o.vol':'Volume','o.beits':'Beits of vernis',
+        'tip.scale.h':'💡 Schaal van je project','tip.scale.p':'De screenshot gebruikt gigantische afmetingen (2400 m³ is een gebouw, niet een stuk hout) om het effect te laten zien. Realistisch: een houten balk van 4 × 0,20 × 0,10 m is 0,08 m³. Een gevelbekleding van 50 × 2,5 m dik 2 cm is 2,5 m³. Een houtvoorraad van 2 kuub voor renovatie is in de praktijk je bovengrens.',
+        'h2.coverage':'Dekking per afwerkingsmiddel','p.coverage':'Afwerkingsmiddel beïnvloedt direct hoeveel liter je nodig hebt. Vuistregels:',
+        't.product':'Afwerking','t.cov':'Dekking (m²/L)','t.when':'Wanneer kiezen',
+        'pr.beits':'Beits (transparant)','pr.beitsw':'Rustieke uitstraling, nerf blijft zichtbaar',
+        'pr.varnish':'Vernis','pr.varnishw':'Glad filmresultaat voor meubels of binnenwerk',
+        'pr.oil':'Hout-olie','pr.oilw':'Hardhout (teak, bangkirai), natuurlijke bescherming',
+        'pr.paint':'Dekkende houtverf','pr.paintw':'Als je nerf niet wil zien, mooi strak kleur-eindresultaat',
+        'h2.steps':'Zo doe je dit in BuildExact',
+        's.1':'<strong>Open de Hout calculator</strong> onder Materialen. Kies boven in Volume, Planken of Balken.',
+        's.2':'<strong>Vul afmetingen in</strong> volgens de gekozen mode. Volume: L × B × H in m. Planken: plankafmetingen plus te bekleden oppervlak. Balken: balkdoorsnede plus aantal.',
+        's.3':'<strong>Afwerking optioneel aan</strong> — vul dekking (lees het blik) en aantal lagen in. 2 lagen is standaard, 3 voor buiten.',
+        's.4':'<strong>Resultaat lezen</strong>: volume in m³ of aantal stuks, en liters beits of vernis als afwerking aan staat.',
+        's.5':'<strong>Bewaar als project</strong> of deel vanuit de resultaatkaart — koppel het aan een offerte-PDF voor klanten.',
+        'h2.faq':'Veelgestelde vragen',
+        'q.1':'Welke mode moet ik kiezen?','a.1':'Volume: één compact stuk hout, een houtvoorraad, of één enkele balk. Planken: wand- of vloerbekleding waarbij je het aantal planken wil weten. Balken: constructie met meerdere balken op afstand (balkenlaag, dakconstructie, frame).',
+        'q.2':'Hoe reken ik beits op onbekende houtsoort?','a.2':'Vuistregel: zacht hout (vuren, grenen) zuigt veel beits op, reken op 8 m²/L. Hard hout (eik, iroko) minder, reken op 12 m²/L. Nog beter: lees de dekking op het blik en pas aan voor jouw ondergrond. Een ruw oppervlak zuigt 15 tot 20% meer op dan glad gezaagd.',
+        'q.3':'Waarom rekent beits op buitenoppervlak en niet op volume?','a.3':'Omdat beits of vernis op het oppervlak gaat, niet in het hout. De zes buitenvlakken van een balk krijgen een laag; de binnenkant van het hout blijft onbehandeld. Dus 2×(L×B + L×H + B×H) is wat je afdekt — niet het volume. Een lange dunne plank heeft relatief veel oppervlak per m³ hout.',
+        'q.4':'Hoeveel planken voor mijn gevelbekleding?','a.4':'Switch naar Planken mode en vul plankafmetingen en gevelgevelgewicht in. Vuistregel: 18 cm brede plank op 50 m² gevel = 50 ÷ 0,18 ÷ planklengte stuks, plus 10% snijverlies voor de randen en vensterdoorbrekingen. Overlap of groeven tussen de planken moet je nog van de nuttige breedte aftrekken (bijvoorbeeld 1 cm per plank).',
+        'q.5':'Hoeveel balken op hart-op-hart 60 cm?','a.5':'Switch naar Balken mode en vul balk-doorsnede plus hart-op-hart afstand in. Voor een 6 m lange constructie met hart-op-hart 60 cm: 6 ÷ 0,60 = 10, plus 1 extra = 11 balken. BuildExact rekent dit automatisch uit zodra je hart-op-hart en totale lengte invult.',
+        'cta.h':'🪵 Reken je hout in BuildExact','cta.p':'Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.','cta.btn':'Gratis downloaden',
+    },
+    en: {
+        'bc.current':'Wood','cat':'🪵 Wood and framing',
+        'h1':'Wood calculator — volume m³, boards, beams and stain or varnish',
+        'lead':'How many m³ of wood is in a 12 × 20 × 10 m block, how many boards do you need for cladding, how many beams for a joist layer and how many litres of stain or varnish to coat it? This page explains the three modes of the BuildExact Wood calculator — with a real worked example.',
+        'h2.inputs':'What the calculator asks','p.inputs':'The Wood calculator has three modes you pick at the top: Volume, Boards or Beams. Then you get a Dimensions block with different fields per mode, plus an optional Finish block for stain or varnish.',
+        'h3.mode':'Type of calculation',
+        'in.volume':'<strong>Volume</strong> — for a piece of wood whose volume in m³ you want. Simplest calculation: length × width × height. Also works for a wood stock, a beam or a cladding batch as a whole.',
+        'in.planks':'<strong>Boards</strong> — calculate the number of boards from board sizes and the area to cover. Handy for cladding, flooring, wainscoting or revetment.',
+        'in.beams':'<strong>Beams</strong> — calculate total count and volume from beam cross-section and length. Handy for a joist floor, roof structure or timber frame.',
+        'h3.dims':'Dimensions','p.dims':'The fields depend on the chosen mode. Per mode:',
+        'h4.vol':'Volume mode',
+        'in.len':'<strong>Length (m)</strong> — longest side.',
+        'in.wid':'<strong>Width (m)</strong> — middle side.',
+        'in.hgt':'<strong>Height (m)</strong> — shortest side (or thickness).',
+        'h4.pl':'Boards mode',
+        'in.pllen':'<strong>Board length (m)</strong>, <strong>width (cm)</strong>, <strong>thickness (mm)</strong> — one board.',
+        'in.plarea':'<strong>Area to cover (m²)</strong> — total wall or floor area.',
+        'in.plwaste':'<strong>Cutting waste (%)</strong> — standard 10%, more for irregular shapes.',
+        'h4.bm':'Beams mode',
+        'in.bmlen':'<strong>Beam length (m)</strong>, <strong>width (mm)</strong>, <strong>height (mm)</strong> — one beam.',
+        'in.bmcnt':'<strong>Number of beams</strong> OR <strong>centres (cm)</strong> + total structure length — whichever is easier for your project.',
+        'h3.finish':'Finish (optional)',
+        'in.treatment':'<strong>Include stain or varnish</strong> — turn on for untreated wood you want to protect. The calculator uses outside surface area to compute litres.',
+        'in.coverage':'<strong>Coverage (m²/L)</strong> — printed on the tin. Rules of thumb: stain 8 to 12, varnish 10 to 14, oil 15 to 20, opaque paint on wood 10 to 12 m² per litre.',
+        'in.coats':'<strong>Coats</strong> — standard 2. For continuous exposure (facade, outdoor deck): 3 coats. Indoor: 1 or 2.',
+        'tip.treat.h':'💡 Which treatment?','tip.treat.p':'Stain penetrates and keeps the grain visible — good for rustic cladding or an outdoor deck. Varnish forms a film on top — smooth result for furniture or indoor work. Wood oil gives natural protection matching the species — especially for hardwood (teak, bangkirai). All require re-treatment every 2 to 4 years outdoors.',
+        'h2.formula':'The formula under the hood','p.formula':'Volume mode is simple: L × W × H. Stain and varnish use the outside surface of that volume — all six sides.',
+        'f.vlabel':'Volume','f.vmain':'V = Length × Width × Height','f.vex':'Example: 12 × 20 × 10 = 2400 m³',
+        'f.alabel':'Outside surface (for stain/varnish)','f.amain':'Surface = 2 × (L×W + L×H + W×H)','f.aex':'Example: 2 × (12×20 + 12×10 + 20×10) = 2 × 560 = 1120 m²',
+        'f.llabel':'Litres of stain/varnish','f.lmain':'Litres = Surface × Coats / Coverage','f.lex':'Example: 1120 × 2 / 10 = 224 L',
+        'h2.example':'Worked example — Volume mode with stain','p.example':'This is the situation from the screenshot: Volume mode, L × W × H = 12 × 20 × 10 m, finish with stain at 10 m² per litre, 2 coats. A huge test case to show the ratio between volume and finish.',
+        'h3.inex':'Input','t.field':'Field','t.value':'Value',
+        'r.mode':'Type of calculation','r.volume':'Volume','r.len':'Length','r.wid':'Width','r.hgt':'Height','r.treat':'Finish','r.treatv':'Stain or varnish','r.cov':'Coverage','r.coats':'Coats',
+        'h3.calc':'Calculation step by step',
+        'c.1':'Volume: 12 × 20 × 10 = 2400 m³',
+        'c.2':'Outside surface: 2 × (12×20 + 12×10 + 20×10) = 2 × 560 = 1120 m²',
+        'c.3':'Total surface to treat: 1120 × 2 coats = 2240 m²',
+        'c.4':'Litres of stain: 2240 ÷ 10 m²/L = 224 L',
+        'h3.outex':'Result','t.item':'Item','t.amount':'Value',
+        'o.vol':'Volume','o.beits':'Stain or varnish',
+        'tip.scale.h':'💡 Scale of your project','tip.scale.p':'The screenshot uses enormous dimensions (2400 m³ is a building, not a piece of wood) to show the effect. Realistic: a 4 × 0.20 × 0.10 m beam is 0.08 m³. A 50 × 2.5 m cladding at 2 cm thick is 2.5 m³. A 2 m³ wood stock for renovation is practically your upper limit.',
+        'h2.coverage':'Coverage per treatment','p.coverage':'Treatment directly affects how many litres you need. Rules of thumb:',
+        't.product':'Treatment','t.cov':'Coverage (m²/L)','t.when':'When to pick',
+        'pr.beits':'Stain (transparent)','pr.beitsw':'Rustic look, grain stays visible',
+        'pr.varnish':'Varnish','pr.varnishw':'Smooth film for furniture or indoor work',
+        'pr.oil':'Wood oil','pr.oilw':'Hardwood (teak, bangkirai), natural protection',
+        'pr.paint':'Opaque wood paint','pr.paintw':"When you don't want the grain visible, clean solid colour result",
+        'h2.steps':'How to do this in BuildExact',
+        's.1':'<strong>Open the Wood calculator</strong> under Materials. Pick Volume, Boards or Beams at the top.',
+        's.2':'<strong>Fill in dimensions</strong> per mode. Volume: L × W × H in m. Boards: board sizes plus area to cover. Beams: beam cross-section plus count.',
+        's.3':'<strong>Finish optional on</strong> — enter coverage (read the tin) and coats. 2 coats standard, 3 for outdoor.',
+        's.4':'<strong>Read the result</strong>: volume in m³ or piece count, and litres of stain or varnish if finish is on.',
+        's.5':'<strong>Save as a project</strong> or share from the result card — link it to a quote PDF for clients.',
+        'h2.faq':'Frequently asked questions',
+        'q.1':'Which mode should I pick?','a.1':'Volume: one compact piece of wood, a wood stock, or a single beam. Boards: wall or floor cladding where you want the number of boards. Beams: structure with multiple spaced beams (joist floor, roof structure, frame).',
+        'q.2':'How do I calculate stain for an unknown species?','a.2':'Rule of thumb: softwood (spruce, pine) absorbs a lot, count on 8 m²/L. Hardwood (oak, iroko) less, count on 12 m²/L. Better: read coverage on the tin and adjust for your substrate. A rough surface absorbs 15 to 20% more than planed.',
+        'q.3':'Why does stain count on outside surface and not on volume?','a.3':'Because stain or varnish goes on the surface, not into the wood. The six outer faces of a beam get a coat; the inside stays untreated. So 2×(L×W + L×H + W×H) is what you cover — not the volume. A long thin board has a lot of surface per m³ of wood.',
+        'q.4':'How many boards for my cladding?','a.4':'Switch to Boards mode and fill in board sizes and facade area. Rule of thumb: an 18 cm wide board on 50 m² facade = 50 ÷ 0.18 ÷ board length pieces, plus 10% cutting waste for edges and window penetrations. Overlap or grooves between boards reduce the effective width (e.g. 1 cm per board).',
+        'q.5':'How many beams at 60 cm centres?','a.5':'Switch to Beams mode and enter beam cross-section plus centres. For a 6 m long structure at 60 cm centres: 6 ÷ 0.60 = 10, plus 1 extra = 11 beams. BuildExact does this automatically when you enter centres and total length.',
+        'cta.h':'🪵 Calculate your wood in BuildExact','cta.p':'Free in the app. Calculate, save as a project, convert to a branded PDF quote — all without retyping.','cta.btn':'Download free',
+    }
+};
+const savedLang = localStorage.getItem('gs-lang');
+const browserIsNL = (navigator.language || '').toLowerCase().startsWith('nl');
+let lang = savedLang || (browserIsNL ? 'nl' : 'en');
+function applyLang(l) {
+    const d = T[l]; document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
+    document.querySelectorAll('[data-img-prefix]').forEach(img => { img.src = `../assets/calculator-${l}/${img.dataset.imgPrefix}-${l}-${img.dataset.imgNum}.png`; });
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    lang = l; localStorage.setItem('gs-lang', l);
+}
+applyLang(lang);
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+</script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

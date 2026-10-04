@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestrating berekenen — stenen, puinlaag, straatzand en kantopsluiting | BuildExact</title>
+    <meta name="description" content="Hoeveel stenen of tegels, m³ puin, m³ straatzand en kg voegzand heb je nodig voor je terras of oprit? Reken ook kantopsluiting mee. Gratis in BuildExact op Android.">
+    <meta name="keywords" content="bestrating berekenen, stenen per m2, puinlaag m3, straatzand berekenen, voegzand kg, kantopsluiting meter, terras berekenen, oprit stenen, BuildExact">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/calculators/bestrating.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/calculators/bestrating.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/calculators/bestrating.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/calculators/bestrating.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded-studio.app/calculators/bestrating.html">
+    <meta property="og:title" content="Bestrating berekenen — stenen, puin, zand en kantopsluiting">
+    <meta property="og:description" content="Complete uitleg plus rekenvoorbeeld. Reken bestrating in BuildExact in onder de minuut uit.">
+    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx.png">
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"HowTo",
+        "name":"Bestrating berekenen met BuildExact",
+        "description":"Reken het aantal stenen of tegels, m3 puin, m3 straatzand, kg voegzand en meters kantopsluiting uit op basis van oppervlakte, steenformaat, patroon en opbouwdiktes.",
+        "totalTime":"PT2M",
+        "step":[
+            {"@type":"HowToStep","name":"Open Bestrating calculator","text":"Open BuildExact en kies de Bestrating calculator onder Materialen."},
+            {"@type":"HowToStep","name":"Vul afmetingen in","text":"Zet oppervlakte in m2, steen breedte en hoogte in cm."},
+            {"@type":"HowToStep","name":"Kies patroon","text":"Blokverband, halfsteens, visgraat 45 of visgraat 90. Pas snijverlies aan het patroon aan."},
+            {"@type":"HowToStep","name":"Opbouw","text":"Vul straatzand en puinlaag in cm en voegzand in kg per m2. Optioneel: omtrek handmatig voor exacte kantopsluiting."},
+            {"@type":"HowToStep","name":"Lees het resultaat","text":"BuildExact toont aantal stenen, totale m2, m3 puin, m3 zand, kg voegzand en meter kantopsluiting."}
+        ],
+        "author":{"@type":"Organization","name":"Grounded Studio","url":"https://grounded-studio.app"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://grounded-studio.app/"},
+            {"@type":"ListItem","position":2,"name":"BuildExact","item":"https://grounded-studio.app/buildexact.html"},
+            {"@type":"ListItem","position":3,"name":"Calculators","item":"https://grounded-studio.app/calculators.html"},
+            {"@type":"ListItem","position":4,"name":"Bestrating"}
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background:#0a0f1a; color:#f1f5f9; font-family:'Inter',system-ui,sans-serif; line-height:1.6; }
+        :root { --bx:#2563eb; --bx2:#1d4ed8; --gs:#818cf8; --gs-glow:rgba(129,140,248,.3); --border:rgba(255,255,255,.07); --muted:#94a3b8; }
+        .c { max-width:820px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-right { display:flex; align-items:center; gap:16px; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .nav-back:hover { color:#fff; }
+        .lang-toggle { display:flex; align-items:center; gap:2px; background:rgba(255,255,255,.06); border:1px solid var(--border); border-radius:10px; padding:3px; }
+        .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
+        .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
+        .lang-btn:hover:not(.active) { color:#94a3b8; }
+
+        .article-header { padding:140px 0 50px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:22px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .breadcrumb a:hover { color:#94a3b8; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(37,99,235,.3); background:rgba(37,99,235,.08); color:var(--bx); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.9rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:16px; }
+        .lead { color:#cbd5e1; font-size:1.1rem; line-height:1.7; max-width:680px; }
+
+        .article-body { padding:30px 0 60px; }
+        .screenshots { margin:0 auto 44px; max-width:760px; padding:0 20px; }
+        .screenshots-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
+        .screenshots-grid.three { grid-template-columns:repeat(3, 1fr); }
+        .screenshot { aspect-ratio:9/19.5; border-radius:28px; overflow:hidden; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 50px rgba(0,0,0,.4); transition:transform .3s ease; }
+        .screenshot:hover { transform:translateY(-4px); }
+        .screenshot img { width:100%; height:100%; object-fit:cover; display:block; }
+        @media (max-width:640px) { .screenshots-grid, .screenshots-grid.three { grid-template-columns:1fr; max-width:300px; margin:0 auto; } }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 14px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body p { font-size:1.03rem; color:#cbd5e1; line-height:1.8; margin-bottom:22px; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:22px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.78; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+
+        .formula-box { background:rgba(37,99,235,.08); border:1px solid rgba(37,99,235,.25); border-radius:16px; padding:26px; margin:28px 0; }
+        .formula-label { font-size:.7rem; font-weight:700; color:var(--bx); letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+        .formula { font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:8px; }
+        .formula-ex { font-size:.9rem; color:var(--muted); }
+
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--bx); border-radius:0 16px 16px 0; padding:22px 26px; margin:28px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:8px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.7; margin:0; }
+
+        .table-wrap { overflow-x:auto; margin:24px 0; border-radius:14px; border:1px solid var(--border); }
+        table { width:100%; border-collapse:collapse; font-size:.92rem; }
+        th { background:rgba(37,99,235,.12); color:var(--bx); font-weight:700; padding:12px 16px; text-align:left; border-bottom:1px solid rgba(37,99,235,.2); }
+        td { padding:12px 16px; border-bottom:1px solid var(--border); color:#cbd5e1; }
+        tr:last-child td { border-bottom:none; }
+        td.n { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; color:#fff; }
+
+        .steps { counter-reset:step; padding:0 !important; }
+        .steps li { list-style:none; position:relative; padding-left:48px; margin-bottom:18px; counter-increment:step; }
+        .steps li::before { content:counter(step); position:absolute; left:0; top:-2px; width:32px; height:32px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.35); color:var(--bx); font-weight:800; font-size:.9rem; display:flex; align-items:center; justify-content:center; }
+
+        .app-cta { background:rgba(37,99,235,.06); border:1px solid rgba(37,99,235,.2); border-radius:20px; padding:30px; margin:44px 0 10px; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:18px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.4); color:var(--bx); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .app-cta a svg { width:22px; height:22px; }
+
+        .faq-wrap { margin:28px 0; display:flex; flex-direction:column; gap:10px; }
+        .faq-item { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+        .faq-item.open { border-color:rgba(37,99,235,.35); background:rgba(37,99,235,.04); }
+        .faq-q { width:100%; background:none; border:none; color:#f1f5f9; font-family:inherit; font-size:.98rem; font-weight:600; text-align:left; padding:18px 22px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+        .faq-icon { width:24px; height:24px; border-radius:50%; background:rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.3); color:var(--bx); display:flex; align-items:center; justify-content:center; font-size:.9rem; font-weight:700; flex-shrink:0; transition:transform .3s; }
+        .faq-item.open .faq-icon { transform:rotate(45deg); }
+        .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+        .faq-item.open .faq-a { max-height:420px; }
+        .faq-a-inner { padding:0 22px 18px; font-size:.95rem; color:#cbd5e1; line-height:1.7; }
+
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+
+        #progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,#2563eb,#818cf8); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><div class="nav-right"><a href="../calculators.html" class="nav-back">← Calculators</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../buildexact.html">BuildExact</a> / <a href="../calculators.html">Calculators</a> / <span data-i18n="bc.current">Bestrating</span></div>
+            <div class="article-cat" data-i18n="cat">🧱 Buiten en tuin</div>
+            <h1 data-i18n="h1">Bestrating berekenen — stenen, puinlaag, straatzand en kantopsluiting</h1>
+            <p class="lead" data-i18n="lead">Hoeveel stenen of tegels, hoeveel m³ puin en straatzand, hoeveel kg voegzand en hoeveel meter kantopsluiting heb je nodig voor een terras van 23 m²? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt.</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="screenshots">
+            <div class="screenshots-grid">
+                <div class="screenshot"><img src="../assets/calculator-nl/bestrating-nl-1.png" alt="Bestrating calculator — Afmetingen en patroon" data-img-prefix="bestrating" data-img-num="1" loading="lazy"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/bestrating-nl-2.png" alt="Bestrating calculator — Resultaat" data-img-prefix="bestrating" data-img-num="2" loading="lazy"></div>
+            </div>
+        </div>
+        <div class="c">
+
+            <h2 data-i18n="h2.inputs">Wat vraagt de calculator</h2>
+            <p data-i18n="p.inputs">De Bestrating calculator heeft drie blokken plus één optioneel veld: Afmetingen, Patroon, Opbouw en Omtrek handmatig. Elk veld hieronder komt één-op-één overeen met de app.</p>
+
+            <h3 data-i18n="h3.dims">Afmetingen</h3>
+            <ul>
+                <li data-i18n-html="in.area"><strong>Oppervlakte (m²)</strong> — de netto te bestraten oppervlakte. Trek vaste objecten eraf (bijvoorbeeld een bestaande boom of regenput). Een afvoerput of klein stopcontact zit in het snijverlies.</li>
+                <li data-i18n-html="in.sw"><strong>Steen breedte (cm)</strong> — de breedte van één steen of tegel. Dikformaat 20 × 10 cm, waalformaat 20 × 5 cm, keien tot 30 × 20 cm.</li>
+                <li data-i18n-html="in.sh"><strong>Steen hoogte (cm)</strong> — de lengte of hoogte van één steen. Samen met breedte bepaalt dit het oppervlak per steen.</li>
+            </ul>
+
+            <h3 data-i18n="h3.pattern">Patroon</h3>
+            <ul>
+                <li data-i18n-html="in.block"><strong>Blokverband</strong> — stenen recht boven elkaar in blokken. Rustig beeld, 3 tot 5% snijverlies.</li>
+                <li data-i18n-html="in.half"><strong>Halfsteens</strong> — klassiek metselverband, elke rij een halve steen verspringend. 3 tot 5% snijverlies.</li>
+                <li data-i18n-html="in.vis45"><strong>Visgraat 45°</strong> — stenen diagonaal gelegd, altijd snijden bij de randen. 10 tot 15% snijverlies.</li>
+                <li data-i18n-html="in.vis90"><strong>Visgraat 90°</strong> — stenen in loodrechte V-vorm. 7 tot 12% snijverlies, afhankelijk van vorm van je terras.</li>
+                <li data-i18n-html="in.waste"><strong>Snijverlies (%)</strong> — standaard 5% voor rechte patronen, 10 tot 15% voor visgraat. Verhoog bij veel randen of een niet-rechthoekig terras.</li>
+            </ul>
+
+            <h3 data-i18n="h3.base">Opbouw</h3>
+            <ul>
+                <li data-i18n-html="in.sand"><strong>Straatzand (cm)</strong> — standaard 5 cm. Dit is de laag waarop je stenen vlak komen te liggen. Minder voor klinkers (3 cm), meer voor zware tegels (5 tot 7 cm).</li>
+                <li data-i18n-html="in.rubble"><strong>Puinlaag (cm)</strong> — standaard 20 cm. De stabiele fundering onder het zand. Minder bij een vaste zandbodem (10 tot 15 cm), meer bij een losse of natte ondergrond (25 tot 30 cm).</li>
+                <li data-i18n-html="in.jointsand"><strong>Voegzand (kg/m²)</strong> — standaard 3 kg per m² voor dicht voegzand. Reken 2 kg per m² bij smalle voegen (1 tot 2 mm) en 4 tot 5 kg bij bredere voegen (5 mm +).</li>
+            </ul>
+
+            <h3 data-i18n="h3.edge">Omtrek handmatig (optioneel)</h3>
+            <ul>
+                <li data-i18n-html="in.perim"><strong>Omtrek handmatig (m, leeg = schat uit oppervlak)</strong> — vul de totale omtrek in als je terras een onregelmatige vorm heeft (L-vorm, met uitsparing). Laat leeg voor een vierkant of rechthoekig terras — dan schat de calculator de omtrek als 4 × √oppervlakte.</li>
+            </ul>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.pattern.h">💡 Patroon en snijverlies</h3>
+                <p data-i18n="tip.pattern.p">Blokverband en halfsteens zijn de goedkoopste leggingen qua materiaal — nauwelijks snijden. Visgraat vraagt structureel 10 tot 15% extra stenen (hoe steiler de hoek, hoe meer verlies). Een klein vierkant terras in visgraat kan zomaar 20% snijverlies hebben: reken daar niet te krap op.</p>
+            </div>
+
+            <h2 data-i18n="h2.formula">De formule onder de motorkap</h2>
+            <p data-i18n="p.formula">Bestrating is drie aparte berekeningen in één calculator: aantal stenen voor het oppervlak, m³ voor de opbouwlagen en meters voor de kantopsluiting.</p>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.slabel">Aantal stenen</div>
+                <div class="formula" data-i18n="f.smain">Stenen = (Oppervlakte × (1 + Snijverlies%)) / (B × H in m²)</div>
+                <div class="formula-ex" data-i18n="f.sex">Voorbeeld: (23 × 1,05) / (0,20 × 0,10) = 24,15 / 0,02 = 1207,5 → 1208 stenen</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.vlabel">Opbouwlagen (m³)</div>
+                <div class="formula" data-i18n="f.vmain">Volume = Oppervlakte × Laagdikte (m)</div>
+                <div class="formula-ex" data-i18n="f.vex">Voorbeeld puinlaag: 23 × 0,20 = 4,6 m³ · straatzand: 23 × 0,05 = 1,15 m³</div>
+            </div>
+
+            <div class="formula-box">
+                <div class="formula-label" data-i18n="f.elabel">Kantopsluiting (geschatte omtrek)</div>
+                <div class="formula" data-i18n="f.emain">Omtrek ≈ 4 × √Oppervlakte  (bij vierkante benadering)</div>
+                <div class="formula-ex" data-i18n="f.eex">Voorbeeld: 4 × √23 = 4 × 4,796 ≈ 19,18 m</div>
+            </div>
+
+            <h2 data-i18n="h2.example">Rekenvoorbeeld — terras 23 m² halfsteens</h2>
+            <p data-i18n="p.example">Dit is de situatie uit de screenshot: terras van 23 m², stenen 20 × 10 cm (dikformaat), halfsteens verband, 5 procent snijverlies. Opbouw: 5 cm straatzand op 20 cm puinlaag, voegzand 3 kg per m². Omtrek automatisch geschat.</p>
+
+            <h3 data-i18n="h3.inex">Invoer</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.field">Veld</th><th data-i18n="t.value">Waarde</th></tr>
+                    <tr><td data-i18n="r.area">Oppervlakte</td><td class="n">23 m²</td></tr>
+                    <tr><td data-i18n="r.size">Steenformaat</td><td class="n">20 × 10 cm</td></tr>
+                    <tr><td data-i18n="r.pattern">Patroon</td><td class="n" data-i18n="r.half">Halfsteens</td></tr>
+                    <tr><td data-i18n="r.waste">Snijverlies</td><td class="n">5 %</td></tr>
+                    <tr><td data-i18n="r.sand">Straatzand</td><td class="n">5 cm</td></tr>
+                    <tr><td data-i18n="r.rubble">Puinlaag</td><td class="n">20 cm</td></tr>
+                    <tr><td data-i18n="r.jointsand">Voegzand</td><td class="n">3 kg/m²</td></tr>
+                </table>
+            </div>
+
+            <h3 data-i18n="h3.calc">Berekening stap voor stap</h3>
+            <ol>
+                <li data-i18n="c.1">23 m² × 1,05 (5% snijverlies) = 24,15 m² totaal te bestraten</li>
+                <li data-i18n="c.2">Eén steen 20 × 10 cm = 0,20 × 0,10 = 0,02 m² per steen</li>
+                <li data-i18n="c.3">24,15 ÷ 0,02 = 1207,5 → afgerond 1208 stenen</li>
+                <li data-i18n="c.4">Puinlaag: 23 × 0,20 m = 4,6 m³ (netto, zonder snijverlies)</li>
+                <li data-i18n="c.5">Straatzand: 23 × 0,05 m = 1,15 m³</li>
+                <li data-i18n="c.6">Voegzand: 23 × 3 kg = 69 kg</li>
+                <li data-i18n="c.7">Kantopsluiting (geschat): 4 × √23 = 4 × 4,796 ≈ 19,18 m</li>
+            </ol>
+
+            <h3 data-i18n="h3.outex">Resultaat</h3>
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.item">Onderdeel</th><th data-i18n="t.amount">Waarde</th></tr>
+                    <tr><td data-i18n="o.stones">Benodigd stenen/tegels</td><td class="n">1208</td></tr>
+                    <tr><td data-i18n="o.area">Incl. snijverlies</td><td class="n">24,15 m²</td></tr>
+                    <tr><td data-i18n="o.rubble">Puinlaag</td><td class="n">4,6 m³</td></tr>
+                    <tr><td data-i18n="o.sand">Straatzand</td><td class="n">1,15 m³</td></tr>
+                    <tr><td data-i18n="o.joint">Voegzand</td><td class="n">69 kg</td></tr>
+                    <tr><td data-i18n="o.edge">Kantopsluiting</td><td class="n">19,18 m</td></tr>
+                </table>
+            </div>
+
+            <div class="tip-card">
+                <h3 data-i18n="tip.perim.h">⚠️ Omtrek bij een vreemde vorm</h3>
+                <p data-i18n="tip.perim.p">De automatische schatting 4 × √oppervlak werkt alleen voor vierkante terrassen. Voor een lang smal terras of een L-vorm klopt die schatting niet — meet dan de omtrek zelf en vul 'Omtrek handmatig' in. Een lang terras van 2 × 11,5 m heeft bijvoorbeeld een omtrek van 27 m, bijna 40% meer dan de schatting van 19 m.</p>
+            </div>
+
+            <h2 data-i18n="h2.patterns">Patroon en stenen per m²</h2>
+            <p data-i18n="p.patterns">Verschillende steenformaten en patronen leveren verschillende aantallen stenen per m². Hier de meest voorkomende combinaties voor 23 m²:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <tr><th data-i18n="t.format">Formaat (cm)</th><th data-i18n="t.perm2">Per m²</th><th data-i18n="t.ptn">Patroon</th><th data-i18n="t.needed">Nodig op 23 m²</th></tr>
+                    <tr><td>20 × 10 (dikformaat)</td><td class="n">50</td><td data-i18n="p.half">Halfsteens 5%</td><td class="n">1208</td></tr>
+                    <tr><td>20 × 10 (dikformaat)</td><td class="n">50</td><td data-i18n="p.vis45">Visgraat 45° 12%</td><td class="n">1288</td></tr>
+                    <tr><td>20 × 5 (waalformaat)</td><td class="n">100</td><td data-i18n="p.half">Halfsteens 5%</td><td class="n">2415</td></tr>
+                    <tr><td>30 × 20 (betontegel)</td><td class="n">16,7</td><td data-i18n="p.block">Blokverband 3%</td><td class="n">396</td></tr>
+                    <tr><td>60 × 60 (keramische terrastegel)</td><td class="n">2,8</td><td data-i18n="p.block">Blokverband 5%</td><td class="n">68</td></tr>
+                </table>
+            </div>
+
+            <h2 data-i18n="h2.steps">Zo doe je dit in BuildExact</h2>
+            <ol class="steps">
+                <li data-i18n-html="s.1"><strong>Open de Bestrating calculator</strong> onder Materialen. Je ziet meteen 'Afmetingen' bovenin.</li>
+                <li data-i18n-html="s.2"><strong>Vul oppervlakte, steen breedte en hoogte in</strong>. Dikformaat 20 × 10 is standaard voor klinkers.</li>
+                <li data-i18n-html="s.3"><strong>Kies patroon</strong> en pas snijverlies aan — 5% voor blokverband/halfsteens, 10 tot 15% voor visgraat.</li>
+                <li data-i18n-html="s.4"><strong>Opbouw instellen</strong>: 5 cm straatzand, 20 cm puin (standaard), 3 kg voegzand per m². Pas aan voor zware tegels of natte ondergrond.</li>
+                <li data-i18n-html="s.5"><strong>Omtrek handmatig als vorm vreemd is</strong> — bij L-vorm, lange smalle strook of ronde terras meet je de omtrek zelf. Daarna bewaren of delen vanuit de resultaatkaart.</li>
+            </ol>
+
+            <h2 data-i18n="h2.faq">Veelgestelde vragen</h2>
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.1">Welk patroon moet ik kiezen?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.1">Blokverband is het rustigst en goedkoopst. Halfsteens is de klassieker voor klinkers, iets levendiger beeld. Visgraat (45 of 90) is de luxe keuze: elegant maar 10 tot 15 procent duurder door extra snijverlies. Voor een oprit of plat terras: halfsteens. Voor een voortuinpad met wow-effect: visgraat.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.2">Hoe dik moet mijn puinlaag zijn?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.2">Terras of voetpad: 15 tot 20 cm. Oprit voor een auto: 20 tot 25 cm. Carport of regelmatig zware belasting: 25 tot 30 cm. Op een vaste zandbodem kan je soms met 10 cm toe; op klei of nat zand altijd minimaal 25 cm. Bij twijfel: dikker is beter — verzakking repareer je niet achteraf.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.3">Hoeveel voegzand per m²?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.3">Standaard 3 kg per m² voor klinkers met voegen van 3 mm. Smalle voegen (1 à 2 mm) bij strakke tegels: 2 kg per m². Brede voegen van 5 mm of meer: 4 tot 5 kg. Gebruik je polymeerzand (vast na water)? Reken hetzelfde, maar het is duurder per kilo.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.4">Wat is kantopsluiting precies en heb ik het altijd nodig?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.4">De randsteen die je bestrating op zijn plek houdt zodat de buitenste stenen niet wegzakken of wegschuiven. Noodzakelijk bij elke bestrating. Standaard 100 × 10 cm betonband of een opsluitprofiel in kunststof voor terrassen. BuildExact rekent de meter en geeft je de totale lengte die je bij de bouwmarkt bestelt.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span data-i18n="q.5">Waarom wordt de omtrek geschat als 4 keer wortel van het oppervlak?</span><span class="faq-icon">+</span></button>
+                    <div class="faq-a"><div class="faq-a-inner" data-i18n="a.5">Omdat een vierkant van X m² een zijde heeft van √X m en dus een omtrek van 4 × √X m. Dat klopt alleen voor een vierkant. Voor een rechthoek of een L-vorm meet je de omtrek zelf — anders bestel je te weinig kantopsluiting. Een lang terras van 2 × 11,5 m is 23 m² maar heeft omtrek 27 m, niet 19.</div></div>
+                </div>
+            </div>
+
+            <div class="app-cta">
+                <h3 data-i18n="cta.h">🧱 Reken je bestrating in BuildExact</h3>
+                <p data-i18n="cta.p">Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg>
+                    <span data-i18n="cta.btn">Gratis downloaden</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="c-wide">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="../calculators.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Calculators</a>
+                <a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="../blog/buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
+                <a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a>
+                <a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
+                <a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
+            </div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item .faq-q').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open'));
+});
+var rp=document.getElementById('progress');
+window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});
+
+const T = {
+    nl: {
+        'bc.current':'Bestrating','cat':'🧱 Buiten en tuin',
+        'h1':'Bestrating berekenen — stenen, puinlaag, straatzand en kantopsluiting',
+        'lead':'Hoeveel stenen of tegels, hoeveel m³ puin en straatzand, hoeveel kg voegzand en hoeveel meter kantopsluiting heb je nodig voor een terras van 23 m²? Deze pagina legt elke invoer uit en laat met een echt rekenvoorbeeld zien wat er uit BuildExact komt.',
+        'h2.inputs':'Wat vraagt de calculator','p.inputs':'De Bestrating calculator heeft drie blokken plus één optioneel veld: Afmetingen, Patroon, Opbouw en Omtrek handmatig. Elk veld hieronder komt één-op-één overeen met de app.',
+        'h3.dims':'Afmetingen',
+        'in.area':'<strong>Oppervlakte (m²)</strong> — de netto te bestraten oppervlakte. Trek vaste objecten eraf (bijvoorbeeld een bestaande boom of regenput). Een afvoerput of klein stopcontact zit in het snijverlies.',
+        'in.sw':'<strong>Steen breedte (cm)</strong> — de breedte van één steen of tegel. Dikformaat 20 × 10 cm, waalformaat 20 × 5 cm, keien tot 30 × 20 cm.',
+        'in.sh':'<strong>Steen hoogte (cm)</strong> — de lengte of hoogte van één steen. Samen met breedte bepaalt dit het oppervlak per steen.',
+        'h3.pattern':'Patroon',
+        'in.block':'<strong>Blokverband</strong> — stenen recht boven elkaar in blokken. Rustig beeld, 3 tot 5% snijverlies.',
+        'in.half':'<strong>Halfsteens</strong> — klassiek metselverband, elke rij een halve steen verspringend. 3 tot 5% snijverlies.',
+        'in.vis45':'<strong>Visgraat 45°</strong> — stenen diagonaal gelegd, altijd snijden bij de randen. 10 tot 15% snijverlies.',
+        'in.vis90':'<strong>Visgraat 90°</strong> — stenen in loodrechte V-vorm. 7 tot 12% snijverlies, afhankelijk van vorm van je terras.',
+        'in.waste':'<strong>Snijverlies (%)</strong> — standaard 5% voor rechte patronen, 10 tot 15% voor visgraat. Verhoog bij veel randen of een niet-rechthoekig terras.',
+        'h3.base':'Opbouw',
+        'in.sand':'<strong>Straatzand (cm)</strong> — standaard 5 cm. Dit is de laag waarop je stenen vlak komen te liggen. Minder voor klinkers (3 cm), meer voor zware tegels (5 tot 7 cm).',
+        'in.rubble':'<strong>Puinlaag (cm)</strong> — standaard 20 cm. De stabiele fundering onder het zand. Minder bij een vaste zandbodem (10 tot 15 cm), meer bij een losse of natte ondergrond (25 tot 30 cm).',
+        'in.jointsand':'<strong>Voegzand (kg/m²)</strong> — standaard 3 kg per m² voor dicht voegzand. Reken 2 kg per m² bij smalle voegen (1 tot 2 mm) en 4 tot 5 kg bij bredere voegen (5 mm +).',
+        'h3.edge':'Omtrek handmatig (optioneel)',
+        'in.perim':'<strong>Omtrek handmatig (m, leeg = schat uit oppervlak)</strong> — vul de totale omtrek in als je terras een onregelmatige vorm heeft (L-vorm, met uitsparing). Laat leeg voor een vierkant of rechthoekig terras — dan schat de calculator de omtrek als 4 × √oppervlakte.',
+        'tip.pattern.h':'💡 Patroon en snijverlies','tip.pattern.p':'Blokverband en halfsteens zijn de goedkoopste leggingen qua materiaal — nauwelijks snijden. Visgraat vraagt structureel 10 tot 15% extra stenen (hoe steiler de hoek, hoe meer verlies). Een klein vierkant terras in visgraat kan zomaar 20% snijverlies hebben: reken daar niet te krap op.',
+        'h2.formula':'De formule onder de motorkap','p.formula':'Bestrating is drie aparte berekeningen in één calculator: aantal stenen voor het oppervlak, m³ voor de opbouwlagen en meters voor de kantopsluiting.',
+        'f.slabel':'Aantal stenen','f.smain':'Stenen = (Oppervlakte × (1 + Snijverlies%)) / (B × H in m²)','f.sex':'Voorbeeld: (23 × 1,05) / (0,20 × 0,10) = 24,15 / 0,02 = 1207,5 → 1208 stenen',
+        'f.vlabel':'Opbouwlagen (m³)','f.vmain':'Volume = Oppervlakte × Laagdikte (m)','f.vex':'Voorbeeld puinlaag: 23 × 0,20 = 4,6 m³ · straatzand: 23 × 0,05 = 1,15 m³',
+        'f.elabel':'Kantopsluiting (geschatte omtrek)','f.emain':'Omtrek ≈ 4 × √Oppervlakte  (bij vierkante benadering)','f.eex':'Voorbeeld: 4 × √23 = 4 × 4,796 ≈ 19,18 m',
+        'h2.example':'Rekenvoorbeeld — terras 23 m² halfsteens','p.example':'Dit is de situatie uit de screenshot: terras van 23 m², stenen 20 × 10 cm (dikformaat), halfsteens verband, 5 procent snijverlies. Opbouw: 5 cm straatzand op 20 cm puinlaag, voegzand 3 kg per m². Omtrek automatisch geschat.',
+        'h3.inex':'Invoer','t.field':'Veld','t.value':'Waarde',
+        'r.area':'Oppervlakte','r.size':'Steenformaat','r.pattern':'Patroon','r.half':'Halfsteens','r.waste':'Snijverlies','r.sand':'Straatzand','r.rubble':'Puinlaag','r.jointsand':'Voegzand',
+        'h3.calc':'Berekening stap voor stap',
+        'c.1':'23 m² × 1,05 (5% snijverlies) = 24,15 m² totaal te bestraten',
+        'c.2':'Eén steen 20 × 10 cm = 0,20 × 0,10 = 0,02 m² per steen',
+        'c.3':'24,15 ÷ 0,02 = 1207,5 → afgerond 1208 stenen',
+        'c.4':'Puinlaag: 23 × 0,20 m = 4,6 m³ (netto, zonder snijverlies)',
+        'c.5':'Straatzand: 23 × 0,05 m = 1,15 m³',
+        'c.6':'Voegzand: 23 × 3 kg = 69 kg',
+        'c.7':'Kantopsluiting (geschat): 4 × √23 = 4 × 4,796 ≈ 19,18 m',
+        'h3.outex':'Resultaat','t.item':'Onderdeel','t.amount':'Waarde',
+        'o.stones':'Benodigd stenen/tegels','o.area':'Incl. snijverlies','o.rubble':'Puinlaag','o.sand':'Straatzand','o.joint':'Voegzand','o.edge':'Kantopsluiting',
+        'tip.perim.h':'⚠️ Omtrek bij een vreemde vorm','tip.perim.p':"De automatische schatting 4 × √oppervlak werkt alleen voor vierkante terrassen. Voor een lang smal terras of een L-vorm klopt die schatting niet — meet dan de omtrek zelf en vul 'Omtrek handmatig' in. Een lang terras van 2 × 11,5 m heeft bijvoorbeeld een omtrek van 27 m, bijna 40% meer dan de schatting van 19 m.",
+        'h2.patterns':'Patroon en stenen per m²','p.patterns':'Verschillende steenformaten en patronen leveren verschillende aantallen stenen per m². Hier de meest voorkomende combinaties voor 23 m²:',
+        't.format':'Formaat (cm)','t.perm2':'Per m²','t.ptn':'Patroon','t.needed':'Nodig op 23 m²',
+        'p.half':'Halfsteens 5%','p.vis45':'Visgraat 45° 12%','p.block':'Blokverband 3%','p.block5':'Blokverband 5%',
+        'h2.steps':'Zo doe je dit in BuildExact',
+        's.1':"<strong>Open de Bestrating calculator</strong> onder Materialen. Je ziet meteen 'Afmetingen' bovenin.",
+        's.2':'<strong>Vul oppervlakte, steen breedte en hoogte in</strong>. Dikformaat 20 × 10 is standaard voor klinkers.',
+        's.3':'<strong>Kies patroon</strong> en pas snijverlies aan — 5% voor blokverband/halfsteens, 10 tot 15% voor visgraat.',
+        's.4':'<strong>Opbouw instellen</strong>: 5 cm straatzand, 20 cm puin (standaard), 3 kg voegzand per m². Pas aan voor zware tegels of natte ondergrond.',
+        's.5':'<strong>Omtrek handmatig als vorm vreemd is</strong> — bij L-vorm, lange smalle strook of ronde terras meet je de omtrek zelf. Daarna bewaren of delen vanuit de resultaatkaart.',
+        'h2.faq':'Veelgestelde vragen',
+        'q.1':'Welk patroon moet ik kiezen?','a.1':'Blokverband is het rustigst en goedkoopst. Halfsteens is de klassieker voor klinkers, iets levendiger beeld. Visgraat (45 of 90) is de luxe keuze: elegant maar 10 tot 15 procent duurder door extra snijverlies. Voor een oprit of plat terras: halfsteens. Voor een voortuinpad met wow-effect: visgraat.',
+        'q.2':'Hoe dik moet mijn puinlaag zijn?','a.2':'Terras of voetpad: 15 tot 20 cm. Oprit voor een auto: 20 tot 25 cm. Carport of regelmatig zware belasting: 25 tot 30 cm. Op een vaste zandbodem kan je soms met 10 cm toe; op klei of nat zand altijd minimaal 25 cm. Bij twijfel: dikker is beter — verzakking repareer je niet achteraf.',
+        'q.3':'Hoeveel voegzand per m²?','a.3':'Standaard 3 kg per m² voor klinkers met voegen van 3 mm. Smalle voegen (1 à 2 mm) bij strakke tegels: 2 kg per m². Brede voegen van 5 mm of meer: 4 tot 5 kg. Gebruik je polymeerzand (vast na water)? Reken hetzelfde, maar het is duurder per kilo.',
+        'q.4':'Wat is kantopsluiting precies en heb ik het altijd nodig?','a.4':'De randsteen die je bestrating op zijn plek houdt zodat de buitenste stenen niet wegzakken of wegschuiven. Noodzakelijk bij elke bestrating. Standaard 100 × 10 cm betonband of een opsluitprofiel in kunststof voor terrassen. BuildExact rekent de meter en geeft je de totale lengte die je bij de bouwmarkt bestelt.',
+        'q.5':'Waarom wordt de omtrek geschat als 4 keer wortel van het oppervlak?','a.5':'Omdat een vierkant van X m² een zijde heeft van √X m en dus een omtrek van 4 × √X m. Dat klopt alleen voor een vierkant. Voor een rechthoek of een L-vorm meet je de omtrek zelf — anders bestel je te weinig kantopsluiting. Een lang terras van 2 × 11,5 m is 23 m² maar heeft omtrek 27 m, niet 19.',
+        'cta.h':'🧱 Reken je bestrating in BuildExact','cta.p':'Gratis in de app. Reken, bewaar als project, zet om in een offerte-PDF met je logo — allemaal zonder opnieuw te typen.','cta.btn':'Gratis downloaden',
+    },
+    en: {
+        'bc.current':'Paving','cat':'🧱 Outdoor and garden',
+        'h1':'Paving calculator — bricks, sub-base, bedding sand and edge restraint',
+        'lead':'How many bricks or tiles, how many m³ of sub-base and bedding sand, how many kg of joint sand and how many metres of edge restraint do you need for a 23 m² patio? This page explains every input and shows a real worked example with the exact BuildExact output.',
+        'h2.inputs':'What the calculator asks','p.inputs':'The Paving calculator has three blocks plus one optional field: Dimensions, Pattern, Sub-base and manual Perimeter. Every field below maps one-to-one to the app.',
+        'h3.dims':'Dimensions',
+        'in.area':'<strong>Area (m²)</strong> — the net paveable area. Subtract fixed objects (e.g. existing tree or drain cover). A gully or small socket falls into cutting waste.',
+        'in.sw':'<strong>Brick width (cm)</strong> — the width of one brick or tile. Dutch dikformaat 20 × 10 cm, waalformaat 20 × 5 cm, cobbles up to 30 × 20 cm.',
+        'in.sh':'<strong>Brick height (cm)</strong> — the length or height of one brick. Together with width this gives area per brick.',
+        'h3.pattern':'Pattern',
+        'in.block':'<strong>Stack bond</strong> — bricks directly above each other in blocks. Calm look, 3 to 5% cutting waste.',
+        'in.half':'<strong>Running bond</strong> — classic masonry bond, each row offset half a brick. 3 to 5% cutting waste.',
+        'in.vis45':'<strong>Herringbone 45°</strong> — bricks diagonal, cut on every edge. 10 to 15% cutting waste.',
+        'in.vis90':'<strong>Herringbone 90°</strong> — bricks in perpendicular V shape. 7 to 12% cutting waste, depending on patio shape.',
+        'in.waste':'<strong>Cutting waste (%)</strong> — standard 5% for stack/running bond, 10 to 15% for herringbone. Raise for many edges or a non-rectangular patio.',
+        'h3.base':'Sub-base',
+        'in.sand':'<strong>Bedding sand (cm)</strong> — standard 5 cm. The layer the bricks are laid level in. Less for clay pavers (3 cm), more for heavy tiles (5 to 7 cm).',
+        'in.rubble':'<strong>Sub-base (cm)</strong> — standard 20 cm. The stable foundation under the sand. Less on a firm sand ground (10 to 15 cm), more on soft or wet ground (25 to 30 cm).',
+        'in.jointsand':'<strong>Joint sand (kg/m²)</strong> — standard 3 kg per m² for narrow joints. 2 kg for very tight joints (1 to 2 mm), 4 to 5 kg for wider joints (5 mm +).',
+        'h3.edge':'Perimeter (optional)',
+        'in.perim':"<strong>Perimeter manually (m, blank = estimated from area)</strong> — fill in the total perimeter if your patio is irregular (L-shape, with cutout). Leave blank for a square or rectangular patio — then the calculator estimates perimeter as 4 × √area.",
+        'tip.pattern.h':'💡 Pattern and cutting waste','tip.pattern.p':'Stack and running bond are the cheapest layouts for materials — hardly any cuts. Herringbone needs 10 to 15% more bricks (the steeper the angle, the higher the waste). A small square patio in herringbone can easily hit 20% cutting waste: do not plan too tight.',
+        'h2.formula':'The formula under the hood','p.formula':'Paving is three separate calculations in one tool: brick count for the surface, m³ for the base layers and metres for the edge restraint.',
+        'f.slabel':'Brick count','f.smain':'Bricks = (Area × (1 + Cutting waste%)) / (W × H in m²)','f.sex':'Example: (23 × 1.05) / (0.20 × 0.10) = 24.15 / 0.02 = 1207.5 → 1208 bricks',
+        'f.vlabel':'Base layers (m³)','f.vmain':'Volume = Area × Layer thickness (m)','f.vex':'Example sub-base: 23 × 0.20 = 4.6 m³ · bedding sand: 23 × 0.05 = 1.15 m³',
+        'f.elabel':'Edge restraint (estimated perimeter)','f.emain':'Perimeter ≈ 4 × √Area  (square approximation)','f.eex':'Example: 4 × √23 = 4 × 4.796 ≈ 19.18 m',
+        'h2.example':'Worked example — 23 m² patio running bond','p.example':'This is the situation from the screenshot: a 23 m² patio with 20 × 10 cm bricks (dikformaat), running bond, 5 percent cutting waste. Base: 5 cm bedding sand on 20 cm sub-base, joint sand 3 kg per m². Perimeter auto-estimated.',
+        'h3.inex':'Input','t.field':'Field','t.value':'Value',
+        'r.area':'Area','r.size':'Brick size','r.pattern':'Pattern','r.half':'Running bond','r.waste':'Cutting waste','r.sand':'Bedding sand','r.rubble':'Sub-base','r.jointsand':'Joint sand',
+        'h3.calc':'Calculation step by step',
+        'c.1':'23 m² × 1.05 (5% cutting waste) = 24.15 m² total to pave',
+        'c.2':'One brick 20 × 10 cm = 0.20 × 0.10 = 0.02 m² per brick',
+        'c.3':'24.15 ÷ 0.02 = 1207.5 → rounded 1208 bricks',
+        'c.4':'Sub-base: 23 × 0.20 m = 4.6 m³ (net, no cutting waste)',
+        'c.5':'Bedding sand: 23 × 0.05 m = 1.15 m³',
+        'c.6':'Joint sand: 23 × 3 kg = 69 kg',
+        'c.7':'Edge restraint (estimated): 4 × √23 = 4 × 4.796 ≈ 19.18 m',
+        'h3.outex':'Result','t.item':'Item','t.amount':'Value',
+        'o.stones':'Bricks/tiles needed','o.area':'Incl. cutting waste','o.rubble':'Sub-base','o.sand':'Bedding sand','o.joint':'Joint sand','o.edge':'Edge restraint',
+        'tip.perim.h':'⚠️ Perimeter for odd shapes','tip.perim.p':"The 4 × √area estimate only works for a square patio. For a long narrow patio or an L-shape it is wrong — measure the perimeter yourself and fill in 'Perimeter manually'. A long patio of 2 × 11.5 m is 23 m² but has a perimeter of 27 m, nearly 40% more than the 19 m estimate.",
+        'h2.patterns':'Pattern and bricks per m²','p.patterns':'Different brick sizes and patterns give different brick counts per m². Common combinations on 23 m²:',
+        't.format':'Size (cm)','t.perm2':'Per m²','t.ptn':'Pattern','t.needed':'Needed on 23 m²',
+        'p.half':'Running bond 5%','p.vis45':'Herringbone 45° 12%','p.block':'Stack bond 3%','p.block5':'Stack bond 5%',
+        'h2.steps':'How to do this in BuildExact',
+        's.1':"<strong>Open the Paving calculator</strong> under Materials. 'Dimensions' is right at the top.",
+        's.2':'<strong>Fill in area, brick width and height</strong>. Dikformaat 20 × 10 is the Dutch standard for clay pavers.',
+        's.3':'<strong>Pick a pattern</strong> and tune cutting waste — 5% for stack/running bond, 10 to 15% for herringbone.',
+        's.4':'<strong>Set the base</strong>: 5 cm bedding sand, 20 cm sub-base (standard), 3 kg joint sand per m². Adjust for heavy tiles or wet ground.',
+        's.5':'<strong>Perimeter manually for odd shapes</strong> — for L-shape, long narrow strip or round patio measure the perimeter yourself. Then save or share from the result card.',
+        'h2.faq':'Frequently asked questions',
+        'q.1':'Which pattern should I pick?','a.1':'Stack bond is the quietest and cheapest. Running bond is the classic for clay pavers — slightly livelier look. Herringbone (45 or 90) is the premium choice: elegant but 10 to 15 percent more expensive due to extra cutting waste. For a driveway or flat patio: running bond. For a front garden path with wow factor: herringbone.',
+        'q.2':'How thick should my sub-base be?','a.2':'Patio or footpath: 15 to 20 cm. Driveway for a car: 20 to 25 cm. Carport or regular heavy load: 25 to 30 cm. On firm sand ground 10 cm may do; on clay or wet sand always 25 cm minimum. When in doubt: thicker is better — settling cannot be fixed afterwards.',
+        'q.3':'How much joint sand per m²?','a.3':'Standard 3 kg per m² for clay pavers with 3 mm joints. Tight joints (1 to 2 mm) with sharp tiles: 2 kg per m². Wider joints of 5 mm or more: 4 to 5 kg. Polymeric sand (binds after water)? Same amount, higher price per kilo.',
+        'q.4':'What is edge restraint and do I always need it?','a.4':'The border element keeping your paving in place so the outside bricks do not sink or shift. Required on every paving job. Standard 100 × 10 cm concrete kerb or a plastic restraint profile for patios. BuildExact calculates the metres you need to buy at the merchant.',
+        'q.5':'Why is the perimeter estimated as 4 times the square root of the area?','a.5':'Because a square of X m² has sides of √X m and perimeter 4 × √X m. That only works for a square. For a rectangle or L-shape you measure the perimeter yourself — otherwise you order too little edge restraint. A long patio of 2 × 11.5 m is 23 m² but has perimeter 27 m, not 19.',
+        'cta.h':'🧱 Calculate your paving in BuildExact','cta.p':'Free in the app. Calculate, save as a project, convert to a branded PDF quote — all without retyping.','cta.btn':'Download free',
+    }
+};
+const savedLang = localStorage.getItem('gs-lang');
+const browserIsNL = (navigator.language || '').toLowerCase().startsWith('nl');
+let lang = savedLang || (browserIsNL ? 'nl' : 'en');
+function applyLang(l) {
+    const d = T[l]; document.documentElement.lang = l;
+    document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
+    document.querySelectorAll('[data-img-prefix]').forEach(img => { img.src = `../assets/calculator-${l}/${img.dataset.imgPrefix}-${l}-${img.dataset.imgNum}.png`; });
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    lang = l; localStorage.setItem('gs-lang', l);
+}
+applyLang(lang);
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+</script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>
