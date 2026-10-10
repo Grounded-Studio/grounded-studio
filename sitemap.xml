@@ -438,4 +438,10 @@
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/why-circuit-trace-one-finger-puzzle.html</loc>
+        <lastmod>2026-10-04</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>

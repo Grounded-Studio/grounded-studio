@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#818cf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why We Built Circuit Trace as a One-Finger Puzzle Game | Grounded Studio</title>
+    <meta name="description" content="Circuit Trace is a minimalist Android puzzle: one finger, one rule, no timers, no noise, no ads during gameplay. The design philosophy behind a calm puzzle game for players who want to think, not react.">
+    <meta name="keywords" content="Circuit Trace, one-finger puzzle game, minimalist puzzle android, calm puzzle game, no ads puzzle, offline puzzle game, Flow Free alternative, zen puzzle, Grounded Studio">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/blog/why-circuit-trace-one-finger-puzzle.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/why-circuit-trace-one-finger-puzzle.html">
+    <link rel="alternate" hreflang="x-default" href="https://grounded-studio.app/blog/why-circuit-trace-one-finger-puzzle.html">
+    <meta property="og:title" content="Why We Built Circuit Trace as a One-Finger Puzzle Game">
+    <meta property="og:description" content="One finger. One rule. No timers, no noise, no ads during gameplay. The design philosophy behind Circuit Trace.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://grounded-studio.app/assets/og-studio.svg">
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Article", "headline": "Why We Built Circuit Trace as a One-Finger Puzzle Game", "author": { "@type": "Organization", "name": "Grounded Studio" }, "publisher": { "@type": "Organization", "name": "Grounded Studio", "logo": { "@type": "ImageObject", "url": "https://grounded-studio.app/assets/logo-gs.png" } }, "datePublished": "2026-10-04", "inLanguage": "en" }
+    </script>
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/" }, { "@type": "ListItem", "position": 2, "name": "Games", "item": "https://grounded-studio.app/games.html" }, { "@type": "ListItem", "position": 3, "name": "Circuit Trace", "item": "https://grounded-studio.app/games/circuit-trace.html" }, { "@type": "ListItem", "position": 4, "name": "Why One-Finger" } ] }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0a0f1a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+        :root { --fl:#818cf8; --fl2:#6366f1; --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(129,140,248,.3); background:rgba(129,140,248,.08); color:var(--fl); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+        .pull-quote { background:rgba(129,140,248,.08); border:1px solid rgba(129,140,248,.25); border-radius:16px; padding:28px; margin:32px 0; }
+        .pull-quote p { font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:600; color:#fff; margin:0; line-height:1.5; }
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--fl); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+        .app-cta { background:rgba(129,140,248,.06); border:1px solid rgba(129,140,248,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(129,140,248,.15); border:1px solid rgba(129,140,248,.4); color:var(--fl); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media (max-width:700px) { .related-cards { grid-template-columns:1fr; } }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--fl); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        #read-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,var(--fl),var(--fl2)); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="read-progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><a href="../games/circuit-trace.html" class="nav-back">← Circuit Trace</a></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../games.html">Games</a> / <a href="../games/circuit-trace.html">Circuit Trace</a> / <span>Why One-Finger</span></div>
+            <div class="article-cat">🎮 Design Philosophy</div>
+            <h1>Why we built Circuit Trace as a one-finger puzzle game</h1>
+            <div class="article-meta"><span>📅 4 October 2026</span><span>⏱ 5 min read</span><span>✍️ Grounded Studio</span></div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+            <p>The best puzzles I ever played were on a train. One finger on the glass. Looking out between moves. No earbuds, no soundtrack, no little animated character cheering when I solved a level. Just a problem and me.</p>
+
+            <p>That's the game <strong>Circuit Trace</strong> tries to be.</p>
+
+            <h2>One finger. One rule.</h2>
+
+            <p>Place your finger on a dot. Draw a single path to the matching dot in the same colour. Fill every cell on the grid. Lift your finger. Done.</p>
+
+            <p>That's the entire input vocabulary. No pinch, no swipe, no double-tap, no menu dive mid-puzzle. If you've ever used a touchscreen, you already know how to play. The rules fit on the back of a receipt.</p>
+
+            <p>We made it one-finger because puzzles are supposed to work in <em>margins</em> — the five minutes before a meeting, the queue at the pharmacy, the stop before yours. A game that needs two hands and headphones is a game you only play on the couch.</p>
+
+            <div class="pull-quote">
+                <p>"Puzzles should work in margins — five minutes before a meeting, the queue at the pharmacy, the stop before yours."</p>
+            </div>
+
+            <h2>No timers in the campaign</h2>
+
+            <p>Every mobile puzzle game eventually tries to make you anxious. A countdown clock. A thirty-second window. A pulsing red bar that fills while you think.</p>
+
+            <p>The 100-level campaign in Circuit Trace has none of that. Zero clocks. You can stare at a level for twenty minutes, make a cup of tea, come back, finish it. The game waits.</p>
+
+            <p>Timers exist in two optional modes — the 60-second <strong>Time Trial</strong> and some weekly mastery speed challenges — because some players enjoy that pressure. They're opt-in, not opt-out.</p>
+
+            <h2>No noise</h2>
+
+            <p>Open your average free puzzle app and inside twenty seconds you'll hear: a jingle, a victory sting, a thunk when a piece drops, upbeat elevator music, and someone exclaiming "GREAT!" You turn the sound off, then the vibration kicks in. You turn that off too and the game feels broken.</p>
+
+            <p>Circuit Trace ships silent. No background music, no victory stings, no haptic punches. The only feedback the game gives you is visual: lines appear under your finger, cells fill, stars award at the end. That's it.</p>
+
+            <p>If you want music, you've already got Spotify open. If you want silence, we don't take it away from you.</p>
+
+            <h2>No ads during gameplay</h2>
+
+            <p>Not "no ads" — that's a lie almost every "free" app tells. Circuit Trace shows <strong>no ads during a level</strong>. You never finish a puzzle, feel that small win, and then watch 30 seconds of someone shouting about an RPG. Interruption kills flow, and flow is the entire reason to play a puzzle in the first place.</p>
+
+            <p>A single, optional ad lives on the main menu for players who want to support the game without paying. Watch it or don't. The puzzles don't change either way.</p>
+
+            <h2>What "zen" actually means</h2>
+
+            <p>Every third puzzle game on the Play Store calls itself "zen." Most mean "the background is pastel." A game isn't zen because it looks calm. It's zen because of what it <em>removes</em>:</p>
+
+            <ul>
+                <li>No streak that punishes you for taking a day off</li>
+                <li>No daily rewards that guilt you into opening the app</li>
+                <li>No notifications pulling you back in</li>
+                <li>No login screen, no account, no cloud sync subscription</li>
+                <li>No "coins" to grind for or energy system to wait on</li>
+            </ul>
+
+            <p>Progress saves locally to your device. Android AutoBackup copies it to your Google Drive silently. New phone, same account — your stars and badges restore automatically. Zero setup.</p>
+
+            <div class="tip-card">
+                <h3>🎯 Who Circuit Trace is for</h3>
+                <p>Anyone who's deleted a puzzle game because the puzzles were fine but everything around them was exhausting. Players who want to think, not react. People who like Flow Free, Lyne, Threes! or Monument Valley for the actual logic — not the dopamine theatre around it.</p>
+            </div>
+
+            <h2>One finger, five minutes, no theatrics</h2>
+
+            <p>If you can trace a line with one finger, you can play Circuit Trace. If you want to think about a level for a minute first, we'll wait. If you want to put the phone down halfway through and come back tomorrow, your line will still be there.</p>
+
+            <p>That's the whole pitch. No streaks to protect, no coins to collect, no character to feed. Just you, a grid, and one path at a time.</p>
+
+            <div class="app-cta">
+                <h3>🧩 Play Circuit Trace now</h3>
+                <p>500 puzzles across 5 game modes — Circuit, Classic, Diodes, Portals, Arcade — plus Endless, Daily Challenge, Weekly Puzzles and 60-second Time Trial. Free with optional €3.99 Remove Ads. Live on Google Play.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.game.circuittrace" target="_blank" rel="noopener">Get it on Google Play →</a>
+            </div>
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Related</h2>
+        <div class="related-cards">
+            <a href="../games/circuit-trace.html" class="related-card"><div class="cat">🎮 Game page</div><div class="title">Circuit Trace — 500 puzzles across 5 modes →</div></a>
+            <a href="https://play.google.com/store/apps/details?id=com.game.circuittrace" target="_blank" rel="noopener" class="related-card"><div class="cat">▶ Google Play</div><div class="title">Download Circuit Trace — free →</div></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center"><a href="../games/circuit-trace.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Circuit Trace</a><a href="../freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a><a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a><a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="mailto:contact@grounded-studio.app" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a><a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a></div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+<script>var rp=document.getElementById('read-progress');window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});</script>
+<script src="/assets/tracking.js" defer></script>
+<script src="/assets/cookie-banner.js" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>
