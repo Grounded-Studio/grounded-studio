@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://grounded-studio.app/</loc>
-        <lastmod>2026-06-30</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <priority>1.0</priority>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/freshgarant.html</loc>
@@ -356,15 +356,15 @@
     </url>
     <url>
         <loc>https://grounded-studio.app/games.html</loc>
-        <lastmod>2026-09-29</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/games/circuit-trace.html</loc>
-        <lastmod>2026-09-29</lastmod>
-        <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-10-13</lastmod>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
     </url>
     <url>
         <loc>https://grounded-studio.app/calculators.html</loc>
