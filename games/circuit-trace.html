@@ -255,6 +255,17 @@
         .feat-card h3 { font-size:.95rem; font-weight:700; margin-bottom:6px; }
         .feat-card p { font-size:.85rem; color:var(--muted); line-height:1.65; }
 
+        /* ACHIEVEMENTS SHOWCASE */
+        .achievements-section { padding:100px 0 80px; border-top:1px solid var(--border); position:relative; }
+        .achievements-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 70% 40% at 50% 30%,rgba(129,140,248,.06) 0%,transparent 70%); }
+        .achievements-grid { display:grid; grid-template-columns:repeat(6, 1fr); gap:18px; margin-top:48px; }
+        .ach-tile { position:relative; aspect-ratio:1; padding:8px; border-radius:18px; background:linear-gradient(145deg, rgba(129,140,248,.08), rgba(129,140,248,.02)); border:1px solid rgba(129,140,248,.14); display:flex; align-items:center; justify-content:center; transition:transform .3s cubic-bezier(.16,1,.3,1), border-color .3s, box-shadow .3s; }
+        .ach-tile:hover { transform:translateY(-4px); border-color:rgba(129,140,248,.4); box-shadow:0 12px 32px rgba(0,0,0,.35), 0 0 24px rgba(129,140,248,.25); }
+        .ach-tile img { width:100%; height:100%; object-fit:contain; display:block; filter:drop-shadow(0 4px 10px rgba(0,0,0,.4)); transition:filter .3s; }
+        .ach-tile:hover img { filter:drop-shadow(0 4px 10px rgba(0,0,0,.4)) drop-shadow(0 0 14px rgba(129,140,248,.5)); }
+        @media (max-width:960px) { .achievements-grid { grid-template-columns:repeat(4, 1fr); gap:14px; } }
+        @media (max-width:560px) { .achievements-grid { grid-template-columns:repeat(3, 1fr); gap:12px; } .ach-tile { padding:6px; border-radius:14px; } }
+
         /* SYMBOLS & MECHANICS */
         .symbols-section { padding:100px 0; border-top:1px solid var(--border); position:relative; }
         .symbols-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(129,140,248,.05) 0%,transparent 70%); }
@@ -559,6 +570,46 @@
                 <h3 data-i18n="feat.f6.h">Six languages · offline core</h3>
                 <p data-i18n="feat.f6.p">English, Nederlands, Deutsch, Français, Español and Português. Gameplay is fully offline — cloud save is opt-in via Play Games sign-in.</p>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS SHOWCASE -->
+<section class="achievements-section">
+    <div class="c">
+        <div style="max-width:640px; margin-bottom:16px" class="a-fade">
+            <div class="section-label"><span>●</span> <span data-i18n="ach.label">Achievements · Google Play Games</span></div>
+            <h2 class="section-title" data-i18n-html="ach.title">23 badges to earn.<br>3 leaderboards to climb.</h2>
+            <p class="section-sub" data-i18n="ach.sub">From your first solved puzzle to the ultimate star hoarder — every milestone has a badge. Earn them silently through Google Play Games Services. Compete globally on Daily, Time Trial and Endless leaderboards.</p>
+        </div>
+        <div class="achievements-grid">
+            <div class="ach-tile a-fade"><img src="../assets/achievments/BRIDGE%20MASTER.png" alt="Bridge Master achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/DAILY%20DEVOTED.png" alt="Daily Devoted achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/GATE%20MASTER.png" alt="Gate Master achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/PULSE%20MASTER.png" alt="Pulse Master achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/SPRINT%20ROOKIE.png" alt="Sprint Rookie achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/SPRINT%20PRO.png" alt="Sprint Pro achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/STAR%20HOARDER.png" alt="Star Hoarder achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/STAR%20KING.png" alt="Star King achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/UNRELENTING.png" alt="Unrelenting achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/WEEKLY%20PERFECT%20.png" alt="Weekly Perfect achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20Circuit-Footprint%20Badge.png" alt="Circuit achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20Circuitkroon%20in%20Hexagon.png" alt="Circuit crown achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20Diamant%20met%20Bliksemschicht.png" alt="Diamond lightning achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20Energiekern%20in%20Hexagonale%20HUD.png" alt="Energy core achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20Hexagon%20met%20Cyberzonsopgang.png" alt="Hexagon sunrise achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20Signaalembleem%20in%20Hexagon.png" alt="Signal emblem achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20Star%20Circuitbadge.png" alt="Star circuit achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20cyberbrein%20in%20hexagonframe.png" alt="Cyber brain achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20cyberdiamant%20in%20hexagonaal%20frame.png" alt="Cyber diamond achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20schatkist%20in%20hexagonale%20badge.png" alt="Treasure chest achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon%20telescoopbadge%20in%20de%20sterren.png" alt="Telescope achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon-Cyberpunk%20Rennersembleem.png" alt="Cyberpunk racer achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Neon-Schild%20gegen%20Werbung.png" alt="Shield against ads achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade"><img src="../assets/achievments/Symmetrisch%20neon%20hexagonaal%20circuitnetwerk.png" alt="Symmetric circuit network achievement badge" loading="lazy"></div>
+            <div class="ach-tile a-fade" style="border-color:rgba(167,139,250,.3); background:linear-gradient(145deg, rgba(167,139,250,.14), rgba(167,139,250,.04));"><img src="../assets/achievments/leaderboard_daily.png" alt="Daily leaderboard badge" loading="lazy"></div>
+            <div class="ach-tile a-fade" style="border-color:rgba(167,139,250,.3); background:linear-gradient(145deg, rgba(167,139,250,.14), rgba(167,139,250,.04));"><img src="../assets/achievments/leaderboard_time_trial.png" alt="Time Trial leaderboard badge" loading="lazy"></div>
+            <div class="ach-tile a-fade" style="border-color:rgba(167,139,250,.3); background:linear-gradient(145deg, rgba(167,139,250,.14), rgba(167,139,250,.04));"><img src="../assets/achievments/leaderboard_endless.png" alt="Endless leaderboard badge" loading="lazy"></div>
         </div>
     </div>
 </section>
@@ -908,6 +959,9 @@
             'feat.iap.p':      'Optional one-time purchase. Removes every ad forever. The full game is free — ads only ever appear between campaign levels.',
             'feat.f6.h':       'Six languages · offline core',
             'feat.f6.p':       'English, Nederlands, Deutsch, Français, Español and Português. Gameplay is fully offline — cloud save is opt-in via Play Games sign-in.',
+            'ach.label':       'Achievements · Google Play Games',
+            'ach.title':       '23 badges to earn.<br>3 leaderboards to climb.',
+            'ach.sub':         'From your first solved puzzle to the ultimate star hoarder — every milestone has a badge. Earn them silently through Google Play Games Services. Compete globally on Daily, Time Trial and Endless leaderboards.',
             'sym.label':       'Symbols & mechanics',
             'sym.title':       'Learn the language<br>of the circuit.',
             'sym.sub':         'Every symbol in Circuit Trace has one clear meaning. New mechanics unlock sector by sector — never all at once.',
@@ -1008,6 +1062,9 @@
             'feat.iap.p':      'Optionele eenmalige aankoop. Verwijdert elke ad voorgoed. Het hele spel is gratis — ads komen alleen tussen campaign levels door.',
             'feat.f6.h':       'Zes talen · offline core',
             'feat.f6.p':       'English, Nederlands, Deutsch, Français, Español en Português. Gameplay volledig offline — cloud save is opt-in via Play Games sign-in.',
+            'ach.label':       'Achievements · Google Play Games',
+            'ach.title':       '23 badges om te verdienen.<br>3 leaderboards om te beklimmen.',
+            'ach.sub':         'Van je eerste opgeloste puzzel tot de ultieme sterrenverzamelaar — elke mijlpaal krijgt een badge. Verdien ze stilletjes via Google Play Games Services. Strijd wereldwijd mee op Daily, Time Trial en Endless leaderboards.',
             'sym.label':       'Symbolen & mechanieken',
             'sym.title':       'Leer de taal<br>van het circuit.',
             'sym.sub':         'Elk symbool in Circuit Trace heeft één duidelijke betekenis. Nieuwe mechanieken komen sector voor sector — nooit alles tegelijk.',
