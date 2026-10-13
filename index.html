@@ -2220,7 +2220,7 @@ function applyLang(l, animate) {
 document.querySelectorAll('.lang-btn').forEach(b =>
     b.addEventListener('click', () => { if (b.dataset.lang !== lang) applyLang(b.dataset.lang, true); })
 );
-if (lang === 'nl') applyLang('nl', false);
+applyLang(lang, false);
 
 /* ── Blog dropdown ─────────────────────────────────── */
 document.querySelectorAll('.nav-dropdown-toggle').forEach(t => {

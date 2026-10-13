@@ -470,7 +470,7 @@ function applyLang(l) {
     localStorage.setItem('gs-lang', l);
 }
 document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => { if (b.dataset.lang !== lang) applyLang(b.dataset.lang); }));
-if (lang === 'nl') applyLang('nl');
+applyLang(lang);
 
 const hb=document.getElementById('hamburger'),mm=document.getElementById('mobMenu');
 hb.addEventListener('click',()=>{hb.classList.toggle('open');mm.classList.toggle('open');});
