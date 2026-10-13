@@ -211,6 +211,32 @@
             .phone.center { width:260px; }
         }
 
+        /* EDITOR SHOWCASE */
+        .editor-section { padding:60px 0 100px; position:relative; }
+        .editor-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 60% 50% at 30% 50%,rgba(129,140,248,.08) 0%,transparent 70%); }
+        .editor-wrap { display:grid; grid-template-columns:1fr 300px; gap:72px; align-items:center; position:relative; z-index:1; }
+        .editor-text { max-width:580px; }
+        .editor-text .section-sub { margin-bottom:28px; }
+        .editor-features { list-style:none; padding:0; margin:0 0 32px; display:flex; flex-direction:column; gap:14px; max-width:520px; }
+        .editor-features li { padding-left:28px; position:relative; color:#cbd5e1; font-size:.95rem; line-height:1.65; }
+        .editor-features li::before { content:'→'; position:absolute; left:0; top:0; color:var(--fl); font-weight:700; font-size:1rem; }
+        .editor-features li strong { color:#fff; font-weight:700; }
+        .editor-phone { position:relative; justify-self:center; }
+        .editor-phone .phone-frame { width:280px; aspect-ratio:9/19.5; border-radius:36px; overflow:hidden; box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08),0 0 70px rgba(129,140,248,.25); animation:floatC 7s ease-in-out infinite; }
+        .editor-phone img { width:100%; height:100%; object-fit:cover; display:block; }
+        .editor-share { display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:12px; background:rgba(129,140,248,.08); border:1px solid rgba(129,140,248,.22); font-family:'Space Grotesk',sans-serif; font-size:.82rem; font-weight:700; color:var(--fl); letter-spacing:.04em; }
+        .editor-share .dot { width:6px; height:6px; border-radius:50%; background:var(--fl); box-shadow:0 0 10px var(--fl); }
+        @media (max-width:900px) {
+            .editor-wrap { grid-template-columns:1fr; gap:48px; justify-items:center; text-align:center; }
+            .editor-text { text-align:left; }
+            .editor-phone { order:-1; }
+            .editor-phone .phone-frame { width:240px; }
+        }
+        @media (max-width:640px) {
+            .editor-section { padding:40px 0 80px; }
+            .editor-features li { font-size:.9rem; }
+        }
+
         /* FEATURES */
         .features-section { padding:100px 0; }
         .section-label { display:inline-flex; align-items:center; gap:9px; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--fl); margin-bottom:16px; }
@@ -419,6 +445,33 @@
         </div>
     </div>
 </div>
+
+<!-- EDITOR SHOWCASE -->
+<section class="editor-section" id="editor">
+    <div class="c">
+        <div class="editor-wrap">
+            <div class="editor-text a-fade">
+                <div class="section-label"><span>●</span> <span data-i18n="editor.label">Build your own</span></div>
+                <h2 class="section-title" data-i18n-html="editor.title">Make puzzles.<br>Share codes.<br>Play what friends build.</h2>
+                <p class="section-sub" data-i18n="editor.sub">When you've solved every campaign puzzle — don't stop. Open the Puzzle Editor and design your own. Place dots, add diodes, test instantly, and when it works: share a short code with anyone. They paste, they play, they send one back.</p>
+                <ul class="editor-features">
+                    <li data-i18n-html="editor.f1"><strong>5×5 to 8×8 boards</strong> — pick the right size for your idea</li>
+                    <li data-i18n-html="editor.f2"><strong>Full mechanic set</strong> — dots, diodes, portals, stars and checkpoints</li>
+                    <li data-i18n-html="editor.f3"><strong>Live solvability check</strong> — the editor warns you before you share an impossible one</li>
+                    <li data-i18n-html="editor.f4"><strong>5-slot library</strong> — save your best puzzles and come back to them</li>
+                    <li data-i18n-html="editor.f5"><strong>Share codes</strong> — one tap on DELEN turns your puzzle into a short code</li>
+                    <li data-i18n-html="editor.f6"><strong>Play what friends send</strong> — paste a code into the main menu to open it</li>
+                </ul>
+                <div class="editor-share"><span class="dot"></span><span>CT-A3F9K-B7XQ2-M4PWD</span></div>
+            </div>
+            <div class="editor-phone a-scale">
+                <div class="phone-frame">
+                    <img src="../assets/screen-ct-4.png" alt="Circuit Trace Puzzle Editor — 7×7 grid with dots, diodes, portals, and share buttons" width="280" height="606" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- FEATURES -->
 <section class="features-section" id="features">
@@ -815,6 +868,15 @@
             'feat.sub':        'The main Circuit Trace campaign introduces mechanics one sector at a time. Four alternate modes remix the formula — pure flow, one-way diodes, teleport portals, and a mastery arcade. Plus Endless, Expert preview, Daily, Weekly and Time Trial. And when you\'re done playing — build your own puzzles with the Puzzle Editor and share codes with friends.',
             'feat.editor.h':   'Puzzle Editor · share codes',
             'feat.editor.p':   'Build your own 5×5 to 8×8 puzzles with dots and diodes. Save up to 5 in your library. Share them with friends via short codes (CT-XXXXX-XXXXX-…) — paste a code to play what someone else designed.',
+            'editor.label':    'Build your own',
+            'editor.title':    'Make puzzles.<br>Share codes.<br>Play what friends build.',
+            'editor.sub':      'When you\'ve solved every campaign puzzle — don\'t stop. Open the Puzzle Editor and design your own. Place dots, add diodes, test instantly, and when it works: share a short code with anyone. They paste, they play, they send one back.',
+            'editor.f1':       '<strong>5×5 to 8×8 boards</strong> — pick the right size for your idea',
+            'editor.f2':       '<strong>Full mechanic set</strong> — dots, diodes, portals, stars and checkpoints',
+            'editor.f3':       '<strong>Live solvability check</strong> — the editor warns you before you share an impossible one',
+            'editor.f4':       '<strong>5-slot library</strong> — save your best puzzles and come back to them',
+            'editor.f5':       '<strong>Share codes</strong> — one tap on DELEN turns your puzzle into a short code',
+            'editor.f6':       '<strong>Play what friends send</strong> — paste a code into the main menu to open it',
             'feat.expert.h':   'Expert preview',
             'feat.expert.p':   'A random sector 8-9 puzzle on tap — a taste of late-campaign difficulty without needing to unlock it. Great for a quick brain-stretch.',
             'feat.hint.h':     'Smart hints · tutorial demo',
@@ -906,6 +968,15 @@
             'feat.sub':        'De hoofdcampagne Circuit Trace introduceert mechanismen één sector per keer. Vier alternatieve modes remixen de formule — pure flow, one-way diodes, teleport portals en een mastery arcade. Plus Endless, Expert preview, Daily, Weekly en Time Trial. En als je uitgespeeld bent — bouw je eigen puzzels met de Puzzle Editor en deel codes met vrienden.',
             'feat.editor.h':   'Puzzle Editor · deel codes',
             'feat.editor.p':   'Bouw je eigen 5×5 tot 8×8 puzzels met punten en diodes. Bewaar er tot 5 in je bibliotheek. Deel ze met vrienden via korte codes (CT-XXXXX-XXXXX-…) — plak een code om iemand anders zijn ontwerp te spelen.',
+            'editor.label':    'Bouw je eigen',
+            'editor.title':    'Maak puzzels.<br>Deel codes.<br>Speel wat vrienden bouwen.',
+            'editor.sub':      'Als je elke campaign-puzzel hebt opgelost — stop dan niet. Open de Puzzle Editor en ontwerp je eigen puzzel. Zet punten, voeg diodes toe, test direct, en als het werkt: deel een korte code met wie je wil. Zij plakken, zij spelen, zij sturen er één terug.',
+            'editor.f1':       '<strong>5×5 tot 8×8 borden</strong> — kies de juiste maat voor je idee',
+            'editor.f2':       '<strong>Volledige mechaniek-set</strong> — punten, diodes, portals, sterren en checkpoints',
+            'editor.f3':       '<strong>Live oplosbaarheid-check</strong> — de editor waarschuwt je voor je een onmogelijke deelt',
+            'editor.f4':       '<strong>5-slot bibliotheek</strong> — bewaar je beste puzzels en kom er op terug',
+            'editor.f5':       '<strong>Deelcodes</strong> — één tik op DELEN maakt een korte code van je puzzel',
+            'editor.f6':       '<strong>Speel wat vrienden sturen</strong> — plak een code in het hoofdmenu om die te openen',
             'feat.expert.h':   'Expert preview',
             'feat.expert.p':   'Een willekeurige sector 8-9 puzzel bij één tap — een voorproefje van late-campagne moeilijkheidsgraad zonder dat je het hoeft te unlocken. Perfect voor een snelle brain-stretch.',
             'feat.hint.h':     'Slimme hints · tutorial demo',
