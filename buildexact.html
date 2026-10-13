@@ -762,18 +762,26 @@
             <div class="section-label" style="justify-content:center;margin-bottom:24px"><span>●</span> <span data-i18n="cta.label">Download</span></div>
             <h2 class="section-title" style="margin-bottom:12px" data-i18n-html="cta.title">Available now<br>on Google Play</h2>
             <p style="color:var(--muted);margin-bottom:36px;font-size:.95rem" data-i18n="cta.sub">Free to download. Start calculating in minutes.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="play-btn">
-                <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
-                    <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
-                    <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
-                    <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
-                </svg>
-                <div class="play-btn-text">
-                    <small data-i18n="play.small">Download on</small>
-                    <span data-i18n="play.big">Google Play</span>
-                </div>
-            </a>
+            <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="https://play.google.com/store/apps/details?id=com.metenweten.bouw" target="_blank" rel="noopener" class="play-btn">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
+                        <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
+                        <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
+                        <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
+                    </svg>
+                    <div class="play-btn-text">
+                        <small data-i18n="play.small">Download on</small>
+                        <span data-i18n="play.big">Google Play</span>
+                    </div>
+                </a>
+                <a href="calculators.html" style="color:var(--bx);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(37,99,235,.35);background:rgba(37,99,235,.08);transition:all .25s" onmouseover="this.style.background='rgba(37,99,235,.16)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(37,99,235,.08)';this.style.transform='translateY(0)'">
+                    <span data-i18n="cta.calcs">All 11 calculators</span> →
+                </a>
+                <a href="blog/buildexact.html" style="color:var(--bx);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(37,99,235,.35);background:rgba(37,99,235,.08);transition:all .25s" onmouseover="this.style.background='rgba(37,99,235,.16)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(37,99,235,.08)';this.style.transform='translateY(0)'">
+                    <span data-i18n="cta.blog">Blog</span> →
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -1184,6 +1192,8 @@ const T = {
         'cta.label':           'Download',
         'cta.title':           'Available now<br>on Google Play',
         'cta.sub':             'Free to download. Start calculating in minutes.',
+        'cta.calcs':           'All 11 calculators',
+        'cta.blog':            'Blog',
         'faq.label':           'FAQ',
         'faq.title':           'Frequently Asked<br>Questions',
         'faq.free.q':          'Is BuildExact free?',
@@ -1331,6 +1341,8 @@ const T = {
         'cta.label':           'Download',
         'cta.title':           'Nu beschikbaar<br>in Google Play',
         'cta.sub':             'Gratis te downloaden. Binnen enkele minuten reken je al.',
+        'cta.calcs':           'Alle 11 calculators',
+        'cta.blog':            'Blog',
         'faq.label':           'FAQ',
         'faq.title':           'Veelgestelde<br>vragen',
         'faq.free.q':          'Is BuildExact gratis?',
