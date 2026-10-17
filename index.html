@@ -798,8 +798,21 @@
         .tilt-wrap {
             position:relative; z-index:1;
             display:inline-block;
+            line-height:0;
             transition:transform .6s cubic-bezier(.16,1,.3,1);
         }
+        .tilt-wrap::before {
+            content:'';
+            position:absolute; inset:-5px;
+            z-index:-1;
+            border-radius:44px;
+            pointer-events:none;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+        }
+        .vg-tilt::before { background:linear-gradient(145deg, rgba(34,197,94,.22), rgba(34,197,94,.08)); border:1px solid rgba(34,197,94,.22); box-shadow:0 0 60px rgba(34,197,94,.25), inset 0 1px 0 rgba(255,255,255,.06); }
+        .bx-tilt::before { background:linear-gradient(145deg, rgba(37,99,235,.22), rgba(37,99,235,.08)); border:1px solid rgba(37,99,235,.22); box-shadow:0 0 60px rgba(37,99,235,.25), inset 0 1px 0 rgba(255,255,255,.06); }
+        .fl-tilt::before { background:linear-gradient(145deg, rgba(129,140,248,.22), rgba(129,140,248,.08)); border:1px solid rgba(129,140,248,.22); box-shadow:0 0 60px rgba(129,140,248,.25), inset 0 1px 0 rgba(255,255,255,.06); }
+        .tilt-wrap .app-screenshot { position:relative; z-index:1; display:block; }
 
         /* FreshGarant: lean slightly left (screen faces viewer + right) */
         .vg-tilt {
