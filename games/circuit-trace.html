@@ -195,14 +195,14 @@
         .phone::before { content:''; position:absolute; inset:-5px; z-index:-1; border-radius:36px; background:linear-gradient(145deg, rgba(129,140,248,.22), rgba(129,140,248,.08)); border:1px solid rgba(129,140,248,.22); box-shadow:0 0 60px rgba(129,140,248,.25), inset 0 1px 0 rgba(255,255,255,.06); pointer-events:none; }
         .phone img { width:100%; height:auto; display:block; position:relative; z-index:1; }
         .phone.center { transform:translateY(-10px); z-index:2; }
-        .phone.left   { transform:perspective(1100px) rotateY(18deg)  rotateX(4deg) translateX(26px) translateY(22px) scale(.92); opacity:.95; }
-        .phone.right  { transform:perspective(1100px) rotateY(-18deg) rotateX(4deg) translateX(-26px) translateY(22px) scale(.92); opacity:.95; }
+        .phone.left   { transform:perspective(850px) rotateY(24deg)  rotateX(6deg) translateY(22px) scale(.88); opacity:.95; }
+        .phone.right  { transform:perspective(850px) rotateY(-24deg) rotateX(6deg) translateY(22px) scale(.88); opacity:.95; }
         .phone.center { animation:floatC 7s ease-in-out infinite; }
         .phone.left   { animation:floatL 7s ease-in-out -3s infinite; }
         .phone.right  { animation:floatR 7s ease-in-out -5s infinite; }
         @keyframes floatC { 0%,100%{transform:translateY(-10px)} 50%{transform:translateY(-26px)} }
-        @keyframes floatL { 0%,100%{transform:perspective(1100px) rotateY(18deg) rotateX(4deg) translateX(26px) translateY(22px) scale(.92)} 50%{transform:perspective(1100px) rotateY(18deg) rotateX(4deg) translateX(26px) translateY(8px) scale(.92)} }
-        @keyframes floatR { 0%,100%{transform:perspective(1100px) rotateY(-18deg) rotateX(4deg) translateX(-26px) translateY(22px) scale(.92)} 50%{transform:perspective(1100px) rotateY(-18deg) rotateX(4deg) translateX(-26px) translateY(8px) scale(.92)} }
+        @keyframes floatL { 0%,100%{transform:perspective(850px) rotateY(24deg) rotateX(6deg) translateY(22px) scale(.88)} 50%{transform:perspective(850px) rotateY(24deg) rotateX(6deg) translateY(8px) scale(.88)} }
+        @keyframes floatR { 0%,100%{transform:perspective(850px) rotateY(-24deg) rotateX(6deg) translateY(22px) scale(.88)} 50%{transform:perspective(850px) rotateY(-24deg) rotateX(6deg) translateY(8px) scale(.88)} }
         @keyframes floatE { 0%,100%{transform:perspective(1100px) rotateY(-12deg) rotateX(4deg) translateY(0)} 50%{transform:perspective(1100px) rotateY(-12deg) rotateX(4deg) translateY(-16px)} }
         @media (max-width:820px) {
             .screen-wrap { gap:14px; }
