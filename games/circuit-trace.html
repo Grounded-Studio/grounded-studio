@@ -411,7 +411,7 @@
             <span data-i18n="hero.badge">Game 01 — By Grounded Studio</span>
         </div>
         <h1 data-i18n="hero.h1">Circuit Trace</h1>
-        <p class="hero-sub" data-i18n="hero.sub">Trace the circuit. Restore the network. 500+ handcrafted puzzles across 5 campaign modes — Circuit Trace, Classic, Diodes, Portals and Arcade — plus Endless, Expert preview, Daily Challenge, Weekly Puzzles and 60-second Time Trial. Build your own puzzles and share codes with friends. Free on Google Play.</p>
+        <p class="hero-sub" data-i18n-html="hero.sub">Trace the circuit. Restore the network. 500+ handcrafted puzzles across 5 campaign modes — Circuit Trace, Classic, Diodes, Portals and Arcade — plus Endless, Expert preview, Daily Challenge, Weekly Puzzles and 60-second Time Trial. Build your own puzzles and share codes with friends. Free on Google Play. Full details at <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">circuittrace.app</a>.</p>
         <div class="hero-actions">
             <a href="https://play.google.com/store/apps/details?id=com.game.circuittrace" target="_blank" rel="noopener" class="btn-primary">
                 <svg class="play-svg" viewBox="0 0 24 24" fill="none">
@@ -426,6 +426,7 @@
                 </div>
             </a>
             <a href="#how-to-play" class="btn-ghost" data-i18n="btn.how">How it plays</a>
+            <a href="https://circuittrace.app" target="_blank" rel="noopener" class="back-btn" style="padding:14px 24px" data-i18n="btn.site">🌐 circuittrace.app →</a>
         </div>
     </div>
 </section>
@@ -467,7 +468,7 @@
             <div class="editor-text a-fade">
                 <div class="section-label"><span>●</span> <span data-i18n="editor.label">Build your own</span></div>
                 <h2 class="section-title" data-i18n-html="editor.title">Make puzzles.<br>Share codes.<br>Play what friends build.</h2>
-                <p class="section-sub" data-i18n="editor.sub">When you've solved every campaign puzzle — don't stop. Open the Puzzle Editor and design your own. Place dots, add diodes, test instantly, and when it works: share a short code with anyone. They paste, they play, they send one back.</p>
+                <p class="section-sub" data-i18n-html="editor.sub">When you've solved every campaign puzzle — don't stop. Open the Puzzle Editor and design your own. Place dots, add diodes, test instantly, and when it works: share a short code with anyone. They paste, they play, they send one back. Browse community puzzles and tutorials at <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">circuittrace.app</a>.</p>
                 <ul class="editor-features">
                     <li data-i18n-html="editor.f1"><strong>5×5 to 8×8 boards</strong> — pick the right size for your idea</li>
                     <li data-i18n-html="editor.f2"><strong>Full mechanic set</strong> — dots, diodes, portals, stars and checkpoints</li>
@@ -805,18 +806,23 @@
             <div class="section-label" style="justify-content:center"><span>●</span> <span data-i18n="cta.label">Download now</span></div>
             <h2 class="section-title" style="margin-bottom:12px" data-i18n-html="cta.title">Live now<br>on Google Play</h2>
             <p class="section-sub" style="margin:0 auto 40px" data-i18n="cta.sub">Free, Android 8.0+, no account required. 500+ handcrafted puzzles across 5 modes, plus Puzzle Editor to build and share your own. Optional €3.99 Remove Ads IAP if you want a cleaner run. Play Games sign-in is optional (for cloud save + achievements).</p>
-            <a href="https://play.google.com/store/apps/details?id=com.game.circuittrace" target="_blank" rel="noopener" class="play-btn">
-                <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
-                    <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
-                    <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
-                    <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
-                </svg>
-                <div class="play-btn-text">
-                    <small data-i18n="btn.cs_small">Get it on</small>
-                    <span>Google Play</span>
-                </div>
-            </a>
+            <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center">
+                <a href="https://play.google.com/store/apps/details?id=com.game.circuittrace" target="_blank" rel="noopener" class="play-btn">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/>
+                        <path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/>
+                        <path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/>
+                        <path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/>
+                    </svg>
+                    <div class="play-btn-text">
+                        <small data-i18n="btn.cs_small">Get it on</small>
+                        <span>Google Play</span>
+                    </div>
+                </a>
+                <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:none;font-weight:700;font-size:.9rem;padding:16px 26px;border-radius:14px;border:1px solid rgba(129,140,248,.4);background:rgba(129,140,248,.1);transition:all .25s" onmouseover="this.style.background='rgba(129,140,248,.2)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(129,140,248,.1)';this.style.transform='translateY(0)'">
+                    <span data-i18n="btn.site_full">🌐 Full Circuit Trace site</span> →
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -827,8 +833,11 @@
         <div class="a-fade">
             <div class="section-label" style="justify-content:center"><span>●</span> <span data-i18n="about.label">By Grounded Studio</span></div>
             <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.2rem)" data-i18n="about.title">Games that respect your time</h2>
-            <p data-i18n="about.desc">Circuit Trace is the first game from Grounded Studio — the Netherlands-based studio behind FreshGarant and BuildExact. We build focused, offline-first experiences with no dark patterns.</p>
-            <a href="../games.html" class="back-btn" data-i18n="about.back">← All games</a>
+            <p data-i18n-html="about.desc">Circuit Trace is the first game from Grounded Studio — the Netherlands-based studio behind FreshGarant and BuildExact. We build focused, offline-first experiences with no dark patterns. The dedicated Circuit Trace site is at <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">circuittrace.app</a>.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+                <a href="https://circuittrace.app" target="_blank" rel="noopener" class="back-btn" style="background:rgba(129,140,248,.14);border-color:rgba(129,140,248,.45)" data-i18n="about.site">🌐 circuittrace.app →</a>
+                <a href="../games.html" class="back-btn" data-i18n="about.back">← All games</a>
+            </div>
         </div>
     </div>
 </div>
@@ -907,9 +916,11 @@
             'hero.cs':         'Live now on Google Play',
             'hero.badge':      'Game 01 — By Grounded Studio',
             'hero.h1':         'Circuit Trace',
-            'hero.sub':        'Trace the circuit. Restore the network. 500+ handcrafted puzzles across 5 campaign modes — Circuit Trace, Classic, Diodes, Portals and Arcade — plus Endless, Expert preview, Daily Challenge, Weekly Puzzles and 60-second Time Trial. Build your own puzzles and share codes with friends. Free on Google Play.',
+            'hero.sub':        'Trace the circuit. Restore the network. 500+ handcrafted puzzles across 5 campaign modes — Circuit Trace, Classic, Diodes, Portals and Arcade — plus Endless, Expert preview, Daily Challenge, Weekly Puzzles and 60-second Time Trial. Build your own puzzles and share codes with friends. Free on Google Play. Full details at <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">circuittrace.app</a>.',
             'btn.cs_small':    'Get it on',
             'btn.how':         'How it plays',
+            'btn.site':        '🌐 circuittrace.app →',
+            'btn.site_full':   '🌐 Full Circuit Trace site',
             'trust.1':         'Live on Google Play',
             'trust.2':         '500+ puzzles · 5 modes',
             'trust.6':         'Puzzle Editor · share codes',
@@ -924,7 +935,7 @@
             'feat.editor.p':   'Build your own 5×5 to 8×8 puzzles with dots and diodes. Save up to 5 in your library. Share them with friends via short codes (CT-XXXXX-XXXXX-…) — paste a code to play what someone else designed.',
             'editor.label':    'Build your own',
             'editor.title':    'Make puzzles.<br>Share codes.<br>Play what friends build.',
-            'editor.sub':      'When you\'ve solved every campaign puzzle — don\'t stop. Open the Puzzle Editor and design your own. Place dots, add diodes, test instantly, and when it works: share a short code with anyone. They paste, they play, they send one back.',
+            'editor.sub':      'When you\'ve solved every campaign puzzle — don\'t stop. Open the Puzzle Editor and design your own. Place dots, add diodes, test instantly, and when it works: share a short code with anyone. They paste, they play, they send one back. Browse community puzzles and tutorials at <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">circuittrace.app</a>.',
             'editor.f1':       '<strong>5×5 to 8×8 boards</strong> — pick the right size for your idea',
             'editor.f2':       '<strong>Full mechanic set</strong> — dots, diodes, portals, stars and checkpoints',
             'editor.f3':       '<strong>Live solvability check</strong> — the editor warns you before you share an impossible one',
@@ -994,8 +1005,9 @@
             'cta.sub':         'Free, Android 8.0+, no account required. 500+ handcrafted puzzles across 5 modes, plus Puzzle Editor to build and share your own. Optional €3.99 Remove Ads IAP if you want a cleaner run. Play Games sign-in is optional (for cloud save + achievements).',
             'about.label':     'By Grounded Studio',
             'about.title':     'Games that respect your time',
-            'about.desc':      'Circuit Trace is the first game from Grounded Studio — the Netherlands-based studio behind FreshGarant and BuildExact. We build focused, offline-first experiences with no dark patterns.',
+            'about.desc':      'Circuit Trace is the first game from Grounded Studio — the Netherlands-based studio behind FreshGarant and BuildExact. We build focused, offline-first experiences with no dark patterns. The dedicated Circuit Trace site is at <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">circuittrace.app</a>.',
             'about.back':      '← All games',
+            'about.site':      '🌐 circuittrace.app →',
         },
         nl: {
             'nav.apps':        'Apps',
@@ -1010,9 +1022,11 @@
             'hero.cs':         'Live op Google Play',
             'hero.badge':      'Game 01 — Door Grounded Studio',
             'hero.h1':         'Circuit Trace',
-            'hero.sub':        'Verbind het circuit. Herstel het netwerk. 500+ handgemaakte puzzels verdeeld over 5 campagne modes — Circuit Trace, Classic, Diodes, Portals en Arcade — plus Endless, Expert preview, Dagelijkse Challenge, Wekelijkse Puzzels en 60-seconden Time Trial. Bouw je eigen puzzels en deel codes met vrienden. Gratis op Google Play.',
+            'hero.sub':        'Verbind het circuit. Herstel het netwerk. 500+ handgemaakte puzzels verdeeld over 5 campagne modes — Circuit Trace, Classic, Diodes, Portals en Arcade — plus Endless, Expert preview, Dagelijkse Challenge, Wekelijkse Puzzels en 60-seconden Time Trial. Bouw je eigen puzzels en deel codes met vrienden. Gratis op Google Play. Volledige info op <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">circuittrace.app</a>.',
             'btn.cs_small':    'Download op',
             'btn.how':         'Hoe het werkt',
+            'btn.site':        '🌐 circuittrace.app →',
+            'btn.site_full':   '🌐 Volledige Circuit Trace site',
             'trust.1':         'Live op Google Play',
             'trust.2':         '500+ puzzels · 5 modes',
             'trust.6':         'Puzzle Editor · deel codes',
@@ -1027,7 +1041,7 @@
             'feat.editor.p':   'Bouw je eigen 5×5 tot 8×8 puzzels met punten en diodes. Bewaar er tot 5 in je bibliotheek. Deel ze met vrienden via korte codes (CT-XXXXX-XXXXX-…) — plak een code om iemand anders zijn ontwerp te spelen.',
             'editor.label':    'Bouw je eigen',
             'editor.title':    'Maak puzzels.<br>Deel codes.<br>Speel wat vrienden bouwen.',
-            'editor.sub':      'Als je elke campaign-puzzel hebt opgelost — stop dan niet. Open de Puzzle Editor en ontwerp je eigen puzzel. Zet punten, voeg diodes toe, test direct, en als het werkt: deel een korte code met wie je wil. Zij plakken, zij spelen, zij sturen er één terug.',
+            'editor.sub':      'Als je elke campaign-puzzel hebt opgelost — stop dan niet. Open de Puzzle Editor en ontwerp je eigen puzzel. Zet punten, voeg diodes toe, test direct, en als het werkt: deel een korte code met wie je wil. Zij plakken, zij spelen, zij sturen er één terug. Bekijk community-puzzels en tutorials op <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">circuittrace.app</a>.',
             'editor.f1':       '<strong>5×5 tot 8×8 borden</strong> — kies de juiste maat voor je idee',
             'editor.f2':       '<strong>Volledige mechaniek-set</strong> — punten, diodes, portals, sterren en checkpoints',
             'editor.f3':       '<strong>Live oplosbaarheid-check</strong> — de editor waarschuwt je voor je een onmogelijke deelt',
@@ -1097,8 +1111,9 @@
             'cta.sub':         'Gratis, Android 8.0+, geen account nodig. 500+ handgemaakte puzzels over 5 modes, plus Puzzle Editor om je eigen te bouwen en delen. Optionele €3.99 Remove Ads IAP als je het schoon wil houden. Play Games sign-in is optioneel (voor cloud save + achievements).',
             'about.label':     'Door Grounded Studio',
             'about.title':     'Games die je tijd respecteren',
-            'about.desc':      'Circuit Trace is de eerste game van Grounded Studio — de Nederlandse studio achter FreshGarant en BuildExact. We bouwen focused, offline-first ervaringen zonder dark patterns.',
+            'about.desc':      'Circuit Trace is de eerste game van Grounded Studio — de Nederlandse studio achter FreshGarant en BuildExact. We bouwen focused, offline-first ervaringen zonder dark patterns. De speciale Circuit Trace site vind je op <a href="https://circuittrace.app" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">circuittrace.app</a>.',
             'about.back':      '← Alle games',
+            'about.site':      '🌐 circuittrace.app →',
         }
     };
 
