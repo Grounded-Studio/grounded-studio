@@ -937,24 +937,12 @@
             border-radius: 0;
             box-shadow: none;
             filter:
-                drop-shadow(24px 32px 50px rgba(0,0,0,.75))
-                drop-shadow(0 0 40px rgba(167,139,250,.55))
-                drop-shadow(0 0 90px rgba(167,139,250,.3));
+                drop-shadow(-28px 36px 45px rgba(0,0,0,.7))
+                drop-shadow(0 0 40px rgba(129,140,248,.12));
         }
-        .fl-tilt {
-            position: relative;
-        }
-        .fl-tilt::before {
-            content:'';
-            position:absolute;
-            inset:-32px -24px;
-            z-index:-1;
-            border-radius:54px;
-            background:linear-gradient(145deg, rgba(167,139,250,.22), rgba(167,139,250,.08));
-            border:1px solid rgba(167,139,250,.22);
-            box-shadow:0 0 80px rgba(167,139,250,.3), inset 0 1px 0 rgba(255,255,255,.06);
-            pointer-events:none;
-        }
+        /* The CT PNG has ~12px transparent padding around the phone, so pull
+           the shared frame in to hug the device like BuildExact/FreshGarant. */
+        .fl-tilt::before { inset:7px; border-radius:38px; }
 
         /* Reflection strip at bottom */
         .tilt-wrap::after {
