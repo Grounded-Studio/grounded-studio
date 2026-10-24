@@ -560,6 +560,7 @@ form.addEventListener('submit', async (e) => {
             form.reset();
         } else {
             showStatus('err', 'form.err');
+            if (json.message) statusEl.insertAdjacentText('beforeend', ' (' + json.message + ')');
         }
     } catch (err) {
         showStatus('err', 'form.err');
