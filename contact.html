@@ -584,8 +584,8 @@ hb.addEventListener('click', () => { hb.classList.toggle('open'); mm.classList.t
 document.querySelectorAll('.nav-dropdown-toggle').forEach(t => t.addEventListener('click', e => { e.preventDefault(); const dd = t.closest('.nav-dropdown'); t.setAttribute('aria-expanded', dd.classList.toggle('open')); }));
 document.addEventListener('click', e => { if (!e.target.closest('.nav-dropdown')) document.querySelectorAll('.nav-dropdown.open').forEach(dd => dd.classList.remove('open')); });
 </script>
-<script src="/assets/tracking.js" defer></script>
-<script src="/assets/cookie-banner.js" defer></script>
+<script src="/assets/tracking.js?v=20261025" defer></script>
+<script src="/assets/cookie-banner.js?v=20261025" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
 </body>
 </html>

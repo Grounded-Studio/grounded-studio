@@ -87,7 +87,10 @@
         return pairs.join('&');
     }
 
+    // Campaign attribution (UTM / click IDs) is also only stored and passed on
+    // to Play links after consent — the privacy page says so.
     function decoratePlayLinks() {
+        if (!hasConsent()) return;
         var attr = getAttribution();
         var referrer = buildPlayReferrer(attr);
         var links = document.querySelectorAll('a[href*="' + PLAY_HOST + '"]');
@@ -196,9 +199,11 @@
             try { localStorage.setItem('cookie-consent', '1'); } catch (e) {}
             loadPixel();
             loadGA4();
+            decoratePlayLinks();
         },
         revokeConsent: function () {
             try { localStorage.setItem('cookie-consent', '0'); } catch (e) {}
+            try { sessionStorage.removeItem('gs-attribution'); } catch (e) {}
             unloadPixel();
             unloadGA4();
         },

@@ -233,7 +233,6 @@
             <div class="change-group new">
                 <div class="change-label new">✨ New</div>
                 <ul class="change-list">
-                    <li>Cloud backup via Firebase (PRO) — never lose your inventory across devices</li>
                     <li>Shopping list auto-generated from products that are almost out</li>
                     <li>Dutch translation for every screen</li>
                 </ul>
@@ -297,7 +296,7 @@
                 <a href="buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
                 <a href="blog/freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
                 <a href="about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="contact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
-                <a href="privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
+                <a href="https://freshgarant.app/privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
             </div>
             <span class="foot-copy" style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
         </div>
@@ -315,8 +314,8 @@ const browserIsNL=(navigator.language||'').toLowerCase().startsWith('nl');
 let lang=savedLang||(browserIsNL?'nl':'en');
 document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.addEventListener('click',()=>{if(b.dataset.lang!==lang){lang=b.dataset.lang;localStorage.setItem('gs-lang',lang);document.querySelectorAll('.lang-btn').forEach(x=>x.classList.toggle('active',x.dataset.lang===lang));}});});
 </script>
-<script src="/assets/tracking.js" defer></script>
-<script src="/assets/cookie-banner.js" defer></script>
+<script src="/assets/tracking.js?v=20261025" defer></script>
+<script src="/assets/cookie-banner.js?v=20261025" defer></script>
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
 </body>
 </html>
