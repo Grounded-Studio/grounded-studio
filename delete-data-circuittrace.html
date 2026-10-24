@@ -140,33 +140,42 @@
     </div>
 
     <h1>Delete your data</h1>
-    <p>Circuit Trace does not use accounts or servers. All game data (progress, stats, settings) is stored <strong>locally on your device</strong>. Follow the steps below to delete it.</p>
+    <p>Circuit Trace has no accounts. Most game data is stored <strong>only on your device</strong>. A few features send limited data to services we use; this page explains how to delete each part.</p>
 
     <div class="steps">
-      <h2>How to delete your local game data</h2>
+      <h2>1. Local game data (on your device)</h2>
       <ol>
         <li>Open your Android device <strong>Settings</strong></li>
         <li>Tap <strong>Apps</strong> → find <strong>Circuit Trace</strong></li>
         <li>Tap <strong>Storage &amp; cache</strong> → <strong>Clear storage</strong>
           (or simply <strong>Uninstall</strong> the app to remove everything)</li>
       </ol>
+      <p class="note">This deletes level progress, best scores, Daily and Time Trial history, stars, settings, chosen theme, player name and cached ad consent choices.</p>
     </div>
 
     <div class="data-info">
-      <h2>What is deleted</h2>
+      <h2>2. Friends &amp; Challenges data (Google Firebase)</h2>
+      <p>Only if you used the Friends feature: your anonymous user ID, display name, friend code, push-notification token, friends list, and the challenges and attempts you sent are stored in Google Firebase (EU region).</p>
       <ul>
-        <li>Level progress and best-move records</li>
-        <li>Daily Challenge history and Time Trial best scores</li>
-        <li>Sound preference, color theme, player name</li>
-        <li>Cached AdMob settings and consent choices</li>
+        <li>Request deletion with the button below (subject: <em>Delete my Friends data</em>). We remove your user record, friendships, challenges and attempts within <strong>7 days</strong>.</li>
+        <li>Clearing app storage alone does <strong>not</strong> remove this server-side data.</li>
+      </ul>
+    </div>
+
+    <div class="data-info">
+      <h2>3. Anonymous gameplay statistics (GameAnalytics)</h2>
+      <p>The game sends anonymous statistics (a random ID created on your device, session info, device type, Android and game version, and events like which level you completed) so we can tune puzzle difficulty. No name, email or advertising ID is included.</p>
+      <ul>
+        <li>Clearing storage or uninstalling creates a new random ID, so new data can't be linked to your old data.</li>
+        <li>To delete data already sent, request deletion below; we forward it to GameAnalytics.</li>
       </ul>
     </div>
 
     <div class="data-info">
       <h2>What is kept</h2>
       <ul>
-        <li><strong>Google Play purchase history</strong> (Remove Ads €3.99) — managed by Google Play, not by us. Restore or refund via <a href="https://play.google.com/store/account" target="_blank" style="color:#818cf8">play.google.com/store/account</a></li>
-        <li><strong>Nothing is retained on our servers</strong> — because we don't run any</li>
+        <li><strong>Google Play purchase history</strong> (Remove Ads, Theme Pack and the visual FX packs) is managed by Google Play, not by us. Restore or refund via <a href="https://play.google.com/store/account" target="_blank" style="color:#818cf8">play.google.com/store/account</a></li>
+        <li><strong>Google Play Games</strong> achievements and cloud save (only if you signed in) are managed by Google in your Play Games profile.</li>
       </ul>
     </div>
 
@@ -188,7 +197,7 @@
 
     <hr class="divider">
 
-    <p class="note">Retention: because Circuit Trace stores no data on any server operated by Grounded Studio, there is no retention period on our side. Local device data is deleted immediately when you clear storage or uninstall.</p>
+    <p class="note">Retention: local device data is deleted immediately when you clear storage or uninstall. Friends &amp; Challenges data is kept until you request deletion. Gameplay statistics are kept by GameAnalytics according to their retention policy and are never linked to your identity. Deletion requests are completed within 7 days.</p>
   </div>
 
   <div class="footer">
