@@ -518,7 +518,7 @@ const appParam = new URLSearchParams(location.search).get('app');
 const appMap = { buildexact:'BuildExact', freshgarant:'FreshGarant', circuittrace:'Circuit Trace' };
 if (appParam && appMap[appParam]) document.getElementById('f-product').value = appMap[appParam];
 
-// Form → FormSubmit (delivers to contact@grounded-studio.app without opening a mail app)
+// Form → shared Grounded Studio contact endpoint (own Strato mail, no mail app needed)
 const form = document.getElementById('contactForm');
 const statusEl = document.getElementById('formStatus');
 const sendBtn = document.getElementById('sendBtn');
@@ -549,7 +549,7 @@ form.addEventListener('submit', async (e) => {
         _captcha: 'false'
     };
     try {
-        const res = await fetch('https://formsubmit.co/ajax/contact@grounded-studio.app', {
+        const res = await fetch('https://api.buildexact.app/contact.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify(payload)
