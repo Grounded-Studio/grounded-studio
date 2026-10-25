@@ -1,0 +1,6 @@
+# Backend for api.buildexact.app — contains config.php with passwords and
+# API keys. Uploaded to Strato via FileZilla, NEVER to GitHub / GitHub Pages.
+buildexact-api/
+
+# Server copy of the old webhook, kept locally for comparison only.
+webhook.php
