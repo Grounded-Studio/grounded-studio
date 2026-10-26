@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://grounded-studio.app/calculators/isolatie.html">
     <meta property="og:title" content="Isolatie berekenen — R-waarde, pakken, bevestigers en tape">
     <meta property="og:description" content="Complete uitleg plus rekenvoorbeeld. Reken isolatie in BuildExact in onder de minuut uit.">
-    <meta property="og:image" content="https://grounded-studio.app/assets/screen-bx.png">
+    <meta property="og:image" content="https://grounded-studio.app/assets/og-buildexact.jpg">
     <script type="application/ld+json">
     {
         "@context":"https://schema.org","@type":"HowTo",
@@ -142,7 +142,7 @@
 </head>
 <body>
 <div id="progress"></div>
-<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="34" height="34"></div><span class="nav-name">Grounded Studio</span></a><div class="nav-right"><a href="../calculators.html" class="nav-back">← Calculators</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
+<nav><div class="c-wide"><div class="nav-inner"><a href="../index.html" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.webp" alt="Grounded Studio" width="34" height="34" decoding="async"></div><span class="nav-name">Grounded Studio</span></a><div class="nav-right"><a href="../calculators.html" class="nav-back">← Calculators</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
 
 <article>
     <div class="article-header">
@@ -157,8 +157,8 @@
     <div class="article-body">
         <div class="screenshots">
             <div class="screenshots-grid">
-                <div class="screenshot"><img src="../assets/calculator-nl/isolatie-nl-1.png" alt="Isolatie calculator — Lagen en R-waarde" data-img-prefix="isolatie" data-img-num="1" loading="lazy"></div>
-                <div class="screenshot"><img src="../assets/calculator-nl/isolatie-nl-2.png" alt="Isolatie calculator — Resultaat" data-img-prefix="isolatie" data-img-num="2" loading="lazy"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/isolatie-nl-1.webp" alt="Isolatie calculator — Lagen en R-waarde" data-img-prefix="isolatie" data-img-num="1" loading="lazy" decoding="async"></div>
+                <div class="screenshot"><img src="../assets/calculator-nl/isolatie-nl-2.webp" alt="Isolatie calculator — Resultaat" data-img-prefix="isolatie" data-img-num="2" loading="lazy" decoding="async"></div>
             </div>
         </div>
         <div class="c">
@@ -315,7 +315,7 @@
 <footer>
     <div class="c-wide">
         <div class="foot-inner">
-            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.png" alt="Grounded Studio" width="32" height="32"></div><span class="foot-name">Grounded Studio</span></a>
+            <a href="../index.html" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.webp" alt="Grounded Studio" width="32" height="32" decoding="async"></div><span class="foot-name">Grounded Studio</span></a>
             <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
                 <a href="../calculators.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Calculators</a>
                 <a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
@@ -445,7 +445,7 @@ function applyLang(l) {
     const d = T[l]; document.documentElement.lang = l;
     document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
     document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
-    document.querySelectorAll('[data-img-prefix]').forEach(img => { img.src = `../assets/calculator-${l}/${img.dataset.imgPrefix}-${l}-${img.dataset.imgNum}.png`; });
+    document.querySelectorAll('[data-img-prefix]').forEach(img => { img.src = `../assets/calculator-${l}/${img.dataset.imgPrefix}-${l}-${img.dataset.imgNum}.webp`; });
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
     lang = l; localStorage.setItem('gs-lang', l);
 }
