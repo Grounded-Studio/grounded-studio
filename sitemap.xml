@@ -25,12 +25,6 @@
         <changefreq>monthly</changefreq>
     </url>
     <url>
-        <loc>https://grounded-studio.app/privacy-kwispelboek.html</loc>
-        <lastmod>2026-11-04</lastmod>
-        <priority>0.3</priority>
-        <changefreq>yearly</changefreq>
-    </url>
-    <url>
         <loc>https://grounded-studio.app/freshgarant-changelog.html</loc>
         <lastmod>2026-10-26</lastmod>
         <priority>0.6</priority>
