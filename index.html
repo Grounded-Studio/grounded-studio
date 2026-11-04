@@ -297,6 +297,9 @@
             --bx:       #2563eb;
             --bx2:      #1d4ed8;
             --bx-glow:  rgba(37,99,235,0.35);
+            --kb:       #E2774F;
+            --kb2:      #C4562E;
+            --kb-glow:  rgba(226,119,79,0.35);
             --fl:       #a78bfa;
             --fl2:      #7c3aed;
             --fl-glow:  rgba(167,139,250,0.35);
@@ -594,6 +597,7 @@
             animation: pillShimmer 3.5s ease-in-out infinite;
         }
         .pill.bx::after { animation-delay: 1.2s; }
+        .pill.kb::after { animation-delay: 1.2s; }
         @keyframes pillShimmer {
             0% { transform: translateX(-100%); }
             30%, 100% { transform: translateX(200%); }
@@ -603,7 +607,9 @@
         .pill.vg { background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.25);color:var(--vg); }
         .pill.vg:hover { background:rgba(34,197,94,.18);border-color:rgba(34,197,94,.5);transform:translateY(-3px);box-shadow:0 12px 32px var(--vg-glow); }
         .pill.bx { background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.25);color:var(--bx); }
+        .pill.kb { background:rgba(226,119,79,.1);border-color:rgba(226,119,79,.25);color:var(--kb); }
         .pill.bx:hover { background:rgba(37,99,235,.18);border-color:rgba(37,99,235,.5);transform:translateY(-3px);box-shadow:0 12px 32px var(--bx-glow); }
+        .pill.kb:hover { background:rgba(226,119,79,.18);border-color:rgba(226,119,79,.5);transform:translateY(-3px);box-shadow:0 12px 32px var(--kb-glow); }
         .pill.fl { background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.28);color:var(--fl); }
         .pill.fl:hover { background:rgba(167,139,250,.18);border-color:rgba(167,139,250,.5);transform:translateY(-3px);box-shadow:0 12px 32px var(--fl-glow); }
         .pill.fl::after { animation-delay: 2.4s; }
@@ -631,6 +637,7 @@
         }
         .vg-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 65% 60% at 15% 50%,rgba(34,197,94,.07) 0%,transparent 70%); }
         .bx-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 65% 60% at 85% 50%,rgba(37,99,235,.07) 0%,transparent 70%); }
+        .kb-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 65% 60% at 85% 50%,rgba(226,119,79,.07) 0%,transparent 70%); }
         .fl-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 65% 60% at 85% 50%,rgba(167,139,250,.08) 0%,transparent 70%); }
 
         /* Horizontal line separator between app sections */
@@ -647,6 +654,7 @@
         .s-tag-emoji { font-size:14px; }
         .s-tag.vg { color:var(--vg); }
         .s-tag.bx { color:var(--bx); }
+        .s-tag.kb { color:var(--kb); }
         .s-tag.fl { color:var(--fl); }
         .s-tag.gs { color:var(--gs); }
         .s-title { font-family:'Space Grotesk',sans-serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.035em;line-height:1.05;margin-bottom:20px; }
@@ -659,6 +667,10 @@
         .s-title span[style*="color:var(--bx)"],
         .s-title [style*="color:var(--bx)"] {
             text-shadow: 0 0 40px rgba(37,99,235,.5), 0 0 80px rgba(37,99,235,.25);
+        }
+        .s-title span[style*="color:var(--kb)"],
+        .s-title [style*="color:var(--kb)"] {
+            text-shadow: 0 0 40px rgba(226,119,79,.5), 0 0 80px rgba(226,119,79,.25);
         }
         .s-title span[style*="color:var(--fl)"],
         .s-title [style*="color:var(--fl)"] {
@@ -705,13 +717,23 @@
 
         /* BX section feature cards — blue left-border glow */
         .bx-section .feat::before { background: linear-gradient(180deg, var(--bx), rgba(37,99,235,.3)); box-shadow: 0 0 12px rgba(37,99,235,.6); }
+
+        /* BX section feature cards — blue left-border glow */
+        .kb-section .feat::before { background: linear-gradient(180deg, var(--kb), rgba(226,119,79,.3)); box-shadow: 0 0 12px rgba(226,119,79,.6); }
         .bx-section .feat:hover {
             background: rgba(37,99,235,.06);
             border-color: rgba(37,99,235,.25);
             transform: translateY(-4px);
             box-shadow: 0 12px 32px rgba(37,99,235,.12);
         }
+        .kb-section .feat:hover {
+            background: rgba(226,119,79,.06);
+            border-color: rgba(226,119,79,.25);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(226,119,79,.12);
+        }
         .bx-section .feat:hover::before { opacity: 1; }
+        .kb-section .feat:hover::before { opacity: 1; }
 
         /* FL section (Games) — purple left-border glow */
         .fl-section .feat::before { background: linear-gradient(180deg, var(--fl), rgba(167,139,250,.3)); box-shadow: 0 0 12px rgba(167,139,250,.6); }
@@ -726,6 +748,7 @@
         .feat-ico { width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0; }
         .feat-ico.vg { background:rgba(34,197,94,.12); }
         .feat-ico.bx { background:rgba(37,99,235,.12); }
+        .feat-ico.kb { background:rgba(226,119,79,.12); }
         .feat-ico.fl { background:rgba(167,139,250,.14); }
         .feat-body h4 { font-size:.93rem;font-weight:700;margin-bottom:4px; }
         .feat-body p  { font-size:.85rem;color:var(--muted);line-height:1.6; }
@@ -836,6 +859,7 @@
         }
         .vg-tilt::before { background:linear-gradient(145deg, rgba(34,197,94,.22), rgba(34,197,94,.08)); border:1px solid rgba(34,197,94,.22); box-shadow:0 0 60px rgba(34,197,94,.25), inset 0 1px 0 rgba(255,255,255,.06); }
         .bx-tilt::before { background:linear-gradient(145deg, rgba(37,99,235,.22), rgba(37,99,235,.08)); border:1px solid rgba(37,99,235,.22); box-shadow:0 0 60px rgba(37,99,235,.25), inset 0 1px 0 rgba(255,255,255,.06); }
+        .kb-tilt::before { background:linear-gradient(145deg, rgba(226,119,79,.22), rgba(226,119,79,.08)); border:1px solid rgba(226,119,79,.22); box-shadow:0 0 60px rgba(226,119,79,.25), inset 0 1px 0 rgba(255,255,255,.06); }
         .fl-tilt::before { background:linear-gradient(145deg, rgba(129,140,248,.22), rgba(129,140,248,.08)); border:1px solid rgba(129,140,248,.22); box-shadow:0 0 60px rgba(129,140,248,.25), inset 0 1px 0 rgba(255,255,255,.06); }
         .tilt-wrap .app-screenshot { position:relative; z-index:1; display:block; }
 
@@ -859,7 +883,18 @@
             animation: floatBX 7s ease-in-out infinite;
             animation-delay: -3.5s;
         }
+
+        /* BuildExact: lean opposite */
+        .kb-tilt {
+            transform: perspective(1100px) rotateY(12deg) rotateX(4deg);
+            animation: floatBX 7s ease-in-out infinite;
+            animation-delay: -3.5s;
+        }
         .bx-tilt:hover {
+            transform: perspective(1100px) rotateY(5deg) rotateX(2deg) translateY(-14px) !important;
+            animation-play-state: paused;
+        }
+        .kb-tilt:hover {
             transform: perspective(1100px) rotateY(5deg) rotateX(2deg) translateY(-14px) !important;
             animation-play-state: paused;
         }
@@ -953,6 +988,13 @@
                 0 0 0 1px rgba(255,255,255,.08),
                 0 0 80px rgba(37,99,235,.12);
         }
+        .kb-tilt .app-screenshot {
+            box-shadow:
+                -28px 36px 90px rgba(0,0,0,.7),
+                6px -6px 30px rgba(0,0,0,.3),
+                0 0 0 1px rgba(255,255,255,.08),
+                0 0 80px rgba(226,119,79,.12);
+        }
         .fl-tilt .app-screenshot {
             box-shadow:
                 -28px 36px 90px rgba(0,0,0,.7),
@@ -1004,6 +1046,7 @@
         .app-icon-ring::after { animation-delay: 1.5s; }
         .vg-ring { color: rgba(34,197,94,.6); }
         .bx-ring { color: rgba(37,99,235,.6); }
+        .kb-ring { color: rgba(226,119,79,.6); }
         @keyframes iconRingPulse {
             0%   { inset: -4px; opacity: .7; }
             100% { inset: -18px; opacity: 0; }
@@ -1084,6 +1127,7 @@
         .foot-app { display:flex;align-items:center;gap:9px;padding:9px 18px;border-radius:10px;text-decoration:none;font-size:.85rem;font-weight:600;border:1px solid transparent;transition:opacity .2s; }
         .foot-app.vg { color:var(--vg);border-color:rgba(34,197,94,.22);background:rgba(34,197,94,.06); }
         .foot-app.bx { color:var(--bx);border-color:rgba(37,99,235,.22);background:rgba(37,99,235,.06); }
+        .foot-app.kb { color:var(--kb);border-color:rgba(226,119,79,.22);background:rgba(226,119,79,.06); }
         .foot-app:hover { opacity:.75; }
         .foot-app-icon { width:20px;height:20px;border-radius:5px;object-fit:cover; }
         .foot-copy { font-size:.78rem;color:#334155; }
@@ -1221,6 +1265,11 @@
                 animation: floatBXMob 7s ease-in-out infinite;
                 animation-delay: -3.5s;
             }
+            .kb-tilt {
+                transform: perspective(900px) rotateY(6deg) rotateX(2deg);
+                animation: floatBXMob 7s ease-in-out infinite;
+                animation-delay: -3.5s;
+            }
         }
         @keyframes floatVGMob {
             0%,100% { transform: perspective(900px) rotateY(-6deg) rotateX(2deg) translateY(0); }
@@ -1256,7 +1305,9 @@
         .faq-group-header.gs .faq-group-dot { background:var(--gs); box-shadow:0 0 12px var(--gs-glow); }
         .faq-group-header.gs .faq-group-title { color:var(--gs); }
         .faq-group-header.bx .faq-group-dot { background:var(--bx); box-shadow:0 0 12px var(--bx-glow); }
+        .faq-group-header.kb .faq-group-dot { background:var(--kb); box-shadow:0 0 12px var(--kb-glow); }
         .faq-group-header.bx .faq-group-title { color:var(--bx); }
+        .faq-group-header.kb .faq-group-title { color:var(--kb); }
         .faq-group-header.vg .faq-group-dot { background:var(--vg); box-shadow:0 0 12px var(--vg-glow); }
         .faq-group-header.vg .faq-group-title { color:var(--vg); }
         .faq-group-header.fl .faq-group-dot { background:var(--fl); box-shadow:0 0 12px var(--fl-glow); }
@@ -1325,6 +1376,7 @@
                         <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.apps">Apps</span><span class="arrow">▾</span></button>
                         <div class="nav-dropdown-menu">
                             <a href="buildexact.html">🏗️ <span data-i18n="nav.bx">BuildExact</span></a>
+                            <a href="kwispelboek.html">🐾 <span data-i18n="nav.kb">Kwispelboek</span></a>
                             <a href="freshgarant.html">🌿 <span data-i18n="nav.vg">FreshGarant</span></a>
                         </div>
                     </li>
@@ -1389,6 +1441,12 @@
             <a href="freshgarant.html" class="mobile-nav-link">
                 <img src="assets/icon-vg.webp" alt="FreshGarant icon" onerror="this.outerHTML='🌿'" decoding="async">
                 <span data-i18n="nav.vg">FreshGarant</span>
+            </a>
+        </li>
+        <li>
+            <a href="kwispelboek.html" class="mobile-nav-link">
+                <img src="assets/icon-kb.webp" alt="Kwispelboek icon" onerror="this.outerHTML='🐾'" decoding="async">
+                <span data-i18n="nav.kb">Kwispelboek</span>
             </a>
         </li>
         <li>
@@ -1479,6 +1537,10 @@
                     <a href="freshgarant.html" class="pill vg">
                         <img src="assets/icon-vg.webp" class="pill-img" alt="FreshGarant" onerror="this.outerHTML='<div class=\'pill-emoji\'>🌿</div>'" decoding="async">
                         <span data-i18n="nav.vg">FreshGarant</span>
+                    </a>
+                    <a href="kwispelboek.html" class="pill kb">
+                        <img src="assets/icon-kb.webp" class="pill-img" alt="Kwispelboek" onerror="this.outerHTML='<div class=\'pill-emoji\'>🐾</div>'" decoding="async">
+                        <span data-i18n="nav.kb">Kwispelboek</span>
                     </a>
                 </div>
             </div>
@@ -1823,6 +1885,106 @@
     </div>
 </section>
 
+<!-- Section separator -->
+<div class="section-separator"></div>
+
+<!-- ── KWISPELBOEK ──────────────────────────────────────── -->
+<section class="app-section kb-section" id="kwispelboek">
+    <div class="c">
+        <div class="app-grid">
+
+            <!-- Text -->
+            <div>
+                <div class="app-icon-badge a-fade">
+                    <div class="app-icon-ring kb-ring">
+                        <img src="assets/icon-kb.webp" class="app-icon-img" alt="Kwispelboek icon" onerror="this.outerHTML='<div class=\'app-icon-emoji\' style=\'background:rgba(226,119,79,.12)\'>🐾</div>'" decoding="async">
+                    </div>
+                    <div class="app-icon-info">
+                        <h3 data-i18n="nav.kb">Kwispelboek</h3>
+                        <span data-i18n="kb.by">by Grounded Studio · Wagbook in English</span>
+                    </div>
+                </div>
+
+                <div class="s-tag kb a-fade" style="transition-delay:.06s">
+                    <span>●</span>&nbsp;<span data-i18n="kb.tag.text">App 03 · Coming soon</span>
+                </div>
+                <h2 class="s-title a-fade" style="transition-delay:.12s" data-i18n-html="kb.h2">
+                    Every pet,<br><span style="color:var(--kb)">cared for on time</span>
+                </h2>
+                <p class="s-desc a-fade" style="transition-delay:.18s" data-i18n="kb.desc">
+                    Kwispelboek (Wagbook in English) is a calm health log for your dogs, cats, rabbits and birds. Vaccinations, deworming, medication and vet visits in one place, with a reminder at the right moment. No account: everything stays on your phone.
+                </p>
+
+                <ul class="features">
+                    <li class="feat a-left" style="transition-delay:.08s">
+                        <div class="feat-ico kb">🔔</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="kb.f1.h">Reminders on time</h4>
+                            <p data-i18n="kb.f1.p">Vaccinations, deworming and flea treatments with repeat schedules. A reminder in advance and on the day itself.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.16s">
+                        <div class="feat-ico kb">💊</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="kb.f2.h">Medication &amp; courses</h4>
+                            <p data-i18n="kb.f2.p">Dose and times of day, ongoing or as a course with an end date. Tap "Given" right in the notification.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.24s">
+                        <div class="feat-ico kb">🩺</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="kb.f3.h">Vet visits &amp; costs</h4>
+                            <p data-i18n="kb.f3.p">Notes, costs per year and a photo of the prescription or invoice. Everything in one timeline per pet.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.32s">
+                        <div class="feat-ico kb">⚖️</div>
+                        <div class="feat-body">
+                            <h4 data-i18n="kb.f4.h">Weight chart</h4>
+                            <p data-i18n="kb.f4.p">Weigh regularly and spot changes early, in kilos or in grams for birds.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.40s">
+                        <div class="feat-ico kb">📄</div>
+                        <div class="feat-body">
+                            <h4><span data-i18n="kb.f5.h">PDF for the vet</span> <span style="font-size:.7em;opacity:.7">Pro</span></h4>
+                            <p data-i18n="kb.f5.p">A clear overview with chip number, vaccinations and batch numbers, medication and weight. Share it with your vet or pet sitter.</p>
+                        </div>
+                    </li>
+                    <li class="feat a-left" style="transition-delay:.48s">
+                        <div class="feat-ico kb">📷</div>
+                        <div class="feat-body">
+                            <h4><span data-i18n="kb.f6.h">Scan the pet passport</span> <span style="font-size:.7em;opacity:.7">Pro</span></h4>
+                            <p data-i18n="kb.f6.p">Take a photo of the vaccination page and AI fills in the dates and batch numbers. You check before anything is saved.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+                    <span class="a-fade" style="transition-delay:.52s;display:inline-flex;align-items:center;gap:10px;color:#cbd5e1;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px dashed rgba(226,119,79,.5);background:rgba(226,119,79,.08);cursor:default">
+                        ⏳ <span data-i18n="kb.soon">Coming soon to Google Play</span>
+                    </span>
+                    <a href="kwispelboek.html" class="a-fade" style="transition-delay:.56s;color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(226,119,79,.5);background:rgba(226,119,79,.18);transition:all .25s" onmouseover="this.style.background='rgba(226,119,79,.32)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(226,119,79,.18)';this.style.transform='translateY(0)'">
+                        <span data-i18n="kb.cta.page">🐾 View Kwispelboek</span> →
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3D Screenshot -->
+            <div class="phone-wrap a-scale">
+                <div class="screen-glow" style="background:var(--kb)"></div>
+                <div class="tilt-wrap kb-tilt">
+                    <img src="assets/screen-kb.webp"
+                         class="app-screenshot"
+                         alt="Kwispelboek Today screen with medication, overdue and upcoming care"
+                         onerror="this.style.display='none'" loading="lazy" decoding="async">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <!-- ── ABOUT / STUDIO ─────────────────────────────────── -->
 <section class="about-section" id="studio">
     <div class="c">
@@ -1920,6 +2082,19 @@
                 <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.avg2">PRO unlocks AI-generated recipes tailored to your soon-to-expire ingredients (powered by Gemini), family sharing for up to 6 members so everyone sees the same fridge in real time, cloud backup across devices, and hands-free cook mode — a recipe reader that scrolls itself while your hands are covered in flour.</div></div>
             </div>
 
+            <div class="faq-group-header kb a-fade">
+                <span class="faq-group-dot"></span>
+                <span class="faq-group-title" data-i18n="faq.g.kb">Kwispelboek</span>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qkb1">What is Kwispelboek (Wagbook)?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.akb1">Kwispelboek — called Wagbook in English — is an Android health log for your pets. Keep vaccinations, deworming and flea treatments with repeat schedules, medication and courses with reminders at every dose, vet visits with costs and photos, and a weight chart. No account needed: everything stays on your phone. It is coming soon to Google Play.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qkb2">What is free and what is PRO in Kwispelboek?</span><span class="faq-icon">+</span></button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.akb2">Free: up to 2 pets with all logs, reminders, the weight chart, backups and one photo per vet visit. PRO: unlimited pets and photos, a PDF overview for your vet or pet sitter, and scanning a pet passport, invoice or medicine label with AI.</div></div>
+            </div>
+
             <div class="faq-group-header fl a-fade">
                 <span class="faq-group-dot"></span>
                 <span class="faq-group-title" data-i18n="faq.g.ct">Circuit Trace</span>
@@ -1956,6 +2131,7 @@
             <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
                 <a href="freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a>
                 <a href="buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="kwispelboek.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Kwispelboek</a>
                 <a href="calculators.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Calculators</a>
                 <a href="blog/freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
                 <a href="about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="contact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a>
@@ -2072,6 +2248,30 @@ const T = {
         'faq.g.studio': 'About Grounded Studio',
         'faq.g.bx':     'BuildExact',
         'faq.g.vg':     'FreshGarant',
+        'nav.kb': 'Kwispelboek',
+        'kb.by': 'by Grounded Studio · Wagbook in English',
+        'kb.tag.text': 'App 03 · Coming soon',
+        'kb.h2': 'Every pet,<br><span style="color:var(--kb)">cared for on time</span>',
+        'kb.desc': 'Kwispelboek (Wagbook in English) is a calm health log for your dogs, cats, rabbits and birds. Vaccinations, deworming, medication and vet visits in one place, with a reminder at the right moment. No account: everything stays on your phone.',
+        'kb.f1.h': 'Reminders on time',
+        'kb.f1.p': 'Vaccinations, deworming and flea treatments with repeat schedules. A reminder in advance and on the day itself.',
+        'kb.f2.h': 'Medication & courses',
+        'kb.f2.p': 'Dose and times of day, ongoing or as a course with an end date. Tap "Given" right in the notification.',
+        'kb.f3.h': 'Vet visits & costs',
+        'kb.f3.p': 'Notes, costs per year and a photo of the prescription or invoice. Everything in one timeline per pet.',
+        'kb.f4.h': 'Weight chart',
+        'kb.f4.p': 'Weigh regularly and spot changes early, in kilos or in grams for birds.',
+        'kb.f5.h': 'PDF for the vet',
+        'kb.f5.p': 'A clear overview with chip number, vaccinations and batch numbers, medication and weight. Share it with your vet or pet sitter.',
+        'kb.f6.h': 'Scan the pet passport',
+        'kb.f6.p': 'Take a photo of the vaccination page and AI fills in the dates and batch numbers. You check before anything is saved.',
+        'kb.soon': 'Coming soon to Google Play',
+        'kb.cta.page': '🐾 View Kwispelboek',
+        'faq.g.kb': 'Kwispelboek',
+        'faq.qkb1': 'What is Kwispelboek (Wagbook)?',
+        'faq.akb1': 'Kwispelboek — called Wagbook in English — is an Android health log for your pets. Keep vaccinations, deworming and flea treatments with repeat schedules, medication and courses with reminders at every dose, vet visits with costs and photos, and a weight chart. No account needed: everything stays on your phone. It is coming soon to Google Play.',
+        'faq.qkb2': 'What is free and what is PRO in Kwispelboek?',
+        'faq.akb2': 'Free: up to 2 pets with all logs, reminders, the weight chart, backups and one photo per vet visit. PRO: unlimited pets and photos, a PDF overview for your vet or pet sitter, and scanning a pet passport, invoice or medicine label with AI.',
         'faq.g.ct':     'Circuit Trace',
         'faq.q1':       'What is Grounded Studio?',
         'faq.a1':       'Grounded Studio is an independent Android app and game studio. We build purposeful, offline-first apps and focused games for daily life — bootstrapped, no VCs, no dark patterns. Founded by a solo developer, the studio ships BuildExact, FreshGarant, and the live puzzle game Circuit Trace (500 puzzles across 5 game modes).',
@@ -2197,6 +2397,30 @@ const T = {
         'faq.g.studio': 'Over Grounded Studio',
         'faq.g.bx':     'BuildExact',
         'faq.g.vg':     'FreshGarant',
+        'nav.kb': 'Kwispelboek',
+        'kb.by': 'door Grounded Studio',
+        'kb.tag.text': 'App 03 · Binnenkort',
+        'kb.h2': 'Elk dier,<br><span style="color:var(--kb)">op tijd verzorgd</span>',
+        'kb.desc': 'Kwispelboek is een rustig logboek voor de gezondheid van je honden, katten, konijnen en vogels. Vaccinaties, ontworming, medicijnen en dierenartsbezoeken op één plek, met een herinnering op het juiste moment. Geen account: alles blijft op je telefoon.',
+        'kb.f1.h': 'Herinneringen op tijd',
+        'kb.f1.p': 'Vaccinaties, ontworming en vlooienbehandelingen met herhaalschema. Een herinnering vooraf en op de dag zelf.',
+        'kb.f2.h': 'Medicijnen & kuren',
+        'kb.f2.p': 'Dosering en innamemomenten, doorlopend of als kuur met einddatum. Tik op "Gegeven" in de melding zelf.',
+        'kb.f3.h': 'Dierenarts & kosten',
+        'kb.f3.p': 'Notities, kosten per jaar en een foto van recept of rekening. Alles op één tijdlijn per dier.',
+        'kb.f4.h': 'Gewichtsgrafiek',
+        'kb.f4.p': 'Weeg regelmatig en zie veranderingen op tijd, in kilo\'s of in grammen voor vogels.',
+        'kb.f5.h': 'PDF voor de dierenarts',
+        'kb.f5.p': 'Een helder overzicht met chipnummer, vaccinaties met batchnummers, medicijnen en gewicht. Deel het met je dierenarts of oppas.',
+        'kb.f6.h': 'Dierenpaspoort scannen',
+        'kb.f6.p': 'Maak een foto van de vaccinatiepagina en AI vult datums en batchnummers in. Jij controleert voordat er iets wordt opgeslagen.',
+        'kb.soon': 'Binnenkort op Google Play',
+        'kb.cta.page': '🐾 Bekijk Kwispelboek',
+        'faq.g.kb': 'Kwispelboek',
+        'faq.qkb1': 'Wat is Kwispelboek?',
+        'faq.akb1': 'Kwispelboek is een Android-logboek voor de gezondheid van je huisdieren. Houd vaccinaties, ontworming en vlooienbehandelingen bij met herhaalschema\'s, medicijnen en kuren met een herinnering bij elke inname, dierenartsbezoeken met kosten en foto\'s, en een gewichtsgrafiek. Geen account nodig: alles blijft op je telefoon. Binnenkort op Google Play.',
+        'faq.qkb2': 'Wat is gratis en wat is PRO in Kwispelboek?',
+        'faq.akb2': 'Gratis: tot 2 dieren met alle logboeken, herinneringen, de gewichtsgrafiek, back-ups en één foto per dierenartsbezoek. PRO: onbeperkt dieren en foto\'s, een PDF-overzicht voor je dierenarts of oppas, en een dierenpaspoort, rekening of medicijnetiket scannen met AI.',
         'faq.g.ct':     'Circuit Trace',
         'faq.q1':       'Wat is Grounded Studio?',
         'faq.a1':       'Grounded Studio is een onafhankelijke Android app- en gamestudio. We bouwen zinvolle, offline-first apps en focused games voor het dagelijks leven — bootstrapped, geen VCs, geen dark patterns. Opgericht door één developer, brengt de studio BuildExact, FreshGarant en de live puzzelgame Circuit Trace (500 puzzels over 5 game modes) uit.',

@@ -184,6 +184,7 @@
         .app-card { display:flex; align-items:center; gap:20px; padding:28px; border-radius:20px; background:rgba(255,255,255,.03); border:1px solid var(--border); text-decoration:none; color:inherit; transition:all .3s; }
         .app-card.vg:hover { background:rgba(34,197,94,.06); border-color:rgba(34,197,94,.3); transform:translateY(-4px); }
         .app-card.bx:hover { background:rgba(37,99,235,.06); border-color:rgba(37,99,235,.3); transform:translateY(-4px); }
+        .app-card.kb:hover { background:rgba(226,119,79,.06); border-color:rgba(226,119,79,.3); transform:translateY(-4px); }
         .app-card-ico { width:56px; height:56px; border-radius:14px; flex-shrink:0; overflow:hidden; }
         .app-card-ico img { width:100%; height:100%; object-fit:cover; display:block; }
         .app-card-text { flex:1; min-width:0; }
@@ -192,6 +193,7 @@
         .app-card-arrow { color:#475569; font-size:1.2rem; transition:color .2s,transform .2s; }
         .app-card.vg:hover .app-card-arrow { color:var(--vg); transform:translateX(4px); }
         .app-card.bx:hover .app-card-arrow { color:var(--bx); transform:translateX(4px); }
+        .app-card.kb:hover .app-card-arrow { color:#E2774F; transform:translateX(4px); }
 
         .contact { padding:80px 0 120px; border-top:1px solid var(--border); }
         .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:60px; }
@@ -231,6 +233,7 @@
                         <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.apps">Apps</span><span class="arrow">▾</span></button>
                         <div class="nav-dropdown-menu">
                             <a href="buildexact.html"><img src="assets/icon-bx.webp" alt="BuildExact icon" onerror="this.outerHTML='🏗️'" decoding="async"><span data-i18n="nav.bx">BuildExact</span></a>
+                            <a href="kwispelboek.html"><img src="assets/icon-kb.webp" alt="Kwispelboek icon" onerror="this.outerHTML='🐾'" decoding="async"><span data-i18n="nav.kb">Kwispelboek</span></a>
                             <a href="freshgarant.html"><img src="assets/icon-vg.webp" alt="FreshGarant icon" onerror="this.outerHTML='🌿'" loading="lazy" decoding="async"><span data-i18n="nav.vg">FreshGarant</span></a>
                         </div>
                     </li>
@@ -264,6 +267,7 @@
 <div class="mob-menu" id="mobMenu">
     <a href="freshgarant.html">🌿 <span data-i18n="nav.vg">FreshGarant</span></a>
     <a href="buildexact.html">🏗️ <span data-i18n="nav.bx">BuildExact</span></a>
+    <a href="kwispelboek.html">🐾 <span data-i18n="nav.kb">Kwispelboek</span></a>
     <a href="blog/freshgarant.html">📝 <span data-i18n="nav.vg_blog">FreshGarant Blog</span></a>
     <a href="blog/buildexact.html">📝 <span data-i18n="nav.bx_blog">BuildExact Blog</span></a>
     <a href="blog/why-circuit-trace-one-finger-puzzle.html">📝 <span data-i18n="nav.ct_blog">Circuit Trace Blog</span></a>
@@ -335,6 +339,15 @@
                 </div>
                 <span class="app-card-arrow">→</span>
             </a>
+            <a href="kwispelboek.html" class="app-card kb">
+                <div class="app-card-ico"><img src="assets/icon-kb.webp" alt="Kwispelboek" loading="lazy" decoding="async"></div>
+                <div class="app-card-text">
+                    <h3>Kwispelboek</h3>
+                    <p data-i18n="apps.kb">Pet health log: vaccinations, deworming, medication and vet visits, with reminders.</p>
+                    <span style="display:inline-block;margin-top:8px;font-size:.78rem;color:#E2774F;font-weight:700" data-i18n="apps.kb.soon">⏳ Coming soon to Google Play</span>
+                </div>
+                <span class="app-card-arrow">→</span>
+            </a>
         </div>
     </div>
 </section>
@@ -370,6 +383,7 @@
             <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center">
                 <a href="freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a>
                 <a href="buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a>
+                <a href="kwispelboek.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Kwispelboek</a>
                 <a href="blog/freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Blog</a>
                 <a href="about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a>
                 <a href="privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a>
@@ -413,6 +427,8 @@ const T = {
         'apps.ct':         'Minimalist logic puzzle — 500 puzzles across 5 game modes. Live on Google Play.',
         'apps.vg':         'AI-powered food expiry tracker with photo fridge scan.',
         'apps.bx':         'Construction calculator with client manager & quote PDFs.',
+        'apps.kb':         'Pet health log: vaccinations, deworming, medication and vet visits, with reminders.',
+        'apps.kb.soon':    '⏳ Coming soon to Google Play',
         'contact.title':   'Get in touch',
         'contact.sub':     'For support, press, partnerships or a friendly hello.',
         'contact.email.label': 'Email',
@@ -449,6 +465,8 @@ const T = {
         'apps.ct':         'Minimalistische logica-puzzel — 500 puzzels over 5 game modes. Live op Google Play.',
         'apps.vg':         'AI-gestuurde houdbaarheidsdatum tracker met foto koelkast scan.',
         'apps.bx':         'Bouwcalculator met klantenbeheer & offerte PDF\'s.',
+        'apps.kb':         'Huisdier-logboek: vaccinaties, ontworming, medicijnen en dierenartsbezoeken, met herinneringen.',
+        'apps.kb.soon':    '⏳ Binnenkort op Google Play',
         'contact.title':   'Neem contact op',
         'contact.sub':     'Voor support, pers, partnerships of gewoon een hallo.',
         'contact.email.label': 'E-mail',
