@@ -132,6 +132,19 @@
                 }
             },
             {
+                "@type": "SoftwareApplication",
+                "name": "Kwispelboek",
+                "alternateName": "Wagbook",
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "Android",
+                "offers": [
+                    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR" }
+                ],
+                "description": "Pet health log for dogs, cats, rabbits and birds: vaccinations, deworming, medication and vet visits with reminders. No account, data stays on your phone. Coming soon to Android.",
+                "author": { "@id": "https://grounded-studio.app/#organization" },
+                "url": "https://grounded-studio.app/kwispelboek.html"
+            },
+            {
                 "@type": ["VideoGame", "MobileApplication"],
                 "name": "Circuit Trace",
                 "applicationCategory": "GameApplication",
@@ -1711,28 +1724,28 @@
                         <div class="feat-ico bx">📐</div>
                         <div class="feat-body">
                             <h4 data-i18n="bx.f1.h">Material Calculations</h4>
-                            <p data-i18n="bx.f1.p">Calculate exactly how much material you need for every job — including cut and waste percentages.</p>
+                            <p data-i18n="bx.f1.p">25 calculators grouped by trade, cut and waste included — plus a free spirit level, ruler and unit converter.</p>
                         </div>
                     </li>
                     <li class="feat a-left" style="transition-delay:.16s">
                         <div class="feat-ico bx">💰</div>
                         <div class="feat-body">
-                            <h4 data-i18n="bx.f2.h">Cost Estimation</h4>
-                            <p data-i18n="bx.f2.p">Create detailed cost estimates to manage your budget properly before the job starts.</p>
+                            <h4 data-i18n="bx.f2.h">Quotes &amp; Invoices</h4>
+                            <p data-i18n="bx.f2.p">Put any calculation into a branded quote, turn it into an invoice in one tap — with a pay-by-QR code.</p>
                         </div>
                     </li>
                     <li class="feat a-left" style="transition-delay:.24s">
                         <div class="feat-ico bx">📋</div>
                         <div class="feat-body">
-                            <h4 data-i18n="bx.f3.h">Project Management</h4>
-                            <p data-i18n="bx.f3.p">Manage multiple projects at once and keep track of progress, costs, and materials.</p>
+                            <h4 data-i18n="bx.f3.h">Work Orders &amp; Hours</h4>
+                            <p data-i18n="bx.f3.p">Run a timer per job, let the client sign the work order on your screen and bill the hours.</p>
                         </div>
                     </li>
                     <li class="feat a-left" style="transition-delay:.32s">
                         <div class="feat-ico bx">📤</div>
                         <div class="feat-body">
-                            <h4 data-i18n="bx.f4.h">PDF Export</h4>
-                            <p data-i18n="bx.f4.p">Easily share your calculations and estimates as a clean PDF with clients or colleagues.</p>
+                            <h4 data-i18n="bx.f4.h">Projects &amp; My Day</h4>
+                            <p data-i18n="bx.f4.p">Measurements, materials and hours per job, plus this week's earnings and overdue invoices at a glance.</p>
                         </div>
                     </li>
                 </ul>
@@ -1754,7 +1767,7 @@
                         <span data-i18n="bx.cta.site">🌐 buildexact.app</span> →
                     </a>
                     <a href="calculators.html" class="a-fade" style="transition-delay:.5s;color:var(--bx);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(37,99,235,.35);background:rgba(37,99,235,.08);transition:all .25s" onmouseover="this.style.background='rgba(37,99,235,.16)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(37,99,235,.08)';this.style.transform='translateY(0)'">
-                        <span data-i18n="bx.cta.calcs">🧮 11 calculators</span> →
+                        <span data-i18n="bx.cta.calcs">🧮 11 calculator guides</span> →
                     </a>
                 </div>
             </div>
@@ -2197,15 +2210,15 @@ const T = {
         'bx.by':        'by Grounded Studio',
         'bx.tag.text':  'App 01',
         'bx.h2':        'Build with<br><span style="color:var(--bx)">precision</span>',
-        'bx.desc':      'BuildExact is the smart calculation tool for builders and handymen. Calculate exact material needs, create cost estimates, and keep your projects organized.',
+        'bx.desc':      'BuildExact is the all-in-one app for builders and handymen. 25 material calculators, branded quotes and invoices with pay-by-QR, and work orders with an hours timer — from measurement to payment.',
         'bx.f1.h':      'Material Calculations',
-        'bx.f1.p':      'Calculate exactly how much material you need for every job — including cut and waste percentages.',
-        'bx.f2.h':      'Cost Estimation',
-        'bx.f2.p':      'Create detailed cost estimates to manage your budget properly before the job starts.',
-        'bx.f3.h':      'Project Management',
-        'bx.f3.p':      'Manage multiple projects at once and keep track of progress, costs, and materials.',
-        'bx.f4.h':      'PDF Export',
-        'bx.f4.p':      'Easily share your calculations and estimates as a clean PDF with clients or colleagues.',
+        'bx.f1.p':      '25 calculators grouped by trade, cut and waste included — plus a free spirit level, ruler and unit converter.',
+        'bx.f2.h':      'Quotes & Invoices',
+        'bx.f2.p':      'Put any calculation into a branded quote, turn it into an invoice in one tap — with a pay-by-QR code.',
+        'bx.f3.h':      'Work Orders & Hours',
+        'bx.f3.p':      'Run a timer per job, let the client sign the work order on your screen and bill the hours.',
+        'bx.f4.h':      'Projects & My Day',
+        'bx.f4.p':      'Measurements, materials and hours per job, plus this week's earnings and overdue invoices at a glance.',
         'fl.by':        'Game by Grounded Studio',
         'fl.tag.text':  '✅ Live on Google Play',
         'fl.h2':        'Trace the circuit<br><span style="color:var(--fl)">restore the network</span>',
@@ -2224,7 +2237,7 @@ const T = {
         'fl.cta.all':   'All games',
         'fl.cta.site':  '🌐 circuittrace.app',
         'bx.cta.site':  '🌐 buildexact.app',
-        'bx.cta.calcs': '🧮 11 calculators',
+        'bx.cta.calcs': '🧮 11 calculator guides',
         'vg.cta.site':  '🌐 freshgarant.app',
         'fl.cover.sub': 'trace · restore · connect',
         'about.tag':    'About us',
@@ -2346,15 +2359,15 @@ const T = {
         'bx.by':        'door Grounded Studio',
         'bx.tag.text':  'App 01',
         'bx.h2':        'Bouw met<br><span style="color:var(--bx)">precisie</span>',
-        'bx.desc':      'BuildExact is de slimme rekentool voor bouwers en klussenmakers. Bereken exacte materiaalbehoeften, maak kostenramingen en houd je projecten overzichtelijk.',
+        'bx.desc':      'BuildExact is de alles-in-één app voor bouwers en klussers. 25 materiaalcalculators, offertes en facturen met huisstijl en betaal-QR, en werkbonnen met urentimer — van meting tot betaling.',
         'bx.f1.h':      'Materiaalberekeningen',
-        'bx.f1.p':      'Bereken precies hoeveel materiaal je nodig hebt voor elke klus — inclusief snit- en restpercentage.',
-        'bx.f2.h':      'Kostenraming',
-        'bx.f2.p':      'Maak gedetailleerde kostenramingen om je budget goed te beheren vóór de klus begint.',
-        'bx.f3.h':      'Projectbeheer',
-        'bx.f3.p':      'Beheer meerdere projecten tegelijk en houd de voortgang, kosten en materialen bij.',
-        'bx.f4.h':      'PDF Exporteren',
-        'bx.f4.p':      "Deel je berekeningen en ramingen eenvoudig als overzichtelijke PDF met klanten of collega's.",
+        'bx.f1.p':      '25 calculators per vak, inclusief snit en restpercentage — plus een gratis waterpas, liniaal en eenheden omrekenen.',
+        'bx.f2.h':      'Offertes & facturen',
+        'bx.f2.p':      'Elke berekening in een offerte met je huisstijl, met één tik een factuur — met betaal-QR.',
+        'bx.f3.h':      'Werkbon & uren',
+        'bx.f3.p':      'Timer per klus, de klant tekent de werkbon op je scherm en je factureert de uren.',
+        'bx.f4.h':      'Projecten & Mijn Dag',
+        'bx.f4.p':      "Metingen, materiaal en uren per klus, plus je omzet van deze week en openstaande facturen in één oogopslag.",
         'fl.by':        'Game van Grounded Studio',
         'fl.tag.text':  '✅ Live op Google Play',
         'fl.h2':        'Verbind het circuit<br><span style="color:var(--fl)">herstel het netwerk</span>',
@@ -2373,7 +2386,7 @@ const T = {
         'fl.cta.all':   'Alle games',
         'fl.cta.site':  '🌐 circuittrace.app',
         'bx.cta.site':  '🌐 buildexact.app',
-        'bx.cta.calcs': '🧮 11 calculators',
+        'bx.cta.calcs': '🧮 11 rekengidsen',
         'vg.cta.site':  '🌐 freshgarant.app',
         'fl.cover.sub': 'verbind · herstel · trace',
         'about.tag':    'Over ons',

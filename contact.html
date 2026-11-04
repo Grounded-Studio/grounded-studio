@@ -563,7 +563,8 @@ form.addEventListener('submit', async (e) => {
             form.reset();
         } else {
             showStatus('err', 'form.err');
-            if (json.message) statusEl.insertAdjacentText('beforeend', ' (' + json.message + ')');
+            const why = json.reason || json.message;
+            if (why) statusEl.insertAdjacentText('beforeend', ' (' + why + ')');
         }
     } catch (err) {
         showStatus('err', 'form.err');
