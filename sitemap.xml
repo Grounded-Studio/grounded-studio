@@ -37,6 +37,12 @@
         <changefreq>yearly</changefreq>
     </url>
     <url>
+        <loc>https://grounded-studio.app/blog/circuit-trace.html</loc>
+        <lastmod>2026-11-05</lastmod>
+        <priority>0.7</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
         <loc>https://grounded-studio.app/blog/kwispelboek.html</loc>
         <lastmod>2026-11-05</lastmod>
         <priority>0.7</priority>
