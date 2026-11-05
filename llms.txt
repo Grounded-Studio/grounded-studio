@@ -40,6 +40,7 @@ Long-form articles about construction cost, VAT rules, material estimation, food
 
 - [BuildExact blog hub](https://grounded-studio.app/blog/buildexact.html)
 - [FreshGarant blog hub](https://grounded-studio.app/blog/freshgarant.html)
+- [Kwispelboek blog hub](https://grounded-studio.app/blog/kwispelboek.html) (NL): pet health guides. [Deworming dogs and cats: how often](https://grounded-studio.app/blog/hond-kat-ontwormen-hoe-vaak.html) · [Vaccination schedule for dogs, cats and rabbits](https://grounded-studio.app/blog/vaccinatieschema-hond-kat-konijn.html)
 
 ## Reference
 
