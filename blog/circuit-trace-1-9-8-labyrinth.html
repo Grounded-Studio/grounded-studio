@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#818cf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Trace 1.9.8: Labyrinth, Smarter Puzzles and a Fully Unlocked Creator</title>
+    <meta name="description" content="The biggest Circuit Trace update yet: 100 Labyrinth levels on shaped boards, every puzzle pack rebuilt by a solver that thinks like a player, and a Creator with every tool.">
+    <meta name="keywords" content="Circuit Trace update, Circuit Trace Labyrinth, flow puzzle shaped boards, puzzle walls, harder flow puzzles, puzzle editor community, Grounded Studio">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/blog/circuit-trace-1-9-8-labyrinth.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/circuit-trace-1-9-8-labyrinth.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/circuit-trace-update-labyrinth-nl.html">
+    <meta property="og:url" content="https://grounded-studio.app/blog/circuit-trace-1-9-8-labyrinth.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Circuit Trace 1.9.8: Labyrinth, smarter puzzles and a fully unlocked Creator">
+    <meta property="og:description" content="100 new levels on shaped boards with holes and walls, a rebuilt difficulty curve, and a Creator that can publish to the Community.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://grounded-studio.app/assets/og-circuittrace.jpg">
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "Article", "headline": "Circuit Trace 1.9.8: Labyrinth, smarter puzzles and a fully unlocked Creator", "image": "https://grounded-studio.app/assets/og-circuittrace.jpg", "author": {"@type": "Organization", "name": "Grounded Studio"}, "publisher": {"@type": "Organization", "name": "Grounded Studio", "logo": {"@type": "ImageObject", "url": "https://grounded-studio.app/assets/logo-gs.png"}}, "datePublished": "2026-11-05", "mainEntityOfPage": "https://grounded-studio.app/blog/circuit-trace-1-9-8-labyrinth.html", "inLanguage": "en"}
+    </script>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/"}, {"@type": "ListItem", "position": 2, "name": "Games", "item": "https://grounded-studio.app/games.html"}, {"@type": "ListItem", "position": 3, "name": "Circuit Trace", "item": "https://grounded-studio.app/games/circuit-trace.html"}, {"@type": "ListItem", "position": 4, "name": "1.9.8 update", "item": "https://grounded-studio.app/blog/circuit-trace-1-9-8-labyrinth.html"}]}
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0a0f1a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+        :root { --fl:#818cf8; --fl2:#6366f1; --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(129,140,248,.3); background:rgba(129,140,248,.08); color:var(--fl); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+        .pull-quote { background:rgba(129,140,248,.08); border:1px solid rgba(129,140,248,.25); border-radius:16px; padding:28px; margin:32px 0; }
+        .pull-quote p { font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:600; color:#fff; margin:0; line-height:1.5; }
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--fl); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+        .app-cta { background:rgba(129,140,248,.06); border:1px solid rgba(129,140,248,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(129,140,248,.15); border:1px solid rgba(129,140,248,.4); color:var(--fl); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media (max-width:700px) { .related-cards { grid-template-columns:1fr; } }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--fl); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        .shots { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin:32px auto; max-width:520px; }
+        .shots figure { margin:0; text-align:center; }
+        .shots img { width:100%; height:auto; display:block; }
+        .shots figcaption { margin-top:10px; font-size:.82rem; color:var(--muted); }
+        .facts { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:28px 0; }
+        .facts div { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:18px; text-align:center; }
+        .facts strong { display:block; font-family:'Space Grotesk',sans-serif; font-size:1.6rem; color:var(--fl); }
+        .facts span { font-size:.82rem; color:var(--muted); }
+        @media (max-width:600px) { .facts { grid-template-columns:1fr; } }
+        #read-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,var(--fl),var(--fl2)); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="read-progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="/" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.webp" alt="Grounded Studio" width="34" height="34" decoding="async"></div><span class="nav-name">Grounded Studio</span></a><a href="../games/circuit-trace.html" class="nav-back">← Circuit Trace</a></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="/">Home</a> / <a href="../games.html">Games</a> / <a href="../games/circuit-trace.html">Circuit Trace</a> / <span>1.9.8 update</span></div>
+            <div class="article-cat">🆕 Update</div>
+            <h1>Circuit Trace 1.9.8: Labyrinth, smarter puzzles and a fully unlocked Creator</h1>
+            <div class="article-meta"><span>📅 5 November 2026</span><span>⏱ 4 min read</span><span>✍️ Grounded Studio</span></div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+            <p>Circuit Trace launched in October with 500 puzzles. Version 1.9.8 is the biggest update since: a new pack, a rebuilt difficulty curve across the whole game, and a Creator that can do everything the campaign can. Here's what changed and why.</p>
+
+            <div class="facts">
+                <div><strong>600+</strong><span>puzzles across 6 level packs</span></div>
+                <div><strong>100</strong><span>new Labyrinth levels</span></div>
+                <div><strong>8</strong><span>ways to play</span></div>
+            </div>
+
+            <h2>New: Labyrinth</h2>
+
+            <p>Every board in Circuit Trace used to be a square. <strong>Labyrinth</strong> changes that. Its 100 levels sit on shaped boards (rings, towers, castles, fortresses) with holes in the middle that your lines have to go around, and thin glowing walls between cells that no line can cross.</p>
+
+            <p>It starts at 5×5 and grows to 9×14 boards in the final sector. Every level has exactly one solution, and the walls are what make that true: wherever a board could be solved two ways, a wall closes the shortcut. Labyrinth is free, under GAME MODES.</p>
+
+            <div class="shots">
+                <figure><img src="../assets/screen-ct-3.webp" alt="A Circuit Trace Labyrinth level with holes and walls" width="560" height="1183" loading="lazy" decoding="async"><figcaption>Labyrinth: a 9×14 board in the last sector</figcaption></figure>
+                <figure><img src="../assets/screen-ct-4.webp" alt="The Circuit Trace Puzzle Editor with diodes, portals, stars and checkpoints" width="560" height="1183" loading="lazy" decoding="async"><figcaption>The Creator: every tool unlocked</figcaption></figure>
+            </div>
+
+            <h2>Puzzles that make you think</h2>
+
+            <p>During testing we hit an uncomfortable truth: many late levels looked hard but could be read at a glance. Each colour's dots sat close together, and big boards turned into lots of small, obvious puzzles side by side.</p>
+
+            <p>So we built a solver that plays the way people do. It first makes the moves anyone would see, then tries "what if this goes left?", and only guesses as a last resort. Every step of real thinking raises a level's score. With that score we rebuilt Classic, Diodes, Portals and Arcade, gave the main campaign 86 new boards (the tutorials stayed as they were), and made Daily, Weekly, Endless and Time Trial rate their puzzles before you see them.</p>
+
+            <div class="pull-quote">
+                <p>"The computer does the measuring. We decide what's fun."</p>
+            </div>
+
+            <p>The full story, including a correction to our own "500 handcrafted puzzles" claim, is on the Circuit Trace blog: <a href="https://circuittrace.app/blog/smarter-puzzles.html" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">Why our puzzles got harder</a>.</p>
+
+            <h2>The Creator, fully unlocked</h2>
+
+            <p>The Puzzle Editor started with dots and diodes. It now has every piece the campaign uses: one-way diodes, portals, stars and checkpoints, up to eight colours on an 8×8 board. You name your puzzle, share it as a short code, or publish it to the <strong>Community</strong>, where everyone can play it, like it and see how often it's been solved.</p>
+
+            <h2>Smaller things</h2>
+
+            <ul>
+                <li><strong>Endless MASTER</strong> is now a 7×7 board with five colours, and every Endless puzzle is rated before you get it.</li>
+                <li>A level in the middle of sector 7 that had quietly stayed a tiny 5×5 is now a proper 8×8 board.</li>
+                <li>The "NEW" label in the game modes menu now shows in your own language.</li>
+            </ul>
+
+            <div class="tip-card">
+                <h3>🧩 Already finished the game?</h3>
+                <p>The level numbers are the same, but most boards behind them are new. If you perfected Circuit Trace before this update, it's worth another run, starting with the last two sectors of the campaign.</p>
+            </div>
+
+            <div class="app-cta">
+                <h3>🧩 Play the update</h3>
+                <p>600+ puzzles across 6 level packs, including the new Labyrinth. Free on Google Play, with an optional €3.99 Remove Ads.</p>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+                    <a href="https://play.google.com/store/apps/details?id=com.game.circuittrace" target="_blank" rel="noopener">Get it on Google Play →</a>
+                    <a href="https://circuittrace.app" target="_blank" rel="noopener">🌐 circuittrace.app →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Related</h2>
+        <div class="related-cards">
+            <a href="https://circuittrace.app/blog/labyrinth.html" target="_blank" rel="noopener" class="related-card"><div class="cat">🧱 Circuit Trace blog</div><div class="title">Labyrinth: tips for your first mazes →</div></a>
+            <a href="https://circuittrace.app/blog/smarter-puzzles.html" target="_blank" rel="noopener" class="related-card"><div class="cat">🧠 Dev journal</div><div class="title">Why our puzzles got harder →</div></a>
+            <a href="circuit-trace-update-labyrinth-nl.html" class="related-card"><div class="cat">🇳🇱 Nederlands</div><div class="title">Lees deze update in het Nederlands →</div></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="/" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.webp" alt="Grounded Studio" width="32" height="32" decoding="async"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center"><a href="../games/circuit-trace.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Circuit Trace</a><a href="../freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a><a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a><a href="../kwispelboek.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Kwispelboek</a><a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="../contact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a><a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a></div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+<script>var rp=document.getElementById('read-progress');window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});</script>
+<script src="/assets/tracking.js?v=20261025" defer></script>
+<script src="/assets/cookie-banner.js?v=20261025" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>

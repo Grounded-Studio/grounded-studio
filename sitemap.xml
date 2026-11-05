@@ -25,6 +25,18 @@
         <changefreq>monthly</changefreq>
     </url>
     <url>
+        <loc>https://grounded-studio.app/blog/circuit-trace-1-9-8-labyrinth.html</loc>
+        <lastmod>2026-11-05</lastmod>
+        <priority>0.6</priority>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
+        <loc>https://grounded-studio.app/blog/circuit-trace-update-labyrinth-nl.html</loc>
+        <lastmod>2026-11-05</lastmod>
+        <priority>0.6</priority>
+        <changefreq>yearly</changefreq>
+    </url>
+    <url>
         <loc>https://grounded-studio.app/blog/kwispelboek.html</loc>
         <lastmod>2026-11-05</lastmod>
         <priority>0.7</priority>

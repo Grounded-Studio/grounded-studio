@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-gs.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#818cf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Trace-update: Labyrinth, slimmere puzzels en een volledige Creator</title>
+    <meta name="description" content="De grootste Circuit Trace-update tot nu toe: 100 Labyrinth-levels op borden met vormen, alle puzzelpakketten opnieuw opgebouwd, en een Creator met alle tools.">
+    <meta name="keywords" content="Circuit Trace update, Circuit Trace Labyrinth, puzzelspel Android, flow puzzel, moeilijke puzzels, puzzel editor, Grounded Studio">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/blog/circuit-trace-update-labyrinth-nl.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/circuit-trace-1-9-8-labyrinth.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/circuit-trace-update-labyrinth-nl.html">
+    <meta property="og:url" content="https://grounded-studio.app/blog/circuit-trace-update-labyrinth-nl.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Circuit Trace-update: Labyrinth, slimmere puzzels en een volledige Creator">
+    <meta property="og:description" content="100 nieuwe levels op borden met gaten en muren, een nieuwe moeilijkheidsopbouw en een Creator die kan publiceren in de Community.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://grounded-studio.app/assets/og-circuittrace.jpg">
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "Article", "headline": "Circuit Trace-update: Labyrinth, slimmere puzzels en een volledige Creator", "image": "https://grounded-studio.app/assets/og-circuittrace.jpg", "author": {"@type": "Organization", "name": "Grounded Studio"}, "publisher": {"@type": "Organization", "name": "Grounded Studio", "logo": {"@type": "ImageObject", "url": "https://grounded-studio.app/assets/logo-gs.png"}}, "datePublished": "2026-11-05", "mainEntityOfPage": "https://grounded-studio.app/blog/circuit-trace-update-labyrinth-nl.html", "inLanguage": "nl"}
+    </script>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/"}, {"@type": "ListItem", "position": 2, "name": "Games", "item": "https://grounded-studio.app/games.html"}, {"@type": "ListItem", "position": 3, "name": "Circuit Trace", "item": "https://grounded-studio.app/games/circuit-trace.html"}, {"@type": "ListItem", "position": 4, "name": "Update 1.9.8", "item": "https://grounded-studio.app/blog/circuit-trace-update-labyrinth-nl.html"}]}
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0a0f1a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+        :root { --fl:#818cf8; --fl2:#6366f1; --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(129,140,248,.3); background:rgba(129,140,248,.08); color:var(--fl); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+        .pull-quote { background:rgba(129,140,248,.08); border:1px solid rgba(129,140,248,.25); border-radius:16px; padding:28px; margin:32px 0; }
+        .pull-quote p { font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:600; color:#fff; margin:0; line-height:1.5; }
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--fl); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+        .app-cta { background:rgba(129,140,248,.06); border:1px solid rgba(129,140,248,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(129,140,248,.15); border:1px solid rgba(129,140,248,.4); color:var(--fl); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media (max-width:700px) { .related-cards { grid-template-columns:1fr; } }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--fl); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        .shots { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin:32px auto; max-width:520px; }
+        .shots figure { margin:0; text-align:center; }
+        .shots img { width:100%; height:auto; display:block; }
+        .shots figcaption { margin-top:10px; font-size:.82rem; color:var(--muted); }
+        .facts { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:28px 0; }
+        .facts div { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:18px; text-align:center; }
+        .facts strong { display:block; font-family:'Space Grotesk',sans-serif; font-size:1.6rem; color:var(--fl); }
+        .facts span { font-size:.82rem; color:var(--muted); }
+        @media (max-width:600px) { .facts { grid-template-columns:1fr; } }
+        #read-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,var(--fl),var(--fl2)); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="read-progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="/" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.webp" alt="Grounded Studio" width="34" height="34" decoding="async"></div><span class="nav-name">Grounded Studio</span></a><a href="../games/circuit-trace.html" class="nav-back">← Circuit Trace</a></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="/">Home</a> / <a href="../games.html">Games</a> / <a href="../games/circuit-trace.html">Circuit Trace</a> / <span>Update 1.9.8</span></div>
+            <div class="article-cat">🆕 Update</div>
+            <h1>Circuit Trace 1.9.8: Labyrinth, slimmere puzzels en een volledige Creator</h1>
+            <div class="article-meta"><span>📅 5 november 2026</span><span>⏱ 4 min lezen</span><span>✍️ Grounded Studio</span></div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+            <p>Circuit Trace kwam in oktober uit met 500 puzzels. Versie 1.9.8 is de grootste update tot nu toe: een nieuw pakket, een nieuwe moeilijkheidsopbouw in de hele game, en een Creator die alles kan wat de campagne kan. Dit is er veranderd, en waarom.</p>
+
+            <div class="facts">
+                <div><strong>600+</strong><span>puzzels in 6 levelpakketten</span></div>
+                <div><strong>100</strong><span>nieuwe Labyrinth-levels</span></div>
+                <div><strong>8</strong><span>manieren om te spelen</span></div>
+            </div>
+
+            <h2>Nieuw: Labyrinth</h2>
+
+            <p>Tot nu toe was elk bord in Circuit Trace een vierkant. <strong>Labyrinth</strong> verandert dat. De 100 levels liggen op borden met een vorm (ringen, torens, kastelen, vestingen), met gaten in het midden waar je lijnen omheen moeten, en dunne gloeiende muren tussen cellen waar geen lijn doorheen kan.</p>
+
+            <p>Het begint op 5×5 en groeit door tot borden van 9×14 in de laatste sector. Elk level heeft precies één oplossing, en dat komt door de muren: waar een bord op twee manieren op te lossen zou zijn, sluit een muur de sluiproute af. Labyrinth is gratis en staat onder GAME MODES.</p>
+
+            <div class="shots">
+                <figure><img src="../assets/screen-ct-3.webp" alt="Een Labyrinth-level in Circuit Trace met gaten en muren" width="560" height="1183" loading="lazy" decoding="async"><figcaption>Labyrinth: een 9×14-bord uit de laatste sector</figcaption></figure>
+                <figure><img src="../assets/screen-ct-4.webp" alt="De Puzzle Editor van Circuit Trace met diodes, portals, sterren en checkpoints" width="560" height="1183" loading="lazy" decoding="async"><figcaption>De Creator: alle tools beschikbaar</figcaption></figure>
+            </div>
+
+            <h2>Puzzels waar je over na moet denken</h2>
+
+            <p>Tijdens het testen kwamen we iets ongemakkelijks tegen: veel late levels zagen er moeilijk uit, maar je zag in één oogopslag wat je moest doen. De punten van elke kleur lagen dicht bij elkaar, en grote borden werden een rij kleine, voor de hand liggende puzzeltjes naast elkaar.</p>
+
+            <p>Daarom bouwden we een oplosser die speelt zoals mensen doen. Eerst doet hij de zetten die iedereen ziet, dan probeert hij "wat als deze lijn naar links gaat?", en pas als laatste redmiddel gokt hij. Elke stap waarbij echt nagedacht moet worden, verhoogt de score van een level. Met die score hebben we Classic, Diodes, Portals en Arcade opnieuw opgebouwd, kreeg de hoofdcampagne 86 nieuwe borden (de tutorials bleven zoals ze waren), en beoordelen Daily, Weekly, Endless en Time Trial hun puzzels voordat jij ze ziet.</p>
+
+            <div class="pull-quote">
+                <p>"De computer meet. Wij bepalen wat leuk is."</p>
+            </div>
+
+            <p>Het hele verhaal (in het Engels), inclusief een correctie op onze eigen claim van "500 handgemaakte puzzels", staat op de Circuit Trace-blog: <a href="https://circuittrace.app/blog/smarter-puzzles.html" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">Why our puzzles got harder</a>.</p>
+
+            <h2>De Creator, helemaal open</h2>
+
+            <p>De Puzzle Editor begon met punten en diodes. Nu heeft hij elk onderdeel dat de campagne gebruikt: eenrichtingsdiodes, portals, sterren en checkpoints, met tot acht kleuren op een 8×8-bord. Je geeft je puzzel een naam, deelt hem als korte code, of publiceert hem in de <strong>Community</strong>, waar iedereen hem kan spelen, liken en zien hoe vaak hij is opgelost.</p>
+
+            <h2>Kleinere dingen</h2>
+
+            <ul>
+                <li><strong>Endless MASTER</strong> is nu een 7×7-bord met vijf kleuren, en elke Endless-puzzel wordt beoordeeld voordat je hem krijgt.</li>
+                <li>Een level midden in sector 7 dat ongemerkt een klein 5×5-bordje was gebleven, is nu een volwaardig 8×8-bord.</li>
+                <li>Het label "NEW" in het game modes-menu staat nu in je eigen taal.</li>
+            </ul>
+
+            <div class="tip-card">
+                <h3>🧩 Had je de game al uitgespeeld?</h3>
+                <p>De levelnummers zijn hetzelfde, maar de meeste borden erachter zijn nieuw. Had je Circuit Trace al helemaal perfect? Dan is het de moeite waard om opnieuw te beginnen, te beginnen met de laatste twee sectoren van de campagne.</p>
+            </div>
+
+            <div class="app-cta">
+                <h3>🧩 Speel de update</h3>
+                <p>600+ puzzels in 6 levelpakketten, waaronder het nieuwe Labyrinth. Gratis op Google Play, met een optionele Remove Ads voor €3,99.</p>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+                    <a href="https://play.google.com/store/apps/details?id=com.game.circuittrace" target="_blank" rel="noopener">Download op Google Play →</a>
+                    <a href="https://circuittrace.app" target="_blank" rel="noopener">🌐 circuittrace.app →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Related</h2>
+        <div class="related-cards">
+            <a href="https://circuittrace.app/blog/labyrinth.html" target="_blank" rel="noopener" class="related-card"><div class="cat">🧱 Circuit Trace blog (EN)</div><div class="title">Labyrinth: tips voor je eerste doolhoven →</div></a>
+            <a href="../games/circuit-trace.html" class="related-card"><div class="cat">🎮 Gamepagina</div><div class="title">Circuit Trace: 600 puzzels in 6 pakketten →</div></a>
+            <a href="circuit-trace-1-9-8-labyrinth.html" class="related-card"><div class="cat">🇬🇧 English</div><div class="title">Read this update in English →</div></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="/" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.webp" alt="Grounded Studio" width="32" height="32" decoding="async"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center"><a href="../games/circuit-trace.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Circuit Trace</a><a href="../freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a><a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a><a href="../kwispelboek.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Kwispelboek</a><a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="../contact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a><a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a></div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+<script>var rp=document.getElementById('read-progress');window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});</script>
+<script src="/assets/tracking.js?v=20261025" defer></script>
+<script src="/assets/cookie-banner.js?v=20261025" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>
