@@ -6,12 +6,42 @@
     <atom:link href="https://grounded-studio.app/feed-freshgarant.xml" rel="self" type="application/rss+xml"/>
     <description>Practical articles on reducing food waste, understanding expiry dates, storing food smarter, and using AI to cook better. Blog by FreshGarant from Grounded Studio.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 09:00:00 GMT</lastBuildDate>
     <image>
         <url>https://grounded-studio.app/assets/screen-vg.png</url>
         <title>FreshGarant Blog</title>
         <link>https://grounded-studio.app/blog/freshgarant.html</link>
     </image>
+
+    <item>
+        <title>What&#x27;s for Dinner? One Fridge Photo, Three Dinner Ideas</title>
+        <link>https://grounded-studio.app/blog/whats-for-dinner-one-fridge-photo.html</link>
+        <guid>https://grounded-studio.app/blog/whats-for-dinner-one-fridge-photo.html</guid>
+        <description>One photo of your fridge becomes three dinner ideas built around what expires first — and the products go into your stock in one tap.</description>
+        <pubDate>Thu, 05 Nov 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>New Feature</category>
+    </item>
+
+    <item>
+        <title>What&#x27;s New in FreshGarant 2.2: Dinner Ideas, My Kitchen and Faster AI</title>
+        <link>https://grounded-studio.app/blog/freshgarant-2-2-whats-new.html</link>
+        <guid>https://grounded-studio.app/blog/freshgarant-2-2-whats-new.html</guid>
+        <description>What&#x27;s for dinner?, My kitchen, quick add, a Cook tab, recipe cards in your language and faster, more reliable AI.</description>
+        <pubDate>Thu, 05 Nov 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Update</category>
+    </item>
+
+    <item>
+        <title>How FreshGarant Keeps Its AI Safe (and Your Data Private)</title>
+        <link>https://grounded-studio.app/blog/how-freshgarant-keeps-ai-safe.html</link>
+        <guid>https://grounded-studio.app/blog/how-freshgarant-keeps-ai-safe.html</guid>
+        <description>No AI key inside the app, fair daily limits and no stored photos: how FreshGarant&#x27;s AI runs through our own server.</description>
+        <pubDate>Thu, 05 Nov 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Privacy &amp; Security</category>
+    </item>
 
     <item>
         <title>How to Save €400 a Year on Food Waste (Without Changing Your Diet)</title>
