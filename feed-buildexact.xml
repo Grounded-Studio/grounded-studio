@@ -6,13 +6,52 @@
     <atom:link href="https://grounded-studio.app/feed-buildexact.xml" rel="self" type="application/rss+xml"/>
     <description>Practical articles on material calculations, construction quotes, client management and PDF signatures. Helpful guides for builders, contractors and DIY users.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 09:00:00 GMT</lastBuildDate>
     <image>
         <url>https://grounded-studio.app/assets/screen-bx.png</url>
         <title>BuildExact Blog</title>
         <link>https://grounded-studio.app/blog/buildexact.html</link>
     </image>
 
+    <item>
+        <title>Digital Work Order with Customer Signature: Get Every Job Signed Off on Site</title>
+        <link>https://grounded-studio.app/blog/digital-work-order-with-customer-signature.html</link>
+        <guid>https://grounded-studio.app/blog/digital-work-order-with-customer-signature.html</guid>
+        <description>Why a signed work order saves you arguments about extra work and hours, what belongs on it, and how to make one on your phone in two minutes.</description>
+        <pubDate>Thu, 05 Nov 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Work orders</category>
+    </item>
+
+    <item>
+        <title>Track Hours per Job and Invoice Them Without Losing a Quarter Hour</title>
+        <link>https://grounded-studio.app/blog/track-hours-per-job-and-invoice.html</link>
+        <guid>https://grounded-studio.app/blog/track-hours-per-job-and-invoice.html</guid>
+        <description>Tradespeople lose paid time by guessing their hours afterwards. How to track hours per job with a timer, round them fairly and put them on the invoice.</description>
+        <pubDate>Thu, 05 Nov 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Hours</category>
+    </item>
+
+    <item>
+        <title>Payment QR Code on Your Invoices: Get Paid Faster with an EPC QR Code</title>
+        <link>https://grounded-studio.app/blog/payment-qr-code-on-invoices.html</link>
+        <guid>https://grounded-studio.app/blog/payment-qr-code-on-invoices.html</guid>
+        <description>An EPC payment QR code on your invoice lets clients pay by scanning: amount, IBAN and reference filled in. How it works and how to add it.</description>
+        <pubDate>Thu, 05 Nov 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Invoicing</category>
+    </item>
+
+    <item>
+        <title>How Accurate Is a Spirit Level App? When Your Phone Is Good Enough</title>
+        <link>https://grounded-studio.app/blog/phone-spirit-level-accuracy.html</link>
+        <guid>https://grounded-studio.app/blog/phone-spirit-level-accuracy.html</guid>
+        <description>A phone level is accurate to about a tenth of a degree after calibration. What that means in mm per metre, when it is good enough and how to calibrate.</description>
+        <pubDate>Thu, 05 Nov 2026 09:00:00 GMT</pubDate>
+        <dc:creator>Grounded Studio</dc:creator>
+        <category>Tools</category>
+    </item>
     <item>
         <title>Recurring Invoices for Maintenance Contracts: A Practical Guide for Small Contractors</title>
         <link>https://grounded-studio.app/blog/recurring-invoices-maintenance-contracts.html</link>
