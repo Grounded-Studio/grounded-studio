@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#E2774F">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kwispelboek — Pet Health Log &amp; Reminders (Wagbook)</title>
-    <meta name="description" content="Pet health log for dogs, cats, rabbits and birds: vaccinations, deworming, medication and vet visits with reminders. No account. Coming soon to Android.">
+    <meta name="description" content="Pet health log for dogs, cats, rabbits and birds: vaccinations, deworming, medication and vet visits with reminders. No account. Free on Google Play for Android.">
     <meta name="keywords" content="Kwispelboek, Wagbook, pet health log, pet vaccination reminder, deworming reminder, pet medication tracker, dierenpaspoort app, huisdier logboek, vaccinatie hond kat, ontworming herinnering, dierenarts app">
     <meta name="author" content="Grounded Studio">
     <meta name="robots" content="index, follow">
@@ -19,12 +19,12 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://grounded-studio.app/kwispelboek.html">
     <meta property="og:title" content="Kwispelboek — every pet, cared for on time">
-    <meta property="og:description" content="Pet health log for dogs, cats, rabbits and birds: vaccinations, deworming, medication and vet visits with reminders. No account. Coming soon to Android.">
+    <meta property="og:description" content="Pet health log for dogs, cats, rabbits and birds: vaccinations, deworming, medication and vet visits with reminders. No account. Free on Google Play for Android.">
     <meta property="og:image" content="https://grounded-studio.app/assets/og-kwispelboek.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://grounded-studio.app/kwispelboek.html">
     <meta name="twitter:title" content="Kwispelboek — every pet, cared for on time">
-    <meta name="twitter:description" content="Pet health log for dogs, cats, rabbits and birds: vaccinations, deworming, medication and vet visits with reminders. No account. Coming soon to Android.">
+    <meta name="twitter:description" content="Pet health log for dogs, cats, rabbits and birds: vaccinations, deworming, medication and vet visits with reminders. No account. Free on Google Play for Android.">
     <meta name="twitter:image" content="https://grounded-studio.app/assets/og-kwispelboek.jpg">
     <script type="application/ld+json">
 {
@@ -54,8 +54,8 @@
     "alternateName": "Wagbook",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "Android",
-    "description": "Kwispelboek (Wagbook) keeps vaccinations, deworming, medication, vet visits and weight for all your pets in one place, with reminders. No account, data stays on your phone. Coming soon to Android.",
-    "featureList": "Reminders on time, A cheerful Today screen, Calendar, Home screen widgets, Party cards, Medication & courses, Vet visits & costs, Weight chart, Timeline per pet, Dogs, cats, rabbits, birds, PDF for the vet, Scan the pet passport, Backup in one file, Private by design, Dutch & English",
+    "description": "Kwispelboek (Wagbook) keeps vaccinations, deworming, medication, vet visits and weight for all your pets in one place, with reminders. No account, data stays on your phone. Free on Google Play for Android.",
+    "featureList": "Reminders on time, A cheerful Today screen, Calendar, Home screen widgets, Party cards, Medication & courses, Vet visits & costs, Weight chart, Timeline per pet, Diary & monthly photo, Year in review, First aid, On this day, Seasonal tips, In loving memory, Dogs, cats, rabbits, birds, PDF for the vet, Scan the pet passport, Backup in one file, Private by design, Dutch & English",
     "offers": [
         {
             "@type": "Offer",
@@ -83,7 +83,7 @@
             "name": "Is Kwispelboek free?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. You can keep up to 2 pets for free with all logs, reminders, the weight chart, backups and one photo per vet visit. PRO adds unlimited pets and photos, the PDF overview for the vet and AI scanning."
+                "text": "Yes. You can keep up to 2 pets for free with all logs, reminders, the weight chart, diary, first aid, seasonal tips, backups and one photo per vet visit. PRO adds unlimited pets and photos, the PDF overview for the vet and AI scanning."
             }
         },
         {
@@ -120,6 +120,14 @@
         },
         {
             "@type": "Question",
+            "name": "What can I do when my pet has passed away?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Keep your pet in memory from the menu on their profile. Care tasks and reminders stop, and your pet gets a memorial page with your words, monthly photos and diary. Nothing is deleted, and a pet in memory doesn't count towards the 2 free pets."
+            }
+        },
+        {
+            "@type": "Question",
             "name": "Does Kwispelboek give medical advice?",
             "acceptedAnswer": {
                 "@type": "Answer",
@@ -136,10 +144,10 @@
         },
         {
             "@type": "Question",
-            "name": "When is Kwispelboek available?",
+            "name": "Where can I download Kwispelboek?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Kwispelboek is coming soon to Google Play for Android. An iOS version is not planned yet."
+                "text": "Kwispelboek is free on Google Play for Android: https://play.google.com/store/apps/details?id=groundedstudio.kwispelboek.app. An iOS version is not planned yet."
             }
         }
     ]
@@ -343,6 +351,8 @@
         /* COMING SOON */
         .cta-section { padding:80px 0 120px; text-align:center; }
         .coming-soon { display:inline-flex; align-items:center; gap:16px; padding:18px 32px; border-radius:18px; color:#94a3b8; font-weight:600; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); position:relative; overflow:hidden; cursor:default; }
+        .coming-soon.play-live { color:#fff; text-decoration:none; cursor:pointer; background:rgba(226,119,79,.18); border-color:rgba(226,119,79,.5); transition:all .25s; }
+        .coming-soon.play-live:hover { background:rgba(226,119,79,.3); transform:translateY(-2px); }
         .coming-soon::after { content:''; position:absolute; inset:0; background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.06) 50%,transparent 60%); animation:shimmer 2.8s ease-in-out infinite; }
         @keyframes shimmer { 0%{transform:translateX(-100%)} 100%{transform:translateX(200%)} }
         .cs-dot { width:8px; height:8px; border-radius:50%; background:rgba(129,140,248,.7); position:relative; flex-shrink:0; }
@@ -460,7 +470,7 @@
                     <button class="lang-btn active" data-lang="en">EN</button>
                     <button class="lang-btn"        data-lang="nl">NL</button>
                 </div>
-                <a href="#download" class="nav-cta" data-i18n="nav.soon">Coming soon</a>
+                <a href="https://play.google.com/store/apps/details?id=groundedstudio.kwispelboek.app" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.soon">Download</a>
                 <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
@@ -488,7 +498,7 @@
         <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn"        data-lang="nl">NL</button>
     </div>
-    <a href="#download" class="mobile-cta-m mobile-nav-link" data-i18n="nav.soon_play">Coming soon to Google Play</a>
+    <a href="https://play.google.com/store/apps/details?id=groundedstudio.kwispelboek.app" target="_blank" rel="noopener" class="mobile-cta-m mobile-nav-link" data-i18n="nav.soon_play">Download on Google Play</a>
 </div>
 
 <!-- HERO -->
@@ -499,12 +509,12 @@
     <div class="hero-content">
         <div class="hero-badge">
             <div class="badge-dot"></div>
-            <span data-i18n="hero.badge">Coming soon · by Grounded Studio</span>
+            <span data-i18n="hero.badge">Now on Google Play · by Grounded Studio</span>
         </div>
         <h1 data-i18n-html="hero.h1">Every pet,<br>cared for on time</h1>
         <p class="hero-sub" data-i18n="hero.sub">Kwispelboek (Wagbook in English) keeps vaccinations, deworming, medication, vet visits and weight for all your pets in one place, and reminds you at the right moment. No account: everything stays on your phone.</p>
         <div class="hero-actions">
-            <div class="coming-soon"><svg viewBox="0 0 24 24" fill="none" style="width:22px;height:22px;opacity:.55"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg><span data-i18n="hero.soon">Coming soon to Google Play</span></div>
+            <a class="coming-soon play-live" href="https://play.google.com/store/apps/details?id=groundedstudio.kwispelboek.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" style="width:22px;height:22px"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg><span data-i18n="hero.soon">Get it on Google Play</span></a>
             <a href="/" class="btn-ghost" data-i18n="btn.back_studio">← Back to Studio</a>
             <a href="https://kwispelboek.app/privacy/" class="btn-ghost" style="color:var(--vg);border-color:rgba(226,119,79,.4);background:rgba(226,119,79,.08)" data-i18n="hero.privacy">🔒 Privacy policy</a>
             <a href="https://kwispelboek.app" target="_blank" rel="noopener" class="back-btn" style="padding:14px 24px;color:var(--vg);border-color:rgba(226,119,79,.4);background:rgba(226,119,79,.08)" data-i18n="btn.site">🌐 kwispelboek.app →</a>
@@ -583,6 +593,36 @@
                 <div class="feat-ico">🐾</div>
                 <h3><span data-i18n="feat.pets.title">Dogs, cats, rabbits, birds</span></h3>
                 <p data-i18n="feat.pets.desc">A profile per pet with photo, breed, birth date, microchip and passport number. Suggestions per species.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:0.30s">
+                <div class="feat-ico">📝</div>
+                <h3><span data-i18n="feat.diary.title">Diary &amp; monthly photo</span></h3>
+                <p data-i18n="feat.diary.desc">Threw up, limping, new food? Note it with a date and photo. Plus one photo a month in an album of twelve tiles, with a collage at the end of the year.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:0.32s">
+                <div class="feat-ico">🏆</div>
+                <h3><span data-i18n="feat.year.title">Year in review</span></h3>
+                <p data-i18n="feat.year.desc">How often treated, how many visits and what they cost, weight from start to finish: your pet's year on one card to share.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:0.34s">
+                <div class="feat-ico">🚑</div>
+                <h3><span data-i18n="feat.firstaid.title">First aid</span></h3>
+                <p data-i18n="feat.firstaid.desc">Call your vet or emergency clinic straight away, what to do in an emergency and a list of what is toxic per species.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:0.36s">
+                <div class="feat-ico">🕰️</div>
+                <h3><span data-i18n="feat.onthisday.title">On this day</span></h3>
+                <p data-i18n="feat.onthisday.desc">What was your buddy up to a year ago? A monthly photo, diary note or vet visit from the same day in an earlier year appears on Today.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:0.38s">
+                <div class="feat-ico">🎆</div>
+                <h3><span data-i18n="feat.season.title">Seasonal tips</span></h3>
+                <p data-i18n="feat.season.desc">Timely tips from Kwispel for fireworks around New Year, ticks in spring and heat in summer, with one reminder at the start of each season.</p>
+            </div>
+            <div class="feat-card a-fade" style="transition-delay:0.40s">
+                <div class="feat-ico">🌈</div>
+                <h3><span data-i18n="feat.memory.title">In loving memory</span></h3>
+                <p data-i18n="feat.memory.desc">Has your pet passed away? Keep them in memory: reminders stop, and they get a calm page with your own words, photos and diary.</p>
             </div>
             <div class="feat-card a-fade" style="transition-delay:0.30s">
                 <div class="feat-ico">📄</div>
@@ -703,12 +743,12 @@
     <div class="c">
         <div class="a-fade">
             <div class="section-label" style="justify-content:center;margin-bottom:24px"><span>●</span> <span data-i18n="cta.label">Download</span></div>
-            <h2 class="section-title" style="margin-bottom:12px" data-i18n-html="cta.title">Coming soon<br>to Google Play</h2>
-            <p style="color:var(--muted);margin-bottom:36px;font-size:.95rem" data-i18n="cta.sub">Kwispelboek is in its final testing phase. Want to know when it launches? Send us a message.</p>
+            <h2 class="section-title" style="margin-bottom:12px" data-i18n-html="cta.title">Free now<br>on Google Play</h2>
+            <p style="color:var(--muted);margin-bottom:36px;font-size:.95rem" data-i18n="cta.sub">Download Kwispelboek and add your first pet. Free, no account and no ads.</p>
             <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center">
-                <div class="coming-soon"><svg viewBox="0 0 24 24" fill="none" style="width:22px;height:22px;opacity:.55"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg><span data-i18n="hero.soon">Coming soon to Google Play</span></div>
+                <a class="coming-soon play-live" href="https://play.google.com/store/apps/details?id=groundedstudio.kwispelboek.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" style="width:22px;height:22px"><path d="M3.18 23.75c.36.2.78.22 1.15.07l12.5-11.5L13.67 9 3.18 23.75Z" fill="#EA4335"/><path d="M20.82 10.26a1.5 1.5 0 0 0 0-2.52l-3.17-1.84-3.64 3.35 3.64 3.35 3.17-1.34Z" fill="#FBBC04"/><path d="M3.18.25 13.67 9l3.16-2.9L4.33.18C3.96.03 3.54.05 3.18.25Z" fill="#4285F4"/><path d="M3.18.25C2.49.64 2 1.38 2 2.25v19.5c0 .87.49 1.61 1.18 2l10.49-12L3.18.25Z" fill="#34A853"/></svg><span data-i18n="hero.soon">Get it on Google Play</span></a>
                 <a href="https://kwispelboek.app" target="_blank" rel="noopener" style="color:var(--vg);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(226,119,79,.35);background:rgba(226,119,79,.08);transition:all .25s"><span data-i18n="btn.site_full">🌐 Full Kwispelboek site</span> →</a>
-                <a href="contact.html" style="color:var(--vg);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(226,119,79,.35);background:rgba(226,119,79,.08);transition:all .25s"><span data-i18n="cta.notify">✉️ Let me know</span> →</a>
+                <a href="contact.html" style="color:var(--vg);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(226,119,79,.35);background:rgba(226,119,79,.08);transition:all .25s"><span data-i18n="cta.notify">✉️ Question or idea?</span> →</a>
                 <a href="https://kwispelboek.app/privacy/" style="color:var(--vg);text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(226,119,79,.35);background:rgba(226,119,79,.08);transition:all .25s"><span data-i18n="cta.privacy">🔒 Privacy policy</span> →</a>
             </div>
         </div>
@@ -728,7 +768,7 @@
                     <span data-i18n="faq.free.q">Is Kwispelboek free?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.free.a">Yes. You can keep up to 2 pets for free with all logs, reminders, the weight chart, backups and one photo per vet visit. PRO adds unlimited pets and photos, the PDF overview for the vet and AI scanning.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.free.a">Yes. You can keep up to 2 pets for free with all logs, reminders, the weight chart, diary, first aid, seasonal tips, backups and one photo per vet visit. PRO adds unlimited pets and photos, the PDF overview for the vet and AI scanning.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
@@ -760,6 +800,13 @@
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                    <span data-i18n="faq.memory.q">What can I do when my pet has passed away?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.memory.a">Keep your pet in memory from the menu on their profile. Care tasks and reminders stop, and your pet gets a memorial page with your words, monthly photos and diary. Nothing is deleted, and a pet in memory doesn't count towards the 2 free pets.</div></div>
+            </div>
+            <div class="faq-item a-fade">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
                     <span data-i18n="faq.advice.q">Does Kwispelboek give medical advice?</span>
                     <span class="faq-icon">+</span>
                 </button>
@@ -774,10 +821,10 @@
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    <span data-i18n="faq.when.q">When is Kwispelboek available?</span>
+                    <span data-i18n="faq.when.q">Where can I download Kwispelboek?</span>
                     <span class="faq-icon">+</span>
                 </button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.when.a">Kwispelboek is coming soon to Google Play for Android. An iOS version is not planned yet.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.when.a">Kwispelboek is free on Google Play for Android. An iOS version is not planned yet.</div></div>
             </div>
         </div>
     </div>
@@ -883,13 +930,13 @@ document.querySelectorAll('.a-fade,.a-scale').forEach(el => obs.observe(el));
 <script>
 const T = {
     en: {
-        "nav.soon": "Coming soon",
-        "nav.soon_play": "Coming soon to Google Play",
+        "nav.soon": "Download",
+        "nav.soon_play": "Download on Google Play",
         "nav.kwispelboek": "Kwispelboek",
-        "hero.badge": "Coming soon · by Grounded Studio",
+        "hero.badge": "Now on Google Play · by Grounded Studio",
         "hero.h1": "Every pet,<br>cared for on time",
         "hero.sub": "Kwispelboek (Wagbook in English) keeps vaccinations, deworming, medication, vet visits and weight for all your pets in one place, and reminds you at the right moment. No account: everything stays on your phone.",
-        "hero.soon": "Coming soon to Google Play",
+        "hero.soon": "Get it on Google Play",
         "btn.back_studio": "← Back to Studio",
         "hero.privacy": "🔒 Privacy policy",
         "trust.account": "No account needed",
@@ -913,6 +960,18 @@ const T = {
         "feat.timeline.desc": "Everything that happened, by year: vaccinations with batch numbers, visits, medication and weighings.",
         "feat.pets.title": "Dogs, cats, rabbits, birds",
         "feat.pets.desc": "A profile per pet with photo, breed, birth date, microchip and passport number. Suggestions per species.",
+        "feat.diary.title": "Diary & monthly photo",
+        "feat.diary.desc": "Threw up, limping, new food? Note it with a date and photo. Plus one photo a month in an album of twelve tiles, with a collage at the end of the year.",
+        "feat.year.title": "Year in review",
+        "feat.year.desc": "How often treated, how many visits and what they cost, weight from start to finish: your pet's year on one card to share.",
+        "feat.firstaid.title": "First aid",
+        "feat.firstaid.desc": "Call your vet or emergency clinic straight away, what to do in an emergency and a list of what is toxic per species.",
+        "feat.onthisday.title": "On this day",
+        "feat.onthisday.desc": "What was your buddy up to a year ago? A monthly photo, diary note or vet visit from the same day in an earlier year appears on Today.",
+        "feat.season.title": "Seasonal tips",
+        "feat.season.desc": "Timely tips from Kwispel for fireworks around New Year, ticks in spring and heat in summer, with one reminder at the start of each season.",
+        "feat.memory.title": "In loving memory",
+        "feat.memory.desc": "Has your pet passed away? Keep them in memory: reminders stop, and they get a calm page with your own words, photos and diary.",
         "feat.pdf.title": "PDF for the vet",
         "feat.pdf.desc": "A clear overview with chip number, vaccinations and batch numbers, medication, weight and recent visits. Share or print.",
         "feat.scan.title": "Scan the pet passport",
@@ -951,14 +1010,14 @@ const T = {
         "pro.item4": "Unlimited photos per vet visit (free: 1)",
         "pro.item5": "Support an independent Dutch maker",
         "cta.label": "Download",
-        "cta.title": "Coming soon<br>to Google Play",
-        "cta.sub": "Kwispelboek is in its final testing phase. Want to know when it launches? Send us a message.",
-        "cta.notify": "✉️ Let me know",
+        "cta.title": "Free now<br>on Google Play",
+        "cta.sub": "Download Kwispelboek and add your first pet. Free, no account and no ads.",
+        "cta.notify": "✉️ Question or idea?",
         "cta.privacy": "🔒 Privacy policy",
         "faq.label": "FAQ",
         "faq.title": "Frequently Asked<br>Questions",
         "faq.free.q": "Is Kwispelboek free?",
-        "faq.free.a": "Yes. You can keep up to 2 pets for free with all logs, reminders, the weight chart, backups and one photo per vet visit. PRO adds unlimited pets and photos, the PDF overview for the vet and AI scanning.",
+        "faq.free.a": "Yes. You can keep up to 2 pets for free with all logs, reminders, the weight chart, diary, first aid, seasonal tips, backups and one photo per vet visit. PRO adds unlimited pets and photos, the PDF overview for the vet and AI scanning.",
         "faq.account.q": "Do I need an account?",
         "faq.account.a": "No. Kwispelboek works without an account and stores everything on your own phone. We have no server that receives your data.",
         "faq.phone.q": "What happens when I get a new phone?",
@@ -967,12 +1026,14 @@ const T = {
         "faq.reminders.a": "For each vaccination or treatment you choose how far in advance you want a reminder (for example a week), plus one on the day itself, at the time you set. Medication reminds you at every time of day, with \"Given\" and \"Later (30 min)\" buttons.",
         "faq.ai.q": "What happens to my photo when I scan with AI?",
         "faq.ai.a": "Only when you choose to scan, that one photo is sent to Google (Gemini) to read the text. We do not store it. You always check the result before anything is saved. Scanning is optional and part of PRO.",
+        "faq.memory.q": "What can I do when my pet has passed away?",
+        "faq.memory.a": "Keep your pet in memory from the menu on their profile. Care tasks and reminders stop, and your pet gets a memorial page with your words, monthly photos and diary. Nothing is deleted, and a pet in memory doesn't count towards the 2 free pets.",
         "faq.advice.q": "Does Kwispelboek give medical advice?",
         "faq.advice.a": "No. Kwispelboek helps you keep track and remember. Suggested schedules are common defaults; always follow the advice of your own vet.",
         "faq.species.q": "Which pets can I add?",
         "faq.species.a": "Dogs, cats, rabbits, birds and other pets. Suggestions for common vaccinations are tailored to the species, and birds are weighed in grams.",
-        "faq.when.q": "When is Kwispelboek available?",
-        "faq.when.a": "Kwispelboek is coming soon to Google Play for Android. An iOS version is not planned yet.",
+        "faq.when.q": "Where can I download Kwispelboek?",
+        "faq.when.a": "Kwispelboek is free on Google Play for Android. An iOS version is not planned yet.",
         "about.title": "Made by Grounded Studio",
         "about.desc": "Kwispelboek is made by Grounded Studio, the Netherlands-based studio behind FreshGarant, BuildExact and Circuit Trace. The dedicated Kwispelboek site is <a href=\"https://kwispelboek.app\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--vg);text-decoration:underline;text-underline-offset:3px\">kwispelboek.app</a>.",
         "about.site": "🌐 kwispelboek.app →",
@@ -992,13 +1053,13 @@ const T = {
         "nav.studio": "Studio",
     },
     nl: {
-        "nav.soon": "Binnenkort",
-        "nav.soon_play": "Binnenkort op Google Play",
+        "nav.soon": "Download",
+        "nav.soon_play": "Download op Google Play",
         "nav.kwispelboek": "Kwispelboek",
-        "hero.badge": "Binnenkort · door Grounded Studio",
+        "hero.badge": "Nu op Google Play · door Grounded Studio",
         "hero.h1": "Elk dier,<br>op tijd verzorgd",
         "hero.sub": "Kwispelboek houdt vaccinaties, ontworming, medicijnen, dierenartsbezoeken en gewicht van al je dieren op één plek bij, en herinnert je op het juiste moment. Geen account: alles blijft op je telefoon.",
-        "hero.soon": "Binnenkort op Google Play",
+        "hero.soon": "Ontdek het op Google Play",
         "btn.back_studio": "← Terug naar Studio",
         "hero.privacy": "🔒 Privacybeleid",
         "trust.account": "Geen account nodig",
@@ -1022,6 +1083,18 @@ const T = {
         "feat.timeline.desc": "Alles wat er gebeurde, per jaar: vaccinaties met batchnummers, bezoeken, medicijnen en wegingen.",
         "feat.pets.title": "Honden, katten, konijnen, vogels",
         "feat.pets.desc": "Een profiel per dier met foto, ras, geboortedatum, chip- en paspoortnummer. Suggesties per diersoort.",
+        "feat.diary.title": "Dagboek & maandfoto",
+        "feat.diary.desc": "Spuugde, mank, ander voer? Schrijf het op met datum en foto. En elke maand één foto in een album van twaalf vakjes, met aan het eind van het jaar een collage.",
+        "feat.year.title": "Jaaroverzicht",
+        "feat.year.desc": "Hoe vaak behandeld, hoeveel bezoeken en kosten, gewicht van begin tot eind: het jaar van je dier op één kaartje om te delen.",
+        "feat.firstaid.title": "Eerste hulp",
+        "feat.firstaid.desc": "Direct je dierenarts of spoedkliniek bellen, wat je doet bij een noodgeval en een lijst met wat giftig is per diersoort.",
+        "feat.onthisday.title": "Op deze dag",
+        "feat.onthisday.desc": "Wat deed je maatje een jaar geleden? Op Vandaag verschijnt vanzelf een maandfoto, dagboeknotitie of bezoek van dezelfde dag in een eerder jaar.",
+        "feat.season.title": "Seizoenstips",
+        "feat.season.desc": "Op tijd tips van Kwispel voor vuurwerk rond de jaarwisseling, teken in het voorjaar en hitte in de zomer, met één melding aan het begin van elk seizoen.",
+        "feat.memory.title": "In herinnering",
+        "feat.memory.desc": "Is je dier overleden? Zet het in herinnering: de meldingen stoppen, en er komt een rustige pagina met je eigen woorden, foto's en dagboek.",
         "feat.pdf.title": "PDF voor de dierenarts",
         "feat.pdf.desc": "Een helder overzicht met chipnummer, vaccinaties en batchnummers, medicijnen, gewicht en recente bezoeken. Delen of printen.",
         "feat.scan.title": "Dierenpaspoort scannen",
@@ -1060,14 +1133,14 @@ const T = {
         "pro.item4": "Onbeperkt foto's per dierenartsbezoek (gratis: 1)",
         "pro.item5": "Steun een onafhankelijke Nederlandse maker",
         "cta.label": "Download",
-        "cta.title": "Binnenkort<br>op Google Play",
-        "cta.sub": "Kwispelboek zit in de laatste testfase. Wil je weten wanneer de app uitkomt? Stuur ons een berichtje.",
-        "cta.notify": "✉️ Laat het me weten",
+        "cta.title": "Nu gratis<br>op Google Play",
+        "cta.sub": "Download Kwispelboek en zet je eerste dier erin. Gratis, zonder account en zonder advertenties.",
+        "cta.notify": "✉️ Vraag of idee?",
         "cta.privacy": "🔒 Privacybeleid",
         "faq.label": "FAQ",
         "faq.title": "Veelgestelde<br>vragen",
         "faq.free.q": "Is Kwispelboek gratis?",
-        "faq.free.a": "Ja. Je houdt gratis tot 2 dieren bij, met alle logboeken, herinneringen, de gewichtsgrafiek, back-ups en één foto per dierenartsbezoek. PRO voegt onbeperkt dieren en foto's toe, het PDF-overzicht voor de dierenarts en scannen met AI.",
+        "faq.free.a": "Ja. Je houdt gratis tot 2 dieren bij, met alle logboeken, herinneringen, de gewichtsgrafiek, het dagboek, eerste hulp, seizoenstips, back-ups en één foto per dierenartsbezoek. PRO voegt onbeperkt dieren en foto's toe, het PDF-overzicht voor de dierenarts en scannen met AI.",
         "faq.account.q": "Heb ik een account nodig?",
         "faq.account.a": "Nee. Kwispelboek werkt zonder account en bewaart alles op je eigen telefoon. Wij hebben geen server die je gegevens ontvangt.",
         "faq.phone.q": "Wat als ik een nieuwe telefoon krijg?",
@@ -1076,12 +1149,14 @@ const T = {
         "faq.reminders.a": "Per vaccinatie of behandeling kies je hoe ver vooraf je een herinnering wilt (bijvoorbeeld een week), plus één op de dag zelf, op het tijdstip dat je instelt. Medicijnen herinneren je bij elk innamemoment, met de knoppen \"Gegeven\" en \"Later (30 min)\".",
         "faq.ai.q": "Wat gebeurt er met mijn foto als ik scan met AI?",
         "faq.ai.a": "Alleen als je zelf kiest om te scannen, wordt die ene foto naar Google (Gemini) gestuurd om de tekst te lezen. Wij bewaren hem niet. Je controleert het resultaat altijd voordat er iets wordt opgeslagen. Scannen is optioneel en onderdeel van PRO.",
+        "faq.memory.q": "Wat kan ik doen als mijn dier overleden is?",
+        "faq.memory.a": "Zet je dier in herinnering via het menu op het profiel. De zorgtaken en meldingen stoppen, en je dier krijgt een herinneringspagina met je eigen woorden, maandfoto's en dagboek. Niets wordt gewist, en een dier in herinnering telt niet mee voor de 2 gratis dieren.",
         "faq.advice.q": "Geeft Kwispelboek medisch advies?",
         "faq.advice.a": "Nee. Kwispelboek helpt je bijhouden en onthouden. De voorgestelde schema's zijn gangbare standaarden; volg altijd het advies van je eigen dierenarts.",
         "faq.species.q": "Welke dieren kan ik toevoegen?",
         "faq.species.a": "Honden, katten, konijnen, vogels en andere dieren. De suggesties voor gangbare vaccinaties passen bij de diersoort, en vogels weeg je in grammen.",
-        "faq.when.q": "Wanneer is Kwispelboek beschikbaar?",
-        "faq.when.a": "Kwispelboek komt binnenkort uit op Google Play voor Android. Een iOS-versie staat nog niet gepland.",
+        "faq.when.q": "Waar kan ik Kwispelboek downloaden?",
+        "faq.when.a": "Kwispelboek staat gratis op Google Play voor Android. Een iOS-versie staat nog niet gepland.",
         "about.title": "Gemaakt door Grounded Studio",
         "about.desc": "Kwispelboek is gemaakt door Grounded Studio, de Nederlandse studio achter FreshGarant, BuildExact en Circuit Trace. De eigen website van Kwispelboek is <a href=\"https://kwispelboek.app\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--vg);text-decoration:underline;text-underline-offset:3px\">kwispelboek.app</a>.",
         "about.site": "🌐 kwispelboek.app →",

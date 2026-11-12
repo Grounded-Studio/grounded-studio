@@ -140,9 +140,10 @@
                 "offers": [
                     { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR" }
                 ],
-                "description": "Pet health log for dogs, cats, rabbits and birds: vaccinations, deworming, medication and vet visits with reminders. No account, data stays on your phone. Coming soon to Android.",
+                "description": "Pet health log for dogs, cats, rabbits and birds: vaccinations, deworming, medication and vet visits with reminders. No account, data stays on your phone. Free on Google Play for Android.",
                 "author": { "@id": "https://grounded-studio.app/#organization" },
-                "url": "https://grounded-studio.app/kwispelboek.html"
+                "url": "https://grounded-studio.app/kwispelboek.html",
+                "downloadUrl": "https://play.google.com/store/apps/details?id=groundedstudio.kwispelboek.app"
             },
             {
                 "@type": ["VideoGame", "MobileApplication"],
@@ -1925,7 +1926,7 @@
                 </div>
 
                 <div class="s-tag kb a-fade" style="transition-delay:.06s">
-                    <span>●</span>&nbsp;<span data-i18n="kb.tag.text">App 03 · Coming soon</span>
+                    <span>●</span>&nbsp;<span data-i18n="kb.tag.text">App 03 · Now on Google Play</span>
                 </div>
                 <h2 class="s-title a-fade" style="transition-delay:.12s" data-i18n-html="kb.h2">
                     Every pet,<br><span style="color:var(--kb)">cared for on time</span>
@@ -1957,10 +1958,10 @@
                         </div>
                     </li>
                     <li class="feat a-left" style="transition-delay:.32s">
-                        <div class="feat-ico kb">⚖️</div>
+                        <div class="feat-ico kb">🌈</div>
                         <div class="feat-body">
-                            <h4 data-i18n="kb.f4.h">Weight chart</h4>
-                            <p data-i18n="kb.f4.p">Weigh regularly and spot changes early, in kilos or in grams for birds.</p>
+                            <h4 data-i18n="kb.f4.h">Diary &amp; memories</h4>
+                            <p data-i18n="kb.f4.p">A diary, a photo every month and ‘On this day’. And when a pet passes away, a calm memorial page.</p>
                         </div>
                     </li>
                     <li class="feat a-left" style="transition-delay:.40s">
@@ -1980,9 +1981,9 @@
                 </ul>
 
                 <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
-                    <span class="a-fade" style="transition-delay:.52s;display:inline-flex;align-items:center;gap:10px;color:#cbd5e1;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px dashed rgba(226,119,79,.5);background:rgba(226,119,79,.08);cursor:default">
-                        ⏳ <span data-i18n="kb.soon">Coming soon to Google Play</span>
-                    </span>
+                    <a href="https://play.google.com/store/apps/details?id=groundedstudio.kwispelboek.app" target="_blank" rel="noopener" class="a-fade" style="transition-delay:.52s;display:inline-flex;align-items:center;gap:10px;color:#1c1917;text-decoration:none;font-weight:800;font-size:.9rem;padding:14px 22px;border-radius:12px;background:#E2774F;transition:all .25s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        ▶ <span data-i18n="kb.soon">Get it on Google Play</span>
+                    </a>
                     <a href="kwispelboek.html" class="a-fade" style="transition-delay:.56s;color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;padding:14px 22px;border-radius:12px;border:1px solid rgba(226,119,79,.5);background:rgba(226,119,79,.18);transition:all .25s" onmouseover="this.style.background='rgba(226,119,79,.32)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(226,119,79,.18)';this.style.transform='translateY(0)'">
                         <span data-i18n="kb.cta.page">🐾 View Kwispelboek</span> →
                     </a>
@@ -2107,7 +2108,7 @@
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qkb1">What is Kwispelboek (Wagbook)?</span><span class="faq-icon">+</span></button>
-                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.akb1">Kwispelboek — called Wagbook in English — is an Android health log for your pets. Keep vaccinations, deworming and flea treatments with repeat schedules, medication and courses with reminders at every dose, vet visits with costs and photos, and a weight chart. No account needed: everything stays on your phone. It is coming soon to Google Play.</div></div>
+                <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.akb1">Kwispelboek — called Wagbook in English — is an Android health log for your pets. Keep vaccinations, deworming and flea treatments with repeat schedules, medication and courses with reminders at every dose, vet visits with costs and photos, and a weight chart. No account needed: everything stays on your phone. It is free on Google Play.</div></div>
             </div>
             <div class="faq-item a-fade">
                 <button class="faq-q" aria-expanded="false"><span data-i18n="faq.qkb2">What is free and what is PRO in Kwispelboek?</span><span class="faq-icon">+</span></button>
@@ -2270,7 +2271,7 @@ const T = {
         'faq.g.vg':     'FreshGarant',
         'nav.kb': 'Kwispelboek',
         'kb.by': 'by Grounded Studio · Wagbook in English',
-        'kb.tag.text': 'App 03 · Coming soon',
+        'kb.tag.text': 'App 03 · Now on Google Play',
         'kb.h2': 'Every pet,<br><span style="color:var(--kb)">cared for on time</span>',
         'kb.desc': 'Kwispelboek (Wagbook in English) is a calm health log for your dogs, cats, rabbits and birds. Vaccinations, deworming, medication and vet visits in one place, with a reminder at the right moment. No account: everything stays on your phone.',
         'kb.f1.h': 'Reminders on time',
@@ -2279,17 +2280,17 @@ const T = {
         'kb.f2.p': 'Dose and times of day, ongoing or as a course with an end date. Tap "Given" right in the notification.',
         'kb.f3.h': 'Vet visits & costs',
         'kb.f3.p': 'Notes, costs per year and a photo of the prescription or invoice. Everything in one timeline per pet.',
-        'kb.f4.h': 'Weight chart',
-        'kb.f4.p': 'Weigh regularly and spot changes early, in kilos or in grams for birds.',
+        'kb.f4.h': 'Diary & memories',
+        'kb.f4.p': 'A diary, a photo every month and ‘On this day’. And when a pet passes away, a calm memorial page.',
         'kb.f5.h': 'PDF for the vet',
         'kb.f5.p': 'A clear overview with chip number, vaccinations and batch numbers, medication and weight. Share it with your vet or pet sitter.',
         'kb.f6.h': 'Scan the pet passport',
         'kb.f6.p': 'Take a photo of the vaccination page and AI fills in the dates and batch numbers. You check before anything is saved.',
-        'kb.soon': 'Coming soon to Google Play',
+        'kb.soon': 'Get it on Google Play',
         'kb.cta.page': '🐾 View Kwispelboek',
         'faq.g.kb': 'Kwispelboek',
         'faq.qkb1': 'What is Kwispelboek (Wagbook)?',
-        'faq.akb1': 'Kwispelboek — called Wagbook in English — is an Android health log for your pets. Keep vaccinations, deworming and flea treatments with repeat schedules, medication and courses with reminders at every dose, vet visits with costs and photos, and a weight chart. No account needed: everything stays on your phone. It is coming soon to Google Play.',
+        'faq.akb1': 'Kwispelboek — called Wagbook in English — is an Android health log for your pets. Keep vaccinations, deworming and flea treatments with repeat schedules, medication and courses with reminders at every dose, vet visits with costs and photos, and a weight chart. No account needed: everything stays on your phone. It is free on Google Play.',
         'faq.qkb2': 'What is free and what is PRO in Kwispelboek?',
         'faq.akb2': 'Free: up to 2 pets with all logs, reminders, the weight chart, backups and one photo per vet visit. PRO: unlimited pets and photos, a PDF overview for your vet or pet sitter, and scanning a pet passport, invoice or medicine label with AI.',
         'faq.g.ct':     'Circuit Trace',
@@ -2420,7 +2421,7 @@ const T = {
         'faq.g.vg':     'FreshGarant',
         'nav.kb': 'Kwispelboek',
         'kb.by': 'door Grounded Studio',
-        'kb.tag.text': 'App 03 · Binnenkort',
+        'kb.tag.text': 'App 03 · Nu op Google Play',
         'kb.h2': 'Elk dier,<br><span style="color:var(--kb)">op tijd verzorgd</span>',
         'kb.desc': 'Kwispelboek is een rustig logboek voor de gezondheid van je honden, katten, konijnen en vogels. Vaccinaties, ontworming, medicijnen en dierenartsbezoeken op één plek, met een herinnering op het juiste moment. Geen account: alles blijft op je telefoon.',
         'kb.f1.h': 'Herinneringen op tijd',
@@ -2429,17 +2430,17 @@ const T = {
         'kb.f2.p': 'Dosering en innamemomenten, doorlopend of als kuur met einddatum. Tik op "Gegeven" in de melding zelf.',
         'kb.f3.h': 'Dierenarts & kosten',
         'kb.f3.p': 'Notities, kosten per jaar en een foto van recept of rekening. Alles op één tijdlijn per dier.',
-        'kb.f4.h': 'Gewichtsgrafiek',
-        'kb.f4.p': 'Weeg regelmatig en zie veranderingen op tijd, in kilo\'s of in grammen voor vogels.',
+        'kb.f4.h': 'Dagboek & herinneringen',
+        'kb.f4.p': 'Een dagboek, elke maand een foto en ‘Op deze dag’. En als je dier overlijdt, een rustige herinneringspagina.',
         'kb.f5.h': 'PDF voor de dierenarts',
         'kb.f5.p': 'Een helder overzicht met chipnummer, vaccinaties met batchnummers, medicijnen en gewicht. Deel het met je dierenarts of oppas.',
         'kb.f6.h': 'Dierenpaspoort scannen',
         'kb.f6.p': 'Maak een foto van de vaccinatiepagina en AI vult datums en batchnummers in. Jij controleert voordat er iets wordt opgeslagen.',
-        'kb.soon': 'Binnenkort op Google Play',
+        'kb.soon': 'Ontdek het op Google Play',
         'kb.cta.page': '🐾 Bekijk Kwispelboek',
         'faq.g.kb': 'Kwispelboek',
         'faq.qkb1': 'Wat is Kwispelboek?',
-        'faq.akb1': 'Kwispelboek is een Android-logboek voor de gezondheid van je huisdieren. Houd vaccinaties, ontworming en vlooienbehandelingen bij met herhaalschema\'s, medicijnen en kuren met een herinnering bij elke inname, dierenartsbezoeken met kosten en foto\'s, en een gewichtsgrafiek. Geen account nodig: alles blijft op je telefoon. Binnenkort op Google Play.',
+        'faq.akb1': 'Kwispelboek is een Android-logboek voor de gezondheid van je huisdieren. Houd vaccinaties, ontworming en vlooienbehandelingen bij met herhaalschema\'s, medicijnen en kuren met een herinnering bij elke inname, dierenartsbezoeken met kosten en foto\'s, en een gewichtsgrafiek. Geen account nodig: alles blijft op je telefoon. Gratis op Google Play.',
         'faq.qkb2': 'Wat is gratis en wat is PRO in Kwispelboek?',
         'faq.akb2': 'Gratis: tot 2 dieren met alle logboeken, herinneringen, de gewichtsgrafiek, back-ups en één foto per dierenartsbezoek. PRO: onbeperkt dieren en foto\'s, een PDF-overzicht voor je dierenarts of oppas, en een dierenpaspoort, rekening of medicijnetiket scannen met AI.',
         'faq.g.ct':     'Circuit Trace',
