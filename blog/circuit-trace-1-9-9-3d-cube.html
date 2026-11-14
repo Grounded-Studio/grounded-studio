@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/webp" sizes="96x96" href="/assets/favicon-gs.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-gs-32.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#818cf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Trace 1.9.9: 3D Cube, Flow Puzzles on Six Sides | Grounded Studio</title>
+    <meta name="description" content="Circuit Trace 1.9.9 adds 3D Cube: 100 free flow puzzles that wrap around all six sides of a cube. What is new, and how we built a cube puzzle in a 2D game.">
+    <meta name="keywords" content="Circuit Trace update, 3D cube puzzle, 3D cube puzzle game Android, flow puzzle cube, Godot puzzle game, indie game development, Grounded Studio">
+    <meta name="author" content="Grounded Studio">
+    <link rel="canonical" href="https://grounded-studio.app/blog/circuit-trace-1-9-9-3d-cube.html">
+    <link rel="alternate" hreflang="en" href="https://grounded-studio.app/blog/circuit-trace-1-9-9-3d-cube.html">
+    <link rel="alternate" hreflang="nl" href="https://grounded-studio.app/blog/circuit-trace-update-3d-cube-nl.html">
+    <meta property="og:url" content="https://grounded-studio.app/blog/circuit-trace-1-9-9-3d-cube.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Circuit Trace 1.9.9: 3D Cube, flow puzzles on all six sides">
+    <meta property="og:description" content="100 free flow puzzles on all six sides of a cube, a new icon, and how we built a cube in a 2D puzzle game.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://grounded-studio.app/assets/og-circuittrace.jpg">
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "Article", "headline": "Circuit Trace 1.9.9: 3D Cube, flow puzzles on all six sides", "description": "Circuit Trace 1.9.9 adds 3D Cube: 100 free flow puzzles that wrap around all six sides of a cube. What is new, and how we built a cube puzzle in a 2D game.", "image": "https://grounded-studio.app/assets/og-circuittrace.jpg", "inLanguage": "en", "author": {"@type": "Organization", "name": "Grounded Studio"}, "publisher": {"@type": "Organization", "name": "Grounded Studio", "url": "https://grounded-studio.app/"}, "datePublished": "2026-11-14", "dateModified": "2026-11-14", "mainEntityOfPage": "https://grounded-studio.app/blog/circuit-trace-1-9-9-3d-cube.html"}
+    </script>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://grounded-studio.app/"}, {"@type": "ListItem", "position": 2, "name": "Games", "item": "https://grounded-studio.app/games.html"}, {"@type": "ListItem", "position": 3, "name": "Circuit Trace", "item": "https://grounded-studio.app/games/circuit-trace.html"}, {"@type": "ListItem", "position": 4, "name": "1.9.9 update", "item": "https://grounded-studio.app/blog/circuit-trace-1-9-9-3d-cube.html"}]}
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #0a0f1a; color: #f1f5f9; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+        :root { --fl:#818cf8; --fl2:#6366f1; --gs:#818cf8; --gs-glow:rgba(129,140,248,0.3); --border:rgba(255,255,255,0.07); --muted:#94a3b8; }
+        .c { max-width:760px; margin:0 auto; padding:0 28px; }
+        .c-wide { max-width:1000px; margin:0 auto; padding:0 28px; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:200; padding:16px 0; background:rgba(10,15,26,.95); border-bottom:1px solid var(--border); backdrop-filter:blur(24px); }
+        .nav-inner { display:flex; align-items:center; justify-content:space-between; }
+        .nav-logo { display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; }
+        .nav-mark { width:34px; height:34px; border-radius:9px; overflow:hidden; box-shadow:0 0 16px var(--gs-glow); }
+        .nav-mark img { width:100%; height:100%; }
+        .nav-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; }
+        .nav-back { color:#94a3b8; text-decoration:none; font-size:.875rem; font-weight:500; }
+        .article-header { padding:140px 0 60px; }
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:24px; flex-wrap:wrap; }
+        .breadcrumb a { color:#475569; text-decoration:none; }
+        .article-cat { display:inline-flex; padding:5px 14px; border-radius:100px; border:1px solid rgba(129,140,248,.3); background:rgba(129,140,248,.08); color:var(--fl); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; }
+        .article-header h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; line-height:1.15; margin-bottom:20px; }
+        .article-meta { display:flex; gap:20px; color:#475569; font-size:.8rem; padding-bottom:32px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+        .article-body { padding:48px 0 80px; }
+        .article-body p { font-size:1.05rem; color:#cbd5e1; line-height:1.85; margin-bottom:24px; }
+        .article-body h2 { font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:800; margin:48px 0 16px; color:#fff; }
+        .article-body h3 { font-size:1.05rem; font-weight:700; margin:28px 0 10px; color:#f1f5f9; }
+        .article-body ul, .article-body ol { padding-left:24px; margin-bottom:24px; }
+        .article-body li { font-size:1rem; color:#cbd5e1; line-height:1.8; margin-bottom:8px; }
+        .article-body strong { color:#fff; font-weight:700; }
+        .pull-quote { background:rgba(129,140,248,.08); border:1px solid rgba(129,140,248,.25); border-radius:16px; padding:28px; margin:32px 0; }
+        .pull-quote p { font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:600; color:#fff; margin:0; line-height:1.5; }
+        .tip-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-left:3px solid var(--fl); border-radius:0 16px 16px 0; padding:24px 28px; margin:32px 0; }
+        .tip-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:800; margin-bottom:10px; color:#fff; }
+        .tip-card p { font-size:.95rem; color:var(--muted); line-height:1.75; margin:0; }
+        .app-cta { background:rgba(129,140,248,.06); border:1px solid rgba(129,140,248,.2); border-radius:20px; padding:32px; margin:48px 0; text-align:center; }
+        .app-cta h3 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:8px; }
+        .app-cta p { color:var(--muted); font-size:.9rem; margin-bottom:20px; line-height:1.7; }
+        .app-cta a { display:inline-flex; align-items:center; gap:12px; padding:14px 28px; border-radius:14px; background:rgba(129,140,248,.15); border:1px solid rgba(129,140,248,.4); color:var(--fl); text-decoration:none; font-weight:700; font-size:.9rem; }
+        .related { padding:60px 0; border-top:1px solid var(--border); }
+        .related h2 { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:800; margin-bottom:24px; }
+        .related-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media (max-width:700px) { .related-cards { grid-template-columns:1fr; } }
+        .related-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:20px 24px; text-decoration:none; color:inherit; display:block; }
+        .related-card .cat { font-size:.68rem; font-weight:700; color:var(--fl); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+        .related-card .title { font-size:.95rem; font-weight:700; line-height:1.4; }
+        footer { border-top:1px solid var(--border); padding:36px 0; }
+        .foot-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center; }
+        .foot-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+        .foot-mark { width:32px; height:32px; border-radius:8px; overflow:hidden; }
+        .foot-mark img { width:100%; height:100%; }
+        .foot-name { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.85rem; }
+        .shots { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin:32px auto; max-width:520px; }
+        .shots figure { margin:0; text-align:center; }
+        .shots img { width:100%; height:auto; display:block; }
+        .shots figcaption { margin-top:10px; font-size:.82rem; color:var(--muted); }
+        .facts { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:28px 0; }
+        .facts div { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:18px; text-align:center; }
+        .facts strong { display:block; font-family:'Space Grotesk',sans-serif; font-size:1.6rem; color:var(--fl); }
+        .facts span { font-size:.82rem; color:var(--muted); }
+        @media (max-width:600px) { .facts { grid-template-columns:1fr; } }
+        #read-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:9999; background:linear-gradient(90deg,var(--fl),var(--fl2)); transition:width .08s linear; pointer-events:none; }
+    </style>
+</head>
+<body>
+<div id="read-progress"></div>
+<nav><div class="c-wide"><div class="nav-inner"><a href="/" class="nav-logo"><div class="nav-mark"><img src="../assets/logo-gs.webp" alt="Grounded Studio" width="34" height="34" decoding="async"></div><span class="nav-name">Grounded Studio</span></a><a href="../games/circuit-trace.html" class="nav-back">← Circuit Trace</a></div></div></nav>
+
+<article>
+    <div class="article-header">
+        <div class="c">
+            <div class="breadcrumb"><a href="/">Home</a> / <a href="../games.html">Games</a> / <a href="../games/circuit-trace.html">Circuit Trace</a> / <span>1.9.9 update</span></div>
+            <div class="article-cat">🆕 Update</div>
+            <h1>Circuit Trace 1.9.9: 3D Cube, flow puzzles on all six sides</h1>
+            <div class="article-meta"><span>📅 14 November 2026</span><span>⏱ 4 min read</span><span>✍️ Grounded Studio</span></div>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="c">
+            <p>Version 1.9.9 brings the most unusual pack Circuit Trace has had so far: <strong>3D Cube</strong>, 100 flow puzzles that wrap around all six sides of a cube. It also gives the game a new icon and fixes a scrolling bug on the Puzzles screen. Here is what's new, and how a 2D puzzle game ended up with a cube in it.</p>
+
+            <div class="facts">
+                <div><strong>700+</strong><span>puzzles across 7 level packs</span></div>
+                <div><strong>100</strong><span>new 3D Cube levels</span></div>
+                <div><strong>6</strong><span>sides per puzzle</span></div>
+            </div>
+
+            <h2>New: 3D Cube</h2>
+
+            <p>The rules are the ones every flow puzzle player knows: connect each pair of matching dots, never cross another line, and fill every cell. The difference is the board. Each side of the cube is a small grid, and the six sides are joined at their edges. Draw a line to the edge of one face and it carries straight on to the next.</p>
+
+            <p>You see three sides at a time. Swipe an empty spot to turn the cube, or drag a line off the edge towards a side you can't see: the cube rolls round and your line goes with it, without lifting your finger. The first level shows both gestures with an animated hand.</p>
+
+            <div class="shots">
+                <figure><img src="../assets/screen-ct-5.webp" alt="A Circuit Trace 3D Cube level with lines running over the edges" width="560" height="1178" loading="lazy" decoding="async"><figcaption>3D Cube: one puzzle on six sides</figcaption></figure>
+                <figure><img src="../assets/screen-ct-6.webp" alt="The Circuit Trace game modes list with 3D Cube" width="560" height="1178" loading="lazy" decoding="async"><figcaption>Seven level packs under Game Modes</figcaption></figure>
+            </div>
+
+            <p>The pack has 10 sectors. The first five use a 3×3 grid on every side (54 cells), the last five a 4×4 grid (96 cells). Within each size the number of colours goes down, so the lines get longer and wrap around more sides. 3D Cube is free, under GAME MODES → 3D CUBE.</p>
+
+            <h2>How we built a cube in a 2D game</h2>
+
+            <p>Circuit Trace is a 2D game, and we didn't want to rebuild it in 3D just for one mode. It turned out we didn't have to. The cube is drawn without perspective, so each visible face is simply a flat grid that has been slanted and squashed. Every face gets one 2D transform, and the normal board drawing code paints straight onto it. Paths, glow, themes and the FX packs all work on the cube because they're the same code.</p>
+
+            <p>The puzzle logic needed even less. To the game, a cube is one long strip of six faces, plus a table that says which cells touch across the edges. Everything else (dragging, undo, hints, the scoring) works exactly as on a flat board.</p>
+
+            <div class="pull-quote">
+                <p>"A cube is just six boards that agree on who their neighbours are."</p>
+            </div>
+
+            <p>The levels come from the same generator and puzzle solver as the rest of the game, now fed the cube's neighbour table. Each level was checked to have a single clean solution and rated on how much thinking it takes, then all 100 were played through automatically before release. The first prototype made you let go of a line whenever the cube turned. On a real phone that felt choppy, so the final version keeps the line in your finger the whole way round.</p>
+
+            <h2>A new icon, and a fix</h2>
+
+            <ul>
+                <li><strong>New app icon.</strong> Three neon lines on a grid inside a hexagon, each connecting its own pair without crossing. It finally shows what the game is about at a glance.</li>
+                <li><strong>Puzzles screen scrolls again.</strong> With seven packs the list is longer than most screens, and a drag that started on a pack card didn't scroll. It does now.</li>
+                <li>The one-time "what's new" message now introduces 3D Cube, with a button that takes you straight to it.</li>
+            </ul>
+
+            <div class="tip-card">
+                <h3>🧊 New to the cube?</h3>
+                <p>Turn it all the way round before you draw anything. A cube has no corners or edges to lean on, so a dot on the back is often what decides your first move. More tips are in the <a href="https://circuittrace.app/blog/cube-3d-puzzle.html" target="_blank" rel="noopener" style="color:var(--fl);text-decoration:underline;text-underline-offset:3px">3D Cube guide</a> on circuittrace.app.</p>
+            </div>
+
+            <div class="app-cta">
+                <h3>🧊 Play the update</h3>
+                <p>700+ puzzles across 7 level packs, including the new 3D Cube. Free on Google Play, with an optional €3.99 Remove Ads.</p>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+                    <a href="https://play.google.com/store/apps/details?id=com.game.circuittrace" target="_blank" rel="noopener">Get it on Google Play →</a>
+                    <a href="https://circuittrace.app" target="_blank" rel="noopener">🌐 circuittrace.app →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<div class="related">
+    <div class="c">
+        <h2>Related</h2>
+        <div class="related-cards">
+            <a href="https://circuittrace.app/blog/cube-3d-puzzle.html" target="_blank" rel="noopener" class="related-card"><div class="cat">🧊 Circuit Trace blog</div><div class="title">3D Cube: tips for your first cubes →</div></a>
+            <a href="https://circuittrace.app/blog/how-to-solve-flow-puzzles.html" target="_blank" rel="noopener" class="related-card"><div class="cat">🧠 Guide</div><div class="title">How to solve flow puzzles: 9 strategies →</div></a>
+            <a href="circuit-trace-update-3d-cube-nl.html" class="related-card"><div class="cat">🇳🇱 Nederlands</div><div class="title">Lees deze update in het Nederlands →</div></a>
+        </div>
+</div>
+
+<footer>
+    <div class="c">
+        <div class="foot-inner">
+            <a href="/" class="foot-logo"><div class="foot-mark"><img src="../assets/logo-gs.webp" alt="Grounded Studio" width="32" height="32" decoding="async"></div><span class="foot-name">Grounded Studio</span></a>
+            <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;justify-content:center"><a href="../games/circuit-trace.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Circuit Trace</a><a href="../freshgarant.html" style="color:#64748b;text-decoration:none;font-size:.8rem">FreshGarant</a><a href="../buildexact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">BuildExact</a><a href="../kwispelboek.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Kwispelboek</a><a href="../about.html" style="color:#64748b;text-decoration:none;font-size:.8rem">About</a><a href="../contact.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Contact</a><a href="../privacy.html" style="color:#64748b;text-decoration:none;font-size:.8rem">Privacy</a></div>
+            <span style="font-size:.75rem;color:#334155">© 2026 Grounded Studio</span>
+        </div>
+    </div>
+</footer>
+<script>var rp=document.getElementById('read-progress');window.addEventListener('scroll',function(){var s=document.documentElement;rp.style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';},{passive:true});</script>
+<script src="/assets/tracking.js?v=20261025" defer></script>
+<script src="/assets/cookie-banner.js?v=20261025" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+</body>
+</html>
