@@ -99,13 +99,27 @@
         .lang-btn { background:none; border:none; color:#64748b; font-size:.78rem; font-weight:700; cursor:pointer; padding:5px 10px; border-radius:7px; font-family:'Inter',sans-serif; letter-spacing:.04em; transition:all .2s; min-height:32px; }
         .lang-btn.active { background:rgba(255,255,255,.1); color:#fff; }
         .lang-btn:hover:not(.active) { color:#94a3b8; }
-    </style>
+        .breadcrumb { display:flex; gap:8px; font-size:.75rem; color:#475569; margin-bottom:18px; flex-wrap:wrap; }
+    .breadcrumb a { color:#475569; text-decoration:none; }
+    .breadcrumb a:hover { color:#94a3b8; }
+</style>
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://grounded-studio.app/"},
+            {"@type":"ListItem","position":2,"name":"BuildExact","item":"https://grounded-studio.app/buildexact.html"},
+            {"@type":"ListItem","position":3,"name":"Calculators","item":"https://grounded-studio.app/calculators.html"}
+        ]
+    }
+    </script>
 </head>
 <body>
 <nav><div class="c"><div class="nav-inner"><a href="/" class="nav-logo"><div class="nav-mark"><img src="assets/logo-gs.webp" alt="Grounded Studio" width="34" height="34" decoding="async"></div><span class="nav-name">Grounded Studio</span></a><div style="display:flex;align-items:center;gap:18px"><a href="buildexact.html" class="nav-back">← BuildExact</a><div class="lang-toggle"><button class="lang-btn active" data-lang="nl">NL</button><button class="lang-btn" data-lang="en">EN</button></div></div></div></div></nav>
 
 <header class="page-header">
     <div class="c">
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="buildexact.html">BuildExact</a> / <span>Calculators</span></div>
         <div class="page-tag">🧮 <span data-i18n="page.tag">Alle BuildExact calculators</span></div>
         <h1 data-i18n-html="page.h1">Reken elk materiaal uit<br>in seconden.</h1>
         <p class="lead" data-i18n="page.lead">Van schutting tot beton — alle calculators uit BuildExact met uitleg, formules en rekenvoorbeelden. Gratis in de app, hier als naslagwerk.</p>
