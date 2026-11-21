@@ -50,28 +50,13 @@
 
   <h2>This website (grounded-studio.app)</h2>
   <ul>
-    <li><strong>Visitor statistics without cookies.</strong> We always count visits with <strong>Cloudflare Web Analytics</strong>, without cookies: which page was viewed, the site you came from, browser, device type, country and how fast the page loaded. Cloudflare does not use cookies or fingerprinting and does not build a profile of you; we only see totals. This needs no consent and has nothing to do with the cookie banner below.</li>
-    <li><strong>Analytics and advertising measurement — only with your consent.</strong> If you click "Accept" in the cookie banner, we load Google Analytics 4 and the Meta Pixel to count visits and clicks on Google Play links. If you click "Decline", these scripts are not loaded. Your choice is stored in your browser (localStorage).</li>
-    <li><strong>Campaign links — also only with your consent.</strong> If you accepted and arrived through a campaign link (for example with <code>utm_source</code>), those parameters are kept for your browser session and passed on to Google Play links, so we can see which campaign led to an install. If you decline, nothing is stored or passed on.</li>
+    <li><strong>Visitor statistics without cookies.</strong> We always count visits with <strong>Cloudflare Web Analytics</strong>, without cookies: which page was viewed, the site you came from, browser, device type, country and how fast the page loaded. Cloudflare does not use cookies or fingerprinting and does not build a profile of you; we only see totals. This needs no consent.</li>
+    <li><strong>No tracking cookies, no advertising pixels.</strong> This website does not use Google Analytics, the Meta Pixel or any other tracking cookies, so there is no cookie banner. (Until 21 November 2026 we loaded Google Analytics 4 and the Meta Pixel, but only after you clicked "Accept"; both have been removed.)</li>
     <li><strong>Contact form.</strong> Your name, email address, topic and message are sent through our own server (hosted by STRATO in Germany) to our inbox. We use them only to reply.</li>
   </ul>
-  <p>Change your cookie choice:</p>
-  <button type="button" id="resetConsent">Reset cookie choice</button>
-  <p class="muted" id="resetDone" hidden>Done — the cookie banner will ask again.</p>
 
   <h2>Questions</h2>
   <p>Email <a href="mailto:contact@grounded-studio.app">contact@grounded-studio.app</a> with "Privacy request" in the subject.</p>
 </main>
-<script>
-document.getElementById('resetConsent').addEventListener('click', function () {
-  // Clearing the key (not calling revokeConsent, which stores '0' = declined)
-  // makes the banner ask again; the reload drops any already-loaded scripts.
-  try { localStorage.removeItem('cookie-consent'); } catch (e) {}
-  document.getElementById('resetDone').hidden = false;
-  setTimeout(function () { location.reload(); }, 900);
-});
-</script>
-<script src="/assets/tracking.js?v=20261025" defer></script>
-<script src="/assets/cookie-banner.js?v=20261025" defer></script>
 </body>
 </html>
