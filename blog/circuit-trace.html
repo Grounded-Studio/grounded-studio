@@ -236,6 +236,19 @@
         @media (max-width:760px) { .hub-grid { grid-template-columns:1fr; } }
         .hub-card .lang { display:inline-block; font-size:.62rem; font-weight:800; padding:2px 7px; border-radius:6px; border:1px solid rgba(255,255,255,.15); color:#cbd5e1; margin-left:6px; vertical-align:1px; }
     </style>
+<!-- xp-css:start --><style>.xp{padding:40px 20px;border-top:1px solid rgba(127,127,127,.2);color:inherit;font-family:inherit}
+.xp-in{max-width:1080px;margin:0 auto}
+.xp-h{margin:0 0 16px;text-align:center;font-size:1.05rem;font-weight:700;line-height:1.3}
+.xp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+a.xp-card{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;background:rgba(127,127,127,.08);border:1px solid rgba(127,127,127,.2);color:inherit;text-decoration:none;transition:transform .15s,border-color .15s}
+a.xp-card:hover{transform:translateY(-2px);border-color:rgba(127,127,127,.45)}
+.xp-card img{width:48px;height:48px;border-radius:12px;flex:0 0 48px;margin:0}
+.xp-t{display:block;font-weight:700;font-size:.98rem;line-height:1.25}
+.xp-d{display:block;margin-top:3px;font-size:.84rem;line-height:1.4;opacity:.75}
+.xp-note{margin:14px 0 0;text-align:center;font-size:.78rem;opacity:.65}
+.xp-note a{color:inherit}
+.xp [data-xp-lang]{display:none}
+html[lang^="nl"] .xp [data-xp-lang="nl"],html:not([lang^="nl"]) .xp [data-xp-lang="en"]{display:block}</style><!-- xp-css:end -->
 </head>
 <body>
 <div id="read-progress"></div>
@@ -380,6 +393,7 @@
     </div>
 </main>
 
+<!-- xp:start --><section class="xp" aria-label="Apps"><div class="xp-in"><div data-xp-lang="nl"><p class="xp-h">Probeer ook onze andere apps</p><div class="xp-grid"><a class="xp-card" href="https://buildexact.app/nl/"><img src="https://grounded-studio.app/assets/icon-bx.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><span><span class="xp-t">BuildExact</span><span class="xp-d">Bouwcalculators, offertes en facturen. Werkt offline.</span></span></a><a class="xp-card" href="https://freshgarant.app/nl/"><img src="https://grounded-studio.app/assets/icon-vg.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><span><span class="xp-t">FreshGarant</span><span class="xp-d">Houdbaarheid van je eten bijhouden, met herinnering op tijd.</span></span></a><a class="xp-card" href="https://kwispelboek.app/"><img src="https://grounded-studio.app/assets/icon-kb.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><span><span class="xp-t">Kwispelboek</span><span class="xp-d">Vaccinaties, medicijnen en dierenarts van je huisdieren op één plek.</span></span></a><a class="xp-card" href="https://circuittrace.app/nl/"><img src="https://grounded-studio.app/assets/icon-ct.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><span><span class="xp-t">Circuit Trace</span><span class="xp-d">700+ verbind-de-stippen puzzels in 9 spelmodi.</span></span></a></div><p class="xp-note">Gratis voor Android · <a href="https://grounded-studio.app/">van Grounded Studio</a></p></div><div data-xp-lang="en"><p class="xp-h">Try our other apps</p><div class="xp-grid"><a class="xp-card" href="https://buildexact.app/"><img src="https://grounded-studio.app/assets/icon-bx.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><span><span class="xp-t">BuildExact</span><span class="xp-d">Building calculators, quotes and invoices. Works offline.</span></span></a><a class="xp-card" href="https://freshgarant.app/"><img src="https://grounded-studio.app/assets/icon-vg.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><span><span class="xp-t">FreshGarant</span><span class="xp-d">Track food expiry dates and get a reminder in time.</span></span></a><a class="xp-card" href="https://wagbook.app/"><img src="https://grounded-studio.app/assets/icon-kb.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><span><span class="xp-t">Wagbook</span><span class="xp-d">Vaccinations, medication and vet visits for your pets in one place.</span></span></a><a class="xp-card" href="https://circuittrace.app/"><img src="https://grounded-studio.app/assets/icon-ct.webp" alt="" width="48" height="48" loading="lazy" decoding="async"><span><span class="xp-t">Circuit Trace</span><span class="xp-d">700+ connect-the-dots puzzles in 9 game modes.</span></span></a></div><p class="xp-note">Free for Android · <a href="https://grounded-studio.app/">by Grounded Studio</a></p></div></div></section><!-- xp:end -->
 <footer>
     <div class="c-wide">
         <div class="foot-inner">
