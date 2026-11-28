@@ -563,6 +563,25 @@ html[lang^="nl"] .xp [data-xp-lang="nl"],html:not([lang^="nl"]) .xp [data-xp-lan
     </div>
 </div>
 
+<!-- VIDEO -->
+<div class="video-section">
+    <div class="video-wrap a-fade">
+        <div class="video-label" data-i18n="video.label">▶ See it in action</div>
+        <h2 class="video-title" data-i18n="video.title">Wagbook in 90 seconds</h2>
+        <p class="video-sub" data-i18n="video.sub">Never forget when your pet needs deworming or a vaccination again.</p>
+        <div class="video-frame">
+            <iframe id="kbVideo"
+                src="https://www.youtube-nocookie.com/embed/PjDapGCTTz8?rel=0"
+                data-en="https://www.youtube-nocookie.com/embed/PjDapGCTTz8?rel=0"
+                data-nl="https://www.youtube-nocookie.com/embed/AS8vqlPjmjE?rel=0"
+                title="Wagbook / Kwispelboek video"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
 <!-- FEATURES -->
 <section class="features-section">
     <div class="c">
@@ -998,6 +1017,9 @@ const T = {
         "trust.local": "Encrypted sharing",
         "trust.lang": "Dutch & English",
         "feat.label": "Features",
+        "video.label": "▶ See it in action",
+        "video.title": "Wagbook in 90 seconds",
+        "video.sub": "Never forget when your pet needs deworming or a vaccination again.",
         "feat.title": "Everything for your pet's<br>health in one place",
         "feat.sub": "Made for owners who want peace of mind: nothing forgotten, everything at hand at the vet.",
         "feat.reminders.title": "Reminders on time",
@@ -1137,6 +1159,9 @@ const T = {
         "trust.local": "Versleuteld delen",
         "trust.lang": "Nederlands & Engels",
         "feat.label": "Functies",
+        "video.label": "▶ Bekijk het in actie",
+        "video.title": "Kwispelboek in 90 seconden",
+        "video.sub": "Nooit meer vergeten wanneer je huisdier ontwormd of gevaccineerd moet worden.",
         "feat.title": "Alles voor de gezondheid<br>van je dier op één plek",
         "feat.sub": "Gemaakt voor baasjes die rust willen: niets vergeten, en alles bij de hand bij de dierenarts.",
         "feat.reminders.title": "Herinneringen op tijd",
@@ -1272,6 +1297,8 @@ function applyLang(l, animate) {
     const dict = T[l];
     const run = () => {
         document.documentElement.lang = l;
+        const kv = document.getElementById('kbVideo');
+        if (kv && kv.dataset[l] && kv.getAttribute('src') !== kv.dataset[l]) kv.setAttribute('src', kv.dataset[l]);
         document.querySelectorAll('[data-i18n]').forEach(el => {
             if (dict[el.dataset.i18n]) el.textContent = dict[el.dataset.i18n];
         });
