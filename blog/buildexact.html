@@ -689,5 +689,6 @@ let lang=savedLang||(browserIsNL?'nl':'en');
 document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.addEventListener('click',()=>{if(b.dataset.lang!==lang){lang=b.dataset.lang;localStorage.setItem('gs-lang',lang);document.querySelectorAll('.lang-btn').forEach(x=>x.classList.toggle('active',x.dataset.lang===lang));}});});
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cdf3c759a2fe471dbfebf7881448bf17"}'></script>
+<script src="/assets/brand.js?v=20261128" defer></script>
 </body>
 </html>
